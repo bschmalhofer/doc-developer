@@ -17,4 +17,15 @@
             HTTP request payloads.
         </para>
     </section>
+
+    <section id="groups-table-renamed">
+        <title>The <literal>groups</literal> table was renamed</title>
+        <para>
+            Due to a change in MySQL 8, the table <literal>groups</literal> had to be renamed to
+            <literal>groups_table</literal>. If you use this table directly in any SQL statements, they will
+            need to be adapted. For more information, see
+            <ulink url="https://bugs.otrs.org/show_bug.cgi?id=13866">bug#13866</ulink>.
+        </para>
+    </section>
+
 </section>
