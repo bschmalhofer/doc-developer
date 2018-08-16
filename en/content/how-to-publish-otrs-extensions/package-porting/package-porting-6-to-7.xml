@@ -28,4 +28,23 @@
         </para>
     </section>
 
+    <section id="new-external-interface">
+        <title>New external interface</title>
+        <para>
+            The existing customer (<literal>customer.pl</literal>) and public (<literal>public.pl</literal>) interfaces
+            were replaced by a new REST backend (<literal>Kernel/WebApp</literal>) and a modern <literal>Vue.js</literal>
+            based frontend application. This means that all related code has to be ported and/or rewritten.
+        </para>
+        <para>
+            There is one special case for "public" frontend modules that don't serve an HTML application. These can be
+            ported rather easily to the new REST backend (see also <ulink url="http://doc.otrs.com/doc/api/otrs/7.0/REST/">the REST API docs</ulink>).
+            See for example <literal>Kernel/WebApp/Controller/API/Public/Package/Repository.pm</literal>.
+            This example also shows how endpoints can support both new REST-like URLs but at the same time the legacy
+            URLs based on the <literal>/otrs/customer.pl?Action=MyAction</literal> routes at the same time.
+        </para>
+        <para>
+            For some important URLs in the customer interface that are linked from legacy systems, redirect controllers
+            may need to be provided to make sure the old URLs keep working.
+        </para>
+    </section>
 </section>
