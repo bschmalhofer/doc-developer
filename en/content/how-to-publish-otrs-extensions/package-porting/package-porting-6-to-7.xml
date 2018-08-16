@@ -47,4 +47,50 @@
             may need to be provided to make sure the old URLs keep working.
         </para>
     </section>
+
+    <section id="process-management-otrs7-changes">
+        <title>Changes in Process Management</title>
+        <para>
+            The migration script <literal>scripts/DBUpdate-to-7.pl</literal> should be capable to upgrade all processes that are already in the data base, after the migration processes could be exported to a YAML file and fine tunned. Depending on the complexity of the processes this method could be faster than doing it by hand.
+        </para>
+        <section id="new-activity-types">
+            <title>New Activity Types</title>
+            <para>
+                Since OTRS 7 is capable of managing more activity types, all existing activities now becomes 'User Task' Activities.
+            </para>
+            <para>
+                To update a task definition on a YAML file, please add <literal>Type: UserTask</literal> with the same indentation as <literal>Name</literal> or <literal>ID</literal>.
+            </para>
+        </section>
+        <section id="renmed-transition-to-sequenceflow">
+            <title>Renamed Process Management component 'Transition' to 'Sequence Flow'</title>
+            <para>
+                This process component was renamed to be more aligned with BPMN. Files, classes and methods has been renames consistently also. Customized files needs to be updated following the new conventions.
+            </para>
+            <para>
+                It is recommended to update any shipped process definitions to use the new name schema by replacing <literal>Transition</literal> with <literal>SequenceFlow</literal> and <literal>Transitions</literal> with <literal>SequenceFlows</literal>.
+            </para>
+        </section>
+        <section id="renmed-transition-action-to-sequenceflow-action">
+            <title>Renamed Process Management component 'Transition Action' to 'Sequence Flow Action'</title>
+            <para>
+                This process component does not exists in BPMN but has to be also renamed to be consistent with the other changes. Files, classes and methods has been renames consistently also. Customized files needs to be updated following the new conventions.
+            </para>
+            <para>
+                It is recommended to update any shipped process definitions to use the new name schema by replacing <literal>TransitionAction</literal> with <literal>SequenceFlowAction</literal> and <literal>TransitionActions</literal> with <literal>SequenceFlowActionss</literal>.
+            </para>
+        </section>
+        <section id="renamed-transition-action-modules-to-process-managenet-modules">
+            <title>Renamed Process Management component 'Transition Action Modules' to 'Process Management Modules'</title>
+            <para>
+                This process components are not only used by Sequence Flow Actions but also for 'Script Tasks' Activities and has been moved from <literal>Kernel/System/ProcessManagement/TransitionAction</literal> to <literal>Kernel/System/ProcessManagement/Modules</literal>.
+            </para>
+            <para>
+                The new process management modules can offer more field types and options to present the parameters to the process designer, please follow the instructions in <link linkend="process-management-modules">Process Management Modules documentation</link> to learn more about this new features and how to improve existing scripts.
+            </para>
+            <para>
+                It is needed to update any shipped process definitions to remove <literal>Kernel::System::ProcessManagement::TransitionAction</literal> from the <literal>Module:</literal> on all <literal>SequenceFlowAction</literal>, so for example: <literal>Module: Kernel::System::ProcessManagement::TransitionAction::TicketLockSet</literal> should become <literal>Module: TicketLockSet</literal>.
+            </para>
+       </section>
+    </section>
 </section>

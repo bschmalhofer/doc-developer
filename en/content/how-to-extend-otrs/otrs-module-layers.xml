@@ -71,4 +71,11 @@
         <title>Email Handling</title>
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="otrs-module-layers/email-handling/ticket-postmaster-modules.xml" />
     </section>
+
+    <section id="process-management-modules">
+        <title>Process Management</title>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="otrs-module-layers/process-management/process-management-modules.xml" />
+    </section>
+
+
 </section>

@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd">
+
+<section id="process-management-overview">
+    <title>Process Management</title>
+    <para>
+        Since OTRS 7 Process Management can use script modules to perform Activities (script tasks)
+        and/or Sequence Flow Actions (know before as Transition Actions). This modules are located in
+        <filename>Kernel::System::ProcessManagement::Modules</filename>.
+    </para>
+    <section id="process-management-module">
+        <title>Process Management Modules</title>
+        <para>
+            The Process Management Modules are scripts written in Perl language to perform certain
+            action or actions over the process ticket like set a dynamic field or change a queue etc.
+            Or any other part of the system like create new tickets.
+        </para>
+        <para>
+            By default Modules uses a set of key value pairs to use them as parameters for the action
+            e.g. to change queue of the process ticket, the queue or queue id and its corresponding
+            value is needed.
+        </para>
+        <para>
+            Some scripts might require more than a simple key value pairs as parameters or its
+            configuration might need to have a more user friendly GUI, in such cases OTRS provides
+            some configuration field types that can be also extended if needed.
+        </para>
+        <para>
+            Current field types:
+            <itemizedlist>
+                <listitem>
+                    <para>Dropdown</para>
+                    <para>Shows a drop down list with predefined values.</para>
+                </listitem>
+                <listitem>
+                    <para>KeyValueList</para>
+                    <para>Shows a list of simple key value pairs (text inputs). Pairs can be added or deleted.</para>
+                </listitem>
+                <listitem>
+                    <para>MultiLanguageRichText</para>
+                    <para>
+                        Shows a rich text editor associated to a system language, also shows a language selector to add rich text fields for the proper selected language.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Recipients</para>
+                    <para>
+                        Shows a multi select field pre-filled with agents to be used as email recipients, also displays a free input field to be used to specify external email addresses to be added to the recipients list.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>RichText</para>
+                    <para>Shows a single rich text field.</para>
+                </listitem>
+            </itemizedlist>
+        </para>
+        <section id="creating-new-process-management-module">
+            <title>Creating a New Process Management Module</title>
+            <para>
+                The following is an example of how to create a Process Management module, it includes a section where all possible fields are defined as a reference, to create a new module only one field type is needed but consider that by convention the parameter UserID is used to impersonate all the actions in the module with another
+                user than the one that triggers the action, then it is a good practice to always include the <literal>KeyValueList</literal> field type along with any other needed field.
+            </para>
+
+            <section id="process-management-module-code-example">
+                <title>Process Management Module Code Example</title>
+                <para>
+                    The following code implements a dummy process management module that can be used in script task activities or sequence flow actions.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+# --
+# Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+
+package Kernel::System::ProcessManagement::Modules::Test;
+
+use strict;
+use warnings;
+use utf8;
+
+use Kernel::System::VariableCheck qw(:all);
+
+use parent qw(Kernel::System::ProcessManagement::Modules::Base);
+
+our @ObjectDependencies = ( );
+
+                    ]]></programlisting>
+                </para>
+                <para>
+                    This is common header that can be found in most OTRS modules. The
+                    class/package name is declared via the package keyword.
+                </para>
+                <para>
+                    In this case we are inheriting from <literal>Base</literal> class, and the object manager
+                    dependencies are set.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+sub new {
+    my ( $Type, %Param ) = @_;
+
+    # Allocate new hash for object.
+    my $Self = {};
+    bless( $Self, $Type );
+
+    $Self->{Config} = {
+        Description => 'Description for the module.',
+        ConfigSets  => [
+            {
+                Type        => 'Dropdown',
+                Description => 'Description for Dropdown.',
+                Mandatory   => 1,
+                Config      => {
+                    Data => {
+                        Internal1 => 'Display 1',
+                        Internal2 => 'Display 2',
+                    },
+                    Name         => 'Test-DropDown',
+                    Multiple     => 1,
+                    PossibleNone => 1,
+                    Sort         => 'AlphanumericValue',
+                    Translation  => 1,
+                },
+            },
+            {
+                Type        => 'KeyValueList',
+                Description => 'Description of the Key/Value pairs',
+                Defaults    => [
+                    {
+                        Key       => 'Test-Param1',
+                        Value     => 'Hello',
+                        Mandatory => 1,
+                    },
+                    {
+                        Key       => 'Test-Param2',
+                        Mandatory => 1,
+                    },
+                    {
+                        Key       => 'Test-Param3',
+                        Value     => 'World',
+                        Mandatory => 0,
+                    },
+                ],
+            },
+            {
+                Type        => 'MultiLanguageRichText',
+                Description => "Description for Mutli-Language Rich Text.",
+                Defaults    => [
+                    {
+                        Key   => 'en_Subject',
+                        Value => 'Hello',
+                    },
+                    {
+                        Key   => 'en_Body',
+                        Value => 'World',
+                    },
+
+                ],
+            },
+            {
+                Type        => 'Recipients',
+                Description => "Description for Recipients."
+            },
+            {
+                Type        => 'RichText',
+                Description => "Description for Rich Text.",
+                Defaults    => [
+                    {
+                        Value     => 'Hello World',
+                        Mandatory => 1,
+                    },
+                ],
+            },
+        ],
+    };
+
+    return $Self;
+}
+                    ]]></programlisting>
+                </para>
+                <para>
+                    The constructor <literal>new()</literal> creates a new instance of the class. The configuration fields are defined here and they are set in <literal>$Self->{Config}</literal>.
+                </para>
+                <para>The configuration has two main entries:
+                    <itemizedlist>
+                        <listitem>
+                            <para><literal>Description</literal>:</para>
+                            <para>
+                                Is is used to to explain the administrators what does the module do and/or considerations for its configuration.
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para><literal>ConfigSets</literal>:</para>
+                            <para>This is just a container for the actual configuration fields</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+                <para>
+                    All configuration fields requires a <literal>Type</literal>: that defines the kind of field and they could also have an internal <literal>Description</literal>: to be used a the title of the field widget, if its not defined a default description is used.
+                </para>
+                <para>
+                    Each field defines its configuration parameters and capabilities, the following is a small reference for the fields provided my OTRS out of the box.
+                </para>
+                <para>
+                    <itemizedlist>
+                        <listitem>
+                            <para><literal>Dropdown</literal>:</para>
+                            <para>
+                                <itemizedlist>
+                                    <listitem>
+                                        <para><literal>Mandatory</literal>:</para>
+                                        <para>Used to define if a value is required to be set.</para>
+                                    </listitem>
+                                    <listitem>
+                                        <para><literal>Config</literal>:</para>
+                                        <para>Holds the information to display the drop-down field</para>
+                                        <para>
+                                            <itemizedlist>
+                                                <listitem>
+                                                    <para><literal>Data</literal>:</para>
+                                                    <para>
+                                                        Simple hash that defines the options for the Dropdown, the keys are used internally, and the values are the options that the user see in the screen.
+                                                    </para>
+                                                </listitem>
+                                                <listitem>
+                                                    <para><literal>Name</literal>:</para>
+                                                    <para>The name of the parameter.</para>
+                                                </listitem>
+                                                <listitem>
+                                                    <para><literal>Multiple</literal>:</para>
+                                                    <para>To define if only one or multiple values can be selected.</para>
+                                                </listitem>
+                                                <listitem>
+                                                    <para><literal>PossibleNone</literal>:</para>
+                                                    <para>Defines if the list of values offer an empty value or not.</para>
+                                                </listitem>
+                                                <listitem>
+                                                    <para><literal>Sort</literal>:</para>
+                                                    <para>
+                                                        Defines how the options will be sorted when the field is render, the possible values are: <literal>AlphanumericValue</literal>, <literal>NumericValue></literal>, <literal>AlphanumericKey</literal> and <literal>NumericKey</literal>.
+                                                    </para>
+                                                </listitem>
+                                                <listitem>
+                                                    <para><literal>Translation</literal>:</para>
+                                                    <para>Set if the display values should be translated.</para>
+                                                </listitem>
+                                            </itemizedlist>
+                                        </para>
+                                    </listitem>
+                                </itemizedlist>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para><literal>KeyValueList</literal>:</para>
+                            <para>
+                                <itemizedlist>
+                                    <listitem>
+                                        <para><literal>Defaults</literal>:</para>
+                                        <para>
+                                            Array of Hashes that holds the default configuration for its key value pairs.
+                                        </para>
+                                        <itemizedlist>
+                                            <listitem>
+                                                <para><literal>Key</literal>:</para>
+                                                <para>The name of a parameter.</para>
+                                            </listitem>
+                                            <listitem>
+                                                <para><literal>Value</literal>:</para>
+                                                <para>The default value of the parameter (optional).</para>
+                                            </listitem>
+                                            <listitem>
+                                                <para><literal>Mandatory</literal>:</para>
+                                                <para>Mandatory parameters can not be renamed or removed (optional).</para>
+                                            </listitem>
+                                        </itemizedlist>
+                                    </listitem>
+                                </itemizedlist>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para><literal>MultiLanguageRichText</literal>:</para>
+                            <para>
+                                <itemizedlist>
+                                    <listitem>
+                                        <para><literal>Defaults</literal>:</para>
+                                        <para>
+                                            Array of Hashes that holds the default configuration each language and field part.
+                                        </para>
+                                        <itemizedlist>
+                                            <listitem>
+                                                <para><literal>Key</literal>:</para>
+                                                <para>Its composed by language such as <literal>en</literal> or <literal>es_MX</literal>, followed by a '_' (underscore character) and then <literal>Subject</literal> or <literal>Body</literal> for the corresponding part of the field.</para>
+                                            </listitem>
+                                            <listitem>
+                                                <para><literal>Value</literal>:</para>
+                                                <para>The default value of the field part (optional).</para>
+                                            </listitem>
+                                        </itemizedlist>
+                                    </listitem>
+                                </itemizedlist>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para><literal>Recipients</literal>:</para>
+                            <para>No further configuration is provided for this kind of field.</para>
+                        </listitem>
+                        <listitem>
+                            <para><literal>RichText</literal>:</para>
+                            <para>
+                                <itemizedlist>
+                                    <listitem>
+                                        <para><literal>Defaults</literal>:</para>
+                                        <para>
+                                            Array of Hashes that holds the default configuration field (only the first element is used).
+                                        </para>
+                                        <itemizedlist>
+                                            <listitem>
+                                                <para><literal>Value</literal>:</para>
+                                                <para>The default value of the field.</para>
+                                            </listitem>
+                                            <listitem>
+                                                <para><literal>Mandatory</literal>:</para>
+                                                <para>Used to define if a value is required to be set.</para>
+                                            </listitem>
+                                        </itemizedlist>
+                                    </listitem>
+                                </itemizedlist>
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+sub Run {
+    my ( $Self, %Param ) = @_;
+
+    # Define a common message to output in case of any error.
+    my $CommonMessage = "Process: $Param{ProcessEntityID} Activity: $Param{ActivityEntityID}";
+
+    # Add SequenceFlowEntityID to common message if available.
+    if ( $Param{SequenceFlowEntityID} ) {
+        $CommonMessage .= " SequenceFlow: $Param{SequenceFlowEntityID}";
+    }
+
+    # Add SequenceFlowActionEntityID to common message if available.
+    if ( $Param{SequenceFlowActionEntityID} ) {
+        $CommonMessage .= " SequenceFlowAction: $Param{SequenceFlowActionEntityID}";
+    }
+
+    # Check for missing or wrong params.
+    my $Success = $Self->_CheckParams(
+        %Param,
+        CommonMessage => $CommonMessage,
+    );
+    return if !$Success;
+
+    # Override UserID if specified as a parameter in the TA config.
+    $Param{UserID} = $Self->_OverrideUserID(%Param);
+
+    # Use ticket attributes if needed.
+    $Self->_ReplaceTicketAttributes(%Param);
+    $Self->_ReplaceAdditionalAttributes(%Param);
+
+    # Get module configuration.
+    my $ModuleConfig = $Param{Config};
+
+    # Add module logic here!
+
+    return 1;
+}
+                    ]]></programlisting>
+                </para>
+                <para>
+                    The <literal>Run</literal> method Is the main part of the module. First sets a Common Message that can be used in error logs or any other purpose, for consistency its highly recommended to use it as described above.
+                </para>
+                <para>
+                    Next step is to check if the global parameters was sent correctly.
+                </para>
+                <para>
+                    By Convention all modules should be able to override the current UserID is one is provided in the parameters (if any), this passed UserID should be used in any function call that requires it.
+                </para>
+                <para>
+                    User defined attribute values can use current ticket values by using OTRS smart tags, _ReplaceTicketAttributes is used for normal text attributes, while _ReplaceAdditionalAttributes for rich texts. For more complex parameters it might need customized functions to replace this smart tags
+                </para>
+                <para>
+                    The following is the proper logic of the module.
+                </para>
+                <para>
+                    If everything was OK it must return 1.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+1;
+
+=head1 TERMS AND CONDITIONS
+
+This software is part of the OTRS project (L<http://otrs.org/>).
+
+This software comes with ABSOLUTELY NO WARRANTY. For details, see
+the enclosed file COPYING for license information (AGPL). If you
+did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.
+
+=cut
+
+                    ]]></programlisting>
+                </para>
+                <para>
+                    End of file.
+                </para>
+            </section>
+        </section>
+
+        <section id="creating-new-process-management-module-configuration-field">
+            <title>Creating a New Process Management Module Configuration Field</title>
+            <para>
+                The following is an example of how to create a Process Management module configuration field, this field can be used by any Process Management module after its configuration.
+            </para>
+
+            <section id="process-management-module-configuration-field-code-example">
+                <title>Process Management Module Configuration Field Code Example</title>
+                <para>
+                    The following code implements a simple input process management module configuration field (Test). The name of the field and its default value can be set trough a process management module ConfigSets.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+# --
+# Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+
+package Kernel::Output::HTML::ProcessManagement::ModuleConfiguration::Test;
+
+use strict;
+use warnings;
+
+use Kernel::System::VariableCheck qw(:all);
+use Kernel::Language qw(Translatable);
+
+our @ObjectDependencies = (
+    'Kernel::Output::HTML::Layout',
+    'Kernel::System::Web::Request',
+);
+                    ]]></programlisting>
+                </para>
+                <para>
+                    This is common header that can be found in most OTRS modules. The class/package name is declared via the package keyword.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+sub new {
+    my ( $Type, %Param ) = @_;
+
+    # allocate new hash for object
+    my $Self = {%Param};
+    bless( $Self, $Type );
+
+    return $Self;
+}
+                    ]]></programlisting>
+                </para>
+                <para>
+                    The constructor <literal>new</literal> creates a new instance of the class.
+                </para>
+                <para>
+                    Every configuration field requires to implement at least 2 main methods <literal>Render</literal> and <literal>GetParams</literal>.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+sub Render {
+    my ( $Self, %Param ) = @_;
+
+    my $ConfigSet = $Param{ConfigSet} // {};
+    my $EntityConfig = $Param{EntityData}->{Config}->{Config}->{ConfigTest} // {};
+
+    my %Data;
+
+    $Data{Description} = $ConfigSet->{Description} || 'Config Parameters (Test)';
+    $Data{Name} = $ConfigSet->{Config}->{Name} // 'Test';
+    $Data{Value} = $EntityConfig->{ $ConfigSet->{Config}->{Name} } // $ConfigSet->{Defaults}->[0]->{Value} // '';
+
+    return {
+        Success => 1,
+        HTML    => $Kernel::OM->Get('Kernel::Output::HTML::Layout')->Output(
+            TemplateFile => 'ProcessManagement/ModuleConfiguration/Test',
+            Data         => \%Data,
+        ),
+    };
+}
+                    ]]></programlisting>
+                </para>
+                <para>
+                    <literal>Render</literal> method is responsible to create the required HTML for the field.
+                </para>
+                <para>
+                    In This example it first localize some parameters for more easy read and maintain.
+                </para>
+                <para>
+                    The following lines sets the data to display, the field widget title <literal>Description</literal> is gather from the ConfigSet if defined, otherwise it uses a default text. Similar to the field <literal>Name</literal>, for the <literal>Value</literal>it first checks if the activity or sequence flow action already have an stored value, if not it tries to use the default value from the ConfigSet, or use empty otherwise.
+                </para>
+                <para>
+                    At the end it returns a structure with the HTML code from a template filled with the gathered data.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+sub GetParams {
+    my ( $Self, %Param ) = @_;
+
+    my %GetParams;
+    my $Config = $Param{ConfigSet}->{Config} // 'Test';
+
+    $GetParams{ $Config->{Name} } = $Kernel::OM->Get('Kernel::System::Web::Request')->GetParam( Param => $Config->{Name} );
+
+    return \%GetParams;
+}
+                    ]]></programlisting>
+                </para>
+                <para>
+                    For this example the <literal>GetParams</literal> method is very straight forward, it get the name of the field from the ConfigSet or use a default, and gets the value from the web request.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+1;
+
+=head1 TERMS AND CONDITIONS
+
+This software is part of the OTRS project (L<http://otrs.org/>).
+
+This software comes with ABSOLUTELY NO WARRANTY. For details, see
+the enclosed file COPYING for license information (AGPL). If you
+did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.
+
+=cut
+
+                    ]]></programlisting>
+                </para>
+                <para>
+                    End of file.
+                </para>
+            </section>
+            <section id="process-management-module-configuration-field-template-example">
+                <title>Process Management Module Configuration Field Template Example</title>
+                <para>
+                    The following code implements a basic HTML template for the Test Process Management module configuration field.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+# --
+# Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+                    ]]></programlisting>
+                </para>
+                <para>
+                    This is common header that can be found in most OTRS modules.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+<div id="TestConfig" class="WidgetSimple Expanded">
+    <div class="Header">
+        <div class="WidgetAction Toggle">
+            <a href="#" title="[% Translate("Show or hide the content") | html %]"><i class="fa fa-caret-right"></i><i class="fa fa-caret-down"></i></a>
+        </div>
+        <h2 for="Config">[% Translate(Data.Description) | html %]</h2>
+    </div>
+    <div class="Content" id="TestParams">
+        <fieldset class="TableLike">
+            <label for="[% Data.Name | html %]">[% Data.Name | html %]</label>
+            <div class="Field">
+                <input type="text" value="[% Data.Value | html %]" name="[% Data.Name | html %]" id="[% Data.Name | html %]" />
+            </div>
+        </fieldset>
+    </div>
+</div>
+                    ]]></programlisting>
+                </para>
+                <para>
+                    The template shows a simple text input element with its associated label.
+                </para>
+            </section>
+        </section>
+    </section>
+</section>
