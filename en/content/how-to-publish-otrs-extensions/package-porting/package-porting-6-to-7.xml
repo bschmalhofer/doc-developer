@@ -91,6 +91,27 @@
             <para>
                 It is needed to update any shipped process definitions to remove <literal>Kernel::System::ProcessManagement::TransitionAction</literal> from the <literal>Module:</literal> on all <literal>SequenceFlowAction</literal>, so for example: <literal>Module: Kernel::System::ProcessManagement::TransitionAction::TicketLockSet</literal> should become <literal>Module: TicketLockSet</literal>.
             </para>
-       </section>
+        </section>
+    </section>
+
+    <section id="layout-object">
+        <title>Changes in <literal>LayoutObject</literal></title>
+        <para>
+            There are changes in <literal>Kernel/Output/HTML/Layout.pm</literal> which are necessary to properly render content using Mojolicious real-time web framework.
+        </para>
+        <section id="empty-tables-in-screens">
+            <title>Not shown/empty tables in screens</title>
+            <para>
+                Please make sure to check every screen which produces table-like output (e.g. <literal>Kernel/Modules/AgentTicketStatusView.pm</literal>).
+                If the list of e.g. tickets is empty or even not shown at all, check if the parameter <literal>Output => 1</literal> is used in creating the output for the page.
+            </para>
+        </section>
+        <section id="encoding-issues">
+            <title>Encoding issues</title>
+            <para>
+                If you are getting into trouble with broken characters, e.g. umlauts, in any pages, it is pretty sure that the content which is meant to be shown is rendered by <literal>Print</literal> method.
+                Please check the affected frontend module for usage of the <literal>Print</literal> method. It can be easily fixed by removing the <literal>Print</literal> method.
+            </para>
+        </section>
     </section>
 </section>
