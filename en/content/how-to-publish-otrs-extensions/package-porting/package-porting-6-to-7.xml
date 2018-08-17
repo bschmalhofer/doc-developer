@@ -7,7 +7,7 @@
         This section lists changes that you need to examine when porting your package from OTRS 6 to 7.
     </para>
 
-    <section id="no-sessions-without-cookies">
+    <section id="package-porting-6-to-7-no-sessions-without-cookies">
         <title>Sessions always require cookies</title>
         <para>
             Starting from OTRS 7, <ulink url="https://github.com/OTRS/otrs/commit/831aba1cfe6893d0633af6f18584216e89198072">
@@ -18,7 +18,7 @@
         </para>
     </section>
 
-    <section id="groups-table-renamed">
+    <section id="package-porting-6-to-7-groups-table-renamed">
         <title>The <literal>groups</literal> table was renamed</title>
         <para>
             Due to a change in MySQL 8, the table <literal>groups</literal> had to be renamed to
@@ -28,7 +28,7 @@
         </para>
     </section>
 
-    <section id="new-external-interface">
+    <section id="package-porting-6-to-7-new-external-interface">
         <title>New external interface</title>
         <para>
             The existing customer (<literal>customer.pl</literal>) and public (<literal>public.pl</literal>) interfaces
@@ -51,42 +51,39 @@
     <section id="process-management-otrs7-changes">
         <title>Changes in Process Management</title>
         <para>
-            The migration script <literal>scripts/DBUpdate-to-7.pl</literal> should be capable to upgrade all processes that are already in the data base, after the migration processes could be exported to a YAML file and fine tunned. Depending on the complexity of the processes this method could be faster than doing it by hand.
+            The migration script <literal>scripts/DBUpdate-to-7.pl</literal> will upgrade all processes that are already in the database. Manual action is only needed to make use of any new features that OTRS 7 provides.
         </para>
-        <section id="new-activity-types">
+        <section id="process-management-otrs7-changes-new-activity-types">
             <title>New Activity Types</title>
             <para>
-                Since OTRS 7 is capable of managing more activity types, all existing activities now becomes 'User Task' Activities.
-            </para>
-            <para>
-                To update a task definition on a YAML file, please add <literal>Type: UserTask</literal> with the same indentation as <literal>Name</literal> or <literal>ID</literal>.
+                Since OTRS 7 is capable of managing more activity types, all existing activities now become 'User Task' activities. To update a task definition on a YAML file, please add <literal>Type: UserTask</literal> with the same indentation as <literal>Name</literal> or <literal>ID</literal>.
             </para>
         </section>
-        <section id="renmed-transition-to-sequenceflow">
-            <title>Renamed Process Management component 'Transition' to 'Sequence Flow'</title>
+        <section id="process-management-otrs7-changes-renamed-transition-to-sequenceflow">
+            <title>Renamed Process Management component <literal>Transition</literal> to <literal>SequenceFlow</literal></title>
             <para>
-                This process component was renamed to be more aligned with BPMN. Files, classes and methods has been renames consistently also. Customized files needs to be updated following the new conventions.
+                This process component was renamed to be more aligned with BPMN. Files, classes and methods has been renamed accordingly. Customized files needs to be updated following the new conventions.
             </para>
             <para>
                 It is recommended to update any shipped process definitions to use the new name schema by replacing <literal>Transition</literal> with <literal>SequenceFlow</literal> and <literal>Transitions</literal> with <literal>SequenceFlows</literal>.
             </para>
         </section>
-        <section id="renmed-transition-action-to-sequenceflow-action">
-            <title>Renamed Process Management component 'Transition Action' to 'Sequence Flow Action'</title>
+        <section id="process-management-otrs7-changes-renamed-transition-action-to-sequenceflow-action">
+            <title>Renamed Process Management component <literal>TransitionAction</literal> to <literal>SequenceFlowAction</literal></title>
             <para>
-                This process component does not exists in BPMN but has to be also renamed to be consistent with the other changes. Files, classes and methods has been renames consistently also. Customized files needs to be updated following the new conventions.
+                This process component does not exists in BPMN but has to be also renamed to be consistent with the other changes. Files, classes and methods has been renames accordingly. Customized files needs to be updated following the new conventions.
             </para>
             <para>
                 It is recommended to update any shipped process definitions to use the new name schema by replacing <literal>TransitionAction</literal> with <literal>SequenceFlowAction</literal> and <literal>TransitionActions</literal> with <literal>SequenceFlowActionss</literal>.
             </para>
         </section>
-        <section id="renamed-transition-action-modules-to-process-managenet-modules">
-            <title>Renamed Process Management component 'Transition Action Modules' to 'Process Management Modules'</title>
+        <section id="process-management-otrs7-changes-renamed-transition-action-modules-to-process-managenet-modules">
+            <title>Renamed Process Management component <literal>TransitionActionModules</literal> to <literal>ProcessManagementModules</literal></title>
             <para>
-                This process components are not only used by Sequence Flow Actions but also for 'Script Tasks' Activities and has been moved from <literal>Kernel/System/ProcessManagement/TransitionAction</literal> to <literal>Kernel/System/ProcessManagement/Modules</literal>.
+                This process components are not only used by Sequence Flow Actions but also for 'Script Tasks' activities and has been moved from <literal>Kernel/System/ProcessManagement/TransitionAction</literal> to <literal>Kernel/System/ProcessManagement/Modules</literal>.
             </para>
             <para>
-                The new process management modules can offer more field types and options to present the parameters to the process designer, please follow the instructions in <link linkend="process-management-modules">Process Management Modules documentation</link> to learn more about this new features and how to improve existing scripts.
+                The new process management modules can offer more field types and options to present the parameters to the process designer, please follow the instructions in the <link linkend="process-management-modules">Process Management Modules documentation</link> to learn more about this new feature and how to improve existing modules.
             </para>
             <para>
                 It is needed to update any shipped process definitions to remove <literal>Kernel::System::ProcessManagement::TransitionAction</literal> from the <literal>Module:</literal> on all <literal>SequenceFlowAction</literal>, so for example: <literal>Module: Kernel::System::ProcessManagement::TransitionAction::TicketLockSet</literal> should become <literal>Module: TicketLockSet</literal>.
@@ -94,23 +91,22 @@
         </section>
     </section>
 
-    <section id="layout-object">
-        <title>Changes in <literal>LayoutObject</literal></title>
+    <section id="package-porting-6-to-7-layout-object">
+        <title>Changes in the <literal>LayoutObject</literal></title>
         <para>
             There are changes in <literal>Kernel/Output/HTML/Layout.pm</literal> which are necessary to properly render content using Mojolicious real-time web framework.
         </para>
-        <section id="empty-tables-in-screens">
+        <section id="package-porting-6-to-7-empty-tables-in-screens">
             <title>Not shown/empty tables in screens</title>
             <para>
                 Please make sure to check every screen which produces table-like output (e.g. <literal>Kernel/Modules/AgentTicketStatusView.pm</literal>).
                 If the list of e.g. tickets is empty or even not shown at all, check if the parameter <literal>Output => 1</literal> is used in creating the output for the page.
             </para>
         </section>
-        <section id="encoding-issues">
-            <title>Encoding issues</title>
+        <section id="package-porting-6-to-7-encoding-issues">
+            <title>Encoding issues in legacy frontend modules</title>
             <para>
-                If you are getting into trouble with broken characters, e.g. umlauts, in any pages, it is pretty sure that the content which is meant to be shown is rendered by <literal>Print</literal> method.
-                Please check the affected frontend module for usage of the <literal>Print</literal> method. It can be easily fixed by removing the <literal>Print</literal> method.
+                If you are getting into trouble with broken characters like umlauts, it could be that the content which is meant to be shown is rendered by the <literal>Print()</literal> method. To fix this, please switch the code from using the <literal>Print()</literal> method to the normal way of returning the complete response from the frontend module.
             </para>
         </section>
     </section>
