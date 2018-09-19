@@ -20,6 +20,8 @@ In contrast to the now deprecated <literal>Kernel::System::Time</literal> packag
         <title>Creation of a DateTime object</title>
         <para>
 The object manager of OTRS has been extended by a <literal>Create</literal> method to support packages for which more than one instance can be created:
+        </para>
+        <para>
             <programlisting format="linespecific"><![CDATA[
 my $DateTimeObject = $Kernel::OM->Create(
     'Kernel::System::DateTime',
@@ -28,11 +30,13 @@ my $DateTimeObject = $Kernel::OM->Create(
     },
 );
             ]]></programlisting>
-The example above will create a DateTime object for the current date and time in time zone Europe/Berlin. There are more options to create a DateTime object (time components, string, time stamp, cloning), see POD of <literal>Kernel::System::DateTime</literal>.
+        </para>
+        <para>
+The example above will create a <literal>DateTime</literal> object for the current date and time in time zone Europe/Berlin. There are more options to create a <literal>DateTime</literal> object (time components, string, time stamp, cloning), see POD of <literal>Kernel::System::DateTime</literal>.
         </para>
         <note>
             <para>
-You will get an error if you try to retrieve a DateTime object via <literal>$Kernel::OM->Get('Kernel::System::DateTime')</literal>.
+You will get an error if you try to retrieve a <literal>DateTime</literal> object via <literal>$Kernel::OM->Get('Kernel::System::DateTime')</literal>.
             </para>
         </note>
     </section>
@@ -41,7 +45,9 @@ You will get an error if you try to retrieve a DateTime object via <literal>$Ker
         <title>Time zones</title>
         <para>
 Time offsets in hours (+2, -10, etc.) have been replaced by time zones (Europe/Berlin, America/New_York, etc.).
-The conversion between time zones is completely encapsulated within a DateTime object. If you want to convert to another time zone, simply use the following code:
+The conversion between time zones is completely encapsulated within a <literal>DateTime</literal> object. If you want to convert to another time zone, simply use the following code:
+        </para>
+        <para>
             <programlisting format="linespecific"><![CDATA[
 $DateTimeObject->ToTimeZone( TimeZone => 'Europe/Berlin' );
             ]]></programlisting>
@@ -51,12 +57,12 @@ There is a new SysConfig option <literal>OTRSTimeZone</literal>. This setting de
         </para>
         <note>
             <para>
-You have to ensure to convert a DateTime object to the OTRS time zone before it gets stored in the database (there's a convenient method for this: <literal>ToOTRSTimeZone()</literal>). An exception could be that you explicitly want a database column to hold a date/time in a specific time zone. But be aware that the database itself won't provide time zone information by itself when retrieving it.
+You have to ensure to convert a <literal>DateTime</literal> object to the OTRS time zone before it gets stored in the database (there's a convenient method for this: <literal>ToOTRSTimeZone()</literal>). An exception could be that you explicitly want a database column to hold a date/time in a specific time zone. But be aware that the database itself won't provide time zone information by itself when retrieving it.
             </para>
         </note>
         <note>
             <para>
-<literal>TimeZoneList()</literal> of Kernel::System::DateTime provides a list of available time zones.
+<literal>TimeZoneList()</literal> of <literal>Kernel::System::DateTime</literal> provides a list of available time zones.
             </para>
         </note>
     </section>
@@ -69,35 +75,35 @@ The <literal>Kernel::System::DateTime</literal> package provides the following m
         <section id="date-time-methods-creation">
             <title>Object creation methods</title>
             <para>
-A DateTime object can be created either via the object manager's <literal>Create()</literal> method or by cloning another DateTime object with its <literal>Clone()</literal> method.
+A <literal>DateTime</literal> object can be created either via the object manager's <literal>Create()</literal> method or by cloning another <literal>DateTime</literal> object with its <literal>Clone()</literal> method.
             </para>
         </section>
         <section id="date-time-methods-get">
             <title>Get method</title>
             <para>
-With <literal>Get()</literal> all data of a DateTime object will be returned as a hash (date and time components including day name, etc. as well as time zone).
+With <literal>Get()</literal> all data of a <literal>DateTime</literal> object will be returned as a hash (date and time components including day name, etc. as well as time zone).
             </para>
         </section>
         <section id="date-time-methods-set">
             <title>Set method</title>
             <para>
-With <literal>Set()</literal> you can either change certain components of the DateTime object (year, month, day, hour, minute, second) or you can set a date and time based on a given string ('2016-05-24 23:04:12').
+With <literal>Set()</literal> you can either change certain components of the <literal>DateTime</literal> object (year, month, day, hour, minute, second) or you can set a date and time based on a given string ('2016-05-24 23:04:12').
 Note that you cannot change the time zone with this method.
             </para>
         </section>
         <section id="date-time-methods-time-zone">
             <title>Time zone methods</title>
             <para>
-To change the time zone of a DateTime object use method <literal>ToTimeZone()</literal> or as a shortcut for converting to OTRS time zone <literal>ToOTRSTimeZone()</literal>.
+To change the time zone of a <literal>DateTime</literal> object use method <literal>ToTimeZone()</literal> or as a shortcut for converting to OTRS time zone <literal>ToOTRSTimeZone()</literal>.
             </para>
             <para>
-To retrieve the configured OTRS time zone or user default time zone, always use method <literal>OTRSTimeZoneGet()</literal> or <literal>UserDefaultTimeZoneGet()</literal>. Never retrieve these manually via Kernel::Config.
+To retrieve the configured OTRS time zone or user default time zone, always use method <literal>OTRSTimeZoneGet()</literal> or <literal>UserDefaultTimeZoneGet()</literal>. Never retrieve these manually via <literal>Kernel::Config</literal>.
             </para>
         </section>
         <section id="date-time-methods-comparison">
             <title>Comparison operators and methods</title>
             <para>
-<literal>Kernel::System::DateTime</literal> uses operator overloading for comparisons. So you can simply compare two DateTime objects with &lt;, &lt;=, ==, !=, &gt;= and &gt;.
+<literal>Kernel::System::DateTime</literal> uses operator overloading for comparisons. So you can simply compare two <literal>DateTime</literal> objects with &lt;, &lt;=, ==, !=, &gt;= and &gt;.
 <literal>Compare()</literal> is usable in Perl's sort context as it returns -1, 0 or 1.
             </para>
         </section>
@@ -107,23 +113,33 @@ To retrieve the configured OTRS time zone or user default time zone, always use 
         <title>Deprecated package Kernel::System::Time</title>
         <para>
 The now deprecated package <literal>Kernel::System::Time</literal> has been extented to fully support time zones instead of time offsets. This has been done to ensure that existing code works without (bigger) changes.
-However, there is a case in which you have to change existing code. If you have code that uses the old time offsets to calculate a new date/time or a difference, you have to migrate this code to use the new DateTime object.
+        </para>
+        <para>
+However, there is a case in which you have to change existing code. If you have code that uses the old time offsets to calculate a new date/time or a difference, you have to migrate this code to use the new <literal>DateTime</literal> object.
+        </para>
+        <para>
 Example (old code):
-        <programlisting format="linespecific"><![CDATA[
+        </para>
+        <para>
+            <programlisting format="linespecific"><![CDATA[
 my $TimeObject     = $Kernel::OM->Get('Kernel::System::Time'); # Assume a time offset of 0 for this time object
 my $SystemTime     = $TimeObject->TimeStamp2SystemTime( String => '2004-08-14 22:45:00' );
 my $UserTimeZone   = '+2'; # normally retrieved via config or param
 my $UserSystemTime = $SystemTime + $UserTimeZone * 3600;
 my $UserTimeStamp  = $TimeObject->SystemTime2TimeStamp( SystemTime => $UserSystemTime );
-        ]]></programlisting>
+            ]]></programlisting>
+        </para>
+        <para>
 Example (new code):
-        <programlisting format="linespecific"><![CDATA[
+        </para>
+        <para>
+            <programlisting format="linespecific"><![CDATA[
 my $DateTimeObject = $Kernel::OM->Create('Kernel::System::DateTime'); # This implicitly sets the configured OTRS time zone
 my $UserTimeZone   = 'Europe/Berlin'; # normally retrieved via config or param
 $DateTimeObject->ToTimeZone( TimeZone => $UserTimeZone );
 my $SystemTime    = $DateTimeObject->ToEpoch(); # note that the epoch is independent from the time zone, it's always calculated for UTC
 my $UserTimeStamp = $DateTimeObject->ToString();
-        ]]></programlisting>
+            ]]></programlisting>
         </para>
     </section>
 

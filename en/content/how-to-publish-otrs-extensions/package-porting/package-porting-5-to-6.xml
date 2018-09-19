@@ -49,9 +49,9 @@ my $UserTimeStamp = $DateTimeObject->ToString();
             ]]></programlisting>
         </para>
         <para>
-            Please note that the returned time values with the new <literal>Get()</literal> function in the <literal>Kernel::System::DateTime</literal> module
-            are without leading zero instead of the old <literal>SystemTime2Date()</literal> function in the <literal>Kernel::System::Time</literal> module.
-            In the new <literal>Kernel::System::DateTime</literal> module the function <literal>Format()</literal> returns the date/time as string formatted
+            Please note that the returned time values with the new <code>Get()</code> function in the <literal>Kernel::System::DateTime</literal> module
+            are without leading zero instead of the old <code>SystemTime2Date()</code> function in the <literal>Kernel::System::Time</literal> module.
+            In the new <literal>Kernel::System::DateTime</literal> module the function <code>Format()</code> returns the date/time as string formatted
             according to the given format.
         </para>
     </section>
@@ -59,15 +59,15 @@ my $UserTimeStamp = $DateTimeObject->ToString();
     <section id="package-porting-5-to-6-user-multiupload">
         <title>Adding the drag &amp; drop multiupload</title>
         <para>
-            For OTRS 6, a multi attachment upload functionality was added. To implement the multi attachment upload in other extensions it is necessary to remove the attachment part from the template file, also the <code>JSOnDocumentComplete</code> parts (AttachmentDelete and AttachmentUpload). Please keep in mind, in some cases the JavaScript parts are already outsourced in <code>Core.Agent.XXX</code> files.
+            For OTRS 6, a multi attachment upload functionality was added. To implement the multi attachment upload in other extensions it is necessary to remove the attachment part from the template file, also the <code>JSOnDocumentComplete</code> parts (<literal>AttachmentDelete</literal> and <literal>AttachmentUpload</literal>). Please keep in mind, in some cases the JavaScript parts are already outsourced in <filename>Core.Agent.XXX</filename> files.
         </para>
         <note>
             <para>
-                Please note that this is currently only applicable for places where it actually makes sense to have the possibility to upload multiple files (like AgentTicketPhone, AgentTicketCompose, etc.). This is not usable out of the box for admin screens.
+                Please note that this is currently only applicable for places where it actually makes sense to have the possibility to upload multiple files (like <literal>AgentTicketPhone</literal>, <literal>AgentTicketCompose</literal>, etc.). This is not usable out of the box for admin screens.
             </para>
         </note>
         <para>
-            To include the new multi attachment upload in the template, replace the existing <code>input type="file"</code> with the following code in your <code>.tt</code> template file:
+            To include the new multi attachment upload in the template, replace the existing <code>input type="file"</code> with the following code in your <filename>.tt</filename> template file:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -79,7 +79,7 @@ my $UserTimeStamp = $DateTimeObject->ToString();
             ]]></programlisting>
         </para>
         <para>
-            It is also necessary to remove the <code>IsUpload</code> variable and all other IsUpload parts from the perl module. Code parts like following are not needed anymore:
+            It is also necessary to remove the <code>IsUpload</code> variable and all other <code>IsUpload</code> parts from the Perl module. Code parts like following are not needed anymore:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -106,7 +106,7 @@ push @{ $Param{AttachmentList} }, $Attachment;
             ]]></programlisting>
         </para>
         <para>
-            If the module where you want to integrate multiupload supports standard templates, make sure to add a section to have a human readable file size format right after the attachments of the selected template have been loaded (see e.g. AgentTicketPhone for reference):
+            If the module where you want to integrate multi upload supports standard templates, make sure to add a section to have a human readable file size format right after the attachments of the selected template have been loaded (see e.g. <literal>AgentTicketPhone</literal> for reference):
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -118,7 +118,7 @@ for my $Attachment (@TicketAttachments) {
             ]]></programlisting>
         </para>
         <para>
-            When adding selenium unit tests for the modules you ported, please take a look at <code>Selenium/Agent/MultiAttachmentUpload.t</code> for reference.
+            When adding selenium unit tests for the modules you ported, please take a look at <filename>Selenium/Agent/MultiAttachmentUpload.t</filename> for reference.
         </para>
     </section>
 
@@ -128,7 +128,7 @@ for my $Attachment (@TicketAttachments) {
         <section id="packge-porting-5-to-6-breadcrumbs">
             <title>Add breadcrumbs to administration screens</title>
             <para>
-                In OTRS 6, all admin modules should have a breadcrumb. The breadcrumb only needs to be added on the .tt template file and should be placed right after the h1 headline on top of the file. Additionally, the headline should receive the class <code>InvisibleText</code> to make it only "visible" for screen readers.
+                In OTRS 6, all admin modules should have a breadcrumb. The breadcrumb only needs to be added on the <filename>.tt</filename> template file and should be placed right after the h1 headline on top of the file. Additionally, the headline should receive the class <code>InvisibleText</code> to make it only <emphasis>visible</emphasis> for screen readers.
             </para>
             <programlisting format="linespecific"><![CDATA[
 <div class="MainBox ARIARoleMain LayoutFixedSidebar SidebarFirst">
@@ -162,9 +162,9 @@ for my $Attachment (@TicketAttachments) {
         </section>
 
         <section id="package-porting-5-to-6-saveandcontinue">
-            <title>Add "save" and "save and finish" buttons to administration screens</title>
+            <title>Add <emphasis>Save</emphasis> and <emphasis>Save and finish</emphasis> buttons to administration screens</title>
             <para>
-                Admin modules in OTRS 6 should not only have a "save" button, but also a "save and finish" button. "Save" should leave the user on the same edit page after saving, "save and finish" should lead back to the overview of the entity the user is currently working on. Please see existing OTRS admin screens for reference.
+                Admin modules in OTRS 6 should not only have a <emphasis>Save</emphasis> button, but also a <emphasis>Save and finish</emphasis> button. <emphasis>Save</emphasis> should leave the user on the same edit page after saving, <emphasis>Save and finish</emphasis> should lead back to the overview of the entity the user is currently working on. Please see existing OTRS admin screens for reference.
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -221,8 +221,8 @@ Done.
             </para>
             <para>
                 In the past, Perl configuration files were sometimes misused as an autoload mechanism
-                to override code in existing packages. This is not neccessary any more as OTRS 6 features a dedicated
-                Autoload mechanism. Please see <filename>Kernel/Autoload/Test.pm</filename> for a demonstration
+                to override code in existing packages. This is not necessary any more as OTRS 6 features a dedicated
+                <literal>Autoload</literal> mechanism. Please see <filename>Kernel/Autoload/Test.pm</filename> for a demonstration
                 on how to use this mechanism to add a method in an existing file.
             </para>
         </section>
@@ -306,7 +306,7 @@ sub Get { ... }
             <para>
                 With OTRS 6, all JavaScript - especially located in <literal>JSOnDocumentComplete</literal> blocks - is
                 removed from template files and moved to JavaScript files instead. Only in very rare conditions JavaScript
-                needs to be placed within template files. For all other occurences, place the JS code in module-specific
+                needs to be placed within template files. For all other occurrences, place the JS code in module-specific
                 JavaScript files. An <literal>Init()</literal> method within such a JavaScript file is executed
                 automatically on file load (for the initialization of event bindings etc.) if you register the JavaScript
                 file at the OTRS application. This is done by executing <literal>Core.Init.RegisterNamespace(TargetNS,
@@ -332,7 +332,7 @@ sub Get { ... }
                 ]]></programlisting>
             </para>
             <para>
-                This is no longer needed and can be removed. Instead of calling this block from the perl module, it is now
+                This is no longer needed and can be removed. Instead of calling this block from the Perl module, it is now
                 necessary to set the needed rich text parameters there. Instead of:
             </para>
             <para>
@@ -353,7 +353,7 @@ $LayoutObject->SetRichTextParameters(
 );
                 ]]></programlisting>
             </para>
-            <para>Same rule applies for Customer interface. Remove RichText blocks with CustomerRichTextEditor.tt and
+            <para>Same rule applies for customer interface. Remove RichText blocks from <filename>CustomerRichTextEditor.tt</filename> and
             apply following code instead:</para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -537,7 +537,7 @@ $(DivHTML).appendTo('body');
                     </listitem>
                     <listitem>
                         <para>
-                            Use <literal>| urlencode</literal> for encoding url parameters.
+                            Use <literal>| urlencode</literal> for encoding URL parameters.
                         </para>
                     </listitem>
                     <listitem>
@@ -579,7 +579,7 @@ Type      => 'move_into',
     </section>
 
     <section id="package-porting-5-to-6-ticket-api">
-        <title><literal>Ticket</literal> API changes</title>
+        <title>Ticket API changes</title>
 
         <section id="package-porting-5-to-6-ticket-api-ticketget">
             <title><literal>TicketGet()</literal></title>
@@ -597,7 +597,7 @@ Type      => 'move_into',
         </section>
 
         <section id="package-porting-5-to-6-ticket-api-linkobject-events">
-            <title>LinkObject Events</title>
+            <title><literal>LinkObject</literal> Events</title>
             <para>
                 In OTRS 6, old ticket-specific <literal>LinkObject</literal> events have been dropped:
             </para>
@@ -638,7 +638,7 @@ Type      => 'move_into',
                         <term><literal>SourceObject</literal></term>
                         <listitem>
                             <para>
-                                Name of the link source object (i.e. Ticket).
+                                Name of the link source object (e.g. <literal>Ticket</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -646,7 +646,7 @@ Type      => 'move_into',
                         <term><literal>SourceKey</literal></term>
                         <listitem>
                             <para>
-                                Key of the link source object (i.e. TicketID).
+                                Key of the link source object (e.g. <literal>TicketID</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -654,7 +654,7 @@ Type      => 'move_into',
                         <term><literal>TargetObject</literal></term>
                         <listitem>
                             <para>
-                                Name of the link target object (i.e. FAQItem).
+                                Name of the link target object (e.g. <literal>FAQItem</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -662,7 +662,7 @@ Type      => 'move_into',
                         <term><literal>TargetKey</literal></term>
                         <listitem>
                             <para>
-                                Key of the link target object (i.e. FAQItemID).
+                                Key of the link target object (e.g. <literal>FAQItemID</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -670,7 +670,7 @@ Type      => 'move_into',
                         <term><literal>Type</literal></term>
                         <listitem>
                             <para>
-                                Type of the link (i.e. ParentChild).
+                                Type of the link (e.g. <literal>ParentChild</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -678,7 +678,7 @@ Type      => 'move_into',
                         <term><literal>State</literal></term>
                         <listitem>
                             <para>
-                                State of the link (Valid or Temporary).
+                                State of the link (<literal>Valid</literal> or <literal>Temporary</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -730,7 +730,7 @@ Type      => 'move_into',
     <section id="package-porting-5-to-6-article-api">
         <title>Article API changes</title>
         <para>
-            In OTRS 6, changes to Article API have been made, in preparations for new Omni Channel
+            In OTRS 6, changes to Article API have been made, in preparations for new <emphasis>Omni Channel</emphasis>
             infrastructure.
         </para>
 
@@ -1072,7 +1072,7 @@ for my $Article (@Articles) {
             <para>
                 Additionally, article search indexing will be done in an async call now, in order to off-load index
                 calculation to a separate task. While this is fine for production systems, it might create new problems
-                in certain situations, i.e. unit tests. If you are manually creating articles in your unit test, but
+                in certain situations, e.g. unit tests. If you are manually creating articles in your unit test, but
                 expect it to be searchable immediately after created, make sure to manually call the new
                 <literal>ArticleSearchIndexBuild()</literal> method on article object.
             </para>
@@ -1100,7 +1100,7 @@ for my $Article (@Articles) {
         </para>
         <para>
             In case that you want to update a configuration setting during a <literal>CodeInstall</literal> section of a package, you could use
-            <literal>SettingsSet()</literal>.  It does all previouly mentioned steps and it can be used for multiple settings at once.
+            <literal>SettingsSet()</literal>.  It does all previously mentioned steps and it can be used for multiple settings at once.
         </para>
         <note>
             <para>Do not use <literal>SettingSet()</literal> in the SysConfig GUI itself.</para>
@@ -1124,10 +1124,11 @@ my $Success = $SysConfigObject->SettingsSet(
         </para>
     </section>
     <section id="package-porting-5-to-6-linkobject-changes">
-        <title>LinkObject API changes</title>
+        <title><literal>LinkObject</literal> API changes</title>
         <para>
-            Note that LinkObject was slightly modified in the OTRS 6 and methods LinkList() and LinkKeyList()
-            might return different result if Direction parameter is used. Consider changing Direction.
+            Note that <literal>LinkObject</literal> was slightly modified in the OTRS 6 and methods
+            <literal>LinkList()</literal> and <literal>LinkKeyList()</literal> might return different
+            result if <literal>Direction</literal> parameter is used. Consider changing <literal>Direction</literal>.
         </para>
         <para>
             Old code:
@@ -1183,22 +1184,23 @@ my $LinkList = $LinkObject->LinkList(
         <para>
             As part of email handling improvements for OTRS 6, all emails are now sent asynchronously, that means they are saved in a queue for future processing.
         </para>
-
         <para>
             To the unit tests that depend on emails continue to work properly is necessary to force the processing of the email queue.
         </para>
-
         <para>
             Make sure to start with a clean queue:
+        </para>
+        <para>
             <programlisting><![CDATA[
                 my $MailQueueObject = $Kernel::OM->Get('Kernel::System::MailQueue');
                 $MailQueueObject->Delete();
             ]]></programlisting>
         </para>
-
         <para>
             If for some reason you can't clean completely the queue, e.g. selenium unit tests,
             just delete the items created during the tests:
+        </para>
+        <para>
             <programlisting><![CDATA[
                 my $MailQueueObject = $Kernel::OM->Get('Kernel::System::MailQueue');
                 my %MailQueueCurrentItems = map { $_->{ID} => $_ } @{ $MailQueueObject->List() || [] };
@@ -1213,9 +1215,10 @@ my $LinkList = $LinkObject->LinkList(
                 }
             ]]></programlisting>
         </para>
-
         <para>
             Process the queue after the code that you expect to send emails:
+        </para>
+        <para>
             <programlisting><![CDATA[
                 my $MailQueueObject = $Kernel::OM->Get('Kernel::System::MailQueue');
                 my $QueueItems      = $MailQueueObject->List();
@@ -1224,9 +1227,10 @@ my $LinkList = $LinkObject->LinkList(
                 }
             ]]></programlisting>
         </para>
-
         <para>
             Or process only the ones created during the tests:
+        </para>
+        <para>
             <programlisting><![CDATA[
                 my $MailQueueObject = $Kernel::OM->Get('Kernel::System::MailQueue');
                 my $QueueItems      = $MailQueueObject->List();
@@ -1237,7 +1241,6 @@ my $LinkList = $LinkObject->LinkList(
                 }
             ]]></programlisting>
         </para>
-
         <para>
             Depending on your case, you may need to clean the queue after or before
             processing it.
@@ -1248,7 +1251,7 @@ my $LinkList = $LinkObject->LinkList(
         <title>Widget Handling in Ticket Zoom Screen</title>
         <para>
             The widgets in the ticket zoom screen have been improved to work in a more generic way. With OTRS 6, it is
-            now possible to add new widgets for the AgentTicketZoom screen via the SysConfig. It is possible to
+            now possible to add new widgets for the ticket zoom screen via the SysConfig. It is possible to
             configure the used module, the location of the widget (e.g. Sidebar) and if the content should be loaded synchronously (default) or via AJAX.
         </para>
         <para>
