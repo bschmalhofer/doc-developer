@@ -11,13 +11,12 @@ idő helyes kiszámítását és tárolását biztosítja.
     <section id="date-time-intro">
         <title>Bevezetés</title>
         <para>
-Date and time are represented by an object of
-<literal>Kernel::System::DateTime</literal>.  Every
-<literal>DateTime</literal> object holds its own date, time and time zone
-information.  In contrast to the now deprecated
-<literal>Kernel::System::Time</literal> package, this means that you can and
-should create a <literal>DateTime</literal> object for every date/time you
-want to use.
+A dátum és idő egy <literal>Kernel::System::DateTime</literal> objektummal
+van ábrázolva. Minden <literal>DateTime</literal> objektum tartalmazza a
+saját dátumát, idejét és időzóna információját. A mostanra elavult
+<literal>Kernel::System::Time</literal> csomaggal szemben ez azt jelenti,
+hogy létrehozhat és létre kell hoznia egy <literal>DateTime</literal>
+objektumot minden egyes dátumhoz vagy időhöz, amelyet használni szeretne.
         </para>
     </section>
 

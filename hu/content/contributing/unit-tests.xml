@@ -459,11 +459,10 @@ negatív értéket, hogy visszamenjen az időben.
                 <term><literal>ConfigSettingChange()</literal></term>
                 <listitem>
                     <para>
-                        This functions temporarily changes a configuration setting system wide to
-another value, both in the current instance of the
-<literal>ConfigObject</literal> and also in the system configuration on
-disk. This will be reset when the <literal>Helper</literal> object is
-destroyed.
+                        Ez a függvény átmenetileg rendszerszinten megváltoztat egy
+rendszerbeállítást egy másik értékre mind a <literal>ConfigObject</literal>
+aktuális példányában, mind a rendszerbeállításokban is a lemezen. Akkor lesz
+visszaállítva, amikor a <literal>Helper</literal> objektum megsemmisül.
                     </para>
                     <note>
                         <para>
@@ -548,10 +547,10 @@ hívást, amelyet a <literal>DBObject</literal> rendszer küldött át.
 <literal>Helper</literal> objektum megsemmisül.
                     </para>
                     <para>
-                        This method returns <literal>undef</literal> in case the test database is
-not configured. If it is configured, but the supplied XML cannot be read or
-executed, this method will <literal>die()</literal> to interrupt the test
-with an error.
+                        Ez a metódus <literal>undef</literal> értéket ad vissza abban az esetben, ha
+a teszt adatbázis nincs beállítva. Ha be van állítva, de a mellékelt XML nem
+olvasható vagy nem hajtható végre, akkor a metódus <literal>die()</literal>
+függvénye lesz meghívva a teszt hibával történő megszakításához.
                     </para>
                     <para>
                         <programlisting><![CDATA[
