@@ -9,7 +9,7 @@
             OTRS comes with a system log backend that can be used for application logging and debugging.
         </para>
         <para>
-            The log object can be accessed and used via the <literal>ObjectManager</literal> like this:
+            The <literal>Log</literal> object can be accessed and used via the <literal>ObjectManager</literal> like this:
         </para>
         <para>
             <programlisting><![CDATA[

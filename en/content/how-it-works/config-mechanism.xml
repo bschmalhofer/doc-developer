@@ -538,10 +538,11 @@
                 <title>Entity</title>
                 <para>
                     This config element contains a value of a particular entity. <literal>ValueEntityType</literal>
-                    attribute defines the entity type. Supported entities: DynamicField, Queue, Priority, State and
-                    Type. Consistency checks will ensure that only valid entities can be configured and that entities
-                    used in the configuration cannot be set to invalid. Also, when an entity is renamed, all
-                    referencing config settings will be updated.
+                    attribute defines the entity type. Supported entities: <literal>DynamicField</literal>,
+                    <literal>Queue</literal>, <literal>Priority</literal>, <literal>State</literal> and
+                    <literal>Type</literal>. Consistency checks will ensure that only valid entities can be
+                    configured and that entities used in the configuration cannot be set to invalid. Also,
+                    when an entity is renamed, all referencing config settings will be updated.
                 </para>
                 <para>
                     <programlisting><![CDATA[
