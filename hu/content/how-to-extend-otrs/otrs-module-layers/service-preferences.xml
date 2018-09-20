@@ -29,8 +29,8 @@ találhat egy példát.
         <para>
         <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Kernel/System/Service/PreferencesCustom - some user functions
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Kernel/System/Service/PreferencesCustom - néhány felhasználói függvény
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # Id: PreferencesCustom.pm,v 1.2 2009/02/16 11:47:34 tr Exp $
 # --
@@ -49,16 +49,16 @@ use vars qw(@ISA $VERSION);
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # allocate new hash for object
+    # új kivonat lefoglalása az objektumhoz
     my $Self = {};
     bless( $Self, $Type );
 
-    # check needed objects
+    # a szükséges objektumok ellenőrzése
     for (qw(DBObject ConfigObject LogObject)) {
-        $Self->{$_} = $Param{$_} || die "Got no $_!";
+        $Self->{$_} = $Param{$_} || die "Nincs $_!";
     }
 
-    # preferences table data
+    # beállítások tábla adatai
     $Self->{PreferencesTable}          = 'service_preferences';
     $Self->{PreferencesTableKey}       = 'preferences_key';
     $Self->{PreferencesTableValue}     = 'preferences_value';
@@ -70,15 +70,15 @@ sub new {
 sub ServicePreferencesSet {
     my ( $Self, %Param ) = @_;
 
-    # check needed stuff
+    # a szükséges dolgok ellenőrzése
     for (qw(ServiceID Key Value)) {
         if ( !defined( $Param{$_} ) ) {
-            $Self->{LogObject}->Log( Priority => 'error', Message => "Need $_!" );
+            $Self->{LogObject}->Log( Priority => 'error', Message => "Szükséges: $_!" );
             return;
         }
     }
 
-    # delete old data
+    # régi adatok törlése
     return if !$Self->{DBObject}->Do(
         SQL => "DELETE FROM $Self->{PreferencesTable} WHERE "
             . "$Self->{PreferencesTableServiceID} = ? AND $Self->{PreferencesTableKey} = ?",
@@ -87,7 +87,7 @@ sub ServicePreferencesSet {
 
 $Self->{PreferencesTableValue} .= 'PreferencesCustom';
 
-    # insert new data
+    # új adatok beszúrása
     return $Self->{DBObject}->Do(
         SQL => "INSERT INTO $Self->{PreferencesTable} ($Self->{PreferencesTableServiceID}, "
             . " $Self->{PreferencesTableKey}, $Self->{PreferencesTableValue}) "
@@ -99,20 +99,20 @@ $Self->{PreferencesTableValue} .= 'PreferencesCustom';
 sub ServicePreferencesGet {
     my ( $Self, %Param ) = @_;
 
-    # check needed stuff
+    # a szükséges dolgok ellenőrzése
     for (qw(ServiceID)) {
         if ( !$Param{$_} ) {
-            $Self->{LogObject}->Log( Priority => 'error', Message => "Need $_!" );
+            $Self->{LogObject}->Log( Priority => 'error', Message => "Szükséges: $_!" );
             return;
         }
     }
 
-    # check if service preferences are available
+    # annak ellenőrzése, hogy a szolgáltatás beállítások elérhetők-e
     if ( !$Self->{ConfigObject}->Get('ServicePreferences') ) {
         return;
     }
 
-    # get preferences
+    # beállítások lekérése
     return if !$Self->{DBObject}->Prepare(
         SQL => "SELECT $Self->{PreferencesTableKey}, $Self->{PreferencesTableValue} "
             . " FROM $Self->{PreferencesTable} WHERE $Self->{PreferencesTableServiceID} = ?",
@@ -123,7 +123,7 @@ sub ServicePreferencesGet {
         $Data{ $Row[0] } = $Row[1];
     }
 
-    # return data
+    # adatok visszaadása
     return %Data;
 }
 

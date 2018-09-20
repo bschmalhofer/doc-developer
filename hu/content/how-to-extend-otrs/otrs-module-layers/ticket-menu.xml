@@ -25,7 +25,7 @@ helyre. Mindössze két függvényre van szüksége: <code>new()</code> és
         <programlisting linenumbering="numbered"><![CDATA[
 # --
 # Kernel/Output/HTML/TicketMenuCustom.pm
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # Id: TicketMenuCustom.pm,v 1.17 2010/04/12 21:34:06 martin Exp $
 # --
@@ -42,13 +42,13 @@ use warnings;
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # allocate new hash for object
+    # új kivonat lefoglalása az objektumhoz
     my $Self = {};
     bless( $Self, $Type );
 
-    # get needed objects
+    # a szükséges objektumok lekérése
     for my $Object (qw(ConfigObject LogObject DBObject LayoutObject UserID TicketObject)) {
-        $Self->{$Object} = $Param{$Object} || die "Got no $Object!";
+        $Self->{$Object} = $Param{$Object} || die "Nincs $Object!";
     }
 
     return $Self;
@@ -57,22 +57,22 @@ sub new {
 sub Run {
     my ( $Self, %Param ) = @_;
 
-    # check needed stuff
+    # a szükséges dolgok ellenőrzése
     if ( !$Param{Ticket} ) {
         $Self->{LogObject}->Log(
             Priority => 'error',
-            Message  => 'Need Ticket!'
+            Message  => 'Jegy szükséges!'
         );
         return;
     }
 
-    # check if frontend module registered, if not, do not show action
+    # annak ellenőrzése, hogy az előtétprogram modul regisztrálva van-e,     # és ha nincs, akkor ne jelenítse meg a műveletet
     if ( $Param{Config}->{Action} ) {
         my $Module = $Self->{ConfigObject}->Get('Frontend::Module')->{ $Param{Config}->{Action} };
         return if !$Module;
     }
 
-    # check permission
+    # jogosultság ellenőrzése
     my $AccessOk = $Self->{TicketObject}->Permission(
         Type     => 'rw',
         TicketID => $Param{Ticket}->{TicketID},
@@ -81,7 +81,7 @@ sub Run {
     );
     return if !$AccessOk;
 
-    # check permission
+    # jogosultság ellenőrzése
     if ( $Self->{TicketObject}->CustomIsTicketCustom( TicketID => $Param{Ticket}->{TicketID} ) ) {
         my $AccessOk = $Self->{TicketObject}->OwnerCheck(
             TicketID => $Param{Ticket}->{TicketID},
@@ -90,35 +90,35 @@ sub Run {
         return if !$AccessOk;
     }
 
-    # check acl
+    # ACL ellenőrzése
     return
         if defined $Param{ACL}->{ $Param{Config}->{Action} }
             && !$Param{ACL}->{ $Param{Config}->{Action} };
 
-    # if ticket is customized
+    # ha a jegy személyre van szabva
     if ( $Param{Ticket}->{Custom} eq 'lock' ) {
 
-        # if it is locked for somebody else
+        # ha zárolva van valaki más számára
         return if $Param{Ticket}->{OwnerID} ne $Self->{UserID};
 
-        # show custom action
+        # egyéni művelet megjelenítése
         return {
             %{ $Param{Config} },
             %{ $Param{Ticket} },
             %Param,
             Name        => 'Custom',
-            Description => 'Custom to give it back to the queue!',
+            Description => 'Egyéni a várólistába történő visszaadáshoz!',
             Link        => 'Action=AgentTicketCustom;Subaction=Custom;TicketID=$QData{"TicketID"}',
         };
     }
 
-    # if ticket is customized
+    # ha a jegy személyre van szabva
     return {
         %{ $Param{Config} },
         %{ $Param{Ticket} },
         %Param,
         Name        => 'Custom',
-        Description => 'Custom it to work on it!',
+        Description => 'Szabja személyre, hogy dolgozhasson vele!',
         Link        => 'Action=AgentTicketCustom;Subaction=Custom;TicketID=$QData{"TicketID"}',
     };
 }

@@ -28,8 +28,8 @@ találhat egy példát.
         <para>
         <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Kernel/System/SLA/PreferencesCustom.pm - some user functions
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Kernel/System/SLA/PreferencesCustom.pm - néhány felhasználói függvény
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -46,16 +46,16 @@ use vars qw(@ISA);
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # allocate new hash for object
+    # új kivonat lefoglalása az objektumhoz
     my $Self = {};
     bless( $Self, $Type );
 
-    # check needed objects
+    # a szükséges objektumok ellenőrzése
     for (qw(DBObject ConfigObject LogObject)) {
-        $Self->{$_} = $Param{$_} || die "Got no $_!";
+        $Self->{$_} = $Param{$_} || die "Nincs $_!";
     }
 
-    # preferences table data
+    # beállítások tábla adatai
     $Self->{PreferencesTable}      = 'sla_preferences';
     $Self->{PreferencesTableKey}   = 'preferences_key';
     $Self->{PreferencesTableValue} = 'preferences_value';
@@ -67,15 +67,15 @@ sub new {
 sub SLAPreferencesSet {
     my ( $Self, %Param ) = @_;
 
-    # check needed stuff
+    # a szükséges dolgok ellenőrzése
     for (qw(SLAID Key Value)) {
         if ( !defined( $Param{$_} ) ) {
-            $Self->{LogObject}->Log( Priority => 'error', Message => "Need $_!" );
+            $Self->{LogObject}->Log( Priority => 'error', Message => "Szükséges: $_!" );
             return;
         }
     }
 
-    # delete old data
+    # régi adatok törlése
     return if !$Self->{DBObject}->Do(
         SQL => "DELETE FROM $Self->{PreferencesTable} WHERE "
             . "$Self->{PreferencesTableSLAID} = ? AND $Self->{PreferencesTableKey} = ?",
@@ -84,7 +84,7 @@ sub SLAPreferencesSet {
 
 $Self->{PreferencesTableValue} .= 'PreferencesCustom';
 
-    # insert new data
+    # új adatok beszúrása
     return $Self->{DBObject}->Do(
         SQL => "INSERT INTO $Self->{PreferencesTable} ($Self->{PreferencesTableSLAID}, "
             . " $Self->{PreferencesTableKey}, $Self->{PreferencesTableValue}) "
@@ -96,20 +96,20 @@ $Self->{PreferencesTableValue} .= 'PreferencesCustom';
 sub SLAPreferencesGet {
     my ( $Self, %Param ) = @_;
 
-    # check needed stuff
+    # a szükséges dolgok ellenőrzése
     for (qw(SLAID)) {
         if ( !$Param{$_} ) {
-            $Self->{LogObject}->Log( Priority => 'error', Message => "Need $_!" );
+            $Self->{LogObject}->Log( Priority => 'error', Message => "Szükséges: $_!" );
             return;
         }
     }
 
-    # check if SLA preferences are available
+    # annak ellenőrzése, hogy az SLA beállítások elérhetők-e
     if ( !$Self->{ConfigObject}->Get('SLAPreferences') ) {
         return;
     }
 
-    # get preferences
+    # beállítások lekérése
     return if !$Self->{DBObject}->Prepare(
         SQL => "SELECT $Self->{PreferencesTableKey}, $Self->{PreferencesTableValue} "
             . " FROM $Self->{PreferencesTable} WHERE $Self->{PreferencesTableSLAID} = ?",
@@ -120,7 +120,7 @@ sub SLAPreferencesGet {
         $Data{ $Row[0] } = $Row[1];
     }
 
-    # return data
+    # adatok visszaadása
     return %Data;
 }
 

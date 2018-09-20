@@ -292,22 +292,23 @@ formátumban kell lenniük. Ha időzóna-eltolás van meghatározva a jelenlegi
 előállítása előtt.
                 </para>
                 <para>
-                    There are different possible date/time output formats:
-<literal>TimeLong</literal> (full date/time), <literal>TimeShort</literal>
-(no seconds) and <literal>Date</literal> (no time).
+                    Különböző lehetséges dátum és idő kimeneti formátumok léteznek:
+<literal>TimeLong</literal> (teljes dátum és idő),
+<literal>TimeShort</literal> (nincsenek másodpercek) és
+<literal>Date</literal> (nincs idő).
                 </para>
                 <para>
                     <programlisting><![CDATA[
 [% Data.CreateTime ǀ Localize("TimeLong") %]
-# Result for US English locale:
+# Eredmény a US English területi beállításnál:
 06/09/2010 15:45:41
 
-[% Data.CreateTime ǀ Localize("TimeShort") %]
-# Result for US English locale:
+[% Data.CreateTime ǀ Localize("TimeShort") ]") %]
+# Eredmény a US English területi beállításnál:
 06/09/2010 15:45
 
 [% Data.CreateTime ǀ Localize("Date") %]
-# Result for US English locale:
+# Eredmény a US English területi beállításnál:
 06/09/2010
                     ]]></programlisting>
                 </para>
@@ -328,14 +329,14 @@ fájlméretet bájtokban).
             <section id="replace-placeholders-tag">
                 <title><literal>[% ReplacePlaceholders() %]</literal></title>
                 <para>
-                    Replaces placeholders (%s) in strings with passed parameters.
+                    Kicseréli a helykitöltőket (%s) a szövegekben az átadott paraméterekre.
                 </para>
                 <para>
-                    In certain cases, you might want to insert HTML code in translations,
-instead of placeholders. On the other hand, you also need to take care of
-sanitization, since translated strings should not be trusted as-is. For
-this, you can first translate the string, pass it through the HTML filter
-and finally replace placeholders with static (safe) HTML code.
+                    Bizonyos esetekben érdemes lehet HTML kódot beszúrni a fordításokba a
+helykitöltők helyett. Másrészt viszont gondoskodnia kellfertőtlenítésről,
+mivel a lefordított szövegekben nem szabad megbízni úgy, ahogy vannak. Ehhez
+először fordítsa le a szöveget, küldje át a HTML szűrőn, és végül cserélje
+ki a helykitöltőket statikus (biztonságos) HTML kóddal.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -343,14 +344,14 @@ and finally replace placeholders with static (safe) HTML code.
                     ]]></programlisting>
                 </para>
                 <para>
-                    Number of parameters to <literal>ReplacePlaceholders()</literal> filter
-should match number of placeholders in the original string.
+                    A <literal>ReplacePlaceholders()</literal> szűrőnek átadott paraméterek
+számának meg kell egyeznie az eredeti szövegben lévő helykitöltők számával.
                 </para>
                 <para>
-                    You can also use <literal>[% ReplacePlaceholders() %]</literal> in function
-format, in case you are not translating anything. In this case, first
-parameter is the target string, and any found placeholders in it are
-substituted with subsequent parameters.
+                    Használhatja a <literal>[% ReplacePlaceholders() %]</literal> szűrőt
+függvény formában is abban az esetben, ha nem fordít le semmit sem. Ebben az
+esetben az első paraméter a célszöveg, és a benne talált bármilyen
+helykitöltő helyettesítve lesz az azt követő paraméterekkel.
                 </para>
                 <para>
                     <programlisting><![CDATA[

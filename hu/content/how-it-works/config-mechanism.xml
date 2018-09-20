@@ -602,27 +602,28 @@ alapértelmezett értéket.
                 <para>
                     This config element contains a value of a particular
 entity. <literal>ValueEntityType</literal> attribute defines the entity
-type. Supported entities: DynamicField, Queue, Priority, State and
-Type. Consistency checks will ensure that only valid entities can be
-configured and that entities used in the configuration cannot be set to
-invalid. Also, when an entity is renamed, all referencing config settings
-will be updated.
+type. Supported entities: <literal>DynamicField</literal>,
+<literal>Queue</literal>, <literal>Priority</literal>,
+<literal>State</literal> and <literal>Type</literal>. Consistency checks
+will ensure that only valid entities can be configured and that entities
+used in the configuration cannot be set to invalid. Also, when an entity is
+renamed, all referencing config settings will be updated.
                 </para>
                 <para>
                     <programlisting><![CDATA[
 <Setting Name="SettingName">
     ...
     <Value>
-        <Item ValueType="Entity" ValueEntityType="Queue">Junk</Item>
+        <Item ValueType="Entity" ValueEntityType="Queue">Szemét</Item>
     </Value>
 </Setting>
                     ]]></programlisting>
                 </para>
             </section>
             <section id="xml-config-timezone">
-                <title>TimeZone</title>
+                <title><literal>TimeZone</literal></title>
                 <para>
-                    This config element contains a time zone value.
+                    Ez a beállítási elem egy időzóna értéket tartalmaz.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -636,11 +637,11 @@ will be updated.
                 </para>
             </section>
             <section id="xml-config-vacationdays">
-                <title>VacationDays</title>
+                <title><literal>VacationDays</literal></title>
                 <para>
-                    This config element contains definitions for vacation days which are
-repeating each year.  Following attributes are mandatory:
-<literal>ValueMonth</literal>, <literal>ValueDay</literal>.
+                    Ez a beállítási elem meghatározásokat tartalmaz az olyan munkaszüneti
+napokhoz, amelyek minden évben ismétlődnek. A következő attribútumok
+kötelezőek: <literal>ValueMonth</literal>, <literal>ValueDay</literal>.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -649,9 +650,9 @@ repeating each year.  Following attributes are mandatory:
     <Value>
         <Item ValueType="VacationDays">
             <DefaultItem ValueType="VacationDays"></DefaultItem>
-            <Item ValueMonth="1" ValueDay="1" Translatable="1">New Year's Day</Item>
-            <Item ValueMonth="5" ValueDay="1" Translatable="1">International Workers' Day</Item>
-            <Item ValueMonth="12" ValueDay="24" Translatable="1">Christmas Eve</Item>
+            <Item ValueMonth="1" ValueDay="1" Translatable="1">Újév</Item>
+            <Item ValueMonth="5" ValueDay="1" Translatable="1">A munka ünnepe</Item>
+            <Item ValueMonth="12" ValueDay="24" Translatable="1">Szenteste</Item>
         </Item>
     </Value>
 </Setting>
@@ -659,11 +660,12 @@ repeating each year.  Following attributes are mandatory:
                 </para>
             </section>
             <section id="xml-config-vacationdaysonetime">
-                <title>VacationDaysOneTime</title>
+                <title><literal>VacationDaysOneTime</literal></title>
                 <para>
-                    This config element contains definitions for vacation days which occur only
-once.  Following attributes are mandatory: <literal>ValueMonth</literal>,
-<literal>ValueDay</literal> and <literal>ValueYear</literal>.
+                    Ez a beállítási elem meghatározásokat tartalmaz az olyan munkaszüneti
+napokhoz, amelyek csak egyszer fordulnak elő. A következő attribútumok
+kötelezőek: <literal>ValueMonth</literal>, <literal>ValueDay</literal> és
+<literal>ValueYear</literal>.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -671,7 +673,7 @@ once.  Following attributes are mandatory: <literal>ValueMonth</literal>,
     ...
     <Value>
         <Item ValueType="VacationDaysOneTime">
-            <Item ValueYear="2004" ValueMonth="1" ValueDay="1">test</Item>
+            <Item ValueYear="2004" ValueMonth="1" ValueDay="1">Teszt</Item>
         </Item>
     </Value>
 </Setting>
@@ -679,9 +681,9 @@ once.  Following attributes are mandatory: <literal>ValueMonth</literal>,
                 </para>
             </section>
             <section id="xml-config-workinghours">
-                <title>WorkingHours</title>
+                <title><literal>WorkingHours</literal></title>
                 <para>
-                    This config element contains definitions for working hours.
+                    Ez a beállítási elem meghatározásokat tartalmaz a munkaidőhöz.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -704,7 +706,7 @@ once.  Following attributes are mandatory: <literal>ValueMonth</literal>,
                 </para>
             </section>
             <section id="xml-config-frontendregistration">
-                <title>Frontend Registration</title>
+                <title>Előtétprogram regisztráció</title>
                 <para>
                     Modul regisztráció az ügyintézői felülethez:
                 </para>
@@ -723,8 +725,8 @@ once.  Following attributes are mandatory: <literal>ValueMonth</literal>,
                     <Array>
                     </Array>
                 </Item>
-                <Item Key="Description" Translatable="1">Phone Call.</Item>
-                <Item Key="Title" Translatable="1">Phone-Ticket</Item>
+                <Item Key="Description" Translatable="1">Telefonhívás.</Item>
+                <Item Key="Title" Translatable="1">Telefonos jegy</Item>
                 <Item Key="NavBarName">Ticket</Item>
             </Hash>
         </Item>
@@ -735,28 +737,31 @@ once.  Following attributes are mandatory: <literal>ValueMonth</literal>,
             </section>
         </section>
         <section id="xml-default-item">
-            <title>DefaultItem in Array and Hash</title>
+            <title><literal>DefaultItem</literal> az <literal>Array</literal> és
+<literal>Hash</literal> elemekben</title>
             <para>
-                The new XML structure allows us to create complex structures. Therefore we
-need <literal>DefaultItem</literal> entries to describe the structure of the
-Array/Hash. If it's not provided, system considers that you want simple
-Array/Hash with scalar values.  <literal>DefaultItem</literal> is used as a
-template when adding new elements, so it can contain additional attributes,
-like <literal>ValueType</literal>, and it can define default values.
+                Az új XML szerkezet lehetővé teszi számunkra az összetett szerkezetek
+létrehozását. Ennélfogva szükségünk van alapértelmezett
+<literal>DefaultItem</literal> bejegyzésekre a tömb vagy kivonat
+szerkezetének leírásához. Ha ez nincs megadva, akkor a rendszer úgy tekinti,
+hogy egyszerű tömböt vagy kivonatot szeretne skalár értékekkel. A
+<literal>DefaultItem</literal> használható sablonként, amikor új elemeket
+adunk hozzá, így tartalmazhat további attribútumokat, mint például a
+<literal>ValueType</literal>, és meghatározhat alapértelmezett értékeket.
             </para>
             <para>
-                Here are few examples:
+                Itt van néhány példa:
             </para>
             <section id="xml-aoa-select">
-                <title>Array of Array with Select items</title>
+                <title>Tömb tömbje <literal>Select</literal> elemekkel</title>
                 <para>
                     <programlisting><![CDATA[
 <Array>
     <DefaultItem>
         <Array>
             <DefaultItem ValueType="Select" SelectedID='option-2'>
-                <Item ValueType="Option" Value="option-1">Option 1</Item>
-                <Item ValueType="Option" Value="option-2">Option 2</Item>
+                <Item ValueType="Option" Value="option-1">1. lehetőség</Item>
+                <Item ValueType="Option" Value="option-2">2. lehetőség</Item>
             </DefaultItem>
         </Array>
     </DefaultItem>
@@ -766,7 +771,7 @@ like <literal>ValueType</literal>, and it can define default values.
                 </para>
             </section>
             <section id="xml-hoh-date">
-                <title>Hash of Hash with Date items</title>
+                <title>Kivonat kivonata <literal>Date</literal> elemekkel</title>
                 <para>
                     <programlisting><![CDATA[
 <Hash>

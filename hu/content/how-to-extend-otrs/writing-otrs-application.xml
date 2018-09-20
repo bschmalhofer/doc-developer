@@ -36,11 +36,11 @@ Kernel/Language
     <section id="default-config-file">
         <title>Alapértelmezett beállítófájl</title>
         <para>
-            The creation of a module registration facilitates the display of the new
-module in OTRS.  Therefore we create a file
-<filename>/Kernel/Config/Files/XML/HelloWorld.xml</filename>.  In this file,
-we create a new config element.  The impact of the various settings is
-described in the chapter 'Config Mechanism'.
+            Egy modulregisztráció létrehozása megkönnyíti az új modul megjelenítését az
+OTRS-ben. Ezért létrehozunk egy
+<filename>/Kernel/Config/Files/XML/HelloWorld.xml</filename> fájlt. Ebben a
+fájlban létrehozunk egy új beállítási elemet. A különféle beállítások hatása
+a „Beállítási mechanizmus” fejezetben van leírva.
         </para>
         <para>
             <programlisting><![CDATA[

@@ -9,84 +9,92 @@ vizsgálnia, amikor átírja a csomagját az OTRS 5-ről 6-ra.
     </para>
 
     <section id="package-porting-5-to-6-datetime">
-        <title>Date and time calculation</title>
+        <title>Dátum- és időszámítás</title>
         <para>
-            In OTRS 6, a new module for date and time calculation was added:
-<literal>Kernel::System::DateTime</literal>. The module
-<literal>Kernel::System::Time</literal> is now deprecated and should not be
-used for new code anymore.
+            Az OTRS 6-ban egy új modul lett hozzáadva a dátum- és időszámításhoz:
+<literal>Kernel::System::DateTime</literal>. A
+<literal>Kernel::System::Time</literal> modul mostantól elavult, és többé
+nem szabad használni új kódoknál.
         </para>
         <para>
-            The main advantage of the new <literal>Kernel::System::DateTime</literal>
-module is the support for real time zones like
-<literal>Europe/Berlin</literal> instead of time offsets in hours like
-<literal>+2</literal>. Note that also the old
-<literal>Kernel::System::Time</literal> module has been improved to support
-time zones. Time offsets have been completely dropped. This means that any
-code that uses time offsets for calculations has to be ported to use the new
-<literal>DateTime</literal> module instead. Code that doesn't fiddle around
-with time offsets itself can be left untouched in most cases. You just have
-to make sure that upon creation of a <literal>Kernel::System::Time</literal>
-object a valid time zone will be given.
+            Az új <literal>Kernel::System::DateTime</literal> modul legfőbb előnye, hogy
+támogatja a valódi időzónákat (mint például
+<literal>Europe/Berlin</literal>) az órákban számított időeltolások (mint
+például <literal>+2</literal>) helyett. Ne feledje, hogy a régi
+<literal>Kernel::System::Time</literal> modult is továbbfejlesztették az
+időzónák támogatásához. Az időeltolások teljes mértékben eldobásra
+kerültek. Ez azt jelenti, hogy az összes olyan kódot, amely időeltolásokat
+használ a számításokhoz, át kell írni az új <literal>DateTime</literal>
+modul használatához. Azok a kódok, amelyek önmaguk nem foglalkoznak az
+időeltolásokkal, a legtöbb esetben maradhatnak érintetlenül. Mindössze arról
+kell meggyőződnie, hogy a <literal>Kernel::System::Time</literal> objektum
+létrehozásakor érvényes időzóna legyen megadva.
         </para>
         <para>
-            Here's an example for porting time offset code to time zones:
+            Itt egy példa az időeltolásos kód időzónákra történő átírásához:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
-my $TimeObject     = $Kernel::OM->Get('Kernel::System::Time'); # Assume a time offset of 0 for this time object
+# Feltételezzünk egy 0 időeltolást ennél az objektumnál.
+my $TimeObject     = $Kernel::OM->Get('Kernel::System::Time');
 my $SystemTime     = $TimeObject->TimeStamp2SystemTime( String => '2004-08-14 22:45:00' );
-my $UserTimeZone   = '+2'; # normally retrieved via config or param
+# Általában beállításon vagy paraméteren keresztül van lekérve.
+my $UserTimeZone   = '+2';
 my $UserSystemTime = $SystemTime + $UserTimeZone * 3600;
 my $UserTimeStamp  = $TimeObject->SystemTime2TimeStamp( SystemTime => $UserSystemTime );
             ]]></programlisting>
         </para>
         <para>
-            Code using the new <literal>Kernel::System::DateTime</literal> module:
+            Az új <literal>Kernel::System::DateTime</literal> modult használó kód:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
-my $DateTimeObject = $Kernel::OM->Create('Kernel::System::DateTime'); # This implicitly sets the configured OTRS time zone
-my $UserTimeZone   = 'Europe/Berlin'; # normally retrieved via config or param
+# Ez hallgatólagosan beállítja a beállított OTRS időzónát.
+my $DateTimeObject = $Kernel::OM->Create('Kernel::System::DateTime');
+# Általában beállításon vagy paraméteren keresztül van lekérve.
+my $UserTimeZone   = 'Europe/Berlin';
 $DateTimeObject->ToTimeZone( TimeZone => $UserTimeZone );
-my $SystemTime    = $DateTimeObject->ToEpoch(); # note that the epoch is independent from the time zone, it's always calculated for UTC
+# Ne feledje, hogy az epoch független az időzónától, mindig az UTC-hez lesz kiszámítva.
+my $SystemTime    = $DateTimeObject->ToEpoch();
 my $UserTimeStamp = $DateTimeObject->ToString();
             ]]></programlisting>
         </para>
         <para>
-            Please note that the returned time values with the new <code>Get()</code>
-function in the <literal>Kernel::System::DateTime</literal> module are
-without leading zero instead of the old <code>SystemTime2Date()</code>
-function in the <literal>Kernel::System::Time</literal> module.  In the new
-<literal>Kernel::System::DateTime</literal> module the function
-<code>Format()</code> returns the date/time as string formatted according to
-the given format.
+            Ne feledje, hogy a <literal>Kernel::System::DateTime</literal> modulban lévő
+új <code>Get()</code> függvénnyel visszaadott időértékek vezető nulla nélkül
+lesznek a <literal>Kernel::System::Time</literal> modulban lévő
+<code>SystemTime2Date()</code> függvény által visszaadottak helyett. Az új
+<literal>Kernel::System::DateTime</literal> modulban a <code>Format()</code>
+függvény szövegként adja vissza a dátumot és időt a megadott formátum
+szerint.
         </para>
     </section>
 
     <section id="package-porting-5-to-6-user-multiupload">
-        <title>Adding the drag &amp; drop multiupload</title>
+        <title>A fogd és vidd többszörös feltöltés hozzáadása</title>
         <para>
-            For OTRS 6, a multi attachment upload functionality was added. To implement
-the multi attachment upload in other extensions it is necessary to remove
-the attachment part from the template file, also the
-<code>JSOnDocumentComplete</code> parts (<literal>AttachmentDelete</literal>
-and <literal>AttachmentUpload</literal>). Please keep in mind, in some cases
-the JavaScript parts are already outsourced in
-<filename>Core.Agent.XXX</filename> files.
+            Az OTRS 6-nál egy több mellékletet feltöltő funkcionalitás lett
+hozzáadva. Ahhoz, hogy a több melléklet feltöltését megvalósítsa az egyéb
+kiterjesztésekben, a melléklet rész, valamint a
+<code>JSOnDocumentComplete</code> részek eltávolítása szükséges a
+sablonfájlokból (<literal>AttachmentDelete</literal> és
+<literal>AttachmentUpload</literal>). Tartsa észben, hogy néhány esetben a
+JavaScript részek már kihelyezésre kerültek a
+<filename>Core.Agent.XXX</filename> fájlokba.
         </para>
         <note>
             <para>
-                Please note that this is currently only applicable for places where it
-actually makes sense to have the possibility to upload multiple files (like
-<literal>AgentTicketPhone</literal>, <literal>AgentTicketCompose</literal>,
-etc.). This is not usable out of the box for admin screens.
+                Ne feledje, hogy ez jelenleg csak olyan helyeknél alkalmazható, ahol
+tulajdonképpen van értelme a több fájl feltöltési lehetőségének (mint
+például <literal>AgentTicketPhone</literal>,
+<literal>AgentTicketCompose</literal>, stb.). Ez nem használható mindenféle
+beállítás nélkül az adminisztrátori képernyőknél.
             </para>
         </note>
         <para>
-            To include the new multi attachment upload in the template, replace the
-existing <code>input type="file"</code> with the following code in your
-<filename>.tt</filename> template file:
+            Ahhoz, hogy az új több melléklet feltöltést tartalmazza a sablon, cserélje
+le a meglévő <code>input type="file"</code> elemet a következő kódra a
+<filename>.tt</filename> sablonfájlban:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -98,9 +106,9 @@ existing <code>input type="file"</code> with the following code in your
             ]]></programlisting>
         </para>
         <para>
-            It is also necessary to remove the <code>IsUpload</code> variable and all
-other <code>IsUpload</code> parts from the Perl module. Code parts like
-following are not needed anymore:
+            Az is szükséges, hogy eltávolítsa az <code>IsUpload</code> változót és az
+összes egyéb <code>IsUpload</code> részt a Perl-modulból. Az olyan kódrészek
+nem szükségesek többé, mint a következők:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -108,7 +116,7 @@ my $IsUpload = ( $ParamObject->GetParam( Param => 'AttachmentUpload' ) ? 1 : 0 )
             ]]></programlisting>
         </para>
         <para>
-            Additional to that, the Attachment Layout Block needs to be replaced:
+            Ezenkívül a melléklet megjelenítő blokkot is le kell cserélni:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -119,7 +127,7 @@ $LayoutObject->Block(
             ]]></programlisting>
         </para>
         <para>
-            Replace it with this code:
+            Cserélje le erre a kódra:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -127,10 +135,11 @@ push @{ $Param{AttachmentList} }, $Attachment;
             ]]></programlisting>
         </para>
         <para>
-            If the module where you want to integrate multi upload supports standard
-templates, make sure to add a section to have a human readable file size
-format right after the attachments of the selected template have been loaded
-(see e.g. <literal>AgentTicketPhone</literal> for reference):
+            Ha a modul, ahová integrálni szeretné a többszörös feltöltést, támogatja a
+szabványos sablonokat, akkor győződjön meg arról, hogy hozzáadott-e egy
+szakaszt az ember által olvasható fájlméret formátumok megjelenítéséhez
+közvetlenül azután, hogy a kiválasztott sablon melléklete be lett töltve
+(nézze meg az <literal>AgentTicketPhone</literal> modult hivatkozásként):
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -142,23 +151,24 @@ for my $Attachment (@TicketAttachments) {
             ]]></programlisting>
         </para>
         <para>
-            When adding selenium unit tests for the modules you ported, please take a
-look at <filename>Selenium/Agent/MultiAttachmentUpload.t</filename> for
-reference.
+            Mikor Selenium egységteszteket ad az átírt modulokhoz, akkor vessen egy
+pillantást a <filename>Selenium/Agent/MultiAttachmentUpload.t</filename>
+fájlra hivatkozásként.
         </para>
     </section>
 
     <section id="packge-porting-5-to-6-admin-modules">
-        <title>Improvements to administration screens</title>
+        <title>Az adminisztrációs képernyők továbbfejlesztései</title>
 
         <section id="packge-porting-5-to-6-breadcrumbs">
-            <title>Add breadcrumbs to administration screens</title>
+            <title>Kenyérmorzsák hozzáadása az adminisztrációs képernyőkhöz</title>
             <para>
-                In OTRS 6, all admin modules should have a breadcrumb. The breadcrumb only
-needs to be added on the <filename>.tt</filename> template file and should
-be placed right after the h1 headline on top of the file. Additionally, the
-headline should receive the class <code>InvisibleText</code> to make it only
-<emphasis>visible</emphasis> for screen readers.
+                Az OTRS 6-ban az összes adminisztrációs modulnak tartalmaznia kell egy
+kenyérmorzsát. A kenyérmorzsát csak a <filename>.tt</filename> sablonfájlban
+kell hozzáadni, és közvetlenül a h1 címsor után kell elhelyezni a fájl felső
+részén. Ezenkívül a címsornak meg kell kapnia az <code>InvisibleText</code>
+osztályt, hogy csak a képernyőfelolvasóknak legye
+<emphasis>láthatóvá</emphasis>.
             </para>
             <programlisting format="linespecific"><![CDATA[
 <div class="MainBox ARIARoleMain LayoutFixedSidebar SidebarFirst">
@@ -173,8 +183,9 @@ headline should receive the class <code>InvisibleText</code> to make it only
 ...
             ]]></programlisting>
             <para>
-                Please make sure to add the correct breadcrumb for all levels of your admin
-module (e.g. <literal>Subaction</literal>s):
+                Győződjön meg arról, hogy hozzáadta-e a megfelelő kenyérmorzsát az
+adminisztrációs modul összes szintjéhez (például
+<literal>Subaction</literal>):
             </para>
             <programlisting format="linespecific"><![CDATA[
 [% BreadcrumbPath = [
@@ -193,15 +204,16 @@ module (e.g. <literal>Subaction</literal>s):
         </section>
 
         <section id="package-porting-5-to-6-saveandcontinue">
-            <title>Add <emphasis>Save</emphasis> and <emphasis>Save and finish</emphasis>
-buttons to administration screens</title>
+            <title><emphasis>Mentés</emphasis> és <emphasis>Mentés és befejezés</emphasis>
+gombok hozzáadása az adminisztrációs képernyőkhöz</title>
             <para>
-                Admin modules in OTRS 6 should not only have a <emphasis>Save</emphasis>
-button, but also a <emphasis>Save and finish</emphasis>
-button. <emphasis>Save</emphasis> should leave the user on the same edit
-page after saving, <emphasis>Save and finish</emphasis> should lead back to
-the overview of the entity the user is currently working on. Please see
-existing OTRS admin screens for reference.
+                Az OTRS 6-ban az adminisztrációs modulok nemcsak egy
+<emphasis>Mentés</emphasis> gombot tartalmaznak, hanem egy <emphasis>Mentés
+és befejezés</emphasis> gombot is. A <emphasis>Mentés</emphasis> gombnak
+ugyanazon a szerkesztőoldalon kell hagynia a felhasználót mentés után, míg a
+<emphasis>Mentés és befejezés</emphasis> gombnak vissza kell vinnie annak az
+entitásnak az áttekintőjére, amin a felhasználó jelenleg dolgozik. Nézze meg
+a meglévő OTRS adminisztrációs képernyőit hivatkozásként.
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -218,17 +230,17 @@ existing OTRS admin screens for reference.
     </section>
 
     <section id="packge-porting-5-to-6-configuration-files">
-        <title>Migrate configuration files</title>
+        <title>Beállítófájlok költöztetése</title>
 
         <section id="package-porting-5-to-6-XML-config-file-format">
-            <title>XML configuration file format</title>
+            <title>XML beállítófájl formátum</title>
             <para>
-                OTRS 6 uses a new <link linkend="xml-config">XML configuration file
-format</link> and the location of configuration files moved from
-<filename>Kernel/Config/Files</filename> to
-<filename>Kernel/Config/Files/XML</filename>.  To convert existing XML
-configuration files to the new format and location, you can use the
-following tool that is part of the OTRS framework:
+                Az OTRS 6 egy új <link linkend="xml-config">XML beállítófájl
+formátumot</link> használ, és a beállítófájlok helye áthelyezésre került a
+<filename>Kernel/Config/Files</filename> mappából a
+<filename>Kernel/Config/Files/XML</filename> mappába. A meglévő XML
+beállítófájloknak az új formátumra és helyre történő átalakításához
+használhatja a következő eszközt, amely az OTRS keretrendszer része:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -248,85 +260,91 @@ Done.
         </section>
 
         <section id="package-porting-5-to-6-perl-config-file-format">
-            <title>Perl configuration file format</title>
+            <title>Perl beállítófájl formátum</title>
             <para>
-                OTRS 6 speeds up configuration file loading by dropping support for the old
-configuration format (1)  that just used sequential Perl code and had to be
-run by <literal>eval</literal> and instead enforcing the new package-based
-format (1.1) for Perl configuration files.  OTRS 6+ can only load files with
-this format, please make sure to convert any custom developments to it (see
-<filename>Kernel/Config/Files/ZZZ*.pm</filename> for examples). Every Perl
-configuration file needs to contain a package with a
-<literal>Load()</literal> method.
+                Az OTRS 6 felgyorsítja a beállítófájlok betöltését a régi beállítási
+formátum (1) támogatásának eldobásával, amely csak egymás utáni Perl kódot
+használ, és az <literal>eval</literal> által kellett futtatni, és ehelyett
+kényszerítve az új csomagalapú formátumot (1.1) a Perl beállítófájloknál. Az
+OTRS 6+ csak az ebben a formátumban lévő fájlokat tudja betölteni, ezért
+győződjön meg arról, hogy átalakította-e az összes egyéni fejlesztést erre
+(lásd <filename>Kernel/Config/Files/ZZZ*.pm</filename> például). Minden
+egyes Perl beállítófájlnak tartalmaznia kell egy csomagot a
+<literal>Load()</literal> metódussal.
             </para>
             <para>
-                In the past, Perl configuration files were sometimes misused as an autoload
-mechanism to override code in existing packages. This is not necessary any
-more as OTRS 6 features a dedicated <literal>Autoload</literal>
-mechanism. Please see <filename>Kernel/Autoload/Test.pm</filename> for a
-demonstration on how to use this mechanism to add a method in an existing
-file.
+                Régebben a Perl beállítófájlokat néha rossz célra használták egy automatikus
+betöltő mechanizmusként a meglévő csomagokban lévő kód felülírásához. Ez
+többé nem szükséges, mivel az OTRS 6 biztosít egy dedikált
+<literal>Autoload</literal> mechanizmust. Nézze meg a
+<filename>Kernel/Autoload/Test.pm</filename> fájlt annak bemutatásához, hogy
+hogyan kell használni ezt a mechanizmust egy metódus hozzáadásához egy
+meglévő fájlba.
             </para>
         </section>
     </section>
 
     <section id="package-porting-5-to-6-perldoc-structure">
-        <title>Perldoc structure changed</title>
+        <title>Megváltoztatott Perl-dokumentáció szerkezet</title>
         <para>
-            The structure of POD in Perl files was slightly improved and should be
-adapted in all files. POD is now also enforced to be syntactically correct.
+            A Perl-fájlokban lévő POD szerkezete kis mértékben javítva lett, és
+alkalmazni kell az összes fájlban. A POD mostantól kényszerítve van, hogy
+szintaktikailag helyes legyen.
         </para>
         <para>
-            What was previously called <literal>SYNOPSIS</literal> is now changed to
-<literal>DESCRIPTION</literal>, as a synopsis typically provides a few
-popular code usage examples and not a description of the module itself.  An
-additional synopsis can be provided, of course. Here's how an example:
+            Amit korábban <literal>SYNOPSIS</literal> szakasznak hívtak, azt most
+<literal>DESCRIPTION</literal> névre változtatták, mivel a szinopszis
+jellemzően néhány népszerű kódhasználati példát biztosít, és nem magának a
+modulnak a leírását. Természetesen megadható további szinopszis. Itt egy
+példa arra, hogy hogyan:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
 =head1 NAME
 
-Kernel::System::ObjectManager - Central singleton manager and object instance generator
+Kernel::System::ObjectManager - Központi egyke kezelő és objektumpéldány előállító
 
 =head1 SYNOPSIS
 
-# In toplevel scripts only!
+# Csak felső szintű parancsfájlokban!
 local $Kernel::OM = Kernel::System::ObjectManager->new();
 
-# Everywhere: get a singleton instance (and create it, if needed).
+# Bárhol: egyke példány lekérése (és létrehozása, ha szükséges).
 my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
 
-# Remove singleton objects and all their dependencies.
+# Egyke objektumok és az összes függőségük eltávolítása.
 $Kernel::OM->ObjectsDiscard(
     Objects            => ['Kernel::System::Ticket', 'Kernel::System::Queue'],
 );
 
 =head1 DESCRIPTION
 
-The ObjectManager is the central place to create and access singleton OTRS objects (via C<L</Get()>>)
-as well as create regular (unmanaged) object instances (via C<L</Create()>>).
+Az objektumkezelő egy központi hely az egyke OTRS objektumok létrehozásához
+és hozzáféréséhez (a C<L</Get()>> metóduson keresztül), valamint szabályos
+(nem kezelt) objektumpéldányok létrehozásához (a C<L</Create()>> metóduson
+keresztül).
 
             ]]></programlisting>
         </para>
         <para>
-            In case the <literal>DESCRIPTION</literal> does not add any value to the
-line in the <literal>NAME</literal> section, it should be rewritten or
-removed altogether.
+            Abban az esetben, ha a <literal>DESCRIPTION</literal> nem ad hozzá semmilyen
+értéket a <literal>NAME</literal> szakaszban lévő sorhoz, akkor át kell írni
+vagy teljesen el kell távolítani.
         </para>
         <para>
-            The second important change is that functions are now documented as
-<literal>=head2</literal> instead of the previously used
-<literal>=item</literal>.
+            A második fontos változtatás, hogy a függvények mostantól
+<literal>=head2</literal> szakaszként vannak dokumentálva a korábban
+használt <literal>=item</literal> helyett.
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
 =head2 Get()
 
-Retrieves a singleton object, and if it not yet exists, implicitly creates one for you.
+Lekér egy egyke objektumot, és ha még nem létezik, akkor a háttérben létrehoz egyet.
 
 my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
 
-# On the second call, this returns the same ConfigObject as above.
+# Második meghíváskor visszaadja ugyanazt a ConfigObject objektumot, mint ami fent van.
 my $ConfigObject2 = $Kernel::OM->Get('Kernel::Config');
 
 =cut
@@ -335,47 +353,48 @@ sub Get { ... }
             ]]></programlisting>
         </para>
         <para>
-            These changes lead to an improved online API documentation as can be seen in
-the ObjectManager documentation for <ulink
+            Ezek a változtatások egy továbbfejlesztett internetes API dokumentációhoz
+vezetnek, amint az objektumkezelő dokumentációjában is látható az <ulink
 url="http://otrs.github.io/doc/api/otrs/5.0/Perl/Kernel/System/ObjectManager.pm.html">OTRS
-5</ulink> and <ulink
+5</ulink> és az <ulink
 url="http://otrs.github.io/doc/api/otrs/6.0/Perl/Kernel/System/ObjectManager.pm.html">OTRS
-6</ulink>.
+6</ulink> esetén.
         </para>
     </section>
 
     <section id="package-porting-javascript-templating-improvements">
-        <title>Improvements to templating and working with JavaScript</title>
+        <title>Továbbfejlesztések a sablonozáshoz és a JavaScript használatával végzett
+munkához</title>
 
         <section id="package-porting-5-to-6-javascript-refactor">
-            <title>JavaScript removed from templates</title>
+            <title>A JavaScript eltávolításra került a sablonokból</title>
             <para>
-                With OTRS 6, all JavaScript - especially located in
-<literal>JSOnDocumentComplete</literal> blocks - is removed from template
-files and moved to JavaScript files instead. Only in very rare conditions
-JavaScript needs to be placed within template files. For all other
-occurrences, place the JS code in module-specific JavaScript files. An
-<literal>Init()</literal> method within such a JavaScript file is executed
-automatically on file load (for the initialization of event bindings etc.)
-if you register the JavaScript file at the OTRS application. This is done by
-executing <literal>Core.Init.RegisterNamespace(TargetNS,
-'APP_MODULE');</literal> at the end of the namespace declaration within the
-JavaScript file.
+                Az OTRS 6-tal az összes JavaScript - különösen a
+<literal>JSOnDocumentComplete</literal> blokkokban lévők - eltávolításra
+kerültek a sablonfájlokból, és át lettek helyezve JavaScript fájlokba. Csak
+nagyon ritka feltételek esetén szükséges a JavaScript kódot a sablonfájlokon
+belül elhelyezni. Minden egyéb előfordulásnál tegye a JS kódot a modulra
+jellemző JavaScript fájlokba. Az ilyen JavaScript fájlokban lévő
+<literal>Init()</literal> metódus automatikusan végre lesz hajtva a fájl
+betöltésekor (az eseménykötések előkészítéséhez, stb.), ha regisztrálja a
+JavaScript fájlt az OTRS alkalmazásban. Ezt a
+<literal>Core.Init.RegisterNamespace(TargetNS, 'APP_MODULE');</literal>
+végrehajtásával lehet elvégezni a névtér meghatározásának végén a JavaScript
+fájlon belül.
             </para>
         </section>
 
         <section id="package-porting-5-to-6-richtext-template">
-            <title>Template files for rich text editor removed</title>
+            <title>A sablonfájlok eltávolításra kerültek a Rich Text szerkesztőből</title>
             <para>
-                Along with the refactoring of the JavaScript within template files (see
-above), the template files for the rich text editor
-(<literal>RichTextEditor.tt</literal> and
-<literal>CustomerRichTextEditor.tt</literal>)  were removed as they are no
-longer necessary.
+                A sablonfájlokon belül lévő JavaScript újraírása mellett (lásd fent) a Rich
+Text szerkesztő (<literal>RichTextEditor.tt</literal> és
+<literal>CustomerRichTextEditor.tt</literal>) sablonfájljai is eltávolításra
+kerültek, mivel azok többé nem szükségesek.
             </para>
             <para>
-                Typically, these template files were included in the module-specific
-template files within a block:
+                Általában ezek a sablonfájlok voltak megtalálhatók a modulra jellemző
+sablonfájlokban egy blokkon belül:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -385,9 +404,9 @@ template files within a block:
                 ]]></programlisting>
             </para>
             <para>
-                This is no longer needed and can be removed. Instead of calling this block
-from the Perl module, it is now necessary to set the needed rich text
-parameters there. Instead of:
+                Erre többé nincs szükség, és eltávolítható. Ahelyett, hogy meghívná ezt a
+blokkot a Perl-modulból, mostantól szükség van a szükséges Rich Text
+paraméter beállítására ott. Ahelyett, hogy:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -398,7 +417,7 @@ $LayoutObject->Block(
                 ]]></programlisting>
             </para>
             <para>
-                you now have to call:
+                mostantól ezt kell meghívnia:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -407,9 +426,9 @@ $LayoutObject->SetRichTextParameters(
 );
                 ]]></programlisting>
             </para>
-            <para>Same rule applies for customer interface. Remove RichText blocks from
-<filename>CustomerRichTextEditor.tt</filename> and apply following code
-instead:</para>
+            <para>Ugyanez a szabály alkalmazható az ügyfélfelületre is. Távolítsa el a Rich
+Text blokkokat a <filename>CustomerRichTextEditor.tt</filename> fájlból, és
+inkább a következő kódot alkalmazza:</para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
 $LayoutObject->CustomerSetRichTextParameters(
@@ -420,18 +439,19 @@ $LayoutObject->CustomerSetRichTextParameters(
         </section>
 
         <section id="package-porting-5-to-6-javascript-translations">
-            <title>Translations in JavaScript files</title>
+            <title>Fordítások a JavaScript fájlokban</title>
             <para>
-                Adding translatable strings in JavaScript was quite difficult in OTRS. The
-string had to be translated in Perl or in the template and then sent to the
-JavaScript function. With OTRS 6, translation of strings is possible
-directly in the JavaScript file. All other workarounds, especially blocks in
-the templates only for translating strings, should be removed.
+                A lefordítható szövegek hozzáadása a JavaScript fájlokban eléggé nehéz volt
+az OTRS-ben. A szöveget le kellett fordítani a Perl-modulban vagy a
+sablonban, majd ezután kellett átküldeni a JavaScript függvénynek. Az OTRS
+6-tal a szövegek lefordítása közvetlenül a JavaScript fájlokban
+lehetséges. Az összes egyéb kerülőmegoldást el kell távolítani, különösen a
+csak a sablonokban lévő, a szövegek lefordításához használt blokkokat.
             </para>
             <para>
-                Instead, the new JavaScript translation namespace
-<literal>Core.Language</literal> should be used to translate strings
-directly in the JS file:
+                Ehelyett az új <literal>Core.Language</literal> JavaScript fordítási
+névteret kell használni a szövegek lefordításához közvetlenül a JavaScript
+fájlokban:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -439,8 +459,8 @@ Core.Language.Translate('The string to translate');
                 ]]></programlisting>
             </para>
             <para>
-                It is also possible to handover JS variables to be replaced in the string
-directly:
+                Lehetséges továbbá JavaScript változókat átadni, amelyek ki lesznek cserélve
+közvetlenül a szövegben:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -448,29 +468,30 @@ Core.Language.Translate('The %s to %s', 'string', 'translate');
                 ]]></programlisting>
             </para>
             <para>
-                Every <literal>%s</literal> is replaced by the variable given as extra
-parameter. The number of parameters is not limited.
+                Minden egyes <literal>%s</literal> helykitöltő a további paraméterként
+átadott változóval lesz kicserélve. A paraméterek száma nincs korlátozva.
             </para>
         </section>
 
         <section id="package-porting-5-to-6-javascript-handover">
-            <title>Handover data from Perl to JavaScript</title>
+            <title>Adatok átadása Perlből JavaScriptbe</title>
             <para>
-                To achieve template files without JavaScript code, some other workarounds
-had to be replaced with an appropriate solution. Besides translations, also
-the handover of data from Perl to JavaScript has been a problem in OTRS. The
-workaround was to add a JavaScript block in the template in which JavaScript
-variables were declared and filled with template tags based on data handed
-over from Perl to the template.
+                A sablonfájlok JavaScript kód nélküli eléréséhez néhány egyéb
+kerülőmegoldást is meg kellett tenni a megfelelő megoldáshoz. A fordítások
+mellett az adatok átadása a Perlből a JavaScriptbe továbbra is probléma az
+OTRS-ben. A kerülőmegoldás az volt, hogy egy JavaScript blokkot adtak a
+sablonba, amelyben a JavaScript változók meg lettek határozva és fel lettek
+töltve a sablon címkéivel a Perlből a sablonba átadott adatok alapján.
             </para>
             <para>
-                The handover process of data from Perl to JavaScript is now much easier in
-OTRS 6. To send specific data as variable from Perl to JavaScript, one only
-has to call a function on Perl-side. The data is than automatically
-available in JavaScript.
+                Az adatok Perlből JavaScriptbe történő átadásának folyamata mostantól sokkal
+egyszerűbb az OTRS 6-ban. Ahhoz, hogy bizonyos adatokat változóként küldjön
+át a Perlből a JavaScriptbe, valakinek csak egy függvényt kell meghívnia a
+Perl oldalon. Ezután az adatok automatikusa elérhetők lesznek a
+JavaScriptben.
             </para>
             <para>
-                In Perl you only have to call:
+                A Perlben csak ezt kell meghívni:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -481,11 +502,11 @@ $Self->{LayoutObject}->AddJSData(
                 ]]></programlisting>
             </para>
             <para>
-                The <literal>Value</literal> parameter is automatically converted to a JSON
-object and can also contain complex data.
+                A <literal>Value</literal> paraméter automatikusan át lesz alakítva JSON
+objektummá, és tartalmazhat összetett adatokat is.
             </para>
             <para>
-                In JavaScript you can get the data with:
+                A JavaScriptben az adatokat ezzel kaphatja meg:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -493,28 +514,28 @@ Core.Config.Get('KeyToBeAvailableInJS');
             ]]></programlisting>
             </para>
             <para>
-                This replaces all workarounds which need to be removed when porting a module
-to OTRS 6, because JavaScript in template files is now only allowed in very
-rare conditions (see above).
+                Ez felváltja az összes kerülőmegoldást, amiket el kell távolítani egy modul
+OTRS 6-ra történő átírásakor, mert a sablonfájlokban lévő JavaScript
+mostantól csak nagyon ritka feltételek esetén engedélyezett (lást fent).
             </para>
         </section>
 
         <section id="package-porting-5-to-6-javascript-templates">
-            <title>HTML templates for JavaScript</title>
+            <title>HTML sablonok a JavaScripthez</title>
             <para>
-                OTRS 6 exposes new JavaScript template API via
-<literal>Core.Template</literal> class. You can use it in your JavaScript
-code in a similar way as you use <literal>TemplateToolkit</literal> from
-Perl code.
+                Az OTRS 6 egy új JavaScript API-t vezet be a
+<literal>Core.Template</literal> osztályon keresztül. Hasonló módon
+használhatja a JavaScript kódjában mint ahogy a
+<literal>TemplateToolkit</literal> modult használta a Perl kódból.
             </para>
             <para>
-                Here's an example for porting existing <literal>jQuery</literal> based code
-to new template API:
+                Itt egy példa a meglévő <literal>jQuery</literal> alapú kód átírásához az új
+sablon API-ra:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
 var DivID = 'MyDiv',
-    DivText = 'Hello, world!';
+    DivText = 'Helló, Világ!';
 
 $('<div />').addClass('CSSClass')
     .attr('id', DivID)
@@ -523,41 +544,42 @@ $('<div />').addClass('CSSClass')
                 ]]></programlisting>
             </para>
             <para>
-                First, make sure to create a new template file under
-<literal>Kernel/Output/JavaScript/Templates/Standard</literal> folder. In
-doing this, you should keep following in mind:
+                Először győződjön meg arról, hogy létrehozott-e egy új sablonfájlt a
+<literal>Kernel/Output/JavaScript/Templates/Standard</literal> mappa
+alatt. Ehhez a következőket kell észben tartania:
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>
-                            Create a subfolder with name of your <literal>Module</literal>.
+                            Hozzon létre egy almappát a <literal>Modulja</literal> nevével.
                         </para>
                     </listitem>
                     <listitem>
                         <para>
-                            You may reuse any existing subfolder structure but only if it makes sense
-for your component (e.g. <literal>Agent/MyModule/</literal> or
-<literal>Agent/Admin/MyModule/</literal>).
+                            Újrahasználhatja a meglévő almappa szerkezetet, de csak akkor, ha van
+értelme a komponensénél (például <literal>Agent/SajatModul/</literal> vagy
+<literal>Agent/Admin/SajatModul/</literal>).
                         </para>
                     </listitem>
                     <listitem>
                         <para>
-                            Use <literal>.html.tmpl</literal> as extension for template file.
+                            Használjon <literal>.html.tmpl</literal> kiterjesztést a sablonfájlnál.
                         </para>
                     </listitem>
                     <listitem>
                         <para>
-                            Name templates succinctly and clearly in order to avoid confusion
-(i.e. good: <literal>Agent/MyModule/SettingsDialog.html.tmpl</literal>, bad:
+                            Tömören és világosan nevezze el a sablonokat annak érdekében, hogy elkerülje
+a félreértéseket (például jó:
+<literal>Agent/SajatModul/SettingsDialog.html.tmpl</literal>, rossz:
 <literal>Agent/SettingsDialogTemplate.html.tmpl</literal>).
                         </para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
-                Then, add your HTML to the template file, making sure to use placeholders
-for any variables you might need:
+                Ezután adja hozzá a HTML-t a sablonfájlhoz, meggyőződve arról, hogy
+helykitöltőket használ minden olyan változónál, amire szüksége lehet:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -567,57 +589,61 @@ for any variables you might need:
                 ]]></programlisting>
             </para>
             <para>
-                Then, just get rendered HTML by calling
-<literal>Core.Template.Render</literal> method with template path (without
-extension) and object containing variables for replacement:
+                Majd egyszerűen jeleníttesse meg a HTML-t a
+<literal>Core.Template.Render</literal> metódusnak a sablon elérési útjával
+(kiterjesztés nélkül) és a változókat tartalmazó objektummal való
+meghívásával a helyettesítéshez:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
 var DivHTML = Core.Template.Render('Agent/MyModule/SettingsDialog', {
     DivID: 'MyDiv',
-    DivText: 'Hello, world!'
+    DivText: 'Helló, Világ!'
 });
 
 $(DivHTML).appendTo('body');
                 ]]></programlisting>
             </para>
             <para>
-                Internally, <literal>Core.Template</literal> uses Nunjucks engine for
-parsing templates. Essentially, any valid Nunjucks syntax is supported,
-please see <ulink
-url="https://mozilla.github.io/nunjucks/templating.html">their
-documentation</ulink> for more information.
+                Belsőleg a <literal>Core.Template</literal> a Nunjucks motort használja a
+sablonok feldolgozásához. Lényegében bármilyen érvényes Nunjucks szintaxis
+támogatott, nézze meg a <ulink
+url="https://mozilla.github.io/nunjucks/templating.html">dokumentációjukat</ulink>
+a további információkért.
             </para>
             <para>
-                Here are some tips:
+                Itt van néhány tipp:
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>
-                            You can use <literal>| Translate</literal> filter for string translation to
-current language.
+                            Használhatja a <literal>| Translate</literal> szűrőt a szövegek
+lefordításához az aktuális nyelvre.
                         </para>
                     </listitem>
                     <listitem>
                         <para>
-                            All <literal>{{ VarName }}</literal> variable outputs are HTML escaped by
-default. If you need to output some existing HTML, please use <literal>|
-safe</literal> filter to bypass escaping.
+                            Az összes <literal>{{ VarName }}</literal> változókimenet alapértelmezetten
+HTML elfedésben részesített. Ha valamilyen meglévő HTML-t szeretne kiíratni,
+akkor használja a <literal>| safe</literal> szűrőt az elfedés
+megkerüléséhez.
                         </para>
                     </listitem>
                     <listitem>
                         <para>
-                            Use <literal>| urlencode</literal> for encoding URL parameters.
+                            Használja az <literal>| urlencode</literal> szűrőt az URL paramétereinek
+kódolásához.
                         </para>
                     </listitem>
                     <listitem>
                         <para>
-                            Complex structures in replacement object are supported, so feel free to pass
-arrays or hashes and iterate over them right from template. For example,
-look at <literal>{% for %}</literal> syntax in <ulink
-url="https://mozilla.github.io/nunjucks/templating.html#for"> Nunjucks
-documentation</ulink>.
+                            A helyettesítő objektumban lévő összetett szerkezetek is támogatottak,
+szóval nyugodtan átadhat tömböket vagy kivonatokat, és végiglépkedhet rajtuk
+közvetlenül a sablonban. Például nézze meg a <literal>{% for %}</literal>
+szintaxist a <ulink
+url="https://mozilla.github.io/nunjucks/templating.html#for">Nunjucks
+dokumentációjában</ulink>.
                         </para>
                     </listitem>
                 </itemizedlist>
@@ -627,19 +653,21 @@ documentation</ulink>.
     </section>
 
     <section id="package-porting-5-to-6-user-permissions">
-        <title>Checking user permissions</title>
+        <title>Felhasználói jogosultságok ellenőrzése</title>
         <para>
-            Before OTRS 6, user permissions were stored in the session and passed to the
-<code>LayoutObject</code> as attributes, which were then in turn accessed to
-determine user permissions like <code>if
+            Az OTRS 6 előtt a felhasználói jogosultságok a munkamenetben voltak
+eltárolva és attribútumként lettek átadva a <code>LayoutObject</code>
+objektumnak, amely viszont ezután hozzáfért a meghatározott felhasználói
+jogosultságokhoz, mint például <code>if
 ($LayoutObject->{'UserIsGroup[admin]'}) { ... }</code>.
         </para>
         <para>
-            With OTRS 6, permissions are no longer stored in the session and also not
-passed to the <code>LayoutObject</code>. Please switch your code to calling
-<code>PermissionCheck()</code> on <code>Kernel::System::Group</code> (for
-agents) or <code>Kernel::System::CustomerGroup</code> (for
-customers). Here's an example:
+            Az OTRS 6-tal a jogosultságok többé nincsenek a munkamenetben eltárolva, és
+nem kerülnek átadásra a <code>LayoutObject</code> objektumnak sem. Cserélje
+ki a kódjában, hogy a <code>PermissionCheck()</code> metódust hívja meg a
+<code>Kernel::System::Group</code> modulon (ügyintézőknél) vagy a
+<code>Kernel::System::CustomerGroup</code> modulon (ügyfeleknél). Itt egy
+példa:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -653,31 +681,32 @@ Type      => 'move_into',
     </section>
 
     <section id="package-porting-5-to-6-ticket-api">
-        <title>Ticket API changes</title>
+        <title>Jegy API változások</title>
 
         <section id="package-porting-5-to-6-ticket-api-ticketget">
             <title><literal>TicketGet()</literal></title>
             <para>
-                For OTRS 6, all extensions need to be checked and ported from
-<literal>$Ticket{SolutionTime}</literal> to
-<literal>$Ticket{Closed}</literal> if <literal>TicketGet()</literal> is
-called with the <literal>Extended</literal> parameter (see bug<ulink
-url="http://bugs.otrs.org/show_bug.cgi?id=11872">#11872</ulink>).
+                Az OTRS 6-nál az összes kiterjesztést ellenőrizni kell, és át kell írni a
+<literal>$Ticket{SolutionTime}</literal> értékről
+<literal>$Ticket{Closed}</literal> értékre, ha a
+<literal>TicketGet()</literal> az <literal>Extended</literal> paraméterrel
+lett meghívva (nézze meg a <ulink
+url="https://bugs.otrs.org/show_bug.cgi?id=11872">11872</ulink>-s hibát).
             </para>
             <para>
-                Additionally, the database column <literal>ticket.create_time_unix</literal>
-was removed, and likewise the value <literal>CreateTimeUnix</literal> from
-the <literal>TicketGet()</literal> result data.  Please use the value
-<literal>Created</literal> (database column
-<literal>ticket.create_time</literal>) instead.
+                Ezenkívül a <literal>ticket.create_time_unix</literal> adatbázisoszlop
+eltávolításra került, és hasonlóképpen a <literal>CreateTimeUnix</literal>
+érték is el lett távolítva a <literal>TicketGet()</literal> eredményeként
+kapott adatokból. Használja helyette a <literal>Created</literal> értéket
+(<literal>ticket.create_time</literal> adatbázisoszlop).
             </para>
         </section>
 
         <section id="package-porting-5-to-6-ticket-api-linkobject-events">
-            <title><literal>LinkObject</literal> Events</title>
+            <title><literal>LinkObject</literal> események</title>
             <para>
-                In OTRS 6, old ticket-specific <literal>LinkObject</literal> events have
-been dropped:
+                Az OTRS 6-ban a régi, jegyekre jellemző <literal>LinkObject</literal>
+események el lettek dobva:
             </para>
             <para>
                 <itemizedlist>
@@ -693,8 +722,8 @@ been dropped:
                 </itemizedlist>
             </para>
             <para>
-                Any event handlers listening on these events should be ported to two new
-events instead:
+                Ehelyett az ezekre figyelő összes eseménykezelőt át kell írni az két új
+eseményre:
             </para>
             <para>
                 <itemizedlist>
@@ -707,10 +736,11 @@ events instead:
                 </itemizedlist>
             </para>
             <para>
-                These new events will be triggered any time a link is added or deleted by
-<literal>LinkObject</literal>, regardless of the object
-type. <literal>Data</literal> parameter will contain all information your
-event handlers might need for further processing, e.g.:
+                Ezek az új események mindig aktiválva lesznek, amikor egy kapcsolatot
+hozzáad vagy töröl a <literal>LinkObject</literal>, tekintet nélkül az
+objektum típusára. A <literal>Data</literal> paraméter tartalmazni fogja az
+összes információt, amire az eseménykezelőjének szüksége lehet a további
+feldolgozáshoz, például:
             </para>
             <para>
                 <variablelist>
@@ -718,7 +748,7 @@ event handlers might need for further processing, e.g.:
                         <term><literal>SourceObject</literal></term>
                         <listitem>
                             <para>
-                                Name of the link source object (e.g. <literal>Ticket</literal>).
+                                A kapcsolat forrásobjektumának neve (például <literal>Ticket</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -726,7 +756,7 @@ event handlers might need for further processing, e.g.:
                         <term><literal>SourceKey</literal></term>
                         <listitem>
                             <para>
-                                Key of the link source object (e.g. <literal>TicketID</literal>).
+                                A kapcsolat forrásobjektumának kulcsa (például <literal>TicketID</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -734,7 +764,7 @@ event handlers might need for further processing, e.g.:
                         <term><literal>TargetObject</literal></term>
                         <listitem>
                             <para>
-                                Name of the link target object (e.g. <literal>FAQItem</literal>).
+                                A kapcsolat célobjektumának neve (például <literal>FAQItem</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -742,7 +772,7 @@ event handlers might need for further processing, e.g.:
                         <term><literal>TargetKey</literal></term>
                         <listitem>
                             <para>
-                                Key of the link target object (e.g. <literal>FAQItemID</literal>).
+                                A kapcsolat célobjektumának kulcsa (például <literal>FAQItemID</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -750,7 +780,7 @@ event handlers might need for further processing, e.g.:
                         <term><literal>Type</literal></term>
                         <listitem>
                             <para>
-                                Type of the link (e.g. <literal>ParentChild</literal>).
+                                A kapcsolat típusa (például <literal>ParentChild</literal>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -758,7 +788,7 @@ event handlers might need for further processing, e.g.:
                         <term><literal>State</literal></term>
                         <listitem>
                             <para>
-                                State of the link (<literal>Valid</literal> or
+                                A kapcsolat állapota (<literal>Valid</literal> vagy
 <literal>Temporary</literal>).
                             </para>
                         </listitem>
@@ -766,15 +796,16 @@ event handlers might need for further processing, e.g.:
                 </variablelist>
             </para>
             <para>
-                With these new events in place, any events specific for custom
-<literal>LinkObject</literal> module implementations can be dropped, and all
-event handlers ported to use them instead. Since source and target object
-names are provided in the event itself, it would be trivial to make them run
-only in specific situations.
+                Ezekkel az új eseményekkel az egyéni <literal>LinkObject</literal> modulra
+jellemző bármely esemény megvalósításai eldobhatók, és az összes
+eseménykezelő átírható ezek használatára helyette. Mivel a forrás- és a
+célobjektumnevek magában az eseményben is meg vannak adva, magától értetődő
+lehet, hogy csak különleges helyzetekben legyenek futtatva.
             </para>
             <para>
-                To register your event handler for these new events, make sure to add a
-registration in the configuration, for example:
+                Ahhoz, hogy az eseménykezelőt regisztrálja ezekhez az új eseményekhez,
+győződjön meg arról, hogy hozzáadott-e egy regisztrációt a beállításokhoz,
+például:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -810,21 +841,21 @@ registration in the configuration, for example:
     </section>
 
     <section id="package-porting-5-to-6-article-api">
-        <title>Article API changes</title>
+        <title>Bejegyzés API változások</title>
         <para>
-            In OTRS 6, changes to Article API have been made, in preparations for new
-<emphasis>Omni Channel</emphasis> infrastructure.
+            Az OTRS 6-ban változások történtek a bejegyzés API-n az új <emphasis>Omni
+Channel</emphasis> infrastruktúra előkészítéséhez.
         </para>
 
         <section id="otrs6-article-methods">
-            <title>Meta Article API</title>
+            <title>Metabejegyzés API</title>
             <para>
-                Article object now provides top-level article functions that do not involve
-back-end related data.
+                A bejegyzés objektum mostantól olyan felső szintű bejegyzésfüggvényeket
+biztosít, amelyek nem vonják be a háttérprogramhoz kapcsolódó adatokat.
             </para>
             <para>
-                Following methods related to articles have been moved to
-<literal>Kernel::System::Ticket::Article</literal> object:
+                A következő, bejegyzésre vonatkozó metódusok át lettek helyezve a
+<literal>Kernel::System::Ticket::Article</literal> objektumba:
             </para>
             <para>
                 <itemizedlist>
@@ -861,9 +892,9 @@ back-end related data.
                 </itemizedlist>
             </para>
             <para>
-                If you are referencing any of these methods via
-<literal>Kernel::System::Ticket</literal> object in your code, please switch
-to Article object and use it instead. For example:
+                Ha hivatkozik ezen metódusok bármelyikére a
+<literal>Kernel::System::Ticket</literal> objektumon keresztül a kódjában,
+akkor váltson át a bejegyzés objektum használatára helyette. Például:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -873,50 +904,52 @@ to Article object and use it instead. For example:
                 ]]></programlisting>
             </para>
             <para>
-                New <literal>ArticleList()</literal> method is now provided by the article
-object, and can be used for article listing and locating. This method
-implements filters and article numbering and returns article meta data only
-as an ordered list. For example:
+                Az új <literal>ArticleList()</literal> metódust mostantól a bejegyzés
+objektum biztosítja, és bejegyzések felsorolásához és kereséséhez
+használható. Ez a metódus szűrőket és bejegyzésszámozást valósít meg,
+valamint a bejegyzés metaadatait csak rendezett listaként adja
+vissza. Például:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
 my @Articles = $ArticleObject->ArticleList(
     TicketID             => 123,
-    CommunicationChannel => 'Email',            # optional, to limit to a certain CommunicationChannel
-    SenderType           => 'customer',         # optional, to limit to a certain article SenderType
-    IsVisibleForCustomer => 1,                  # optional, to limit to a certain visibility
-    OnlyFirst            => 1,                  # optional, only return first match, or
-    OnlyLast             => 1,                  # optional, only return last match
+    CommunicationChannel => 'Email',            # elhagyható, korlátozás egy bizonyos kommunikációs csatornára
+    SenderType           => 'customer',         # elhagyható, korlátozás egy bizonyos bejegyzés küldőtípusra
+    IsVisibleForCustomer => 1,                  # elhagyható, korlátozás egy bizonyos láthatóságra
+    OnlyFirst            => 1,                  # elhagyható, csak az első egyezést adja vissza, vagy
+    OnlyLast             => 1,                  # elhagyható, csak az utolsó egyezést adja vissza
 );
                 ]]></programlisting>
             </para>
             <para>
-                Following methods related to articles have been dropped all-together. If you
-are using any of them in your code, please evaluate possibility of
-alternatives.
+                A következő, bejegyzésekre vonatkozó metódusok mindegyike el lett dobva. Ha
+ezek közül bármelyiket használja a kódjában, akkor értékelje ki az
+alternatívák lehetőségeit.
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
                           <para>
-                              <literal>ArticleFirstArticle()</literal> (use <literal>ArticleList(
-OnlyFirst => 1)</literal> instead)
+                              <literal>ArticleFirstArticle()</literal> (használja az <literal>ArticleList(
+OnlyFirst => 1 )</literal> metódust helyette)
                           </para>
                     </listitem>
                     <listitem>
                           <para>
-                              <literal>ArticleLastCustomerArticle()</literal> (use <literal>ArticleList(
-SenderType => 'customer', OnlyLast => 1)</literal> or similar)
+                              <literal>ArticleLastCustomerArticle()</literal> (használja az
+<literal>ArticleList( SenderType => 'customer', OnlyLast => 1 )</literal>
+metódust vagy hasonlót)
                           </para>
                     </listitem>
                     <listitem>
-                          <para><literal>ArticleCount()</literal> (use <literal>ArticleList()</literal>
-instead)</para>
+                          <para><literal>ArticleCount()</literal> (használja az
+<literal>ArticleList()</literal> metódust helyette)</para>
                     </listitem>
                     <listitem>
                           <para>
-                              <literal>ArticlePage()</literal> (reimplemented in
-<literal>AgentTicketZoom</literal>)
+                              <literal>ArticlePage()</literal> (újraírva az
+<literal>AgentTicketZoom</literal> modulban)
                           </para>
                     </listitem>
                     <listitem>
@@ -926,8 +959,8 @@ instead)</para>
                           <para><literal>ArticleTypeLookup()</literal></para>
                     </listitem>
                     <listitem>
-                          <para><literal>ArticleIndex()</literal> (use <literal>ArticleList()</literal>
-instead)</para>
+                          <para><literal>ArticleIndex()</literal> (használja az
+<literal>ArticleList()</literal> metódust helyette)</para>
                     </listitem>
                     <listitem>
                           <para><literal>ArticleContentIndex()</literal></para>
@@ -935,8 +968,9 @@ instead)</para>
                 </itemizedlist>
             </para>
             <para>
-                To work with article data please use new article backend API. To get correct
-backend object for an article, please use:
+                A bejegyzésadatokkal való munkához használja az új bejegyzés háttérprogram
+API-t. A bejegyzés megfelelő háttérprogram-objektumának lekéréséhez
+használja a következőt:
             </para>
             <para>
                 <itemizedlist>
@@ -949,9 +983,10 @@ backend object for an article, please use:
                 </itemizedlist>
             </para>
             <para>
-                <literal>BackendForArticle()</literal> returns the correct back end for a
-given article, or the invalid back end, so that you can always expect a back
-end object instance that can be used for chain-calling.
+                A <literal>BackendForArticle()</literal> visszaadja a megfelelő
+háttérprogramot egy adott bejegyzésnél vagy az érvénytelen háttérprogramot
+azért, hogy mindig számíthasson egy háttérprogram-objektum példányra,
+amelyet használhat sorozatos hívásoknál.
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -959,8 +994,8 @@ my $ArticleBackendObject = $ArticleObject->BackendForArticle( TicketID => 42, Ar
                 ]]></programlisting>
             </para>
             <para>
-                <literal>BackendForChannel()</literal> returns the correct back end for a
-given communication channel.
+                A <literal>BackendForChannel()</literal> visszaadja a megfelelő
+háttérprogramot egy adott kommunikációs csatornánál.
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -970,40 +1005,43 @@ my $ArticleBackendObject = $ArticleObject->BackendForChannel( ChannelName => 'Em
         </section>
 
         <section id="package-porting-5-to-6-article-backend-api">
-            <title>Article Backend API</title>
+            <title>Bejegyzés háttérprogram API</title>
             <para>
-                All other article data and related methods have been moved to separate
-backends. Every communication channel now has a dedicated backend API that
-handles article data and can be used to manipulate it.
+                Az összes többi bejegyzésadat és a hozzájuk kapcsolódó metódus át lett
+helyezve külön háttérprogramokba. Minden egyes kommunikációs csatorna
+mostantól rendelkezik egy dedikált háttérprogram API-val, amely kezeli a
+bejegyzésadatokat és használható azok manipulálásához.
             </para>
             <para>
-                OTRS 6 Free ships with some default channels and corresponding backends:
+                Az OTRS 6 Free néhány alapértelmezett csatornával és a megfelelő
+háttérprogramokkal érkezik:
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Email (equivalent to old <literal>email</literal> article types)</para>
+                        <para>E-mail (egyenértékű a régi <literal>email</literal> bejegyzéstípusokkal)</para>
                     </listitem>
                     <listitem>
-                        <para>Phone (equivalent to old <literal>phone</literal> article types)</para>
+                        <para>Telefon (egyenértékű a régi <literal>phone</literal> bejegyzéstípusokkal)</para>
                     </listitem>
                     <listitem>
-                        <para>Internal (equivalent to old <literal>note</literal> article types)</para>
+                        <para>Belső (egyenértékű a régi <literal>note</literal> bejegyzéstípusokkal)</para>
                     </listitem>
                     <listitem>
-                        <para>Chat (equivalent to old <literal>chat</literal> article types)</para>
+                        <para>Csevegés (egyenértékű a régi <literal>chat</literal> bejegyzéstípusokkal)</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <note>
                 <para>
-                    While chat article backend is available in OTRS 6 Free, it is only utilized
-when system has a valid <emphasis role="bold">OTRS Business
-Solution™</emphasis> installed.
+                    Miközben a csevegés bejegyzés háttérprogram elérhető az OTRS 6 Free
+verziójában, csak akkor használható, ha a rendszer érvényes <emphasis
+role="bold">OTRS Business Solution™</emphasis> telepítéssel rendelkezik.
                 </para>
             </note>
             <para>
-                Article data manipulation can be managed via following backend methods:
+                A bejegyzés adatainak manipulálása a következő háttérprogram-metódusokon
+keresztül végezhető el:
             </para>
             <para>
                 <itemizedlist>
@@ -1022,30 +1060,33 @@ Solution™</emphasis> installed.
                 </itemizedlist>
             </para>
             <para>
-                All of these methods have dropped article type parameter, which must be
-substituted for <literal>SenderType</literal> and
-<literal>IsVisibleForCustomer</literal> parameter combination. In addition,
-all these methods now also require <literal>TicketID</literal> and
-<literal>UserID</literal> parameters.
+                Ezen metódusok mindegyikéből el lett dobva a bejegyzéstípus paraméter,
+amelyet a <literal>SenderType</literal> és az
+<literal>IsVisibleForCustomer</literal> paraméterek kombinációjával kell
+helyettesíteni. Ezenkívül mostantól ezen metódusok mindegyike igényli a
+<literal>TicketID</literal> és a <literal>UserID</literal> paramétereket.
             </para>
             <note>
                 <para>
-                    Since changes in article API are system-wide, any code using the old API
-must be ported for OTRS 6.  This includes any web service definitions which
-leverage these methods directly via GenericInterface for example. They will
-need to be re-assessed and adapted to provide all required parameters to the
-new API during requests and manage subsequent responses in new format.
+                    Mivel a bejegyzés API-ban lévő változások rendszerszintűek, a régi API-t
+használó összes kódot át kell írni az OTRS 6-hoz. Ebbe beletartozik például
+az összes webszolgáltatás meghatározás, amely kihasználja ezeket a
+metódusokat közvetlenül az általános felületen keresztül. Ezeket újra meg
+kell vizsgálni és hozzá kell igazítani ahhoz, hogy az összes szükséges
+paramétert biztosítsák az új API-hoz a kérések közben, és kezeljék a rájuk
+adott válaszokat az új formátumban.
                 </para>
             </note>
             <para>
-                Please note that returning hash of <literal>ArticleGet()</literal> has
-changed, and some things (like ticket data) might be missing. Utilize
-parameters like <literal>DynamicFields => 1</literal> and <literal>RealNames
-=> 1</literal> to get more information.
+                Ne feledje, hogy az <literal>ArticleGet()</literal> visszatérési kivonata
+megváltozott, és néhány dolog (mint például a jegyadatok)
+hiányozhatnak. Használja a <literal>DynamicFields => 1</literal> és a
+<literal>RealNames => 1</literal> paramétereket, hogy további információ
+kapjon.
             </para>
             <para>
-                In addition, attachment data is not returned any more, please use
-combination of following methods from the article backends:
+                Ezenkívül a melléklet adatai többé nem lesznek visszaadva, használja a
+következő metódusok kombinációját a bejegyzés háttérprogramokból:
             </para>
             <para>
                 <itemizedlist>
@@ -1058,14 +1099,14 @@ combination of following methods from the article backends:
                 </itemizedlist>
             </para>
             <para>
-                Note that <literal>ArticleAttachmentIndex()</literal> parameters and
-behavior has changed. Instead of old strip parameter use combination of new
-<literal>ExcludePlainText</literal>, <literal>ExcludeHTMLBody</literal> and
-<literal>ExcludeInline</literal>.
+                Ne feledje, hogy az <literal>ArticleAttachmentIndex()</literal> paraméterei
+és működése is megváltozott. A régi paraméterdarabok helyett használja az új
+<literal>ExcludePlainText</literal>, <literal>ExcludeHTMLBody</literal> és
+<literal>ExcludeInline</literal> kombinációját.
             </para>
             <para>
-                As an example, here is how to get all article and attachment data in the
-same hash:
+                Példaként itt van, hogy az összes bejegyzés- és mellékletadatot hogyan lehet
+lekérni ugyanabban a kivonatban:
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -1076,7 +1117,7 @@ my @Articles = $ArticleObject->ArticleList(
 ARTICLE:
 for my $Article (@Articles) {
 
-    # Make sure to retrieve backend object for this specific article.
+    # Győződjön meg arról, hogy lekérte-e a háttérprogram-objektumot ehhez a bizonyos bejegyzéshez.
     my $ArticleBackendObject = $ArticleObject->BackendForArticle( %{$Article} );
 
     my %ArticleData = $ArticleBackendObject->ArticleGet(
@@ -1086,7 +1127,7 @@ for my $Article (@Articles) {
     );
     $Article = \%ArticleData;
 
-    # Get attachment index (without attachments).
+    # Mellékletindex lekérése (mellékletek nélkül).
     my %AtmIndex = $ArticleBackendObject->ArticleAttachmentIndex(
         ArticleID => $Article->{ArticleID},
         UserID    => $UserID,
@@ -1109,35 +1150,37 @@ for my $Article (@Articles) {
         push @Attachments, \%Attachment;
     }
 
-    # Include attachment data in article hash.
+    # Mellékletadatok felvétele a bejegyzés kivonatába.
     $Article->{Atms} = \@Attachments;
 }
                 ]]></programlisting>
             </para>
         </section>
         <section id="package-porting-5-to-6-article-search-index">
-            <title>Article Search Index</title>
+            <title>Bejegyzéskeresési index</title>
             <para>
-                To make article indexing more generic, article backends now provide
-information necessary for properly indexing article data. Index will be
-created similar to old <literal>StaticDB</literal> mechanism and stored in a
-dedicated article search table.
+                A bejegyzésindexelés általánosabbá tételéhez a bejegyzés háttérprogramok
+mostantól biztosítják a bejegyzésadatok megfelelő indexeléséhez  szükséges
+információkat. Az index hasonlóan lesz létrehozva a régi
+<literal>StaticDB</literal> mechanizmushoz, és egy dedikált
+bejegyzéskeresési táblában lesznek eltárolva.
             </para>
             <para>
-                Since now every article backend can provide search on arbitrary number of
-article fields, use <literal>BackendSearchableFieldsGet()</literal> method
-to get information about them. This data can also be used for forming
-requests to <literal>TicketSearch()</literal> method. Coincidentally, some
-<literal>TicketSearch()</literal> parameters have changed their name to also
-include article backend information, for example:
+                Mivel mostantól minden egyes bejegyzés háttérprogram képes keresést
+biztosítani a bejegyzés mezőinek tetszőleges számán, használja a
+<literal>BackendSearchableFieldsGet()</literal> metódust a velük kapcsolatos
+információk lekéréséhez. Ezek az adatok használhatók a kérések formázásánál
+is a <literal>TicketSearch()</literal> metódushoz. Véletlenül néhány
+<literal>TicketSearch()</literal> paraméter megváltoztatta a nevét, hogy
+tartalmazza a bejegyzés háttérprogram információit is, például:
             </para>
             <para>
                 <informaltable>
                     <tgroup cols="2">
                         <thead>
                             <row>
-                                <entry>Old parameter</entry>
-                                <entry>New parameter</entry>
+                                <entry>Régi paraméter</entry>
+                                <entry>Új paraméter</entry>
                             </row>
                         </thead>
                         <tbody>
@@ -1170,23 +1213,24 @@ include article backend information, for example:
                 </informaltable>
             </para>
             <para>
-                Additionally, article search indexing will be done in an async call now, in
-order to off-load index calculation to a separate task. While this is fine
-for production systems, it might create new problems in certain situations,
-e.g. unit tests. If you are manually creating articles in your unit test,
-but expect it to be searchable immediately after created, make sure to
-manually call the new <literal>ArticleSearchIndexBuild()</literal> method on
-article object.
+                Ezenkívül a bejegyzéskeresési indexelés mostantól aszinkron hívásban lesz
+végrehajtva annak érdekében, hogy kitegye az index kiszámítását egy
+különálló feladatba. Míg ez rendben van a produktív rendszereknél, aközben
+új problémákat hozhat létre bizonyos helyzetekben, például
+egységteszteknél. Ha kézzel hozza létre a bejegyzéseket az egységtesztben,
+és arra számít, hogy azonnal kereshető lesz a létrehozás után, akkor
+győződjön meg arról, hogy meghívta-e kézzel az új
+<literal>ArticleSearchIndexBuild()</literal> metódust a bejegyzésobjektumon.
             </para>
         </section>
     </section>
     <section id="package-porting-5-to-6-sysconfig-changes">
-        <title>SysConfig API changes</title>
+        <title>Rendszerbeállítás API változások</title>
         <para>
-            Note that in OTRS 6 SysConfig API was changed, so you should check if the
-methods are still existing.  For example,
-<literal>ConfigItemUpdate()</literal> is removed. To replace it you should
-use combination of the following methods:
+            Ne feledje, hogy az OTRS 6-ban a rendszerbeállítások API megváltozott, ezért
+ellenőriznie kell, hogy a metódusok léteznek-e még. Például a
+<literal>ConfigItemUpdate()</literal> el lett távolítva. A helyettesítéshez
+a következő metódusok kombinációját kell használnia:
         </para>
         <para>
             <itemizedlist>
@@ -1202,25 +1246,26 @@ use combination of the following methods:
             </itemizedlist>
         </para>
         <para>
-            In case that you want to update a configuration setting during a
-<literal>CodeInstall</literal> section of a package, you could use
-<literal>SettingsSet()</literal>.  It does all previously mentioned steps
-and it can be used for multiple settings at once.
+            Abban az esetben, ha frissíteni szeretne egy konfigurációs beállítást egy
+csomag <literal>CodeInstall</literal> szakasza közben, akkor használhatja a
+<literal>SettingsSet()</literal> metódust. Ez elvégzi a korábban említett
+összes lépést, és használható egyszerre több beállításnál is.
         </para>
         <note>
-            <para>Do not use <literal>SettingSet()</literal> in the SysConfig GUI itself.</para>
+            <para>Ne használja a <literal>SettingSet()</literal> metódust magán a
+rendszerbeállítás grafikus felhasználói felületén.</para>
         </note>
         <para>
             <programlisting format="linespecific"><![CDATA[
 my $Success = $SysConfigObject->SettingsSet(
-    UserID   => 1,                                      # (required) UserID
-    Comments => 'Deployment comment',                   # (optional) Comment
-    Settings => [                                       # (required) List of settings to update.
+    UserID   => 1,                                      # (kötelező) Felhasználó-azonosító.
+    Comments => 'Üzembe állítási megjegyzés.',          # (elhagyható) Megjegyzés.
+    Settings => [                                       # (kötelező) Frissítendő beállítások listája.
         {
-            Name                   => 'Setting::Name',  # (required)
-            EffectiveValue         => 'Value',          # (optional)
-            IsValid                => 1,                # (optional)
-            UserModificationActive => 1,                # (optional)
+            Name                   => 'Setting::Name',  # (kötelező)
+            EffectiveValue         => 'Value',          # (elhagyható)
+            IsValid                => 1,                # (elhagyható)
+            UserModificationActive => 1,                # (elhagyható)
         },
         ...
     ],
@@ -1229,16 +1274,16 @@ my $Success = $SysConfigObject->SettingsSet(
         </para>
     </section>
     <section id="package-porting-5-to-6-linkobject-changes">
-        <title><literal>LinkObject</literal> API changes</title>
+        <title><literal>LinkObject</literal> API változások</title>
         <para>
-            Note that <literal>LinkObject</literal> was slightly modified in the OTRS 6
-and methods <literal>LinkList()</literal> and
-<literal>LinkKeyList()</literal> might return different result if
-<literal>Direction</literal> parameter is used. Consider changing
-<literal>Direction</literal>.
+            Ne feledje, hogy a <literal>LinkObject</literal> kissé módosult az OTRS
+6-ban, valamint a <literal>LinkList()</literal> és a
+<literal>LinkKeyList()</literal> metódusok különböző eredményt adhatnak
+vissza, ha a <literal>Direction</literal> paramétert használják. Fontolja
+meg a <literal>Direction</literal> paraméter megváltoztatását.
         </para>
         <para>
-            Old code:
+            Régi kód:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -1254,7 +1299,7 @@ my $LinkList = $LinkObject->LinkList(
             ]]></programlisting>
         </para>
         <para>
-            New code:
+            Új kód:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -1271,36 +1316,39 @@ my $LinkList = $LinkObject->LinkList(
         </para>
     </section>
     <section id="package-porting-5-to-6-postmaster-filter-communication-log">
-        <title>Communication Log support for additional PostMaster Filters</title>
+        <title>Kommunikációs napló támogatás a további levelezési szűrőkhöz</title>
         <para>
-            As part of email handling improvements for OTRS 6, a new logging mechanism
-was added to OTRS 6, exclusively used for incoming and outgoing
-communications. All PostMaster filters were enriched with this new <link
-linkend="log-mechanism-communication-log">Communication Log</link> API,
-which means any additional filters coming with packages should also leverage
-the new log feature.
+            Az OTRS 6 e-mail kezelési továbbfejlesztésének részeként egy új naplózó
+mechanizmus lett hozzáadva az OTRS 6-hoz, kifejezetten a bejövő és kimenő
+kommunikációk használatához. Az összes levelezési szűrő fel lett javítva
+ezzel az új <link linkend="log-mechanism-communication-log">kommunikációs
+napló</link> API-val, amely azt jelenti, hogy a csomagokkal érkező bármely
+további szűrő is kihasználhatja az új naplózási funkciót.
         </para>
         <para>
-            If your package implements additional PostMaster filters, make sure to get
-acquainted with <link linkend="log-mechanism-communication-log">API usage
-instructions</link>. Also, you can get an example of how to implement this
-logging mechanism by looking the code in the
-<literal>Kernel::System::PostMaster::NewTicket</literal>.
+            Ha a csomagja további levelezési szűrőket valósít meg, akkor győződjön meg
+arról, hogy megismerje az <link
+linkend="log-mechanism-communication-log">API használati
+utasításokat</link>. Kap egy példát is azzal kapcsolatban, hogy ezt a
+naplózási mechanizmust hogyan kell megvalósítani, ha belenéz a
+<literal>Kernel::System::PostMaster::NewTicket</literal> kódjába.
         </para>
     </section>
 
     <section id="package-porting-5-to-6-process-mailqueue-for-ut">
-        <title>Process MailQueue for unit tests</title>
+        <title>Levelezési sor feldolgozása az egységtesztekhez</title>
         <para>
-            As part of email handling improvements for OTRS 6, all emails are now sent
-asynchronously, that means they are saved in a queue for future processing.
+            Az OTRS 6 e-mail kezelési továbbfejlesztésének részeként az összes e-mail
+mostantól aszinkron módon lesz elküldve, amely azt jelenti, hogy egy
+várakozási sorba lesznek elmentve a későbbi feldolgozáshoz.
         </para>
         <para>
-            To the unit tests that depend on emails continue to work properly is
-necessary to force the processing of the email queue.
+            Ahhoz, hogy az e-mailektől függő egységtesztek továbbra is megfelelően
+működjenek, az e-mail várakozási sor feldolgozásának kényszerítése
+szükséges.
         </para>
         <para>
-            Make sure to start with a clean queue:
+            Győződjön meg arról, hogy egy tiszta várakozási sorral indul:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -1309,8 +1357,9 @@ necessary to force the processing of the email queue.
             ]]></programlisting>
         </para>
         <para>
-            If for some reason you can't clean completely the queue, e.g. selenium unit
-tests, just delete the items created during the tests:
+            Ha néhány esetben nem tudja teljesen kitakarítani a várakozási sort (például
+Selenium egységteszteknél), akkor egyszerűen törölje azokat az elemeket,
+amelyek a tesztek során jöttek létre:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -1328,7 +1377,8 @@ tests, just delete the items created during the tests:
             ]]></programlisting>
         </para>
         <para>
-            Process the queue after the code that you expect to send emails:
+            Dolgozza fel a várakozási sort azután a kód után, amely várhatóan elküldi az
+e-maileket:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -1340,7 +1390,7 @@ tests, just delete the items created during the tests:
             ]]></programlisting>
         </para>
         <para>
-            Or process only the ones created during the tests:
+            Vagy csak azokat dolgozza fel, amelyek a tesztek során jöttek létre:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -1354,22 +1404,23 @@ tests, just delete the items created during the tests:
             ]]></programlisting>
         </para>
         <para>
-            Depending on your case, you may need to clean the queue after or before
-processing it.
+            Az esettől függően esetleg ki kell takarítania a várakozási sort a
+feldolgozása után vagy előtt.
         </para>
     </section>
 
     <section id="package-porting-5-to-6-agentticketzoom-widget-handling">
-        <title>Widget Handling in Ticket Zoom Screen</title>
+        <title>Felületi elem kezelés a jegynagyítás képernyőn</title>
         <para>
-            The widgets in the ticket zoom screen have been improved to work in a more
-generic way. With OTRS 6, it is now possible to add new widgets for the
-ticket zoom screen via the SysConfig. It is possible to configure the used
-module, the location of the widget (e.g. Sidebar) and if the content should
-be loaded synchronously (default) or via AJAX.
+            A jegynagyítás képernyőn lévő felületi elemek továbbfejlesztésre kerültek,
+hogy általánosabb módon működjenek. Az OTRS 6-tal mostantól lehetőség van új
+felületi elemek hozzáadására a jegynagyítás képernyőhöz a
+rendszerbeállításokon keresztül. Lehetőség van beállítani a használt modult,
+a felületi elem helyzetét (például oldalsáv) és hogy a tartalmat szinkron
+módon (alapértelmezett) vagy AJAX kérésen keresztül kell betölteni.
         </para>
         <para>
-            Here is an example configuration for the default widgets:
+            Itt egy beállítási példa az alapértelmezett felületi elemekhez:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -1398,10 +1449,11 @@ be loaded synchronously (default) or via AJAX.
         </para>
         <note>
             <para>
-                With this change, the template blocks in the widget code have been removed,
-so you should check if you use the old widget blocks in some output filters
-via <literal>Frontend::Template::GenerateBlockHooks</literal> functionality,
-and implement it in the new fashion.
+                Ezzel a változtatással a felületi elem kódjában lévő sablonblokkok
+eltávolításra kerültek, ezért ellenőriznie kell, ha a régi felületi elem
+blokkokat használja néhány kimeneti szűrőben a
+<literal>Frontend::Template::GenerateBlockHooks</literal> funkcionalitáson
+keresztül, és meg kell valósítania az új módszer szerint.
             </para>
         </note>
     </section>

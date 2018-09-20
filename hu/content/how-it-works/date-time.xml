@@ -4,27 +4,29 @@
 <section>
     <title>Dátum és idő</title>
     <para>
-OTRS comes with its own package to handle date and time which ensures
-correct calculation and storage of date and time.
+Az OTRS saját csomaggal érkezik a dátum és idő kezeléséhez, amely a dátum és
+idő helyes kiszámítását és tárolását biztosítja.
     </para>
 
     <section id="date-time-intro">
         <title>Bevezetés</title>
         <para>
 Date and time are represented by an object of
-<literal>Kernel::System::DateTime</literal>.  Every DateTime object holds
-its own date, time and time zone information.  In contrast to the now
-deprecated <literal>Kernel::System::Time</literal> package, this means that
-you can and should create a DateTime object for every date/time you want to
-use.
+<literal>Kernel::System::DateTime</literal>.  Every
+<literal>DateTime</literal> object holds its own date, time and time zone
+information.  In contrast to the now deprecated
+<literal>Kernel::System::Time</literal> package, this means that you can and
+should create a <literal>DateTime</literal> object for every date/time you
+want to use.
         </para>
     </section>
 
     <section id="date-time-creation">
-        <title>Creation of a DateTime object</title>
+        <title>Egy <literal>DateTime</literal> objektum létrehozása</title>
         <para>
-The object manager of OTRS has been extended by a <literal>Create</literal>
-method to support packages for which more than one instance can be created:
+Az OTRS objektumkezelője kibővítésre került egy <literal>Create</literal>
+metódussal, hogy támogassa azokat a csomagokat, amelyekhez egynél több
+példány hozható létre:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -37,15 +39,17 @@ my $DateTimeObject = $Kernel::OM->Create(
             ]]></programlisting>
         </para>
         <para>
-The example above will create a <literal>DateTime</literal> object for the
-current date and time in time zone Europe/Berlin. There are more options to
-create a <literal>DateTime</literal> object (time components, string, time
-stamp, cloning), see POD of <literal>Kernel::System::DateTime</literal>.
+A fenti példa létrehoz egy <literal>DateTime</literal> objektumot a
+jelenlegi dátumhoz és időhöz az Európa/Berlin időzónában. További
+lehetőségek is vannak egy <literal>DateTime</literal> objektum létrehozására
+(időösszetevők, szövegek, időbélyegek, klónozás), nézze meg a
+<literal>Kernel::System::DateTime</literal> POD-ját.
         </para>
         <note>
             <para>
-You will get an error if you try to retrieve a <literal>DateTime</literal>
-object via <literal>$Kernel::OM->Get('Kernel::System::DateTime')</literal>.
+Hibát fog kapni, ha megpróbál egy <literal>DateTime</literal> objektumot
+lekérni a <literal>$Kernel::OM->Get('Kernel::System::DateTime')</literal>
+használatával.
             </para>
         </note>
     </section>
@@ -53,10 +57,11 @@ object via <literal>$Kernel::OM->Get('Kernel::System::DateTime')</literal>.
     <section id="date-time-time-zones">
         <title>Időzónák</title>
         <para>
-Time offsets in hours (+2, -10, etc.) have been replaced by time zones
-(Europe/Berlin, America/New_York, etc.).  The conversion between time zones
-is completely encapsulated within a <literal>DateTime</literal> object. If
-you want to convert to another time zone, simply use the following code:
+Az órákban lévő időeltolások (+2, -10, stb.) le lettek cserélve az
+időzónákkal (Európa/Berlin, Amerika/New_York, stb.). Az időzónák közti
+átalakítások teljes mértékben a <literal>DateTime</literal> objektumon belül
+vannak megvalósítva. Ha egy másik időzónára szeretne átalakítani, akkor
+egyszerűen használja a következő kódot:
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
@@ -64,121 +69,131 @@ $DateTimeObject->ToTimeZone( TimeZone => 'Europe/Budapest' );
             ]]></programlisting>
         </para>
         <para>
-There is a new SysConfig option <literal>OTRSTimeZone</literal>. This
-setting defines the time zone that OTRS uses internally to store date and
-time within the database.
+Van egy új <literal>OTRSTimeZone</literal> rendszerbeállítási lehetőség. Ez
+a beállítás határozza meg azt az időzónát, amelyet az OTRS belsőleg használ
+a dátum és az idő tárolásához az adatbázison belül.
         </para>
         <note>
             <para>
-You have to ensure to convert a <literal>DateTime</literal> object to the
-OTRS time zone before it gets stored in the database (there's a convenient
-method for this: <literal>ToOTRSTimeZone()</literal>). An exception could be
-that you explicitly want a database column to hold a date/time in a specific
-time zone. But be aware that the database itself won't provide time zone
-information by itself when retrieving it.
+Biztosítania kell, hogy egy <literal>DateTime</literal> objektum át legyen
+alakítva az OTRS időzónájára, mielőtt az eltárolásra kerülne az adatbázisba
+(van egy kényelmes módszer erre:
+<literal>ToOTRSTimeZone()</literal>). Kivétel lehet, hogy ha kifejezetten
+egy olyan adatbázisoszlopot szeretne, amely egy dátum/idő értéket tárol egy
+bizonyos időzónában. Ne feledje azonban, hogy maga az adatbázis önmagában
+nem fog időzóna-információkat biztosítani, amikor lekérik azt.
             </para>
         </note>
         <note>
             <para>
-<literal>TimeZoneList()</literal> of
-<literal>Kernel::System::DateTime</literal> provides a list of available
-time zones.
+A <literal>Kernel::System::DateTime</literal>
+<literal>TimeZoneList()</literal> metódusa biztosítja az elérhető időzónák
+listáját.
             </para>
         </note>
     </section>
 
     <section id="date-time-method-summary">
-        <title>Method summary</title>
+        <title>Metódus összefoglaló</title>
         <para>
-The <literal>Kernel::System::DateTime</literal> package provides the
-following methods (this is only a selection, see source code for details).
+A <literal>Kernel::System::DateTime</literal> csomag biztosítja a következő
+metódusokat (ez csak egy kiválasztás, a részletekért nézze meg a
+forráskódot).
         </para>
         <section id="date-time-methods-creation">
-            <title>Object creation methods</title>
+            <title>Objektumlétrehozási metódusok</title>
             <para>
-A <literal>DateTime</literal> object can be created either via the object
-manager's <literal>Create()</literal> method or by cloning another
-<literal>DateTime</literal> object with its <literal>Clone()</literal>
-method.
+Egy <literal>DateTime</literal> objektum létrehozható az objektumkezelő
+<literal>Create()</literal> metódusával vagy egy másik
+<literal>DateTime</literal> objektum leklónozásával a
+<literal>Clone()</literal> metódusának használatával.
             </para>
         </section>
         <section id="date-time-methods-get">
-            <title>Get method</title>
+            <title>Lekérő metódus</title>
             <para>
-With <literal>Get()</literal> all data of a <literal>DateTime</literal>
-object will be returned as a hash (date and time components including day
-name, etc. as well as time zone).
+A <literal>Get()</literal> metódussal egy <literal>DateTime</literal>
+objektum összes adata vissza lesz adva kivonatként (dátum és idő összetevők,
+beleértve a nap nevét, stb., valamint az időzónát).
             </para>
         </section>
         <section id="date-time-methods-set">
-            <title>Set method</title>
+            <title>Beállító metódus</title>
             <para>
-With <literal>Set()</literal> you can either change certain components of
-the <literal>DateTime</literal> object (year, month, day, hour, minute,
-second) or you can set a date and time based on a given string ('2016-05-24
-23:04:12').  Note that you cannot change the time zone with this method.
+A <literal>Set()</literal> metódussal megváltoztathatja a
+<literal>DateTime</literal> objektum bizonyos összetevőit (év, hónap, nap,
+óra, perc, másodperc) vagy beállíthat egy dátumot és időt egy adott szöveg
+alapján ('2016-05-24 23:04:12'). Ne feledje, hogy nem tudja megváltoztatni
+az időzónát ezzel a metódussal.
             </para>
         </section>
         <section id="date-time-methods-time-zone">
-            <title>Time zone methods</title>
+            <title>Időzóna metódusok</title>
             <para>
-To change the time zone of a <literal>DateTime</literal> object use method
-<literal>ToTimeZone()</literal> or as a shortcut for converting to OTRS time
-zone <literal>ToOTRSTimeZone()</literal>.
+Egy <literal>DateTime</literal> objektum időzónájának megváltoztatásához
+használja a <literal>ToTimeZone()</literal> metódust vagy egyszerűsítésként
+a <literal>ToOTRSTimeZone()</literal> metódust az OTRS időzóna
+átalakításához.
             </para>
             <para>
-To retrieve the configured OTRS time zone or user default time zone, always
-use method <literal>OTRSTimeZoneGet()</literal> or
-<literal>UserDefaultTimeZoneGet()</literal>. Never retrieve these manually
-via <literal>Kernel::Config</literal>.
+A beállított OTRS időzóna vagy a felhasználó alapértelmezett időzónájának
+lekéréséhez mindig az <literal>OTRSTimeZoneGet()</literal> vagy a
+<literal>UserDefaultTimeZoneGet()</literal> metódusokat használja. Sose
+kérje le ezeket kézzel a <literal>Kernel::Config</literal> használatával.
             </para>
         </section>
         <section id="date-time-methods-comparison">
-            <title>Comparison operators and methods</title>
+            <title>Összehasonlító operátorok és metódusok</title>
             <para>
-<literal>Kernel::System::DateTime</literal> uses operator overloading for
-comparisons. So you can simply compare two <literal>DateTime</literal>
-objects with &lt;, &lt;=, ==, !=, &gt;= and &gt;.
-<literal>Compare()</literal> is usable in Perl's sort context as it returns
--1, 0 or 1.
+A <literal>Kernel::System::DateTime</literal> operátortúlterhelést használ
+az összehasonlításhoz. Így egyszerűen összehasonlíthat két
+<literal>DateTime</literal> objektumot a &lt;, &lt;=, ==, !=, &gt;= and &gt;
+operátorokkal. A <literal>Compare()</literal> metódus használható a Perl
+rendezési környezetében, mivel -1, 0 vagy 1 a visszatérési értéke.
             </para>
         </section>
     </section>
 
     <section id="date-time-deprecated-time-package">
-        <title>Deprecated package Kernel::System::Time</title>
+        <title>Elavult Kernel::System::Time csomag</title>
         <para>
-The now deprecated package <literal>Kernel::System::Time</literal> has been
-extended to fully support time zones instead of time offsets. This has been
-done to ensure that existing code works without (bigger) changes.
+A mostanra elavult <literal>Kernel::System::Time</literal> csomag ki lett
+bővítve, hogy teljesen támogassa az időzónákat az időeltolások helyett. Ez
+azért történt, hogy biztosítsa a meglévő kód működését (nagyobb) módosítások
+nélkül.
         </para>
         <para>
-However, there is a case in which you have to change existing code. If you
-have code that uses the old time offsets to calculate a new date/time or a
-difference, you have to migrate this code to use the new
-<literal>DateTime</literal> object.
+Azonban van egy eset, amikor meg kell változtatnia a meglévő kódot. Ha olyan
+kódja van, amely a régi időeltolásokat használja egy új dátum és idő
+kiszámításához vagy különbségéhez, akkor át kell költöztetnie ezt a kódot,
+hogy az új <literal>DateTime</literal> objektumot használja.
         </para>
         <para>
-Example (old code):
+Példa (régi kód):
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
-my $TimeObject     = $Kernel::OM->Get('Kernel::System::Time'); # Assume a time offset of 0 for this time object
+# Feltételezzünk egy 0 időeltolást ennél az objektumnál.
+my $TimeObject     = $Kernel::OM->Get('Kernel::System::Time');
 my $SystemTime     = $TimeObject->TimeStamp2SystemTime( String => '2004-08-14 22:45:00' );
-my $UserTimeZone   = '+2'; # normally retrieved via config or param
+# Általában beállításon vagy paraméteren keresztül van lekérve.
+my $UserTimeZone   = '+2';
 my $UserSystemTime = $SystemTime + $UserTimeZone * 3600;
 my $UserTimeStamp  = $TimeObject->SystemTime2TimeStamp( SystemTime => $UserSystemTime );
             ]]></programlisting>
         </para>
         <para>
-Example (new code):
+Példa (új kód):
         </para>
         <para>
             <programlisting format="linespecific"><![CDATA[
-my $DateTimeObject = $Kernel::OM->Create('Kernel::System::DateTime'); # This implicitly sets the configured OTRS time zone
-my $UserTimeZone   = 'Europe/Berlin'; # normally retrieved via config or param
+# Ez hallgatólagosan beállítja a beállított OTRS időzónát.
+my $DateTimeObject = $Kernel::OM->Create('Kernel::System::DateTime');
+# Általában beállításon vagy paraméteren keresztül van lekérve.
+my $UserTimeZone   = 'Europe/Berlin';
 $DateTimeObject->ToTimeZone( TimeZone => $UserTimeZone );
-my $SystemTime    = $DateTimeObject->ToEpoch(); # note that the epoch is independent from the time zone, it's always calculated for UTC
+# Ne feledje, hogy az epoch független az időzónától, mindig az UTC-hez lesz kiszámítva.
+my $SystemTime    = $DateTimeObject->ToEpoch();
 my $UserTimeStamp = $DateTimeObject->ToString();
             ]]></programlisting>
         </para>

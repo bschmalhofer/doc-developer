@@ -25,8 +25,8 @@ de egy szöveget fűz minden naplóbejegyzés elé.
         <para>
         <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Kernel/System/Log/CustomFile.pm - file log backend
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Kernel/System/Log/CustomFile.pm - fájlnaplózó háttérprogram
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -43,31 +43,32 @@ umask "002";
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # allocate new hash for object
+    # új kivonat lefoglalása az objektumhoz
     my $Self = {};
     bless( $Self, $Type );
 
-    # get needed objects
+    # a szükséges objektumok lekérése
     for (qw(ConfigObject EncodeObject)) {
         if ( $Param{$_} ) {
             $Self->{$_} = $Param{$_};
         }
         else {
-            die "Got no $_!";
+            die "Nincs $_!";
         }
     }
 
-    # get logfile location
+    # a naplófájl helyének lekérése
     $Self->{LogFile} = '/var/log/CustomFile.log';
 
-    # set custom prefix
+    # egyéni előtag beállítása
     $Self->{CustomPrefix} = 'CustomFileExample';
 
-    # Fixed bug# 2265 - For IIS we need to create a own error log file.
-    # Bind stderr to log file, because IIS do print stderr to web page.
+    # A 2265. hiba javítása - IIS-nél létre kell hoznunk egy saját hibanapló fájlt.
+    # A szabványos hibakimenet kötése a naplófájlhoz, mert az IIS nem írja
+    # ki a szabványos hibakimenetet a weboldalra.
     if ( $ENV{SERVER_SOFTWARE} && $ENV{SERVER_SOFTWARE} =~ /^microsoft\-iis/i ) {
         if ( !open STDERR, '>>', $Self->{LogFile} . '.error' ) {
-            print STDERR "ERROR: Can't write $Self->{LogFile}.error: $!";
+            print STDERR "HIBA: nem lehet írni: $Self->{LogFile}.error: $!";
         }
     }
 
@@ -79,17 +80,17 @@ sub Log {
 
     my $FH;
 
-    # open logfile
+    # naplófájl megnyitása
     if ( !open $FH, '>>', $Self->{LogFile} ) {
 
-        # print error screen
+        # hibaképernyő kiírása
         print STDERR "\n";
-        print STDERR " >> Can't write $Self->{LogFile}: $! <<\n";
+        print STDERR " >> Nem lehet írni: $Self->{LogFile}: $! <<\n";
         print STDERR "\n";
         return;
     }
 
-    # write log file
+    # naplófájl írása
     $Self->{EncodeObject}->SetIO($FH);
     print $FH '[' . localtime() . ']';
     if ( lc $Param{Priority} eq 'debug' ) {
@@ -106,16 +107,16 @@ sub Log {
     }
     else {
 
-        # print error messages to STDERR
+        # hibaüzenetek írása a szabványos hibakimenetre
         print STDERR
-            "[Error][$Param{Module}] $Self->{CustomPrefix} Priority: '$Param{Priority}' not defined! Message: $Param{Message}\n";
+            "[Error][$Param{Module}] $Self->{CustomPrefix} prioritás: '$Param{Priority}' nincs meghatározva! Üzenet: $Param{Message}\n";
 
-        # and of course to logfile
+        # és természetesen a naplófájlba
         print $FH
-            "[Error][$Param{Module}] $Self->{CustomPrefix} Priority: '$Param{Priority}' not defined! Message: $Param{Message}\n";
+            "[Error][$Param{Module}] $Self->{CustomPrefix} prioritás: '$Param{Priority}' nincs meghatározva! Üzenet: $Param{Message}\n";
     }
 
-    # close file handle
+    # fájlkezelő lezárása
     close $FH;
     return 1;
 }

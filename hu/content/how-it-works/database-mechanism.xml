@@ -137,10 +137,10 @@ egy attribútumban).
             <section id="database-xml-create">
             <title>CREATE TABLE</title>
             <para>
-Possible data types are: <literal>BIGINT</literal>,
+A lehetséges adattípusok a következők: <literal>BIGINT</literal>,
 <literal>SMALLINT</literal>, <literal>INTEGER</literal>,
 <literal>VARCHAR</literal> (Size=1-1000000), <literal>DATE</literal>
-(Format: <literal>yyyy-mm-dd hh:mm:ss</literal>) and
+(Formátum: <literal>yyyy-mm-dd hh:mm:ss</literal>) és
 <literal>LONGBLOB</literal>.
             </para>
             <programlisting format="linespecific"><![CDATA[
@@ -164,10 +164,10 @@ Possible data types are: <literal>BIGINT</literal>,
 </TableCreate>
             ]]></programlisting>
             <para>
-                <literal>LONGBLOB</literal> columns need special treatment. Their content
-needs to be <literal>Base64</literal> transcoded if the database driver does
-not support the feature <literal>DirectBlob</literal>. Please see the
-following example:
+                A <literal>LONGBLOB</literal> oszlopok különleges bánásmódot igényelnek. A
+tartalmukat <literal>Base64</literal>-re kell átkódolni, ha az
+adatbázis-meghajtó nem támogatja a <literal>DirectBlob</literal>
+funkciót. Nézze meg a következő példát:
             </para>
             <programlisting format="linespecific"><![CDATA[
 my $Content = $StorableContent;
@@ -176,9 +176,10 @@ if ( !$DBObject->GetDatabaseFunction('DirectBlob') ) {
 }
             ]]></programlisting>
             <para>
-                Similarly, when reading from such a column, the content must not
-automatically be decoded as <literal>UTF-8</literal> by passing the
-<literal>Encode => 0</literal> flag to <literal>Prepare()</literal>:
+                Hasonlóan, amikor egy ilyen oszlopból olvas, akkor a tartalmat tilos
+automatikusan <literal>UTF-8</literal>-ként visszaalakítani az
+<literal>Encode => 0</literal> jelző átadásával a
+<literal>Prepare()</literal> függvénynek:
             </para>
             <programlisting format="linespecific"><![CDATA[
 return if !$DBObject->Prepare(
@@ -194,7 +195,7 @@ while ( my @Row = $DBObject->FetchrowArray() ) {
 
     $Data{ContentType} = $Row[0];
 
-    # Decode attachment if it's e. g. a postgresql backend.
+    # Melléklet visszaalakítása, ha például postgresql háttérprogramot használ.
     if ( !$DBObject->GetDatabaseFunction('DirectBlob') ) {
         $Data{Content} = decode_base64( $Row[1] );
     }

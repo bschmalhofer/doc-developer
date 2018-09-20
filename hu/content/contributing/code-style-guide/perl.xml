@@ -323,9 +323,9 @@ fájlokban.</para>
 <literal>Main::Require()</literal> metódust.</para>
                     </listitem>
                     <listitem>
-                        <para>Use the functions of the <literal>DateTimeObject</literal> instead of the
-builtin functions like <literal>time()</literal>,
-<literal>localtime()</literal>, etc.</para>
+                        <para>Használja a <literal>DateTimeObject</literal> függvényeit az olyan beépített
+függvények helyett, mint például a <literal>time()</literal>,
+<literal>localtime()</literal>, stb.</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -334,12 +334,13 @@ builtin functions like <literal>time()</literal>,
         <section id="regular-expressions">
             <title>Reguláris kifejezések</title>
             <para>
-                For regular expressions <emphasis>in the source code</emphasis>, we always
-use the <literal>m//</literal> operator with curly braces as delimiters. We
-also use the modifiers <literal>x</literal>, <literal>m</literal> and
-<literal>s</literal> by default.  The <literal>x</literal> modifier allows
-you to comment your regex and use spaces to visually separate logical
-groups.
+                A reguláris kifejezéseknél <emphasis>a forráskódban</emphasis> mindig
+kapcsos zárójelekkel használjuk az <literal>m//</literal> operátort
+elválasztóként. Használjuk az <literal>x</literal>, <literal>m</literal> és
+<literal>s</literal> módosítókat is alapértelmezetten. Az
+<literal>x</literal> módosító lehetővé teszi a reguláris kifejezések
+megjegyzéssel történő ellátását, és szóközök használatát a logikai csoportok
+megjelenésbeli elkülönítéséhez.
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -377,14 +378,14 @@ $Text =~ m{
     ]]></programlisting>
             </para>
             <para>
-                An exception to the convention above applies to all cases where regular
-expressions are not written statically in the code but instead are
-<emphasis>supplied by users</emphasis> in one form or another (for example
-via SysConfig or in a PostMaster filter configuration). Any evaluation of
-such a regular expression has to be done without any modifiers
-(e.g. <literal>$Variable =~ m{$Regex}</literal>) in order to match the
-expectation of (mostly inexperienced) users and also to be backwards
-compatible.
+                A fenti megegyezésre vonatkozó kivétel minden olyan esetre vonatkozik,
+amikor a reguláris kifejezéseket nem írják statikusan a kódba, hanem a
+<emphasis>felhasználók adják meg</emphasis> egy űrlapon vagy máshol (például
+a rendszerbeállításokon vagy egy levelezési szűrő beállításán
+keresztül). Egy ilyen reguláris kifejezés bármely kiértékelését mindenféle
+módosító nélkül kell elvégezni (például <literal>$Variable =~
+m{$Regex}</literal>) annak érdekében, hogy megfeleljen a (többnyire
+tapasztalatlan) felhasználók elvárásainak és visszafelé kompatibilis legyen.
             </para>
             <para>
                 Ha a módosítók pontosan szükségesek a felhasználó által megadott reguláris
@@ -395,13 +396,13 @@ url="http://perldoc.perl.org/perlretut.html#Embedding-comments-and-modifiers-in-
 dokumentációját.
             </para>
             <para>
-                Usage of the <literal>r</literal> modifier is encouraged, e.g. if you need
-to extract part of a string into another variable.  This modifier keeps the
-matched variable intact and instead provides the substitution result as a
-return value.
+                Az <literal>r</literal> módosító használata erősen javasolt, például ha ki
+kell nyernie egy szöveg egy részét egy másik változóba. Ez a módosító
+érintetlenül hagyja az illesztett változót, ahelyett hogy a helyettesítés
+eredményt nyújtaná visszatérési értékként.
             </para>
             <para>
-                Example: Use this...
+                Példa: használja ezt…
             </para>
             <para>
             <programlisting format="linespecific"><![CDATA[
@@ -416,7 +417,7 @@ my $NewText = $Text =~ s{
     ]]></programlisting>
             </para>
             <para>
-                instead of this...
+                ehelyett…
             </para>
             <para>
             <programlisting format="linespecific"><![CDATA[
@@ -432,37 +433,39 @@ $NewText =~ s{
     ]]></programlisting>
             </para>
             <para>
-                If you want to match for start and end of a <emphasis>string</emphasis>, you
-should generally use <literal>\A</literal> and <literal>\z</literal> instead
-of the more generic <literal>^</literal> and <literal>$</literal> unless you
-really need to match start or end of <emphasis>lines</emphasis> within a
-multiline string.
+                Ha egy <emphasis>szöveg</emphasis> elejénél vagy végénél szeretne
+illeszteni, akkor általában az <literal>\A</literal> és a
+<literal>\z</literal> módosítót kell használnia az általánosabb
+<literal>^</literal> és <literal>$</literal> helyett, kivéve hogyha valóban
+a <emphasis>sorok</emphasis> elejére vagy végére szeretne illeszteni egy
+többsoros szövegen belül.
             </para>
             <para>
             <programlisting format="linespecific"><![CDATA[
 $Text =~ m{
-    \A      # beginning of the string
-    Content # some string
-    \z      # end of the string
+    \A      # a szöveg eleje
+    Tartalom # valamilyen szöveg
+    \z      # a szöveg vége
 }xms;
 
 $MultilineText =~ m{
-    \A                      # beginning of the string
+    \A                      # a szöveg eleje
     .*
-    (?: \n Content $ )+      # one or more lines containing the same string
+    (?: \n Tartalom $ )+    # egy vagy több sor, amely ugyanazt a szöveget tartalmazza
     .*
-    \z                      # end of the string
+    \z                      # a szöveg vége
 }xms;
     ]]></programlisting>
             </para>
             <para>
-                Usage of named capture groups is also encouraged, particularly for
-multi-matches.  Named capture groups are easier to read/understand, prevent
-mix-ups when matching more than one capture group and allow extension
-without accidentally introducing bugs.
+                Az elnevezett elfogási csoportok használata szintén erősen javasolt,
+különösen többszörös illesztéseknél. Az elnevezett elfogási csoportokat
+egyszerűbb olvasni és megérteni, megakadályozzák az összekeverést, amikor
+egynél több elfogási csoportot illeszt, és lehetővé teszik a kiterjesztést,
+anélkül hogy véletlenül programhibákat vinne a rendszerbe.
             </para>
             <para>
-                Example: Use this...
+                Példa: használja ezt…
             </para>
             <para>
             <programlisting format="linespecific"><![CDATA[
@@ -484,7 +487,7 @@ my $FormattedContact = "$+{LastName}, $+{FirstName} ($+{Email})";
     ]]></programlisting>
             </para>
             <para>
-                instead of this...
+                ehelyett…
             </para>
             <para>
             <programlisting format="linespecific"><![CDATA[
@@ -516,11 +519,12 @@ első betű nagybetűs legyen (<ulink
 url="https://hu.wikipedia.org/wiki/CamelCase">CamelCase</ulink>).
             </para>
             <para>
-                Names should be as descriptive as possible.  A reader should be able to say
-what is meant by a name without digging too deep into the code. E.g. use
-<literal>$ConfigItemID</literal> instead of
-<literal>$ID</literal>. Examples: <literal>@TicketIDs</literal>,
-<literal>$Output</literal>, <literal>StateSet()</literal>, etc.
+                A neveknek annyira leírónak kell lenniük, amennyire csak lehetséges. Az
+olvasónak egy név alapján meg kell tudni mondania, hogy az mit jelent
+anélkül, hogy túl mélyre ásná magát a kódban. Például használja a
+<literal>$ConfigItemID</literal> nevet az <literal>$ID</literal>
+helyett. Példák: <literal>@TicketIDs</literal>, <literal>$Output</literal>,
+<literal>StateSet()</literal>, stb.
             </para>
         </section>
 
@@ -902,14 +906,14 @@ sorrendben kell lenniük. Egy minta dokumentáció így néz ki:
                     <programlisting format="linespecific"><![CDATA[
 =head2 LastTimeObjectChanged()
 
-Calculates the last time the object was changed. It returns a hash reference with
-    information about the object and the time.
+Kiszámolja az objektum megváltoztatásának utolsó idejét. Egy kivonat hivatkozást
+    ad vissza az objektummal és az idővel kapcsolatos információkkal.
 
     my $Info = $Object->LastTimeObjectChanged(
         Param => 'Value',
     );
 
-This returns something like:
+Valami ilyesmit ad vissza:
 
     my $Info = {
         ConfigItemID    => 1234,
@@ -956,7 +960,8 @@ legyen, például pontos változónevekkel és függvénynevekkel.
                     </listitem>
                 </varlistentry>
                 <varlistentry>
-                    <term>Don't say what the code says (DRY -> Don't repeat yourself).</term>
+                    <term>Ne mondja el, amit a kód is elmond (DRY: Don`t Repeat Yourself – Ne ismételd
+önmagad).</term>
                     <listitem>
                         <para>
                             Ne ismételjen (nyilvánvaló) kódot a magyarázatokban.

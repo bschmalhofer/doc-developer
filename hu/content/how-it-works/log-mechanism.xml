@@ -6,30 +6,30 @@
     <section>
         <title>Rendszernapló</title>
         <para>
-            OTRS comes with a system log backend that can be used for application
-logging and debugging.
+            Az OTRS egy olyan rendszernaplózó háttérprogrammal érkezik, amely
+használható az alkalmazás naplózásánál és a hibakeresésnél.
         </para>
         <para>
-            The log object can be accessed and used via the
-<literal>ObjectManager</literal> like this:
+            A <literal>Log</literal> objektum az <literal>ObjectManager</literal>
+modulon keresztül érhető el és használható ehhez hasonlóan:
         </para>
         <para>
             <programlisting><![CDATA[
 $Kernel::OM->Get('Kernel::System::Log')->Log(
     Priority => 'error',
-    Message  => 'Need something!',
+    Message  => 'Valamire szükség van!',
 );
             ]]></programlisting>
         </para>
         <para>
-            Depending on the configured log level via <literal>MinimumLogLevel</literal>
-option in SysConfig, logged message will either be saved or not, based on
-their <emphasis>Priority</emphasis> flag.
+            A rendszerbeállításokban a <literal>MinimumLogLevel</literal> beállításon
+keresztül beállított naplózási szinttől függően a naplózott üzenetek a
+<emphasis>Prioritás</emphasis> jelzőjük alapján mentésre kerülnek vagy sem.
         </para>
         <para>
-            If <literal>error</literal> is set, just errors are logged. With
-<literal>debug</literal>, you get all logging messages. The order of log
-levels is:
+            Ha <literal>error</literal> van beállítva, akkor csak a hibák lesznek
+naplózva. A <literal>debug</literal> értékkel megkapja az összes naplózási
+üzenetet. A naplózási szintek sorrendje a következő:
         </para>
         <para>
             <itemizedlist>
@@ -48,49 +48,51 @@ levels is:
             </itemizedlist>
         </para>
         <para>
-            The output of the system log can be directed to either a syslog daemon or
-log file, depending on the configured <literal>LogModule</literal> option in
-SysConfig.
+            A rendszernapló kimenete a rendszerbeállításokban lévő
+<literal>LogModule</literal> beállításban megadottak alapján átirányítható
+egy rendszernaplózó démonba vagy naplófájlba.
         </para>
     </section>
     <section id="log-mechanism-communication-log">
-        <title>Kommunikációs napló</title>
+        <title>Kommunikáció napló</title>
         <para>
-            In addition to System Log, OTRS provides specialized logging backend for any
-communication related logging.  Since OTRS 6, system comes with dedicated
-tables and frontends to track and display communication logs for easier
-debugging and operational overview.
+            A rendszernapló mellett az OTRS különleges naplózó háttérprogramot biztosít
+az összes, a kommunikációra vonatkozó naplózáshoz. Az OTRS 6 óta a rendszer
+dedikált táblázatokkal és előtétprogramokkal érkezik a kommunikációs naplók
+követéséhez és megjelenítéséhez, hogy egyszerűbb legyen hibát keresni és a
+működést áttekinteni.
         </para>
         <para>
-            To take advantage of the new system, first create a non-singleton instance
-of communication log object:
+            Az új rendszer előnyeinek kihasználásához először hozzon létre egy nem egyke
+példányt a kommunikációs napló objektumból:
         </para>
         <para>
             <programlisting><![CDATA[
 my $CommunicationLogObject = $Kernel::OM->Create(
     'Kernel::System::CommunicationLog',
     ObjectParams => {
-        Transport   => 'Email',     # Transport log module
+        Transport   => 'Email',     # Átviteli naplózó modul
         Direction   => 'Incoming',  # Incoming|Outgoing
-        AccountType => 'POP3',      # Mail account type
-        AccountID   => 1,           # Mail account ID
+        AccountType => 'POP3',      # Levelezési fiók típusa
+        AccountID   => 1,           # Levelezési fiók azonosítója
     },
 );
             ]]></programlisting>
         </para>
         <para>
-            When you have a communication log object instance, you can start an object
-log for logging individual messages. There are two object logs currently
-implemented: <literal>Connection</literal> and <literal>Message</literal>.
+            Amikor megvan a kommunikációs napló objektum példánya, akkor elindíthat egy
+objektumnaplózást az egyéni üzenetek naplózásához. Jelenleg két
+objektumnapló van megvalósítva: <literal>Connection</literal> és
+<literal>Message</literal>.
         </para>
         <para>
-            <literal>Connection</literal> object log should be used for logging any
-connection related messages (for example: authenticating on server or
-retrieving incoming messages).
+            A <literal>Connection</literal> objektumnaplót kell használni minden, a
+kommunikációra vonatkozó üzenet naplózásához (például hitelesítés egy
+kiszolgálón vagy bejövő üzenetek fogadása).
         </para>
         <para>
-            Simply, start the object log by declaring its type, and you can use it
-immediately:
+            Egyszerűen indítsa el az objektumnaplót a típusának meghatározásával, és már
+azonnal használhatja:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -100,20 +102,20 @@ $CommunicationLogObject->ObjectLogStart(
 
 $CommunicationLogObject->ObjectLog(
     ObjectLogType => 'Connection',
-    Priority      => 'Debug',                              # Trace, Debug, Info, Notice, Warning or Error
+    Priority      => 'Debug',                              # Trace, Debug, Info, Notice, Warning vagy Error
     Key           => 'Kernel::System::MailAccount::POP3',
-    Value         => "Open connection to 'host.example.com' (user-1).",
+    Value         => "Kapcsolat nyitása ehhez: 'host.example.com' (user-1).",
 );
             ]]></programlisting>
         </para>
         <para>
-            The communication log object instance handles the current started object
-logs, so you don't need to remember and bring them around everywhere, but it
-also means that you can only start one object per type.
+            A kommunikációs napló objektum példánya kezeli a jelenleg elindított
+objektumnaplókat, így nem kell megjegyeznie és előhoznia mindenhol, de ez
+azt is jelenti, hogy csak egyetlen objektumot indíthat típusonként.
         </para>
         <para>
-            If you encounter an unrecoverable error, you can choose to close the object
-log and mark it as failed:
+            Ha javíthatatlan hibával találkozik, akkor választhatja az objektumnapló
+bezárását és sikertelenként való megjelölését:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -121,7 +123,7 @@ $CommunicationLogObject->ObjectLog(
     ObjectLogType => 'Connection',
     Priority      => 'Error',
     Key           => 'Kernel::System::MailAccount::POP3',
-    Value         => 'Something went wrong!',
+    Value         => 'Valami nem működik!',
 );
 
 $CommunicationLogObject->ObjectLogStop(
@@ -131,7 +133,7 @@ $CommunicationLogObject->ObjectLogStop(
             ]]></programlisting>
         </para>
         <para>
-            In turn, you can mark the communication log as failure as well:
+            Viszont megjelölheti a kommunikációs naplót sikertelennek is:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -141,7 +143,8 @@ $CommunicationLogObject->CommunicationStop(
             ]]></programlisting>
         </para>
         <para>
-            Otherwise, stop the object log and in turn communication log as success:
+            Egyébként állítsa le az objektumnaplót és jelölje a kommunikációs naplót
+sikeresként:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -149,7 +152,7 @@ $CommunicationLogObject->ObjectLog(
     ObjectLogType => 'Connection',
     Priority      => 'Debug',
     Key           => 'Kernel::System::MailAccount::POP3',
-    Value         => "Connection to 'host.example.com' closed.",
+    Value         => "A(z) 'host.example.com' kapcsolata lezárva.",
 );
 
 $CommunicationLogObject->ObjectLogStop(
@@ -163,9 +166,10 @@ $CommunicationLogObject->CommunicationStop(
             ]]></programlisting>
         </para>
         <para>
-            <literal>Message</literal> object log should be used for any log entries
-regarding specific messages and their processing. It is used in a similar
-way, just make sure to start it before using it:
+            A <literal>Message</literal> objektumnaplót kell használni minden olyan
+naplóbejegyzésnél, amelyek bizonyos üzenetek és azok feldolgozását
+érintik. Hasonló módon használható, egyszerűen győződjön meg arról, hogy
+elindította-e a használta előtt:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -177,7 +181,7 @@ $CommunicationLogObject->ObjectLog(
     ObjectLogType => 'Message',
     Priority      => 'Error',
     Key           => 'Kernel::System::MailAccount::POP3',
-    Value         => "Could not process message. Raw mail saved (report it on http://bugs.otrs.org/)!",
+    Value         => "Nem sikerült feldolgozni az üzenetet. Nyers levél elmentve (jelentse a https://bugs.otrs.org/ oldalon)!",
 );
 
 $CommunicationLogObject->ObjectLogStop(
@@ -191,8 +195,8 @@ $CommunicationLogObject->CommunicationStop(
             ]]></programlisting>
         </para>
         <para>
-            You also have the possibility to link the log object and later lookup the
-communications for a certain object type and ID:
+            Lehetősége van hivatkozni a naplóobjektumra és később megkeresni a
+kommunikációkat egy bizonyos objektumtípus vagy azonosító esetén:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -209,33 +213,36 @@ my $LookupInfo = $CommunicationLogObject->ObjectLookupGet(
             ]]></programlisting>
         </para>
         <para>
-            You should make sure to always stop communication and flag it as failed, if
-any log object failed as well.  This will allow administrators to see failed
-communications in the overview, and take any action if needed.
+            Meg kell győződnie arról, hogy mindig leállította-e a kommunikációt és
+megjelölte-e sikertelenként, ha valamelyik naplóobjektum sikertelen
+lenne. Ez lehetővé fogja tenni az adminisztrátorok számára, hogy
+megtekintsék a sikertelen kommunikációkat az áttekintőben, és megtegyék a
+szükséges lépéseket.
         </para>
         <para>
-            It's important to preserve the communication log for duration of a single
-process. If your work is spanning over multiple modules and any of them can
-benefit from logging, make sure to pass the existing communication log
-instance around so all methods can use the same one. With this approach, you
-will make sure any log entries spawned for the same process are contained in
-a single communication.
+            Fontos megőrizni a kommunikációs naplót egyetlen folyamat időtartamára. Ha
+munkája több modult is érint, és bármelyikük kihasználhatja a naplózás
+előnyeit, akkor győződjön meg arról, hogy átadta-e a létező kommunikációs
+napló példányát, így az összes metódus ugyanazt tudja használni. Ezzel a
+megközelítéssel biztosíthatja, hogy az azonos folyamathoz tartozó
+naplóbejegyzések egyetlen kommunikációban legyenek tárolva.
         </para>
         <para>
-            If passing the communication log instance is not an option (async tasks!),
-you can also choose to recreate the communication log object in the same
-state as in previous step. Just get the communication ID and pass it to the
-new code, and then create the instance with this parameter supplied:
+            Ha a kommunikációs napló példányának átadása nem lehetséges (aszinkron
+feladatok!), akkor választhatja a kommunikációs napló objektum újra
+létrehozását ugyanabban az állapotban, amiben az előző lépésben
+volt. Egyszerűen fogja a kommunikációs azonosítót, és adja át az új kódnak,
+majd hozza létre az új példányt ezzel a megadott paraméterrel:
         </para>
         <para>
             <programlisting><![CDATA[
-# Get communication ID in parent code.
+# Kommunikációs azonosító lekérése a szülőkódban.
 my $CommunicationID = $CommunicationLogObject->CommunicationIDGet();
 
-# Somehow pass communication ID to child code.
+# Valahogy adja át a kommunikációs azonosítót a gyermekkódnak.
 # ...
 
-# Recreate the instance in child code by using same communication ID.
+# A példány újra létrehozása a gyermekkódban ugyanazon kommunikációs azonosító használatával.
 my $CommunicationLogObject = $Kernel::OM->Create(
     'Kernel::System::CommunicationLog',
     ObjectParams => {
@@ -245,13 +252,14 @@ my $CommunicationLogObject = $Kernel::OM->Create(
             ]]></programlisting>
         </para>
         <para>
-            You can then continue to use this instance as previously stated, start any
-object logs if needed, adding entries and setting status in the end.
+            Ezután folytathatja ennek a példánynak a használatát, amint azt korábban
+említettük. Indítson el valamilyen objektumnaplót, ha szükséges, adjon hozzá
+bejegyzéseket és állítsa be az állapotot a végén.
         </para>
         <para>
-            If you need to retrieve the communication log data or do something else with
-it, please also take a look at
-<literal>Kernel::System::CommunicationLog::DB.pm</literal>
+            Ha a kommunikációs napló adatainak lekérésére van szüksége vagy valami mást
+szeretne csinálni vele, akkor vessen egy pillantást a
+<literal>Kernel::System::CommunicationLog::DB.pm</literal> fájlra.
         </para>
     </section>
 </section>

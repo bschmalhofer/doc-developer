@@ -16,8 +16,8 @@ contentdepth="100%"></graphic></screenshot></figure>
         <para>
             <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Kernel/Output/HTML/DashboardTicketStatsGeneric.pm - message of the day
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Kernel/Output/HTML/DashboardTicketStatsGeneric.pm - napi üzenet
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -32,11 +32,11 @@ use warnings;
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # allocate new hash for object
+    # új kivonat lefoglalása az objektumhoz
     my $Self = {%Param};
     bless( $Self, $Type );
 
-    # get needed objects
+    # szükséges objektumok lekérése
     for (
         qw(Config Name ConfigObject LogObject DBObject LayoutObject ParamObject TicketObject UserID)
         )
@@ -98,19 +98,19 @@ sub Run {
 
         my $CountCreated = $Self->{TicketObject}->TicketSearch(
 
-            # cache search result 20 min
+            # keresési eredmények gyorsítótárazása 20 percre
             CacheTTL => 60 * 20,
 
-            # tickets with create time after ... (ticket newer than this date) (optional)
+            # jegyek ez utáni létrehozásai idővel ... (ennél a dátumnál újabb jegyek) (elhagyható)
             TicketCreateTimeNewerDate => "$Year-$Month-$Day 00:00:00",
 
-            # tickets with created time before ... (ticket older than this date) (optional)
+            # jegyek ez előtti létrehozásai idővel ... (ennél a dátumnál régebbi jegyek) (elhagyható)
             TicketCreateTimeOlderDate => "$Year-$Month-$Day 23:59:59",
 
             CustomerID => $Param{Data}->{UserCustomerID},
             Result     => 'COUNT',
 
-            # search with user permissions
+            # keresés felhasználói jogosultságokkal
             Permission => $Self->{Config}->{Permission} || 'ro',
             UserID => $Self->{UserID},
         );
@@ -121,19 +121,19 @@ sub Run {
 
         my $CountClosed = $Self->{TicketObject}->TicketSearch(
 
-            # cache search result 20 min
+            # keresési eredmények gyorsítótárazása 20 percre
             CacheTTL => 60 * 20,
 
-            # tickets with create time after ... (ticket newer than this date) (optional)
+            # jegyek ez utáni létrehozásai idővel ... (ennél a dátumnál újabb jegyek) (elhagyható)
             TicketCloseTimeNewerDate => "$Year-$Month-$Day 00:00:00",
 
-            # tickets with created time before ... (ticket older than this date) (optional)
+            # jegyek ez előtti létrehozásai idővel ... (ennél a dátumnál régebbi jegyek) (elhagyható)
             TicketCloseTimeOlderDate => "$Year-$Month-$Day 23:59:59",
 
             CustomerID => $Param{Data}->{UserCustomerID},
             Result     => 'COUNT',
 
-            # search with user permissions
+            # keresés felhasználói jogosultságokkal
             Permission => $Self->{Config}->{Permission} || 'ro',
             UserID => $Self->{UserID},
         );

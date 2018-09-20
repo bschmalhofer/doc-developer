@@ -15,8 +15,8 @@ párbeszédablak sablon van megjelenítve és elmagyarázva.
         <para>
             <programlisting><![CDATA[
 # --
-# AdminDynamicFieldPassword.tt - provides HTML form for AdminDynamicFieldPassword
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# AdminDynamicFieldPassword.tt - HTML űrlapot biztosít az AdminDynamicFieldPassword modulhoz
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you

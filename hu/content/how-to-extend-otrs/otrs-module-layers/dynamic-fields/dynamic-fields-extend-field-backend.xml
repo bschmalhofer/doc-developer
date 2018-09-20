@@ -24,8 +24,8 @@ kiterjesztés van megjelenítve és elmagyarázva. A kiterjesztés csak a
          <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/DynamicField/FooExtensionBackend.pm - Extension for DynamicField backend
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Kernel/System/DynamicField/FooExtensionBackend.pm - Kiterjesztés a dinamikus mező háttérprogramhoz
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -45,7 +45,7 @@ Kernel::System::DynamicField::FooExtensionBackend
 
 =head1 SYNOPSIS
 
-DynamicFields Extension for Backend
+Dinamikus mezők kiterjesztés a háttérprogramhoz
 
 =head1 PUBLIC INTERFACE
 

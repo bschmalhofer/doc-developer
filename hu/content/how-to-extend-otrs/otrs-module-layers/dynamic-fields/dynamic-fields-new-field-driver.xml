@@ -34,8 +34,8 @@ eredményeket igényelnek.
          <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/DynamicField/Driver/Password.pm - Driver for DynamicField Password backend
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Kernel/System/DynamicField/Driver/Password.pm - Illesztőprogram a dinamikus mező jelszó háttérprogramjához
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you

@@ -42,7 +42,7 @@ fájlba. Mindössze két függvényre van szüksége: <code>new()</code> és
         <programlisting linenumbering="numbered"><![CDATA[
 # --
 # Kernel/Output/HTML/NotificationCustom.pm
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -59,13 +59,13 @@ use Kernel::System::Custom;
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # allocate new hash for object
+    # új kivonat lefoglalása az objektumhoz
     my $Self = {};
     bless( $Self, $Type );
 
-    # get needed objects
+    # a szükséges objektumok lekérése
     for my $Object (qw(ConfigObject LogObject DBObject LayoutObject TimeObject UserID)) {
-        $Self->{$Object} = $Param{$Object} || die "Got no $Object!";
+        $Self->{$Object} = $Param{$Object} || die "Nincs $Object!";
     }
     $Self->{CustomObject} = Kernel::System::Custom->new(%Param);
     return $Self;
@@ -74,7 +74,7 @@ sub new {
 sub Run {
     my ( $Self, %Param ) = @_;
 
-    # get session info
+    # munkamenet-információk lekérése
     my %CustomParam      = ();
     my @Customs    = $Self->{CustomObject}->GetAllCustomIDs();
     my $IdleMinutes = $Param{Config}->{IdleMinutes} || 60 * 2;

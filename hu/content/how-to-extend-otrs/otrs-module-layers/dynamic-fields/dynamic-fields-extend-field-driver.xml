@@ -25,8 +25,9 @@ kiterjesztés csak a <code>Foo()</code> függvényt valósítja meg.
          <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/DynamicField/Driver/FooExtensionText.pm - Extension for DynamicField Text Driver
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Kernel/System/DynamicField/Driver/FooExtensionText.pm - Kiterjesztés a
+#     dinamikus mező szöveg illesztőprogramjához
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you

@@ -255,11 +255,11 @@ történik. Ismét egy példa:
                 ]]></programlisting>
             </para>
             <para>
-                It is possible to put a <literal>&lt;Item Key="JavaScript"&gt;</literal> tag
-in the frontend module registrations which may contain
-<literal>&lt;Array&gt;</literal> and one tag <literal>&lt;Item&gt;</literal>
-for each JavaScript file that is supposed to be loaded for this application
-module.
+                Lehetséges egy <literal>&lt;Item Key="JavaScript"&gt;</literal> címke
+elhelyezése az előtétprogram modul regisztrációkban, amely tartalmazhat
+<literal>&lt;Array&gt;</literal> tömböt és egy
+<literal>&lt;Item&gt;</literal> címkéket minden egyes JavaScript fájlhoz,
+amelyet be kellene tölteni ennél az alkalmazásmodulnál.
             </para>
             <para>
                 Most már rendelkezik az összes olyan információval, amely annak a módszernek
@@ -278,8 +278,9 @@ ahogy az előző <link linkend="loader-javascript">szakaszban</link> le van
         <section>
             <title>Közös CSS</title>
             <para>
-                The way common CSS is handled is very similar to the way <link
-linkend="loader-common-javascript">common JavaScript</link> is loaded.
+                Annak a módja, ahogy a közös CSS-t kezelik, nagyon hasonló a <link
+linkend="loader-common-javascript">közös JavaScript</link> betöltésének
+módjához.
             </para>
         </section>
     </section>
