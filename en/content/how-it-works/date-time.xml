@@ -112,7 +112,7 @@ To retrieve the configured OTRS time zone or user default time zone, always use 
     <section id="date-time-deprecated-time-package">
         <title>Deprecated package Kernel::System::Time</title>
         <para>
-The now deprecated package <literal>Kernel::System::Time</literal> has been extented to fully support time zones instead of time offsets. This has been done to ensure that existing code works without (bigger) changes.
+The now deprecated package <literal>Kernel::System::Time</literal> has been extended to fully support time zones instead of time offsets. This has been done to ensure that existing code works without (bigger) changes.
         </para>
         <para>
 However, there is a case in which you have to change existing code. If you have code that uses the old time offsets to calculate a new date/time or a difference, you have to migrate this code to use the new <literal>DateTime</literal> object.
