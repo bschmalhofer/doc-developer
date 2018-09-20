@@ -4,20 +4,21 @@
 <section id="config-mechanism">
     <title>Beállítási mechanizmus</title>
     <para>
-        OTRS comes with a dedicated mechanism to manage configuration options via a
-graphical interface (System Configuration).  This section describes how it
-works internally and how you can provide new configuration options or change
-existing default values.
+        Az OTRS dedikált mechanizmussal érkezik a konfigurációs beállítások
+kezeléséhez egy grafikus felületen (rendszerbeállításokon) keresztül. Ez a
+szakasz azt írja le, hogy hogyan működik belsőleg, és hogyan adhat meg új
+konfigurációs beállításokat, vagy hogyan változtathatja meg a meglévő
+alapértelmezett értékeket.
     </para>
 
     <section id="default-config">
         <title><filename>Defaults.pm</filename>: az OTRS alapértelmezett beállításai</title>
         <para>
-            The default configuration file of OTRS is
-<filename>Kernel/Config/Defaults.pm</filename>.  This file is needed for
-operation of freshly installed systems without a deployed XML configuration
-and should be left untouched as it is automatically updated on framework
-updates.
+            Az OTRS alapértelmezett beállítófájlja a
+<filename>Kernel/Config/Defaults.pm</filename>. Ez a fájl szükséges az
+üzembe állított XML-beállítások nélküli, frissen telepített rendszerek
+működéséhez, és a fájlt érintetlenül kell hagyni, mivel automatikusan
+frissítésre kerül a keretrendszer frissítéseikor.
         </para>
     </section>
 
@@ -32,8 +33,8 @@ előállított beállítófájl található:
                 <term><literal>ZZZAAuto.pm</literal></term>
                 <listitem>
                     <para>
-                        Perl cache of the XML configuration's current values (default or modified by
-user)
+                        Az XML beállítások aktuális értékeinek Perl gyorsítótára (alapértelmezett
+vagy a felhasználó által módosított)
                     </para>
                 </listitem>
             </varlistentry>
@@ -41,7 +42,7 @@ user)
                 <term><literal>ZZZACL.pm</literal></term>
                 <listitem>
                     <para>
-                        Perl cache of ACL configuration from database
+                        Az adatbázisból származó ACL beállítások Perl gyorsítótára
                     </para>
                 </listitem>
             </varlistentry>
@@ -49,33 +50,35 @@ user)
                 <term><literal>ZZZACL.pm</literal></term>
                 <listitem>
                     <para>
-                        Perl cache of ProcessManagement configuration from database
+                        Az adatbázisból származó folyamatmenedzsment beállítások Perl gyorsítótára
                     </para>
                 </listitem>
             </varlistentry>
         </variablelist>
         <para>
-            These files are a Perl representation of the current system configuration.
-They should never be manually changed as they are overwritten by OTRS.
+            Ezek a fájlok az aktuális rendszerbeállítások Perl változatai. Sosem szabad
+kézzel megváltoztatni, mivel az OTRS felülírja azokat.
         </para>
     </section>
 
     <section id="xml-config">
-        <title>XML Configuration Files</title>
+        <title>XML beállítófájlok</title>
         <para>
-            In OTRS, configuration options that the administrator can configure via
-SysConfig are provided via XML files with a special format. To convert old
-XML's you can use 'otrs.Console.pl Dev::Tools::Migrate::ConfigXMLStructure'
-command.  The file <filename>Kernel/Config/Files/ZZZAAuto.pm</filename> is a
-cached Perl version of the XML that contains all settings with their current
-value. It can be (re-)generated with <filename>bin/otrs.Console.pl
-Maint::Config::Rebuild</filename>.
+            Az OTRS-ben azok a beállítási lehetőségek, amelyeket az adminisztrátor a
+rendszerbeállításokon keresztül be tud állítani, különleges formátumban lévő
+XML-fájlokon keresztül biztosítottak. A régi XML-ek átalakításához
+használhatja a <filename>otrs.Console.pl
+Dev::Tools::Migrate::ConfigXMLStructure</filename> parancsot. A
+<filename>Kernel/Config/Files/ZZZAAuto.pm</filename> fájl az XML
+gyorsítótárazott Perl verziója, amely tartalmazza az összes beállítás azok
+aktuális értékeivel. Újra előállíthatók a <filename>bin/otrs.Console.pl
+Maint::Config::Rebuild</filename> paranccsal.
         </para>
         <para>
-            <literal>Note:</literal>
-<filename>$OTRS_HOME/Kernel/Config/Files/ZZZAuto.pm</filename> does not
-exist any more, it has been merged into
-<filename>$OTRS_HOME/Kernel/Config/Files/ZZZAAuto.pm</filename>.
+            <literal>Megjegyzés:</literal> Az
+<filename>$OTRS_HOME/Kernel/Config/Files/ZZZAuto.pm</filename> fájl többé
+nem létezik, be lett olvasztva az
+<filename>$OTRS_HOME/Kernel/Config/Files/ZZZAAuto.pm</filename> fájlba.
         </para>
         <para>
             Az egyes XML beállítófájloknak a következő elrendezésük van:
@@ -85,36 +88,38 @@ exist any more, it has been merged into
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_config version="2.0" init="Changes">
 
-    <!--  settings will be here -->
+    <!-- itt lesznek a beállítások -->
 
 </otrs_config>
             ]]></programlisting>
         </para>
 
         <variablelist>
-            <title>Attributes of the <literal>otrs_config</literal> element</title>
+            <title>Az <literal>otrs_config</literal> elem attribútumai</title>
             <varlistentry>
                 <term><literal>init</literal></term>
                 <listitem>
                     <para>
-                        The global <literal>init</literal> attribute describes where the config
-options should be loaded. There are different levels available and will be
-loaded/overloaded in the following order: <literal>Framework</literal> (for
-framework settings e. g. session option), <literal>Application</literal>
-(for application settings e. g. ticket options), <literal>Config</literal>
-(for extensions to existing applications e. g. ITSM options) and
-<literal>Changes</literal> (for custom development e. g. to overwrite
-framework or ticket options).
+                        A globális <literal>init</literal> attribútum azt írja le, hogy honnan kell
+a beállítási lehetőségeket betölteni. Különböző szintek érhetők el, és a
+következő sorrendben lesznek betöltve/felülírva:
+<literal>Framework</literal> (a keretrendszer beállításaihoz, például
+munkamenet beállítás), <literal>Application</literal> (az alkalmazás
+beállításaihoz, például jegybeállítások), <literal>Config</literal>
+(kiterjesztésekhez a meglévő alkalmazásoknál, például ITSM beállítások) és
+<literal>Changes</literal> (egyéni fejlesztésekhez, például keretrendszer
+vagy jegybeállítások felülírásához).
                     </para>
                 </listitem>
             </varlistentry>
         </variablelist>
 
         <para>
-            The configuration items are written as <literal>Setting</literal> elements
-with a <literal>Description</literal>, a <literal>Navigation</literal> group
-(for the tree-based navigation in the GUI) and the <literal>Value</literal>
-that it represents. Here's an example:
+            A beállítási elemek <literal>Setting</literal> elemekként vannak írva egy
+<literal>Description</literal> leírással, egy <literal>Navigation</literal>
+csoporttal (a fa alapú navigációhoz a grafikus felhasználói felületen) és a
+<literal>Value</literal> értékkel, amely azt képviseli. Álljon itt egy
+példa:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -129,12 +134,13 @@ that it represents. Here's an example:
         </para>
 
         <variablelist>
-            <title>Attributes of the <literal>Setting</literal> element</title>
+            <title>A <literal>Setting</literal> elem attribútumai</title>
             <varlistentry>
                 <term><literal>Required</literal></term>
                 <listitem>
                     <para>
-                        If this is set to 1, the config setting cannot be disabled.
+                        Ha ez 1 értékre van állítva, akkor a konfigurációs beállítást nem lehet
+letiltani.
                     </para>
                 </listitem>
             </varlistentry>
@@ -142,7 +148,8 @@ that it represents. Here's an example:
                 <term><literal>Valid</literal></term>
                 <listitem>
                     <para>
-                        Determines if the config setting is active (1) or inactive (0) by default.
+                        Meghatározza, hogy a konfigurációs beállítás alapértelmezetten be van
+kapcsolva (1) vagy ki van kapcsolva (0).
                     </para>
                 </listitem>
             </varlistentry>
@@ -167,7 +174,8 @@ kapnia.
                 <term><literal>Invisible</literal></term>
                 <listitem>
                     <para>
-                        If set to 1, the config setting is not shown in the GUI.
+                        Ha 1 értékre van állítva, akkor a konfigurációs beállítás nem jelenik meg a
+grafikus felhasználói felületen.
                     </para>
                 </listitem>
             </varlistentry>
@@ -175,7 +183,8 @@ kapnia.
                 <term><literal>Readonly</literal></term>
                 <listitem>
                     <para>
-                        If set to 1, the config setting cannot be changed in the GUI.
+                        Ha 1 értékre van állítva, akkor a konfigurációs beállítást nem lehet
+megváltoztatni a grafikus felhasználói felületen.
                     </para>
                 </listitem>
             </varlistentry>
@@ -183,10 +192,11 @@ kapnia.
                 <term><literal>UserModificationPossible</literal></term>
                 <listitem>
                     <para>
-                        If <literal>UserModificationPossible</literal> is set to
-<literal>1</literal>, administrators can enable user modifications of this
-setting (in user preferences). Please note that this feature requires the
-<emphasis role="bold">OTRS Business Solution™</emphasis>.
+                        Ha a <literal>UserModificationPossible</literal> <literal>1</literal>
+értékre van állítva, akkor az adminisztrátorok engedélyezhetik a beállítás
+felhasználói módosításait (a felhasználói beállításokban). Ne feledje, hogy
+ez a funkció az <emphasis role="bold">OTRS Business Solution™</emphasis>
+meglétét igényli.
                     </para>
                 </listitem>
             </varlistentry>
@@ -194,10 +204,11 @@ setting (in user preferences). Please note that this feature requires the
                 <term><literal>UserModificationActive</literal></term>
                 <listitem>
                     <para>
-                        If <literal>UserModificationActive</literal> is set to <literal>1</literal>,
-user modifications of this setting is enabled (in user preferences).  You
-should use this attribute together with
-<literal>UserModificationPossible</literal>.
+                        Ha a <literal>UserModificationActive</literal> <literal>1</literal> értékre
+van állítva, akkor a beállítás felhasználói módosításai engedélyezve vannak
+(a felhasználói beállításokban). Ezt az attribútumot a
+<literal>UserModificationPossible</literal> attribútummal együtt kell
+használnia.
                     </para>
                 </listitem>
             </varlistentry>
@@ -205,95 +216,102 @@ should use this attribute together with
                 <term><literal>UserPreferencesGroup</literal></term>
                 <listitem>
                     <para>
-                        Use <literal>UserPreferencesGroup</literal> attribute to define under which
-group config variable belongs (in the UserPreferences screen).  You should
-use this attribute together with
-<literal>UserModificationPossible</literal>.
+                        Használja a <literal>UserPreferencesGroup</literal> attribútumot annak
+meghatározásához, hogy mely csoport alá tartozik a konfigurációs érték (a
+felhasználói beállítások képernyőn). Ezt az attribútumot a
+<literal>UserModificationPossible</literal> attribútummal együtt kell
+használnia.
                     </para>
                 </listitem>
             </varlistentry>
         </variablelist>
 
         <itemizedlist>
-            <title>Guidelines for placing settings in the right <literal>Navigation</literal>
-nodes</title>
+            <title>Iránymutatások a beállítások megfelelő <literal>Navigation</literal>
+csomópontokba való elhelyezéséhez</title>
             <listitem>
                 <para>
-                    Only create new nodes if neccessary. Avoid nodes with only very few settings
-if possible.
+                    Csak akkor hozzon létre új csomópontot, ha szükséges. Kerülje a csak nagyon
+kevés beállítással rendelkező csomópontokat, ha lehetséges.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    On the first tree level, no new nodes should be added.
+                    A fa első szintjén nem szabad új csomópontokat hozzáadni.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Don't place new settings in <literal>Core</literal> directly. This is
-reserved for a few important global settings.
+                    Ne tegyen új beállításokat a <literal>Core</literal> csomópontba
+közvetlenül. Ez néhány fontos globális beállításnak van fenntartva.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <literal>Core::*</literal> can take new groups that contain settings that
-cover the same topic (like <literal>Core::Email</literal>) or relate to the
-same entity (like <literal>Core::Queue</literal>).
+                    A <literal>Core::*</literal> kaphat új csoportokat, amelyek hasonló témát
+lefedő beállításokat tartalmaznak (például <literal>Core::Email</literal>)
+vagy ugyanahhoz az entitáshoz kapcsolódnak (például
+<literal>Core::Queue</literal>).
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    All event handler registrations go to <literal>Core::Event</literal>.
+                    Az összes eseménykezelő regisztráció a <literal>Core::Event</literal>
+csoportba kerüljön.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Don't add new direct child nodes within <literal>Frontend</literal>. Global
-front end settings go to <literal>Frontend::Base</literal>, settings only
-affecting a part of the system go to the respective <literal>Admin, Agent,
-Customer</literal> or <literal>Public</literal> sub nodes.
+                    Ne adjon hozzá új közvetlen gyermekcsomópontokat a
+<literal>Frontend</literal> csomóponton belül. A globális előtétprogram
+beállítások a <literal>Frontend::Base</literal> csoportba kerüljenek, a csak
+a rendszer egy részét érintő beállítások a megfelelő <literal>Admin, Agent,
+Customer</literal> vagy <literal>Public</literal> alcsoportokba kerüljenek.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Front end settings that only affect one screen should go to the relevant
-screen (<literal>View</literal>)  node (create one if needed), for example
-<literal>AgentTicketZoom</literal> related settings go to
-<literal>Frontend::Agent::View::TicketZoom</literal>. If there are module
-layers within one screen with groups of related settings, they would also go
-to a sub group here (e. g.
-<literal>Frontend::Agent::View::TicketZoom::MenuModule</literal> for all
-ticket zoom menu module registrations).
+                    Azok az előtétprogram beállítások, amelyek csak egy képernyőt érintenek, a
+kapcsolódó képernyő (<literal>View</literal>) csomópontjába (hozzon létre
+egyet, ha szükséges) kerüljenek. Például az
+<literal>AgentTicketZoom</literal> képernyőhöz kapcsolódó beállítások a
+<literal>Frontend::Agent::View::TicketZoom</literal> csoportba
+kerüljenek. Ha kapcsolódó beállítások csoportjaival rendelkező modulrétegek
+vannak egy képernyőn belül, akkor azok is kerülhetnek ide egy alcsoportba
+(például <literal>Frontend::Agent::View::TicketZoom::MenuModule</literal> az
+összes jegynagyítás menü modulregisztrációjához).
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    All global Loader settings go to <literal>Frontend::Base::Loader</literal>,
-screen specific Loader settings to
-<literal>Frontend::*::ModuleRegistration::Loader</literal>.
+                    Az összes globális betöltő beállítások a
+<literal>Frontend::Base::Loader</literal> csoportba, a képernyőre jellemző
+betöltő beállítások a
+<literal>Frontend::*::ModuleRegistration::Loader</literal> csoportba
+kerüljenek.
                 </para>
             </listitem>
         </itemizedlist>
 
         <section id="xml-config-structure">
-            <title>Structure of <literal>Value</literal> elements</title>
+            <title>A <literal>Value</literal> elemek szerkezete</title>
             <para>
-                <literal>Value</literal> elements hold the actual configuration data
-payload. They can contain single values, hashes or arrays.
+                A <literal>Value</literal> elemek tartalmazzák a tényleges beállítási adatok
+hasznos terhét. Tartalmazhatnak önálló értékeket, kivonatokat vagy tömböket.
             </para>
 
             <section id="xml-config-item">
                 <title><literal>Item</literal></title>
                 <para>
-                    An <literal>Item</literal> element holds one piece of data.  The optional
-<literal>ValueType</literal> attribute determines which kind of data and how
-it needs to be presented to the user in the GUI. If no
-<literal>ValueType</literal> is specified, it defaults to
-<literal>String</literal>.
+                    Egy <literal>Item</literal> elem egyetlen adatot tartalmaz. Az elhagyható
+<literal>ValueType</literal> attribútum határozza meg, hogy milyen típusú
+adat, és hogyan kell megjeleníteni a felhasználónak a grafikus felületen. Ha
+nincs <literal>ValueType</literal> megadva, akkor alapértelmezetten
+<literal>String</literal> lesz.
                 </para>
                 <para>
-                    Please <link linkend="xml-config-value-types">see below</link> for a
-definition of the different value types.
+                    <link linkend="xml-config-value-types">Nézze meg a lent</link> a különböző
+értéktípusok meghatározását.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -319,8 +337,8 @@ definition of the different value types.
     ...
     <Value>
         <Array>
-            <Item Translatable="1">Value 1</Item>
-            <Item Translatable="1">Value 2</Item>
+            <Item Translatable="1">1. érték</Item>
+            <Item Translatable="1">2. érték</Item>
             ...
         </Array>
     </Value>
@@ -340,8 +358,8 @@ definition of the different value types.
     ...
     <Value>
         <Hash>
-            <Item Key="One" Translatable="1">First</Item>
-            <Item Key="Two" Translatable="1">Second</Item>
+            <Item Key="Egy" Translatable="1">Első</Item>
+            <Item Key="Ketto" Translatable="1">Második</Item>
             ...
         </Hash>
     </Value>
@@ -349,9 +367,9 @@ definition of the different value types.
                     ]]></programlisting>
                 </para>
                 <para>
-                    It's possible to have nested array/hash elements (like hash of arrays, array
-of hashes, array of hashes of arrays, ...).  Below is an example array of
-hashes.
+                    Lehetőség van egymásba ágyazott tömb vagy kivonat elemek meglétére is (mint
+például tömbök kivonata, kivonatok tömbje, tömbök kivonatainak tömbje,
+stb.). Lent van egy példa a kivonatok tömbjére.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -366,14 +384,14 @@ hashes.
             </DefaultItem>
             <Item>
                 <Hash>
-                    <Item Key="One">1</Item>
-                    <Item Key="Two">2</Item>
+                    <Item Key="Egy">1</Item>
+                    <Item Key="Ketto">2</Item>
                 </Hash>
             </Item>
             <Item>
                 <Hash>
-                    <Item Key="Three">3</Item>
-                    <Item Key="Four">4</Item>
+                    <Item Key="Harom">3</Item>
+                    <Item Key="Negy">4</Item>
                 </Hash>
             </Item>
         </Array>
@@ -385,12 +403,13 @@ hashes.
         </section>
 
         <section id="xml-config-value-types">
-            <title>Value Types</title>
+            <title>Értéktípusok</title>
             <para>
-                The XML config settings support various types of configuration variables.
+                Az XML konfigurációs beállítások különféle típusú beállítási változókat
+támogatnak.
             </para>
             <section id="xml-config-string">
-                <title>Szöveg</title>
+                <title><literal>String</literal></title>
                 <para>
                     <programlisting><![CDATA[
 <Setting Name="SettingName">
@@ -402,16 +421,16 @@ hashes.
                     ]]></programlisting>
                 </para>
                 <para>
-                    A config element for numbers and single-line strings.  Checking the validity
-with a regular expression is possible (optional).  This is the default
-<literal>ValueType</literal>.
+                    Egy beállítási elem számokhoz és egysoros karakterláncokhoz. Ellenőrizhető
+az érvényesség egy reguláris kifejezéssel, ha lehetséges (elhagyható). Ez az
+alapértelmezett <literal>ValueType</literal>.
                 </para>
                 <para>
                     <programlisting><![CDATA[
 <Setting Name="SettingName">
     ...
     <Value>
-        <Item ValueType="String" ValueRegex="" Translatable="1">Value</Item>
+        <Item ValueType="String" ValueRegex="" Translatable="1">Érték</Item>
     </Value>
 </Setting>
                     ]]></programlisting>
@@ -424,30 +443,30 @@ helyezni (lásd lent is).
                 </para>
             </section>
             <section id="xml-config-password">
-                <title>Jelszó</title>
+                <title><literal>Password</literal></title>
                 <para>
-                    A config element for passwords. It's still stored as plain text in the XML,
-but it's masked in the GUI.
+                    Egy beállítási elem jelszavakhoz. Továbbra is egyszerű szövegként van
+tárolva az XML-ben, de el van fedve a grafikus felhasználói felületen.
                 </para>
                 <para>
                     <programlisting><![CDATA[
 <Setting Name="SettingName">
     ...
     <Value>
-        <Item ValueType="Password">Secret</Item>
+        <Item ValueType="Password">Titok</Item>
     </Value>
 </Setting>
                     ]]></programlisting>
                 </para>
             </section>
             <section id="xml-config-perlmodule">
-                <title>PerlModule</title>
+                <title><literal>PerlModule</literal></title>
                 <para>
-                    A config element for Perl module. It has a <literal>ValueFilter</literal>
-attribute, which filters possible values for selection. In the example
-below, user can select Perl module
-<literal>Kernel::System::Log::SysLog</literal> or
-<literal>Kernel::System::Log::File</literal>.
+                    Egy beállítási elem Perl-modulhoz. Rendelkezik egy
+<literal>ValueFilter</literal> attribútummal, amely szűri a lehetséges
+értékeket a kiválasztásnál. A lenti példában a felhasználó a
+<literal>Kernel::System::Log::SysLog</literal> vagy a
+<literal>Kernel::System::Log::File</literal> Perl-modult választhatja.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -461,7 +480,7 @@ below, user can select Perl module
                 </para>
             </section>
             <section id="xml-config-textarea">
-                <title>Szövegdoboz</title>
+                <title><literal>Textarea</literal></title>
                 <para>
                     Egy beállítási elem többsoros szöveghez.
                 </para>
@@ -477,11 +496,12 @@ below, user can select Perl module
                 </para>
             </section>
             <section id="xml-config-select">
-                <title>Kiválasztás</title>
+                <title><literal>Select</literal></title>
                 <para>
-                    This config element offers preset values as a pull-down menu. The
-<literal>SelectedID</literal> or <literal>SelectedValue</literal> attributes
-can pre-select a default value.
+                    Ez a beállítási elem előre beállított értékeket nyújt egy legördülő
+menüként. A <literal>SelectedID</literal> vagy a
+<literal>SelectedValue</literal> attribútumok előre kiválaszthatnak egy
+alapértelmezett értéket.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -489,8 +509,8 @@ can pre-select a default value.
     ...
     <Value>
         <Item ValueType="Select" SelectedID="Queue">
-            <Item ValueType="Option" Value="Queue" Translatable="1">Queue</Item>
-            <Item ValueType="Option" Value="SystemAddress" Translatable="1">System address</Item>
+            <Item ValueType="Option" Value="Queue" Translatable="1">Várólista</Item>
+            <Item ValueType="Option" Value="SystemAddress" Translatable="1">Rendszercím</Item>
         </Item>
     </Value>
 </Setting>
@@ -498,9 +518,9 @@ can pre-select a default value.
                 </para>
             </section>
             <section id="xml-config-checkbox">
-                <title>Jelölőnégyzet</title>
+                <title><literal>Checkbox</literal></title>
                 <para>
-                    This config element checkbox has two states: 0 or 1.
+                    Ennek a jelölőnégyzet beállítási elemnek két állapota van: 0 vagy 1.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -514,9 +534,9 @@ can pre-select a default value.
                 </para>
             </section>
             <section id="xml-config-date">
-                <title>Dátum</title>
+                <title><literal>Date</literal></title>
                 <para>
-                    This config element contains a date value.
+                    Ez a beállítási elem egy dátumértéket tartalmaz.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -530,9 +550,9 @@ can pre-select a default value.
                 </para>
             </section>
             <section id="xml-config-datetime">
-                <title>DateTime</title>
+                <title><literal>DateTime</literal></title>
                 <para>
-                    This config element contains a date and time value.
+                    Ez a beállítási elem egy dátumot és egy időértéket tartalmaz.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -548,7 +568,7 @@ can pre-select a default value.
             <section id="xml-config-directory">
                 <title>Könyvtár</title>
                 <para>
-                    This config element contains a directory.
+                    Ez a beállítási elem egy könyvtárat tartalmaz.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -562,9 +582,9 @@ can pre-select a default value.
                 </para>
             </section>
             <section id="xml-config-file">
-                <title>Fájl</title>
+                <title><literal>File</literal></title>
                 <para>
-                    This config element contains a file path.
+                    Ez a beállítási elem egy fájlútvonalat tartalmaz.
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -578,7 +598,7 @@ can pre-select a default value.
                 </para>
             </section>
             <section id="xml-config-entity">
-                <title>Entity</title>
+                <title><literal>Entity</literal></title>
                 <para>
                     This config element contains a value of a particular
 entity. <literal>ValueEntityType</literal> attribute defines the entity

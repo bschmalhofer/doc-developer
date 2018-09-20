@@ -99,19 +99,20 @@ kódban.
         <para>
             <itemizedlist>
                 <listitem><para>
-                    Always use <literal>$.on()</literal> instead of the event-shorthand methods
-of jQuery for better readability (wrong:
-<literal>$SomeObject.click(...)</literal>, right:
+                    Mindig az <literal>$.on()</literal> függvényt használja a jQuery rövidített
+nevű eseménymetódusai helyett a jobb olvashatóságért (hibás:
+<literal>$SomeObject.click(...)</literal>, helyes:
 <literal>$SomeObject.on('click', ...</literal>).
                 </para></listitem>
                 <listitem><para>
-                    If you <literal>$.on()</literal> events, make sure to
-<literal>$.off()</literal> them beforehand, to make sure that events will
-not be bound twice, should the code be executed another time.
+                    Ha eseményeket köt az <literal>$.on()</literal> függvénnyel, akkor győződjön
+meg arról, hogy korábban leválasztotta azokat az <literal>$.off()</literal>
+használatával annak biztosításához, hogy az események ne legyenek kétszer
+kötve, ne kelljen a kódot még egy alkalommal végrehajtani.
                 </para></listitem>
                 <listitem><para>
-                    Make sure to use <literal>$.on()</literal> with namespacing, such as
-<literal>$.on('click.&lt;Name&gt;')</literal>.
+                    Győződjön meg arról, hogy az <literal>$.on()</literal> függvényt névtérrel
+használja-e, mint például <literal>$.on('click.&lt;Name&gt;')</literal>.
                 </para></listitem>
             </itemizedlist>
         </para>

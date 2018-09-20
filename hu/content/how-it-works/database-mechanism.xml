@@ -137,8 +137,11 @@ egy attribútumban).
             <section id="database-xml-create">
             <title>CREATE TABLE</title>
             <para>
-A lehetséges adattípusok a következők: BIGINT, SMALLINT, INTEGER, VARCHAR
-(méret = 1-1000000), DATE (formátum: yyyy-mm-dd hh:mm:ss) és LONGBLOB.
+Possible data types are: <literal>BIGINT</literal>,
+<literal>SMALLINT</literal>, <literal>INTEGER</literal>,
+<literal>VARCHAR</literal> (Size=1-1000000), <literal>DATE</literal>
+(Format: <literal>yyyy-mm-dd hh:mm:ss</literal>) and
+<literal>LONGBLOB</literal>.
             </para>
             <programlisting format="linespecific"><![CDATA[
 <TableCreate Name="calendar_event">
@@ -159,6 +162,50 @@ A lehetséges adattípusok a következők: BIGINT, SMALLINT, INTEGER, VARCHAR
         <Reference Local="owner_id" Foreign="id"/>
     </ForeignKey>
 </TableCreate>
+            ]]></programlisting>
+            <para>
+                <literal>LONGBLOB</literal> columns need special treatment. Their content
+needs to be <literal>Base64</literal> transcoded if the database driver does
+not support the feature <literal>DirectBlob</literal>. Please see the
+following example:
+            </para>
+            <programlisting format="linespecific"><![CDATA[
+my $Content = $StorableContent;
+if ( !$DBObject->GetDatabaseFunction('DirectBlob') ) {
+    $Content = MIME::Base64::encode_base64($StorableContent);
+}
+            ]]></programlisting>
+            <para>
+                Similarly, when reading from such a column, the content must not
+automatically be decoded as <literal>UTF-8</literal> by passing the
+<literal>Encode => 0</literal> flag to <literal>Prepare()</literal>:
+            </para>
+            <programlisting format="linespecific"><![CDATA[
+return if !$DBObject->Prepare(
+    SQL => '
+        SELECT content_type, content, content_id, content_alternative, disposition, filename
+        FROM article_data_mime_attachment
+        WHERE id = ?',
+    Bind   => [ \$AttachmentID ],
+    Encode => [ 1, 0, 0, 0, 1, 1 ],
+);
+
+while ( my @Row = $DBObject->FetchrowArray() ) {
+
+    $Data{ContentType} = $Row[0];
+
+    # Decode attachment if it's e. g. a postgresql backend.
+    if ( !$DBObject->GetDatabaseFunction('DirectBlob') ) {
+        $Data{Content} = decode_base64( $Row[1] );
+    }
+    else {
+        $Data{Content} = $Row[1];
+    }
+    $Data{ContentID}          = $Row[2] || '';
+    $Data{ContentAlternative} = $Row[3] || '';
+    $Data{Disposition}        = $Row[4];
+    $Data{Filename}           = $Row[5];
+}
             ]]></programlisting>
             </section>
             <section id="database-xml-drop">

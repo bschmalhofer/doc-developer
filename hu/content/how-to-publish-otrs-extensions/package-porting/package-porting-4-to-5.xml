@@ -11,12 +11,13 @@ vizsgálnia, amikor átírja a csomagját az OTRS 4-ről 5-re.
     <section>
         <title>Átszerkesztett <filename>Kernel/Output/HTML</filename></title>
         <para>
-            In OTRS 5, <filename>Kernel/Output/HTML</filename> was restructured. All
-Perl modules (except <filename>Layout.pm</filename>) were moved to
-subdirectories (one for every module layer). Template (theme)  files were
-also moved from <filename>Kernel/Output/HTML/Standard</filename> to
-<filename>Kernel/Output/HTML/Templates/Standard</filename>. Please perform
-this migration also in your code.
+            Az OTRS 5-ben a <filename>Kernel/Output/HTML</filename> átszerkesztésre
+került. Az összes Perl modul (kivéve a <filename>Layout.pm</filename> fájlt)
+alkönyvtárakba került áthelyezésre (minden modulréteghez egybe). A
+sablonfájlok (témák) is áthelyezésre kerültek a
+<filename>Kernel/Output/HTML/Standard</filename> könyvtárból a
+<filename>Kernel/Output/HTML/Templates/Standard</filename>
+könyvtárba. Végezze el ezeket a költöztetéseket a saját kódjában is.
         </para>
     </section>
 
@@ -114,28 +115,28 @@ műveletet használja.
         </para>
         <para>
             <programlisting><![CDATA[
-# changed from:
+# megváltoztatva erről:
 
 Ticket => [
 {
     TicketNumber       => '20101027000001',
-    Title              => 'some title',
+    Title              => 'valamilyen cím',
     ...
-    DynamicField_X     => 'value_x',
+    DynamicField_X     => 'x_ertek',
 },
 ]
 
-# to:
+# erre:
 
 Ticket => [
 {
     TicketNumber       => '20101027000001',
-    Title              => 'some title',
+    Title              => 'valamilyen cím',
     ...
     DynamicField => [
         {
-            Name  => 'some name',
-            Value => 'some value',
+            Name  => 'valamilyen név',
+            Value => 'valamilyen érték',
         },
     ],
 },
@@ -146,36 +147,40 @@ Ticket => [
     <section>
         <title>Előnézeti függvények a dinamikus statisztikákban</title>
         <para>
-            The new statistics GUI provides a preview for the current
-configuration. This must be implemented in the statistic modules and usually
-returns fake / random data for speed reasons. So for any dynamic (matrix)
-statistic that provides the method <code>GetStatElement()</code> you should
-also add a method <code>GetStatElementPreview()</code>, and for every
-dynamic (table) statistic that provides <code>GetStatTable()</code> you
-should accordingly add <code>GetStatTablePreview()</code>. Otherwise the
-preview in the new statistics GUI will not work for your statistics. You can
-find example implementations in the default OTRS statistics.
+            Az új statisztikák grafikus felhasználói felülete egy előnézetet biztosít a
+jelenlegi beállításhoz. Ezt meg kell valósítani a statisztikák moduljaiban,
+és általában hamis vagy véletlenszerű adatokat adnak vissza sebességi
+okokból. Így minden olyan dinamikus (mátrix) statisztikánál, amely a
+<code>GetStatElement()</code> metódust biztosítja, hozzá kell adnia egy
+<code>GetStatElementPreview()</code> metódust is, valamint minden olyan
+dinamikus (tábla) statisztikánál, amely a <code>GetStatTable()</code>
+metódust biztosítja, hozzá kell adnia egy <code>GetStatTablePreview()</code>
+metódust ennek megfelelően. Egyébként az új statisztikák grafikus
+felhasználói felületén lévő előnézet nem fog működni a saját
+statisztikáinál. Példamegvalósításokat találhat az alapértelmezett OTRS
+statisztikákban.
         </para>
     </section>
     <section>
         <title>Eldobott HTML nyomtatás</title>
         <para>
-            Until OTRS 5, the Perl module <literal>PDF::API2</literal> was not present
-on all systems. Therefore a fallback HTML print mode existed. With OTRS 5,
-the module is now bundled and HTML print was dropped.
-<code>$LayoutObject->PrintHeader()</code> and <code>PrintFooter()</code> are
-not available any more. Please remove the HTML print fallback from your code
-and change it to generate PDF if necessary.
+            Az OTRS 5-ig a <literal>PDF::API2</literal> Perl modul nem volt megtalálható
+minden rendszeren. Ezért létezett egy tartalék HTML nyomtatási mód. Az OTRS
+5-tel a modul mostantól mellékelve van, és a HTML nyomtatás eldobásra
+került. A <code>$LayoutObject->PrintHeader()</code> és a
+<code>PrintFooter()</code> többé nem érhető el. Távolítsa el a tartalék HTML
+nyomtatást a kódjából, és változtassa meg a PDF előállításához, ha
+szükséges.
         </para>
     </section>
     <section>
         <title>Továbbfejlesztett fordítási szöveg kinyerés</title>
         <para>
-            Until OTRS 5, translatable strings could not be extracted from Perl code and
-Database XML definitions. This is now possible and makes dummy templates
-like <filename>AAA*.tt</filename> obsolete. Please see <link
-linkend="localization-translation-mechanism">this section</link> for
-details.
+            Az OTRS 5-ig a lefordítható szövegeket nem lehetett kinyerni a Perl kódból
+és az adatbázis XML meghatározásokból. Ez mostantól lehetséges, és elavulttá
+tette az olyan üres sablonokat, mint például az <filename>AAA*.tt</filename>
+sablont. A részletekért nézze meg <link
+linkend="localization-translation-mechanism">ezt a szakaszt</link>.
         </para>
     </section>
 

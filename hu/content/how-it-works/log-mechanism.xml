@@ -54,7 +54,7 @@ SysConfig.
         </para>
     </section>
     <section id="log-mechanism-communication-log">
-        <title>Communication Log</title>
+        <title>Kommunikációs napló</title>
         <para>
             In addition to System Log, OTRS provides specialized logging backend for any
 communication related logging.  Since OTRS 6, system comes with dedicated

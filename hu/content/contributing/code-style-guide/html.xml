@@ -7,36 +7,39 @@
     <itemizedlist>
         <listitem>
             <para>
-                Use HTML 5 notation. Don't use self-closing tags for non-void elements (such
-as div, span, etc.).
+                Használjon HTML 5 jelölést. Ne használjon önmagát lezáró címkéket nem üres
+elemeknél (mint például <literal>div</literal>, <literal>span</literal>,
+etc.).
             </para>
         </listitem>
         <listitem>
             <para>
-                Use proper intendation. Elements which contain other non-void child elements
-should not be on the same level as their children.
+                Használjon megfelelő behúzást. Azok az elemek, amelyek egyéb, nem üres
+gyermekelemet tartalmaznak, nem lehetnek ugyanazon a szinten, mint a
+gyermekeik.
             </para>
         </listitem>
         <listitem>
             <para>
-                Don't use HTML elements for layout reasons (e.g. using <literal>br</literal>
-elements for adding space to the top or bottom of other elements). Use the
-proper CSS classes instead.
+                Ne használjon HTML elemeket elrendezési okokból (például
+<literal>br</literal> elemek használata más elemek fölé vagy alá történő
+további térköz adásához). Használja helyette a megfelelő CSS osztályokat.
             </para>
         </listitem>
         <listitem>
             <para>
-                Don't use inline CSS. All CSS should either be added by using predefined
-classes or (if necessary) using JavaScript (e.g. for showing/hiding
-elements).
+                Ne használjon beágyazott CSS-t. Az összes CSS-t vagy az előre meghatározott
+osztályokkal, vagy (ha szükséges) JavaScript használatával kell hozzáadni
+(például elemek megjelenítéséhez vagy elrejtéséhez).
             </para>
         </listitem>
         <listitem>
             <para>
-                Don't use JavaScript in TT templates. All needed JavaScript should be part
-of the proper library for a certain frontend module or of a proper global
-library. If you need to pass JavaScript data to the frontend, use
-<literal>$LayoutObject->AddJSData()</literal>.
+                Ne használjon JavaScriptet a TT sablonokban. Az összes szükséges
+JavaScriptnek egy bizonyos előtétprogram-modul megfelelő programkönyvtára
+részének, vagy egy megfelelő globális programkönyvtár részének kell
+lennie. Ha JavaScript adatokat kell átadnia az előtétprogramnak, akkor
+használja a <literal>$LayoutObject->AddJSData()</literal> metódust.
             </para>
         </listitem>
     </itemizedlist>

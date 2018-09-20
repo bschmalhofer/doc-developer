@@ -40,9 +40,9 @@ szubrutin elmagyarázásra kerül.
             </para>
             <para>
                 <programlisting><![CDATA[
-# --
-# Kernel/GenericInterface/Operation/Test/Test.pm - GenericInterface test operation backend
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+--
+# Kernel/GenericInterface/Operation/Test/Test.pm - Általános felület teszt műveleti háttérprogram
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -194,24 +194,24 @@ lehet megtenni.
             </para>
         </section>
         <section id="operation-unittest">
-            <title>Unit Test Example</title>
+            <title>Egységteszt példa</title>
             <para>
-                Unit Test for Generic Interface operations does not differs from other unit
-tests but it is needed to consider testing locally, but also simulating a
-remote connection. It is a good practice to test both separately since
-results could be slightly different.
+                Az általános felület műveleteinek egységtesztjei nem különböznek más
+egységtesztektől, de fontolóra kell venni a helyi tesztelést, viszont egy
+távoli kapcsolatot is szimulálni kell. Egy jó bevált gyakorlat mindkettőt
+különválasztva tesztelni, mivel az eredmények némileg különbözők lehetnek.
             </para>
             <para>
-                To learn more about unit tests, please take a look to the <link
-linkend="unit-tests">Unit Test Chapter</link>.
+                Ha többet szeretne megtudni az egységtesztekről, akkor vessen egy pillantást
+az <link linkend="unit-tests">egységteszt fejezetre</link>.
             </para>
             <para>
-                The following is just the starting point for a unit test:
+                A következő csak a kezdési pont egy egységteszthez:
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -230,7 +230,7 @@ use Kernel::GenericInterface::Operation::Test::Test;
 
 use Kernel::System::VariableCheck qw(:all);
 
-# Skip SSL certificate verification (RestoreDatabase must not be used in this test).
+# SSL-tanúsítvány ellenőrzésének kihagyása (a RestoreDatabase használata tilos ebben a tesztben).
 $Kernel::OM->ObjectParamAdd(
     'Kernel::System::UnitTest::Helper' => {
         SkipSSLVerify => 1,
@@ -238,10 +238,10 @@ $Kernel::OM->ObjectParamAdd(
 );
 my $Helper = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
 
-# get a random number
+# véletlen szám kérése
 my $RandomID = $Helper->GetRandomNumber();
 
-# create a new user for current test
+# új felhasználó létrehozása a jelenlegi teszthez
 my $UserLogin = $Helper->TestUserCreate(
     Groups => ['users'],
 );
@@ -251,15 +251,15 @@ my $UserID = $Kernel::OM->Get('Kernel::System::User')->UserLookup(
     UserLogin => $UserLogin,
 );
 
-# set web-service name
+# webszolgáltatás nevének beállítása
 my $WebserviceName = '-Test-' . $RandomID;
 
-# create web-service object
+# webszolgáltatás objektum létrehozása
 my $WebserviceObject = $Kernel::OM->Get('Kernel::System::GenericInterface::Webservice');
 $Self->Is(
     'Kernel::System::GenericInterface::Webservice',
     ref $WebserviceObject,
-    "Create web service object",
+    "Webszolgáltatás objektum létrehozása",
 );
 
 my $WebserviceID = $WebserviceObject->WebserviceAdd(
@@ -279,15 +279,15 @@ my $WebserviceID = $WebserviceObject->WebserviceAdd(
 );
 $Self->True(
     $WebserviceID,
-    "Added Web Service",
+    "Webszolgáltatás hozzáadása",
 );
 
-# get remote host with some precautions for certain unit test systems
+# távoli gép lekérése néhány óvintézkedéssel bizonyos egységteszt rendszereknél
 my $Host = $Helper->GetTestHTTPHostname();
 
 my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
 
-# prepare web-service config
+# webszolgáltatás beállításának előkészítése
 my $RemoteSystem =
     $ConfigObject->Get('HttpType')
     . '://'
@@ -299,7 +299,7 @@ my $RemoteSystem =
 
 my $WebserviceConfig = {
     Description =>
-        'Test for Ticket Connector using SOAP transport backend.',
+        'Teszt a SOAP-átviteli háttérprogramot használó jegycsatlakozóhoz.',
     Debugger => {
         DebugThreshold => 'debug',
         TestMode       => 1,
@@ -331,15 +331,16 @@ my $WebserviceConfig = {
         Invoker => {
             Test => {
                 Type => 'Test::TestSimple'
-                ,    # requester needs to be Test::TestSimple in order to simulate a request to a remote system
+                ,    # a meghívónak Test::TestSimple típusúnak kell lennie azért,
+                     # hogy egy kérést szimuláljon egy távoli rendszerhez
             },
         },
     },
 };
 
-# update web-service with real config
-# the update is needed because we are using
-# the WebserviceID for the Endpoint in config
+# webszolgáltatás frissítése valódi beállítással
+# a frissítés szükséges, mert a webszolgáltatás-azonosítót
+# használjuk a végponthoz a beállításban
 my $WebserviceUpdate = $WebserviceObject->WebserviceUpdate(
     ID      => $WebserviceID,
     Name    => $WebserviceName,
@@ -349,10 +350,10 @@ my $WebserviceUpdate = $WebserviceObject->WebserviceUpdate(
 );
 $Self->True(
     $WebserviceUpdate,
-    "Updated Web Service $WebserviceID - $WebserviceName",
+    "A webszolgáltatás frissítve: $WebserviceID - $WebserviceName",
 );
 
-# debugger object
+# hibakereső objektum
 my $DebuggerObject = Kernel::GenericInterface::Debugger->new(
     DebuggerConfig => {
         DebugThreshold => 'debug',
@@ -364,42 +365,42 @@ my $DebuggerObject = Kernel::GenericInterface::Debugger->new(
 $Self->Is(
     ref $DebuggerObject,
     'Kernel::GenericInterface::Debugger',
-    'DebuggerObject instantiate correctly',
+    'A hibakereső-objektum helyesen lett példányosítva',
 );
 
-# define test cases
+# tesztesetek meghatározása
 my @Tests = (
     {
-        Name           => 'Test case name',
-        SuccessRequest => 1,                  # 1 or 0
+        Name           => 'Teszteset neve',
+        SuccessRequest => 1,                  # 1 vagy 0
         RequestData    => {
 
-            # ... add test data
+            # ...és a tesztadatok
         },
         ExpectedReturnLocalData => {
             Data => {
 
-                # ... add expected local results
+                # ...elvárt helyi eredmények hozzáadása
             },
-            Success => 1,                     # 1 or 0
+            Success => 1,                     # 1 vagy 0
         },
         ExpectedReturnRemoteData => {
             Data => {
 
-                # ... add expected remote results
+                # ...elvárt távoli eredmények hozzáadása
             },
-            Success => 1,                     # 1 or 0
+            Success => 1,                     # 1 vagy 0
         },
         Operation => 'Test',
     },
 
-    # ... add more test cases
+    # ...további tesztesetek hozzáadása
 );
 
 TEST:
 for my $Test (@Tests) {
 
-    # create local object
+    # helyi objektum létrehozása
     my $LocalObject = "Kernel::GenericInterface::Operation::Test::$Test->{Operation}"->new(
         DebuggerObject => $DebuggerObject,
         WebserviceID   => $WebserviceID,
@@ -408,7 +409,7 @@ for my $Test (@Tests) {
     $Self->Is(
         "Kernel::GenericInterface::Operation::Test::$Test->{Operation}",
         ref $LocalObject,
-        "$Test->{Name} - Create local object",
+        "$Test->{Name} - Helyi objektum létrehozása",
     );
 
     my %Auth = (
@@ -419,7 +420,7 @@ for my $Test (@Tests) {
         %Auth = %{ $Test->{Auth} };
     }
 
-    # start requester with our web-service
+    # kérő indítása a webszolgáltatásunkkal
     my $LocalResult = $LocalObject->Run(
         WebserviceID => $WebserviceID,
         Invoker      => $Test->{Operation},
@@ -429,22 +430,22 @@ for my $Test (@Tests) {
         },
     );
 
-    # check result
+    # eredmény ellenőrzése
     $Self->Is(
         'HASH',
         ref $LocalResult,
-        "$Test->{Name} - Local result structure is valid",
+        "$Test->{Name} - A helyi eredményszerkezet helyes",
     );
 
-    # create requester object
+    # kérő objektum létrehozása
     my $RequesterObject = $Kernel::OM->Get('Kernel::GenericInterface::Requester');
     $Self->Is(
         'Kernel::GenericInterface::Requester',
         ref $RequesterObject,
-        "$Test->{Name} - Create requester object",
+        "$Test->{Name} - Kérő objektum létrehozása",
     );
 
-    # start requester with our web-service
+    # kérő indítása a webszolgáltatásunkkal
     my $RequesterResult = $RequesterObject->Run(
         WebserviceID => $WebserviceID,
         Invoker      => $Test->{Operation},
@@ -454,48 +455,48 @@ for my $Test (@Tests) {
         },
     );
 
-    # check result
+    # eredmény ellenőrzése
     $Self->Is(
         'HASH',
         ref $RequesterResult,
-        "$Test->{Name} - Requester result structure is valid",
+        "$Test->{Name} - A kérő eredményszerkezete helyes",
     );
 
     $Self->Is(
         $RequesterResult->{Success},
         $Test->{SuccessRequest},
-        "$Test->{Name} - Requester successful result",
+        "$Test->{Name} - A kérő sikeres eredményt adott",
     );
 
-    # ... add tests for the results
+    # ...tesztek hozzáadása az eredményekhez
 }
 
-# delete web service
+# webszolgáltatás törlése
 my $WebserviceDelete = $WebserviceObject->WebserviceDelete(
     ID     => $WebserviceID,
     UserID => $UserID,
 );
 $Self->True(
     $WebserviceDelete,
-    "Deleted Web Service $WebserviceID",
+    "Webszolgáltatás törölve: $WebserviceID",
 );
 
-# also delete any other added data during the this test, since RestoreDatabase must not be used.
+# törölni kell a teszt alatt minden egyéb hozzáadott adatot, mivel a RestoreDatabase használata tilos.
 
 1;
                 ]]></programlisting>
             </para>
         </section>
         <section id="operation-wsdl">
-            <title>WSDL Extension Example</title>
+            <title>WSDL-kiterjesztés példa</title>
             <para>
-                WSDL files contains the definitions of the web services and its operations
-for SOAP messages, in case we will extend
+                A WSDL-fájlok tartalmazzák a webszolgáltatás és a SOAP-üzenethez tartozó
+műveleteinek meghatározásait abban az esetben, a kibővítjük a
 <filename>development/webservices/GenericTickeConnectorSOAP.wsdl</filename>
-in some places:
+fájlt néhány helyen:
             </para>
             <para>
-                Port Type:
+                Port típusa:
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -509,7 +510,7 @@ in some places:
                 ]]></programlisting>
             </para>
             <para>
-                Binding:
+                Kötés:
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -530,7 +531,7 @@ in some places:
                 ]]></programlisting>
             </para>
             <para>
-                Type:
+                Típus:
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -558,7 +559,7 @@ in some places:
                 ]]></programlisting>
             </para>
             <para>
-                Message:
+                Üzenet:
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -574,11 +575,11 @@ in some places:
             </para>
         </section>
         <section id="operation-wadl">
-            <title>WADL Extension Example</title>
+            <title>WADL-kiterjesztés példa</title>
             <para>
-                WADL files contains the definitions of the web services and its operations
-for REST interface, add a new resource to
-<filename>development/webservices/GenericTickeConnectorREST.wadl</filename>.
+                A WADL-fájlok tartalmazzák a webszolgáltatás és a REST-felülethez tartozó
+műveleteinek meghatározásait. Adjon hozzá egy új erőforrást a
+<filename>development/webservices/GenericTickeConnectorREST.wadl</filename>fájlhoz.
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -603,12 +604,12 @@ for REST interface, add a new resource to
             </para>
         </section>
         <section id="operation-soap">
-            <title>Web Service SOAP Extension Example</title>
+            <title>Webszolgáltatás SOAP-kiterjesztés példa</title>
             <para>
-                Web services can be imported into OTRS by a YAML with with a predefined
-structure in this case we will extend
+                A webszolgáltatások importálhatók az OTRS-be egy előre meghatározott
+szerkezettel rendelkező YAML-fájllal. Ebben az esetben a
 <filename>development/webservices/GenericTickeConnectorSOAP.yml</filename>
-for a SOAP web service.
+fájlt bővítjük ki egy SOAP webszolgáltatáshoz.
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -616,7 +617,7 @@ Provider:
   Operation:
     # ...
     Test:
-      Description: This is only a test
+      Description: Ez csak egy teszt
       MappingInbound: {}
       MappingOutbound: {}
       Type: Test::Test
@@ -624,12 +625,12 @@ Provider:
             </para>
         </section>
         <section id="operation-rest">
-            <title>Web Service REST Extension Example</title>
+            <title>Webszolgáltatás REST-kiterjesztés példa</title>
             <para>
-                Web services can be imported into OTRS by a YAML with with a predefined
-structure in this case we will extend
+                A webszolgáltatások importálhatók az OTRS-be egy előre meghatározott
+szerkezettel rendelkező YAML-fájllal. Ebben az esetben a
 <filename>development/webservices/GenericTickeConnectorREST.yml</filename>
-for a REST web service.
+fájlt bővítjük ki egy REST webszolgáltatáshoz.
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -637,7 +638,7 @@ Provider:
   Operation:
     # ...
     Test:
-      Description: This is only a test
+      Description: Ez csak egy teszt
       MappingInbound: {}
       MappingOutbound: {}
       Type: Test::Test

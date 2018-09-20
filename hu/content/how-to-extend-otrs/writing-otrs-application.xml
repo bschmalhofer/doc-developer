@@ -27,6 +27,7 @@ Kernel/Modules
 Kernel/Output/HTML/Templates/Standard
 Kernel/Config
 Kernel/Config/Files
+Kernel/Config/Files/XML/
 Kernel/Language
             ]]></screen>
         </para>
@@ -35,38 +36,88 @@ Kernel/Language
     <section id="default-config-file">
         <title>Alapértelmezett beállítófájl</title>
         <para>
-            Egy modulregisztráció létrehozása megkönnyíti az új modul megjelenítését az
-OTRS-ben. Ezért létrehozunk egy
-<filename>/Kernel/Config/Files/HelloWorld.xml</filename> fájlt. Ebben a
-fájlban létrehozunk egy új beállítási elemet. A különféle beállítások hatása
-a „Beállítási mechanizmus” fejezetben van leírva.
+            The creation of a module registration facilitates the display of the new
+module in OTRS.  Therefore we create a file
+<filename>/Kernel/Config/Files/XML/HelloWorld.xml</filename>.  In this file,
+we create a new config element.  The impact of the various settings is
+described in the chapter 'Config Mechanism'.
         </para>
         <para>
             <programlisting><![CDATA[
 <?xml version="1.0" encoding="UTF-8" ?>
-<otrs_config version="1.0" init="Application">
-        <ConfigItem Name="Frontend::Module###AgentHelloWorld" Required="1" Valid="1">
+<otrs_config version="2.0" init="Application">
+    <Setting Name="Frontend::Module###AgentHelloWorld" Required="1" Valid="1">
         <Description Translatable="1">FrontendModuleRegistration for HelloWorld module.</Description>
-        <Group>HelloWorld</Group>
-        <SubGroup>Frontend::Agent::ModuleRegistration</SubGroup>
-        <Setting>
-            <FrontendModuleReg>
-                <Title>HelloWorld</Title>
-                <Group>users</Group>
-                <Description>HelloWorld</Description>
-                <NavBarName>HelloWorld</NavBarName>
-                <NavBar>
-                    <Description>HelloWorld</Description>
-                    <Name>HelloWorld</Name>
-                    <Link>Action=AgentHelloWorld</Link>
-                    <NavBar>HelloWorld</NavBar>
-                    <Type>Menu</Type>
-                    <Prio>8400</Prio>
-                    <Block>ItemArea</Block>
-                </NavBar>
-            </FrontendModuleReg>
-        </Setting>
-    </ConfigItem>
+        <Navigation>Frontend::Agent::ModuleRegistration</Navigation>
+        <Value>
+            <Item ValueType="FrontendRegistration">
+                <Hash>
+                    <Item Key="Group">
+                        <Array>
+                            <Item>users</Item>
+                        </Array>
+                    </Item>
+                    <Item Key="GroupRo">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="Description" Translatable="1">HelloWorld.</Item>
+                    <Item Key="Title" Translatable="1">HelloWorld</Item>
+                    <Item Key="NavBarName">HelloWorld</Item>
+                </Hash>
+            </Item>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentHelloWorld###002-Filename" Required="0" Valid="1">
+        <Description Translatable="1">Loader module registration for the agent interface.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                    </Array>
+                </Item>
+                <Item Key="JavaScript">
+                    <Array>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Frontend::Navigation###AgentHelloWorld###002-Filename" Required="0" Valid="1">
+        <Description Translatable="1">Main menu item registration.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::MainMenu</Navigation>
+        <Value>
+            <Array>
+                <DefaultItem ValueType="FrontendNavigation">
+                    <Hash>
+                    </Hash>
+                </DefaultItem>
+                <Item>
+                    <Hash>
+                        <Item Key="Group">
+                            <Array>
+                                <Item>users</Item>
+                            </Array>
+                        </Item>
+                        <Item Key="GroupRo">
+                            <Array>
+                            </Array>
+                        </Item>
+                        <Item Key="Description" Translatable="1">HelloWorld.</Item>
+                        <Item Key="Name" Translatable="1">HelloWorld</Item>
+                        <Item Key="Link">Action=AgentHelloWorld</Item>
+                        <Item Key="LinkOption"></Item>
+                        <Item Key="NavBar">HelloWorld</Item>
+                        <Item Key="Type"></Item>
+                        <Item Key="Block"></Item>
+                        <Item Key="AccessKey"></Item>
+                        <Item Key="Prio">8400</Item>
+                    </Hash>
+                </Item>
+            </Array>
+        </Value>
+    </Setting>
 </otrs_config>
             ]]></programlisting>
         </para>
@@ -146,8 +197,8 @@ alábbi tartalommal:
         <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/HelloWorld.pm - core module
-# Copyright (C) (year) (name of author) (email of author)
+# Kernel/System/HelloWorld.pm - alapmodul
+# Copyright (C) (év) (szerző neve) (szerző e-mail címe)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -159,22 +210,22 @@ package Kernel::System::HelloWorld;
 use strict;
 use warnings;
 
-# list your object dependencies (e.g. Kernel::System::DB) here
+# sorolja fel az objektumfüggőségeket (például Kernel::System::DB) itt
 our @ObjectDependencies = (
     # 'Kernel::System::DB',
 );
 
 =head1 NAME
 
-HelloWorld - Little "Hello World" module
+HelloWorld - Kicsi „Helló, Világ” modul
 
 =head1 DESCRIPTION
 
-Little OTRS module that displays the text 'Hello World' when called up.
+Kicsi OTRS modul, amely a „Helló, Világ” szöveget jeleníti meg, ha meghívják.
 
 =head2 new()
 
-Create an object. Do not use it directly, instead use:
+Egy objektum létrehozása. Ne használja közvetlenül, inkább így használja:
 
     my $HelloWorldObject = $Kernel::OM->Get('Kernel::System::HelloWorld');
 
@@ -183,7 +234,7 @@ Create an object. Do not use it directly, instead use:
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # allocate new hash for object
+    # új kivonat lefoglalása az objektumnak
     my $Self = {};
     bless ($Self, $Type);
 
@@ -192,7 +243,7 @@ sub new {
 
 =head2 GetHelloWorldText()
 
-Return the "Hello World" text.
+A „Helló, Világ” szöveg visszaadása.
 
     my $HelloWorldText = $HelloWorldObject->GetHelloWorldText();
 
@@ -201,11 +252,11 @@ Return the "Hello World" text.
 sub GetHelloWorldText {
     my ( $Self, %Param ) = @_;
 
-    # Get the DBObject from the central object manager
+    # A DBObject lekérése a központi objektumkezelőtől
     # my $DBObject = $Kernel::OM->Get('Kernel::System::DB');
 
     my $HelloWorld = $Self->_FormatHelloWorldText(
-        String => 'Hello World',
+        String => 'Helló, Világ',
     );
 
     return $HelloWorld;
@@ -217,10 +268,10 @@ sub GetHelloWorldText {
 
 =head2 _FormatHelloWorldText()
 
-Format "Hello World" text to uppercase
+A „Helló, Világ” szöveg nagybetűsre formázásra
 
     my $HelloWorld = $Self->_FormatHelloWorldText(
-        String => 'Hello World',
+        String => 'Helló, Világ',
     );
 
 sub _FormatHelloWorldText{

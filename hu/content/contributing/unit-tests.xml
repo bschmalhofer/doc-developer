@@ -4,25 +4,28 @@
 <section id="unit-tests">
     <title>Egységtesztek</title>
     <para>
-        OTRS provides a test suite which can be used to develop and run unit tests
-for all system related code.
+        Az OTRS biztosít egy tesztelési alkalmazáscsomagot, amely egységtesztek
+fejlesztéséhez és futtatásához használható az összes rendszerrel kapcsolatos
+kódnál.
     </para>
 
     <section id="testing">
         <title>Egy tesztfájl létrehozása</title>
         <para>
-            The test files are stored in .t files under
-<filename>scripts/test/*.t</filename>. For example, let's take a look at the
-file <filename>scripts/test/Calendar.t</filename> for the Calendar class.
+            A tesztfájlok .t fájlokban vannak tárolva a
+<filename>/scripts/test/*.t</filename> helyen. Például vessünk egy
+pillantást a <filename>scripts/test/Calendar.t</filename> fájlra a naptár
+osztálynál.
         </para>
         <para>
-            Every test file should ideally instantiate unit test helper object at the
-start, so it can benefit from some built-in methods provided by it:
+            Minden tesztfájlnak ideális esetben példányosítania kell az egységteszt
+segítő objektumot az elején, így részesülhet néhány beépített metódusból,
+amelyet az biztosít:
         </para>
         <para>
             <programlisting><![CDATA[
 # --
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -44,14 +47,16 @@ my $Helper = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
             ]]></programlisting>
         </para>
         <para>
-            By providing <literal>RestoreDatabase</literal> parameter to helper
-constructor, any database statement executed during the unit test will be
-rolled back at the end, making sure no permanent change has been done.
+            A <literal>RestoreDatabase</literal> paraméternek a segítő konstruktor
+számára történő átadásával az egységteszt közben végrehajtott bármely
+adatbázis-utasítás vissza lesz állítva a végén, ezáltal azt biztosítva, hogy
+ne történjen végleges változtatás.
         </para>
         <para>
-            Like any other test suite, OTRS provides assertion methods which can be used
-to test conditions. For example, this is how we create a test user and test
-that it has been indeed created:
+            Mint bármely egyéb tesztelési alkalmazáscsomag, az OTRS is biztosít állítás
+metódusokat, amelyek a feltételek teszteléséhez használhatók. Például it az
+látható, hogy hogyan hozunk létre egy teszt felhasználót, és hogyan
+teszteljük le, hogy valóban létrejött:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -65,18 +70,19 @@ $Self->True(
             ]]></programlisting>
         </para>
         <para>
-            Please consult API section below for complete list of assertion methods.
+            Nézze meg a lenti API szakaszt az állítás metódusok teljes listájáért.
         </para>
         <para>
-            It's always good practice to create random data in unit tests, which can
-help distinguish it from previously added data. Use random methods from API
-to get the strings and include them in your parameters:
+            Mindig jó gyakorlat véletlenszerű adatokat létrehozni az egységtesztekben,
+ami segíthet megkülönböztetni az előzőleg hozzáadott adatoktól. Használja a
+véletlen metódusokat az API-ból, hogy megkapja a karakterláncokat, és
+beágyazza azokat a paraméterekbe:
         </para>
         <para>
             <programlisting><![CDATA[
 my $RandomID = $Helper->GetRandomID();
 
-# create test group
+# teszt csoport létrehozása
 my $GroupName = 'test-calendar-group-' . $RandomID;
 my $GroupID   = $GroupObject->GroupAdd(
     Name    => $GroupName,
@@ -91,14 +97,15 @@ $Self->True(
             ]]></programlisting>
         </para>
         <para>
-            Good developers make their unit test easy to maintain. Consider putting all
-test cases in an array and then iterate over them with some code. This will
-provide an easy way to extend the test later:
+            A jó fejlesztők az egységtesztjeiket könnyen karbantarthatóvá
+teszik. Fontolja meg az összes teszteset egy tömbbe történő elhelyezését,
+majd lépkedjen végig azokon valamilyen kóddal. Ez egyszerű módot fog
+biztosítani a teszt későbbi bővítéséhez:
         </para>
         <para>
             <programlisting><![CDATA[
 #
-# Tests for CalendarCreate()
+# A CalendarCreate() tesztelése
 #
 my @Tests = (
     {
@@ -130,12 +137,12 @@ my @Tests = (
 
 for my $Test (@Tests) {
 
-    # make the call
+    # a hívás elvégzése
     my %Calendar = $CalendarObject->CalendarCreate(
         %{ $Test->{Config} },
     );
 
-    # check data
+    # adatok ellenőrzése
     if ( $Test->{Success} ) {
         for my $Key (qw(CalendarID GroupID CalendarName Color CreateTime CreateBy ChangeTime ChangeBy ValidID)) {
             $Self->True(
@@ -187,9 +194,9 @@ egységtesztekhez vannak beállítva.
     <section>
         <title>Tesztelés</title>
         <para>
-            To run your tests, just use <filename>bin/otrs.Console.pl Dev::UnitTest::Run
---test Calendar</filename> to use
-<filename>scripts/test/Calendar.t</filename>.
+            A tesztek futtatásához egyszerűen használja a <filename>bin/otrs.Console.pl
+Dev::UnitTest::Run --test Calendar</filename> parancsot a
+<filename>scripts/test/Calendar.t</filename> fájl használatához.
         </para>
         <para>
             <programlisting><![CDATA[
@@ -205,8 +212,8 @@ shell:/opt/otrs>
             ]]></programlisting>
         </para>
         <para>
-            You can even run several tests at once, just supply additional test
-arguments to the command:
+            Akár több tesztet is lefuttathat egyszerre, csak adjon meg további
+<literal>--test</literal> argumentumokat a parancsnak:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -226,26 +233,28 @@ shell:/opt/otrs>
             ]]></programlisting>
         </para>
         <para>
-            If you execute <filename>bin/otrs.Console.pl Dev::UnitTest::Run</filename>
-without any argument, it will run all tests found in the system. Please note
-that this can take some time to finish.
+            Ha argumentumok nélkül hajtja végre a <filename>bin/otrs.Console.pl
+Dev::UnitTest::Run</filename> parancsot, akkor le fogja futtatni a
+rendszeren található összes tesztet. Ne feledje, hogy ez eltarthat egy
+ideig, amíg befejeződik.
         </para>
         <para>
-            Provide <literal>--verbose</literal> argument in order to see messages about
-successful tests too.  Any errors encountered during testing will be
-displayed regardless of this switch, provided they are actually raised in
-the test.
+            Adja meg a <literal>--verbose</literal> argumentumot annak érdekében, hogy
+láthassa a sikeres tesztekkel kapcsolatos üzeneteket is. A teszt során
+előforduló bármilyen hiba megjelenítésre kerül függetlenül ettől a
+kapcsolótól, és biztosítva lesz, hogy azok ténylegesen felvételre kerülnek a
+tesztbe.
         </para>
     </section>
 
     <section>
-        <title>Unit Test API</title>
+        <title>Egységteszt API</title>
         <para>
-            OTRS provides API for unit testing that was used in the previous
-example. Here we'll list the most important functions, please also see the
-online API reference of <ulink
-url="http://otrs.github.io/doc/api/otrs/6.0/Kernel/System/UnitTest.pm.html">
-<literal>Kernel::System::UnitTest</literal> </ulink>.
+            Az OTRS API-t biztosít az egységteszteléshez, amely az előző példában volt
+használva. Itt fel fogjuk sorolni a legfontosabb függvényeket, de nézze meg
+a <ulink
+url="http://otrs.github.io/doc/api/otrs/6.0/Kernel/System/UnitTest.pm.html"><literal>Kernel::System::UnitTest</literal></ulink>
+internetes API hivatkozását is.
         </para>
         <variablelist>
             <varlistentry>
@@ -259,7 +268,7 @@ Perlben.
                         <programlisting><![CDATA[
 $Self->True(
     1,
-    'Scalar 1 is always evaluated as true'
+    'Az 1 skalár mindig igazként lesz kiértékelve'
 );
                         ]]></programlisting>
                     </para>
@@ -276,7 +285,7 @@ Perlben.
                         <programlisting><![CDATA[
 $Self->False(
     0,
-    'Scalar 0 is always evaluated as false'
+    'A 0 skalár mindig hamisként lesz kiértékelve'
 );
                         ]]></programlisting>
                     </para>
@@ -303,14 +312,14 @@ $Self->Is(
                 <term><literal>IsNot()</literal></term>
                 <listitem>
                     <para>
-                        This function tests whether the given scalar variables are unequal.
+                        Ez a függvény azt teszteli, hogy a megadott skalár változók nem egyenlők-e.
                     </para>
                     <para>
                         <programlisting><![CDATA[
 $Self->IsNot(
     $A,
     $B,
-    'Test Name'
+    'Tesztnév'
 );
                         ]]></programlisting>
                     </para>
@@ -329,7 +338,7 @@ kell legyen.
 $Self->IsDeeply(
     $A,
     $B,
-    'Test Name'
+    'Tesztnév'
 );
                         ]]></programlisting>
                     </para>
@@ -348,7 +357,7 @@ kell legyen.
 $Self->IsNotDeeply(
     $A,
     $B,
-    'Test Name'
+    'Tesztnév'
 );
                         ]]></programlisting>
                     </para>
@@ -356,25 +365,25 @@ $Self->IsNotDeeply(
             </varlistentry>
         </variablelist>
         <para>
-            Besides this, unit test helper object also provides some helpful methods for
-common test conditions.  For full reference, please see the online API
-reference of <ulink
-url="http://otrs.github.io/doc/api/otrs/6.0/Kernel/System/UnitTest/Helper.pm.html">
-<literal>Kernel::System::UnitTest::Helper</literal> </ulink>.
+            Emellett az egységteszt segítő objektum biztosít néhány hasznos metódust is
+a gyakori tesztelési feltételekhez. A teljes hivatkozásért nézze meg a
+<ulink
+url="http://otrs.github.io/doc/api/otrs/6.0/Kernel/System/UnitTest/Helper.pm.html"><literal>Kernel::System::UnitTest::Helper</literal></ulink>
+internetes API hivatkozását.
         </para>
         <variablelist>
             <varlistentry>
                 <term><literal>GetRandomID()</literal></term>
                 <listitem>
                     <para>
-                        This function creates a random ID that can be used in tests as a unique
-identifier. It is guaranteed that within a test this function will never
-return a duplicate.
+                        Ez a függvény előállít egy véletlenszerű azonosítót, amely egyedi
+azonosítóként használható a tesztekben. Garantált, hogy egy teszten belül ez
+a függvény soha nem ad vissza kettőzött értéket.
                     </para>
                     <note>
                         <para>
-                            Please note that these numbers are not really random and should only be used
-to create test data.
+                            Ne feledje, hogy ezek a számok nem valódi véletlen számok, és csak
+tesztadatok előállításához szabad használni.
                         </para>
                     </note>
                     <para>
@@ -389,15 +398,16 @@ my $RandomID = $Helper->GetRandomID();
                 <term><literal>TestUserCreate()</literal></term>
                 <listitem>
                     <para>
-                        This function creates a test user that can be used in tests. It will be set
-to invalid automatically during the destructor. It returns the login name of
-the new user, the password is the same.
+                        Ez a függvény létrehoz egy teszt felhasználót, amely használható a
+tesztekben. Automatikusan érvénytelenre lesz állítva a destruktor
+közben. Visszaadja az új felhasználó bejelentkezési nevét, a jelszó pedig
+ugyanaz lesz.
                     </para>
                     <para>
                         <programlisting><![CDATA[
 my $TestUserLogin = $Helper->TestUserCreate(
-    Groups   => ['admin', 'users'],          # optional, list of groups to add this user to (rw rights)
-    Language => 'de',                        # optional, defaults to 'en' if not set
+    Groups   => ['admin', 'users'],          # elhagyható, csoportok listája, amelyhez a felhasználót hozzá kell adni (írás, olvasás jogokkal)
+    Language => 'hu',                        # elhagyható, alapértelmezetten 'en', ha nincs megadva
 );
                         ]]></programlisting>
                     </para>
@@ -407,22 +417,22 @@ my $TestUserLogin = $Helper->TestUserCreate(
                 <term><literal>FixedTimeSet()</literal></term>
                 <listitem>
                     <para>
-                        This functions makes it possible to override the system time as long as this
-object lives. You can pass an optional time parameter that should be used,
-if not, the current system time will be used.
+                        Ez a függvény lehetővé teszi a rendszeridő felülbírálását egészen addig,
+amíg az objektum él. Átadhat egy elhagyható időparamétert, amelyet használni
+kell. Ha nincs átadva, akkor az aktuális rendszeridő lesz használva.
                     </para>
                     <note>
                         <para>
-                            All calls to methods of <literal>Kernel::System::Time</literal> and
-<literal>Kernel::System::DateTime</literal> will use the given time
-afterwards.
+                            A <literal>Kernel::System::Time</literal> és a
+<literal>Kernel::System::DateTime</literal> metódusainak összes meghívása a
+megadott időt fogja használni ezután.
                         </para>
                     </note>
                     <para>
                         <programlisting><![CDATA[
-$HelperObject->FixedTimeSet(366475757);         # with Timestamp
-$HelperObject->FixedTimeSet($DateTimeObject);   # with previously created DateTime object
-$HelperObject->FixedTimeSet();                  # set to current date and time
+$HelperObject->FixedTimeSet(366475757);         # időbélyeggel
+$HelperObject->FixedTimeSet($DateTimeObject);   # az előzőleg létrehozott DateTime objektummal
+$HelperObject->FixedTimeSet();                  # beállítás a jelenlegi dátumra és időre
                         ]]></programlisting>
                     </para>
                 </listitem>
@@ -431,7 +441,7 @@ $HelperObject->FixedTimeSet();                  # set to current date and time
                 <term><literal>FixedTimeUnset()</literal></term>
                 <listitem>
                     <para>
-                        This functions restores the regular system time behavior.
+                        Ez a függvény visszaállítja a rendes rendszeridő viselkedést.
                     </para>
                 </listitem>
             </varlistentry>
@@ -439,9 +449,9 @@ $HelperObject->FixedTimeSet();                  # set to current date and time
                 <term><literal>FixedTimeAddSeconds()</literal></term>
                 <listitem>
                     <para>
-                        This functions adds a number of seconds to the fixed system time which was
-previously set by <literal>FixedTimeSet()</literal>. You can pass a negative
-value to go back in time.
+                        Ez a függvény valamennyi másodpercet ad ahhoz a rögzített rendszeridőhöz,
+amelyet a <literal>FixedTimeSet()</literal> korábban beállított. Átadhat
+negatív értéket, hogy visszamenjen az időben.
                     </para>
                 </listitem>
             </varlistentry>
@@ -449,22 +459,22 @@ value to go back in time.
                 <term><literal>ConfigSettingChange()</literal></term>
                 <listitem>
                     <para>
-                        This functions temporarily changes a configuration setting system wide to
-another value, both in the current instance of the
-<literal>ConfigObject</literal> and also in the system configuration on
-disk. This will be reset when the Helper object is destroyed.
+                        Ez a függvény átmenetileg rendszerszinten megváltoztat egy
+rendszerbeállítást egy másik értékre mind a <literal>ConfigObject</literal>
+aktuális példányában, mind a rendszerbeállításokban is a lemezen. Akkor lesz
+visszaállítva, amikor a Helper objektum megsemmisül.
                     </para>
                     <note>
                         <para>
-                            Please note that this will not work correctly in clustered environments.
+                            Ne feledje, hogy ez jelenleg nem működik fürtözött környezetekben.
                         </para>
                     </note>
                     <para>
                         <programlisting><![CDATA[
 $Helper->ConfigSettingChange(
-    Valid => 1,            # (optional) enable or disable setting
-    Key   => 'MySetting',  # setting name
-    Value => { ... } ,     # setting value
+    Valid => 1,            # (elhagyható) beállítás engedélyezése vagy letiltása
+    Key   => 'MySetting',  # beállítás neve
+    Value => { ... } ,     # beállítás értéke
 );
                         ]]></programlisting>
                     </para>
@@ -474,14 +484,15 @@ $Helper->ConfigSettingChange(
                 <term><literal>CustomCodeActivate()</literal></term>
                 <listitem>
                     <para>
-                        This function will temporarily include custom code in the system. For
-example, you may use this to redefine a subroutine from another class. This
-change will persist for remainder of the test.  All code will be removed
-when the Helper object is destroyed.
+                        Ez a függvény átmenetileg egyéni kódot fog felvenni a rendszerbe. Például
+ezt használhatja egy másik osztályból származó szubrutin
+felüldefiniálásához. Ez a változtatás megmarad a teszt emlékeztetőjénél
+is. Az összes kód eltávolításra kerül, amikor a <literal>Helper</literal>
+objektum megsemmisül.
                     </para>
                     <note>
                         <para>
-                            Please note that this will not work correctly in clustered environments.
+                            Ne feledje, hogy ez jelenleg nem működik fürtözött környezetekben.
                         </para>
                     </note>
                     <para>
@@ -503,7 +514,7 @@ use warnings;
     }
 }
 1;^,
-    Identifier => 'News',   # (optional) Code identifier to include in file name
+    Identifier => 'News',   # (elhagyható) kódazonosító a fájlnévbe való felvételhez
 );
                         ]]></programlisting>
                     </para>
@@ -513,8 +524,9 @@ use warnings;
                 <term><literal>ProvideTestDatabase()</literal></term>
                 <listitem>
                     <para>
-                        This function will provide a temporary database for the test. Please first
-define test database settings in <filename>Kernel/Config.pm</filename>, i.e:
+                        Ez a függvény egy átmeneti adatbázist fog biztosítani a teszthez. Először
+határozza meg a teszt adatbázis beállításait a
+<filename>Kernel/Config.pm</filename> fájlban, azaz:
                     </para>
                     <para>
                         <programlisting><![CDATA[
@@ -526,25 +538,26 @@ $Self->{TestDatabase} = {
                         ]]></programlisting>
                     </para>
                     <para>
-                        The method call will override global database configuration for duration of
-the test, i.e.  temporary database will receive all calls sent over system
-<literal>DBObject</literal>.
+                        A metódushívás felül fogja bírálni a globális adatbázis-beállítást a teszt
+időtartama alatt, azaz az átmeneti adatbázis fogja fogadni az összes olyan
+hívást, amelyet a <literal>DBObject</literal> rendszer küldött át.
                     </para>
                     <para>
-                        All database contents will be automatically dropped when the
-<literal>Helper</literal> object is destroyed.
+                        Az összes adatbázis-tartalom automatikusan eldobásra kerül, amikor a
+<literal>Helper</literal> objektum megsemmisül.
                     </para>
                     <para>
-                        This method returns 'undef' in case the test database is not configured. If
-it is configured, but the supplied XML cannot be read or executed, this
-method will <literal>die()</literal> to interrupt the test with an error.
+                        Ez a metódus 'undef' értéket ad vissza abban az esetben, ha a teszt
+adatbázis nincs beállítva. Ha be van állítva, de a mellékelt XML nem
+olvasható vagy nem hajtható végre, akkor a metódus <literal>die()</literal>
+függvénye lesz meghívva a teszt hibával történő megszakításához.
                     </para>
                     <para>
                         <programlisting><![CDATA[
 $Helper->ProvideTestDatabase(
-    DatabaseXMLString => $XML,      # (optional) OTRS database XML schema to execute
-                                    # or
-    DatabaseXMLFiles => [           # (optional) List of XML files to load and execute
+    DatabaseXMLString => $XML,      # (elhagyható) OTRS adatbázis XML-séma a végrehajtáshoz
+                                    # vagy
+    DatabaseXMLFiles => [           # (elhagyható) betöltendő és végrehajtandó XML-fájlok listája
         '/opt/otrs/scripts/database/otrs-schema.xml',
         '/opt/otrs/scripts/database/otrs-initial_insert.xml',
     ],

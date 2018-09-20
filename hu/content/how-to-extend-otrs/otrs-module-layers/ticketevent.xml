@@ -71,7 +71,7 @@ képes üzeneteket kiküldeni a Twitterre.
             A jegyesemények az OTRS 2.0 óta lettek elérhetők az OTRS-ben.
         </para>
         <para>
-            Ticket events available in OTRS 6.0:
+            Az OTRS 6.0 verziójában elérhető jegyesemények:
         </para>
         <para>
             <itemizedlist>
@@ -122,7 +122,7 @@ képes üzeneteket kiküldeni a Twitterre.
             </itemizedlist>
         </para>
         <para>
-            Article events available in OTRS 6.0:
+            Az OTRS 6.0 verziójában elérhető bejegyzésesemények:
         </para>
         <para>
             <itemizedlist>

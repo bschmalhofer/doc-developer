@@ -11,16 +11,18 @@ vizsgálnia, amikor átírja a csomagját az OTRS 3.3-ról 4-re.
     <section id="package-porting-33-to-4-objectmanager">
         <title>Új objektumkezelés</title>
         <para>
-            Up to OTRS 4, objects used to be created both centrally and also locally and
-then handed down to all objects by passing them to the constructors. With
-OTRS 4 and later versions, there is now an <literal>ObjectManager</literal>
-that centralizes singleton object creation and access.
+            Az OTRS 4-ig az objektumokat mind központilag, mind helyileg létre kellett
+hozni, és ekkor az összes objektumot le kellett kezelni a konstruktornak
+átadva azokat. Az OTRS 4-es és későbbi verzióinál mostantól létezik egy
+<literal>ObjectManager</literal> objektum, amely központosítja az egyke
+objektum létrehozását és hozzáférését.
         </para>
         <para>
-            This will require you first of all to change all top level Perl scripts (.pl
-files only!) to load and provide the <literal>ObjectManager</literal> to all
-OTRS objects. Let's look at <filename>otrs.CheckDB.pl</filename> from OTRS
-3.3 as an example:
+            Ez mindenek előtt azt fogja igényelni, hogy változtassa meg az összes felső
+szintű Perl parancsfájlt (csak a .pl fájlokat!) az
+<literal>ObjectManager</literal> betöltéséhez és biztosításához az összes
+OTRS objektumnál. Példaként nézzük meg az
+<filename>otrs.CheckDB.pl</filename> parancsfájlt az OTRS 3.3-ból:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -69,14 +71,14 @@ use lib dirname($RealBin) . '/Custom';
 
 use Kernel::System::ObjectManager;
 
-# create common objects
+# a szokásos objektumok létrehozása
 local $Kernel::OM = Kernel::System::ObjectManager->new(
 'Kernel::System::Log' => {
     LogPrefix => 'OTRS-otrs.CheckDB.pl',
 },
 );
 
-# get database object
+# az adatbázis-objektum lekérése
 my $DBObject = $Kernel::OM->Get('Kernel::System::DB');
             ]]></programlisting>
         </para>
@@ -91,20 +93,23 @@ naplóüzeneteket, amelyeket a <literal>Kernel::System::Log</literal> ír ki,
 így az szintén elhagyható.
         </para>
         <para>
-            From this example you can also deduce the general porting guide when it
-comes to accessing objects: don't store them in <literal>$Self</literal> any
-more (unless needed for specific reasons). Just fetch and use the objects on
-demand like
-<code>$Kernel::OM->Get('Kernel::System::Log')->Log(...)</code>. This also
-has the benefit that the <literal>Log</literal> object will only be created
-if something must be logged. Sometimes it could also be useful to create
-local variables if an object is used many times in a function, like
-<literal>$DBObject</literal> in the example above.
+            Ebből a példából kikövetkeztetheti az általános átírási irányelvet is,
+amikor az objektumok hozzáférése jön: többé ne tárolja azokat a
+<literal>$Self</literal> változóban (hacsak bizonyos okokból ez nem
+szükséges). Egyszerűen kérje le és használja az objektumokat igény szerint,
+úgymint
+<code>$Kernel::OM->Get('Kernel::System::Log')->Log(...)</code>. Ennek megvan
+az az előnye is, hogy a <literal>Log</literal> objektumot csak akkor kell
+majd létrehozni, ha valamit naplózni kell. Néha hasznos lehet helyi
+változókat is létrehozni, ha egy objektumot többször használnak egy
+függvényben, mint például a fenti példában lévő <literal>$DBObject</literal>
+objektumot.
         </para>
         <para>
-            There's not much more to know when porting packages that should be loadable
-by the <literal>ObjectManager</literal>. They should declare the modules
-they use (via <code>$Kernel::OM->Get()</code>) like this:
+            Nem kell sokkal többet tudnia az olyan csomagok átírásakor, amelyeknek
+betölthetőnek kell lenniük az <literal>ObjectManager</literal>
+használatával. Meg kell határozniuk azokat a modulokat, amelyeket használnak
+(a <code>$Kernel::OM->Get()</code> függvényen keresztül) ehhez hasonlóan:
         </para>
         <para>
             <programlisting><![CDATA[
@@ -138,13 +143,13 @@ use Kernel::System::CacheInternal;
 sub new {
 my ( $Type, %Param ) = @_;
 
-# allocate new hash for object
+# új kivonat lefoglalása az objektumhoz
 my $Self = {};
 bless( $Self, $Type );
 
-# check needed objects
+# a szükséges objektumok ellenőrzése
 for my $Object (qw(DBObject ConfigObject LogObject EncodeObject MainObject)) {
-    $Self->{$Object} = $Param{$Object} || die "Got no $Object!";
+    $Self->{$Object} = $Param{$Object} || die "Nincs $Object!";
 }
 
 $Self->{CacheInternalObject} = Kernel::System::CacheInternal->new(
@@ -161,21 +166,21 @@ return $Self;
 sub ValidList {
 my ( $Self, %Param ) = @_;
 
-# read cache
+# gyorsítótár olvasása
 my $CacheKey = 'ValidList';
 my $Cache = $Self->{CacheInternalObject}->Get( Key => $CacheKey );
 return %{$Cache} if $Cache;
 
-# get list from database
+# lista lekérése az adatbázisból
 return if !$Self->{DBObject}->Prepare( SQL => 'SELECT id, name FROM valid' );
 
-# fetch the result
+# az eredmény lekérése
 my %Data;
 while ( my @Row = $Self->{DBObject}->FetchrowArray() ) {
     $Data{ $Row[0] } = $Row[1];
 }
 
-# set cache
+# gyorsítótár beállítása
 $Self->{CacheInternalObject}->Set( Key => $CacheKey, Value => \%Data );
 
 return %Data;
@@ -203,7 +208,7 @@ our @ObjectDependencies = (
 sub new {
 my ( $Type, %Param ) = @_;
 
-# allocate new hash for object
+# új kivonat lefoglalása az objektumhoz
 my $Self = {};
 bless( $Self, $Type );
 
@@ -218,7 +223,7 @@ return $Self;
 sub ValidList {
 my ( $Self, %Param ) = @_;
 
-# read cache
+# gyorsítótár olvasása
 my $CacheKey = 'ValidList';
 my $Cache    = $Kernel::OM->Get('Kernel::System::Cache')->Get(
     Type => $Self->{CacheType},
@@ -226,19 +231,19 @@ my $Cache    = $Kernel::OM->Get('Kernel::System::Cache')->Get(
 );
 return %{$Cache} if $Cache;
 
-# get database object
+# adatbázis-objektum lekérése
 my $DBObject = $Kernel::OM->Get('Kernel::System::DB');
 
-# get list from database
+# lista lekérése az adatbázisból
 return if !$DBObject->Prepare( SQL => 'SELECT id, name FROM valid' );
 
-# fetch the result
+# az eredmény lekérése
 my %Data;
 while ( my @Row = $DBObject->FetchrowArray() ) {
     $Data{ $Row[0] } = $Row[1];
 }
 
-# set cache
+# gyorsítótár beállítása
 $Kernel::OM->Get('Kernel::System::Cache')->Set(
     Type  => $Self->{CacheType},
     TTL   => $Self->{CacheTTL},
@@ -251,9 +256,9 @@ return %Data;
             ]]></programlisting>
         </para>
         <para>
-            You can see that the dependencies are declared and the objects are only
-fetched on demand. We'll talk about the
-<literal>CacheInternalObject</literal> in the next section.
+            Láthatja, hogy meg vannak határozva a függőségek, és az objektumok csak
+igény szerint vannak lekérve. A következő szakaszban a
+<literal>CacheInternalObject</literal> objektumról fogunk beszélni.
         </para>
     </section>
 
@@ -294,43 +299,44 @@ feladatkezelő moduljai vannak, akkor azokat is át kell helyeznie.
         <title><link linkend="package-code-install">Kódszakaszok</link> frissítése az SOPM
 fájlokban</title>
         <para>
-            Code tags in SOPM files have to be updated. Please do not use
-<literal>$Self</literal> any more. In the past this was used to get access
-to OTRS objects like the <literal>MainObject</literal>. Please use the
-<literal>ObjectManager</literal> now. Here is an example for the old style:
+            Az SOPM fájlokban lévő kódcímkéket is frissíteni kell. Többé ne használja a
+<literal>$Self</literal> változót. Régebben ezt használták az olyan OTRS
+objektumokhoz való hozzáféréshez, mint például a
+<literal>MainObject</literal>. Mostantól használja az
+<literal>ObjectManager</literal> objektumot. Itt egy példa a régi stílusra:
         </para>
         <para>
             <programlisting><![CDATA[
 <CodeInstall Type="post">
 
-# define function name
+# függvénynév meghatározása
 my $FunctionName = 'CodeInstall';
 
-# create the package name
+# a csomagnév létrehozása
 my $CodeModule = 'var::packagesetup::' . $Param{Structure}->{Name}->{Content};
 
-# load the module
+# a modul betöltése
 if ( $Self->{MainObject}->Require($CodeModule) ) {
 
-# create new instance
+# új példány létrehozása
 my $CodeObject = $CodeModule->new( %{$Self} );
 
 if ($CodeObject) {
 
-    # start method
+    # metódus elindítása
     if ( !$CodeObject->$FunctionName(%{$Self}) ) {
         $Self->{LogObject}->Log(
             Priority => 'error',
-            Message  => "Could not call method $FunctionName() on $CodeModule.pm."
+            Message  => "Nem sikerült meghívni a(z) $FunctionName() metódust ebben: $CodeModule.pm."
         );
     }
 }
 
-# error handling
+# hibakezelés
 else {
     $Self->{LogObject}->Log(
         Priority => 'error',
-        Message  => "Could not call method new() on $CodeModule.pm."
+        Message  => "Nem sikerült meghívni a new() metódust ebben: $CodeModule.pm."
     );
 }
 }
@@ -353,10 +359,9 @@ $Kernel::OM->Get('var::packagesetup::SajatCsomag')->CodeInstall();
     <section id="package-porting-33-to-4-template-engine">
         <title>Új sablonmotor</title>
         <para>
-            With OTRS 4, the DTL template engine was replaced by
-Template::Toolkit. Please refer to the <link
-linkend="TemplatingMechanism">Templating section</link> for details on how
-the new template syntax looks like.
+            Az OTRS 4-gyel a DTL sablonmotort a Template::Toolkit váltotta. A
+részletekért nézze meg a <link linkend="TemplatingMechanism">sablonozó
+szakaszt</link>, hogy hogyan néz ki az új sablonszintaxis.
         </para>
         <para>
             Ezek azok a változtatások, amelyet alkalmaznia kell, amikor a meglévő DTL
@@ -549,10 +554,10 @@ kimenetszűrője sem, amely az összes sablonnal dolgozik, hanem korlátozza
 azokat bizonyos sablonokra a konfigurációs beállításokon keresztül.
                     </para>
                     <para>
-                        The <literal>post</literal> output filters
-(<literal>Frontend::Output::FilterElementPost</literal>) don't have such
-strong negative performance effects. However, they should also be used
-carefully, and not for all templates.
+                        A <literal>post</literal> kimenetszűrőknek
+(<literal>Frontend::Output::FilterElementPost</literal>) nincsenek ilyen
+erős negatív teljesítményhatásaik. Azonban ezeket is körültekintéssel kell
+használni, és nem minden sablonnál.
                     </para>
                 </listitem>
             </itemizedlist>

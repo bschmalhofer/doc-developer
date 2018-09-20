@@ -5,11 +5,11 @@
     <title>Saját témák létrehozása</title>
 
     <para>
-        You can create your own themes so as to use the layout you like in the OTRS
-web frontend. To create custom themes, you should customize the output
-templates to your needs. More information on the syntax and structure of
-output templates can be found in the <link
-linkend="TemplatingMechanism">templating section</link>.
+        Létrehozhatja a saját témáit, így olyan elrendezést használhat az OTRS webes
+előtétprogramján, amilyet csak szeretne. Egyéni témák létrehozásához
+személyre kell szabnia a kimeneti sablonokat az igényei szerint. A kimeneti
+sablonok szerkezetéről és szintaxisáról további információk találhatók a
+<link linkend="TemplatingMechanism">sablonozás szakaszban</link>.
     </para>
 
     <para>
@@ -21,38 +21,38 @@ létrehozásához:
         <orderedlist numeration="arabic">
             <listitem>
                 <para>
-                    Create a directory called
-<filename>Kernel/Output/HTML/Templates/Company</filename> and copy all files
-that you like to change from
-<filename>Kernel/Output/HTML/Templates/Standard</filename> into the new
-folder.
+                    Hozzon létre egy <filename>Kernel/Output/HTML/Templates/Company</filename>
+nevű könyvtárat, és másoljon át a
+<filename>Kernel/Output/HTML/Templates/Standard</filename> mappából minden
+olyan fájlt az új mappába, amelyet meg szeretne változtatni.
                 </para>
                 <important>
                     <para>
-                        Only copy over the files you're planning to change. OTRS will automatically
-get the missing files from the Standard theme. This will make upgrading at a
-later stage much easier.
+                        Csak azokat a fájlokat másolja át, amelyeket meg szeretne változtatni. Az
+OTRS automatikusan be fogja szerezni a hiányzó fájlokat a szabványos
+témából. Ez sokkal könnyebbé fogja tenni a későbbiekben a frissítést.
                     </para>
                 </important>
             </listitem>
             <listitem>
                 <para>
-                    Customize the files in the directory
-<filename>Kernel/Output/HTML/Templates/Company</filename> and change the
-layout to your needs.
+                    Szabja személyre a <filename>Kernel/Output/HTML/Templates/Company</filename>
+könyvtárban lévő fájlokat, és változtassa meg az elrendezést az igényei
+szerint.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    To activate the new theme, add them in SysConfig under Frontend::Themes.
+                    Az új téma bekapcsolásához adja hozzá azokat a rendszerbeállításokban a
+<literal>Frontend::Themes</literal> alatt.
                 </para>
             </listitem>
         </orderedlist>
     </para>
 
     <para>
-        Now the new theme should be usable. You can select it via your personal
-preferences.
+        Most az új témának használhatónak kell lennie. A személyes beállítások
+oldalán keresztül tudja kiválasztani.
     </para>
 
     <warning>
