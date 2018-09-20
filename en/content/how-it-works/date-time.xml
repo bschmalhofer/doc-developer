@@ -11,8 +11,8 @@ OTRS comes with its own package to handle date and time which ensures correct ca
         <title>Introduction</title>
         <para>
 Date and time are represented by an object of <literal>Kernel::System::DateTime</literal>.
-Every DateTime object holds its own date, time and time zone information.
-In contrast to the now deprecated <literal>Kernel::System::Time</literal> package, this means that you can and should create a DateTime object for every date/time you want to use.
+Every <literal>DateTime</literal> object holds its own date, time and time zone information.
+In contrast to the now deprecated <literal>Kernel::System::Time</literal> package, this means that you can and should create a <literal>DateTime</literal> object for every date/time you want to use.
         </para>
     </section>
 

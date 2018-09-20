@@ -20,7 +20,7 @@
         <para>
             <programlisting><![CDATA[
 # --
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -430,7 +430,7 @@ $HelperObject->FixedTimeSet();                  # set to current date and time
                     <para>
                         This functions temporarily changes a configuration setting system wide to another value, both in
                         the current instance of the <literal>ConfigObject</literal> and also in the system configuration
-                        on disk. This will be reset when the Helper object is destroyed.
+                        on disk. This will be reset when the <literal>Helper</literal> object is destroyed.
                     </para>
                     <note>
                         <para>
@@ -510,7 +510,7 @@ $Self->{TestDatabase} = {
                         All database contents will be automatically dropped when the <literal>Helper</literal> object is destroyed.
                     </para>
                     <para>
-                        This method returns 'undef' in case the test database is not configured. If it is configured,
+                        This method returns <literal>undef</literal> in case the test database is not configured. If it is configured,
                         but the supplied XML cannot be read or executed, this method will <literal>die()</literal> to
                         interrupt the test with an error.
                     </para>
