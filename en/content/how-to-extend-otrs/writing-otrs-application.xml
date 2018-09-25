@@ -133,8 +133,8 @@ Kernel/Language
 # Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (AGPL). If you
-# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 
 package Kernel::Modules::AgentHelloWorld;
@@ -193,8 +193,8 @@ sub Run {
 # Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (AGPL). If you
-# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 
 package Kernel::System::HelloWorld;
@@ -295,8 +295,8 @@ sub _FormatHelloWorldText{
 # Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (AGPL). If you
-# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 <h1>[% Translate("Overview") | html %]: [% Translate("HelloWorld") %]</h1>
 <p>
