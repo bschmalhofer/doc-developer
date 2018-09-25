@@ -77,7 +77,7 @@ fájllistát és adatbázis-beállításokat tartalmaz.
             </para>
             <para>
                 <programlisting><![CDATA[
-<URL>http://otrs.org/</URL>
+<URL>https://otrs.com/</URL>
                 ]]></programlisting>
             </para>
         </section>
@@ -88,7 +88,7 @@ fájllistát és adatbázis-beállításokat tartalmaz.
             </para>
             <para>
                 <programlisting><![CDATA[
-<License>GNU AFFERO GENERAL PUBLIC LICENSE 3. verzió, 2007. november</License>
+<License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
                 ]]></programlisting>
             </para>
         </section>
@@ -578,8 +578,8 @@ is.
     <Version>0.0.1</Version>
     <Framework>3.2.x</Framework>
     <Vendor>OTRS AG</Vendor>
-    <URL>http://otrs.org/</URL>
-    <License>GNU AFFERO GENERAL PUBLIC LICENSE 3. verzió, 2007. november</License>
+    <URL>https://otrs.com/</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <ChangeLog Version="1.1.2" Date="2013-02-15 18:45:21">Néhány funkció hozzáadva.</ChangeLog>
     <ChangeLog Version="1.1.1" Date="2013-02-15 16:17:51">Új csomag.</ChangeLog>
     <Description Lang="en">A web calendar.</Description>
