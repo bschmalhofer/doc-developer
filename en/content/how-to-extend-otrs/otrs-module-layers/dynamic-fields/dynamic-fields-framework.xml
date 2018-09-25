@@ -11,7 +11,7 @@
         The following picture shows the architecture of the Dynamic Fields framework.
     </para>
     <screenshot>
-        <graphic srccredit="" scale="50" fileref="screenshots/dfframework.png"></graphic>
+        <graphic fileref="screenshots/dfframework.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 
     <section id="dynamic-fields-framework-backends">

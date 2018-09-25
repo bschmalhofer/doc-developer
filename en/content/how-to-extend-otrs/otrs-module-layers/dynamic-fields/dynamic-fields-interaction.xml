@@ -15,7 +15,7 @@
         OTRS framework parts.
     </para>
     <screenshot>
-        <graphic srccredit="" scale="50" fileref="screenshots/dfInteraction.png"></graphic>
+        <graphic fileref="screenshots/dfInteraction.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
     <para>
         The first step is that the Frontend module reads the configured Dynamic Fields for example

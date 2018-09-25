@@ -80,11 +80,11 @@ Format:
         <programlisting><![CDATA[
 # --
 # Kernel/Output/HTML/NavBarABC.pm - shows a navbar item dynamicaly
-# Copyright (C) 2001-2014 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (AGPL). If you
-# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 
 package Kernel::Output::HTML::NavBarABC;
@@ -194,11 +194,11 @@ Format:
             <programlisting><![CDATA[
 # --
 # Kernel/System/PostMaster/Filter/Example.pm - a postmaster filter
-# Copyright (C) 2001-2014 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (AGPL). If you
-# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 
 package Kernel::System::PostMaster::Filter::Example;
@@ -286,7 +286,7 @@ sub Run {
             <para>
 The following image shows you the email processing flow.
             <screenshot>
-            <graphic srccredit="" scale="60" fileref="screenshots/email-processing.png"></graphic>
+            <graphic fileref="screenshots/email-processing.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
             </screenshot>
             </para>
         </section>
@@ -331,11 +331,11 @@ Format:
             <programlisting><![CDATA[
 # --
 # Kernel/Output/HTML/TicketMenuLock.pm
-# Copyright (C) 2001-2014 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (AGPL). If you
-# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 
 package Kernel::Output::HTML::TicketMenuLock;

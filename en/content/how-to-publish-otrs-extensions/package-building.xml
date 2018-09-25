@@ -62,7 +62,7 @@
             <para>
                 The vendor URL (required).
                 <programlisting><![CDATA[
-<URL>http://otrs.org/</URL>
+<URL>https://otrs.com/</URL>
                 ]]></programlisting>
             </para>
         </section>
@@ -71,7 +71,7 @@
             <para>
                 The license of the package (required).
                 <programlisting><![CDATA[
-<License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+<License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
                 ]]></programlisting>
             </para>
         </section>
@@ -472,8 +472,8 @@ $Kernel::OM->Get('Kernel::System::DB')->Do(SQL => "SOME SQL");
     <Version>0.0.1</Version>
     <Framework>3.2.x</Framework>
     <Vendor>OTRS AG</Vendor>
-    <URL>http://otrs.org/</URL>
-    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <URL>https://otrs.com/</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <ChangeLog Version="1.1.2" Date="2013-02-15 18:45:21">Added some feature.</ChangeLog>
     <ChangeLog Version="1.1.1" Date="2013-02-15 16:17:51">New package.</ChangeLog>
     <Description Lang="en">A web calendar.</Description>
@@ -526,7 +526,7 @@ shell>
             The following image shows you how the life cycle of a package
             installation/upgrade/uninstallation works in the backend step by step.
             <screenshot>
-                <graphic srccredit="" scale="60" fileref="screenshots/package-life-cycle.png"></graphic>
+                <graphic fileref="screenshots/package-life-cycle.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
             </screenshot>
         </para>
     </section>
