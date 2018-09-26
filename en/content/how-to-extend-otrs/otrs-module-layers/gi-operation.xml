@@ -143,11 +143,6 @@ sub Run {
                 This particular example returns the same data as came from the remote system,
                 unless <literal>TestError</literal> parameter is passed. In this case it returns an error.
             </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-                ]]></programlisting>
-            </para>
         </section>
         <section id="operation-configuration">
             <title>Configuration Example</title>
@@ -468,7 +463,7 @@ $Self->True(
         <section id="operation-wsdl">
             <title>WSDL Extension Example</title>
             <para>
-                WSDL files contains the definitions of the web services and its operations for SOAP
+                WSDL files contain the definitions of the web services and its operations for SOAP
                 messages, in case we will extend
                 <filename>development/webservices/GenericTickeConnectorSOAP.wsdl</filename>
                 in some places:
@@ -555,7 +550,7 @@ $Self->True(
         <section id="operation-wadl">
             <title>WADL Extension Example</title>
             <para>
-                WADL files contains the definitions of the web services and its operations for REST
+                WADL files contain the definitions of the web services and its operations for REST
                 interface, add a new resource to
                 <filename>development/webservices/GenericTickeConnectorREST.wadl</filename>.
             </para>
@@ -584,7 +579,7 @@ $Self->True(
         <section id="operation-soap">
             <title>Web Service SOAP Extension Example</title>
             <para>
-                Web services can be imported into OTRS by a YAML with with a predefined structure
+                Web services can be imported into OTRS by a YAML with a predefined structure
                 in this case we will extend
                 <filename>development/webservices/GenericTickeConnectorSOAP.yml</filename> for a
                 SOAP web service.
@@ -605,7 +600,7 @@ Provider:
         <section id="operation-rest">
             <title>Web Service REST Extension Example</title>
             <para>
-                Web services can be imported into OTRS by a YAML with with a predefined structure
+                Web services can be imported into OTRS by a YAML with a predefined structure
                 in this case we will extend
                 <filename>development/webservices/GenericTickeConnectorREST.yml</filename> for a
                 REST web service.

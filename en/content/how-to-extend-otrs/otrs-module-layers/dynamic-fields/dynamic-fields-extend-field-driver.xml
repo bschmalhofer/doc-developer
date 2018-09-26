@@ -69,15 +69,5 @@ sub Foo {
             The function <code>Foo()</code> has no special logic. It is only for testing and
             it always returns 1.
         </para>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            The normal OTRS footer for a Perl module file.
-        </para>
     </section>
 </section>
