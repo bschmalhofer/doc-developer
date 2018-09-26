@@ -95,7 +95,7 @@ shell:/opt/otrs>
         <para>
             OTRS provides a small and simple API for unit testing that was used in the previous example.
             Here we'll list the most important functions, please also see the online API reference of
-            <ulink url="http://otrs.github.io/doc/api/otrs/stable/Kernel/System/UnitTest.pm.html">
+            <ulink url="https://doc.otrs.com/doc/api/otrs/4.0/Perl/Kernel/System/UnitTest.pm.html">
                 <literal>Kernel::System::UnitTest</literal>
             </ulink>.
         </para>
