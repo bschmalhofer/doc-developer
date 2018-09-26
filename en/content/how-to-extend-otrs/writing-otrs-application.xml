@@ -105,7 +105,7 @@ Kernel/Language
                         <Item Key="Link">Action=AgentHelloWorld</Item>
                         <Item Key="LinkOption"></Item>
                         <Item Key="NavBar">HelloWorld</Item>
-                        <Item Key="Type"></Item>
+                        <Item Key="Type">Menu</Item>
                         <Item Key="Block"></Item>
                         <Item Key="AccessKey"></Item>
                         <Item Key="Prio">8400</Item>
