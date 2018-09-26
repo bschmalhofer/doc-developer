@@ -25,8 +25,7 @@ kiterjesztés csak a <code>Foo()</code> függvényt valósítja meg.
          <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/DynamicField/Driver/FooExtensionText.pm - Kiterjesztés a
-#     dinamikus mező szöveg illesztőprogramjához
+# Kernel/System/DynamicField/Driver/FooExtensionText.pm - Extension for DynamicField Text Driver
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -73,16 +72,6 @@ sub Foo {
         <para>
             A <code>Foo()</code> függvénynek nincs különleges logikája. Csak tesztelésre
 van, és mindig 1-et ad vissza.
-        </para>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            A normál OTRS lábléc egy Perl-modul fájlhoz.
         </para>
     </section>
 </section>

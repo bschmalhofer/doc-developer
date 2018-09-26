@@ -28,7 +28,7 @@ néven. Lent találhat egy példát.
         <para>
         <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Kernel/System/CustomerUser/Preferences/Custom.pm - néhány ügyfél-felhasználó függvény
+# Kernel/System/CustomerUser/Preferences/Custom.pm - some customer user functions
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # Id: Custom.pm,v 1.20 2009/10/07 20:41:50 martin Exp $
@@ -48,16 +48,16 @@ use vars qw(@ISA $VERSION);
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumhoz
+    # allocate new hash for object
     my $Self = {};
     bless( $Self, $Type );
 
-    # a szükséges objektumok ellenőrzése
+    # check needed objects
     for my $Object (qw(DBObject ConfigObject LogObject)) {
-        $Self->{$Object} = $Param{$Object} || die "Nincs $Object!";
+        $Self->{$Object} = $Param{$Object} || die "Got no $Object!";
     }
 
-    # beállítások tábla adatai
+    # preferences table data
     $Self->{PreferencesTable} = $Self->{ConfigObject}->Get('CustomerPreferences')->{Params}->{Table}
         || 'customer_preferences';
     $Self->{PreferencesTableKey}
@@ -80,7 +80,7 @@ sub SetPreferences {
     my $Key    = $Param{Key}    || return;
     my $Value = defined( $Param{Value} ) ? $Param{Value} : '';
 
-    # régi adatok törlése
+    # delete old data
     return if !$Self->{DBObject}->Do(
         SQL => "DELETE FROM $Self->{PreferencesTable} WHERE "
             . " $Self->{PreferencesTableUserID} = ? AND $Self->{PreferencesTableKey} = ?",
@@ -89,7 +89,7 @@ sub SetPreferences {
 
     $Value .= 'Custom';
 
-    # új adatok beszúrása
+    # insert new data
     return if !$Self->{DBObject}->Do(
         SQL => "INSERT INTO $Self->{PreferencesTable} ($Self->{PreferencesTableUserID}, "
             . " $Self->{PreferencesTableKey}, $Self->{PreferencesTableValue}) "
@@ -106,7 +106,7 @@ sub GetPreferences {
     my $UserID = $Param{UserID} || return;
     my %Data;
 
-    # beállítások lekérése
+    # get preferences
 
     return if !$Self->{DBObject}->Prepare(
         SQL => "SELECT $Self->{PreferencesTableKey}, $Self->{PreferencesTableValue} "
@@ -117,7 +117,7 @@ sub GetPreferences {
         $Data{ $Row[0] } = $Row[1];
     }
 
-    # adatok visszaadása
+    # return data
     return %Data;
 }
 
@@ -128,7 +128,7 @@ sub SearchPreferences {
     my $Key   = $Param{Key}   || '';
     my $Value = $Param{Value} || '';
 
-    # beállítások lekérése
+    # get preferences
     my $SQL = "SELECT $Self->{PreferencesTableUserID}, $Self->{PreferencesTableValue} "
         . " FROM "
         . " $Self->{PreferencesTable} "
@@ -143,7 +143,7 @@ sub SearchPreferences {
         $UserID{ $Row[0] } = $Row[1];
     }
 
-    # adatok visszaadása
+    # return data
     return %UserID;
 }
 

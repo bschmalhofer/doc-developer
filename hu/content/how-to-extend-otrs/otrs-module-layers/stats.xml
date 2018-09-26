@@ -50,7 +50,7 @@ szubrutin elmagyarázásra kerül.
             <para>
                 <programlisting><![CDATA[
 # --
-# Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - minden javasolt függvény
+# Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - all advice functions
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -516,7 +516,7 @@ statisztikák modul.
             <para>
                 <programlisting><![CDATA[
 # --
-# Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - minden javasolt függvény
+# Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - all advice functions
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -536,19 +536,19 @@ use Kernel::System::Ticket;
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumhoz
+    # allocate new hash for object
     my $Self = {};
     bless( $Self, $Type );
 
-    # a szükséges objektumok ellenőrzése
+    # check needed objects
     for my $Object (
         qw(DBObject ConfigObject LogObject UserObject TimeObject MainObject EncodeObject)
         )
     {
-        $Self->{$Object} = $Param{$Object} || die "Nincs $Object!";
+        $Self->{$Object} = $Param{$Object} || die "Got no $Object!";
     }
 
-    # a létrehozott szükséges objektumok
+    # created needed objects
     $Self->{QueueObject}    = Kernel::System::Queue->new( %{$Self} );
     $Self->{TicketObject}   = Kernel::System::Ticket->new( %{$Self} );
     $Self->{StateObject}    = Kernel::System::State->new( %{$Self} );
@@ -559,28 +559,28 @@ sub new {
 sub GetObjectName {
     my ( $Self, %Param ) = @_;
 
-    return 'Minta statisztikák';
+    return 'Sample Statistics';
 }
 
 sub GetObjectAttributes {
     my ( $Self, %Param ) = @_;
 
-    # állapotlista lekérése
+    # get state list
     my %StateList = $Self->{StateObject}->StateList(
         UserID => 1,
     );
 
-    # várólisták listájának lekérése
+    # get queue list
     my %QueueList = $Self->{QueueObject}->GetAllQueues();
 
-    # a jelenlegi idő lekérése a 3830. hiba javításához
+    # get current time to fix bug#3830
     my $TimeStamp = $Self->{TimeObject}->CurrentTimestamp();
     my ($Date) = split /\s+/, $TimeStamp;
     my $Today = sprintf "%s 23:59:59", $Date;
 
     my @ObjectAttributes = (
         {
-            Name             => 'Állapot',
+            Name             => 'State',
             UseAsXvalue      => 1,
             UseAsValueSeries => 1,
             UseAsRestriction => 1,
@@ -589,7 +589,7 @@ sub GetObjectAttributes {
             Values           => \%StateList,
         },
         {
-            Name             => 'Létrehozva várólistában',
+            Name             => 'Created in Queue',
             UseAsXvalue      => 1,
             UseAsValueSeries => 1,
             UseAsRestriction => 1,
@@ -599,7 +599,7 @@ sub GetObjectAttributes {
             Values           => \%QueueList,
         },
         {
-            Name             => 'Létrehozás ideje',
+            Name             => 'Create Time',
             UseAsXvalue      => 1,
             UseAsValueSeries => 1,
             UseAsRestriction => 1,
@@ -620,7 +620,7 @@ sub GetObjectAttributes {
 sub GetStatElement {
     my ( $Self, %Param ) = @_;
 
-    # jegyek keresése
+    # search tickets
     return $Self->{TicketObject}->TicketSearch(
         UserID     => 1,
         Result     => 'COUNT',
@@ -633,7 +633,7 @@ sub GetStatElement {
 sub ExportWrapper {
     my ( $Self, %Param ) = @_;
 
-    # azonosítók átalakítása a használt helyesíráshoz
+    # wrap ids to used spelling
     for my $Use (qw(UseAsValueSeries UseAsRestriction UseAsXvalue)) {
         ELEMENT:
         for my $Element ( @{ $Param{$Use} } ) {
@@ -664,7 +664,7 @@ sub ExportWrapper {
 sub ImportWrapper {
     my ( $Self, %Param ) = @_;
 
-    # a használt helyesírás átalakítása az azonosítókhoz
+    # wrap used spelling to ids
     for my $Use (qw(UseAsValueSeries UseAsRestriction UseAsXvalue)) {
         ELEMENT:
         for my $Element ( @{ $Param{$Use} } ) {
@@ -704,7 +704,7 @@ sub ImportWrapper {
                     else {
                         $Self->{LogObject}->Log(
                             Priority => 'error',
-                            Message  => "Importálás: Nem található az állapot: $ID->{Content}!"
+                            Message  => "Import: Can' find state $ID->{Content}!"
                         );
                         $ID = undef;
                     }
@@ -962,11 +962,11 @@ use Kernel::System::Queue;
 
 =head1 NAME
 
-StaticStatsTemplate.pm - a modul, amely létrehozza a statisztikákat a várólistákban lévő jegyekről
+StaticStatsTemplate.pm - the module that creates the stats about tickets in a queue
 
 =head1 SYNOPSIS
 
-Az összes függvény
+All functions
 
 =head1 PUBLIC INTERFACE
 
@@ -976,7 +976,7 @@ Az összes függvény
 
 =item new()
 
-egy objektum létrehozása
+create an object
 
     use Kernel::Config;
     use Kernel::System::Encode;
@@ -1020,20 +1020,20 @@ egy objektum létrehozása
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumhoz
+    # allocate new hash for object
     my $Self = {%Param};
     bless( $Self, $Type );
 
-    # az összes szükséges objektum ellenőrzése
+    # check all needed objects
     for my $Needed (
         qw(DBObject ConfigObject LogObject
         TimeObject MainObject EncodeObject)
         )
     {
-        $Self->{$Needed} = $Param{$Needed} || die "Nincs $Needed";
+        $Self->{$Needed} = $Param{$Needed} || die "Got no $Needed";
     }
 
-    # a szükséges objektumok létrehozása
+    # create needed objects
     $Self->{TypeObject}   = Kernel::System::Type->new( %{$Self} );
     $Self->{TicketObject} = Kernel::System::Ticket->new( %{$Self} );
     $Self->{QueueObject}  = Kernel::System::Queue->new( %{$Self} );
@@ -1043,7 +1043,7 @@ sub new {
 
 =item Param()
 
-Az összes paraméter lekérése, amelyet egy felhasználó megadhat.
+Get all parameters a user can specify.
 
     my @Params = $StatsObject->Param();
 
@@ -1079,7 +1079,7 @@ sub Param {
 
 =item Run()
 
-A statisztika előállítása.
+generate the statistic.
 
     my $StatsInfo = $StatsObject->Run(
         TypeIDs  => [
@@ -1095,25 +1095,25 @@ A statisztika előállítása.
 sub Run {
     my ( $Self, %Param ) = @_;
 
-    # a szükséges dolgok ellenőrzése
+    # check needed stuff
     for my $Needed (qw(TypeIDs QueueIDs)) {
         if ( !$Param{$Needed} ) {
             $Self->{LogObject}->Log(
                 Priority => 'error',
-                Message  => "Szükséges: $Needed!",
+                Message  => "Need $Needed!",
             );
             return;
         }
     }
 
-    # a jelentés címének beállítása
-    my $Title = 'Jegyek várólistánként';
+    # set report title
+    my $Title = 'Tickets per Queue';
 
-    # táblázat címsorok
+    # table headlines
     my @HeadData = (
-        'Jegyszám',
-        'Várólista',
-        'Típus',
+        'Ticket Number',
+        'Queue',
+        'Type',
     );
 
     my @Data;
@@ -1136,8 +1136,6 @@ sub Run {
 }
 
 1;
-
-=back
                 ]]></programlisting>
             </para>
         </section>

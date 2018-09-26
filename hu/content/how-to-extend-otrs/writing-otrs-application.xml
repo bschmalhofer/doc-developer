@@ -84,8 +84,8 @@ alábbi fájlt:
         <para>
             <programlisting><![CDATA[
 # --
-# Kernel/Modules/AgentHelloWorld.pm - előtétprogram modul
-# Copyright (C) (év) (szerző neve) (szerző e-mail címe)
+# Kernel/Modules/AgentHelloWorld.pm - frontend module
+# Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -97,13 +97,13 @@ package Kernel::Modules::AgentHelloWorld;
 use strict;
 use warnings;
 
-# Az előtétprogram-modulokat nem kezeli az objektumkezelő.
+# Frontend modules are not handled by the ObjectManager.
 our $ObjectManagerDisabled = 1;
 
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumhoz
+    # allocate new hash for object
     my $Self = {%Param};
     bless ($Self, $Type);
 
@@ -119,7 +119,7 @@ sub Run {
 
     $Data{HelloWorldText} = $HelloWorldObject->GetHelloWorldText();
 
-    # kimenet felépítése
+    # build output
     my $Output = $LayoutObject->Header(Title => "HelloWorld");
     $Output   .= $LayoutObject->NavigationBar();
     $Output   .= $LayoutObject->Output(
@@ -146,8 +146,8 @@ alábbi tartalommal:
         <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/HelloWorld.pm - alapmodul
-# Copyright (C) (év) (szerző neve) (szerző e-mail címe)
+# Kernel/System/HelloWorld.pm - core module
+# Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -159,7 +159,7 @@ package Kernel::System::HelloWorld;
 use strict;
 use warnings;
 
-# itt sorolja fel az objektum függőségeit (például Kernel::System::DB)
+# list your object dependencies (e.g. Kernel::System::DB) here
 our @ObjectDependencies = (
     # 'Kernel::System::DB',
 );
@@ -167,7 +167,7 @@ our @ObjectDependencies = (
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # kivonat lefoglalása az új objektumhoz
+    # allocate new hash for object
     my $Self = {};
     bless ($Self, $Type);
 
@@ -177,7 +177,7 @@ sub new {
 sub GetHelloWorldText {
     my ( $Self, %Param ) = @_;
 
-    # a DBObject lekérése a központi objektumkezelőtől
+    # Get the DBObject from the central object manager
     # my $DBObject = $Kernel::OM->Get('Kernel::System::DB');
 
     return 'Hello World!';
@@ -197,8 +197,8 @@ tartozó HTML sablon. Ezért hozzuk létre az alábbi fájlt:
         <para>
             <programlisting><![CDATA[
 # --
-# Kernel/Output/HTML/Templates/Standard/AgentHelloWorld.tt - áttekintő
-# Copyright (C) (év) (szerző neve) (szerző e-mail címe)
+# Kernel/Output/HTML/Templates/Standard/AgentHelloWorld.tt - overview
+# Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you

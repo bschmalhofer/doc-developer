@@ -92,7 +92,7 @@ ehelyett ez az egyéni modul működik visszacsatolási felületként.
             <para>
                 <programlisting><![CDATA[
 # --
-# Kernel/GenericInterface/Transport/HTTP/Test.pm - Általános felület hálózati átviteli felület teszteléshez
+# Kernel/GenericInterface/Transport/HTTP/Test.pm - GenericInterface network transport interface for testing
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -109,7 +109,7 @@ use HTTP::Request::Common;
 use LWP::UserAgent;
 use LWP::Protocol;
 
-# A „Used once” figyelmeztetések megelőzése a Kernel::OM osztálynál
+# prevent 'Used once' warning for Kernel::OM
 use Kernel::System::ObjectManager;
 
 our $ObjectManagerDisabled = 1;
@@ -334,11 +334,6 @@ ahol a távoli rendszerek nem érhetők el.
             <para>
                 Egy új modul kifejlesztéséhez nem ajánljuk ezen megközelítés használatát,
 egy valódi protokollt kell megvalósítani.
-            </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-                ]]></programlisting>
             </para>
         </section>
         <section id="transport-configuration">

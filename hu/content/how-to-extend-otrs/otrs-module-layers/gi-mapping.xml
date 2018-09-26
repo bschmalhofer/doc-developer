@@ -160,7 +160,7 @@ szubrutin elmagyarázásra kerül.
             <para>
                 <programlisting><![CDATA[
 # --
-# Kernel/GenericInterface/Mapping/Test.pm - Általános felület teszt adatleképező háttérprogram
+# Kernel/GenericInterface/Mapping/Test.pm - GenericInterface test data mapping backend
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -380,11 +380,6 @@ sub _Empty {
             <para>
                 Ezek azok a segédfüggvények, amelyek ténylegesen végrehajtják a
 szövegátalakításokat.
-            </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-                ]]></programlisting>
             </para>
         </section>
         <section id="mapping-configuration">

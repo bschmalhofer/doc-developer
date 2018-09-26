@@ -28,8 +28,8 @@ találhat egy példát.
         <para>
         <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Kernel/System/CustomerAuth/CustomAuth.pm - az egyéni hitelesítést biztosítja
-# Martin Edenhofer Kernel::System::Auth::DB osztálya alapján
+# Kernel/System/CustomerAuth/CustomAuth.pm - provides the custom Authentication
+# based on Martin Edenhofer's Kernel::System::Auth::DB
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # Id: CustomAuth.pm,v 1.11 2009/09/22 15:16:05 mb Exp $
@@ -49,29 +49,29 @@ use Authen::CustomAuth;
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumhoz
+    # allocate new hash for object
     my $Self = {};
     bless( $Self, $Type );
 
-    # a szükséges objektumok ellenőrzése
+    # check needed objects
     for (qw(LogObject ConfigObject DBObject)) {
-        $Self->{$_} = $Param{$_} || die "Nincs $_!";
+        $Self->{$_} = $Param{$_} || die "No $_!";
     }
 
-    # Hibakeresés: 0 = ki, 1 = be
+    # Debug 0=off 1=on
     $Self->{Debug} = 0;
 
-    # beállítás lekérése
+    # get config
     $Self->{Die}
         = $Self->{ConfigObject}->Get( 'Customer::AuthModule::CustomAuth::Die' . $Param{Count} );
 
-    # felhasználótábla lekérése
+    # get user table
     $Self->{CustomAuthHost}
         = $Self->{ConfigObject}->Get( 'Customer::AuthModule::CustomAuth::Host' . $Param{Count} )
-        || die "Customer::AuthModule::CustomAuth::Host$Param{Count} szükséges ebben: Kernel/Config.pm";
+        || die "Need Customer::AuthModule::CustomAuth::Host$Param{Count} in Kernel/Config.pm";
     $Self->{CustomAuthSecret}
         = $Self->{ConfigObject}->Get( 'Customer::AuthModule::CustomAuth::Password' . $Param{Count} )
-        || die "Customer::AuthModule::CustomAuth::Password$Param{Count} szükséges ebben: Kernel/Config.pm";
+        || die "Need Customer::AuthModule::CustomAuth::Password$Param{Count} in Kernel/Config.pm";
 
     return $Self;
 }
@@ -79,94 +79,94 @@ sub new {
 sub GetOption {
     my ( $Self, %Param ) = @_;
 
-    # a szükséges dolgok ellenőrzése
+    # check needed stuff
     if ( !$Param{What} ) {
-        $Self->{LogObject}->Log( Priority => 'error', Message => "Mi szükséges!" );
+        $Self->{LogObject}->Log( Priority => 'error', Message => "Need What!" );
         return;
     }
 
-    # modul beállítások
+    # module options
     my %Option = ( PreAuth => 0, );
 
-    # beállítás visszaadása
+    # return option
     return $Option{ $Param{What} };
 }
 
 sub Auth {
     my ( $Self, %Param ) = @_;
 
-    # a szükséges dolgok ellenőrzése
+    # check needed stuff
     if ( !$Param{User} ) {
-        $Self->{LogObject}->Log( Priority => 'error', Message => "Felhasználó szükséges!" );
+        $Self->{LogObject}->Log( Priority => 'error', Message => "Need User!" );
         return;
     }
 
-    # paraméterek lekérése
+    # get params
     my $User       = $Param{User}      || '';
     my $Pw         = $Param{Pw}        || '';
-    my $RemoteAddr = $ENV{REMOTE_ADDR} || 'A REMOTE_ADDR környezetet nem sikerült lekérni!';
+    my $RemoteAddr = $ENV{REMOTE_ADDR} || 'Got no REMOTE_ADDR env!';
     my $UserID     = '';
     my $GetPw      = '';
 
-    # csak hibakeresés esetén!
+    # just in case for debug!
     if ( $Self->{Debug} > 0 ) {
         $Self->{LogObject}->Log(
             Priority => 'notice',
-            Message  => "Felhasználó: „$User” megpróbált a következő jelszóval hitelesíteni: „$Pw” ($RemoteAddr)",
+            Message  => "User: '$User' tried to authentificate with Pw: '$Pw' ($RemoteAddr)",
         );
     }
 
-    # csak egy megjegyzés
+    # just a note
     if ( !$User ) {
         $Self->{LogObject}->Log(
             Priority => 'notice',
-            Message  => "Nincs felhasználó megadva!!! (REMOTE_ADDR: $RemoteAddr)",
+            Message  => "No User given!!! (REMOTE_ADDR: $RemoteAddr)",
         );
         return;
     }
 
-    # csak egy megjegyzés
+    # just a note
     if ( !$Pw ) {
         $Self->{LogObject}->Log(
             Priority => 'notice',
-            Message  => "Felhasználó: $User hitelesítés jelszó nélkül!!! (REMOTE_ADDR: $RemoteAddr)",
+            Message  => "User: $User Authentication without Pw!!! (REMOTE_ADDR: $RemoteAddr)",
         );
         return;
     }
 
-    # Egyéni objektum létrehozása
+    # Create a custom object
     my $CustomAuth = Authen::CustomAuth->new(
         Host   => $Self->{CustomAuthHost},
         Secret => $Self->{CustomAuthSecret},
     );
     if ( !$CustomAuth ) {
         if ( $Self->{Die} ) {
-            die "Nem lehet kapcsolódni ehhez: $Self->{CustomAuthHost}: $@";
+            die "Can't connect to $Self->{CustomAuthHost}: $@";
         }
         else {
             $Self->{LogObject}->Log(
                 Priority => 'error',
-                Message  => "Nem lehet kapcsolódni ehhez: $Self->{CustomAuthHost}: $@",
+                Message  => "Can't connect to $Self->{CustomAuthHost}: $@",
             );
             return;
         }
     }
     my $AuthResult = $CustomAuth->check_pwd( $User, $Pw );
 
-    # bejelentkezési jegyzet
+    # login note
     if ( defined($AuthResult) && $AuthResult == 1 ) {
         $Self->{LogObject}->Log(
             Priority => 'notice',
-            Message  => "Felhasználó: $User hitelesítése OK (REMOTE_ADDR: $RemoteAddr).",
+            Message  => "User: $User Authentication ok (REMOTE_ADDR: $RemoteAddr).",
         );
         return $User;
     }
 
-    # csak egy jegyzet
+    # just a note
     else {
         $Self->{LogObject}->Log(
             Priority => 'notice',
-            Message  => "Felhasználó: $User hitelesítése rossz jelszóval!!! (REMOTE_ADDR: $RemoteAddr)"
+            Message  => "User: $User Authentication with wrong Pw!!! (REMOTE_ADDR: $RemoteAddr)"
         );
         return;
     }

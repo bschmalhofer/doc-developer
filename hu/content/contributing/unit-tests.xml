@@ -22,7 +22,7 @@
         <para>
         <programlisting><![CDATA[
 # --
-# Calendar.t - Naptár
+# Calendar.t - Calendar
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -42,7 +42,7 @@ my $EventObject = $Kernel::OM->Get('Kernel::System::CalendarEvent');
 
 
 my $EventID = $EventObject->EventAdd(
-    Title => 'Valamilyen teszt',
+    Title => 'Some Test',
     StartTime => '1977-10-27 20:15',
     EndTime => '1977-10-27 21:00',
     State => 'public',
@@ -110,11 +110,11 @@ shell:/opt/otrs>
     <section>
         <title>Egységteszt API</title>
         <para>
-            Az OTRS egy kicsi és egyszerű API-t biztosít az egységteszteléshez, amely az
-előző példában volt használva. Itt fel fogjuk sorolni a legfontosabb
-függvényeket, de nézze meg a <ulink
-url="http://otrs.github.io/doc/api/otrs/stable/Kernel/System/UnitTest.pm.html"><literal>Kernel::System::UnitTest</literal></ulink>
-internetes API hivatkozását is.
+            OTRS provides a small and simple API for unit testing that was used in the
+previous example.  Here we'll list the most important functions, please also
+see the online API reference of <ulink
+url="https://doc.otrs.com/doc/api/otrs/5.0/Perl/Kernel/System/UnitTest.pm.html">
+<literal>Kernel::System::UnitTest</literal> </ulink>.
         </para>
 
         <section>

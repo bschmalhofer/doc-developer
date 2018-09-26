@@ -43,7 +43,7 @@ szubrutin elmagyarázásra kerül.
             <para>
                 <programlisting><![CDATA[
 # --
-# Kernel/GenericInterface/Invoker/Test.pm - Általános felület tesztadat meghívó háttérprogram
+# Kernel/GenericInterface/Invoker/Test.pm - GenericInterface test data Invoker backend
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -58,7 +58,7 @@ use warnings;
 
 use Kernel::System::VariableCheck qw(IsString IsStringWithData);
 
-# A „Used once” figyelmeztetés megelőzése a Kernel::OM osztálynál
+# prevent 'Used once' warning for Kernel::OM
 use Kernel::System::ObjectManager;
 
 our $ObjectManagerDisabled = 1;
@@ -240,11 +240,6 @@ egy hívás végrehajtása egy alapmodulhoz, az adatbázis frissítése, hiba
 küldése, stb.
                 </para>
             </note>
-            <para>
-                <programlisting><![CDATA[
-=back
-                ]]></programlisting>
-            </para>
         </section>
         <section id="invoker-configuration">
             <title>Beállítási példa</title>

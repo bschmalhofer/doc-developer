@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-24 20:56-0500\n"
+"POT-Creation-Date: 2018-09-26 11:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -957,11 +957,11 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Calendar.t - Calendar\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "use strict;\n"
@@ -992,7 +992,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/unit-tests.xml:21 en/content/contributing/unit-tests.xml:76 en/content/contributing/unit-tests.xml:113 en/content/contributing/unit-tests.xml:127 en/content/contributing/unit-tests.xml:141 en/content/contributing/unit-tests.xml:156 en/content/contributing/unit-tests.xml:172 en/content/contributing/unit-tests.xml:188 en/content/contributing/code-style-guide/css.xml:60 en/content/contributing/code-style-guide/css.xml:84 en/content/contributing/code-style-guide/css.xml:108 en/content/contributing/code-style-guide/javascript.xml:21 en/content/contributing/code-style-guide/perl.xml:17 en/content/contributing/code-style-guide/perl.xml:47 en/content/contributing/code-style-guide/perl.xml:57 en/content/contributing/code-style-guide/perl.xml:71 en/content/contributing/code-style-guide/perl.xml:80 en/content/contributing/code-style-guide/perl.xml:95 en/content/contributing/code-style-guide/perl.xml:111 en/content/contributing/code-style-guide/perl.xml:155 en/content/contributing/code-style-guide/perl.xml:172 en/content/contributing/code-style-guide/perl.xml:194 en/content/contributing/code-style-guide/perl.xml:237 en/content/contributing/code-style-guide/perl.xml:246 en/content/contributing/code-style-guide/perl.xml:258 en/content/contributing/code-style-guide/perl.xml:270 en/content/contributing/code-style-guide/perl.xml:282 en/content/contributing/code-style-guide/perl.xml:323 en/content/contributing/code-style-guide/perl.xml:344 en/content/contributing/code-style-guide/perl.xml:377 en/content/contributing/code-style-guide/perl.xml:386 en/content/contributing/code-style-guide/perl.xml:397 en/content/contributing/code-style-guide/perl.xml:410 en/content/contributing/code-style-guide/perl.xml:439 en/content/contributing/code-style-guide/perl.xml:450 en/content/contributing/code-style-guide/perl.xml:469 en/content/contributing/code-style-guide/perl.xml:480 en/content/contributing/code-style-guide/perl.xml:493 en/content/contributing/code-style-guide/perl.xml:508 en/content/contributing/code-style-guide/perl.xml:517 en/content/contributing/code-style-guide/perl.xml:527 en/content/contributing/code-style-guide/perl.xml:545 en/content/contributing/code-style-guide/perl.xml:560 en/content/contributing/code-style-guide/perl.xml:611 en/content/contributing/code-style-guide/perl.xml:747 en/content/contributing/code-style-guide/perl.xml:771 en/content/contributing/code-style-guide/perl.xml:782 en/content/how-it-works/config-mechanism.xml:52 en/content/how-it-works/config-mechanism.xml:68 en/content/how-it-works/config-mechanism.xml:107 en/content/how-it-works/config-mechanism.xml:119 en/content/how-it-works/config-mechanism.xml:137 en/content/how-it-works/config-mechanism.xml:150 en/content/how-it-works/config-mechanism.xml:163 en/content/how-it-works/config-mechanism.xml:179 en/content/how-it-works/config-mechanism.xml:195 en/content/how-it-works/config-mechanism.xml:208 en/content/how-it-works/config-mechanism.xml:236 en/content/how-it-works/config-mechanism.xml:282 en/content/how-it-works/config-mechanism.xml:313 en/content/how-it-works/config-mechanism.xml:321 en/content/how-it-works/database-mechanism.xml:81 en/content/how-it-works/database-mechanism.xml:89 en/content/how-it-works/database-mechanism.xml:97 en/content/how-it-works/loader.xml:93 en/content/how-it-works/loader.xml:110 en/content/how-it-works/loader.xml:156 en/content/how-it-works/loader.xml:185 en/content/how-it-works/loader.xml:215 en/content/how-it-works/loader.xml:264 en/content/how-it-works/loader.xml:320 en/content/how-it-works/loader.xml:347 en/content/how-it-works/loader.xml:400 en/content/how-it-works/log-mechanism.xml:13 en/content/how-it-works/skins.xml:41 en/content/how-it-works/skins.xml:54 en/content/how-it-works/skins.xml:110 en/content/how-it-works/skins.xml:122 en/content/how-it-works/skins.xml:132 en/content/how-it-works/skins.xml:167 en/content/how-it-works/skins.xml:180 en/content/how-it-works/templates.xml:60 en/content/how-it-works/templates.xml:79 en/content/how-it-works/templates.xml:89 en/content/how-it-works/templates.xml:106 en/content/how-it-works/templates.xml:118 en/content/how-it-works/templates.xml:127 en/content/how-it-works/templates.xml:139 en/content/how-it-works/templates.xml:174 en/content/how-it-works/templates.xml:189 en/content/how-it-works/templates.xml:215 en/content/how-it-works/templates.xml:224 en/content/how-it-works/templates.xml:233 en/content/how-it-works/templates.xml:242 en/content/how-it-works/templates.xml:261 en/content/how-it-works/templates.xml:283 en/content/how-it-works/templates.xml:311 en/content/how-it-works/templates.xml:335 en/content/how-it-works/templates.xml:370 en/content/how-it-works/templates.xml:419 en/content/how-it-works/templates.xml:473 en/content/how-it-works/templates.xml:529 en/content/how-it-works/translations.xml:22 en/content/how-it-works/translations.xml:45 en/content/how-it-works/translations.xml:107 en/content/how-it-works/translations.xml:157 en/content/how-to-extend-otrs/writing-otrs-application.xml:41 en/content/how-to-extend-otrs/writing-otrs-application.xml:79 en/content/how-to-extend-otrs/writing-otrs-application.xml:139 en/content/how-to-extend-otrs/writing-otrs-application.xml:190 en/content/how-to-extend-otrs/writing-otrs-application.xml:219 en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:181 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:88 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:181 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:156 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:18 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:40 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:69 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:97 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:151 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:166 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:233 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:255 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:144 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:223 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:320 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:360 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:382 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:37 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:66 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:95 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:147 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:169 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:201 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:490 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:504 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:525 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:553 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:573 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:603 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:624 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:83 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:114 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:139 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:190 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:247 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:285 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:324 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:346 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:133 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:42 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:126 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:56 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:134 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:41 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:65 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:94 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:106 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:205 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:220 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:239 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:252 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:283 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:358 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:372 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:415 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:453 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:661 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:721 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:751 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:807 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:856 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1108 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1113 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:25 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:140 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:46 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:67 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:102 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:154 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:174 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:189 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:211 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:257 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:57 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:87 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:105 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:165 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:60 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:147 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:22 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:49 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:75 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:61 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:73 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:16 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:58 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:73 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:145 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:189 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:16 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:42 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:76 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:122 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:157 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:296 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:363 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:512 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:18 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:27 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:49 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:72 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:30 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:63 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:138 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:231 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:299 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:347 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:377 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:386 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:396 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:406 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:416 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:425 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:434 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:444 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:467 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:478 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:490 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:499 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:510 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:521 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:535 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:545 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:555 en/content/how-to-extend-otrs/otrs-module-layers/email-handling/ticket-postmaster-modules.xml:25 en/content/how-to-extend-otrs/otrs-module-layers/email-handling/ticket-postmaster-modules.xml:52 en/content/how-to-publish-otrs-extensions/package-building.xml:22 en/content/how-to-publish-otrs-extensions/package-building.xml:33 en/content/how-to-publish-otrs-extensions/package-building.xml:44 en/content/how-to-publish-otrs-extensions/package-building.xml:52 en/content/how-to-publish-otrs-extensions/package-building.xml:65 en/content/how-to-publish-otrs-extensions/package-building.xml:76 en/content/how-to-publish-otrs-extensions/package-building.xml:87 en/content/how-to-publish-otrs-extensions/package-building.xml:98 en/content/how-to-publish-otrs-extensions/package-building.xml:110 en/content/how-to-publish-otrs-extensions/package-building.xml:123 en/content/how-to-publish-otrs-extensions/package-building.xml:136 en/content/how-to-publish-otrs-extensions/package-building.xml:147 en/content/how-to-publish-otrs-extensions/package-building.xml:159 en/content/how-to-publish-otrs-extensions/package-building.xml:171 en/content/how-to-publish-otrs-extensions/package-building.xml:183 en/content/how-to-publish-otrs-extensions/package-building.xml:196 en/content/how-to-publish-otrs-extensions/package-building.xml:212 en/content/how-to-publish-otrs-extensions/package-building.xml:240 en/content/how-to-publish-otrs-extensions/package-building.xml:261 en/content/how-to-publish-otrs-extensions/package-building.xml:277 en/content/how-to-publish-otrs-extensions/package-building.xml:295 en/content/how-to-publish-otrs-extensions/package-building.xml:313 en/content/how-to-publish-otrs-extensions/package-building.xml:331 en/content/how-to-publish-otrs-extensions/package-building.xml:349 en/content/how-to-publish-otrs-extensions/package-building.xml:367 en/content/how-to-publish-otrs-extensions/package-building.xml:392 en/content/how-to-publish-otrs-extensions/package-building.xml:410 en/content/how-to-publish-otrs-extensions/package-building.xml:431 en/content/how-to-publish-otrs-extensions/package-building.xml:455 en/content/how-to-publish-otrs-extensions/package-building.xml:476 en/content/how-to-publish-otrs-extensions/package-building.xml:501 en/content/how-to-publish-otrs-extensions/package-building.xml:511 en/content/how-to-publish-otrs-extensions/package-building.xml:530 en/content/how-to-publish-otrs-extensions/package-porting.xml:36 en/content/how-to-publish-otrs-extensions/package-porting.xml:61 en/content/how-to-publish-otrs-extensions/package-porting.xml:91 en/content/how-to-publish-otrs-extensions/package-porting.xml:173 en/content/how-to-publish-otrs-extensions/package-porting.xml:207 en/content/how-to-publish-otrs-extensions/package-porting.xml:249 en/content/how-to-publish-otrs-extensions/package-porting.xml:265 en/content/how-to-publish-otrs-extensions/package-porting.xml:326 en/content/how-to-publish-otrs-extensions/package-porting.xml:428 en/content/how-to-publish-otrs-extensions/package-porting.xml:470 en/content/how-to-publish-otrs-extensions/package-porting.xml:677
+#: en/content/contributing/unit-tests.xml:21 en/content/contributing/unit-tests.xml:76 en/content/contributing/unit-tests.xml:113 en/content/contributing/unit-tests.xml:127 en/content/contributing/unit-tests.xml:141 en/content/contributing/unit-tests.xml:156 en/content/contributing/unit-tests.xml:172 en/content/contributing/unit-tests.xml:188 en/content/contributing/code-style-guide/css.xml:60 en/content/contributing/code-style-guide/css.xml:84 en/content/contributing/code-style-guide/css.xml:108 en/content/contributing/code-style-guide/javascript.xml:21 en/content/contributing/code-style-guide/perl.xml:17 en/content/contributing/code-style-guide/perl.xml:47 en/content/contributing/code-style-guide/perl.xml:57 en/content/contributing/code-style-guide/perl.xml:71 en/content/contributing/code-style-guide/perl.xml:80 en/content/contributing/code-style-guide/perl.xml:95 en/content/contributing/code-style-guide/perl.xml:111 en/content/contributing/code-style-guide/perl.xml:153 en/content/contributing/code-style-guide/perl.xml:170 en/content/contributing/code-style-guide/perl.xml:192 en/content/contributing/code-style-guide/perl.xml:235 en/content/contributing/code-style-guide/perl.xml:244 en/content/contributing/code-style-guide/perl.xml:256 en/content/contributing/code-style-guide/perl.xml:268 en/content/contributing/code-style-guide/perl.xml:280 en/content/contributing/code-style-guide/perl.xml:321 en/content/contributing/code-style-guide/perl.xml:342 en/content/contributing/code-style-guide/perl.xml:375 en/content/contributing/code-style-guide/perl.xml:384 en/content/contributing/code-style-guide/perl.xml:395 en/content/contributing/code-style-guide/perl.xml:408 en/content/contributing/code-style-guide/perl.xml:437 en/content/contributing/code-style-guide/perl.xml:448 en/content/contributing/code-style-guide/perl.xml:467 en/content/contributing/code-style-guide/perl.xml:478 en/content/contributing/code-style-guide/perl.xml:491 en/content/contributing/code-style-guide/perl.xml:506 en/content/contributing/code-style-guide/perl.xml:515 en/content/contributing/code-style-guide/perl.xml:525 en/content/contributing/code-style-guide/perl.xml:543 en/content/contributing/code-style-guide/perl.xml:558 en/content/contributing/code-style-guide/perl.xml:609 en/content/contributing/code-style-guide/perl.xml:745 en/content/contributing/code-style-guide/perl.xml:769 en/content/contributing/code-style-guide/perl.xml:780 en/content/how-it-works/config-mechanism.xml:52 en/content/how-it-works/config-mechanism.xml:68 en/content/how-it-works/config-mechanism.xml:107 en/content/how-it-works/config-mechanism.xml:119 en/content/how-it-works/config-mechanism.xml:137 en/content/how-it-works/config-mechanism.xml:150 en/content/how-it-works/config-mechanism.xml:163 en/content/how-it-works/config-mechanism.xml:179 en/content/how-it-works/config-mechanism.xml:195 en/content/how-it-works/config-mechanism.xml:208 en/content/how-it-works/config-mechanism.xml:236 en/content/how-it-works/config-mechanism.xml:282 en/content/how-it-works/config-mechanism.xml:313 en/content/how-it-works/config-mechanism.xml:321 en/content/how-it-works/database-mechanism.xml:81 en/content/how-it-works/database-mechanism.xml:89 en/content/how-it-works/database-mechanism.xml:97 en/content/how-it-works/loader.xml:93 en/content/how-it-works/loader.xml:110 en/content/how-it-works/loader.xml:156 en/content/how-it-works/loader.xml:185 en/content/how-it-works/loader.xml:215 en/content/how-it-works/loader.xml:264 en/content/how-it-works/loader.xml:320 en/content/how-it-works/loader.xml:347 en/content/how-it-works/loader.xml:400 en/content/how-it-works/log-mechanism.xml:13 en/content/how-it-works/skins.xml:41 en/content/how-it-works/skins.xml:54 en/content/how-it-works/skins.xml:110 en/content/how-it-works/skins.xml:122 en/content/how-it-works/skins.xml:132 en/content/how-it-works/skins.xml:167 en/content/how-it-works/skins.xml:180 en/content/how-it-works/templates.xml:60 en/content/how-it-works/templates.xml:79 en/content/how-it-works/templates.xml:89 en/content/how-it-works/templates.xml:106 en/content/how-it-works/templates.xml:118 en/content/how-it-works/templates.xml:127 en/content/how-it-works/templates.xml:139 en/content/how-it-works/templates.xml:174 en/content/how-it-works/templates.xml:189 en/content/how-it-works/templates.xml:215 en/content/how-it-works/templates.xml:224 en/content/how-it-works/templates.xml:233 en/content/how-it-works/templates.xml:242 en/content/how-it-works/templates.xml:261 en/content/how-it-works/templates.xml:283 en/content/how-it-works/templates.xml:311 en/content/how-it-works/templates.xml:335 en/content/how-it-works/templates.xml:370 en/content/how-it-works/templates.xml:419 en/content/how-it-works/templates.xml:473 en/content/how-it-works/templates.xml:529 en/content/how-it-works/translations.xml:22 en/content/how-it-works/translations.xml:45 en/content/how-it-works/translations.xml:107 en/content/how-it-works/translations.xml:157 en/content/how-to-extend-otrs/writing-otrs-application.xml:41 en/content/how-to-extend-otrs/writing-otrs-application.xml:79 en/content/how-to-extend-otrs/writing-otrs-application.xml:139 en/content/how-to-extend-otrs/writing-otrs-application.xml:190 en/content/how-to-extend-otrs/writing-otrs-application.xml:219 en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:181 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:88 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:181 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:156 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:18 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:40 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:69 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:97 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:151 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:166 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:240 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:144 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:223 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:320 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:367 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:37 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:66 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:95 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:154 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:186 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:475 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:489 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:510 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:538 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:558 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:588 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:609 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:83 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:114 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:139 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:190 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:247 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:285 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:331 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:133 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:42 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:126 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:56 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:134 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:41 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:65 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:94 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:106 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:205 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:220 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:239 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:252 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:283 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:358 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:372 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:415 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:453 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:661 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:721 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:751 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:807 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:856 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1096 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1101 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:25 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:140 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:46 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:67 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:102 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:154 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:174 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:189 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:211 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:257 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:57 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:87 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:105 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:165 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:60 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:22 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:49 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:75 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:61 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:16 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:58 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:73 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:145 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:189 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:16 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:42 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:76 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:122 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:157 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:296 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:363 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:512 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:18 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:27 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:49 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:72 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:30 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:63 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:138 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:231 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:299 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:357 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:366 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:376 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:386 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:396 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:405 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:414 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:424 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:447 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:458 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:470 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:479 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:490 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:501 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:515 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:525 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:535 en/content/how-to-extend-otrs/otrs-module-layers/email-handling/ticket-postmaster-modules.xml:25 en/content/how-to-extend-otrs/otrs-module-layers/email-handling/ticket-postmaster-modules.xml:52 en/content/how-to-publish-otrs-extensions/package-building.xml:22 en/content/how-to-publish-otrs-extensions/package-building.xml:33 en/content/how-to-publish-otrs-extensions/package-building.xml:44 en/content/how-to-publish-otrs-extensions/package-building.xml:52 en/content/how-to-publish-otrs-extensions/package-building.xml:65 en/content/how-to-publish-otrs-extensions/package-building.xml:76 en/content/how-to-publish-otrs-extensions/package-building.xml:87 en/content/how-to-publish-otrs-extensions/package-building.xml:98 en/content/how-to-publish-otrs-extensions/package-building.xml:110 en/content/how-to-publish-otrs-extensions/package-building.xml:123 en/content/how-to-publish-otrs-extensions/package-building.xml:136 en/content/how-to-publish-otrs-extensions/package-building.xml:147 en/content/how-to-publish-otrs-extensions/package-building.xml:159 en/content/how-to-publish-otrs-extensions/package-building.xml:171 en/content/how-to-publish-otrs-extensions/package-building.xml:183 en/content/how-to-publish-otrs-extensions/package-building.xml:196 en/content/how-to-publish-otrs-extensions/package-building.xml:212 en/content/how-to-publish-otrs-extensions/package-building.xml:240 en/content/how-to-publish-otrs-extensions/package-building.xml:261 en/content/how-to-publish-otrs-extensions/package-building.xml:277 en/content/how-to-publish-otrs-extensions/package-building.xml:295 en/content/how-to-publish-otrs-extensions/package-building.xml:313 en/content/how-to-publish-otrs-extensions/package-building.xml:331 en/content/how-to-publish-otrs-extensions/package-building.xml:349 en/content/how-to-publish-otrs-extensions/package-building.xml:367 en/content/how-to-publish-otrs-extensions/package-building.xml:392 en/content/how-to-publish-otrs-extensions/package-building.xml:410 en/content/how-to-publish-otrs-extensions/package-building.xml:431 en/content/how-to-publish-otrs-extensions/package-building.xml:455 en/content/how-to-publish-otrs-extensions/package-building.xml:476 en/content/how-to-publish-otrs-extensions/package-building.xml:501 en/content/how-to-publish-otrs-extensions/package-building.xml:511 en/content/how-to-publish-otrs-extensions/package-building.xml:530 en/content/how-to-publish-otrs-extensions/package-porting.xml:36 en/content/how-to-publish-otrs-extensions/package-porting.xml:61 en/content/how-to-publish-otrs-extensions/package-porting.xml:91 en/content/how-to-publish-otrs-extensions/package-porting.xml:173 en/content/how-to-publish-otrs-extensions/package-porting.xml:207 en/content/how-to-publish-otrs-extensions/package-porting.xml:249 en/content/how-to-publish-otrs-extensions/package-porting.xml:265 en/content/how-to-publish-otrs-extensions/package-porting.xml:326 en/content/how-to-publish-otrs-extensions/package-porting.xml:428 en/content/how-to-publish-otrs-extensions/package-porting.xml:470 en/content/how-to-publish-otrs-extensions/package-porting.xml:677
 msgid "<placeholder type=\"programlisting\" id=\"0\"/>"
 msgstr ""
 
@@ -1065,7 +1065,7 @@ msgid ""
 "OTRS provides a small and simple API for unit testing that was used in the "
 "previous example.  Here we'll list the most important functions, please also "
 "see the online API reference of <ulink "
-"url=\"http://otrs.github.io/doc/api/otrs/stable/Kernel/System/UnitTest.pm.html\"> "
+"url=\"https://doc.otrs.com/doc/api/otrs/5.0/Perl/Kernel/System/UnitTest.pm.html\"> "
 "<literal>Kernel::System::UnitTest</literal> </ulink>."
 msgstr ""
 
@@ -1389,7 +1389,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/javascript.xml:43 en/content/contributing/code-style-guide/perl.xml:368
+#: en/content/contributing/code-style-guide/javascript.xml:43 en/content/contributing/code-style-guide/perl.xml:366
 msgid "Variables"
 msgstr ""
 
@@ -1426,7 +1426,7 @@ msgid "TODO..."
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/javascript.xml:71 en/content/contributing/code-style-guide/perl.xml:639
+#: en/content/contributing/code-style-guide/javascript.xml:71 en/content/contributing/code-style-guide/perl.xml:637
 msgid "Code Comments"
 msgstr ""
 
@@ -1615,11 +1615,11 @@ msgstr ""
 msgid ""
 "# --\n"
 "# (file name) - a short description what it does\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 msgstr ""
 
@@ -1635,44 +1635,41 @@ msgid ""
 "#!/usr/bin/perl\n"
 "# --\n"
 "# (file name) - a short description what it does\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
-"# This program is free software; you can redistribute it and/or modify\n"
-"# it under the terms of the GNU AFFERO General Public License as published "
-"by\n"
-"# the Free Software Foundation; either version 3 of the License, or\n"
-"# any later version.\n"
+"# This program is free software: you can redistribute it and/or modify\n"
+"# it under the terms of the GNU General Public License as published by\n"
+"# the Free Software Foundation, either version 3 of the License, or\n"
+"# (at your option) any later version.\n"
 "#\n"
 "# This program is distributed in the hope that it will be useful,\n"
 "# but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n"
 "# GNU General Public License for more details.\n"
 "#\n"
-"# You should have received a copy of the GNU Affero General Public License\n"
-"# along with this program; if not, write to the Free Software\n"
-"# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  "
-"USA\n"
-"# or see http://www.gnu.org/licenses/agpl.txt.\n"
+"# You should have received a copy of the GNU General Public License\n"
+"# along with this program. If not, see "
+"https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 msgstr ""
 
 #. type: Content of: <section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:139
+#: en/content/contributing/code-style-guide/perl.xml:137
 msgid "Using the Perl language"
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:142
+#: en/content/contributing/code-style-guide/perl.xml:140
 msgid "Control flow"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:145
+#: en/content/contributing/code-style-guide/perl.xml:143
 msgid "Conditions"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:147
+#: en/content/contributing/code-style-guide/perl.xml:145
 msgid ""
 "Conditions can be quite complex and there can be \"chained\" conditions "
 "(linked with logical 'or' or 'and' operations).  When coding for OTRS, you "
@@ -1680,7 +1677,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:151
+#: en/content/contributing/code-style-guide/perl.xml:149
 msgid ""
 "Perl Best Practices says, that high precedence operators "
 "(<literal>&amp;&amp;</literal> and <literal>||</literal>) shouldn't mixed up "
@@ -1690,7 +1687,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:155
+#: en/content/contributing/code-style-guide/perl.xml:153
 #, no-wrap
 msgid ""
 "if ( $Condition1 && $Condition2 ) { ... }\n"
@@ -1701,14 +1698,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:165
+#: en/content/contributing/code-style-guide/perl.xml:163
 msgid ""
 "This means that you have to be aware of traps. Sometimes you need to use "
 "parenthesis to make clear what you want."
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:168
+#: en/content/contributing/code-style-guide/perl.xml:166
 msgid ""
 "If you have long conditions (line is longer than 120 characters over all), "
 "you have to break it in several lines.  And the start of the conditions is "
@@ -1716,7 +1713,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:172
+#: en/content/contributing/code-style-guide/perl.xml:170
 #, no-wrap
 msgid ""
 "if (\n"
@@ -1734,7 +1731,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:189
+#: en/content/contributing/code-style-guide/perl.xml:187
 msgid ""
 "Also note, that the right parenthesis is in a line on its own and the left "
 "curly bracket is also in a new line and with the same indentation as the "
@@ -1743,7 +1740,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:194
+#: en/content/contributing/code-style-guide/perl.xml:192
 #, no-wrap
 msgid ""
 "if (\n"
@@ -1778,12 +1775,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:228
+#: en/content/contributing/code-style-guide/perl.xml:226
 msgid "Postfix <literal>if</literal>"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:230
+#: en/content/contributing/code-style-guide/perl.xml:228
 msgid ""
 "Generally we use \"postfix <literal>if</literal>\" statements to reduce the "
 "number of levels.  But we don't use it for multiline statements and is only "
@@ -1792,23 +1789,23 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:234 en/content/contributing/code-style-guide/perl.xml:267
+#: en/content/contributing/code-style-guide/perl.xml:232 en/content/contributing/code-style-guide/perl.xml:265
 msgid "This is correct:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:237
+#: en/content/contributing/code-style-guide/perl.xml:235
 #, no-wrap
 msgid "next ITEM if !$ItemId;\n"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:243 en/content/contributing/code-style-guide/perl.xml:279 en/content/contributing/code-style-guide/perl.xml:557
+#: en/content/contributing/code-style-guide/perl.xml:241 en/content/contributing/code-style-guide/perl.xml:277 en/content/contributing/code-style-guide/perl.xml:555
 msgid "This is wrong:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:246
+#: en/content/contributing/code-style-guide/perl.xml:244
 #, no-wrap
 msgid ""
 "return $Self->{LogObject}->Log(\n"
@@ -1818,12 +1815,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:255
+#: en/content/contributing/code-style-guide/perl.xml:253
 msgid "This is less maintainable than this:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:258
+#: en/content/contributing/code-style-guide/perl.xml:256
 #, no-wrap
 msgid ""
 "if( !$ItemId ) {\n"
@@ -1833,7 +1830,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:270
+#: en/content/contributing/code-style-guide/perl.xml:268
 #, no-wrap
 msgid ""
 "for my $Needed (1..10) {\n"
@@ -1843,47 +1840,47 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:282
+#: en/content/contributing/code-style-guide/perl.xml:280
 #, no-wrap
 msgid "my $Var = 1 if $Something == 'Yes';\n"
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:291
+#: en/content/contributing/code-style-guide/perl.xml:289
 msgid "Restrictions for the use of some Perl builtins"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:293
+#: en/content/contributing/code-style-guide/perl.xml:291
 msgid "Some builtin subroutines of Perl may not be used in every place:"
 msgstr ""
 
 #. type: Content of: <section><section><section><para><itemizedlist><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:298
+#: en/content/contributing/code-style-guide/perl.xml:296
 msgid ""
 "Don't use <literal>die</literal> and <literal>exit</literal> in "
 "<filename>.pm</filename> files."
 msgstr ""
 
 #. type: Content of: <section><section><section><para><itemizedlist><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:301
+#: en/content/contributing/code-style-guide/perl.xml:299
 msgid "Don't use the <literal>Dumper</literal> function in released files."
 msgstr ""
 
 #. type: Content of: <section><section><section><para><itemizedlist><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:304
+#: en/content/contributing/code-style-guide/perl.xml:302
 msgid "Don't use <literal>print</literal> in <filename>.pm</filename> files."
 msgstr ""
 
 #. type: Content of: <section><section><section><para><itemizedlist><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:307
+#: en/content/contributing/code-style-guide/perl.xml:305
 msgid ""
 "Don't use <literal>require</literal>, use <literal>Main::Require()</literal> "
 "instead."
 msgstr ""
 
 #. type: Content of: <section><section><section><para><itemizedlist><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:310
+#: en/content/contributing/code-style-guide/perl.xml:308
 msgid ""
 "Use the functions of the <literal>TimeObject</literal> instead of the "
 "builtin functions like <literal>time()</literal>, "
@@ -1891,12 +1888,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:317
+#: en/content/contributing/code-style-guide/perl.xml:315
 msgid "Regular Expressions"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:319
+#: en/content/contributing/code-style-guide/perl.xml:317
 msgid ""
 "For regular expressions we always use the <literal>m//</literal> operator "
 "with curly braces as delimiters. We also use the modifiers "
@@ -1906,7 +1903,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:323
+#: en/content/contributing/code-style-guide/perl.xml:321
 #, no-wrap
 msgid ""
 "$Date =~ m{ \\A \\d{4} - \\d{2} - \\d{2} \\z }xms\n"
@@ -1920,7 +1917,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:336
+#: en/content/contributing/code-style-guide/perl.xml:334
 msgid ""
 "As the space no longer has a special meaning, you have to use a single "
 "character class to match a single space (<literal>[ ]</literal>).  If you "
@@ -1928,7 +1925,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:340
+#: en/content/contributing/code-style-guide/perl.xml:338
 msgid ""
 "In the regex, the dot (<literal>.</literal>) includes the newline (whereas "
 "in regex without <literal>s</literal> modifier the dot means 'everything but "
@@ -1937,7 +1934,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:344
+#: en/content/contributing/code-style-guide/perl.xml:342
 #, no-wrap
 msgid ""
 "$Text =~ m{\n"
@@ -1948,12 +1945,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:355
+#: en/content/contributing/code-style-guide/perl.xml:353
 msgid "Naming"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:357
+#: en/content/contributing/code-style-guide/perl.xml:355
 msgid ""
 "Names and comments are written in English. Variables, objects and methods "
 "must be descriptive nouns or noun phrases with the first letter set upper "
@@ -1962,7 +1959,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:361
+#: en/content/contributing/code-style-guide/perl.xml:359
 msgid ""
 "Names should be as descriptive as possible.  A reader should be able to say "
 "what is meant by a name without digging too deep into the code. E.g. use "
@@ -1972,30 +1969,30 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:371
+#: en/content/contributing/code-style-guide/perl.xml:369
 msgid "Declaration"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:374
+#: en/content/contributing/code-style-guide/perl.xml:372
 msgid ""
 "If you have several variables, you can declare them in one line if they "
 "\"belong together\":"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:377
+#: en/content/contributing/code-style-guide/perl.xml:375
 #, no-wrap
 msgid "my ($Minute, $Hour, $Year);\n"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:383
+#: en/content/contributing/code-style-guide/perl.xml:381
 msgid "Otherwise break it into separate lines:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:386
+#: en/content/contributing/code-style-guide/perl.xml:384
 #, no-wrap
 msgid ""
 "\n"
@@ -2004,14 +2001,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:394
+#: en/content/contributing/code-style-guide/perl.xml:392
 msgid ""
 "Do not set to <literal>undef</literal> or <literal>''</literal> in the "
 "declaration as this might hide mistakes in code."
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:397
+#: en/content/contributing/code-style-guide/perl.xml:395
 #, no-wrap
 msgid ""
 "my $Variable = undef;\n"
@@ -2022,14 +2019,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:407
+#: en/content/contributing/code-style-guide/perl.xml:405
 msgid ""
 "You can set a variable to <literal>''</literal> if you want to concatenate "
 "strings:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:410
+#: en/content/contributing/code-style-guide/perl.xml:408
 #, no-wrap
 msgid ""
 "my $SqlStatement = '';\n"
@@ -2039,22 +2036,22 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:419
+#: en/content/contributing/code-style-guide/perl.xml:417
 msgid "Otherwise you would get an \"uninitialized\" warning."
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:425
+#: en/content/contributing/code-style-guide/perl.xml:423
 msgid "Subroutines"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:428
+#: en/content/contributing/code-style-guide/perl.xml:426
 msgid "Handling of parameters"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:431
+#: en/content/contributing/code-style-guide/perl.xml:429
 msgid ""
 "To fetch the parameters passed to subroutines, OTRS normally uses the hash "
 "<literal>%Param</literal> (not <literal>%Params</literal>).  This leads to "
@@ -2063,14 +2060,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:435
+#: en/content/contributing/code-style-guide/perl.xml:433
 msgid ""
 "Just in some exceptions a regular list of parameters should be used.  So we "
 "want to avoid something like this:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:439
+#: en/content/contributing/code-style-guide/perl.xml:437
 #, no-wrap
 msgid ""
 "sub TestSub {\n"
@@ -2079,12 +2076,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:447
+#: en/content/contributing/code-style-guide/perl.xml:445
 msgid "We want to use this instead:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:450
+#: en/content/contributing/code-style-guide/perl.xml:448
 #, no-wrap
 msgid ""
 "sub TestSub {\n"
@@ -2093,7 +2090,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:458
+#: en/content/contributing/code-style-guide/perl.xml:456
 msgid ""
 "This has several advantages: We do not have to change the code in the "
 "subroutine when a new parameter should be passed, and calling a function "
@@ -2101,19 +2098,19 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:464
+#: en/content/contributing/code-style-guide/perl.xml:462
 msgid "Multiple named parameters"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:466
+#: en/content/contributing/code-style-guide/perl.xml:464
 msgid ""
 "If a function call requires more than one named parameter, split them into "
 "multiple lines:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:469
+#: en/content/contributing/code-style-guide/perl.xml:467
 #, no-wrap
 msgid ""
 "    $Self->{LogObject}->Log(\n"
@@ -2123,12 +2120,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:477
+#: en/content/contributing/code-style-guide/perl.xml:475
 msgid "Instead of:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:480
+#: en/content/contributing/code-style-guide/perl.xml:478
 #, no-wrap
 msgid ""
 "    $Self->{LogObject}->Log( Priority => 'error', Message  => \"Need "
@@ -2136,12 +2133,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:487
+#: en/content/contributing/code-style-guide/perl.xml:485
 msgid "<literal>return</literal> statements"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:489
+#: en/content/contributing/code-style-guide/perl.xml:487
 msgid ""
 "Subroutines have to have a <literal>return</literal> statement.  The "
 "explicit <literal>return</literal> statement is preferred over the implicit "
@@ -2150,7 +2147,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:493
+#: en/content/contributing/code-style-guide/perl.xml:491
 #, no-wrap
 msgid ""
 "sub TestSub {\n"
@@ -2160,25 +2157,25 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:503
+#: en/content/contributing/code-style-guide/perl.xml:501
 msgid "Explicit return values"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:505
+#: en/content/contributing/code-style-guide/perl.xml:503
 msgid ""
 "Explicit return values means that you should not have a "
 "<literal>return</literal> statement followed by a subroutine call."
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:508
+#: en/content/contributing/code-style-guide/perl.xml:506
 #, no-wrap
 msgid "return $Self->{DBObject}->Do( ... );\n"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:514
+#: en/content/contributing/code-style-guide/perl.xml:512
 msgid ""
 "The following example is better as this says explicitly what is "
 "returned. With the example above the reader doesn't know what the return "
@@ -2186,7 +2183,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:517
+#: en/content/contributing/code-style-guide/perl.xml:515
 #, no-wrap
 msgid ""
 "return if !$Self->{DBObject}->Do( ... );\n"
@@ -2194,14 +2191,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:524
+#: en/content/contributing/code-style-guide/perl.xml:522
 msgid ""
 "If you assign the result of a subroutine to a variable, a \"good\" variable "
 "name indicates what was returned:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:527
+#: en/content/contributing/code-style-guide/perl.xml:525
 #, no-wrap
 msgid ""
 "my $SuccessfulInsert = $Self->{DBObject}->Do( ... );\n"
@@ -2209,24 +2206,24 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:537
+#: en/content/contributing/code-style-guide/perl.xml:535
 msgid "Packages"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:540
+#: en/content/contributing/code-style-guide/perl.xml:538
 msgid "<literal>use</literal> statements"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:542
+#: en/content/contributing/code-style-guide/perl.xml:540
 msgid ""
 "<literal>use strict</literal> and <literal>use warnings</literal> have to be "
 "the first two \"use\"s in a module. This is correct:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:545
+#: en/content/contributing/code-style-guide/perl.xml:543
 #, no-wrap
 msgid ""
 "package Kernel::System::ITSMConfigItem::History;\n"
@@ -2239,7 +2236,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:560
+#: en/content/contributing/code-style-guide/perl.xml:558
 #, no-wrap
 msgid ""
 "package Kernel::System::ITSMConfigItem::History;\n"
@@ -2252,55 +2249,55 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:574
+#: en/content/contributing/code-style-guide/perl.xml:572
 msgid "Objects and their allocation"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:576
+#: en/content/contributing/code-style-guide/perl.xml:574
 msgid ""
 "In OTRS many objects are available. But you should not use every object in "
 "every file to keep the frontend/backend separation."
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:582
+#: en/content/contributing/code-style-guide/perl.xml:580
 msgid ""
 "Don't use the <literal>LayoutObject</literal> in core modules "
 "(<filename>Kernel/System</filename>)."
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:585
+#: en/content/contributing/code-style-guide/perl.xml:583
 msgid ""
 "Don't use the <literal>ParamObject</literal> in core modules "
 "(<filename>Kernel/System</filename>)."
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:588
+#: en/content/contributing/code-style-guide/perl.xml:586
 msgid ""
 "Don't use the <literal>DBObject</literal> in frontend modules "
 "(<filename>Kernel/Modules</filename>)."
 msgstr ""
 
 #. type: Content of: <section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:599
+#: en/content/contributing/code-style-guide/perl.xml:597
 msgid "Writing good documentation"
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:602
+#: en/content/contributing/code-style-guide/perl.xml:600
 msgid "Perldoc"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:605
+#: en/content/contributing/code-style-guide/perl.xml:603
 msgid "Documenting subroutines"
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:608
+#: en/content/contributing/code-style-guide/perl.xml:606
 msgid ""
 "Subroutines should always be documented. The documentation contains a "
 "general description about what the subroutine does, a sample subroutine call "
@@ -2309,7 +2306,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:611
+#: en/content/contributing/code-style-guide/perl.xml:609
 #, no-wrap
 msgid ""
 "=item LastTimeObjectChanged()\n"
@@ -2334,14 +2331,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:633
+#: en/content/contributing/code-style-guide/perl.xml:631
 msgid ""
 "You can copy and paste a <literal>Data::Dumper</literal> output for the "
 "return values."
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:642
+#: en/content/contributing/code-style-guide/perl.xml:640
 msgid ""
 "In general, you should try to write your code as readable and "
 "self-explaining as possible.  Don't write a comment to explain what obvious "
@@ -2351,34 +2348,34 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:649
+#: en/content/contributing/code-style-guide/perl.xml:647
 msgid "Please adhere to the following guidelines:"
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><term>
-#: en/content/contributing/code-style-guide/perl.xml:655
+#: en/content/contributing/code-style-guide/perl.xml:653
 msgid "Make the code so readable that comments are not needed, if possible."
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:658
+#: en/content/contributing/code-style-guide/perl.xml:656
 msgid ""
 "It's always preferable to write code so that it is very readable and "
 "self-explaining, for example with precise variable and function names."
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><term>
-#: en/content/contributing/code-style-guide/perl.xml:663
+#: en/content/contributing/code-style-guide/perl.xml:661
 msgid "Don't say what the code says (DRY)."
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:666
+#: en/content/contributing/code-style-guide/perl.xml:664
 msgid "Don't repeat (obvious) code in the comments."
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:668
+#: en/content/contributing/code-style-guide/perl.xml:666
 #, no-wrap
 msgid ""
 "# WRONG:\n"
@@ -2388,12 +2385,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><term>
-#: en/content/contributing/code-style-guide/perl.xml:677
+#: en/content/contributing/code-style-guide/perl.xml:675
 msgid "Document <emphasis>why</emphasis> the code is there, not how it works."
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:680
+#: en/content/contributing/code-style-guide/perl.xml:678
 msgid ""
 "Usually, code comments should explain the <emphasis>purpose</emphasis> of "
 "code, not how it works in detail. There might be exceptions for specially "
@@ -2402,31 +2399,31 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><term>
-#: en/content/contributing/code-style-guide/perl.xml:685
+#: en/content/contributing/code-style-guide/perl.xml:683
 msgid "Document pitfalls."
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:688
+#: en/content/contributing/code-style-guide/perl.xml:686
 msgid ""
 "Everything that is unclear, tricky or that puzzled you during development "
 "should be documented."
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><term>
-#: en/content/contributing/code-style-guide/perl.xml:693
+#: en/content/contributing/code-style-guide/perl.xml:691
 msgid "Use full-line sentence-style comments to document algorithm paragraphs."
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:696
+#: en/content/contributing/code-style-guide/perl.xml:694
 msgid ""
 "Always use full sentences (uppercase first letter and final "
 "period). Subsequent lines of a sentence should be indented."
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:698
+#: en/content/contributing/code-style-guide/perl.xml:696
 #, no-wrap
 msgid ""
 "# Check if object name is provided.\n"
@@ -2444,19 +2441,19 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><term>
-#: en/content/contributing/code-style-guide/perl.xml:714
+#: en/content/contributing/code-style-guide/perl.xml:712
 msgid "Use short end-of-line comments to add detail information."
 msgstr ""
 
 #. type: Content of: <section><section><section><variablelist><varlistentry><listitem><para>
-#: en/content/contributing/code-style-guide/perl.xml:717
+#: en/content/contributing/code-style-guide/perl.xml:715
 msgid ""
 "These can either be a complete sentence (capital first letter and period) or "
 "just a phrase (lowercase first letter and no period)."
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:719
+#: en/content/contributing/code-style-guide/perl.xml:717
 #, no-wrap
 msgid ""
 "$BuildMode = oct $Param{Mode};   # *from* octal, not *to* octal\n"
@@ -2468,17 +2465,17 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:735
+#: en/content/contributing/code-style-guide/perl.xml:733
 msgid "Database interaction"
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:738
+#: en/content/contributing/code-style-guide/perl.xml:736
 msgid "Declaration of SQL statements"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:740
+#: en/content/contributing/code-style-guide/perl.xml:738
 msgid ""
 "If there is no chance for changing the SQL statement, it should be used in "
 "the <literal>Prepare</literal> function.  The reason for this is, that the "
@@ -2486,14 +2483,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:744
+#: en/content/contributing/code-style-guide/perl.xml:742
 msgid ""
 "The SQL statement should be written as one nicely indented string without "
 "concatenation like this:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:747
+#: en/content/contributing/code-style-guide/perl.xml:745
 #, no-wrap
 msgid ""
 "return if !$Self->{DBObject}->Prepare(\n"
@@ -2509,7 +2506,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:761
+#: en/content/contributing/code-style-guide/perl.xml:759
 msgid ""
 "This is easy to read and modify, and the whitespace can be handled well by "
 "our supported DBMSs.  For auto-generated SQL code (like in "
@@ -2517,35 +2514,35 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:766
+#: en/content/contributing/code-style-guide/perl.xml:764
 msgid "Returning on errors"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:768
+#: en/content/contributing/code-style-guide/perl.xml:766
 msgid ""
 "Whenever you use database functions you should handle errors. If anything "
 "goes wrong, return from subroutine:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:771
+#: en/content/contributing/code-style-guide/perl.xml:769
 #, no-wrap
 msgid "return if !$Self->{DBObject}->Prepare( ... );\n"
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:777
+#: en/content/contributing/code-style-guide/perl.xml:775
 msgid "Using Limit"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:779
+#: en/content/contributing/code-style-guide/perl.xml:777
 msgid "Use <literal>Limit => 1</literal> if you expect just one row to be returned."
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:782
+#: en/content/contributing/code-style-guide/perl.xml:780
 #, no-wrap
 msgid ""
 "$Self->{DBObject}->Prepare(\n"
@@ -2556,12 +2553,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/contributing/code-style-guide/perl.xml:792
+#: en/content/contributing/code-style-guide/perl.xml:790
 msgid "Using the <literal>while</literal> loop"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/contributing/code-style-guide/perl.xml:794
+#: en/content/contributing/code-style-guide/perl.xml:792
 msgid ""
 "Always use the <literal>while</literal> loop, even when you expect one row "
 "to be returned, as some databases do not release the statement handle and "
@@ -6363,8 +6360,8 @@ msgid ""
 "# Copyright (C) (year) (name of author) (email of author)\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::Modules::AgentHelloWorld;\n"
@@ -6432,8 +6429,8 @@ msgid ""
 "# Copyright (C) (year) (name of author) (email of author)\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::HelloWorld;\n"
@@ -6489,8 +6486,8 @@ msgid ""
 "# Copyright (C) (year) (name of author) (email of author)\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "<h1>[% Translate(\"Overview\") | html %]: [% Translate(\"HelloWorld\") "
 "%]</h1>\n"
@@ -6594,13 +6591,13 @@ msgid ""
 "# Kernel/System/Auth/CustomAuth.pm - provides the CustomAuth "
 "authentication\n"
 "# based on Martin Edenhofer's Kernel::System::Auth::DB\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# ID: CustomAuth.pm,v 1.1 2010/05/10 15:30:34 fk Exp $\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Auth::CustomAuth;\n"
@@ -6749,7 +6746,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:80 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:175 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:150 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:249 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:376 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:163 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:340 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:118 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:130 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:130 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:128 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:132
+#: en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:80 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:175 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:150 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:234 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:361 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:148 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:325 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:118 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:130 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:130 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:128 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:132
 msgid "Configuration Example"
 msgstr ""
 
@@ -6780,7 +6777,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:193 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:100 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:201 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:186 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:202 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:151 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:152 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:156 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:156 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:153 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:691 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1085 en/content/how-to-extend-otrs/otrs-module-layers/ticketevent.xml:58 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.xml:57
+#: en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:193 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:100 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:201 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:186 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:202 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:151 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:152 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:156 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:156 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:153 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:691 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1073 en/content/how-to-extend-otrs/otrs-module-layers/ticketevent.xml:58 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.xml:57
 msgid "Release Availability"
 msgstr ""
 
@@ -6863,13 +6860,13 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/System/Auth/Sync/CustomAuthSync.pm - provides the CustomAuthSync\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# Id: CustomAuthSync.pm,v 1.9 2010/03/25 14:42:45 martin Exp $\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Auth::Sync::CustomAuthSync;\n"
@@ -6949,7 +6946,7 @@ msgid "2.4"
 msgstr ""
 
 #. type: Content of: <section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:121 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:196 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:152 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:685 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1079 en/content/how-to-extend-otrs/otrs-module-layers/ticketevent.xml:52 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:165 en/content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.xml:48
+#: en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:121 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:196 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:152 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:685 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1067 en/content/how-to-extend-otrs/otrs-module-layers/ticketevent.xml:52 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:165 en/content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.xml:48
 msgid "Caveats and Warnings"
 msgstr ""
 
@@ -6997,13 +6994,13 @@ msgid ""
 "# Kernel/System/CustomerAuth/CustomAuth.pm - provides the custom "
 "Authentication\n"
 "# based on Martin Edenhofer's Kernel::System::Auth::DB\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# Id: CustomAuth.pm,v 1.11 2009/09/22 15:16:05 mb Exp $\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::CustomerAuth::CustomAuth;\n"
@@ -7222,13 +7219,13 @@ msgid ""
 "# --\n"
 "# Kernel/System/CustomerUser/Preferences/Custom.pm - some customer user "
 "functions\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# Id: Custom.pm,v 1.20 2009/10/07 20:41:50 martin Exp $\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::CustomerUser::Preferences::Custom;\n"
@@ -7427,11 +7424,11 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/Output/HTML/DashboardTicketStatsGeneric.pm - message of the day\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::Output::HTML::DashboardTicketStatsGeneric;\n"
@@ -7702,11 +7699,11 @@ msgid ""
 "# --\n"
 "# Kernel/GenericInterface/Invoker/Test.pm - GenericInterface test data "
 "Invoker backend\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::GenericInterface::Invoker::Test::Test;\n"
@@ -7937,32 +7934,15 @@ msgid ""
 "update the database, send an error, etc."
 msgstr ""
 
-#. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:233
-#, no-wrap
-msgid ""
-"=back\n"
-"\n"
-"=head1 TERMS AND CONDITIONS\n"
-"\n"
-"This software is part of the OTRS project (L<http://otrs.org/>).\n"
-"\n"
-"This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"the enclosed file COPYING for license information (AGPL). If you\n"
-"did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.\n"
-"\n"
-"=cut\n"
-msgstr ""
-
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:251
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:236
 msgid ""
 "There is the need to register this invoker module to be accessible in the "
 "OTRS GUI.  This can be done using the XML configuration below."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:255
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:240
 #, no-wrap
 msgid ""
 "<ConfigItem Name=\"GenericInterface::Invoker::Module###Test::Test\" "
@@ -8163,11 +8143,11 @@ msgid ""
 "# --\n"
 "# Kernel/GenericInterface/Mapping/Test.pm - GenericInterface test data "
 "mapping backend\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::GenericInterface::Mapping::Test;\n"
@@ -8398,32 +8378,15 @@ msgstr ""
 msgid "This are the helper functions that actually performs the string conversions."
 msgstr ""
 
-#. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:360 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:147 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:324
-#, no-wrap
-msgid ""
-"1;\n"
-"\n"
-"=head1 TERMS AND CONDITIONS\n"
-"\n"
-"This software is part of the OTRS project (L<http://otrs.org/>).\n"
-"\n"
-"This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"the enclosed file COPYING for license information (AGPL). If you\n"
-"did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.\n"
-"\n"
-"=cut\n"
-msgstr ""
-
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:378
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:363
 msgid ""
 "There is the need to register this mapping module to be accessible in the "
 "OTRS GUI.  This can be done using the XML configuration below."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:382
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:367
 #, no-wrap
 msgid ""
 "<ConfigItem Name=\"GenericInterface::Mapping::Module###Test\" Required=\"0\" "
@@ -8493,11 +8456,11 @@ msgid ""
 "# --\n"
 "# Kernel/GenericInterface/Operation/Test/Test.pm - GenericInterface test "
 "operation backend\n"
-"# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::GenericInterface::Operation::Test::Test;\n"
@@ -8608,14 +8571,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:165
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:150
 msgid ""
 "There is the need to register this operation module to be accessible in the "
 "OTRS GUI. This can be done using the XML configuration below."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:169
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:154
 #, no-wrap
 msgid ""
 "<ConfigItem Name=\"GenericInterface::Operation::Module###Test::Test\" "
@@ -8636,12 +8599,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:186
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:171
 msgid "Unit Test Example"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:188
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:173
 msgid ""
 "Unit Test for Generic Interface operations does not differs from other unit "
 "tests but it is needed to consider testing locally, but also simulating a "
@@ -8650,27 +8613,27 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:194
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:179
 msgid ""
 "To learn more about unit tests, please take a look to the <link "
 "linkend=\"unit-tests\">Unit Test Chapter</link>."
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:198
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:183
 msgid "The following is just the starting point for a unit test:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:201
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:186
 #, no-wrap
 msgid ""
 "# --\n"
-"# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "## no critic (Modules::RequireExplicitPackage)\n"
@@ -8947,26 +8910,26 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:479
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:464
 msgid "WSDL Extension Example"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:481
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:466
 msgid ""
-"WSDL files contains the definitions of the web services and its operations "
+"WSDL files contain the definitions of the web services and its operations "
 "for SOAP messages, in case we will extend "
 "<filename>development/webservices/GenericTickeConnectorSOAP.wsdl</filename> "
 "in some places:"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:487
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:472
 msgid "Port Type:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:490
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:475
 #, no-wrap
 msgid ""
 "    <wsdl:portType name=\"GenericTicketConnector_PortType\">\n"
@@ -8979,12 +8942,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:501
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:486
 msgid "Binding:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:504
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:489
 #, no-wrap
 msgid ""
 "    <wsdl:binding name=\"GenericTicketConnector_Binding\" "
@@ -9007,12 +8970,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:522
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:507
 msgid "Type:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:525
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:510
 #, no-wrap
 msgid ""
 "    <wsdl:types>\n"
@@ -9043,12 +9006,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:550
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:535
 msgid "Message:"
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:553
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:538
 #, no-wrap
 msgid ""
 "    <!-- ... -->\n"
@@ -9062,20 +9025,20 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:566
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:551
 msgid "WADL Extension Example"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:568
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:553
 msgid ""
-"WADL files contains the definitions of the web services and its operations "
+"WADL files contain the definitions of the web services and its operations "
 "for REST interface, add a new resource to "
 "<filename>development/webservices/GenericTickeConnectorREST.wadl</filename>."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:573
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:558
 #, no-wrap
 msgid ""
 "  <resources "
@@ -9104,21 +9067,21 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:595
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:580
 msgid "Web Service SOAP Extension Example"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:597
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:582
 msgid ""
-"Web services can be imported into OTRS by a YAML with with a predefined "
-"structure in this case we will extend "
+"Web services can be imported into OTRS by a YAML with a predefined structure "
+"in this case we will extend "
 "<filename>development/webservices/GenericTickeConnectorSOAP.yml</filename> "
 "for a SOAP web service."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:603
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:588
 #, no-wrap
 msgid ""
 "Provider:\n"
@@ -9132,21 +9095,21 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:616
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:601
 msgid "Web Service REST Extension Example"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:618
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:603
 msgid ""
-"Web services can be imported into OTRS by a YAML with with a predefined "
-"structure in this case we will extend "
+"Web services can be imported into OTRS by a YAML with a predefined structure "
+"in this case we will extend "
 "<filename>development/webservices/GenericTickeConnectorREST.yml</filename> "
 "for a REST web service."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:624
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:609
 #, no-wrap
 msgid ""
 "Provider:\n"
@@ -9292,11 +9255,11 @@ msgid ""
 "# --\n"
 "# Kernel/GenericInterface/Transport/HTTP/Test.pm - GenericInterface network "
 "transport interface for testing\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::GenericInterface::Transport::HTTP::Test;\n"
@@ -9572,14 +9535,14 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:342
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:327
 msgid ""
 "There is the need to register this network transport module to be accessible "
 "in the OTRS GUI. This can be done using the XML configuration below."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:346
+#: en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:331
 #, no-wrap
 msgid ""
 "<ConfigItem Name=\"GenericInterface::Transport::Module###HTTP::Test\" "
@@ -9637,11 +9600,11 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/System/Log/CustomFile.pm - file log backend\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Log::CustomFile;\n"
@@ -9743,7 +9706,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/log.xml:125 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:94 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:659 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1067 en/content/how-to-extend-otrs/otrs-module-layers/ticketevent.xml:20 en/content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.xml:32
+#: en/content/how-to-extend-otrs/otrs-module-layers/log.xml:125 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:94 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:659 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1055 en/content/how-to-extend-otrs/otrs-module-layers/ticketevent.xml:20 en/content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.xml:32
 msgid "Configuration example"
 msgstr ""
 
@@ -9774,7 +9737,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/log.xml:146 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:679 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1073
+#: en/content/how-to-extend-otrs/otrs-module-layers/log.xml:146 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:679 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1061
 msgid "Use case examples"
 msgstr ""
 
@@ -9847,11 +9810,11 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/Output/HTML/NotificationCustom.pm\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::Output::HTML::NotificationCustom;\n"
@@ -10260,13 +10223,13 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/System/Queue/PreferencesCustom.pm - some user functions\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# Id: PreferencesCustom.pm,v 1.5 2009/02/16 11:47:34 tr Exp $\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Queue::PreferencesCustom;\n"
@@ -10439,13 +10402,13 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/System/Service/PreferencesCustom - some user functions\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# Id: PreferencesCustom.pm,v 1.2 2009/02/16 11:47:34 tr Exp $\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Service::PreferencesCustom;\n"
@@ -10607,11 +10570,11 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/System/SLA/PreferencesCustom.pm - some user functions\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::SLA::PreferencesCustom;\n"
@@ -10810,11 +10773,11 @@ msgid ""
 "# --\n"
 "# Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - all advice "
 "functions\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Stats::Dynamic::DynamicStatsTemplate;\n"
@@ -11381,11 +11344,11 @@ msgid ""
 "# --\n"
 "# Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - all advice "
 "functions\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Stats::Dynamic::DynamicStatsTemplate;\n"
@@ -11619,7 +11582,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:681 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1075
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:681 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1063
 msgid "Use cases."
 msgstr ""
 
@@ -11833,11 +11796,11 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/System/Stats/Static/StaticStatsTemplate.pm\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Stats::Static::StaticStatsTemplate;\n"
@@ -12028,44 +11991,32 @@ msgid ""
 "}\n"
 "\n"
 "1;\n"
-"\n"
-"=back\n"
-"\n"
-"=head1 TERMS AND CONDITIONS\n"
-"\n"
-"This software is part of the OTRS project (http://otrs.org/).\n"
-"\n"
-"This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"the enclosed file COPYING for license information (AGPL). If you\n"
-"did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
-"\n"
-"=cut\n"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1069
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1057
 msgid ""
 "There is no configuration needed. Right after installation, the module is "
 "available to create a statistic for this module."
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1081
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1069
 msgid "Caveats and Warnings for static stats."
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1087
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1075
 msgid "Static stat modules are available since OTRS 1.3."
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1091
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1079
 msgid "Using old static stats"
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1093
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1081
 msgid ""
 "Standard OTRS versions 1.3 and 2.0 already facilitated the generation of "
 "stats.  Various stats for OTRS versions 1.3 and 2.0 which have been "
@@ -12074,7 +12025,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1098
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1086
 msgid ""
 "The files must merely be moved from the "
 "<filename>Kernel/System/Stats/</filename> path to "
@@ -12084,18 +12035,18 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1105
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1093
 msgid "The following example shows how the first path is amended."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1108
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1096
 #, no-wrap
 msgid "    package Kernel::System::Stats::AccountedTime;\n"
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1113
+#: en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1101
 #, no-wrap
 msgid "    package Kernel::System::Stats::Static::AccountedTime;\n"
 msgstr ""
@@ -12505,13 +12456,13 @@ msgstr ""
 msgid ""
 "# --\n"
 "# Kernel/Output/HTML/TicketMenuCustom.pm\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# Id: TicketMenuCustom.pm,v 1.17 2010/04/12 21:34:06 martin Exp $\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::Output::HTML::TicketMenuCustom;\n"
@@ -12875,11 +12826,11 @@ msgstr ""
 #, no-wrap
 msgid ""
 "# --\n"
-"# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::Daemon::DaemonModules::TestDaemon;\n"
@@ -12903,7 +12854,7 @@ msgstr ""
 #: en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:94 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:79
 msgid ""
 "This is common header that can be found in most OTRS modules. The "
-"class/package name is declared via the package keyword."
+"class/package name is declared via the <literal>package</literal> keyword."
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
@@ -13219,11 +13170,11 @@ msgstr ""
 #, no-wrap
 msgid ""
 "# --\n"
-"# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package "
@@ -13377,11 +13328,11 @@ msgid ""
 "# --\n"
 "# Kernel/System/DynamicField/FooExtensionBackend.pm - Extension for "
 "DynamicField backend\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::DynamicField::FooExtensionBackend;\n"
@@ -13502,30 +13453,6 @@ msgid ""
 "the function. To do that it is necessary to implement a mechanism in the "
 "Frontend module to require a special behavior on the Dynamic Field, and only "
 "after call the function in the Backend object."
-msgstr ""
-
-#. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:147 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:73 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:347
-#, no-wrap
-msgid ""
-"1;\n"
-"\n"
-"=back\n"
-"\n"
-"=head1 TERMS AND CONDITIONS\n"
-"\n"
-"This software is part of the OTRS project (L<http://otrs.org/>).\n"
-"\n"
-"This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"the enclosed file COPYING for license information (AGPL). If you\n"
-"did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.\n"
-"\n"
-"=cut\n"
-msgstr ""
-
-#. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:164 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:90 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:364
-msgid "The normal OTRS footer for a Perl module file."
 msgstr ""
 
 #. type: Content of: <section><title>
@@ -13675,11 +13602,11 @@ msgid ""
 "# --\n"
 "# Kernel/System/DynamicField/Driver/FooExtensionText.pm - Extension for "
 "DynamicField Text Driver\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::DynamicField::Driver::FooExtensionText;\n"
@@ -14467,11 +14394,11 @@ msgid ""
 "# --\n"
 "# AdminDynamicFieldPassword.tt - provides HTML form for "
 "AdminDynamicFieldPassword\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 msgstr ""
 
@@ -14794,11 +14721,11 @@ msgid ""
 "# --\n"
 "# Kernel/Modules/AdminDynamicFieldPassword.pm - provides a dynamic fields "
 "password config view for admins\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::Modules::AdminDynamicFieldPassword;\n"
@@ -15588,11 +15515,11 @@ msgid ""
 "# --\n"
 "# Kernel/System/DynamicField/Driver/Password.pm - Driver for DynamicField "
 "Password backend\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::DynamicField::Driver::Password;\n"
@@ -15935,12 +15862,12 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:369
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:349
 msgid "Other Functions:"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:371
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:351
 msgid ""
 "The following are other functions that are might needed if the new Dynamic "
 "Field does not inherit from other classes. To see the complete code of this "
@@ -15950,13 +15877,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:377
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:357
 #, no-wrap
 msgid "sub ValueGet { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:382
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:362
 msgid ""
 "This function retrieves the value from the field on a specified Object. In "
 "this case we are returning the first text value, since the field only stores "
@@ -15964,13 +15891,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:386
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:366
 #, no-wrap
 msgid "sub ValueSet { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:391
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:371
 msgid ""
 "<code>ValueSet()</code> is used to store a Dynamic Field value. In this case "
 "this field only stores one text type value. Other fields could store more "
@@ -15979,13 +15906,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:396
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:376
 #, no-wrap
 msgid "sub ValueDelete { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:401
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:381
 msgid ""
 "This function is used to delete one field value attached to a particular "
 "object ID.  For example if the instance of an object is to be deleted, then "
@@ -15994,13 +15921,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:406
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:386
 #, no-wrap
 msgid "sub AllValuesDelete { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:411
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:391
 msgid ""
 "<code>AllValuesDelete()</code> function is used to delete all values from a "
 "certain Dynamic Field. This function is very useful when a Dynamic Field is "
@@ -16008,26 +15935,26 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:416
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:396
 #, no-wrap
 msgid "sub ValueValidate { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:421
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:401
 msgid ""
 "The <code>ValueValidate()</code> function is used to check if the value is "
 "consistent to its type."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:425
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:405
 #, no-wrap
 msgid "sub SearchSQLGet { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:430
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:410
 msgid ""
 "This function is used by <literal>TicketSearch</literal> core module to "
 "build the internal query to search for a ticket based on this field as a "
@@ -16035,13 +15962,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:434
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:414
 #, no-wrap
 msgid "sub SearchSQLOrderFieldGet { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:439
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:419
 msgid ""
 "The <literal>SearchSQLOrderFieldGet</literal> is also a helper for "
 "<literal>TicketSearch</literal> "
@@ -16052,13 +15979,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:444
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:424
 #, no-wrap
 msgid "sub EditFieldValueGet { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:449
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:429
 msgid ""
 "<code>EditFieldValueGet()</code> is a function used in the edit screens of "
 "OTRS and its purpose is to get the value of the field, either from a "
@@ -16069,7 +15996,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:455
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:435
 msgid ""
 "There are two return formats for this function, the normal: that is just the "
 "raw value or a structure: that is the pair field name =&gt; field value. For "
@@ -16079,7 +16006,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:461
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:441
 msgid ""
 "If the result should be a structure then, normally this is used to store its "
 "values in a template, like a generic agent profile. For example a date field "
@@ -16088,13 +16015,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:467
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:447
 #, no-wrap
 msgid "sub EditFieldValueValidate { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:472
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:452
 msgid ""
 "This function should provide at least a method to validate if the field is "
 "empty, and return an error if the field is empty and mandatory, but it can "
@@ -16104,13 +16031,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:478
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:458
 #, no-wrap
 msgid "sub SearchFieldRender { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:483
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:463
 msgid ""
 "This function is used by ticket search dialog and it is similar to "
 "<code>EditFieldRander()</code>, but normally on a search screen small "
@@ -16121,26 +16048,26 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:490
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:470
 #, no-wrap
 msgid "sub SearchFieldValueGet { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:495
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:475
 msgid ""
 "Very similar to <code>EditFieldValueGet()</code>, but uses a different name "
 "prefix, adapted for the search dialog screen."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:499
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:479
 #, no-wrap
 msgid "sub SearchFieldParameterBuild { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:504
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:484
 msgid ""
 "<code>SearchFieldParameterBuild()</code> is used also by the ticket search "
 "dialog to set the correct operator and value to do the search on this "
@@ -16149,13 +16076,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:510
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:490
 #, no-wrap
 msgid "sub StatsFieldParameterBuild { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:515
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:495
 msgid ""
 "This function is used by the stats modules. It includes the field definition "
 "in the stats format. For fields with fixed values it also includes all this "
@@ -16165,13 +16092,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:521
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:501
 #, no-wrap
 msgid "sub StatsSearchFieldParameterBuild { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:526
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:506
 msgid ""
 "<code>StatsSearchFieldParameterBuild()</code> is very similar to the "
 "<code>SearchFieldParameterBuild()</code>. The difference is that the "
@@ -16180,18 +16107,18 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:532
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:512
 msgid "This function is used by statistics module."
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:535
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:515
 #, no-wrap
 msgid "sub TemplateValueTypeGet { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:540
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:520
 msgid ""
 "The <code>TemplateValueTypeGet()</code> function is used to know how the "
 "Dynamic Field values stored on a profile should be retrieved, as a SCALAR or "
@@ -16200,13 +16127,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:545
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:525
 #, no-wrap
 msgid "sub RandomValueSet { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:550
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:530
 msgid ""
 "This function is used by <filename>otrs.FillDB.pl</filename> script to "
 "populate the database with some test and random data. The value inserted by "
@@ -16215,13 +16142,13 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:555
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:535
 #, no-wrap
 msgid "sub ObjectMatch { ... }\n"
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:560
+#: en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:540
 msgid ""
 "Used by the notification modules. This function returns 1 if the field is "
 "present in the <literal>$Param{ObjectAttributes}</literal> parameter and if "
@@ -16442,11 +16369,11 @@ msgstr ""
 #, no-wrap
 msgid ""
 "# --\n"
-"# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
 "# --\n"
 "# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
-"# the enclosed file COPYING for license information (AGPL). If you\n"
-"# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
 "# --\n"
 "\n"
 "package Kernel::System::PostMaster::Filter::Example;\n"
@@ -16666,7 +16593,7 @@ msgstr ""
 #. type: CDATA
 #: en/content/how-to-publish-otrs-extensions/package-building.xml:76
 #, no-wrap
-msgid "<URL>http://otrs.org/</URL>\n"
+msgid "<URL>https://otrs.com/</URL>\n"
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
@@ -16682,9 +16609,7 @@ msgstr ""
 #. type: CDATA
 #: en/content/how-to-publish-otrs-extensions/package-building.xml:87
 #, no-wrap
-msgid ""
-"<License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November "
-"2007</License>\n"
+msgid "<License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>\n"
 msgstr ""
 
 #. type: Content of: <section><section><section><title>
@@ -17386,9 +17311,8 @@ msgid ""
 "    <Version>0.0.1</Version>\n"
 "    <Framework>3.2.x</Framework>\n"
 "    <Vendor>OTRS AG</Vendor>\n"
-"    <URL>http://otrs.org/</URL>\n"
-"    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November "
-"2007</License>\n"
+"    <URL>https://otrs.com/</URL>\n"
+"    <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>\n"
 "    <ChangeLog Version=\"1.1.2\" Date=\"2013-02-15 18:45:21\">Added some "
 "feature.</ChangeLog>\n"
 "    <ChangeLog Version=\"1.1.1\" Date=\"2013-02-15 16:17:51\">New "
