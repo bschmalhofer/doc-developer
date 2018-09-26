@@ -109,7 +109,7 @@ a „Beállítási mechanizmus” fejezetben van leírva.
                         <Item Key="Link">Action=AgentHelloWorld</Item>
                         <Item Key="LinkOption"></Item>
                         <Item Key="NavBar">HelloWorld</Item>
-                        <Item Key="Type"></Item>
+                        <Item Key="Type">Menu</Item>
                         <Item Key="Block"></Item>
                         <Item Key="AccessKey"></Item>
                         <Item Key="Prio">8400</Item>
@@ -135,8 +135,8 @@ alábbi fájlt:
         <para>
             <programlisting><![CDATA[
 # --
-# Kernel/Modules/AgentHelloWorld.pm - előtétprogram modul
-# Copyright (C) (év) (szerző neve) (szerző e-mail címe)
+# Kernel/Modules/AgentHelloWorld.pm - frontend module
+# Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -148,13 +148,13 @@ package Kernel::Modules::AgentHelloWorld;
 use strict;
 use warnings;
 
-# Az előtétprogram-modulokat nem kezeli az objektumkezelő.
+# Frontend modules are not handled by the ObjectManager.
 our $ObjectManagerDisabled = 1;
 
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumhoz
+    # allocate new hash for object
     my $Self = {%Param};
     bless ($Self, $Type);
 
@@ -170,7 +170,7 @@ sub Run {
 
     $Data{HelloWorldText} = $HelloWorldObject->GetHelloWorldText();
 
-    # kimenet felépítése
+    # build output
     my $Output = $LayoutObject->Header(Title => "HelloWorld");
     $Output   .= $LayoutObject->NavigationBar();
     $Output   .= $LayoutObject->Output(
@@ -197,8 +197,8 @@ alábbi tartalommal:
         <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/HelloWorld.pm - alapmodul
-# Copyright (C) (év) (szerző neve) (szerző e-mail címe)
+# Kernel/System/HelloWorld.pm - core module
+# Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -210,22 +210,22 @@ package Kernel::System::HelloWorld;
 use strict;
 use warnings;
 
-# sorolja fel az objektumfüggőségeket (például Kernel::System::DB) itt
+# list your object dependencies (e.g. Kernel::System::DB) here
 our @ObjectDependencies = (
     # 'Kernel::System::DB',
 );
 
 =head1 NAME
 
-HelloWorld - Kicsi „Helló, Világ” modul
+HelloWorld - Little "Hello World" module
 
 =head1 DESCRIPTION
 
-Kicsi OTRS modul, amely a „Helló, Világ” szöveget jeleníti meg, ha meghívják.
+Little OTRS module that displays the text 'Hello World' when called up.
 
 =head2 new()
 
-Egy objektum létrehozása. Ne használja közvetlenül, inkább így használja:
+Create an object. Do not use it directly, instead use:
 
     my $HelloWorldObject = $Kernel::OM->Get('Kernel::System::HelloWorld');
 
@@ -234,7 +234,7 @@ Egy objektum létrehozása. Ne használja közvetlenül, inkább így használja
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumnak
+    # allocate new hash for object
     my $Self = {};
     bless ($Self, $Type);
 
@@ -243,7 +243,7 @@ sub new {
 
 =head2 GetHelloWorldText()
 
-A „Helló, Világ” szöveg visszaadása.
+Return the "Hello World" text.
 
     my $HelloWorldText = $HelloWorldObject->GetHelloWorldText();
 
@@ -252,11 +252,11 @@ A „Helló, Világ” szöveg visszaadása.
 sub GetHelloWorldText {
     my ( $Self, %Param ) = @_;
 
-    # A DBObject lekérése a központi objektumkezelőtől
+    # Get the DBObject from the central object manager
     # my $DBObject = $Kernel::OM->Get('Kernel::System::DB');
 
     my $HelloWorld = $Self->_FormatHelloWorldText(
-        String => 'Helló, Világ',
+        String => 'Hello World',
     );
 
     return $HelloWorld;
@@ -268,10 +268,10 @@ sub GetHelloWorldText {
 
 =head2 _FormatHelloWorldText()
 
-A „Helló, Világ” szöveg nagybetűsre formázásra
+Format "Hello World" text to uppercase
 
     my $HelloWorld = $Self->_FormatHelloWorldText(
-        String => 'Helló, Világ',
+        String => 'Hello World',
     );
 
 sub _FormatHelloWorldText{
@@ -299,8 +299,8 @@ tartozó HTML sablon. Ezért hozzuk létre az alábbi fájlt:
         <para>
             <programlisting><![CDATA[
 # --
-# Kernel/Output/HTML/Templates/Standard/AgentHelloWorld.tt - áttekintő
-# Copyright (C) (év) (szerző neve) (szerző e-mail címe)
+# Kernel/Output/HTML/Templates/Standard/AgentHelloWorld.tt - overview
+# Copyright (C) (year) (name of author) (email of author)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you

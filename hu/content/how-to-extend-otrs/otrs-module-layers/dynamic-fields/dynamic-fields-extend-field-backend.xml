@@ -24,7 +24,7 @@ kiterjesztés van megjelenítve és elmagyarázva. A kiterjesztés csak a
          <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/DynamicField/FooExtensionBackend.pm - Kiterjesztés a dinamikus mező háttérprogramhoz
+# Kernel/System/DynamicField/FooExtensionBackend.pm - Extension for DynamicField backend
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -45,7 +45,7 @@ Kernel::System::DynamicField::FooExtensionBackend
 
 =head1 SYNOPSIS
 
-Dinamikus mezők kiterjesztés a háttérprogramhoz
+DynamicFields Extension for Backend
 
 =head1 PUBLIC INTERFACE
 
@@ -150,15 +150,5 @@ különleges viselkedés megköveteléséhez a dinamikus mezőnél, és csak azu
 hívja meg a függvényt a háttérprogram objektumban.
             </para>
         </note>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            A normál OTRS lábléc egy Perl-modul fájlhoz.
-        </para>
     </section>
 </section>

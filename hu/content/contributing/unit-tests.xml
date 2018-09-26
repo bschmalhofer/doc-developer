@@ -250,11 +250,11 @@ tesztbe.
     <section>
         <title>Egységteszt API</title>
         <para>
-            Az OTRS API-t biztosít az egységteszteléshez, amely az előző példában volt
-használva. Itt fel fogjuk sorolni a legfontosabb függvényeket, de nézze meg
-a <ulink
-url="http://otrs.github.io/doc/api/otrs/6.0/Kernel/System/UnitTest.pm.html"><literal>Kernel::System::UnitTest</literal></ulink>
-internetes API hivatkozását is.
+            OTRS provides API for unit testing that was used in the previous
+example. Here we'll list the most important functions, please also see the
+online API reference of <ulink
+url="https://otrs.github.io/doc/api/otrs/6.0/Perl/Kernel/System/UnitTest.pm.html">
+<literal>Kernel::System::UnitTest</literal> </ulink>.
         </para>
         <variablelist>
             <varlistentry>
@@ -365,11 +365,11 @@ $Self->IsNotDeeply(
             </varlistentry>
         </variablelist>
         <para>
-            Emellett az egységteszt segítő objektum biztosít néhány hasznos metódust is
-a gyakori tesztelési feltételekhez. A teljes hivatkozásért nézze meg a
-<ulink
-url="http://otrs.github.io/doc/api/otrs/6.0/Kernel/System/UnitTest/Helper.pm.html"><literal>Kernel::System::UnitTest::Helper</literal></ulink>
-internetes API hivatkozását.
+            Besides this, unit test helper object also provides some helpful methods for
+common test conditions.  For full reference, please see the online API
+reference of <ulink
+url="https://otrs.github.io/doc/api/otrs/6.0/Perl/Kernel/System/UnitTest/Helper.pm.html">
+<literal>Kernel::System::UnitTest::Helper</literal> </ulink>.
         </para>
         <variablelist>
             <varlistentry>

@@ -28,7 +28,7 @@ találhat egy példát.
         <para>
         <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Kernel/System/Auth/Sync/CustomAuthSync.pm - az ügyfél hitelesítésének szinkronizációját biztosítja
+# Kernel/System/Auth/Sync/CustomAuthSync.pm - provides the CustomAuthSync
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # Id: CustomAuthSync.pm,v 1.9 2010/03/25 14:42:45 martin Exp $
@@ -47,16 +47,16 @@ use Net::LDAP;
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumnak
+    # allocate new hash for object
     my $Self = {};
     bless( $Self, $Type );
 
-    # szükséges objektumok ellenőrzése
+    # check needed objects
     for (qw(LogObject ConfigObject DBObject UserObject GroupObject EncodeObject)) {
         $Self->{$_} = $Param{$_} || die "No $_!";
     }
 
-    # Hibakeresés: 0=ki 1=be
+    # Debug 0=off 1=on
     $Self->{Debug} = 0;
 
 ...
@@ -67,7 +67,7 @@ sub new {
 sub Sync {
     my ( $Self, %Param ) = @_;
 
-    # szükséges dolgok ellenőrzése
+    # check needed stuff
     for (qw(User)) {
         if ( !$Param{$_} ) {
             $Self->{LogObject}->Log( Priority => 'error', Message => "Need $_!" );

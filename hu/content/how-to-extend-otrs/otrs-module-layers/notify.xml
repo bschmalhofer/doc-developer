@@ -59,13 +59,13 @@ use Kernel::System::Custom;
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # új kivonat lefoglalása az objektumhoz
+    # allocate new hash for object
     my $Self = {};
     bless( $Self, $Type );
 
-    # a szükséges objektumok lekérése
+    # get needed objects
     for my $Object (qw(ConfigObject LogObject DBObject LayoutObject TimeObject UserID)) {
-        $Self->{$Object} = $Param{$Object} || die "Nincs $Object!";
+        $Self->{$Object} = $Param{$Object} || die "Got no $Object!";
     }
     $Self->{CustomObject} = Kernel::System::Custom->new(%Param);
     return $Self;
@@ -74,7 +74,7 @@ sub new {
 sub Run {
     my ( $Self, %Param ) = @_;
 
-    # munkamenet-információk lekérése
+    # get session info
     my %CustomParam      = ();
     my @Customs    = $Self->{CustomObject}->GetAllCustomIDs();
     my $IdleMinutes = $Param{Config}->{IdleMinutes} || 60 * 2;

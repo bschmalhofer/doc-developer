@@ -34,7 +34,7 @@ eredményeket igényelnek.
          <para>
             <programlisting><![CDATA[
 # --
-# Kernel/System/DynamicField/Driver/Password.pm - Illesztőprogram a dinamikus mező jelszó háttérprogramjához
+# Kernel/System/DynamicField/Driver/Password.pm - Driver for DynamicField Password backend
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -353,16 +353,6 @@ sub ReadableValueRender {
         <para>
             Ez a függvény hasonló a <code>DisplayValueRender()</code> függvényhez, de
 olyan helyeken használják, ahol nincs <literal>LayoutObject</literal>.
-        </para>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            A normál OTRS lábléc egy Perl-modul fájlhoz.
         </para>
     </section>
 
