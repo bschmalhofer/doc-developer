@@ -143,15 +143,5 @@ sub Foo {
                 in the Backend object.
             </para>
         </note>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            The normal OTRS footer for a Perl module file.
-        </para>
     </section>
 </section>

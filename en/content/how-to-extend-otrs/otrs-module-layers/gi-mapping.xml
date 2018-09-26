@@ -356,11 +356,6 @@ sub _Empty {
             <para>
                 This are the helper functions that actually performs the string conversions
             </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-                ]]></programlisting>
-            </para>
         </section>
         <section id="mapping-configuration">
             <title>Configuration Example</title>

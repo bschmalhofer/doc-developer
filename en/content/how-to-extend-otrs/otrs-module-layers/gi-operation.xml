@@ -143,11 +143,6 @@ sub Run {
                 This particular example returns the same data as came from the remote system,
                 unless "TestError" parameter is passed in this case it returns an error.
             </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-                ]]></programlisting>
-            </para>
         </section>
         <section id="operation-configuration">
             <title>Configuration Example</title>

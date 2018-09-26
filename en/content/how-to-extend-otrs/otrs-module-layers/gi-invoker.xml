@@ -228,11 +228,6 @@ sub HandleResponse {
                 like: call another invoker, perform an call to a Core Module, update the database,
                 send an error, etc.
             </para>
-            <para>
-                <programlisting><![CDATA[
-=back
-                ]]></programlisting>
-            </para>
         </section>
         <section id="invoker-configuration">
             <title>Configuration Example</title>

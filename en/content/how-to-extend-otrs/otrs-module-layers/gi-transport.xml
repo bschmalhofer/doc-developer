@@ -323,11 +323,6 @@ sub request {    ## no critic
                 For a new module development we do not recommend to use this approach, a real
                 protocol needs to be implemented.
             </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-                ]]></programlisting>
-            </para>
         </section>
         <section id="transport-configuration">
             <title>Configuration Example</title>

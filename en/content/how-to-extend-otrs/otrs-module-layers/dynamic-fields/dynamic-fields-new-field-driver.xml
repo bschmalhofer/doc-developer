@@ -341,16 +341,6 @@ sub ReadableValueRender {
             This function is similar to <emphasis>DisplayValueRender()</emphasis> but is used  in
             places where there is no LayoutObject.
         </para>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            The normal OTRS footer for a Perl module file.
-        </para>
     </section>
 
     <section id="dynamic-fields-new-field-driver-other-functions">

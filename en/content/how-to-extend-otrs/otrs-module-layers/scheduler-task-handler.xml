@@ -153,13 +153,6 @@ sub Run {
                 based on the task handler backend logics, the task execution results, configuration
                 settings, etc.
             </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-
-=back
-                ]]></programlisting>
-            </para>
         </section>
     </section>
 </section>
