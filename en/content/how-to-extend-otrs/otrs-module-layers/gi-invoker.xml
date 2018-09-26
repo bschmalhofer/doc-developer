@@ -229,11 +229,6 @@ sub HandleResponse {
                     send an error, etc.
                 </para>
             </note>
-            <para>
-                <programlisting><![CDATA[
-=back
-                ]]></programlisting>
-            </para>
         </section>
         <section id="invoker-configuration">
             <title>Configuration Example</title>

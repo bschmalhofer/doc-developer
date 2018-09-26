@@ -92,7 +92,7 @@ our @ObjectDependencies = (
                 </para>
                 <para>
                     This is common header that can be found in most OTRS modules. The
-                    class/package name is declared via the package keyword.
+                    class/package name is declared via the <literal>package</literal> keyword.
                 </para>
                 <para>
                     In this case we are inheriting from <literal>BaseDaemon</literal> class, and the object manager
