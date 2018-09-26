@@ -392,15 +392,6 @@ sub Run {
                 <para>
                     If everything was OK it must return 1.
                 </para>
-                <para>
-                    <programlisting><![CDATA[
-1;
-
-                    ]]></programlisting>
-                </para>
-                <para>
-                    End of file.
-                </para>
             </section>
         </section>
 
@@ -513,15 +504,6 @@ sub GetParams {
                 </para>
                 <para>
                     For this example the <literal>GetParams</literal> method is very straight forward, it get the name of the field from the ConfigSet or use a default, and gets the value from the web request.
-                </para>
-                <para>
-                    <programlisting><![CDATA[
-1;
-
-                    ]]></programlisting>
-                </para>
-                <para>
-                    End of file.
                 </para>
             </section>
             <section id="process-management-module-configuration-field-template-example">
