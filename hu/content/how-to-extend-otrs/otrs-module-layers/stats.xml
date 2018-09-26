@@ -1136,8 +1136,6 @@ sub Run {
 }
 
 1;
-
-=back
                 ]]></programlisting>
             </para>
         </section>

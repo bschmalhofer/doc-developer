@@ -354,16 +354,6 @@ sub ReadableValueRender {
             Ez a függvény hasonló a <code>DisplayValueRender()</code> függvényhez, de
 olyan helyeken használják, ahol nincs <literal>LayoutObject</literal>.
         </para>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            A normál OTRS lábléc egy Perl-modul fájlhoz.
-        </para>
     </section>
 
     <section id="dynamic-fields-new-field-driver-other-functions">

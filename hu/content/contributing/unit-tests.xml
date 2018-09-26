@@ -169,11 +169,11 @@ for my $Test (@Tests) {
     <section>
         <title>Előfeltételek a teszteléshez</title>
         <para>
-            Hogy képes legyen lefuttatni az egységteszteket, arra van szüksége, hogy az
-összes választható Perl-modul telepítve legyen, kivéve azokat, amelyek az Ön
-által használt adatbázis háttérprogramoktól eltérőkhöz valók. Futtassa a
-<filename>bin/otrs.CheckEnvironment.pl</filename> parancsfájlt a modultelepítés
-ellenőrzéséhez.
+            To be able to run the unit tests, you need to have all optional environment
+dependencies (Perl modules and other modules) installed, except those for
+different database backends than what you are using. Run
+<filename>bin/otrs.CheckEnvironment.pl</filename> to verify your module
+installation.
         </para>
         <para>
             Szüksége van egy teljes képzésű tartományneven (FQDN) futó OTRS webes
@@ -244,7 +244,7 @@ the test.
             OTRS provides API for unit testing that was used in the previous
 example. Here we'll list the most important functions, please also see the
 online API reference of <ulink
-url="http://otrs.github.io/doc/api/otrs/6.0/Kernel/System/UnitTest.pm.html">
+url="https://otrs.github.io/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest.pm.html">
 <literal>Kernel::System::UnitTest</literal> </ulink>.
         </para>
         <variablelist>
@@ -359,7 +359,7 @@ $Self->IsNotDeeply(
             Besides this, unit test helper object also provides some helpful methods for
 common test conditions.  For full reference, please see the online API
 reference of <ulink
-url="http://otrs.github.io/doc/api/otrs/6.0/Kernel/System/UnitTest/Helper.pm.html">
+url="https://otrs.github.io/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest/Helper.pm.html">
 <literal>Kernel::System::UnitTest::Helper</literal> </ulink>.
         </para>
         <variablelist>
@@ -452,7 +452,8 @@ value to go back in time.
                         This functions temporarily changes a configuration setting system wide to
 another value, both in the current instance of the
 <literal>ConfigObject</literal> and also in the system configuration on
-disk. This will be reset when the Helper object is destroyed.
+disk. This will be reset when the <literal>Helper</literal> object is
+destroyed.
                     </para>
                     <note>
                         <para>
@@ -535,9 +536,10 @@ the test, i.e.  temporary database will receive all calls sent over system
 <literal>Helper</literal> object is destroyed.
                     </para>
                     <para>
-                        This method returns 'undef' in case the test database is not configured. If
-it is configured, but the supplied XML cannot be read or executed, this
-method will <literal>die()</literal> to interrupt the test with an error.
+                        This method returns <literal>undef</literal> in case the test database is
+not configured. If it is configured, but the supplied XML cannot be read or
+executed, this method will <literal>die()</literal> to interrupt the test
+with an error.
                     </para>
                     <para>
                         <programlisting><![CDATA[

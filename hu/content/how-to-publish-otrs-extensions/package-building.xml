@@ -130,6 +130,17 @@ tekinteni.
 <PackageIsRemovable>1</PackageIsRemovable>
                 ]]></programlisting>
             </para>
+            <para>
+                A special package action is PackageAllowDirectUpdate. Only if it is defined
+on the package and set to true, a package can be upgraded from a lower major
+version (earlier than the last one) to the latest version. (e.g. a package
+for OTRS 5 updated to OTRS 7).
+            </para>
+            <para>
+                <programlisting><![CDATA[
+<PackageAllowDirectUpdate>1</PackageAllowDirectUpdate>
+                ]]></programlisting>
+            </para>
         </section>
         <section id="package-buildhost">
             <title><literal>&lt;BuildHost&gt;</literal></title>
@@ -574,18 +585,18 @@ is.
             <programlisting><![CDATA[
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
-    <Name>Naptár</Name>
+    <Name>Calendar</Name>
     <Version>0.0.1</Version>
     <Framework>3.2.x</Framework>
     <Vendor>OTRS AG</Vendor>
     <URL>https://otrs.com/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
-    <ChangeLog Version="1.1.2" Date="2013-02-15 18:45:21">Néhány funkció hozzáadva.</ChangeLog>
-    <ChangeLog Version="1.1.1" Date="2013-02-15 16:17:51">Új csomag.</ChangeLog>
+    <ChangeLog Version="1.1.2" Date="2013-02-15 18:45:21">Added some feature.</ChangeLog>
+    <ChangeLog Version="1.1.1" Date="2013-02-15 16:17:51">New package.</ChangeLog>
     <Description Lang="en">A web calendar.</Description>
-    <Description Lang="hu">Egy webes naptár.</Description>
+    <Description Lang="de">Ein Web Kalender.</Description>
     <IntroInstall Type="post" Lang="en" Title="Thank you!">Thank you for choosing the Calendar module.</IntroInstall>
-    <IntroInstall Type="post" Lang="hu" Title="Köszönjük!">Köszönjük, hogy a naptár modult választotta.</IntroInstall>
+    <IntroInstall Type="post" Lang="de" Title="Vielen Dank!">Vielen Dank fuer die Auswahl des Kalender Modules.</IntroInstall>
     <BuildDate>?</BuildDate>
     <BuildHost>?</BuildHost>
     <Filelist>

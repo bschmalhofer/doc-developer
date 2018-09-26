@@ -240,11 +240,6 @@ egy hívás végrehajtása egy alapmodulhoz, az adatbázis frissítése, hiba
 küldése, stb.
                 </para>
             </note>
-            <para>
-                <programlisting><![CDATA[
-=back
-                ]]></programlisting>
-            </para>
         </section>
         <section id="invoker-configuration">
             <title>Beállítási példa</title>

@@ -10,7 +10,7 @@
 logging and debugging.
         </para>
         <para>
-            The log object can be accessed and used via the
+            The <literal>Log</literal> object can be accessed and used via the
 <literal>ObjectManager</literal> like this:
         </para>
         <para>

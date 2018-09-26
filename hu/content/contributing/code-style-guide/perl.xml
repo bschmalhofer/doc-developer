@@ -97,7 +97,6 @@ forrásfájlok UTF-8 karakterkódolással vannak elmentve.
             <para>
                 <programlisting format="linespecific"><![CDATA[
 # --
-# (file name) - a short description what it does
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -115,7 +114,6 @@ van.
                 <programlisting format="linespecific"><![CDATA[
 #!/usr/bin/perl
 # --
-# (file name) - a short description what it does
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
 # This program is free software: you can redistribute it and/or modify
@@ -281,7 +279,7 @@ if( !$ItemId ) {
                 </para>
                 <para>
                     <programlisting format="linespecific"><![CDATA[
-for my $Needed (1..10) {
+for my $Needed ( 1 .. 10 ) {
     next if $Needed == 5;
     last  if $Needed == 9;
 }
@@ -323,9 +321,9 @@ fájlokban.</para>
 <literal>Main::Require()</literal> metódust.</para>
                     </listitem>
                     <listitem>
-                        <para>Használja a <literal>TimeObject</literal> függvényeit az olyan beépített
-függvények helyett, mint például a <literal>time()</literal>,
-<literal>localtime()</literal>, stb.</para>
+                        <para>Use the functions of the <literal>DateTimeObject</literal> instead of the
+builtin functions like <literal>time()</literal>,
+<literal>localtime()</literal>, etc.</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -337,8 +335,9 @@ függvények helyett, mint például a <literal>time()</literal>,
                 For regular expressions <emphasis>in the source code</emphasis>, we always
 use the <literal>m//</literal> operator with curly braces as delimiters. We
 also use the modifiers <literal>x</literal>, <literal>m</literal> and
-<literal>s</literal>.  The <literal>x</literal> modifiers allows you to
-comment your regex and use spaces to "group" logical groups.
+<literal>s</literal> by default.  The <literal>x</literal> modifier allows
+you to comment your regex and use spaces to visually separate logical
+groups.
             </para>
             <para>
                 <programlisting format="linespecific"><![CDATA[
@@ -391,6 +390,117 @@ it is always possible to use embedded modifiers (e.g. <literal>(?:(?i)SmAlL
 oR lArGe)</literal>). For details, please see <ulink
 url="http://perldoc.perl.org/perlretut.html#Embedding-comments-and-modifiers-in-a-regular-expression">perlretut</ulink>.
             </para>
+            <para>
+                Usage of the <literal>r</literal> modifier is encouraged, e.g. if you need
+to extract part of a string into another variable.  This modifier keeps the
+matched variable intact and instead provides the substitution result as a
+return value.
+            </para>
+            <para>
+                Example: Use this...
+            </para>
+            <para>
+            <programlisting format="linespecific"><![CDATA[
+my $NewText = $Text =~ s{
+    \A
+    Prefix
+    (
+        Text
+    )
+}
+{NewPrefix$1Postfix}xmsr;
+    ]]></programlisting>
+            </para>
+            <para>
+                instead of this...
+            </para>
+            <para>
+            <programlisting format="linespecific"><![CDATA[
+my $NewText = $Text;
+$NewText =~ s{
+    \A
+    Prefix
+    (
+        Text
+    )
+}
+{NewPrefix$1Postfix}xms;
+    ]]></programlisting>
+            </para>
+            <para>
+                If you want to match for start and end of a <emphasis>string</emphasis>, you
+should generally use <literal>\A</literal> and <literal>\z</literal> instead
+of the more generic <literal>^</literal> and <literal>$</literal> unless you
+really need to match start or end of <emphasis>lines</emphasis> within a
+multiline string.
+            </para>
+            <para>
+            <programlisting format="linespecific"><![CDATA[
+$Text =~ m{
+    \A      # beginning of the string
+    Content # some string
+    \z      # end of the string
+}xms;
+
+$MultilineText =~ m{
+    \A                      # beginning of the string
+    .*
+    (?: \n Content $ )+      # one or more lines containing the same string
+    .*
+    \z                      # end of the string
+}xms;
+    ]]></programlisting>
+            </para>
+            <para>
+                Usage of named capture groups is also encouraged, particularly for
+multi-matches.  Named capture groups are easier to read/understand, prevent
+mix-ups when matching more than one capture group and allow extension
+without accidentally introducing bugs.
+            </para>
+            <para>
+                Example: Use this...
+            </para>
+            <para>
+            <programlisting format="linespecific"><![CDATA[
+$Contact =~ s{
+    \A
+    [ ]*
+    (?'TrimmedContact'
+        (?'FirstName' \w+ )
+        [ ]+
+        (?'LastName' \w+ )
+    )
+    [ ]+
+    (?'Email' [^ ]+ )
+    [ ]*
+    \z
+}
+{$+{TrimmedContact}}xms;
+my $FormattedContact = "$+{LastName}, $+{FirstName} ($+{Email})";
+    ]]></programlisting>
+            </para>
+            <para>
+                instead of this...
+            </para>
+            <para>
+            <programlisting format="linespecific"><![CDATA[
+$Contact =~ s{
+    \A
+    [ ]*
+    (
+        ( \w+ )
+        [ ]+
+        ( \w+ )
+    )
+    [ ]+
+    ( [^ ]+ )
+    [ ]*
+    \z
+}
+{$1}xms;
+my $FormattedContact = "$3, $2 ($4)";
+    ]]></programlisting>
+            </para>
         </section>
 
         <section id="naming">
@@ -402,12 +512,11 @@ első betű nagybetűs legyen (<ulink
 url="https://hu.wikipedia.org/wiki/CamelCase">CamelCase</ulink>).
             </para>
             <para>
-                A neveknek annyira leírónak kell lenniük, amennyire csak lehetséges. Az
-olvasónak egy név alapján meg kell tudni mondania, hogy az mit jelent
-anélkül, hogy túl mélyre ásná magát a kódban. Például használja a
-<literal>$ConfigItemID</literal> nevet az <literal>$ID</literal>
-helyett. Példák: <literal>@TicktIDs</literal>, <literal>$Output</literal>,
-<literal>StateSet()</literal>, stb.
+                Names should be as descriptive as possible.  A reader should be able to say
+what is meant by a name without digging too deep into the code. E.g. use
+<literal>$ConfigItemID</literal> instead of
+<literal>$ID</literal>. Examples: <literal>@TicketIDs</literal>,
+<literal>$Output</literal>, <literal>StateSet()</literal>, etc.
             </para>
         </section>
 
@@ -424,7 +533,7 @@ helyett. Példák: <literal>@TicktIDs</literal>, <literal>$Output</literal>,
                 </para>
                 <para>
                     <programlisting format="linespecific"><![CDATA[
-my ($Minute, $Hour, $Year);
+my ( $Minute, $Hour, $Year );
 ]]>
                     </programlisting>
                 </para>
@@ -460,7 +569,7 @@ szeretne összefűzni:
                 <para>
                     <programlisting format="linespecific"><![CDATA[
 my $SqlStatement = '';
-for my $Part ( @Parts ) {
+for my $Part (@Parts) {
     $SqlStatement .= $Part;
 }
                     ]]>
@@ -613,7 +722,7 @@ use strict;
 use warnings;
 
 use Kernel::System::User;
-use Kernel::System::Time;
+use Kernel::System::DateTime;
                     ]]>
                     </programlisting>
                 </para>
@@ -625,7 +734,7 @@ use Kernel::System::Time;
 package Kernel::System::ITSMConfigItem::History;
 
 use Kernel::System::User;
-use Kernel::System::Time;
+use Kernel::System::DateTime;
 
 use strict;
 use warnings;
@@ -788,7 +897,7 @@ sorrendben kell lenniük. Egy minta dokumentáció így néz ki:
                     <programlisting format="linespecific"><![CDATA[
 =head2 LastTimeObjectChanged()
 
-calculates the last time the object was changed. It returns a hash reference with
+Calculates the last time the object was changed. It returns a hash reference with
     information about the object and the time.
 
     my $Info = $Object->LastTimeObjectChanged(
@@ -842,7 +951,7 @@ legyen, például pontos változónevekkel és függvénynevekkel.
                     </listitem>
                 </varlistentry>
                 <varlistentry>
-                    <term>Ne mondja el, amit a kód is elmond (száraz).</term>
+                    <term>Don't say what the code says (DRY -> Don't repeat yourself).</term>
                     <listitem>
                         <para>
                             Ne ismételjen (nyilvánvaló) kódot a magyarázatokban.

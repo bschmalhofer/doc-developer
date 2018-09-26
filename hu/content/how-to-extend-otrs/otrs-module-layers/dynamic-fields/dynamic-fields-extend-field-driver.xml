@@ -73,15 +73,5 @@ sub Foo {
             A <code>Foo()</code> függvénynek nincs különleges logikája. Csak tesztelésre
 van, és mindig 1-et ad vissza.
         </para>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            A normál OTRS lábléc egy Perl-modul fájlhoz.
-        </para>
     </section>
 </section>

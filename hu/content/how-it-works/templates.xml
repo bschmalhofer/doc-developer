@@ -294,8 +294,7 @@ előállítása előtt.
                 <para>
                     There are different possible date/time output formats:
 <literal>TimeLong</literal> (full date/time), <literal>TimeShort</literal>
-(no seconds), <literal>Date</literal> (no time) and
-<literal>RelativeTime</literal> (a speaking text like "a day ago").
+(no seconds) and <literal>Date</literal> (no time).
                 </para>
                 <para>
                     <programlisting><![CDATA[
@@ -310,10 +309,6 @@ előállítása előtt.
 [% Data.CreateTime ǀ Localize("Date") %]
 # Result for US English locale:
 06/09/2010
-
-[% Data.CreateTime ǀ Localize("RelativeTime") %]
-# Result for US English locale:
-a day ago
                     ]]></programlisting>
                 </para>
                 <para>
@@ -326,6 +321,40 @@ bytes).
 [% Data.Filesize ǀ Localize("Filesize") %]
 # Result for US English locale:
 23 MB
+                    ]]></programlisting>
+                </para>
+            </section>
+
+            <section id="replace-placeholders-tag">
+                <title><literal>[% ReplacePlaceholders() %]</literal></title>
+                <para>
+                    Replaces placeholders (%s) in strings with passed parameters.
+                </para>
+                <para>
+                    In certain cases, you might want to insert HTML code in translations,
+instead of placeholders. On the other hand, you also need to take care of
+sanitization, since translated strings should not be trusted as-is. For
+this, you can first translate the string, pass it through the HTML filter
+and finally replace placeholders with static (safe) HTML code.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+[% Translate("This is %s.") | html | ReplacePlaceholders('<strong>bold text</strong>') %]
+                    ]]></programlisting>
+                </para>
+                <para>
+                    Number of parameters to <literal>ReplacePlaceholders()</literal> filter
+should match number of placeholders in the original string.
+                </para>
+                <para>
+                    You can also use <literal>[% ReplacePlaceholders() %]</literal> in function
+format, in case you are not translating anything. In this case, first
+parameter is the target string, and any found placeholders in it are
+substituted with subsequent parameters.
+                </para>
+                <para>
+                    <programlisting><![CDATA[
+[% ReplacePlaceholders("This string has both %s and %s.", '<strong>bold text</strong>, '<em>italic text</em>') %]
                     ]]></programlisting>
                 </para>
             </section>

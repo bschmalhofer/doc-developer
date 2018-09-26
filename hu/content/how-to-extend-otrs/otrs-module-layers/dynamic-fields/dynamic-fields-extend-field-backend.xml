@@ -150,15 +150,5 @@ különleges viselkedés megköveteléséhez a dinamikus mezőnél, és csak azu
 hívja meg a függvényt a háttérprogram objektumban.
             </para>
         </note>
-        <para>
-            <programlisting><![CDATA[
-1;
-
-=back
-            ]]></programlisting>
-        </para>
-        <para>
-            A normál OTRS lábléc egy Perl-modul fájlhoz.
-        </para>
     </section>
 </section>

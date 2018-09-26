@@ -335,11 +335,6 @@ ahol a távoli rendszerek nem érhetők el.
                 Egy új modul kifejlesztéséhez nem ajánljuk ezen megközelítés használatát,
 egy valódi protokollt kell megvalósítani.
             </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-                ]]></programlisting>
-            </para>
         </section>
         <section id="transport-configuration">
             <title>Beállítási példa</title>

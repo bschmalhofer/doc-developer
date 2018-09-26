@@ -8,6 +8,7 @@
 és meg kell győződnie arról, hogy azok továbbra is működnek az OTRS API-val.
     </para>
 
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="package-porting/package-porting-6-to-7.xml" />
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="package-porting/package-porting-5-to-6.xml" />
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="package-porting/package-porting-4-to-5.xml" />
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="package-porting/package-porting-33-to-4.xml" />

@@ -381,11 +381,6 @@ sub _Empty {
                 Ezek azok a segédfüggvények, amelyek ténylegesen végrehajtják a
 szövegátalakításokat.
             </para>
-            <para>
-                <programlisting><![CDATA[
-1;
-                ]]></programlisting>
-            </para>
         </section>
         <section id="mapping-configuration">
             <title>Beállítási példa</title>
