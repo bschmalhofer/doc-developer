@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-09-26 11:25+0200\n"
+"POT-Creation-Date: 2018-09-27 08:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -977,7 +977,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><para>
-#: en/content/contributing/unit-tests.xml:21 en/content/contributing/unit-tests.xml:53 en/content/contributing/unit-tests.xml:71 en/content/contributing/unit-tests.xml:93 en/content/contributing/unit-tests.xml:184 en/content/contributing/unit-tests.xml:200 en/content/contributing/unit-tests.xml:244 en/content/contributing/unit-tests.xml:260 en/content/contributing/unit-tests.xml:276 en/content/contributing/unit-tests.xml:293 en/content/contributing/unit-tests.xml:311 en/content/contributing/unit-tests.xml:329 en/content/contributing/unit-tests.xml:362 en/content/contributing/unit-tests.xml:378 en/content/contributing/unit-tests.xml:402 en/content/contributing/unit-tests.xml:441 en/content/contributing/unit-tests.xml:465 en/content/contributing/unit-tests.xml:497 en/content/contributing/unit-tests.xml:518 en/content/contributing/code-style-guide/css.xml:60 en/content/contributing/code-style-guide/css.xml:84 en/content/contributing/code-style-guide/css.xml:108 en/content/contributing/code-style-guide/javascript.xml:21 en/content/contributing/code-style-guide/perl.xml:17 en/content/contributing/code-style-guide/perl.xml:47 en/content/contributing/code-style-guide/perl.xml:57 en/content/contributing/code-style-guide/perl.xml:71 en/content/contributing/code-style-guide/perl.xml:80 en/content/contributing/code-style-guide/perl.xml:95 en/content/contributing/code-style-guide/perl.xml:110 en/content/contributing/code-style-guide/perl.xml:151 en/content/contributing/code-style-guide/perl.xml:168 en/content/contributing/code-style-guide/perl.xml:190 en/content/contributing/code-style-guide/perl.xml:233 en/content/contributing/code-style-guide/perl.xml:242 en/content/contributing/code-style-guide/perl.xml:254 en/content/contributing/code-style-guide/perl.xml:266 en/content/contributing/code-style-guide/perl.xml:278 en/content/contributing/code-style-guide/perl.xml:319 en/content/contributing/code-style-guide/perl.xml:340 en/content/contributing/code-style-guide/perl.xml:362 en/content/contributing/code-style-guide/perl.xml:377 en/content/contributing/code-style-guide/perl.xml:393 en/content/contributing/code-style-guide/perl.xml:417 en/content/contributing/code-style-guide/perl.xml:439 en/content/contributing/code-style-guide/perl.xml:482 en/content/contributing/code-style-guide/perl.xml:491 en/content/contributing/code-style-guide/perl.xml:502 en/content/contributing/code-style-guide/perl.xml:515 en/content/contributing/code-style-guide/perl.xml:544 en/content/contributing/code-style-guide/perl.xml:555 en/content/contributing/code-style-guide/perl.xml:574 en/content/contributing/code-style-guide/perl.xml:585 en/content/contributing/code-style-guide/perl.xml:598 en/content/contributing/code-style-guide/perl.xml:613 en/content/contributing/code-style-guide/perl.xml:622 en/content/contributing/code-style-guide/perl.xml:632 en/content/contributing/code-style-guide/perl.xml:650 en/content/contributing/code-style-guide/perl.xml:665 en/content/contributing/code-style-guide/perl.xml:815 en/content/contributing/code-style-guide/perl.xml:951 en/content/contributing/code-style-guide/perl.xml:975 en/content/contributing/code-style-guide/perl.xml:986 en/content/how-it-works/config-mechanism.xml:74 en/content/how-it-works/config-mechanism.xml:102 en/content/how-it-works/config-mechanism.xml:261 en/content/how-it-works/config-mechanism.xml:279 en/content/how-it-works/config-mechanism.xml:300 en/content/how-it-works/config-mechanism.xml:318 en/content/how-it-works/config-mechanism.xml:356 en/content/how-it-works/config-mechanism.xml:371 en/content/how-it-works/config-mechanism.xml:393 en/content/how-it-works/config-mechanism.xml:411 en/content/how-it-works/config-mechanism.xml:427 en/content/how-it-works/config-mechanism.xml:444 en/content/how-it-works/config-mechanism.xml:463 en/content/how-it-works/config-mechanism.xml:479 en/content/how-it-works/config-mechanism.xml:495 en/content/how-it-works/config-mechanism.xml:511 en/content/how-it-works/config-mechanism.xml:527 en/content/how-it-works/config-mechanism.xml:548 en/content/how-it-works/config-mechanism.xml:564 en/content/how-it-works/config-mechanism.xml:581 en/content/how-it-works/config-mechanism.xml:604 en/content/how-it-works/config-mechanism.xml:622 en/content/how-it-works/config-mechanism.xml:647 en/content/how-it-works/config-mechanism.xml:686 en/content/how-it-works/config-mechanism.xml:704 en/content/how-it-works/config-mechanism.xml:728 en/content/how-it-works/config-mechanism.xml:736 en/content/how-it-works/database-mechanism.xml:81 en/content/how-it-works/database-mechanism.xml:89 en/content/how-it-works/database-mechanism.xml:97 en/content/how-it-works/date-time.xml:25 en/content/how-it-works/date-time.xml:51 en/content/how-it-works/date-time.xml:124 en/content/how-it-works/date-time.xml:136 en/content/how-it-works/loader.xml:93 en/content/how-it-works/loader.xml:110 en/content/how-it-works/loader.xml:156 en/content/how-it-works/loader.xml:184 en/content/how-it-works/loader.xml:213 en/content/how-it-works/log-mechanism.xml:15 en/content/how-it-works/log-mechanism.xml:62 en/content/how-it-works/log-mechanism.xml:87 en/content/how-it-works/log-mechanism.xml:108 en/content/how-it-works/log-mechanism.xml:126 en/content/how-it-works/log-mechanism.xml:136 en/content/how-it-works/log-mechanism.xml:159 en/content/how-it-works/log-mechanism.xml:186 en/content/how-it-works/log-mechanism.xml:215 en/content/how-it-works/skins.xml:41 en/content/how-it-works/skins.xml:54 en/content/how-it-works/skins.xml:110 en/content/how-it-works/skins.xml:122 en/content/how-it-works/skins.xml:132 en/content/how-it-works/skins.xml:167 en/content/how-it-works/skins.xml:180 en/content/how-it-works/templates.xml:60 en/content/how-it-works/templates.xml:79 en/content/how-it-works/templates.xml:89 en/content/how-it-works/templates.xml:106 en/content/how-it-works/templates.xml:118 en/content/how-it-works/templates.xml:127 en/content/how-it-works/templates.xml:139 en/content/how-it-works/templates.xml:174 en/content/how-it-works/templates.xml:189 en/content/how-it-works/templates.xml:215 en/content/how-it-works/templates.xml:224 en/content/how-it-works/templates.xml:233 en/content/how-it-works/templates.xml:242 en/content/how-it-works/templates.xml:260 en/content/how-it-works/templates.xml:282 en/content/how-it-works/templates.xml:301 en/content/how-it-works/templates.xml:321 en/content/how-it-works/templates.xml:335 en/content/how-it-works/templates.xml:353 en/content/how-it-works/templates.xml:377 en/content/how-it-works/templates.xml:412 en/content/how-it-works/templates.xml:461 en/content/how-it-works/templates.xml:515 en/content/how-it-works/templates.xml:571 en/content/how-it-works/translations.xml:22 en/content/how-it-works/translations.xml:45 en/content/how-it-works/translations.xml:107 en/content/how-it-works/translations.xml:157 en/content/how-to-extend-otrs/writing-otrs-application.xml:42 en/content/how-to-extend-otrs/writing-otrs-application.xml:130 en/content/how-to-extend-otrs/writing-otrs-application.xml:190 en/content/how-to-extend-otrs/writing-otrs-application.xml:292 en/content/how-to-extend-otrs/writing-otrs-application.xml:321 en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:181 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:88 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:181 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:156 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:18 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:40 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:69 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:97 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:151 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:166 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:240 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:144 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:223 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:320 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:367 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:37 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:66 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:95 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:154 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:186 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:475 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:489 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:510 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:538 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:558 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:588 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:609 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:83 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:114 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:139 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:190 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:247 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:285 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:331 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:133 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:42 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:126 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:56 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:134 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:41 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:65 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:94 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:106 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:205 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:220 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:239 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:252 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:283 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:358 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:372 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:415 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:453 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:661 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:721 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:751 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:807 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:856 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1096 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1101 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:25 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:140 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:46 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:66 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:101 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:153 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:188 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:210 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:256 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:57 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:87 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:105 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:165 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:60 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:22 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:49 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:75 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:61 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:16 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:58 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:73 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:145 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:189 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:16 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:42 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:76 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:122 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:157 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:296 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:363 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:512 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:18 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:27 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:49 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:72 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:30 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:63 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:138 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:231 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:299 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:357 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:366 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:376 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:386 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:396 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:405 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:414 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:424 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:447 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:458 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:470 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:479 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:490 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:501 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:515 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:525 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:535 en/content/how-to-extend-otrs/otrs-module-layers/email-handling/ticket-postmaster-modules.xml:25 en/content/how-to-extend-otrs/otrs-module-layers/email-handling/ticket-postmaster-modules.xml:52 en/content/how-to-publish-otrs-extensions/package-building.xml:22 en/content/how-to-publish-otrs-extensions/package-building.xml:33 en/content/how-to-publish-otrs-extensions/package-building.xml:44 en/content/how-to-publish-otrs-extensions/package-building.xml:52 en/content/how-to-publish-otrs-extensions/package-building.xml:65 en/content/how-to-publish-otrs-extensions/package-building.xml:76 en/content/how-to-publish-otrs-extensions/package-building.xml:87 en/content/how-to-publish-otrs-extensions/package-building.xml:98 en/content/how-to-publish-otrs-extensions/package-building.xml:110 en/content/how-to-publish-otrs-extensions/package-building.xml:123 en/content/how-to-publish-otrs-extensions/package-building.xml:133 en/content/how-to-publish-otrs-extensions/package-building.xml:144 en/content/how-to-publish-otrs-extensions/package-building.xml:155 en/content/how-to-publish-otrs-extensions/package-building.xml:167 en/content/how-to-publish-otrs-extensions/package-building.xml:179 en/content/how-to-publish-otrs-extensions/package-building.xml:191 en/content/how-to-publish-otrs-extensions/package-building.xml:204 en/content/how-to-publish-otrs-extensions/package-building.xml:220 en/content/how-to-publish-otrs-extensions/package-building.xml:248 en/content/how-to-publish-otrs-extensions/package-building.xml:269 en/content/how-to-publish-otrs-extensions/package-building.xml:285 en/content/how-to-publish-otrs-extensions/package-building.xml:303 en/content/how-to-publish-otrs-extensions/package-building.xml:321 en/content/how-to-publish-otrs-extensions/package-building.xml:339 en/content/how-to-publish-otrs-extensions/package-building.xml:357 en/content/how-to-publish-otrs-extensions/package-building.xml:375 en/content/how-to-publish-otrs-extensions/package-building.xml:400 en/content/how-to-publish-otrs-extensions/package-building.xml:418 en/content/how-to-publish-otrs-extensions/package-building.xml:439 en/content/how-to-publish-otrs-extensions/package-building.xml:463 en/content/how-to-publish-otrs-extensions/package-building.xml:484 en/content/how-to-publish-otrs-extensions/package-building.xml:509 en/content/how-to-publish-otrs-extensions/package-building.xml:519 en/content/how-to-publish-otrs-extensions/package-building.xml:538 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:23 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:56 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:100 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:116 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:177 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:283 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:325 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:551 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-4-to-5.xml:41 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-4-to-5.xml:66 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-4-to-5.xml:98 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:31 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:43 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:73 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:85 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:93 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:104 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:112 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:170 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:196 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:243 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:277 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:328 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:339 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:350 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:359 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:380 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:388 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:415 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:430 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:450 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:496 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:507 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:571 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:698 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:785 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:797 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:867 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:875 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:973 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1109 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1137 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1153 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1194 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1204 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1222 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1234 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1261
+#: en/content/contributing/unit-tests.xml:21 en/content/contributing/unit-tests.xml:53 en/content/contributing/unit-tests.xml:71 en/content/contributing/unit-tests.xml:93 en/content/contributing/unit-tests.xml:184 en/content/contributing/unit-tests.xml:200 en/content/contributing/unit-tests.xml:244 en/content/contributing/unit-tests.xml:260 en/content/contributing/unit-tests.xml:276 en/content/contributing/unit-tests.xml:293 en/content/contributing/unit-tests.xml:311 en/content/contributing/unit-tests.xml:329 en/content/contributing/unit-tests.xml:362 en/content/contributing/unit-tests.xml:378 en/content/contributing/unit-tests.xml:402 en/content/contributing/unit-tests.xml:441 en/content/contributing/unit-tests.xml:465 en/content/contributing/unit-tests.xml:497 en/content/contributing/unit-tests.xml:518 en/content/contributing/code-style-guide/css.xml:60 en/content/contributing/code-style-guide/css.xml:84 en/content/contributing/code-style-guide/css.xml:108 en/content/contributing/code-style-guide/javascript.xml:21 en/content/contributing/code-style-guide/perl.xml:17 en/content/contributing/code-style-guide/perl.xml:47 en/content/contributing/code-style-guide/perl.xml:57 en/content/contributing/code-style-guide/perl.xml:71 en/content/contributing/code-style-guide/perl.xml:80 en/content/contributing/code-style-guide/perl.xml:95 en/content/contributing/code-style-guide/perl.xml:110 en/content/contributing/code-style-guide/perl.xml:151 en/content/contributing/code-style-guide/perl.xml:168 en/content/contributing/code-style-guide/perl.xml:190 en/content/contributing/code-style-guide/perl.xml:233 en/content/contributing/code-style-guide/perl.xml:242 en/content/contributing/code-style-guide/perl.xml:254 en/content/contributing/code-style-guide/perl.xml:266 en/content/contributing/code-style-guide/perl.xml:278 en/content/contributing/code-style-guide/perl.xml:319 en/content/contributing/code-style-guide/perl.xml:340 en/content/contributing/code-style-guide/perl.xml:362 en/content/contributing/code-style-guide/perl.xml:377 en/content/contributing/code-style-guide/perl.xml:393 en/content/contributing/code-style-guide/perl.xml:417 en/content/contributing/code-style-guide/perl.xml:439 en/content/contributing/code-style-guide/perl.xml:482 en/content/contributing/code-style-guide/perl.xml:491 en/content/contributing/code-style-guide/perl.xml:502 en/content/contributing/code-style-guide/perl.xml:515 en/content/contributing/code-style-guide/perl.xml:544 en/content/contributing/code-style-guide/perl.xml:555 en/content/contributing/code-style-guide/perl.xml:574 en/content/contributing/code-style-guide/perl.xml:585 en/content/contributing/code-style-guide/perl.xml:598 en/content/contributing/code-style-guide/perl.xml:613 en/content/contributing/code-style-guide/perl.xml:622 en/content/contributing/code-style-guide/perl.xml:632 en/content/contributing/code-style-guide/perl.xml:650 en/content/contributing/code-style-guide/perl.xml:665 en/content/contributing/code-style-guide/perl.xml:815 en/content/contributing/code-style-guide/perl.xml:951 en/content/contributing/code-style-guide/perl.xml:975 en/content/contributing/code-style-guide/perl.xml:986 en/content/how-it-works/config-mechanism.xml:74 en/content/how-it-works/config-mechanism.xml:102 en/content/how-it-works/config-mechanism.xml:261 en/content/how-it-works/config-mechanism.xml:279 en/content/how-it-works/config-mechanism.xml:300 en/content/how-it-works/config-mechanism.xml:318 en/content/how-it-works/config-mechanism.xml:356 en/content/how-it-works/config-mechanism.xml:371 en/content/how-it-works/config-mechanism.xml:393 en/content/how-it-works/config-mechanism.xml:411 en/content/how-it-works/config-mechanism.xml:427 en/content/how-it-works/config-mechanism.xml:444 en/content/how-it-works/config-mechanism.xml:463 en/content/how-it-works/config-mechanism.xml:479 en/content/how-it-works/config-mechanism.xml:495 en/content/how-it-works/config-mechanism.xml:511 en/content/how-it-works/config-mechanism.xml:527 en/content/how-it-works/config-mechanism.xml:548 en/content/how-it-works/config-mechanism.xml:564 en/content/how-it-works/config-mechanism.xml:581 en/content/how-it-works/config-mechanism.xml:604 en/content/how-it-works/config-mechanism.xml:622 en/content/how-it-works/config-mechanism.xml:647 en/content/how-it-works/config-mechanism.xml:686 en/content/how-it-works/config-mechanism.xml:704 en/content/how-it-works/config-mechanism.xml:728 en/content/how-it-works/config-mechanism.xml:736 en/content/how-it-works/database-mechanism.xml:81 en/content/how-it-works/database-mechanism.xml:89 en/content/how-it-works/database-mechanism.xml:97 en/content/how-it-works/date-time.xml:25 en/content/how-it-works/date-time.xml:51 en/content/how-it-works/date-time.xml:124 en/content/how-it-works/date-time.xml:136 en/content/how-it-works/loader.xml:93 en/content/how-it-works/loader.xml:110 en/content/how-it-works/loader.xml:156 en/content/how-it-works/loader.xml:184 en/content/how-it-works/loader.xml:213 en/content/how-it-works/log-mechanism.xml:15 en/content/how-it-works/log-mechanism.xml:62 en/content/how-it-works/log-mechanism.xml:87 en/content/how-it-works/log-mechanism.xml:108 en/content/how-it-works/log-mechanism.xml:126 en/content/how-it-works/log-mechanism.xml:136 en/content/how-it-works/log-mechanism.xml:159 en/content/how-it-works/log-mechanism.xml:186 en/content/how-it-works/log-mechanism.xml:215 en/content/how-it-works/skins.xml:41 en/content/how-it-works/skins.xml:54 en/content/how-it-works/skins.xml:110 en/content/how-it-works/skins.xml:122 en/content/how-it-works/skins.xml:132 en/content/how-it-works/skins.xml:167 en/content/how-it-works/skins.xml:180 en/content/how-it-works/templates.xml:60 en/content/how-it-works/templates.xml:79 en/content/how-it-works/templates.xml:89 en/content/how-it-works/templates.xml:106 en/content/how-it-works/templates.xml:118 en/content/how-it-works/templates.xml:127 en/content/how-it-works/templates.xml:139 en/content/how-it-works/templates.xml:174 en/content/how-it-works/templates.xml:189 en/content/how-it-works/templates.xml:215 en/content/how-it-works/templates.xml:224 en/content/how-it-works/templates.xml:233 en/content/how-it-works/templates.xml:242 en/content/how-it-works/templates.xml:260 en/content/how-it-works/templates.xml:282 en/content/how-it-works/templates.xml:301 en/content/how-it-works/templates.xml:321 en/content/how-it-works/templates.xml:335 en/content/how-it-works/templates.xml:353 en/content/how-it-works/templates.xml:377 en/content/how-it-works/templates.xml:412 en/content/how-it-works/templates.xml:461 en/content/how-it-works/templates.xml:515 en/content/how-it-works/templates.xml:571 en/content/how-it-works/translations.xml:22 en/content/how-it-works/translations.xml:45 en/content/how-it-works/translations.xml:107 en/content/how-it-works/translations.xml:157 en/content/how-to-extend-otrs/writing-otrs-application.xml:42 en/content/how-to-extend-otrs/writing-otrs-application.xml:130 en/content/how-to-extend-otrs/writing-otrs-application.xml:190 en/content/how-to-extend-otrs/writing-otrs-application.xml:292 en/content/how-to-extend-otrs/writing-otrs-application.xml:321 en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/agent-auth.xml:181 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/auth-sync.xml:88 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/customer-auth.xml:181 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.xml:156 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:18 en/content/how-to-extend-otrs/otrs-module-layers/dashboard.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:40 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:69 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:97 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:151 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:166 en/content/how-to-extend-otrs/otrs-module-layers/gi-invoker.xml:240 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:144 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:223 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:320 en/content/how-to-extend-otrs/otrs-module-layers/gi-mapping.xml:367 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:37 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:66 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:95 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:154 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:186 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:475 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:489 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:510 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:538 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:558 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:588 en/content/how-to-extend-otrs/otrs-module-layers/gi-operation.xml:609 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:83 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:114 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:139 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:190 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:247 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:285 en/content/how-to-extend-otrs/otrs-module-layers/gi-transport.xml:331 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/log.xml:133 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:42 en/content/how-to-extend-otrs/otrs-module-layers/notify.xml:126 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/outputfilter.xml:56 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/queue-preferences.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/service-preferences.xml:136 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:24 en/content/how-to-extend-otrs/otrs-module-layers/sla-preferences.xml:134 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:41 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:65 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:94 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:106 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:205 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:220 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:239 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:252 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:283 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:358 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:372 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:415 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:453 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:661 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:721 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:751 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:807 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:856 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1096 en/content/how-to-extend-otrs/otrs-module-layers/stats.xml:1101 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:25 en/content/how-to-extend-otrs/otrs-module-layers/ticket-menu.xml:140 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:46 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:66 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:101 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:153 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:173 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:188 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:210 en/content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.xml:256 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:57 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:87 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:105 en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:165 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-backend.xml:60 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:22 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:49 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-config.xml:75 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:23 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-field-driver.xml:61 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:16 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:31 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:58 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:73 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:145 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module-template.xml:189 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:16 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:42 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:76 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:122 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:157 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:296 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:363 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-admin-module.xml:512 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:18 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:27 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:49 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-config.xml:72 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:30 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:63 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:138 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:231 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:299 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:357 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:366 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:376 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:386 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:396 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:405 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:414 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:424 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:447 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:458 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:470 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:479 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:490 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:501 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:515 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:525 en/content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field-driver.xml:535 en/content/how-to-extend-otrs/otrs-module-layers/email-handling/ticket-postmaster-modules.xml:25 en/content/how-to-extend-otrs/otrs-module-layers/email-handling/ticket-postmaster-modules.xml:52 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:70 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:102 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:337 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:410 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:437 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:456 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:492 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:515 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:529 en/content/how-to-publish-otrs-extensions/package-building.xml:22 en/content/how-to-publish-otrs-extensions/package-building.xml:33 en/content/how-to-publish-otrs-extensions/package-building.xml:44 en/content/how-to-publish-otrs-extensions/package-building.xml:52 en/content/how-to-publish-otrs-extensions/package-building.xml:65 en/content/how-to-publish-otrs-extensions/package-building.xml:76 en/content/how-to-publish-otrs-extensions/package-building.xml:87 en/content/how-to-publish-otrs-extensions/package-building.xml:98 en/content/how-to-publish-otrs-extensions/package-building.xml:110 en/content/how-to-publish-otrs-extensions/package-building.xml:123 en/content/how-to-publish-otrs-extensions/package-building.xml:133 en/content/how-to-publish-otrs-extensions/package-building.xml:144 en/content/how-to-publish-otrs-extensions/package-building.xml:155 en/content/how-to-publish-otrs-extensions/package-building.xml:167 en/content/how-to-publish-otrs-extensions/package-building.xml:179 en/content/how-to-publish-otrs-extensions/package-building.xml:191 en/content/how-to-publish-otrs-extensions/package-building.xml:204 en/content/how-to-publish-otrs-extensions/package-building.xml:220 en/content/how-to-publish-otrs-extensions/package-building.xml:248 en/content/how-to-publish-otrs-extensions/package-building.xml:269 en/content/how-to-publish-otrs-extensions/package-building.xml:285 en/content/how-to-publish-otrs-extensions/package-building.xml:303 en/content/how-to-publish-otrs-extensions/package-building.xml:321 en/content/how-to-publish-otrs-extensions/package-building.xml:339 en/content/how-to-publish-otrs-extensions/package-building.xml:357 en/content/how-to-publish-otrs-extensions/package-building.xml:375 en/content/how-to-publish-otrs-extensions/package-building.xml:400 en/content/how-to-publish-otrs-extensions/package-building.xml:418 en/content/how-to-publish-otrs-extensions/package-building.xml:439 en/content/how-to-publish-otrs-extensions/package-building.xml:463 en/content/how-to-publish-otrs-extensions/package-building.xml:484 en/content/how-to-publish-otrs-extensions/package-building.xml:509 en/content/how-to-publish-otrs-extensions/package-building.xml:519 en/content/how-to-publish-otrs-extensions/package-building.xml:538 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:23 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:56 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:100 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:116 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:177 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:283 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:325 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-33-to-4.xml:551 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-4-to-5.xml:41 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-4-to-5.xml:66 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-4-to-5.xml:98 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:31 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:43 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:73 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:85 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:93 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:104 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:112 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:170 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:196 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:243 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:277 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:328 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:339 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:350 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:359 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:380 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:388 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:415 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:430 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:450 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:496 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:507 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:571 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:698 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:785 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:797 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:867 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:875 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:973 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1109 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1137 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1153 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1194 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1204 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1222 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1234 en/content/how-to-publish-otrs-extensions/package-porting/package-porting-5-to-6.xml:1261
 msgid "<placeholder type=\"programlisting\" id=\"0\"/>"
 msgstr ""
 
@@ -2070,7 +2070,7 @@ msgid ""
 msgstr ""
 
 #. type: CDATA
-#: en/content/contributing/code-style-guide/perl.xml:95
+#: en/content/contributing/code-style-guide/perl.xml:95 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:515
 #, no-wrap
 msgid ""
 "# --\n"
@@ -8139,8 +8139,8 @@ msgstr ""
 msgid "Email Handling"
 msgstr ""
 
-#. type: Content of: <section><section><title>
-#: en/content/how-to-extend-otrs/otrs-module-layers.xml:76
+#. type: Content of: <section><title>
+#: en/content/how-to-extend-otrs/otrs-module-layers.xml:76 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:5
 msgid "Process Management"
 msgstr ""
 
@@ -15201,7 +15201,7 @@ msgid ""
 msgstr ""
 
 #. type: Content of: <section><section><section><section><para>
-#: en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:102
+#: en/content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.xml:102 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:450
 msgid "The constructor <literal>new</literal> creates a new instance of the class."
 msgstr ""
 
@@ -18460,6 +18460,798 @@ msgstr ""
 msgid ""
 "<graphic fileref=\"screenshots/email-processing.png\" scalefit=\"1\" "
 "width=\"100%\" contentdepth=\"100%\"></graphic>"
+msgstr ""
+
+#. type: Content of: <section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:7
+msgid ""
+"Since OTRS 7 Process Management can use script modules to perform Activities "
+"(script tasks)  and/or Sequence Flow Actions (know before as Transition "
+"Actions). This modules are located in "
+"<filename>Kernel::System::ProcessManagement::Modules</filename>."
+msgstr ""
+
+#. type: Content of: <section><section><title>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:12
+msgid "Process Management Modules"
+msgstr ""
+
+#. type: Content of: <section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:14
+msgid ""
+"The Process Management Modules are scripts written in Perl language to "
+"perform certain action or actions over the process ticket like set a dynamic "
+"field or change a queue etc.  Or any other part of the system like create "
+"new tickets."
+msgstr ""
+
+#. type: Content of: <section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:19
+msgid ""
+"By default Modules uses a set of key value pairs to use them as parameters "
+"for the action e.g. to change queue of the process ticket, the queue or "
+"queue id and its corresponding value is needed."
+msgstr ""
+
+#. type: Content of: <section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:24
+msgid ""
+"Some scripts might require more than a simple key value pairs as parameters "
+"or its configuration might need to have a more user friendly GUI, in such "
+"cases OTRS provides some configuration field types that can be also extended "
+"if needed."
+msgstr ""
+
+#. type: Content of: <section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:29
+msgid "Current field types:"
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:32
+msgid "Dropdown"
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:33
+msgid "Shows a drop down list with predefined values."
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:36
+msgid "KeyValueList"
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:37
+msgid ""
+"Shows a list of simple key value pairs (text inputs). Pairs can be added or "
+"deleted."
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:40
+msgid "MultiLanguageRichText"
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:42
+msgid ""
+"Shows a rich text editor associated to a system language, also shows a "
+"language selector to add rich text fields for the proper selected language."
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:46
+msgid "Recipients"
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:48
+msgid ""
+"Shows a multi select field pre-filled with agents to be used as email "
+"recipients, also displays a free input field to be used to specify external "
+"email addresses to be added to the recipients list."
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:52
+msgid "RichText"
+msgstr ""
+
+#. type: Content of: <section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:53
+msgid "Shows a single rich text field."
+msgstr ""
+
+#. type: Content of: <section><section><section><title>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:58
+msgid "Creating a New Process Management Module"
+msgstr ""
+
+#. type: Content of: <section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:60
+msgid ""
+"The following is an example of how to create a Process Management module, it "
+"includes a section where all possible fields are defined as a reference, to "
+"create a new module only one field type is needed but consider that by "
+"convention the parameter UserID is used to impersonate all the actions in "
+"the module with another user than the one that triggers the action, then it "
+"is a good practice to always include the <literal>KeyValueList</literal> "
+"field type along with any other needed field."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><title>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:65
+msgid "Process Management Module Code Example"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:67
+msgid ""
+"The following code implements a dummy process management module that can be "
+"used in script task activities or sequence flow actions."
+msgstr ""
+
+#. type: CDATA
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:70
+#, no-wrap
+msgid ""
+"# --\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
+"# --\n"
+"# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
+"# --\n"
+"\n"
+"package Kernel::System::ProcessManagement::Modules::Test;\n"
+"\n"
+"use strict;\n"
+"use warnings;\n"
+"use utf8;\n"
+"\n"
+"use Kernel::System::VariableCheck qw(:all);\n"
+"\n"
+"use parent qw(Kernel::System::ProcessManagement::Modules::Base);\n"
+"\n"
+"our @ObjectDependencies = ( );\n"
+"\n"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:94 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:434
+msgid ""
+"This is common header that can be found in most OTRS modules. The "
+"class/package name is declared via the package keyword."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:98
+msgid ""
+"In this case we are inheriting from <literal>Base</literal> class, and the "
+"object manager dependencies are set."
+msgstr ""
+
+#. type: CDATA
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:102
+#, no-wrap
+msgid ""
+"sub new {\n"
+"    my ( $Type, %Param ) = @_;\n"
+"\n"
+"    # Allocate new hash for object.\n"
+"    my $Self = {};\n"
+"    bless( $Self, $Type );\n"
+"\n"
+"    $Self->{Config} = {\n"
+"        Description => 'Description for the module.',\n"
+"        ConfigSets  => [\n"
+"            {\n"
+"                Type        => 'Dropdown',\n"
+"                Description => 'Description for Dropdown.',\n"
+"                Mandatory   => 1,\n"
+"                Config      => {\n"
+"                    Data => {\n"
+"                        Internal1 => 'Display 1',\n"
+"                        Internal2 => 'Display 2',\n"
+"                    },\n"
+"                    Name         => 'Test-DropDown',\n"
+"                    Multiple     => 1,\n"
+"                    PossibleNone => 1,\n"
+"                    Sort         => 'AlphanumericValue',\n"
+"                    Translation  => 1,\n"
+"                },\n"
+"            },\n"
+"            {\n"
+"                Type        => 'KeyValueList',\n"
+"                Description => 'Description of the Key/Value pairs',\n"
+"                Defaults    => [\n"
+"                    {\n"
+"                        Key       => 'Test-Param1',\n"
+"                        Value     => 'Hello',\n"
+"                        Mandatory => 1,\n"
+"                    },\n"
+"                    {\n"
+"                        Key       => 'Test-Param2',\n"
+"                        Mandatory => 1,\n"
+"                    },\n"
+"                    {\n"
+"                        Key       => 'Test-Param3',\n"
+"                        Value     => 'World',\n"
+"                        Mandatory => 0,\n"
+"                    },\n"
+"                ],\n"
+"            },\n"
+"            {\n"
+"                Type        => 'MultiLanguageRichText',\n"
+"                Description => \"Description for Mutli-Language Rich "
+"Text.\",\n"
+"                Defaults    => [\n"
+"                    {\n"
+"                        Key   => 'en_Subject',\n"
+"                        Value => 'Hello',\n"
+"                    },\n"
+"                    {\n"
+"                        Key   => 'en_Body',\n"
+"                        Value => 'World',\n"
+"                    },\n"
+"\n"
+"                ],\n"
+"            },\n"
+"            {\n"
+"                Type        => 'Recipients',\n"
+"                Description => \"Description for Recipients.\"\n"
+"            },\n"
+"            {\n"
+"                Type        => 'RichText',\n"
+"                Description => \"Description for Rich Text.\",\n"
+"                Defaults    => [\n"
+"                    {\n"
+"                        Value     => 'Hello World',\n"
+"                        Mandatory => 1,\n"
+"                    },\n"
+"                ],\n"
+"            },\n"
+"        ],\n"
+"    };\n"
+"\n"
+"    return $Self;\n"
+"}\n"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:186
+msgid ""
+"The constructor <literal>new()</literal> creates a new instance of the "
+"class. The configuration fields are defined here and they are set in "
+"<literal>$Self->{Config}</literal>."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:188
+msgid "The configuration has two main entries:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:191
+msgid "<literal>Description</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:193
+msgid ""
+"Is is used to to explain the administrators what does the module do and/or "
+"considerations for its configuration."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:197
+msgid "<literal>ConfigSets</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:198
+msgid "This is just a container for the actual configuration fields"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:203
+msgid ""
+"All configuration fields requires a <literal>Type</literal>: that defines "
+"the kind of field and they could also have an internal "
+"<literal>Description</literal>: to be used a the title of the field widget, "
+"if its not defined a default description is used."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:206
+msgid ""
+"Each field defines its configuration parameters and capabilities, the "
+"following is a small reference for the fields provided my OTRS out of the "
+"box."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:211
+msgid "<literal>Dropdown</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:215 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:276 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:326
+msgid "<literal>Mandatory</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:216 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:327
+msgid "Used to define if a value is required to be set."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:219
+msgid "<literal>Config</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:220
+msgid "Holds the information to display the drop-down field"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:224
+msgid "<literal>Data</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:226
+msgid ""
+"Simple hash that defines the options for the Dropdown, the keys are used "
+"internally, and the values are the options that the user see in the screen."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:230
+msgid "<literal>Name</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:231
+msgid "The name of the parameter."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:234
+msgid "<literal>Multiple</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:235
+msgid "To define if only one or multiple values can be selected."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:238
+msgid "<literal>PossibleNone</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:239
+msgid "Defines if the list of values offer an empty value or not."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:242
+msgid "<literal>Sort</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:244
+msgid ""
+"Defines how the options will be sorted when the field is render, the "
+"possible values are: <literal>AlphanumericValue</literal>, "
+"<literal>NumericValue></literal>, <literal>AlphanumericKey</literal> and "
+"<literal>NumericKey</literal>."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:248
+msgid "<literal>Translation</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:249
+msgid "Set if the display values should be translated."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:258
+msgid "<literal>KeyValueList</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:262 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:289 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:316
+msgid "<literal>Defaults</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:264
+msgid ""
+"Array of Hashes that holds the default configuration for its key value "
+"pairs."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:268 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:295
+msgid "<literal>Key</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:269
+msgid "The name of a parameter."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:272 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:299 en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:322
+msgid "<literal>Value</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:273
+msgid "The default value of the parameter (optional)."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:277
+msgid "Mandatory parameters can not be renamed or removed (optional)."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:285
+msgid "<literal>MultiLanguageRichText</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:291
+msgid ""
+"Array of Hashes that holds the default configuration each language and field "
+"part."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:296
+msgid ""
+"Its composed by language such as <literal>en</literal> or "
+"<literal>es_MX</literal>, followed by a '_' (underscore character) and then "
+"<literal>Subject</literal> or <literal>Body</literal> for the corresponding "
+"part of the field."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:300
+msgid "The default value of the field part (optional)."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:308
+msgid "<literal>Recipients</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:309
+msgid "No further configuration is provided for this kind of field."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:312
+msgid "<literal>RichText</literal>:"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:318
+msgid ""
+"Array of Hashes that holds the default configuration field (only the first "
+"element is used)."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para><itemizedlist><listitem><para><itemizedlist><listitem><itemizedlist><listitem><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:323
+msgid "The default value of the field."
+msgstr ""
+
+#. type: CDATA
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:337
+#, no-wrap
+msgid ""
+"sub Run {\n"
+"    my ( $Self, %Param ) = @_;\n"
+"\n"
+"    # Define a common message to output in case of any error.\n"
+"    my $CommonMessage = \"Process: $Param{ProcessEntityID} Activity: "
+"$Param{ActivityEntityID}\";\n"
+"\n"
+"    # Add SequenceFlowEntityID to common message if available.\n"
+"    if ( $Param{SequenceFlowEntityID} ) {\n"
+"        $CommonMessage .= \" SequenceFlow: $Param{SequenceFlowEntityID}\";\n"
+"    }\n"
+"\n"
+"    # Add SequenceFlowActionEntityID to common message if available.\n"
+"    if ( $Param{SequenceFlowActionEntityID} ) {\n"
+"        $CommonMessage .= \" SequenceFlowAction: "
+"$Param{SequenceFlowActionEntityID}\";\n"
+"    }\n"
+"\n"
+"    # Check for missing or wrong params.\n"
+"    my $Success = $Self->_CheckParams(\n"
+"        %Param,\n"
+"        CommonMessage => $CommonMessage,\n"
+"    );\n"
+"    return if !$Success;\n"
+"\n"
+"    # Override UserID if specified as a parameter in the TA config.\n"
+"    $Param{UserID} = $Self->_OverrideUserID(%Param);\n"
+"\n"
+"    # Use ticket attributes if needed.\n"
+"    $Self->_ReplaceTicketAttributes(%Param);\n"
+"    $Self->_ReplaceAdditionalAttributes(%Param);\n"
+"\n"
+"    # Get module configuration.\n"
+"    my $ModuleConfig = $Param{Config};\n"
+"\n"
+"    # Add module logic here!\n"
+"\n"
+"    return 1;\n"
+"}\n"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:378
+msgid ""
+"The <literal>Run</literal> method Is the main part of the module. First sets "
+"a Common Message that can be used in error logs or any other purpose, for "
+"consistency its highly recommended to use it as described above."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:381
+msgid "Next step is to check if the global parameters was sent correctly."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:384
+msgid ""
+"By Convention all modules should be able to override the current UserID is "
+"one is provided in the parameters (if any), this passed UserID should be "
+"used in any function call that requires it."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:387
+msgid ""
+"User defined attribute values can use current ticket values by using OTRS "
+"smart tags, _ReplaceTicketAttributes is used for normal text attributes, "
+"while _ReplaceAdditionalAttributes for rich texts. For more complex "
+"parameters it might need customized functions to replace this smart tags"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:390
+msgid "The following is the proper logic of the module."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:393
+msgid "If everything was OK it must return 1."
+msgstr ""
+
+#. type: Content of: <section><section><section><title>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:399
+msgid "Creating a New Process Management Module Configuration Field"
+msgstr ""
+
+#. type: Content of: <section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:401
+msgid ""
+"The following is an example of how to create a Process Management module "
+"configuration field, this field can be used by any Process Management module "
+"after its configuration."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><title>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:405
+msgid "Process Management Module Configuration Field Code Example"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:407
+msgid ""
+"The following code implements a simple input process management module "
+"configuration field (Test). The name of the field and its default value can "
+"be set trough a process management module ConfigSets."
+msgstr ""
+
+#. type: CDATA
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:410
+#, no-wrap
+msgid ""
+"# --\n"
+"# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n"
+"# --\n"
+"# This software comes with ABSOLUTELY NO WARRANTY. For details, see\n"
+"# the enclosed file COPYING for license information (GPL). If you\n"
+"# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.\n"
+"# --\n"
+"\n"
+"package "
+"Kernel::Output::HTML::ProcessManagement::ModuleConfiguration::Test;\n"
+"\n"
+"use strict;\n"
+"use warnings;\n"
+"\n"
+"use Kernel::System::VariableCheck qw(:all);\n"
+"use Kernel::Language qw(Translatable);\n"
+"\n"
+"our @ObjectDependencies = (\n"
+"    'Kernel::Output::HTML::Layout',\n"
+"    'Kernel::System::Web::Request',\n"
+");\n"
+msgstr ""
+
+#. type: CDATA
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:437
+#, no-wrap
+msgid ""
+"sub new {\n"
+"    my ( $Type, %Param ) = @_;\n"
+"\n"
+"    # allocate new hash for object\n"
+"    my $Self = {%Param};\n"
+"    bless( $Self, $Type );\n"
+"\n"
+"    return $Self;\n"
+"}\n"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:453
+msgid ""
+"Every configuration field requires to implement at least 2 main methods "
+"<literal>Render</literal> and <literal>GetParams</literal>."
+msgstr ""
+
+#. type: CDATA
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:456
+#, no-wrap
+msgid ""
+"sub Render {\n"
+"    my ( $Self, %Param ) = @_;\n"
+"\n"
+"    my $ConfigSet = $Param{ConfigSet} // {};\n"
+"    my $EntityConfig = $Param{EntityData}->{Config}->{Config}->{ConfigTest} "
+"// {};\n"
+"\n"
+"    my %Data;\n"
+"\n"
+"    $Data{Description} = $ConfigSet->{Description} || 'Config Parameters "
+"(Test)';\n"
+"    $Data{Name} = $ConfigSet->{Config}->{Name} // 'Test';\n"
+"    $Data{Value} = $EntityConfig->{ $ConfigSet->{Config}->{Name} } // "
+"$ConfigSet->{Defaults}->[0]->{Value} // '';\n"
+"\n"
+"    return {\n"
+"        Success => 1,\n"
+"        HTML    => "
+"$Kernel::OM->Get('Kernel::Output::HTML::Layout')->Output(\n"
+"            TemplateFile => 'ProcessManagement/ModuleConfiguration/Test',\n"
+"            Data         => \\%Data,\n"
+"        ),\n"
+"    };\n"
+"}\n"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:480
+msgid ""
+"<literal>Render</literal> method is responsible to create the required HTML "
+"for the field."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:483
+msgid ""
+"In This example it first localize some parameters for more easy read and "
+"maintain."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:486
+msgid ""
+"The following lines sets the data to display, the field widget title "
+"<literal>Description</literal> is gather from the ConfigSet if defined, "
+"otherwise it uses a default text. Similar to the field "
+"<literal>Name</literal>, for the <literal>Value</literal>it first checks if "
+"the activity or sequence flow action already have an stored value, if not it "
+"tries to use the default value from the ConfigSet, or use empty otherwise."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:489
+msgid ""
+"At the end it returns a structure with the HTML code from a template filled "
+"with the gathered data."
+msgstr ""
+
+#. type: CDATA
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:492
+#, no-wrap
+msgid ""
+"sub GetParams {\n"
+"    my ( $Self, %Param ) = @_;\n"
+"\n"
+"    my %GetParams;\n"
+"    my $Config = $Param{ConfigSet}->{Config} // 'Test';\n"
+"\n"
+"    $GetParams{ $Config->{Name} } = "
+"$Kernel::OM->Get('Kernel::System::Web::Request')->GetParam( Param => "
+"$Config->{Name} );\n"
+"\n"
+"    return \\%GetParams;\n"
+"}\n"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:506
+msgid ""
+"For this example the <literal>GetParams</literal> method is very straight "
+"forward, it get the name of the field from the ConfigSet or use a default, "
+"and gets the value from the web request."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><title>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:510
+msgid "Process Management Module Configuration Field Template Example"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:512
+msgid ""
+"The following code implements a basic HTML template for the Test Process "
+"Management module configuration field."
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:526
+msgid "This is common header that can be found in most OTRS modules."
+msgstr ""
+
+#. type: CDATA
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:529
+#, no-wrap
+msgid ""
+"<div id=\"TestConfig\" class=\"WidgetSimple Expanded\">\n"
+"    <div class=\"Header\">\n"
+"        <div class=\"WidgetAction Toggle\">\n"
+"            <a href=\"#\" title=\"[% Translate(\"Show or hide the content\") "
+"| html %]\"><i class=\"fa fa-caret-right\"></i><i class=\"fa "
+"fa-caret-down\"></i></a>\n"
+"        </div>\n"
+"        <h2 for=\"Config\">[% Translate(Data.Description) | html %]</h2>\n"
+"    </div>\n"
+"    <div class=\"Content\" id=\"TestParams\">\n"
+"        <fieldset class=\"TableLike\">\n"
+"            <label for=\"[% Data.Name | html %]\">[% Data.Name | html "
+"%]</label>\n"
+"            <div class=\"Field\">\n"
+"                <input type=\"text\" value=\"[% Data.Value | html %]\" "
+"name=\"[% Data.Name | html %]\" id=\"[% Data.Name | html %]\" />\n"
+"            </div>\n"
+"        </fieldset>\n"
+"    </div>\n"
+"</div>\n"
+msgstr ""
+
+#. type: Content of: <section><section><section><section><para>
+#: en/content/how-to-extend-otrs/otrs-module-layers/process-management/process-management-modules.xml:549
+msgid "The template shows a simple text input element with its associated label."
 msgstr ""
 
 #. type: Content of: <section><title>
