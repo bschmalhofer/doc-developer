@@ -264,8 +264,8 @@ export default {
             </figure>
         </para>
         <para>
-            But, if we access the route via the <literal>/external/hello-world/Ticket</literal>, the prop will be set
-            to string <literal>Ticket</literal>, and even automatically translated in the current user language (where
+            But, if we access the route via the <literal>/external/hello-world/Value</literal>, the prop will be set
+            to string <literal>Value</literal>, and even automatically translated in the current user language (where
             applicable):
         </para>
         <para>
