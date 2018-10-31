@@ -462,13 +462,8 @@ jquery
             need to be included in the package.
         </para>
         <para>
-            Final optimization would be to remove unneeded files from the specific module folders. This might prove to
-            be complicated, but it's worth it since it will further reduce size of the modules and number of files that
-            need to be included in the package.
-        </para>
-        <para>
-            For example, let's remove minimized JS files from the fullcalendar module because we identified that the Vue
-            component uses full dist files only:
+            For example, let's remove minimized JS files from the <literal>fullcalendar</literal> module because we
+            identified that the Vue component uses full dist files only:
         </para>
         <para>
             <screen><![CDATA[
@@ -476,8 +471,8 @@ jquery
             ]]></screen>
         </para>
         <para>
-            It's also safe to remove jQuery source and minimized files as well, since the fullcalendar uses original
-            dist files too:
+            It's also safe to remove jQuery source and minimized files as well, since the
+            <literal>fullcalendar</literal> uses original dist files too:
         </para>
         <para>
             <screen><![CDATA[
@@ -488,7 +483,20 @@ jquery
         </para>
         <para>
             We are left with approx. 100+ files which we need to include in our SOPM files, like any other regular
-            package file. Once we do this, these dependencies will be present and resolvable in the target system.
+            package file. Once we do this, these dependencies will be present and resolvable in the target system:
+        </para>
+        <para>
+            <screen><![CDATA[
+/ws/MyPackage $ ls -la Frontend/Vendor
+Frontend/Vendor
+Frontend/Vendor/vue-full-calendar
+Frontend/Vendor/vue-full-calendar/.babelrc
+Frontend/Vendor/vue-full-calendar/LICENSE
+Frontend/Vendor/vue-full-calendar/tests
+Frontend/Vendor/vue-full-calendar/tests/fullcalendar.spec.js
+Frontend/Vendor/vue-full-calendar/index.js
+...
+            ]]></screen>
         </para>
     </section>
 </section>
