@@ -1,4 +1,0 @@
-- Add chapter on Selenium testing.
-- Add DB XML handling to TranslationsUpdate chapter.
-- Database chapter: DEFAULT is missing, ForeignKey-Changes are missing.
-- Convert "module layers" chapter to ObjectManager.
