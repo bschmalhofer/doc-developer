@@ -2,7 +2,7 @@
 Variables:
   doc_name: OTRS Developer Manual
   doc_description: This is the description of the documentation.
-  doc_version: 7.0
+  doc_version: 8.0
   doc_yearstamp: current_yearstamp
   doc_vendor: OTRS AG
   doc_url: https://otrs.com
@@ -11,8 +11,8 @@ Variables:
 ProjectName: OTRS Developer Manual
 Copyright: 2018, OTRS AG
 Author: OTRS AG
-Version: 7.0
-Release: 7.0
+Version: 8.0
+Release: 8.0
 HTMLBasename: doc-developer
-Stable: 1
+Stable: 0
 Publish: 1

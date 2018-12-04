@@ -8,7 +8,7 @@
 # See: https://stackoverflow.com/a/36331678
 doc_name = 'OTRS Developer Manual'
 doc_description = 'This is the description of the documentation.'
-doc_version = '7.0'
+doc_version = '8.0'
 doc_yearstamp = '2018'
 doc_vendor = 'OTRS AG'
 doc_url = 'https://otrs.com'
