@@ -22,11 +22,19 @@ Extensions:
   - sphinx.ext.autosectionlabel
   - sphinx.ext.extlinks
 
-# basename to be used by HTML help builder
-HTMLBasename: doc-developer
+# enable "Edit on GitHub" link
+DisplayGitHubEditButton: 1
 
 # generate stable link to the current version
 Stable: 1
 
 # publish documentation to target repository
 Publish: 1
+
+# PDF output directory path and filename
+PDFOutputPath: doc-developer/{{Version}}/{{Language}}/pdf/
+PDFFilename: otrs_developer_manual_{{Version}}_{{Language}}.pdf
+
+# EPub output directory path and filename
+EPUBOutputPath: doc-developer/{{Version}}/{{Language}}/epub/
+EPUBFilename: otrs_developer_manual_{{Version}}_{{Language}}.epub
