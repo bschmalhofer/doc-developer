@@ -32,9 +32,9 @@ Stable: 1
 Publish: 1
 
 # PDF output directory path and filename
-PDFOutputPath: doc-developer/{{Version}}/{{Language}}/pdf/
+PDFOutputPath: doc-developer/{{Version}}/{{Language}}/
 PDFFilename: otrs_developer_manual_{{Version}}_{{Language}}.pdf
 
 # EPub output directory path and filename
-EPUBOutputPath: doc-developer/{{Version}}/{{Language}}/epub/
+EPUBOutputPath: doc-developer/{{Version}}/{{Language}}/
 EPUBFilename: otrs_developer_manual_{{Version}}_{{Language}}.epub
