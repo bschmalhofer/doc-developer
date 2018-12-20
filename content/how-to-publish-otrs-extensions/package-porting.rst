@@ -6,6 +6,54 @@ With every new minor or major version of OTRS, you need to port your packages an
 This section lists changes that you need to examine when porting your package from OTRS 7 to 8.
 
 
+Frontend Messages
+-----------------
+
+In an effort to improve consistency and enforce new UX guidelines, a new and common frontend messages API has been introduced in OTRS 8. Developers should strive to use only this way of informing users of application changes. A frontend component has been created for this feature, and it's included by default in every application.
+
+The API has been re-used from a previous integration, albeit with some changes. By emitting an event on the global event bus it's still possible to trigger display of a message on the user screen. For example, in order to show a toast style message, you can just emit an event like so:
+
+.. code-block:: js
+
+    this.$bus.$emit('showToastMessage', {
+        id: 'aSampleToastMessage'
+        heading: 'This is a %s heading',
+        headingPlaceholders: [ 'toast' ],
+        text: 'This is a %s message text.',
+        textPlaceholders: [ 'toast' ],
+        variant: 'warning',
+    });
+
+If your use-case is to prevent user from interacting with the app until they make a choice or acknowledge a message, you can trigger display of a blocking modal message. The interface is similar, please note the different name of the event:
+
+.. code-block:: js
+
+    this.$bus.$emit('showModalMessage', {
+        id: 'aSampleModalMessage'
+        heading: 'This is a %s heading',
+        headingPlaceholders: [ 'modal' ],
+        text: 'This is a %s message text.',
+        textPlaceholders: [ 'modal' ],
+        buttonBehavior: 'yesNo',
+    });
+
+Both message styles provide numerous configuration options, so make sure to consult the `component documentation in the design system <https://doc.otrs.com/doc/api/otrs/8.0/frontend/dist/designsystem/#/documentation/components/common/common-messages>`_ for complete API description.
+
+
+Renamed Message Events
+~~~~~~~~~~~~~~~~~~~~~~
+
+Frontend message component improvements meant that some event names had to be renamed, it will be expected from you to port existing packages that use them to conform to the new format. Please find a table below containing all affected events.
+
++-------------------------+-------------------------+
+| Old name                | New name                |
++=========================+=========================+
+| ``showNotification``    | ``showToastMessage``    |
++-------------------------+-------------------------+
+| ``clearNotification``   | ``hideToastMessage``    |
++-------------------------+-------------------------+
+
+
 Styling Improvements
 --------------------
 
