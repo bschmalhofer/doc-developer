@@ -30,7 +30,7 @@ találhat egy példát.
         <programlisting linenumbering="numbered"><![CDATA[
 # --
 # Kernel/System/Service/PreferencesCustom - some user functions
-# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+# Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
 # --
 # Id: PreferencesCustom.pm,v 1.2 2009/02/16 11:47:34 tr Exp $
 # --
