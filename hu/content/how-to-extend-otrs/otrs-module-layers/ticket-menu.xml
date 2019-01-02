@@ -25,7 +25,7 @@ helyre. Mindössze két függvényre van szüksége: <code>new()</code> és
         <programlisting linenumbering="numbered"><![CDATA[
 # --
 # Kernel/Output/HTML/TicketMenuCustom.pm
-# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+# Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
 # --
 # Id: TicketMenuCustom.pm,v 1.17 2010/04/12 21:34:06 martin Exp $
 # --
