@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-09 14:13+0100\n"
+"POT-Creation-Date: 2019-01-09 16:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,6 +57,7 @@ msgstr ""
 #: ../../content/how-it-works.rst:4
 #: ../../content/how-to-extend-otrs.rst:4
 #: ../../content/how-to-publish-otrs-extensions.rst:4
+#: ../../content/index.rst:9
 msgid "Contents"
 msgstr ""
 
