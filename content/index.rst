@@ -10,10 +10,10 @@ Permission is granted to copy, distribute and/or modify this document under the 
    :maxdepth: 3
    :caption: Contents
 
-   content/get-started
-   content/how-it-works
-   content/how-to-extend-otrs
-   content/how-to-publish-otrs-extensions
-   content/contributing
-   content/additional-resources
+   get-started
+   how-it-works
+   how-to-extend-otrs
+   how-to-publish-otrs-extensions
+   contributing
+   additional-resources
 
