@@ -1,4 +1,12 @@
-.project
+.c9
 .DS_Store
-_build/
+.project
+.vstags
+.vscode
+testbuild
+_build
+_static
+_sphinx-themes
+*.doctree
 *.mo
+conf.py
