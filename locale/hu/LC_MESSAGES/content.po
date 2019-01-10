@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-09 17:02+0000\n"
-"PO-Revision-Date: 2019-01-10 12:50+0000\n"
-"Last-Translator: Balázs Úr <ur.balazs@fsf.hu>\n"
+"POT-Creation-Date: 2019-01-09 17:03+0000\n"
+"PO-Revision-Date: 2019-01-10 12:53+0000\n"
+"Last-Translator: Martin Gruner <martin.gruner@otrs.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/otrs/OTRS/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -6847,7 +6847,7 @@ msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:8
 msgid "OTRS as provider"
-msgstr ""
+msgstr "OTRS mint szolgáltató"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:8
 msgid ""
@@ -6858,7 +6858,7 @@ msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:11
 msgid "OTRS as requester"
-msgstr ""
+msgstr "OTRS mint kérelmező"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:11
 msgid ""
@@ -7364,7 +7364,7 @@ msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:28
 msgid "Recipients"
-msgstr ""
+msgstr "Címzettek"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:28
 msgid ""
@@ -9655,623 +9655,199 @@ msgstr ""
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:6
 msgid ""
 "This section lists changes that you need to examine when porting your "
-"package from OTRS 7 to 8."
+"package from OTRS 6 to 7."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:10
-msgid "Frontend Messages"
+msgid "Sessions Always Require Cookies"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:12
 msgid ""
-"In an effort to improve consistency and enforce new UX guidelines, a new and"
-" common frontend messages API has been introduced in OTRS 8. Developers "
-"should strive to use only this way of informing users of application "
-"changes. A frontend component has been created for this feature, and it's "
-"included by default in every application."
+"Starting from OTRS 7, `sessions always require cookies to be enabled "
+"<https://github.com/OTRS/otrs/commit/831aba1cfe6893d0633af6f18584216e89198072>`__."
+" Therefore, the ``SessionIDCookie`` value was removed from ``LayoutObject``,"
+" :doc:`../how-it-works/templates` and JavaScript. It is no longer necessary "
+"to append session variables to URLs or HTTP request payloads."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:14
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:15
+msgid "The ``groups`` Table Was Renamed"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:17
 msgid ""
-"The API has been re-used from a previous integration, albeit with some "
-"changes. By emitting an event on the global event bus it's still possible to"
-" trigger display of a message on the user screen. For example, in order to "
-"show a toast style message, you can just emit an event like so:"
+"Due to a change in MySQL 8, the table ``groups`` had to be renamed to "
+"``groups_table``. If you use this table directly in any SQL statements, they"
+" will need to be adapted. For more information, see `bug#13866 "
+"<https://bugs.otrs.org/show_bug.cgi?id=13866>`__."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:21
+msgid "New External Interface"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:23
+msgid ""
+"The existing customer (``customer.pl``) and public (``public.pl``) "
+"interfaces were replaced by a new REST backend (``Kernel/WebApp``) and a "
+"modern Vue.js based frontend application. This means that all related code "
+"has to be ported and/or rewritten."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:25
+msgid ""
+"There is one special case for public front end modules that don't serve an "
+"HTML application. These can be ported rather easily to the new REST backend "
+"(see also `the REST API docs "
+"<http://doc.otrs.com/doc/api/otrs/7.0/REST/>`__). See for example "
+"``Kernel/WebApp/Controller/API/Public/Package/Repository.pm``. This example "
+"also shows how endpoints can support both new REST-like URLs but at the same"
+" time the legacy URLs based on the ``/otrs/customer.pl?Action=MyAction`` "
+"routes at the same time."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:27
 msgid ""
-"If your use-case is to prevent user from interacting with the app until they"
-" make a choice or acknowledge a message, you can trigger display of a "
-"blocking modal message. The interface is similar, please note the different "
-"name of the event:"
+"For some important URLs in the customer interface that are linked from "
+"legacy systems, redirect controllers may need to be provided to make sure "
+"the old URLs keep working."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:40
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:31
+msgid "Changes in Process Management"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:33
 msgid ""
-"Both message styles provide numerous configuration options, so make sure to "
-"consult the `component documentation in the design system "
-"<https://doc.otrs.com/doc/api/otrs/8.0/frontend/dist/designsystem/#/documentation/components/common"
-"/common-messages>`_ for complete API description."
+"The migration script ``scripts/DBUpdate-to-7.pl`` will upgrade all processes"
+" that are already in the database. Manual action is only needed to make use "
+"of any new features that OTRS 7 provides."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:44
-msgid "Renamed Message Events"
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:37
+msgid "New Activity Types"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:39
+msgid ""
+"Since OTRS 7 is capable of managing more activity types, all existing "
+"activities now become *User Task* activities. To update a task definition on"
+" a YAML file, please add ``Type: UserTask`` with the same indentation as "
+"``Name`` or ``ID``."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:43
+msgid "Renamed Process Management Components"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:46
+msgid "``Transition`` to ``SequenceFlow``"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:46
 msgid ""
-"Frontend message component improvements meant that some event names had to "
-"be renamed, it will be expected from you to port existing packages that use "
-"them to conform to the new format. Please find a table below containing all "
-"affected events."
+"This process component was renamed to be more aligned with BPMN. Files, "
+"classes and methods has been renamed accordingly. Customized files needs to "
+"be updated following the new conventions."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:49
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:97
-msgid "Old name"
+msgid "``TransitionAction`` to ``SequenceFlowAction``"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:49
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:97
-msgid "New name"
+msgid ""
+"This process component does not exists in BPMN but has to be also renamed to"
+" be consistent with the other changes. Files, classes and methods has been "
+"renames accordingly. Customized files needs to be updated following the new "
+"conventions."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:51
-msgid "``showNotification``"
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:52
+msgid "``TransitionActionModules`` to ``ProcessManagementModules``"
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:51
-msgid "``showToastMessage``"
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:52
+msgid ""
+"This process components are not only used by *Sequence Flow Actions* but "
+"also for *Script Tasks* activities and has been moved from "
+"``Kernel/System/ProcessManagement/TransitionAction`` to "
+"``Kernel/System/ProcessManagement/Modules``."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:53
-msgid "``clearNotification``"
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:54
+msgid ""
+"The new process management modules can offer more field types and options to"
+" present the parameters to the process designer, please follow the "
+"instructions in the :doc:`../how-to-extend-otrs/otrs-module-layers/process-"
+"management-modules` documentation to learn more about this new feature and "
+"how to improve existing modules."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:53
-msgid "``hideToastMessage``"
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:56
+msgid ""
+"It is needed to update any shipped process definitions to use the new name "
+"schema."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:58
-msgid "Styling Improvements"
+msgid "Replace ``Transition`` with ``SequenceFlow``."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:59
+msgid "Replace ``Transitions`` with ``SequenceFlows``."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:60
-msgid ""
-"In OTRS 7, new frontend stack has been introduced. However, since only one "
-"major frontend application was shipped (for the external interface), there "
-"was no need to make sure that components living in the shared namespace have"
-" support for different styling. With OTRS 8, this was bound to change, and "
-"now OTRS supports app-specific styling in components."
+msgid "Replace ``TransitionAction`` with ``SequenceFlowAction``."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:64
-msgid "Application Specific Styling in Shared Components"
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:61
+msgid "Replace ``TransitionActions`` with ``SequenceFlowActions``."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:62
+msgid ""
+"Remove ``Kernel::System::ProcessManagement::TransitionAction`` from the "
+"``Module:`` on all ``SequenceFlowAction``. For example: ``Module: "
+"Kernel::System::ProcessManagement::TransitionAction::TicketLockSet`` should "
+"become ``Module: TicketLockSet``."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:66
+msgid "Changes in the ``LayoutObject``"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:68
 msgid ""
-"Usage is quite simple: whenever you need to apply an app-specific style, "
-"wrap your SCSS code in the following mixin:"
+"There are changes in ``Kernel/Output/HTML/Layout.pm`` which are necessary to"
+" properly render content using Mojolicious real-time web framework."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:82
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:72
+msgid "Not Shown/Empty Tables in Screens"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:74
 msgid ""
-"Usage of the mixin guarantees your block will only be loaded where "
-"appropriate (in this example in the external interface app). In the block "
-"you are free to use application specific global variables and functions, "
-"without any restrictions. Everything that is available within the app will "
-"be allowed."
+"Please make sure to check every screen which produces table-like output "
+"(e.g. ``Kernel/Modules/AgentTicketStatusView.pm``). If the list of e.g. "
+"tickets is empty or even not shown at all, check if the parameter ``Output "
+"=> 1`` is used in creating the output for the page."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:86
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:78
+msgid "Encoding Issues in Legacy Front End Modules"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:80
 msgid ""
-"Design system will load appropriate style depending on current choice. For "
-"example, there will be a dropdown menu shown above the component example, "
-"allowing the user to switch the styles. All you have to do is make sure your"
-" component lives in the shared namespace and implements the mixin above, as "
-"needed."
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:88
-msgid ""
-"In order to provide this mechanism, it was required to refactor all the "
-"styles to conform to the BEM specification. This now applies to any variable"
-" names, mixins, functions, etc. By looking at their names, now it will be "
-"perfectly clear where they are coming from, and the chance for any possible "
-"collisions is decreased to the minimum."
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:92
-msgid "Renamed SCSS Literals"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:94
-msgid ""
-"Since some SCSS literals had to be renamed, it will be expected from you to "
-"port existing packages that use them to conform to the new format. Please "
-"find a table below containing all affected literals."
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:97
-msgid "Namespace"
-msgstr "Névtér"
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:97
-msgid "Origin"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:99
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:101
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:103
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:105
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:107
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:109
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:111
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:113
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:115
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:117
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:119
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:121
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:123
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:125
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:127
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:129
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:131
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:133
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:135
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:137
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:139
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:141
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:143
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:145
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:147
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:149
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:151
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:153
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:155
-msgid "Shared"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:99
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:101
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:103
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:105
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:107
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:109
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:111
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:113
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:115
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:117
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:119
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:121
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:123
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:125
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:127
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:129
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:169
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:171
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:173
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:175
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:177
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:179
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:181
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:183
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:185
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:187
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:189
-msgid "*_colors*"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:99
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:101
-msgid "``$base``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:99
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:101
-msgid "``$Color__Base``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:103
-msgid "``$white``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:103
-msgid "``$Color__White``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:105
-msgid "``$alert``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:105
-msgid "``$Color__Alert``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:107
-msgid "``$warning``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:107
-msgid "``$Color__Warning``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:109
-msgid "``$success``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:109
-msgid "``$Color__Success``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:111
-msgid "``$shadow``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:111
-msgid "``$Color__Shadow``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:113
-msgid "``$black100``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:113
-msgid "``$Color__Black100``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:115
-msgid "``$black90``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:115
-msgid "``$Color__Black90``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:117
-msgid "``$black80``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:117
-msgid "``$Color__Black80``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:119
-msgid "``$black70``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:119
-msgid "``$Color__Black70``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:121
-msgid "``$black50``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:121
-msgid "``$Color__Black50``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:123
-msgid "``$black30``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:123
-msgid "``$Color__Black30``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:125
-msgid "``$black20``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:125
-msgid "``$Color__Black20``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:127
-msgid "``$black10``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:127
-msgid "``$Color__Black10``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:129
-msgid "``$black4``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:129
-msgid "``$Color__Black4``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:131
-msgid "*_functions*"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:131
-msgid "``calculateRem``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:131
-msgid "``Function__CalculateRem``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:133
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:135
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:137
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:139
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:141
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:143
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:145
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:147
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:149
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:151
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:153
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:155
-msgid "*_mixins*"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:133
-msgid "``border-radius``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:133
-msgid "``Mixin__BorderRadius``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:135
-msgid "``list-reset``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:135
-msgid "``Mixin__ListReset``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:137
-msgid "``FontSize``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:137
-msgid "``Mixin__FontSize``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:139
-msgid "``MarginBottom--Responsive``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:139
-msgid "``Mixin__MarginBottom--Responsive``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:141
-msgid "``shadow``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:141
-msgid "``Mixin__Shadow``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:143
-msgid "``placeholder``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:143
-msgid "``Mixin__Placeholder``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:145
-msgid "``float-label-container``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:145
-msgid "``Mixin__FloatLabel__Container``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:147
-msgid "``float-label``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:147
-msgid "``Mixin__FloatLabel``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:149
-msgid "``float-label-input``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:149
-msgid "``Mixin__FloatLabel__Input``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:151
-msgid "``float-label-scaled``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:151
-msgid "``Mixin__FloatLabel--Scaled``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:153
-msgid "``linearGradient``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:153
-msgid "``Mixin__LinearGradient``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:155
-msgid "``linearGradientoverlay``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:155
-msgid "``Mixin__LinearGradient--Overlay``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:157
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:159
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:161
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:163
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:165
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:167
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:169
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:171
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:173
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:175
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:177
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:179
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:181
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:183
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:185
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:187
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:189
-msgid "External"
-msgstr "Külső"
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:157
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:159
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:161
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:163
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:165
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:167
-msgid "*_variables*"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:157
-msgid "``$container-max-width``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:157
-msgid "``$Variable__External__ContainerMaxWidth``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:159
-msgid "``$spacing-small``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:159
-msgid "``$Variable__External__Spacing--Small``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:161
-msgid "``$spacing-medium``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:161
-msgid "``$Variable__External__Spacing--Medium``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:163
-msgid "``$font-small``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:163
-msgid "``$Variable__External__FontSize--Small``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:165
-msgid "``$font-smaller``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:165
-msgid "``$Variable__External__FontSize--Smaller``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:167
-msgid "``$font-smallest``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:167
-msgid "``$Variable__External__FontSize--Smallest``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:169
-msgid "``$primary``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:169
-msgid "``$Color__External__Primary``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:171
-msgid "``$primary-darker``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:171
-msgid "``$Color__External__Primary--Darker``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:173
-msgid "``$primary-dark``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:173
-msgid "``$Color__External__Primary--Dark``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:175
-msgid "``$primary-lighter``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:175
-msgid "``$Color__External__Primary--Lighter``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:177
-msgid "``$primary-light``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:177
-msgid "``$Color__External__Primary--Light``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:179
-msgid "``$highlight``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:179
-msgid "``$Color__External__Highlight``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:181
-msgid "``$highlight-darker``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:181
-msgid "``$Color__External__Highlight--Darker``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:183
-msgid "``$highlight-dark``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:183
-msgid "``$Color__External__Highlight--Dark``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:185
-msgid "``$highlight-lighter``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:185
-msgid "``$Color__External__Highlight--Lighter``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:187
-msgid "``$highlight-light``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:187
-msgid "``$Color__External__Highlight--Light``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:189
-msgid "``$gray-light``"
-msgstr ""
-
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:189
-msgid "``$Color__External__Gray--Light``"
+"If you are getting into trouble with broken characters like umlauts, it "
+"could be that the content which is meant to be shown is rendered by the "
+"``Print()`` method. To fix this, please switch the code from using the "
+"``Print()`` method to the normal way of returning the complete response from"
+" the frontend module."
 msgstr ""
 
 #: ../../content/index.rst:3
