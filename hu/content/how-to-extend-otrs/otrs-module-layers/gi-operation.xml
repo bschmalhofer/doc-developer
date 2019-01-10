@@ -474,10 +474,10 @@ $Self->True(
         <section id="operation-wsdl">
             <title>WSDL-kiterjesztés példa</title>
             <para>
-                WSDL files contain the definitions of the web services and its operations
-for SOAP messages, in case we will extend
+                A WSDL-fájlok tartalmazzák a webszolgáltatás és a SOAP-üzenethez tartozó
+műveleteinek meghatározásait abban az esetben, a kibővítjük a
 <filename>development/webservices/GenericTickeConnectorSOAP.wsdl</filename>
-in some places:
+fájlt néhány helyen:
             </para>
             <para>
                 Port típusa:
@@ -561,9 +561,9 @@ in some places:
         <section id="operation-wadl">
             <title>WADL-kiterjesztés példa</title>
             <para>
-                WADL files contain the definitions of the web services and its operations
-for REST interface, add a new resource to
-<filename>development/webservices/GenericTickeConnectorREST.wadl</filename>.
+                A WADL-fájlok tartalmazzák a webszolgáltatás és a REST-felülethez tartozó
+műveleteinek meghatározásait. Adjon hozzá egy új erőforrást a
+<filename>development/webservices/GenericTickeConnectorREST.wadl</filename>fájlhoz.
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -590,10 +590,10 @@ for REST interface, add a new resource to
         <section id="operation-soap">
             <title>Webszolgáltatás SOAP-kiterjesztés példa</title>
             <para>
-                Web services can be imported into OTRS by a YAML with a predefined structure
-in this case we will extend
+                A webszolgáltatások importálhatók az OTRS-be egy előre meghatározott
+szerkezettel rendelkező YAML-fájllal. Ebben az esetben a
 <filename>development/webservices/GenericTickeConnectorSOAP.yml</filename>
-for a SOAP web service.
+fájlt bővítjük ki egy SOAP webszolgáltatáshoz.
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
@@ -611,10 +611,10 @@ Provider:
         <section id="operation-rest">
             <title>Webszolgáltatás REST-kiterjesztés példa</title>
             <para>
-                Web services can be imported into OTRS by a YAML with a predefined structure
-in this case we will extend
+                A webszolgáltatások importálhatók az OTRS-be egy előre meghatározott
+szerkezettel rendelkező YAML-fájllal. Ebben az esetben a
 <filename>development/webservices/GenericTickeConnectorREST.yml</filename>
-for a REST web service.
+fájlt bővítjük ki egy REST webszolgáltatáshoz.
             </para>
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[

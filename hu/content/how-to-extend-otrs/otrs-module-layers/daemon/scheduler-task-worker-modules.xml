@@ -85,8 +85,9 @@ our @ObjectDependencies = (
                         ]]></programlisting>
                     </para>
                     <para>
-                        This is common header that can be found in most OTRS modules. The
-class/package name is declared via the <literal>package</literal> keyword.
+                        Ez egy gyakori fejléc, amely megtalálható a legtöbb OTRS modulban. Az
+osztály/csomag neve a <literal>package</literal> kulcsszón keresztül van
+deklarálva.
                     </para>
                     <para>
                         Ebben az esetben a <literal>BaseTaskWorker</literal> osztályból

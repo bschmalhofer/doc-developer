@@ -583,9 +583,9 @@ is.
     <ChangeLog Version="1.1.2" Date="2013-02-15 18:45:21">Added some feature.</ChangeLog>
     <ChangeLog Version="1.1.1" Date="2013-02-15 16:17:51">New package.</ChangeLog>
     <Description Lang="en">A web calendar.</Description>
-    <Description Lang="de">Ein Web Kalender.</Description>
+    <Description Lang="hu">Egy webes naptár.</Description>
     <IntroInstall Type="post" Lang="en" Title="Thank you!">Thank you for choosing the Calendar module.</IntroInstall>
-    <IntroInstall Type="post" Lang="de" Title="Vielen Dank!">Vielen Dank fuer die Auswahl des Kalender Modules.</IntroInstall>
+    <IntroInstall Type="post" Lang="hu" Title="Köszönjük!">Köszönjük, hogy a naptár modult választotta.</IntroInstall>
     <BuildDate>?</BuildDate>
     <BuildHost>?</BuildHost>
     <Filelist>
