@@ -1,11 +1,8 @@
-#
-# DISABLED. ACTIVE BRANCH IS CURRENTLY rel-6_0.
-#
-#[main]
-#host = https://www.transifex.com
+[main]
+host = https://www.transifex.com
 
 [OTRS.doc-developer]
-file_filter = i18n/doc-developer.<lang>.po
-source_file = i18n/doc-developer.pot
+file_filter = locale/<lang>/LC_MESSAGES/content.po
+source_file = locale/content.pot
 source_lang = en
 type = PO
