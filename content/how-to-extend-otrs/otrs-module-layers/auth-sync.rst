@@ -14,7 +14,7 @@ The interface class is called ``Kernel::System::Auth``. The example agent authen
 
    # --
    # Kernel/System/Auth/Sync/CustomAuthSync.pm - provides the CustomAuthSync
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # Id: CustomAuthSync.pm,v 1.9 2010/03/25 14:42:45 martin Exp $
    # --

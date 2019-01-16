@@ -13,7 +13,7 @@ The ticket menu modules are located under ``Kernel/Output/HTML/TicketMenu*.pm``.
 
    # --
    # Kernel/Output/HTML/TicketMenuCustom.pm
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # Id: TicketMenuCustom.pm,v 1.17 2010/04/12 21:34:06 martin Exp $
    # --

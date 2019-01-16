@@ -13,7 +13,7 @@ The interface class is called ``Kernel::System::CustomerUser``. The example cust
 
    # --
    # Kernel/System/CustomerUser/Preferences/Custom.pm - some customer user functions
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # Id: Custom.pm,v 1.20 2009/10/07 20:41:50 martin Exp $
    # --

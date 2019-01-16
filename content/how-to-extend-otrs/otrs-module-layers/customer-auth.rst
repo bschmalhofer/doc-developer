@@ -14,7 +14,7 @@ The interface class is called ``Kernel::System::CustomerAuth``. The example cust
    # --
    # Kernel/System/CustomerAuth/CustomAuth.pm - provides the custom Authentication
    # based on Martin Edenhofer's Kernel::System::Auth::DB
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # Id: CustomAuth.pm,v 1.11 2009/09/22 15:16:05 mb Exp $
    # --

@@ -470,7 +470,7 @@ This config element contains definitions for working hours.
 
 
 Front End Registration
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 Module registration for agent interface:
 

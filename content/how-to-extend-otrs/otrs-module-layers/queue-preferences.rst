@@ -13,7 +13,7 @@ The interface class is called ``Kernel::System::Queue``. The example queue prefe
 
    # --
    # Kernel/System/Queue/PreferencesCustom.pm - some user functions
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # Id: PreferencesCustom.pm,v 1.5 2009/02/16 11:47:34 tr Exp $
    # --
