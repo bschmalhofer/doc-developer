@@ -25,7 +25,7 @@ OTRS Scheduler Task Workers
 ``SchedulerTaskWorker``
    This executes all tasks planned by the previous tasks managers plus the ones that come directly from the code by using the asynchronous executor.
 
-In order to execute each task, the ``SchedulerTaskWorker`` calls a backend module (task worker) to perform the specific task. The worker module is determined by the task type. If a new task type is added, it will require a new task worker.
+In order to execute each task, the ``SchedulerTaskWorker`` calls a back end module (task worker) to perform the specific task. The worker module is determined by the task type. If a new task type is added, it will require a new task worker.
 
 
 Creating A New Scheduler Task Worker
@@ -58,7 +58,7 @@ Scheduler Task Worker Code Example
        'Kernel::System::Log',
    );
 
-This is common header that can be found in most OTRS modules. The class/package name is declared via the ``package`` keyword.
+This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword.
 
 In this case we are inheriting from ``BaseTaskWorker`` class, and the object manager dependencies are set.
 

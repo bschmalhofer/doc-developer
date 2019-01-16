@@ -135,4 +135,4 @@ There is the need to activate your custom service preferences module. This can b
 Service Preferences Use Case Example
 ------------------------------------
 
-Useful preferences implementation could be a SOAP or RADIUS backend.
+Useful preferences implementation could be a SOAP or RADIUS back end.

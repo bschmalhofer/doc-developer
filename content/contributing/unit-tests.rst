@@ -143,7 +143,9 @@ Good developers make their unit test easy to maintain. Consider putting all test
 Prerequisites for Testing
 -------------------------
 
-To be able to run the unit tests, you need to have all optional environment dependencies (Perl modules and other modules) installed, except those for different database backends than what you are using. Run ``bin/otrs.CheckEnvironment.pl`` to verify your module installation. You also need to have an instance of the OTRS web frontend running on the FQDN that is configured in your local OTRS's ``Config.pm`` file. This OTRS instance must use the same database that is configured for the unit tests.
+To be able to run the unit tests, you need to have all optional environment dependencies (Perl modules and other modules) installed, except those for different database back ends than what you are using. Run ``bin/otrs.CheckEnvironment.pl`` to verify your module installation.
+
+You also need to have an instance of the OTRS web front end running on the FQDN that is configured in your local OTRS's ``Config.pm`` file. This OTRS instance must use the same database that is configured for the unit tests.
 
 
 Testing
@@ -163,7 +165,7 @@ To run your tests, just use ``bin/otrs.Console.pl Dev::UnitTest::Run --test Cale
    All 97 tests passed.
    shell:/opt/otrs>
 
-You can even run several tests at once, just supply additional test arguments to the command:
+You can even run several tests at once, just supply additional ``--test`` arguments to the command:
 
 .. code-block:: bash
 
@@ -255,7 +257,7 @@ OTRS provides API for unit testing that was used in the previous example. Here w
           'Test Name'
       );
 
-Besides this, unit test helper object also provides some helpful methods for common test conditions. For full reference, please see the online API reference of ```Kernel::System::UnitTest::Helper`` <http://doc.otrs.com/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest/Helper.pm.html>`__.
+Besides this, unit test helper object also provides some helpful methods for common test conditions. For full reference, please see the online API reference of ```Kernel::System::UnitTest::Helper`` <https://doc.otrs.com/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest/Helper.pm.html>`__.
 
 ``GetRandomID()``
    This function creates a random ID that can be used in tests as a unique identifier. It is guaranteed that within a test this function will never return a duplicate.

@@ -20,7 +20,7 @@ Due to a change in MySQL 8, the table ``groups`` had to be renamed to ``groups_t
 New External Interface
 ----------------------
 
-The existing customer (``customer.pl``) and public (``public.pl``) interfaces were replaced by a new REST backend (``Kernel/WebApp``) and a modern Vue.js based frontend application. This means that all related code has to be ported and/or rewritten.
+The existing customer (``customer.pl``) and public (``public.pl``) interfaces were replaced by a new REST backend (``Kernel/WebApp``) and a modern Vue.js based front end application. This means that all related code has to be ported and/or rewritten.
 
 There is one special case for public front end modules that don't serve an HTML application. These can be ported rather easily to the new REST backend (see also `the REST API docs <http://doc.otrs.com/doc/api/otrs/7.0/REST/>`__). See for example ``Kernel/WebApp/Controller/API/Public/Package/Repository.pm``. This example also shows how endpoints can support both new REST-like URLs but at the same time the legacy URLs based on the ``/otrs/customer.pl?Action=MyAction`` routes at the same time.
 
@@ -77,4 +77,4 @@ Please make sure to check every screen which produces table-like output (e.g. ``
 Encoding Issues in Legacy Front End Modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are getting into trouble with broken characters like umlauts, it could be that the content which is meant to be shown is rendered by the ``Print()`` method. To fix this, please switch the code from using the ``Print()`` method to the normal way of returning the complete response from the frontend module.
+If you are getting into trouble with broken characters like umlauts, it could be that the content which is meant to be shown is rendered by the ``Print()`` method. To fix this, please switch the code from using the ``Print()`` method to the normal way of returning the complete response from the front end module.

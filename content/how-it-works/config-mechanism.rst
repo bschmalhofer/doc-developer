@@ -212,8 +212,8 @@ Value Types
 The XML config settings support various types of configuration variables.
 
 
-String
-^^^^^^
+``String``
+^^^^^^^^^^
 
 .. code-block:: XML
 
@@ -240,8 +240,8 @@ A config element for numbers and single-line strings. Checking the validity with
 The optional ``Translatable`` attribute marks this setting as translatable, which will cause it to be included in the OTRS translation files. This attribute can be placed on any tag (see also below).
 
 
-Password
-^^^^^^^^
+``Password``
+^^^^^^^^^^^^
 
 A config element for passwords. It's still stored as plain text in the XML, but it's masked in the GUI.
 
@@ -255,8 +255,8 @@ A config element for passwords. It's still stored as plain text in the XML, but 
    </Setting>
 
 
-PerlModule
-^^^^^^^^^^
+``PerlModule``
+^^^^^^^^^^^^^^
 
 A config element for Perl module. It has a ``ValueFilter`` attribute, which filters possible values for selection. In the example below, user can select Perl module ``Kernel::System::Log::SysLog`` or ``Kernel::System::Log::File``.
 
@@ -270,8 +270,8 @@ A config element for Perl module. It has a ``ValueFilter`` attribute, which filt
    </Setting>
 
 
-Textarea
-^^^^^^^^
+``Textarea``
+^^^^^^^^^^^^
 
 A config element for multiline text.
 
@@ -285,8 +285,8 @@ A config element for multiline text.
    </Setting>
 
 
-Select
-^^^^^^
+``Select``
+^^^^^^^^^^
 
 This config element offers preset values as a pull-down menu. The ``SelectedID`` or ``SelectedValue`` attributes can pre-select a default value.
 
@@ -303,8 +303,8 @@ This config element offers preset values as a pull-down menu. The ``SelectedID``
    </Setting>
 
 
-Checkbox
-^^^^^^^^
+``Checkbox``
+^^^^^^^^^^^^
 
 This config element checkbox has two states: 0 or 1.
 
@@ -318,8 +318,8 @@ This config element checkbox has two states: 0 or 1.
    </Setting>
 
 
-Date
-^^^^
+``Date``
+^^^^^^^^
 
 This config element contains a date value.
 
@@ -333,8 +333,8 @@ This config element contains a date value.
    </Setting>
 
 
-DateTime
-^^^^^^^^
+``DateTime``
+^^^^^^^^^^^^
 
 This config element contains a date and time value.
 
@@ -348,8 +348,8 @@ This config element contains a date and time value.
    </Setting>
 
 
-Directory
-^^^^^^^^^
+``Directory``
+^^^^^^^^^^^^^
 
 This config element contains a directory.
 
@@ -363,8 +363,8 @@ This config element contains a directory.
    </Setting>
 
 
-File
-^^^^
+``File``
+^^^^^^^^
 
 This config element contains a file path.
 
@@ -378,8 +378,8 @@ This config element contains a file path.
    </Setting>
 
 
-Entity
-^^^^^^
+``Entity``
+^^^^^^^^^^
 
 This config element contains a value of a particular entity. ``ValueEntityType`` attribute defines the entity type. Supported entities: ``DynamicField``, ``Queue``, ``Priority``, ``State`` and ``Type``. Consistency checks will ensure that only valid entities can be configured and that entities used in the configuration cannot be set to invalid. Also, when an entity is renamed, all referencing config settings will be updated.
 
@@ -393,8 +393,8 @@ This config element contains a value of a particular entity. ``ValueEntityType``
    </Setting>
 
 
-TimeZone
-^^^^^^^^
+``TimeZone``
+^^^^^^^^^^^^
 
 This config element contains a time zone value.
 
@@ -408,8 +408,8 @@ This config element contains a time zone value.
    </Setting>
 
 
-VacationDays
-^^^^^^^^^^^^
+``VacationDays``
+^^^^^^^^^^^^^^^^
 
 This config element contains definitions for vacation days which are repeating each year. Following attributes are mandatory: ``ValueMonth``, ``ValueDay``.
 
@@ -428,8 +428,8 @@ This config element contains definitions for vacation days which are repeating e
    </Setting>
 
 
-VacationDaysOneTime
-^^^^^^^^^^^^^^^^^^^
+``VacationDaysOneTime``
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This config element contains definitions for vacation days which occur only once. Following attributes are mandatory: ``ValueMonth``, ``ValueDay`` and ``ValueYear``.
 
@@ -445,8 +445,8 @@ This config element contains definitions for vacation days which occur only once
    </Setting>
 
 
-WorkingHours
-^^^^^^^^^^^^
+``WorkingHours``
+^^^^^^^^^^^^^^^^
 
 This config element contains definitions for working hours.
 
@@ -469,7 +469,7 @@ This config element contains definitions for working hours.
    </Setting>
 
 
-Frontend Registration
+Front End Registration
 ^^^^^^^^^^^^^^^^^^^^^
 
 Module registration for agent interface:
@@ -498,16 +498,16 @@ Module registration for agent interface:
    </Setting>
 
 
-DefaultItem in Array and Hash
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Default Item in Array and Hash
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The new XML structure allows us to create complex structures. Therefore we need ``DefaultItem`` entries to describe the structure of the array/hash. If it's not provided, system considers that you want simple array/hash with scalar values. ``DefaultItem`` is used as a template when adding new elements, so it can contain additional attributes, like ``ValueType``, and it can define default values.
 
 Here are few examples:
 
 
-Array of Array with Select items
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Array of Array with ``Select`` Items
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: XML
 
@@ -524,8 +524,8 @@ Array of Array with Select items
    </Array>
 
 
-Hash of Hash with Date items
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Hash of Hash with ``Date`` Items
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: XML
 

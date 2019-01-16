@@ -165,4 +165,4 @@ There is the need to activate your custom customer-user preferences module. This
 Customer User Preferences Module Use Case Example
 -------------------------------------------------
 
-Useful preferences implementation could be a SOAP or LDAP backend.
+Useful preferences implementation could be a SOAP or LDAP back end.

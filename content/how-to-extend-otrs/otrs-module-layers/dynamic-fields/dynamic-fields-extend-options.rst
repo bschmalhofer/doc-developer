@@ -42,8 +42,8 @@ To create a package to use existing dynamic fields is necessary to:
    dynamic fields as mandatory in the new screens.
 
 
-Extend Backend and Drivers Functionalities
-------------------------------------------
+Extend Back End and Drivers Functionalities
+-------------------------------------------
 
 It might be possible that the back end object does not have a needed function for custom developments, or could also be possible that it has the function needed, but the return format does not match the needs of the custom development, or that a new behavior is needed to execute the new or the old functions.
 

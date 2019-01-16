@@ -1,13 +1,13 @@
-Writing A New OTRS Frontend Component
-=====================================
+Writing A New OTRS Front End Component
+======================================
 
-In this example, we will try to write a new OTRS frontend component. Starting with OTRS 7, the framework supports single page application frontends written in Vue.js and based on a new JavaScript toolchain. First iteration contains the new external interface, for which we will try to write a custom component. You will need to have a running OTRS development environment as specified in the chapter of the same name.
+In this example, we will try to write a new OTRS front end component. Starting with OTRS 7, the framework supports single page application front ends written in Vue.js and based on a new JavaScript toolchain. First iteration contains the new external interface, for which we will try to write a custom component. You will need to have a running OTRS development environment as specified in the chapter of the same name.
 
 
 The Goal
 --------
 
-We want to write a small frontend component that displays the text *Hello World* when called up. This will be a route component, meaning it will be available in the external interface when called with a carefully crafted URL.
+We want to write a small front end component that displays the text *Hello World* when called up. This will be a route component, meaning it will be available in the external interface when called with a carefully crafted URL.
 
 
 Using The Skeleton Command
@@ -21,7 +21,7 @@ On a running OTRS instance, call the following command to generate the template.
 
    bin/otrs.Console.pl Dev::Code::Generate::VueComponent --component-directory /ws/MyPackage --component-subdirectory Apps/External/Components/Route --no-docs HelloWorld
 
-where ``--component-directory`` is the directory of your module, ``--component-subdirectory`` path under ``Frontend/`` folder that will house the component file. For now, use ``--no-docs`` switch to skip creation of the documentation component for the design system.
+Where ``--component-directory`` is the directory of your module, ``--component-subdirectory`` path under ``Frontend/`` folder that will house the component file. For now, use ``--no-docs`` switch to skip creation of the documentation component for the design system.
 
 This command will generate two files with following paths:
 
@@ -179,7 +179,7 @@ But, if we access the route via the ``/external/hello-world/Value``, the prop wi
 Component Folders
 -----------------
 
-In case of self-enclosed components, you might want to ship some additional files with it. Sometimes it's better to modularize the code base since it's easier to maintain. In case of frontend components you have a really simple way of doing this: component folders. Instead of a single ``.vue`` file for a component, enclose the file named ``index.vue`` in a folder named as your component. Something like this:
+In case of self-enclosed components, you might want to ship some additional files with it. Sometimes it's better to modularize the code base since it's easier to maintain. In case of front end components you have a really simple way of doing this: component folders. Instead of a single ``.vue`` file for a component, enclose the file named ``index.vue`` in a folder named as your component. Something like this:
 
 ::
 

@@ -1235,7 +1235,7 @@ This function should provide at least a method to validate if the field is empty
 
    sub SearchFieldRender { ... }
 
-This function is used by ticket search dialog and it is similar to ``EditFieldRander()``, but normally on a search screen small changes has to be done for all fields. For this example we use a HTML text input instead of a password input. In other fields like dropdown field is displayed as a multiple select in order to let the user search for more than one value at a time.
+This function is used by ticket search dialog and it is similar to ``EditFieldRander()``, but normally on a search screen small changes has to be done for all fields. For this example we use a HTML text input instead of a password input. In other fields like drop-down field is displayed as a multiple select in order to let the user search for more than one value at a time.
 
 .. code-block:: Perl
 

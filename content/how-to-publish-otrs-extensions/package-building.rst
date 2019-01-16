@@ -283,7 +283,7 @@ You also can choose ``<CodeInstall Type="post">`` or ``<CodeInstall Type="pre">`
 ``<CodeUpgrade>``
    Perl code to be executed when the package is upgraded (subject to ``version`` tag).
 
-   Example if already installed package version is below 1.3.4 (e. g. 1.2.6), defined action will be performed:
+   Example if already installed package version is below 1.3.4 (e. g. 1.2.6), the defined action will be performed:
 
    .. code-block:: XML
 
@@ -294,7 +294,7 @@ You also can choose ``<CodeInstall Type="post">`` or ``<CodeInstall Type="pre">`
    You also can choose ``<CodeUpgrade Type="post">`` or ``<CodeUpgrade Type="pre">`` to define the time of execution separately (``post`` is default). For more info see :ref:`Package Life Cycle`.
 
 ``<PackageMerge>``
-   This tag singals that a package has been merged into another package. In this case the original package needs to be removed from the file system and the packages database, but all data must be kept.
+   This tag signals that a package has been merged into another package. In this case the original package needs to be removed from the file system and the packages database, but all data must be kept.
 
    Let's assume that ``PackageOne`` was merged into ``PackageTwo``. Then ``PackageTwo.sopm`` should contain this:
 
@@ -406,7 +406,7 @@ To build an .opm package from the spec opm.
 Package Life Cycle
 ------------------
 
-The following image shows you how the life cycle of a package installation, upgrade and uninstallation works in the backend step by step.
+The following image shows you how the life cycle of a package installation, upgrade and uninstallation works in the back end step by step.
 
 .. figure:: images/package-life-cycle.png
    :alt: Package Life Cycle

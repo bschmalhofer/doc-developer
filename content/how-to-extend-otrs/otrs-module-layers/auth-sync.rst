@@ -77,4 +77,4 @@ You should activate your custom synchronization module. This can be done using t
 Authentication Synchronization Module Use Case Example
 ------------------------------------------------------
 
-Useful synchronization implementation could be a SOAP or RADIUS backend.
+Useful synchronization implementation could be a SOAP or RADIUS back end.

@@ -1,7 +1,7 @@
 Using the power of the OTRS module layers
 =========================================
 
-OTRS has a large number of so-called *module layers* which make it very easy to extend the system without patching existing code. One example is the number generation mechanism for tickets. It is a *module layer* with `pluggable modules <#ticketnumber-generator>`__, and you can add your own custom number generator modules if you wish to do so. Let's look at the different layers in detail!
+OTRS has a large number of so-called *module layers* which make it very easy to extend the system without patching existing code. One example is the number generation mechanism for tickets. It is a *module layer* with pluggable modules, and you can add your own custom number generator modules if you wish to do so. Let's look at the different layers in detail!
 
 .. toctree::
    :maxdepth: 3
@@ -32,7 +32,7 @@ OTRS has a large number of so-called *module layers* which make it very easy to 
 
 .. toctree::
    :maxdepth: 3
-   :caption: Frontend Modules
+   :caption: Front End Modules
 
    otrs-module-layers/dashboard
    otrs-module-layers/notify

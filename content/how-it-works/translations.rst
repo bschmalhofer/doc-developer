@@ -141,10 +141,10 @@ The custom translation file is read out last and so its translation which will b
 The Translation Process Itself
 ------------------------------
 
-OTRS uses Transifex to manage the translation process. Please see `this section <#translate>`__ for details.
+OTRS uses Transifex to manage the translation process. Please see :doc:`../contributing/translate` section for details.
 
 
 Using The Translated Data From The Code
 ---------------------------------------
 
-You can use the method ``$LanguageObject->Translate()`` to translate strings at runtime from Perl code, and `the ``Translate()`` tag <#translate-tag>`__ in templates.
+You can use the method ``$LanguageObject->Translate()`` to translate strings at runtime from Perl code, and the ``Translate()`` tag in :doc:`templates`.
