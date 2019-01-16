@@ -14,7 +14,7 @@ The interface class is called ``Kernel::System::Auth``. The example agent authen
    # --
    # Kernel/System/Auth/CustomAuth.pm - provides the CustomAuth authentication
    # based on Martin Edenhofer's Kernel::System::Auth::DB
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # ID: CustomAuth.pm,v 1.1 2010/05/10 15:30:34 fk Exp $
    # --

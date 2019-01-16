@@ -27,7 +27,7 @@ In this section a sample stats module is shown and each subroutine is explained.
 
    # --
    # Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - all advice functions
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -402,7 +402,7 @@ Now, that all subroutines are explained, this is the complete sample stats modul
 
    # --
    # Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - all advice functions
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -766,7 +766,7 @@ The ``Run`` method actually generates the table data for the stats. It gets the 
 
    # --
    # Kernel/System/Stats/Static/StaticStatsTemplate.pm
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you

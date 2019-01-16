@@ -13,7 +13,7 @@ The interface class is called ``Kernel::System::SLA``. The example SLA preferenc
 
    # --
    # Kernel/System/SLA/PreferencesCustom.pm - some user functions
-   # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
