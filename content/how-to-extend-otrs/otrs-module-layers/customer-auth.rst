@@ -180,4 +180,4 @@ There is the need to activate your custom customer authenticate module. This can
 Customer Authentication Module Use Case Example
 -----------------------------------------------
 
-Useful authentication implementation could be a SOAP backend.
+Useful authentication implementation could be a SOAP back end.

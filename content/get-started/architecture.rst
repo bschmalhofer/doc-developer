@@ -57,7 +57,7 @@ Directories
 +-----------------------------------+-----------------------------------+
 | Kernel/System/                    | core modules, e.g. Log, Ticket    |
 +-----------------------------------+-----------------------------------+
-| Kernel/Modules/                   | frontend modules, e.g.            |
+| Kernel/Modules/                   | front end modules, e.g.           |
 |                                   | QueueView                         |
 +-----------------------------------+-----------------------------------+
 | Kernel/Output/HTML/               | html templates                    |
@@ -102,41 +102,49 @@ Core Modules
 Core modules are located under ``$OTRS_HOME/Kernel/System/*``. This layer is for the logical work. Core modules are used to handle system routines like *lock ticket* and *create ticket*. A few main core modules
 are:
 
--  ``Kernel::System::Config`` (to access configuration options)
--  ``Kernel::System::Log`` (to log into OTRS log backend)
--  ``Kernel::System::DB`` (to access the database backend)
--  ``Kernel::System::Auth`` (to check user authentication)
--  ``Kernel::System::User`` (to manage users)
--  ``Kernel::System::Group`` (to manage groups)
--  ``Kernel::System::Email`` (for sending emails)
+-  ``Kernel::System::Config`` to access configuration options.
+-  ``Kernel::System::Log`` to log into OTRS log back end.
+-  ``Kernel::System::DB`` to access the database back end.
+-  ``Kernel::System::Auth`` to check user authentication.
+-  ``Kernel::System::User`` to manage users.
+-  ``Kernel::System::Group`` to manage groups.
+-  ``Kernel::System::Email`` for sending emails.
 
-For more information, see: http://doc.otrs.com/doc/
+For more information, see: https://doc.otrs.com/doc/
 
 
-Frontend Handle
----------------
+Front End Handle
+----------------
 
-The interface between the browser, web server and the frontend modules. A frontend module can be used via the HTTP link.
+The interface between the browser, web server and the front end modules. A front end module can be used via the HTTP link.
 
 ::
 
    http://localhost/otrs/index.pl?Action=Module
 
 
-Frontend Modules
-----------------
+Front End Modules
+-----------------
 
-Frontend modules are located under ``$OTRS_HOME/Kernel/Modules/*.pm``. There are two public functions in there - ``new()`` and ``run()`` - which are accessed from the frontend handle (e.g. ``index.pl``).
+Front end modules are located under ``$OTRS_HOME/Kernel/Modules/*.pm``. There are two public functions in there - ``new()`` and ``run()`` - which are accessed from the front end handle (e.g. ``index.pl``).
 
-``new()`` is used to create a frontend module object. The frontend handle provides the used frontend module with the basic framework objects. These are, for example: ``ParamObject`` (to get web form params), ``DBObject`` (to use existing database connections), ``LayoutObject`` (to use templates and other HTML layout functions), ``ConfigObject`` (to access config settings), ``LogObject`` (to use the framework log system), ``UserObject`` (to get the user functions from the current user), ``GroupObject`` (to get the group functions).
+``new()`` is used to create a front end module object. The front end handle provides the used front end module with the basic framework objects. These are, for example: 
 
-For more information, see: http://doc.otrs.com/doc/
+- ``ParamObject`` to get web form params.
+- ``DBObject`` to use existing database connections.
+- ``LayoutObject`` to use templates and other HTML layout functions.
+- ``ConfigObject`` to access config settings.
+- ``LogObject`` to use the framework log system.
+- ``UserObject`` to get the user functions from the current user.
+- ``GroupObject`` to get the group functions.
+
+For more information, see: https://doc.otrs.com/doc/
 
 
-CMD Frontend
-------------
+CMD Front End
+-------------
 
-The CMD (command line) frontend is like the web frontend handle and the web frontend module in one (just without the ``LayoutObject``) and uses the core modules for some actions in the system.
+The CMD (command line) front end is like the web front end handle and the web front end module in one (just without the ``LayoutObject``) and uses the core modules for some actions in the system.
 
 
 Generic Interface Modules
@@ -144,15 +152,15 @@ Generic Interface Modules
 
 Generic interface modules are located under ``$OTRS_HOME/Kernel/GenericInterface/*``. Generic interface modules are used to handle each part of a web service execution on the system. The main modules for the generic interface are:
 
--  ``Kernel::GenericInterface::Transport`` (to interact with remote systems)
--  ``Kernel::GenericInterface::Mapping`` (to transform data into a required format)
--  ``Kernel::GenericInterface::Requester`` (to use OTRS as a client for the web service)
--  ``Kernel::GenericInterface::Provider`` (to use OTRS as a server for web service)
--  ``Kernel::GenericInterface::Operation`` (to execute provider actions)
--  ``Kernel::GenericInterface::Invoker`` (to execute requester actions)
--  ``Kernel::GenericInterface::Debugger`` (to track web service communication, using log entries)
+-  ``Kernel::GenericInterface::Transport`` to interact with remote systems.
+-  ``Kernel::GenericInterface::Mapping`` to transform data into a required format.
+-  ``Kernel::GenericInterface::Requester`` to use OTRS as a client for the web service.
+-  ``Kernel::GenericInterface::Provider`` to use OTRS as a server for web service.
+-  ``Kernel::GenericInterface::Operation`` to execute provider actions.
+-  ``Kernel::GenericInterface::Invoker`` to execute requester actions.
+-  ``Kernel::GenericInterface::Debugger`` to track web service communication, using log entries.
 
-For more information, see: http://doc.otrs.com/doc/
+For more information, see: https://doc.otrs.com/doc/
 
 
 Generic Interface Invoker Modules
@@ -160,9 +168,9 @@ Generic Interface Invoker Modules
 
 Generic interface invoker modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Invoker/*``. Each invoker is contained in a folder called ``Controller``. This approach helps to define a name space not only for internal classes and methods but for filenames too. For example: ``$OTRS_HOME/Kernel/GenericInterface/Invoker/Test/`` is the controller for all test type invokers.
 
-Generic interface invoker modules are used as a backend to create requests for remote systems to execute actions.
+Generic interface invoker modules are used as a back end to create requests for remote systems to execute actions.
 
-For more information, see: http://doc.otrs.com/doc/
+For more information, see: https://doc.otrs.com/doc/
 
 
 Generic Interface Mapping Modules
@@ -170,7 +178,7 @@ Generic Interface Mapping Modules
 
 Generic interface mapping modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Mapping/*``. These modules are used to transform data (keys and values) from one format to another.
 
-For more information, see: http://doc.otrs.com/doc/
+For more information, see: https://doc.otrs.com/doc/
 
 
 Generic Interface Operation Modules
@@ -178,19 +186,19 @@ Generic Interface Operation Modules
 
 Generic interface operation modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Operation/*``. Each operation is contained in a folder called ``Controller``. This approach help to define a name space not only for internal classes and methods but for filenames too. For example: ``$OTRS_HOME/Kernel/GenericInterface/Operation/Ticket/`` is the controller for all ticket type operations.
 
-Generic interface operation modules are used as a backend to perform actions requested by a remote system.
+Generic interface operation modules are used as a back end to perform actions requested by a remote system.
 
-For more information, see: http://doc.otrs.com/doc/
+For more information, see: https://doc.otrs.com/doc/
 
 
 Generic Interface Transport Modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Generic interface network transport modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Operation/*``. Each transport module should be placed in a directory named as the network protocol used. For example: The HTTP SOAP transport module, located in ``$OTRS_HOME/Kernel/GenericInterface/Transport/HTTP/SOAP.pm``.
+Generic interface network transport modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Transport/*``. Each transport module should be placed in a directory named as the network protocol used. For example: The HTTP SOAP transport module, located in ``$OTRS_HOME/Kernel/GenericInterface/Transport/HTTP/SOAP.pm``.
 
 Generic interface transport modules are used send data to, and receive data from a remote system.
 
-For more information, see: http://doc.otrs.com/doc/
+For more information, see: https://doc.otrs.com/doc/
 
 
 Scheduler Task Handler Modules
@@ -198,7 +206,7 @@ Scheduler Task Handler Modules
 
 Scheduler task handler modules are located under ``$OTRS_HOME/Kernel/Scheduler/TaskHandler/*``. These modules are used to perform asynchronous tasks. For example, the ``GenericInterface`` task handler perform generic interface requests to remote systems outside the Apache process. This helps the system to be more responsive, preventing possible performance issues.
 
-For more information, see: http://doc.otrs.com/doc/
+For more information, see: https://doc.otrs.com/doc/
 
 
 Database

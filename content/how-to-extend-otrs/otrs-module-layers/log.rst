@@ -1,15 +1,15 @@
 Log Module
 ==========
 
-There is a global log interface for OTRS that provides the possibility to create own log backends.
+There is a global log interface for OTRS that provides the possibility to create own log back ends.
 
-Writing an own logging backend is as easy as reimplementing the ``Kernel::System::Log::Log()`` method.
+Writing an own logging back end is as easy as reimplementing the ``Kernel::System::Log::Log()`` method.
 
 
 Log Module Code Example
 -----------------------
 
-In this small example, we'll write a little file logging backend which works similar to ``Kernel::System::Log::File``, but prepends a string to each logging entry.
+In this small example, we'll write a little file logging back end which works similar to ``Kernel::System::Log::File``, but prepends a string to each logging entry.
 
 .. code-block:: Perl
 
@@ -132,7 +132,7 @@ To activate our custom logging module, the administrator can either set the exis
 Log Module Use Case Example
 ---------------------------
 
-Useful logging backends could be logging to a web service or to encrypted files.
+Useful logging back ends could be logging to a web service or to encrypted files.
 
 .. note::
 

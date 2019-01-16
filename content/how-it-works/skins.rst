@@ -115,7 +115,7 @@ In there, we need to place the new CSS file in a new directory ``css`` which def
    }
 
 Now follows the second step, adding a new logo and making the new skin known to the OTRS system. For this, we first need to place our custom logo (e.g. ``logo.png``) in a new directory (e.g. ``img``) in our skin
-directory. Then we need to create a new configuration file ``$OTRS_HOME/Kernel/Config/Files/CustomSkin.xml``, which will contain the needed settings as follows:
+directory. Then we need to create a new configuration file ``$OTRS_HOME/Kernel/Config/Files/XML/CustomSkin.xml``, which will contain the needed settings as follows:
 
 .. code-block:: XML
 

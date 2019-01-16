@@ -1,5 +1,5 @@
-Writing A New OTRS Frontend Module
-==================================
+Writing A New OTRS Front End Module
+===================================
 
 In this chapter, the writing of a new OTRS module is illustrated on the basis of a simple small program. Necessary prerequisite is an OTRS development environment as specified in the chapter of the same name.
 
@@ -104,10 +104,10 @@ The creation of a module registration facilitates the display of the new module 
    </otrs_config>
 
 
-Frontend Module
----------------
+Front End Module
+----------------
 
-After creating the links and executing the system configuration, a new module with the name 'HelloWorld' is displayed. When calling it up, an error message is displayed as OTRS cannot find the matching frontend module yet. This is the next thing to be created. To do so, we create the following file:
+After creating the links and executing the system configuration, a new module with the name 'HelloWorld' is displayed. When calling it up, an error message is displayed as OTRS cannot find the matching front end module yet. This is the next thing to be created. To do so, we create the following file:
 
 .. code-block:: Perl
 

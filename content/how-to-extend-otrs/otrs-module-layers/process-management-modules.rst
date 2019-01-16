@@ -63,7 +63,7 @@ The following code implements a dummy process management module that can be used
 
    our @ObjectDependencies = ( );
 
-This is common header that can be found in most OTRS modules. The class/package name is declared via the ``package`` keyword.
+This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword.
 
 In this case we are inheriting from ``Base`` class, and the object manager dependencies are set.
 
@@ -168,11 +168,12 @@ Each field defines its configuration parameters and capabilities, the following 
 
    ``Mandatory``
       Used to define if a value is required to be set.
+
    ``Config``
-      Holds the information to display the drop-down field
+      Holds the information to display the drop-down field.
 
       ``Data``
-         Simple hash that defines the options for the dropdown, the keys are used internally, and the values are the options that the user see in the screen.
+         Simple hash that defines the options for the drop-down, the keys are used internally, and the values are the options that the user see in the screen.
 
       ``Name``
          The name of the parameter.
@@ -184,10 +185,10 @@ Each field defines its configuration parameters and capabilities, the following 
          Defines if the list of values offer an empty value or not.
 
       ``Sort``
-         Defines how the options will be sorted when the field is render, the possible values are: ``AlphanumericValue``, ``NumericValue``, ``AlphanumericKey`` and ``NumericKey``.
+         Defines how the options will be sorted when the field is rendered. The possible values are: ``AlphanumericValue``, ``NumericValue``, ``AlphanumericKey`` and ``NumericKey``.
 
       ``Translation``:
-         Set if the display values should be translated.
+         Set if the displayed values should be translated.
 
 - ``KeyValueList``
 
@@ -269,7 +270,7 @@ Each field defines its configuration parameters and capabilities, the following 
        return 1;
    }
 
-The ``Run`` method Is the main part of the module. First sets a common message that can be used in error logs or any other purpose, for consistency its highly recommended to use it as described above.
+The ``Run`` method is the main part of the module. First sets a common message that can be used in error logs or any other purpose, for consistency its highly recommended to use it as described above.
 
 Next step is to check if the global parameters was sent correctly.
 
@@ -316,7 +317,7 @@ The following code implements a simple input process management module configura
        'Kernel::System::Web::Request',
    );
 
-This is common header that can be found in most OTRS modules. The class/package name is declared via the ``package`` keyword.
+This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword.
 
 .. code-block:: Perl
 
@@ -396,7 +397,7 @@ The following code implements a basic HTML template for the test process managem
    # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
    # --
 
-This is common header that can be found in most OTRS modules.
+This is common header that can be found in common OTRS modules.
 
 .. Syntax highlighting not working with HTML because of the quote (") characters in HTML elements.
 .. code-block:: none

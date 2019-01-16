@@ -10,8 +10,8 @@ Introduction
 Date and time are represented by an object of ``Kernel::System::DateTime``. Every ``DateTime`` object holds its own date, time and time zone information. In contrast to the now deprecated ``Kernel::System::Time`` package, this means that you can and should create a ``DateTime`` object for every date/time you want to use.
 
 
-Creation of a DateTime Object
------------------------------
+Creation of a ``DateTime`` Object
+---------------------------------
 
 The object manager of OTRS has been extended by a ``Create`` method to support packages for which more than one instance can be created:
 

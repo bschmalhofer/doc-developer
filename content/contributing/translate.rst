@@ -61,7 +61,7 @@ Strong
       **Ne folytassa** a frissítést, ha hibaüzenetet kap.
 
 Literal texts
-   Literal texts are between two back-tick characters. This is usually used for variable names, configuration names and file paths, and **must not** be translated, otherwise it will break the structure.
+   Literal texts are between two double back-tick characters. This is usually used for variable names, configuration names and file paths, and **must not** be translated, otherwise it will break the structure.
 
    Example original sentence:
 

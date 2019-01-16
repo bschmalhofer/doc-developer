@@ -38,12 +38,12 @@ Generic interface provides a mapping module called *Simple*. With this module mo
 
 So it is highly probable that you don't need to develop a custom mapping module. Please check *Simple* mapping module (``Kernel/GenericInterface/Mapping/Simple.pm``) and its on-line documentation before continue.
 
-If *Simple* mapping module does not match your needs then we will show how to develop a new mapping backend. Each mapping backend has to implement these subroutines:
+If *Simple* mapping module does not match your needs then we will show how to develop a new mapping back end. Each mapping back end has to implement these subroutines:
 
 -  ``new``
 -  ``Map``
 
-We should implement each one of this methods in order to be able to map the data in the communication, handled either by the requester or provider. All mapping backends are handled by the mapping module (``Kernel/GenericInterface/Mapping.pm``).
+We should implement each one of this methods in order to be able to map the data in the communication, handled either by the requester or provider. All mapping back ends are handled by the mapping module (``Kernel/GenericInterface/Mapping.pm``).
 
 
 Mapping Code Example

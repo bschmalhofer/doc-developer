@@ -18,7 +18,7 @@ Dynamic Field Back End Modules
 Dynamic Field (Back End)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Normally called as ``BackendObject`` in the frontend modules is the mediator between the frontend modules and each specific dynamic field implementation or driver. It defines a generic middle API for all dynamic field drivers, and each driver has the responsibility to implement the middle API for the specific needs for the field.
+Normally called as ``BackendObject`` in the front end modules is the mediator between the front end modules and each specific dynamic field implementation or driver. It defines a generic middle API for all dynamic field drivers, and each driver has the responsibility to implement the middle API for the specific needs for the field.
 
 The dynamic field back end is the master controller of all the drivers. Each function in this module is responsible to check the required parameters and call the same function in the specific driver according to the dynamic field configuration parameter received.
 
@@ -118,4 +118,4 @@ The back end module needs a way to know which drivers exists and since the amoun
 
 The master admin module also needs to know this information about the available dynamic field drivers to use the admin dialog linked with, to create or modify the dynamic fields.
 
-Frontend modules need to read the system configuration to know which dynamic fields are active for each screen and which ones are also mandatory. For example: ``Ticket::Frontend::AgentTicketPhone###DynamicField`` stores the active, mandatory and inactive dynamic fields for *New Phone Ticket* screen.
+Front end modules need to read the system configuration to know which dynamic fields are active for each screen and which ones are also mandatory. For example: ``Ticket::Frontend::AgentTicketPhone###DynamicField`` stores the active, mandatory and inactive dynamic fields for *New Phone Ticket* screen.

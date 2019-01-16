@@ -39,7 +39,7 @@ The configuration files are used to register the extensions for the back end and
 
 .. note::
 
-   If a driver is extended with a new function, the backend will need also an extension for that function.
+   If a driver is extended with a new function, the back end will need also an extension for that function.
 
 In this section a configuration file for ``Foo`` extension is shown and explained.
 
@@ -92,10 +92,10 @@ This is the registration for an extension in the text dynamic field driver. The 
 Standard closure of a configuration file.
 
 
-Dynamic Field Backend Extension Example
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dynamic Field Back End Extension Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Backend extensions will be loaded transparently into the back end itself as a base class. All defined object and properties from the back end will be accessible in the extension.
+Back end extensions will be loaded transparently into the back end itself as a base class. All defined object and properties from the back end will be accessible in the extension.
 
 .. note::
 

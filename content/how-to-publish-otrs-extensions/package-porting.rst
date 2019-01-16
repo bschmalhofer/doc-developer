@@ -6,10 +6,10 @@ With every new minor or major version of OTRS, you need to port your packages an
 This section lists changes that you need to examine when porting your package from OTRS 7 to 8.
 
 
-Frontend Messages
------------------
+Front End Messages
+------------------
 
-In an effort to improve consistency and enforce new UX guidelines, a new and common frontend messages API has been introduced in OTRS 8. Developers should strive to use only this way of informing users of application changes. A frontend component has been created for this feature, and it's included by default in every application.
+In an effort to improve consistency and enforce new UX guidelines, a new and common front end messages API has been introduced in OTRS 8. Developers should strive to use only this way of informing users of application changes. A front end component has been created for this feature, and it's included by default in every application.
 
 The API has been re-used from a previous integration, albeit with some changes. By emitting an event on the global event bus it's still possible to trigger display of a message on the user screen. For example, in order to show a toast style message, you can just emit an event like so:
 
@@ -43,7 +43,7 @@ Both message styles provide numerous configuration options, so make sure to cons
 Renamed Message Events
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Frontend message component improvements meant that some event names had to be renamed, it will be expected from you to port existing packages that use them to conform to the new format. Please find a table below containing all affected events.
+Front end message component improvements meant that some event names had to be renamed, it will be expected from you to port existing packages that use them to conform to the new format. Please find a table below containing all affected events.
 
 +-------------------------+-------------------------+
 | Old name                | New name                |
@@ -57,7 +57,7 @@ Frontend message component improvements meant that some event names had to be re
 Styling Improvements
 --------------------
 
-In OTRS 7, new frontend stack has been introduced. However, since only one major frontend application was shipped (for the external interface), there was no need to make sure that components living in the shared namespace have support for different styling. With OTRS 8, this was bound to change, and now OTRS supports app-specific styling in components.
+In OTRS 7, new front end stack has been introduced. However, since only one major front end application was shipped (for the external interface), there was no need to make sure that components living in the shared namespace have support for different styling. With OTRS 8, this was bound to change, and now OTRS supports app-specific styling in components.
 
 
 Application Specific Styling in Shared Components
@@ -83,7 +83,7 @@ Usage of the mixin guarantees your block will only be loaded where appropriate (
 
 .. note::
 
-   Design system will load appropriate style depending on current choice. For example, there will be a dropdown menu shown above the component example, allowing the user to switch the styles. All you have to do is make sure your component lives in the shared namespace and implements the mixin above, as needed.
+   Design system will load appropriate style depending on current choice. For example, there will be a drop-down menu shown above the component example, allowing the user to switch the styles. All you have to do is make sure your component lives in the shared namespace and implements the mixin above, as needed.
 
 In order to provide this mechanism, it was required to refactor all the styles to conform to the BEM specification. This now applies to any variable names, mixins, functions, etc. By looking at their names, now it will be perfectly clear where they are coming from, and the chance for any possible collisions is decreased to the minimum.
 

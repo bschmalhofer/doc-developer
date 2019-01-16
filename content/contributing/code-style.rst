@@ -518,7 +518,7 @@ In OTRS many objects are available. But you should not use every object in every
 
 -  Don't use the ``LayoutObject`` in core modules (``Kernel/System``).
 -  Don't use the ``ParamObject`` in core modules (``Kernel/System``).
--  Don't use the ``DBObject`` in frontend modules (``Kernel/Modules``).
+-  Don't use the ``DBObject`` in front end modules (``Kernel/Modules``).
 
 
 Documenting Back End Modules
@@ -800,7 +800,7 @@ Make sure to use ``$.on()`` with namespacing, such as ``$.on('click.<Name>')``.
 HTML
 ----
 
-Use HTML 5 notation. Don't use self-closing tags for non-void elements (such as div, span, etc.).
+Use HTML 5 notation. Don't use self-closing tags for non-void elements (such as ``div``, ``span``, etc.).
 
 Use proper intendation. Elements which contain other non-void child elements should not be on the same level as their children.
 
@@ -808,7 +808,7 @@ Don't use HTML elements for layout reasons (e.g. using ``br`` elements for addin
 
 Don't use inline CSS. All CSS should either be added by using predefined classes or (if necessary) using JavaScript (e.g. for showing/hiding elements).
 
-Don't use JavaScript in templates. All needed JavaScript should be part of the proper library for a certain frontend module or of a proper global library. If you need to pass JavaScript data to the front end, use ``$LayoutObject->AddJSData()``.
+Don't use JavaScript in templates. All needed JavaScript should be part of the proper library for a certain front end module or of a proper global library. If you need to pass JavaScript data to the front end, use ``$LayoutObject->AddJSData()``.
 
 
 CSS

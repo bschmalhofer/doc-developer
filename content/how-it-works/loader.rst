@@ -1,7 +1,7 @@
 The CSS and JavaScript Loader
 =============================
 
-The CSS and JavaScript code in OTRS grew to a large amount. To be able to satisfy both development concerns (good maintainability by a large number of separate files) and performance issues (making few HTTP requests and serving minified content without unneccessary whitespace and documentation) had to be addressed. To achieve these goals, the Loader was invented.
+The CSS and JavaScript code in OTRS grew to a large amount. To be able to satisfy both development concerns (good maintainability by a large number of separate files) and performance issues (making few HTTP requests and serving minified content without unnecessary whitespace and documentation) had to be addressed. To achieve these goals, the loader was invented.
 
 
 How it works
@@ -114,7 +114,7 @@ Simple, isn't it?
 Module Specific JavaScript
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Not all JavaScript is usable for all application modules of OTRS. Therefore it is possible to specify module specific JavaScript files. Whenever a certain module is used (such as ``AgentDashboard``), the module specific JavaScript for this module will also be loaded. The configuration is done in the frontend module registration in the XML configurations. Again, an example:
+Not all JavaScript is usable for all application modules of OTRS. Therefore it is possible to specify module specific JavaScript files. Whenever a certain module is used (such as ``AgentDashboard``), the module specific JavaScript for this module will also be loaded. The configuration is done in the front end module registration in the XML configurations. Again, an example:
 
 .. code-block:: XML
 
@@ -147,7 +147,7 @@ Not all JavaScript is usable for all application modules of OTRS. Therefore it i
        </Value>
    </Setting>
 
-It is possible to put a ``<Item Key="JavaScript">`` tag in the frontend module registrations which may contain ``<Array>`` and one tag ``<Item>`` for each JavaScript file that is supposed to be loaded for
+It is possible to put a ``<Item Key="JavaScript">`` tag in the front end module registrations which may contain ``<Array>`` and one tag ``<Item>`` for each JavaScript file that is supposed to be loaded for
 this application module.
 
 Now you have all information you need to configure the way the loader handles JavaScript code.

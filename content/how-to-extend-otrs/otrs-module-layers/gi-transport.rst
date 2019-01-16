@@ -16,14 +16,14 @@ In both ways network transport modules deal with the data in the remote system f
 Transport Back End
 ------------------
 
-Next we will show how to develop a new transport backend. Each transport backend has to implement these subroutines:
+Next we will show how to develop a new transport back end. Each transport back end has to implement these subroutines:
 
 -  ``new``
 -  ``ProviderProcessRequest``
 -  ``ProviderGenerateResponse``
 -  ``RequesterPerformRequest``
 
-We should implement each one of this methods in order to be able to communicate correctly with a remote system in both ways. All network transport backends are handled by the transport module (``Kernel/GenericInterface/Transport.pm``).
+We should implement each one of this methods in order to be able to communicate correctly with a remote system in both ways. All network transport back ends are handled by the transport module (``Kernel/GenericInterface/Transport.pm``).
 
 Currently generic interface implements the HTTP SOAP and HTTP REST transports. If the planned web service can use HTTP SOAP or HTTP SOAP there is no need to create a new network transport module, instead we recommend to take a look into HTTP SOAP or HTTP REST configurations to check their settings and how it can be tuned according to the remote system.
 
@@ -31,7 +31,7 @@ Currently generic interface implements the HTTP SOAP and HTTP REST transports. I
 Network Transport Code Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In case that the provided network transports does not match the web service needs, then in this section a sample network transport module is shown and each subroutine is explained. Normally transport modules uses CPAN modules as backends. For example the HTTP SOAP transport modules uses ``SOAP::Lite`` module as backend.
+In case that the provided network transports does not match the web service needs, then in this section a sample network transport module is shown and each subroutine is explained. Normally transport modules uses CPAN modules as back ends. For example the HTTP SOAP transport modules uses ``SOAP::Lite`` module as back end.
 
 For this example a custom package is used to return the data without doing a real network request to a remote system, instead this custom module acts as a loop-back interface.
 

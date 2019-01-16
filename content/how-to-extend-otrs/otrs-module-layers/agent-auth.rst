@@ -170,4 +170,4 @@ There is the need to activate your custom agent authenticate module. This can be
 Agent Authentication Module Use Case Example
 --------------------------------------------
 
-A useful example of an authentication implementation could be a SOAP backend.
+A useful example of an authentication implementation could be a SOAP back end.

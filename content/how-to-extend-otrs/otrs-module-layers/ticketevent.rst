@@ -20,7 +20,7 @@ Ticket Event Module Use Case Example
 ------------------------------------
 
 A ticket should be unlocked after a move action
-   This standard feature has been implemented with the ticket event module ``Kernel::System::Ticket::Event::ForceUnlock``. When this feature is not wanted, then it can be turned off by unsetting the system configuraton entry ``Ticket::EventModulePost###910-ForceUnlockOnMove``.
+   This standard feature has been implemented with the ticket event module ``Kernel::System::Ticket::Event::ForceUnlock``. When this feature is not wanted, then it can be turned off by unsetting the system configuration entry ``Ticket::EventModulePost###910-ForceUnlockOnMove``.
 
 Perform extra cleanup action when a ticket is deleted
    A customized OTRS might hold non-standard data in additional database tables. When a ticket is deleted then this additional data needs to be deleted. This functionality can be achieved with a ticket event module listening to ``TicketDelete`` events.

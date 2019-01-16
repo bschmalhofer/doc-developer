@@ -1,7 +1,7 @@
 Ticket Menu Module
 ==================
 
-Ticket menu modules are used to display an additional link in the menu above a ticket. You can write and register your own ticket menu module. There are 4 ticket menus (Generic, Lock, Responsible and TicketWatcher) which come with the OTRS framework. For more information please have a look at the OTRS admin manual.
+Ticket menu modules are used to display an additional link in the menu above a ticket. You can write and register your own ticket menu module. There are 4 ticket menus (*Generic*, *Lock*, *Responsible* and *TicketWatcher*) which come with the OTRS framework. For more information please have a look at the OTRS admin manual.
 
 
 Ticket Menu Module Code Example
@@ -139,8 +139,8 @@ There is the need to activate your custom ticket menu module. This can be done u
 Ticket Menu Module Use Case Example
 -----------------------------------
 
-Useful ticket menu implementation could be a link to a external tool if parameters (e.g. ``FreeTextField``) have been set.
+Useful ticket menu implementation could be a link to an external tool if parameters (e.g. ``FreeTextField``) have been set.
 
 .. note::
 
-   The ticket menu directs to an URL that can be handled. If you want to handle that request via the OTRS framework, you have to write your own frontend module.
+   The ticket menu directs to an URL that can be handled. If you want to handle that request via the OTRS framework, you have to write your own front end module.

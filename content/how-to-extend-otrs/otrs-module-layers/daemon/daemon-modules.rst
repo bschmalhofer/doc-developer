@@ -69,7 +69,7 @@ The following code implements a daemon module that displays the system time ever
        'Kernel::System::DB',
    );
 
-This is common header that can be found in most OTRS modules. The class/package name is declared via the ``package`` keyword.
+This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword.
 
 In this case we are inheriting from ``BaseDaemon`` class, and the object manager dependencies are set.
 

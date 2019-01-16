@@ -134,4 +134,4 @@ There is the need to activate your custom queue preferences module. This can be 
 Queue Preferences Use Case Example
 ----------------------------------
 
-Useful preferences implementation could be a SOAP or RADIUS backend.
+Useful preferences implementation could be a SOAP or RADIUS back end.
