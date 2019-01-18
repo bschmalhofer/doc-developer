@@ -11,6 +11,7 @@ Sessions Always Require Cookies
 
 Starting from OTRS 7, `sessions always require cookies to be enabled <https://github.com/OTRS/otrs/commit/831aba1cfe6893d0633af6f18584216e89198072>`__. Therefore, the ``SessionIDCookie`` value was removed from ``LayoutObject``, :doc:`../how-it-works/templates` and JavaScript. It is no longer necessary to append session variables to URLs or HTTP request payloads.
 
+
 The ``groups`` Table Was Renamed
 --------------------------------
 
@@ -22,7 +23,7 @@ New External Interface
 
 The existing customer (``customer.pl``) and public (``public.pl``) interfaces were replaced by a new REST backend (``Kernel/WebApp``) and a modern Vue.js based front end application. This means that all related code has to be ported and/or rewritten.
 
-There is one special case for public front end modules that don't serve an HTML application. These can be ported rather easily to the new REST backend (see also `the REST API docs <http://doc.otrs.com/doc/api/otrs/7.0/REST/>`__). See for example ``Kernel/WebApp/Controller/API/Public/Package/Repository.pm``. This example also shows how endpoints can support both new REST-like URLs but at the same time the legacy URLs based on the ``/otrs/customer.pl?Action=MyAction`` routes at the same time.
+There is one special case for public front end modules that don't serve an HTML application. These can be ported rather easily to the new REST back end (see also `the REST API docs <https://doc.otrs.com/doc/api/otrs/7.0/REST/>`__). See for example ``Kernel/WebApp/Controller/API/Public/Package/Repository.pm``. This example also shows how endpoints can support both new REST-like URLs and the legacy URLs based on the ``/otrs/customer.pl?Action=MyAction`` routes at the same time.
 
 For some important URLs in the customer interface that are linked from legacy systems, redirect controllers may need to be provided to make sure the old URLs keep working.
 
@@ -46,12 +47,12 @@ Renamed Process Management Components
    This process component was renamed to be more aligned with BPMN. Files, classes and methods has been renamed accordingly. Customized files needs to be updated following the new conventions.
 
 ``TransitionAction`` to ``SequenceFlowAction``
-   This process component does not exists in BPMN but has to be also renamed to be consistent with the other changes. Files, classes and methods has been renames accordingly. Customized files needs to be updated following the new conventions.
+   This process component does not exists in BPMN but has to be also renamed to be consistent with the other changes. Files, classes and methods has been renamed accordingly. Customized files needs to be updated following the new conventions.
 
 ``TransitionActionModules`` to ``ProcessManagementModules``
-   This process components are not only used by *Sequence Flow Actions* but also for *Script Tasks* activities and has been moved from ``Kernel/System/ProcessManagement/TransitionAction`` to ``Kernel/System/ProcessManagement/Modules``.
+   These process components are not only used by *Sequence Flow Actions* but also for *Script Tasks* activities and has been moved from ``Kernel/System/ProcessManagement/TransitionAction`` to ``Kernel/System/ProcessManagement/Modules``.
 
-The new process management modules can offer more field types and options to present the parameters to the process designer, please follow the instructions in the :doc:`../how-to-extend-otrs/otrs-module-layers/process-management-modules` documentation to learn more about this new feature and how to improve existing modules.
+The new process management modules can offer more field types and options to present the parameters to the process designer. Please follow the instructions in the :doc:`../how-to-extend-otrs/otrs-module-layers/process-management-modules` documentation to learn more about this new feature and how to improve existing modules.
 
 It is needed to update any shipped process definitions to use the new name schema.
 
@@ -71,7 +72,7 @@ There are changes in ``Kernel/Output/HTML/Layout.pm`` which are necessary to pro
 Not Shown/Empty Tables in Screens
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please make sure to check every screen which produces table-like output (e.g. ``Kernel/Modules/AgentTicketStatusView.pm``). If the list of e.g. tickets is empty or even not shown at all, check if the parameter ``Output => 1`` is used in creating the output for the page.
+Please make sure to check every screen which produces table-like output (e. g. ``Kernel/Modules/AgentTicketStatusView.pm``). If the list of e. g. tickets is empty or even not shown at all, check if the parameter ``Output => 1`` is used in creating the output for the page.
 
 
 Encoding Issues in Legacy Front End Modules
