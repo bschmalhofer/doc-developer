@@ -1,7 +1,7 @@
 Writing A New OTRS Front End Component
 ======================================
 
-In this example, we will try to write a new OTRS front end component. Starting with OTRS 7, the framework supports single page application front ends written in Vue.js and based on a new JavaScript toolchain. First iteration contains the new external interface, for which we will try to write a custom component. You will need to have a running OTRS development environment as specified in the chapter of the same name.
+In this example, we will try to write a new OTRS front end component. Starting with OTRS 7, the framework supports single page application front ends written in Vue.js and based on a new JavaScript toolchain. First iteration contains the new external interface, for which we will try to write a custom component. You will need to have a running OTRS :doc:`../get-started/development-environment` as specified in the chapter of the same name.
 
 
 The Goal
@@ -21,7 +21,7 @@ On a running OTRS instance, call the following command to generate the template.
 
    bin/otrs.Console.pl Dev::Code::Generate::VueComponent --component-directory /ws/MyPackage --component-subdirectory Apps/External/Components/Route --no-docs HelloWorld
 
-Where ``--component-directory`` is the directory of your module, ``--component-subdirectory`` path under ``Frontend/`` folder that will house the component file. For now, use ``--no-docs`` switch to skip creation of the documentation component for the design system.
+In the command ``--component-directory`` is the directory of your module, ``--component-subdirectory`` path under ``Frontend/`` folder that will house the component file. For now, use ``--no-docs`` switch to skip creation of the documentation component for the design system.
 
 This command will generate two files with following paths:
 
@@ -74,10 +74,10 @@ In order to allow the route in the external interface application, we need to ad
 
 - ``Group`` and ``GroupRo`` can be used to limit the route screen to users with certain groups. Please note that this only concerns the authenticated customer users.
 - ``Path`` is actually the slug under which the route component will be available. The full URL in this case will be ``/external/hello-world``, and any subsequent path component will be passed as a parameter named ``headingText``. If your system has ``Frontend::PrefixPath`` configured, full URL will be prepended by it.
-- ``Alias`` can be used to provide an alias for the same route. I.e. ``/hello-world-alt``. It will point to the same component.
-- ``Component`` is the component identifier, first part of the filename, without the ``.vue`` extension. In case of component folders, it's the name of the root folder (see :ref:`component folders` for more information).
+- ``Alias`` can be used to provide an alias for the same route (e. g. ``/hello-world-alt``). It will point to the same component.
+- ``Component`` is the component identifier, first part of the filename, without the ``.vue`` extension. In case of component folders, it's the name of the root folder. See :ref:`Component Folders` for more information.
 - ``IsPublic`` defines if the route will be accessible by unauthenticated users (0/Empty - not accessible, 1 - accessible).
-- ``Props`` defines if the route will be passed URI parameters as prop values (0/Empty - not passed, 1 - passed). See `here <#passing-parameters>`__ for more info).
+- ``Props`` defines if the route will be passed URI parameters as prop values (0/Empty - not passed, 1 - passed). See :ref:`Passing Parameters to the Route Component` for more information.
 
 
 Component Template Code
@@ -259,7 +259,7 @@ However, some of its dependencies have even more dependencies and we can inspect
 
    $ npm view lodash.defaultsdeep dependencies
 
-Quick check will inform us that both babel-runtime and moment are actually part of the OTRS framework dependencies:
+Quick check will inform us that both ``babel-runtime`` and ``moment`` are actually part of the OTRS framework dependencies:
 
 ::
 
@@ -280,7 +280,7 @@ Quick check will inform us that both babel-runtime and moment are actually part 
    └─┬ moment-timezone@0.5.21
      └── moment@2.22.2
 
-This means that we don't have to ship those modules too, since they will be available out-of-box. While it's cumbersome to check all dependencies, it will be worthwhile because our package will be smaller. We will also prevent issues with overriding framework dependencies, since Frontend/Vendor wins always.
+This means that we don't have to ship those modules too, since they will be available out-of-box. While it's cumbersome to check all dependencies, it will be worthwhile because our package will be smaller. We will also prevent issues with overriding framework dependencies, since ``Frontend/Vendor`` wins always.
 
 Let's now install what we need and discard what we don't need. The easiest way to do it is via the following NPM command:
 
