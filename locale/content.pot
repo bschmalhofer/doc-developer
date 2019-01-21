@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-15 08:23+0000\n"
+"POT-Creation-Date: 2019-01-21 14:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -646,7 +646,7 @@ msgid "Don't use the ``ParamObject`` in core modules (``Kernel/System``)."
 msgstr ""
 
 #: ../../content/contributing/code-style.rst:521
-msgid "Don't use the ``DBObject`` in frontend modules (``Kernel/Modules``)."
+msgid "Don't use the ``DBObject`` in front end modules (``Kernel/Modules``)."
 msgstr ""
 
 #: ../../content/contributing/code-style.rst:525
@@ -907,7 +907,7 @@ msgid "HTML"
 msgstr ""
 
 #: ../../content/contributing/code-style.rst:803
-msgid "Use HTML 5 notation. Don't use self-closing tags for non-void elements (such as div, span, etc.)."
+msgid "Use HTML 5 notation. Don't use self-closing tags for non-void elements (such as ``div``, ``span``, etc.)."
 msgstr ""
 
 #: ../../content/contributing/code-style.rst:805
@@ -923,7 +923,7 @@ msgid "Don't use inline CSS. All CSS should either be added by using predefined 
 msgstr ""
 
 #: ../../content/contributing/code-style.rst:811
-msgid "Don't use JavaScript in templates. All needed JavaScript should be part of the proper library for a certain frontend module or of a proper global library. If you need to pass JavaScript data to the front end, use ``$LayoutObject->AddJSData()``."
+msgid "Don't use JavaScript in templates. All needed JavaScript should be part of the proper library for a certain front end module or of a proper global library. If you need to pass JavaScript data to the front end, use ``$LayoutObject->AddJSData()``."
 msgstr ""
 
 #: ../../content/contributing/code-style.rst:815
@@ -1127,7 +1127,7 @@ msgid "Literal texts"
 msgstr ""
 
 #: ../../content/contributing/translate.rst:64
-msgid "Literal texts are between two back-tick characters. This is usually used for variable names, configuration names and file paths, and **must not** be translated, otherwise it will break the structure."
+msgid "Literal texts are between two double back-tick characters. This is usually used for variable names, configuration names and file paths, and **must not** be translated, otherwise it will break the structure."
 msgstr ""
 
 #: ../../content/contributing/translate.rst:91
@@ -1204,7 +1204,7 @@ msgid "Descriptive texts and tooltip contents are written as complete sentences.
 msgstr ""
 
 #: ../../content/contributing/ui-design.rst:27
-#: ../../content/get-started/development-environment.rst:62
+#: ../../content/get-started/development-environment.rst:61
 msgid "Example:"
 msgstr ""
 
@@ -1261,175 +1261,179 @@ msgid "Prerequisites for Testing"
 msgstr ""
 
 #: ../../content/contributing/unit-tests.rst:146
-msgid "To be able to run the unit tests, you need to have all optional environment dependencies (Perl modules and other modules) installed, except those for different database backends than what you are using. Run ``bin/otrs.CheckEnvironment.pl`` to verify your module installation. You also need to have an instance of the OTRS web frontend running on the FQDN that is configured in your local OTRS's ``Config.pm`` file. This OTRS instance must use the same database that is configured for the unit tests."
+msgid "To be able to run the unit tests, you need to have all optional environment dependencies (Perl modules and other modules) installed, except those for different database back ends than what you are using. Run ``bin/otrs.CheckEnvironment.pl`` to verify your module installation."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:150
-msgid "Testing"
+#: ../../content/contributing/unit-tests.rst:148
+msgid "You also need to have an instance of the OTRS web front end running on the FQDN that is configured in your local OTRS's ``Config.pm`` file. This OTRS instance must use the same database that is configured for the unit tests."
 msgstr ""
 
 #: ../../content/contributing/unit-tests.rst:152
+msgid "Testing"
+msgstr ""
+
+#: ../../content/contributing/unit-tests.rst:154
 msgid "To run your tests, just use ``bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar`` to use ``scripts/test/Calendar.t``."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:166
-msgid "You can even run several tests at once, just supply additional test arguments to the command:"
-msgstr ""
-
-#: ../../content/contributing/unit-tests.rst:184
-msgid "If you execute ``bin/otrs.Console.pl Dev::UnitTest::Run`` without any argument, it will run all tests found in the system. Please note that this can take some time to finish."
+#: ../../content/contributing/unit-tests.rst:168
+msgid "You can even run several tests at once, just supply additional ``--test`` arguments to the command:"
 msgstr ""
 
 #: ../../content/contributing/unit-tests.rst:186
+msgid "If you execute ``bin/otrs.Console.pl Dev::UnitTest::Run`` without any argument, it will run all tests found in the system. Please note that this can take some time to finish."
+msgstr ""
+
+#: ../../content/contributing/unit-tests.rst:188
 msgid "Provide ``--verbose`` argument in order to see messages about successful tests too. Any errors encountered during testing will be displayed regardless of this switch, provided they are actually raised in the test."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:190
+#: ../../content/contributing/unit-tests.rst:192
 msgid "Unit Test API"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:192
+#: ../../content/contributing/unit-tests.rst:194
 msgid "OTRS provides API for unit testing that was used in the previous example. Here we'll list the most important functions, please also see the online API reference of ```Kernel::System::UnitTest`` <https://otrs.github.io/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest.pm.html>`__."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:202
+#: ../../content/contributing/unit-tests.rst:204
 msgid "``True()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:195
+#: ../../content/contributing/unit-tests.rst:197
 msgid "This function tests whether given scalar value is a true value in Perl."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:212
+#: ../../content/contributing/unit-tests.rst:214
 msgid "``False()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:205
+#: ../../content/contributing/unit-tests.rst:207
 msgid "This function tests whether given scalar value is a false value in Perl."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:223
+#: ../../content/contributing/unit-tests.rst:225
 msgid "``Is()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:215
+#: ../../content/contributing/unit-tests.rst:217
 msgid "This function tests whether the given scalar variables are equal."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:234
+#: ../../content/contributing/unit-tests.rst:236
 msgid "``IsNot()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:226
+#: ../../content/contributing/unit-tests.rst:228
 msgid "This function tests whether the given scalar variables are unequal."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:245
+#: ../../content/contributing/unit-tests.rst:247
 msgid "``IsDeeply()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:237
+#: ../../content/contributing/unit-tests.rst:239
 msgid "This function compares complex data structures for equality. ``$A`` and ``$B`` have to be references."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:256
+#: ../../content/contributing/unit-tests.rst:258
 msgid "``IsNotDeeply()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:248
+#: ../../content/contributing/unit-tests.rst:250
 msgid "This function compares complex data structures for inequality. ``$A`` and ``$B`` have to be references."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:258
-msgid "Besides this, unit test helper object also provides some helpful methods for common test conditions. For full reference, please see the online API reference of ```Kernel::System::UnitTest::Helper`` <http://doc.otrs.com/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest/Helper.pm.html>`__."
+#: ../../content/contributing/unit-tests.rst:260
+msgid "Besides this, unit test helper object also provides some helpful methods for common test conditions. For full reference, please see the online API reference of ```Kernel::System::UnitTest::Helper`` <https://doc.otrs.com/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest/Helper.pm.html>`__."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:270
+#: ../../content/contributing/unit-tests.rst:272
 msgid "``GetRandomID()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:261
+#: ../../content/contributing/unit-tests.rst:263
 msgid "This function creates a random ID that can be used in tests as a unique identifier. It is guaranteed that within a test this function will never return a duplicate."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:265
+#: ../../content/contributing/unit-tests.rst:267
 msgid "Please note that these numbers are not really random and should only be used to create test data."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:280
+#: ../../content/contributing/unit-tests.rst:282
 msgid "``TestUserCreate()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:273
+#: ../../content/contributing/unit-tests.rst:275
 msgid "This function creates a test user that can be used in tests. It will be set to invalid automatically during the destructor. It returns the login name of the new user, the password is the same."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:293
+#: ../../content/contributing/unit-tests.rst:295
 msgid "``FixedTimeSet()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:283
+#: ../../content/contributing/unit-tests.rst:285
 msgid "This functions makes it possible to override the system time as long as this object lives. You can pass an optional time parameter that should be used, if not, the current system time will be used."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:287
+#: ../../content/contributing/unit-tests.rst:289
 msgid "All calls to methods of ``Kernel::System::Time`` and ``Kernel::System::DateTime`` will use the given time afterwards."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:296
+#: ../../content/contributing/unit-tests.rst:298
 msgid "``FixedTimeUnset()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:296
+#: ../../content/contributing/unit-tests.rst:298
 msgid "This functions restores the regular system time behavior."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:299
+#: ../../content/contributing/unit-tests.rst:301
 msgid "``FixedTimeAddSeconds()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:299
+#: ../../content/contributing/unit-tests.rst:301
 msgid "This functions adds a number of seconds to the fixed system time which was previously set by ``FixedTimeSet()``. You can pass a negative value to go back in time."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:314
+#: ../../content/contributing/unit-tests.rst:316
 msgid "``ConfigSettingChange()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:302
+#: ../../content/contributing/unit-tests.rst:304
 msgid "This functions temporarily changes a configuration setting system wide to another value, both in the current instance of the ``ConfigObject`` and also in the system configuration on disk. This will be reset when the ``Helper`` object is destroyed."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:306
-#: ../../content/contributing/unit-tests.rst:321
+#: ../../content/contributing/unit-tests.rst:308
+#: ../../content/contributing/unit-tests.rst:323
 msgid "Please note that this will not work correctly in clustered environments."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:343
+#: ../../content/contributing/unit-tests.rst:345
 msgid "``CustomCodeActivate()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:317
+#: ../../content/contributing/unit-tests.rst:319
 msgid "This function will temporarily include custom code in the system. For example, you may use this to redefine a subroutine from another class. This change will persist for remainder of the test. All code will be removed when the ``Helper`` object is destroyed."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:370
+#: ../../content/contributing/unit-tests.rst:372
 msgid "``ProvideTestDatabase()``"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:346
+#: ../../content/contributing/unit-tests.rst:348
 msgid "This function will provide a temporary database for the test. Please first define test database settings in ``Kernel/Config.pm``, i.e:"
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:356
+#: ../../content/contributing/unit-tests.rst:358
 msgid "The method call will override global database configuration for duration of the test, i.e. temporary database will receive all calls sent over system ``DBObject``."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:358
+#: ../../content/contributing/unit-tests.rst:360
 msgid "All database contents will be automatically dropped when the ``Helper`` object is destroyed."
 msgstr ""
 
-#: ../../content/contributing/unit-tests.rst:360
+#: ../../content/contributing/unit-tests.rst:362
 msgid "This method returns ``undef`` in case the test database is not configured. If it is configured, but the supplied XML cannot be read or executed, this method will ``die()`` to interrupt the test with an error."
 msgstr ""
 
@@ -1470,7 +1474,6 @@ msgid "Directories"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:23
-#: ../../content/how-it-works/config-mechanism.rst:352
 msgid "Directory"
 msgstr ""
 
@@ -1600,7 +1603,7 @@ msgid "Kernel/Modules/"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:60
-msgid "frontend modules, e.g. QueueView"
+msgid "front end modules, e.g. QueueView"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:63
@@ -1724,172 +1727,200 @@ msgid "Core modules are located under ``$OTRS_HOME/Kernel/System/*``. This layer
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:105
-msgid "``Kernel::System::Config`` (to access configuration options)"
+msgid "``Kernel::System::Config`` to access configuration options."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:106
-msgid "``Kernel::System::Log`` (to log into OTRS log backend)"
+msgid "``Kernel::System::Log`` to log into OTRS log back end."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:107
-msgid "``Kernel::System::DB`` (to access the database backend)"
+msgid "``Kernel::System::DB`` to access the database back end."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:108
-msgid "``Kernel::System::Auth`` (to check user authentication)"
+msgid "``Kernel::System::Auth`` to check user authentication."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:109
-msgid "``Kernel::System::User`` (to manage users)"
+msgid "``Kernel::System::User`` to manage users."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:110
-msgid "``Kernel::System::Group`` (to manage groups)"
+msgid "``Kernel::System::Group`` to manage groups."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:111
-msgid "``Kernel::System::Email`` (for sending emails)"
+msgid "``Kernel::System::Email`` for sending emails."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:113
-#: ../../content/get-started/architecture.rst:133
-#: ../../content/get-started/architecture.rst:155
-#: ../../content/get-started/architecture.rst:165
+#: ../../content/get-started/architecture.rst:141
+#: ../../content/get-started/architecture.rst:163
 #: ../../content/get-started/architecture.rst:173
-#: ../../content/get-started/architecture.rst:183
-#: ../../content/get-started/architecture.rst:193
+#: ../../content/get-started/architecture.rst:181
+#: ../../content/get-started/architecture.rst:191
 #: ../../content/get-started/architecture.rst:201
+#: ../../content/get-started/architecture.rst:209
 #: ../../content/how-it-works/templates.rst:357
-msgid "For more information, see: http://doc.otrs.com/doc/"
+msgid "For more information, see: https://doc.otrs.com/doc/"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:117
-msgid "Frontend Handle"
+msgid "Front End Handle"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:119
-msgid "The interface between the browser, web server and the frontend modules. A frontend module can be used via the HTTP link."
+msgid "The interface between the browser, web server and the front end modules. A front end module can be used via the HTTP link."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:127
 #: ../../content/how-to-extend-otrs/otrs-module-layers.rst:33
-msgid "Frontend Modules"
+msgid "Front End Modules"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:129
-msgid "Frontend modules are located under ``$OTRS_HOME/Kernel/Modules/*.pm``. There are two public functions in there - ``new()`` and ``run()`` - which are accessed from the frontend handle (e.g. ``index.pl``)."
+msgid "Front end modules are located under ``$OTRS_HOME/Kernel/Modules/*.pm``. There are two public functions in there - ``new()`` and ``run()`` - which are accessed from the front end handle (e.g. ``index.pl``)."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:131
-msgid "``new()`` is used to create a frontend module object. The frontend handle provides the used frontend module with the basic framework objects. These are, for example: ``ParamObject`` (to get web form params), ``DBObject`` (to use existing database connections), ``LayoutObject`` (to use templates and other HTML layout functions), ``ConfigObject`` (to access config settings), ``LogObject`` (to use the framework log system), ``UserObject`` (to get the user functions from the current user), ``GroupObject`` (to get the group functions)."
+msgid "``new()`` is used to create a front end module object. The front end handle provides the used front end module with the basic framework objects. These are, for example:"
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:133
+msgid "``ParamObject`` to get web form params."
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:134
+msgid "``DBObject`` to use existing database connections."
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:135
+msgid "``LayoutObject`` to use templates and other HTML layout functions."
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:136
+msgid "``ConfigObject`` to access config settings."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:137
-msgid "CMD Frontend"
+msgid "``LogObject`` to use the framework log system."
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:138
+msgid "``UserObject`` to get the user functions from the current user."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:139
-msgid "The CMD (command line) frontend is like the web frontend handle and the web frontend module in one (just without the ``LayoutObject``) and uses the core modules for some actions in the system."
+msgid "``GroupObject`` to get the group functions."
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:143
+#: ../../content/get-started/architecture.rst:145
+msgid "CMD Front End"
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:147
+msgid "The CMD (command line) front end is like the web front end handle and the web front end module in one (just without the ``LayoutObject``) and uses the core modules for some actions in the system."
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:151
 #: ../../content/how-to-extend-otrs/otrs-module-layers.rst:41
 msgid "Generic Interface Modules"
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:145
+#: ../../content/get-started/architecture.rst:153
 msgid "Generic interface modules are located under ``$OTRS_HOME/Kernel/GenericInterface/*``. Generic interface modules are used to handle each part of a web service execution on the system. The main modules for the generic interface are:"
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:147
-msgid "``Kernel::GenericInterface::Transport`` (to interact with remote systems)"
+#: ../../content/get-started/architecture.rst:155
+msgid "``Kernel::GenericInterface::Transport`` to interact with remote systems."
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:148
-msgid "``Kernel::GenericInterface::Mapping`` (to transform data into a required format)"
+#: ../../content/get-started/architecture.rst:156
+msgid "``Kernel::GenericInterface::Mapping`` to transform data into a required format."
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:149
-msgid "``Kernel::GenericInterface::Requester`` (to use OTRS as a client for the web service)"
+#: ../../content/get-started/architecture.rst:157
+msgid "``Kernel::GenericInterface::Requester`` to use OTRS as a client for the web service."
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:150
-msgid "``Kernel::GenericInterface::Provider`` (to use OTRS as a server for web service)"
-msgstr ""
-
-#: ../../content/get-started/architecture.rst:151
-msgid "``Kernel::GenericInterface::Operation`` (to execute provider actions)"
-msgstr ""
-
-#: ../../content/get-started/architecture.rst:152
-msgid "``Kernel::GenericInterface::Invoker`` (to execute requester actions)"
-msgstr ""
-
-#: ../../content/get-started/architecture.rst:153
-msgid "``Kernel::GenericInterface::Debugger`` (to track web service communication, using log entries)"
+#: ../../content/get-started/architecture.rst:158
+msgid "``Kernel::GenericInterface::Provider`` to use OTRS as a server for web service."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:159
-msgid "Generic Interface Invoker Modules"
+msgid "``Kernel::GenericInterface::Operation`` to execute provider actions."
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:160
+msgid "``Kernel::GenericInterface::Invoker`` to execute requester actions."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:161
-msgid "Generic interface invoker modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Invoker/*``. Each invoker is contained in a folder called ``Controller``. This approach helps to define a name space not only for internal classes and methods but for filenames too. For example: ``$OTRS_HOME/Kernel/GenericInterface/Invoker/Test/`` is the controller for all test type invokers."
+msgid "``Kernel::GenericInterface::Debugger`` to track web service communication, using log entries."
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:163
-msgid "Generic interface invoker modules are used as a backend to create requests for remote systems to execute actions."
+#: ../../content/get-started/architecture.rst:167
+msgid "Generic Interface Invoker Modules"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:169
-msgid "Generic Interface Mapping Modules"
+msgid "Generic interface invoker modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Invoker/*``. Each invoker is contained in a folder called ``Controller``. This approach helps to define a name space not only for internal classes and methods but for filenames too. For example: ``$OTRS_HOME/Kernel/GenericInterface/Invoker/Test/`` is the controller for all test type invokers."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:171
-msgid "Generic interface mapping modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Mapping/*``. These modules are used to transform data (keys and values) from one format to another."
+msgid "Generic interface invoker modules are used as a back end to create requests for remote systems to execute actions."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:177
-msgid "Generic Interface Operation Modules"
+msgid "Generic Interface Mapping Modules"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:179
-msgid "Generic interface operation modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Operation/*``. Each operation is contained in a folder called ``Controller``. This approach help to define a name space not only for internal classes and methods but for filenames too. For example: ``$OTRS_HOME/Kernel/GenericInterface/Operation/Ticket/`` is the controller for all ticket type operations."
+msgid "Generic interface mapping modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Mapping/*``. These modules are used to transform data (keys and values) from one format to another."
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:181
-msgid "Generic interface operation modules are used as a backend to perform actions requested by a remote system."
+#: ../../content/get-started/architecture.rst:185
+msgid "Generic Interface Operation Modules"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:187
-msgid "Generic Interface Transport Modules"
+msgid "Generic interface operation modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Operation/*``. Each operation is contained in a folder called ``Controller``. This approach help to define a name space not only for internal classes and methods but for filenames too. For example: ``$OTRS_HOME/Kernel/GenericInterface/Operation/Ticket/`` is the controller for all ticket type operations."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:189
-msgid "Generic interface network transport modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Operation/*``. Each transport module should be placed in a directory named as the network protocol used. For example: The HTTP SOAP transport module, located in ``$OTRS_HOME/Kernel/GenericInterface/Transport/HTTP/SOAP.pm``."
+msgid "Generic interface operation modules are used as a back end to perform actions requested by a remote system."
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:191
-msgid "Generic interface transport modules are used send data to, and receive data from a remote system."
+#: ../../content/get-started/architecture.rst:195
+msgid "Generic Interface Transport Modules"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:197
-msgid "Scheduler Task Handler Modules"
+msgid "Generic interface network transport modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Transport/*``. Each transport module should be placed in a directory named as the network protocol used. For example: The HTTP SOAP transport module, located in ``$OTRS_HOME/Kernel/GenericInterface/Transport/HTTP/SOAP.pm``."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:199
-msgid "Scheduler task handler modules are located under ``$OTRS_HOME/Kernel/Scheduler/TaskHandler/*``. These modules are used to perform asynchronous tasks. For example, the ``GenericInterface`` task handler perform generic interface requests to remote systems outside the Apache process. This helps the system to be more responsive, preventing possible performance issues."
+msgid "Generic interface transport modules are used send data to, and receive data from a remote system."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:205
-msgid "Database"
+msgid "Scheduler Task Handler Modules"
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:207
+msgid "Scheduler task handler modules are located under ``$OTRS_HOME/Kernel/Scheduler/TaskHandler/*``. These modules are used to perform asynchronous tasks. For example, the ``GenericInterface`` task handler perform generic interface requests to remote systems outside the Apache process. This helps the system to be more responsive, preventing possible performance issues."
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:213
+msgid "Database"
+msgstr ""
+
+#: ../../content/get-started/architecture.rst:215
 msgid "The database interface supports different databases."
 msgstr ""
 
-#: ../../content/get-started/architecture.rst:209
+#: ../../content/get-started/architecture.rst:217
 msgid "For the OTRS data model please refer to the files in your ``/doc`` directory. Alternatively you can look at the data model on `GitHub <https://github.com/OTRS/otrs/blob/rel-6_0/development/diagrams/Database/OTRSDatabaseDiagram.png>`__."
 msgstr ""
 
@@ -1898,7 +1929,7 @@ msgid "Development Environment"
 msgstr ""
 
 #: ../../content/get-started/development-environment.rst:4
-msgid "To facilitate the writing of OTRS expansion modules, the creation of a development environment is necessary. The source code of OTRS and additional public modules can be found on `github <http://otrs.github.io>`__."
+msgid "To facilitate the writing of OTRS expansion modules, the creation of a development environment is necessary. The source code of OTRS and additional public modules can be found on `GitHub <http://otrs.github.io>`__."
 msgstr ""
 
 #: ../../content/get-started/development-environment.rst:8
@@ -1910,62 +1941,62 @@ msgid "First of all a directory must be created in which the modules can be stor
 msgstr ""
 
 #: ../../content/get-started/development-environment.rst:20
-msgid "Check out the ``module-tools`` module (from github) too, for your development environment. It contains a number of useful tools:"
+msgid "Check out the ``module-tools`` module (from GitHub) too, for your development environment. It contains a number of useful tools:"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:28
-msgid "Please configure the OTRS system according to the `installation instructions <http://doc.otrs.com/doc/manual/installation/stable/en/index.html>`__."
+#: ../../content/get-started/development-environment.rst:27
+msgid "Please configure the OTRS system according to the `installation instructions <https://doc.otrs.com/doc/manual/installation/stable/en/index.html>`__."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:32
+#: ../../content/get-started/development-environment.rst:31
 msgid "Useful Tools"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:34
+#: ../../content/get-started/development-environment.rst:33
 msgid "There are two modules that are highly recommended for OTRS development:"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:36
+#: ../../content/get-started/development-environment.rst:35
 msgid "`OTRSCodePolicy <https://github.com/OTRS/otrscodepolicy>`__"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:37
+#: ../../content/get-started/development-environment.rst:36
 msgid "`Fred <https://github.com/OTRS/Fred>`__"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:39
+#: ../../content/get-started/development-environment.rst:38
 msgid "*OTRSCodePolicy* is a code quality checker that enforces the use of common coding standards also for the OTRS development team. It is highly recommended to use it if you plan to make contributions. You can use it as a standalone test script or even register it as a git commit hook that runs every time that you create a commit. Please see `the module documentation <https://github.com/OTRS/otrscodepolicy/blob/master/doc/en/OTRSCodePolicy.xml>`__ for details."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:41
+#: ../../content/get-started/development-environment.rst:40
 msgid "*Fred* is a little development helper module that you can actually install or link (as described below) into your development system. It features several helpful modules that you can activate, such as an SQL logger or an STDERR console. You can find some more details in its `module documentation <https://github.com/OTRS/Fred/blob/master/doc/en/Fred.xml>`__."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:43
+#: ../../content/get-started/development-environment.rst:42
 msgid "By the way, these tools are also open source, and we will be happy about any improvements that you can contribute."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:47
+#: ../../content/get-started/development-environment.rst:46
 msgid "Linking Expansion Modules"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:49
+#: ../../content/get-started/development-environment.rst:48
 msgid "A clear separation between OTRS and the modules is necessary for proper developing. Particularly when using a git clone, a clear separation is crucial. In order to facilitate the OTRS access the files, links must be created. This is done by a script in the directory module tools repository."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:51
+#: ../../content/get-started/development-environment.rst:50
 msgid "Example: linking the *Calendar* module:"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:58
+#: ../../content/get-started/development-environment.rst:57
 msgid "Whenever new files are added, they must be linked as described above."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:60
+#: ../../content/get-started/development-environment.rst:59
 msgid "As soon as the linking is completed, the system configuration must be rebuilt to register the module in OTRS. Additional SQL or Perl code from the module must also be executed."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:71
+#: ../../content/get-started/development-environment.rst:70
 msgid "To remove links from OTRS enter the following command:"
 msgstr ""
 
@@ -2218,7 +2249,7 @@ msgid "The XML config settings support various types of configuration variables.
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:216
-msgid "String"
+msgid "``String``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:228
@@ -2230,7 +2261,7 @@ msgid "The optional ``Translatable`` attribute marks this setting as translatabl
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:244
-msgid "Password"
+msgid "``Password``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:246
@@ -2238,7 +2269,7 @@ msgid "A config element for passwords. It's still stored as plain text in the XM
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:259
-msgid "PerlModule"
+msgid "``PerlModule``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:261
@@ -2246,7 +2277,7 @@ msgid "A config element for Perl module. It has a ``ValueFilter`` attribute, whi
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:274
-msgid "Textarea"
+msgid "``Textarea``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:276
@@ -2254,7 +2285,7 @@ msgid "A config element for multiline text."
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:289
-msgid "Select"
+msgid "``Select``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:291
@@ -2262,7 +2293,7 @@ msgid "This config element offers preset values as a pull-down menu. The ``Selec
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:307
-msgid "Checkbox"
+msgid "``Checkbox``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:309
@@ -2270,7 +2301,7 @@ msgid "This config element checkbox has two states: 0 or 1."
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:322
-msgid "Date"
+msgid "``Date``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:324
@@ -2278,11 +2309,15 @@ msgid "This config element contains a date value."
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:337
-msgid "DateTime"
+msgid "``DateTime``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:339
 msgid "This config element contains a date and time value."
+msgstr ""
+
+#: ../../content/how-it-works/config-mechanism.rst:352
+msgid "``Directory``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:354
@@ -2290,7 +2325,7 @@ msgid "This config element contains a directory."
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:367
-msgid "File"
+msgid "``File``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:369
@@ -2298,7 +2333,7 @@ msgid "This config element contains a file path."
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:382
-msgid "Entity"
+msgid "``Entity``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:384
@@ -2306,7 +2341,7 @@ msgid "This config element contains a value of a particular entity. ``ValueEntit
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:397
-msgid "TimeZone"
+msgid "``TimeZone``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:399
@@ -2314,7 +2349,7 @@ msgid "This config element contains a time zone value."
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:412
-msgid "VacationDays"
+msgid "``VacationDays``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:414
@@ -2322,7 +2357,7 @@ msgid "This config element contains definitions for vacation days which are repe
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:432
-msgid "VacationDaysOneTime"
+msgid "``VacationDaysOneTime``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:434
@@ -2330,7 +2365,7 @@ msgid "This config element contains definitions for vacation days which occur on
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:449
-msgid "WorkingHours"
+msgid "``WorkingHours``"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:451
@@ -2338,7 +2373,7 @@ msgid "This config element contains definitions for working hours."
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:473
-msgid "Frontend Registration"
+msgid "Front End Registration"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:475
@@ -2346,7 +2381,7 @@ msgid "Module registration for agent interface:"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:502
-msgid "DefaultItem in Array and Hash"
+msgid "Default Item in Array and Hash"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:504
@@ -2358,11 +2393,11 @@ msgid "Here are few examples:"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:510
-msgid "Array of Array with Select items"
+msgid "Array of Array with ``Select`` Items"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:528
-msgid "Hash of Hash with Date items"
+msgid "Hash of Hash with ``Date`` Items"
 msgstr ""
 
 #: ../../content/how-it-works/config-mechanism.rst:543
@@ -2530,7 +2565,7 @@ msgid "Date and time are represented by an object of ``Kernel::System::DateTime`
 msgstr ""
 
 #: ../../content/how-it-works/date-time.rst:14
-msgid "Creation of a DateTime Object"
+msgid "Creation of a ``DateTime`` Object"
 msgstr ""
 
 #: ../../content/how-it-works/date-time.rst:16
@@ -2642,7 +2677,7 @@ msgid "The CSS and JavaScript Loader"
 msgstr ""
 
 #: ../../content/how-it-works/loader.rst:4
-msgid "The CSS and JavaScript code in OTRS grew to a large amount. To be able to satisfy both development concerns (good maintainability by a large number of separate files) and performance issues (making few HTTP requests and serving minified content without unneccessary whitespace and documentation) had to be addressed. To achieve these goals, the Loader was invented."
+msgid "The CSS and JavaScript code in OTRS grew to a large amount. To be able to satisfy both development concerns (good maintainability by a large number of separate files) and performance issues (making few HTTP requests and serving minified content without unnecessary whitespace and documentation) had to be addressed. To achieve these goals, the loader was invented."
 msgstr ""
 
 #: ../../content/how-it-works/loader.rst:8
@@ -2754,11 +2789,11 @@ msgid "Module Specific JavaScript"
 msgstr ""
 
 #: ../../content/how-it-works/loader.rst:117
-msgid "Not all JavaScript is usable for all application modules of OTRS. Therefore it is possible to specify module specific JavaScript files. Whenever a certain module is used (such as ``AgentDashboard``), the module specific JavaScript for this module will also be loaded. The configuration is done in the frontend module registration in the XML configurations. Again, an example:"
+msgid "Not all JavaScript is usable for all application modules of OTRS. Therefore it is possible to specify module specific JavaScript files. Whenever a certain module is used (such as ``AgentDashboard``), the module specific JavaScript for this module will also be loaded. The configuration is done in the front end module registration in the XML configurations. Again, an example:"
 msgstr ""
 
 #: ../../content/how-it-works/loader.rst:150
-msgid "It is possible to put a ``<Item Key=\"JavaScript\">`` tag in the frontend module registrations which may contain ``<Array>`` and one tag ``<Item>`` for each JavaScript file that is supposed to be loaded for this application module."
+msgid "It is possible to put a ``<Item Key=\"JavaScript\">`` tag in the front end module registrations which may contain ``<Array>`` and one tag ``<Item>`` for each JavaScript file that is supposed to be loaded for this application module."
 msgstr ""
 
 #: ../../content/how-it-works/loader.rst:153
@@ -2790,7 +2825,7 @@ msgid "System Log"
 msgstr ""
 
 #: ../../content/how-it-works/log-mechanism.rst:7
-msgid "OTRS comes with a system log backend that can be used for application logging and debugging."
+msgid "OTRS comes with a system log back end that can be used for application logging and debugging."
 msgstr ""
 
 #: ../../content/how-it-works/log-mechanism.rst:9
@@ -2830,7 +2865,7 @@ msgid "Communication Log"
 msgstr ""
 
 #: ../../content/how-it-works/log-mechanism.rst:33
-msgid "In addition to system log, OTRS provides specialized logging backend for any communication related logging. The system comes with dedicated tables and frontends to track and display communication logs for easier debugging and operational overview."
+msgid "In addition to system log, OTRS provides specialized logging back end for any communication related logging. The system comes with dedicated tables and front ends to track and display communication logs for easier debugging and operational overview."
 msgstr ""
 
 #: ../../content/how-it-works/log-mechanism.rst:35
@@ -3002,7 +3037,7 @@ msgid "In there, we need to place the new CSS file in a new directory ``css`` wh
 msgstr ""
 
 #: ../../content/how-it-works/skins.rst:117
-msgid "Now follows the second step, adding a new logo and making the new skin known to the OTRS system. For this, we first need to place our custom logo (e.g. ``logo.png``) in a new directory (e.g. ``img``) in our skin directory. Then we need to create a new configuration file ``$OTRS_HOME/Kernel/Config/Files/CustomSkin.xml``, which will contain the needed settings as follows:"
+msgid "Now follows the second step, adding a new logo and making the new skin known to the OTRS system. For this, we first need to place our custom logo (e.g. ``logo.png``) in a new directory (e.g. ``img``) in our skin directory. Then we need to create a new configuration file ``$OTRS_HOME/Kernel/Config/Files/XML/CustomSkin.xml``, which will contain the needed settings as follows:"
 msgstr ""
 
 #: ../../content/how-it-works/skins.rst:153
@@ -3022,7 +3057,7 @@ msgid "Templating Mechanism"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:4
-msgid "Internally, OTRS uses a templating mechanism to dynamically generate its HTML pages (and other content), while keeping the program logic (Perl) and the presentation (HTML) separate. Typically, a frontend module will use an own template file, pass some data to it and return the rendered result to the user."
+msgid "Internally, OTRS uses a templating mechanism to dynamically generate its HTML pages (and other content), while keeping the program logic (Perl) and the presentation (HTML) separate. Typically, a front end module will use an own template file, pass some data to it and return the rendered result to the user."
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:6
@@ -3059,7 +3094,7 @@ msgid "Because of the missing HTML quoting, this can result in security problems
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:29
-msgid "Whenever possible, use ``[% Data.Name | html %]`` (in HTML) or ``[% Data.Name | uri %]`` (in Links) instead."
+msgid "Whenever possible, use ``[% Data.Name | html %]`` (in HTML) or ``[% Data.Name | uri %]`` (in links) instead."
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:31
@@ -3119,11 +3154,11 @@ msgid "``[% Env(\"Action\") %]``: the current action"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:96
-msgid "``[% Env(\"Baselink\") %]``: the baselink --> index.pl?SessionID=..."
+msgid "``[% Env(\"Baselink\") %]``: the baselink, e. g. ``index.pl?SessionID=...``"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:97
-msgid "``[% Env(\"CGIHandle\") %]``: the current CGI handle e. g.  index.pl"
+msgid "``[% Env(\"CGIHandle\") %]``: the current CGI handle e. g. ``index.pl``"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:98
@@ -3131,7 +3166,7 @@ msgid "``[% Env(\"SessionID\") %]``: the current session id"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:99
-msgid "``[% Env(\"Time\") %]``: the current time e. g.  Thu Dec 27 16:00:55 2001"
+msgid "``[% Env(\"Time\") %]``: the current time e. g. *Thu Dec 27 16:00:55 2001*"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:100
@@ -3143,7 +3178,7 @@ msgid "``[% Env(\"UserIsGroup[admin]\") %]``: Yes"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:102
-msgid "``[% Env(\"UserIsGroup[users]\") %]``: Yes --> user groups (useful for own links)"
+msgid "``[% Env(\"UserIsGroup[users]\") %]``: Yes, user groups (useful for own links)"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:103
@@ -3160,7 +3195,7 @@ msgid "``[% Config() %]``"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:115
-msgid "Inserts config variables into the template. Let's see an example ``Kernel/Config.pm``:"
+msgid "Inserts configuration variables into the template. Let's see an example ``Kernel/Config.pm``:"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:128
@@ -3192,7 +3227,7 @@ msgid "You can also specify one or more parameters (``%s``) inside of the string
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:167
-msgid "Strings in JavaScript can be translated and processed with `the JSON filter <#data-json>`__."
+msgid "Strings in JavaScript can be translated and processed with the JSON filter."
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:175
@@ -3260,7 +3295,7 @@ msgid "``[% InsertTemplate(\"Copyright.tt\") %]``"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:258
-msgid "Please note that the ``InsertTemplate`` command was added to provide better backwards compatibility to the old DTL system. It might be deprecated in a future version of OTRS and removed later. If you don't use `block commands <#block>`__ in your included template, you don't need ``InsertTemplate`` and can use standard Template::Toolkit syntax like ``INCLUDE/PROCESS`` instead."
+msgid "Please note that the ``InsertTemplate`` command was added to provide better backwards compatibility to the old DTL system. It might be deprecated in a future version of OTRS and removed later. If you don't use block commands in your included template, you don't need ``InsertTemplate`` and can use standard Template::Toolkit syntax like ``INCLUDE/PROCESS`` instead."
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:260
@@ -3300,7 +3335,7 @@ msgid "Let's look at how the blocks are called from the application module:"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:355
-msgid "Note how the blocks have both their name and an optional set of data passed in as separate parameters to the block function call. Data inserting commands inside a block always need the data provided to the block function call of this block, not the `general template rendering call <#using-templates>`__."
+msgid "Note how the blocks have both their name and an optional set of data passed in as separate parameters to the block function call. Data inserting commands inside a block always need the data provided to the block function call of this block, not the general template rendering call."
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:361
@@ -3332,7 +3367,7 @@ msgid "Ok, but how to actually process a template file and generate the result? 
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:412
-msgid "In the frontend modules, the ``Output()`` function of ``Kernel::Output::HTML::Layout`` is called (after all the needed blocks have been called in this template) to generate the final output. An optional set of data parameters is passed to the template, for all data inserting commands which are not inside of a block."
+msgid "In the front end modules, the ``Output()`` function of ``Kernel::Output::HTML::Layout`` is called (after all the needed blocks have been called in this template) to generate the final output. An optional set of data parameters is passed to the template, for all data inserting commands which are not inside of a block."
 msgstr ""
 
 #: ../../content/how-it-works/themes.rst:2
@@ -3340,7 +3375,7 @@ msgid "Creating Your Own Themes"
 msgstr ""
 
 #: ../../content/how-it-works/themes.rst:4
-msgid "You can create your own themes so as to use the layout you like in the OTRS web frontend. To create custom themes, you should customize the output templates to your needs. More information on the syntax and structure of output templates can be found in the :doc:`templates`."
+msgid "You can create your own themes so as to use the layout you like in the OTRS web front end. To create custom themes, you should customize the output templates to your needs. More information on the syntax and structure of output templates can be found in the :doc:`templates`."
 msgstr ""
 
 #: ../../content/how-it-works/themes.rst:6
@@ -3444,7 +3479,7 @@ msgid "The Translation Process Itself"
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:144
-msgid "OTRS uses Transifex to manage the translation process. Please see `this section <#translate>`__ for details."
+msgid "OTRS uses Transifex to manage the translation process. Please see :doc:`../contributing/translate` section for details."
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:148
@@ -3452,7 +3487,7 @@ msgid "Using The Translated Data From The Code"
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:150
-msgid "You can use the method ``$LanguageObject->Translate()`` to translate strings at runtime from Perl code, and `the ``Translate()`` tag <#translate-tag>`__ in templates."
+msgid "You can use the method ``$LanguageObject->Translate()`` to translate strings at runtime from Perl code, and the ``Translate()`` tag in :doc:`templates`."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs.rst:2
@@ -3464,7 +3499,7 @@ msgid "Using the power of the OTRS module layers"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers.rst:4
-msgid "OTRS has a large number of so-called *module layers* which make it very easy to extend the system without patching existing code. One example is the number generation mechanism for tickets. It is a *module layer* with `pluggable modules <#ticketnumber-generator>`__, and you can add your own custom number generator modules if you wish to do so. Let's look at the different layers in detail!"
+msgid "OTRS has a large number of so-called *module layers* which make it very easy to extend the system without patching existing code. One example is the number generation mechanism for tickets. It is a *module layer* with pluggable modules, and you can add your own custom number generator modules if you wish to do so. Let's look at the different layers in detail!"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers.rst:6
@@ -3525,7 +3560,7 @@ msgid "Agent Authentication Module Use Case Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:173
-msgid "A useful example of an authentication implementation could be a SOAP backend."
+msgid "A useful example of an authentication implementation could be a SOAP back end."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:2
@@ -3557,7 +3592,7 @@ msgid "Authentication Synchronization Module Use Case Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:80
-msgid "Useful synchronization implementation could be a SOAP or RADIUS backend."
+msgid "Useful synchronization implementation could be a SOAP or RADIUS back end."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:2
@@ -3589,7 +3624,7 @@ msgid "Customer Authentication Module Use Case Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:183
-msgid "Useful authentication implementation could be a SOAP backend."
+msgid "Useful authentication implementation could be a SOAP back end."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:2
@@ -3621,7 +3656,7 @@ msgid "Customer User Preferences Module Use Case Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:168
-msgid "Useful preferences implementation could be a SOAP or LDAP backend."
+msgid "Useful preferences implementation could be a SOAP or LDAP back end."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.rst:2
@@ -3674,9 +3709,14 @@ msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.rst:72
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.rst:61
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:66
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:319
-msgid "This is common header that can be found in most OTRS modules. The class/package name is declared via the ``package`` keyword."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:138
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:262
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:136
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:74
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:43
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:67
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:321
+msgid "This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.rst:74
@@ -3773,7 +3813,7 @@ msgid "This executes all tasks planned by the previous tasks managers plus the o
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.rst:28
-msgid "In order to execute each task, the ``SchedulerTaskWorker`` calls a backend module (task worker) to perform the specific task. The worker module is determined by the task type. If a new task type is added, it will require a new task worker."
+msgid "In order to execute each task, the ``SchedulerTaskWorker`` calls a back end module (task worker) to perform the specific task. The worker module is determined by the task type. If a new task type is added, it will require a new task worker."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.rst:32
@@ -3793,7 +3833,7 @@ msgid "In this case we are inheriting from ``BaseTaskWorker`` class, and the obj
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.rst:79
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:333
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:335
 msgid "The constructor ``new`` creates a new instance of the class."
 msgstr ""
 
@@ -3864,7 +3904,7 @@ msgid "The configuration files are used to register the extensions for the back 
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:42
-msgid "If a driver is extended with a new function, the backend will need also an extension for that function."
+msgid "If a driver is extended with a new function, the back end will need also an extension for that function."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:44
@@ -3890,11 +3930,11 @@ msgid "Standard closure of a configuration file."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:96
-msgid "Dynamic Field Backend Extension Example"
+msgid "Dynamic Field Back End Extension Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:98
-msgid "Backend extensions will be loaded transparently into the back end itself as a base class. All defined object and properties from the back end will be accessible in the extension."
+msgid "Back end extensions will be loaded transparently into the back end itself as a base class. All defined object and properties from the back end will be accessible in the extension."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:102
@@ -3903,14 +3943,6 @@ msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:104
 msgid "In this section the ``Foo`` extension for back end is shown and explained. The extension only defines the function ``Foo()``."
-msgstr ""
-
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:138
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:262
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:136
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:74
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:43
-msgid "This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:211
@@ -4010,7 +4042,7 @@ msgid "Create a configuration file to give the end user the possibility to show,
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-options.rst:46
-msgid "Extend Backend and Drivers Functionalities"
+msgid "Extend Back End and Drivers Functionalities"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend-options.rst:48
@@ -4083,7 +4115,7 @@ msgid "Dynamic Field (Back End)"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:21
-msgid "Normally called as ``BackendObject`` in the frontend modules is the mediator between the frontend modules and each specific dynamic field implementation or driver. It defines a generic middle API for all dynamic field drivers, and each driver has the responsibility to implement the middle API for the specific needs for the field."
+msgid "Normally called as ``BackendObject`` in the front end modules is the mediator between the front end modules and each specific dynamic field implementation or driver. It defines a generic middle API for all dynamic field drivers, and each driver has the responsibility to implement the middle API for the specific needs for the field."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:23
@@ -4263,7 +4295,7 @@ msgid "The master admin module also needs to know this information about the ava
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:121
-msgid "Frontend modules need to read the system configuration to know which dynamic fields are active for each screen and which ones are also mandatory. For example: ``Ticket::Frontend::AgentTicketPhone###DynamicField`` stores the active, mandatory and inactive dynamic fields for *New Phone Ticket* screen."
+msgid "Front end modules need to read the system configuration to know which dynamic fields are active for each screen and which ones are also mandatory. For example: ``Ticket::Frontend::AgentTicketPhone###DynamicField`` stores the active, mandatory and inactive dynamic fields for *New Phone Ticket* screen."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-interaction.rst:2
@@ -4428,6 +4460,7 @@ msgid "In this section an admin dialog template for the password dynamic field i
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:689
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:401
 msgid "This is common header that can be found in common OTRS modules."
 msgstr ""
 
@@ -4544,7 +4577,7 @@ msgid "This function should provide at least a method to validate if the field i
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1238
-msgid "This function is used by ticket search dialog and it is similar to ``EditFieldRander()``, but normally on a search screen small changes has to be done for all fields. For this example we use a HTML text input instead of a password input. In other fields like dropdown field is displayed as a multiple select in order to let the user search for more than one value at a time."
+msgid "This function is used by ticket search dialog and it is similar to ``EditFieldRander()``, but normally on a search screen small changes has to be done for all fields. For this example we use a HTML text input instead of a password input. In other fields like drop-down field is displayed as a multiple select in order to let the user search for more than one value at a time."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1244
@@ -4785,7 +4818,7 @@ msgid "So it is highly probable that you don't need to develop a custom mapping 
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:41
-msgid "If *Simple* mapping module does not match your needs then we will show how to develop a new mapping backend. Each mapping backend has to implement these subroutines:"
+msgid "If *Simple* mapping module does not match your needs then we will show how to develop a new mapping back end. Each mapping back end has to implement these subroutines:"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:44
@@ -4793,7 +4826,7 @@ msgid "``Map``"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:46
-msgid "We should implement each one of this methods in order to be able to map the data in the communication, handled either by the requester or provider. All mapping backends are handled by the mapping module (``Kernel/GenericInterface/Mapping.pm``)."
+msgid "We should implement each one of this methods in order to be able to map the data in the communication, handled either by the requester or provider. All mapping back ends are handled by the mapping module (``Kernel/GenericInterface/Mapping.pm``)."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:50
@@ -4994,7 +5027,7 @@ msgid "Transport Back End"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:19
-msgid "Next we will show how to develop a new transport backend. Each transport backend has to implement these subroutines:"
+msgid "Next we will show how to develop a new transport back end. Each transport back end has to implement these subroutines:"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:22
@@ -5010,7 +5043,7 @@ msgid "``RequesterPerformRequest``"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:26
-msgid "We should implement each one of this methods in order to be able to communicate correctly with a remote system in both ways. All network transport backends are handled by the transport module (``Kernel/GenericInterface/Transport.pm``)."
+msgid "We should implement each one of this methods in order to be able to communicate correctly with a remote system in both ways. All network transport back ends are handled by the transport module (``Kernel/GenericInterface/Transport.pm``)."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:28
@@ -5022,7 +5055,7 @@ msgid "Network Transport Code Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:34
-msgid "In case that the provided network transports does not match the web service needs, then in this section a sample network transport module is shown and each subroutine is explained. Normally transport modules uses CPAN modules as backends. For example the HTTP SOAP transport modules uses ``SOAP::Lite`` module as backend."
+msgid "In case that the provided network transports does not match the web service needs, then in this section a sample network transport module is shown and each subroutine is explained. Normally transport modules uses CPAN modules as back ends. For example the HTTP SOAP transport modules uses ``SOAP::Lite`` module as back end."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:36
@@ -5078,11 +5111,11 @@ msgid "Log Module"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:4
-msgid "There is a global log interface for OTRS that provides the possibility to create own log backends."
+msgid "There is a global log interface for OTRS that provides the possibility to create own log back ends."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:6
-msgid "Writing an own logging backend is as easy as reimplementing the ``Kernel::System::Log::Log()`` method."
+msgid "Writing an own logging back end is as easy as reimplementing the ``Kernel::System::Log::Log()`` method."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:10
@@ -5090,7 +5123,7 @@ msgid "Log Module Code Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:12
-msgid "In this small example, we'll write a little file logging backend which works similar to ``Kernel::System::Log::File``, but prepends a string to each logging entry."
+msgid "In this small example, we'll write a little file logging back end which works similar to ``Kernel::System::Log::File``, but prepends a string to each logging entry."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:116
@@ -5106,7 +5139,7 @@ msgid "Log Module Use Case Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:135
-msgid "Useful logging backends could be logging to a web service or to encrypted files."
+msgid "Useful logging back ends could be logging to a web service or to encrypted files."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:139
@@ -5162,6 +5195,7 @@ msgid "Notification Module Use Case Example"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:117
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:142
 msgid "Useful ticket menu implementation could be a link to an external tool if parameters (e.g. ``FreeTextField``) have been set."
 msgstr ""
 
@@ -5170,7 +5204,7 @@ msgid "Output Filter"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:4
-msgid "Output filters allow to modify HTML on the fly. It is best practice to use output filters instead of modifying ``.tt`` files directly. There are three good reasons for that. When the same adaptation has to be applied to several frontend modules then the adaption only has to be implemented once. The second advantage is that when OTRS is upgraded there is a chance that the filter doesn't have to be updated, when the relevant pattern has not changed. When two extensions modify the same file there is a conflict during the installation of the second package. This conflict can be resolved by using two output filters that modify the same frontend module."
+msgid "Output filters allow to modify HTML on the fly. It is best practice to use output filters instead of modifying ``.tt`` files directly. There are three good reasons for that. When the same adaptation has to be applied to several front end modules then the adaption only has to be implemented once. The second advantage is that when OTRS is upgraded there is a chance that the filter doesn't have to be updated, when the relevant pattern has not changed. When two extensions modify the same file there is a conflict during the installation of the second package. This conflict can be resolved by using two output filters that modify the same front end module."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:7
@@ -5214,7 +5248,7 @@ msgid "``FilterText``"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:59
-msgid "This kind of output filter is a plugin for the method ``Kernel::Output::HTML::Layout::Ascii2HTML()`` and is only active when the parameter ``LinkFeature`` is set to 1. Thus the ``FilterText`` output filters are currently only active for the display of the body of plain text articles. Plain text articles are generated by incoming non-HTML mails and when OTRS is configured to not use the Rich Text feature in the frontend."
+msgid "This kind of output filter is a plugin for the method ``Kernel::Output::HTML::Layout::Ascii2HTML()`` and is only active when the parameter ``LinkFeature`` is set to 1. Thus the ``FilterText`` output filters are currently only active for the display of the body of plain text articles. Plain text articles are generated by incoming non-HTML mails and when OTRS is configured to not use the Rich Text feature in the front end."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:63
@@ -5287,15 +5321,15 @@ msgid "Process Management Modules"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:10
-msgid "The process management modules are scripts written in Perl language to perform certain action or actions over the process ticket like set a dynamic field or change a queue etc. Or any other part of the system like create new tickets."
+msgid "The process management modules are scripts written in Perl language to perform certain action or actions over the process ticket like set a dynamic field or change a queue. Or to any other part of the system like create new tickets."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:12
-msgid "By default modules uses a set of key value pairs to use them as parameters for the action e.g. to change queue of the process ticket, the queue or queue id and its corresponding value is needed."
+msgid "By default modules use a set of key value pairs to use them as parameters for the action e.g. to change queue of the process ticket, the queue or queue ID and its corresponding value is needed."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:14
-msgid "Some scripts might require more than a simple key value pairs as parameters or its configuration might need to have a more user friendly GUI, in such cases OTRS provides some configuration field types that can be also extended if needed."
+msgid "Some scripts might require more than a simple key value pairs as parameters or its configuration might need to have a more user friendly GUI. In such cases OTRS provides some configuration field types that can be also extended if needed."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:16
@@ -5307,7 +5341,7 @@ msgid "Dropdown"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:19
-msgid "Shows a drop down list with predefined values."
+msgid "Shows a drop-down list with predefined values."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:22
@@ -5323,7 +5357,7 @@ msgid "Multi language Rich Text"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:25
-msgid "Shows a Rich Text editor associated to a system language, also shows a language selector to add rich text fields for the proper selected language."
+msgid "Shows a Rich Text editor associated to a system language, also shows a language selector to add Rich Text fields for the proper selected language."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:28
@@ -5347,277 +5381,273 @@ msgid "Creating a New Process Management Module"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:37
-msgid "The following is an example of how to create a process management module, it includes a section where all possible fields are defined as a reference, to create a new module only one field type is needed but consider that by convention the parameter user ID is used to impersonate all the actions in the module with another user than the one that triggers the action, then it is a good practice to always include the key-value list field type along with any other needed field."
+msgid "The following is an example of how to create a process management module. It includes a section where all possible fields are defined as a reference. To create a new module only one field type is needed but consider that by convention the parameter user ID is used to impersonate all the actions in the module with another user than the one that triggers the action. Then it is a good practice to always include the key-value list field type along with any other needed field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:40
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:41
 msgid "Process Management Module Code Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:42
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:43
 msgid "The following code implements a dummy process management module that can be used in script task activities or sequence flow actions."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:68
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:69
 msgid "In this case we are inheriting from ``Base`` class, and the object manager dependencies are set."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:153
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:154
 msgid "The constructor ``new()`` creates a new instance of the class. The configuration fields are defined here and they are set in ``$Self->{Config}``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:155
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:156
 msgid "The configuration has two main entries:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:158
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:159
 msgid "``Description``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:158
-msgid "Is is used to to explain the administrators what does the module do and/or considerations for its configuration."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:159
+msgid "This is used to explain the administrators what does the module do and/or considerations for its configuration."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:161
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:162
 msgid "``ConfigSets``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:161
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:162
 msgid "This is just a container for the actual configuration fields."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:163
-msgid "All configuration fields requires a type that defines the kind of field and they could also have an internal description to be used a the title of the field widget, if its not defined a default description is used."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:164
+msgid "All configuration fields requires a type that defines the kind of field and they could also have an internal description to be used as the title of the field widget. If it is not defined, a default description is used."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:165
-msgid "Each field defines its configuration parameters and capabilities, the following is a small reference for the fields provided my OTRS out of the box."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:166
+msgid "Each field defines its configuration parameters and capabilities. The following is a small reference for the fields provided by OTRS out of the box."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:167
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:168
 msgid "``Dropdown``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:169
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:204
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:230
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:171
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:206
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:232
 msgid "``Mandatory``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:170
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:230
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:171
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:232
 msgid "Used to define if a value is required to be set."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:190
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:192
 msgid "``Config``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:172
-msgid "Holds the information to display the drop-down field"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:174
+msgid "Holds the information to display the drop-down field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:175
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:177
 #: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
 msgid "``Data``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:175
-msgid "Simple hash that defines the options for the dropdown, the keys are used internally, and the values are the options that the user see in the screen."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:177
+msgid "Simple hash that defines the options for the drop-down. The keys are used internally, and the values are the options that the user sees in the screen."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:178
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:180
 #: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:147
 #: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:711
 msgid "``Name``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:178
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:180
 msgid "The name of the parameter."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:181
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:183
 msgid "``Multiple``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:181
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:183
 msgid "To define if only one or multiple values can be selected."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:184
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:186
 msgid "``PossibleNone``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:184
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:186
 msgid "Defines if the list of values offer an empty value or not."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:187
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:189
 msgid "``Sort``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:187
-msgid "Defines how the options will be sorted when the field is render, the possible values are: ``AlphanumericValue``, ``NumericValue``, ``AlphanumericKey`` and ``NumericKey``."
-msgstr ""
-
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:190
-msgid "``Translation``:"
-msgstr ""
-
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:190
-msgid "Set if the display values should be translated."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:189
+msgid "Defines how the options will be sorted when the field is rendered. The possible values are: ``AlphanumericValue``, ``NumericValue``, ``AlphanumericKey`` and ``NumericKey``."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:192
+msgid "``Translation``:"
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:192
+msgid "Set if the displayed values should be translated."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:194
 msgid "``KeyValueList``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:204
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:215
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:230
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:206
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:217
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:232
 msgid "``Defaults``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:195
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:197
 msgid "Array of hashes that holds the default configuration for its key value pairs."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:198
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:212
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:200
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:214
 msgid "``Key``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:198
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:200
 msgid "The name of a parameter."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:201
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:215
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:227
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:203
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:217
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:229
 msgid "``Value``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:201
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:203
 msgid "The default value of the parameter (optional)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:204
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:206
 msgid "Mandatory parameters can not be renamed or removed (optional)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:206
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:208
 msgid "``MultiLanguageRichText``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:211
 msgid "Array of hashes that holds the default configuration each language and field part."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:212
-msgid "Its composed by language such as ``en`` or ``es_MX``, followed by a '_' (underscore character) and then ``Subject`` or ``Body`` for the corresponding part of the field."
-msgstr ""
-
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:215
-msgid "The default value of the field part (optional)."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:214
+msgid "This is composed by language such as ``en`` or ``es_MX``, followed by a ``_`` (underscore character) and then ``Subject`` or ``Body`` for the corresponding part of the field."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:217
-msgid "``Recipients``"
+msgid "The default value of the field part (optional)."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:219
-msgid "No further configuration is provided for this kind of field."
+msgid "``Recipients``"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:221
+msgid "No further configuration is provided for this kind of field."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:223
 msgid "``RichText``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:224
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:226
 msgid "Array of hashes that holds the default configuration field (only the first element is used)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:227
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:229
 msgid "The default value of the field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:272
-msgid "The ``Run`` method Is the main part of the module. First sets a common message that can be used in error logs or any other purpose, for consistency its highly recommended to use it as described above."
-msgstr ""
-
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:274
-msgid "Next step is to check if the global parameters was sent correctly."
+msgid "The ``Run`` method is the main part of the module. First sets a common message that can be used in error logs or any other purpose. For consistency its highly recommended to use it as described above."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:276
-msgid "By convention all modules should be able to override the current user ID is one is provided in the parameters (if any), this passed user ID should be used in any function call that requires it."
+msgid "Next step is to check if the global parameters was sent correctly."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:278
-msgid "User defined attribute values can use current ticket values by using OTRS smart tags, ``_ReplaceTicketAttributes`` is used for normal text attributes, while ``_ReplaceAdditionalAttributes`` for Rich Texts. For more complex parameters it might need customized functions to replace this smart tags"
+msgid "By convention all modules should be able to override the current user ID by one is provided in the parameters (if any). This passed user ID should be used in any function call that requires it."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:280
-msgid "The following is the proper logic of the module."
+msgid "User defined attribute values can use current ticket values by using OTRS smart tags. ``_ReplaceTicketAttributes`` is used for normal text attributes, while ``_ReplaceAdditionalAttributes`` for Rich Texts. For more complex parameters it might need customized functions to replace this smart tags."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:282
+msgid "The following is the proper logic of the module."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:284
 msgid "If everything was OK it must return 1."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:286
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:288
 msgid "Creating a New Process Management Module Configuration Field"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:288
-msgid "The following is an example of how to create a process management module configuration field, this field can be used by any process management module after its configuration."
-msgstr ""
-
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:292
-msgid "Process Management Module Configuration Field Code Example"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:290
+msgid "The following is an example of how to create a process management module configuration field. This field can be used by any process management module after its configuration."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:294
+msgid "Process Management Module Configuration Field Code Example"
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:296
 msgid "The following code implements a simple input process management module configuration field (test). The name of the field and its default value can be set trough a process management module ``ConfigSets``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:335
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:337
 msgid "Every configuration field requires to implement at least 2 main methods: ``Render`` and ``GetParams``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:360
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:362
 msgid "``Render`` method is responsible to create the required HTML for the field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:362
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:364
 msgid "In this example it first localize some parameters for more easy read and maintain."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:364
-msgid "The following lines sets the data to display, the field widget title ``Description`` is gather from the ``ConfigSet`` if defined, otherwise it uses a default text. Similar to the field ``Name``, for the ``Value`` it first checks if the activity or sequence flow action already have an stored value, if not it tries to use the default value from the ``ConfigSet``, or use empty otherwise."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:366
+msgid "The following lines set the data to display. The field widget title ``Description`` is gather from the ``ConfigSet`` if defined, otherwise it uses a default text. Similar to the field ``Name``, for the ``Value`` it first checks if the activity or sequence flow action already have a stored value, if not it tries to use the default value from the ``ConfigSet``, or use empty otherwise."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:366
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:368
 msgid "At the end it returns a structure with the HTML code from a template filled with the gathered data."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:381
-msgid "For this example the ``GetParams`` method is very straight forward, it get the name of the field from the ``ConfigSet`` or use a default, and gets the value from the web request."
-msgstr ""
-
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:385
-msgid "Process Management Module Configuration Field Template Example"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:383
+msgid "For this example the ``GetParams`` method is very straight forward. It gets the name of the field from the ``ConfigSet`` or use a default, and gets the value from the web request."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:387
+msgid "Process Management Module Configuration Field Template Example"
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:389
 msgid "The following code implements a basic HTML template for the test process management module configuration field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:399
-msgid "This is common header that can be found in most OTRS modules."
-msgstr ""
-
-#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:421
+#: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:423
 msgid "The template shows a simple text input element with its associated label."
 msgstr ""
 
@@ -5651,7 +5681,7 @@ msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:137
 #: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:138
-msgid "Useful preferences implementation could be a SOAP or RADIUS backend."
+msgid "Useful preferences implementation could be a SOAP or RADIUS back end."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:2
@@ -5934,7 +5964,7 @@ msgid "Ticket Menu Module"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:4
-msgid "Ticket menu modules are used to display an additional link in the menu above a ticket. You can write and register your own ticket menu module. There are 4 ticket menus (Generic, Lock, Responsible and TicketWatcher) which come with the OTRS framework. For more information please have a look at the OTRS admin manual."
+msgid "Ticket menu modules are used to display an additional link in the menu above a ticket. You can write and register your own ticket menu module. There are 4 ticket menus (*Generic*, *Lock*, *Responsible* and *TicketWatcher*) which come with the OTRS framework. For more information please have a look at the OTRS admin manual."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:8
@@ -5957,12 +5987,8 @@ msgstr ""
 msgid "Ticket Menu Module Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:142
-msgid "Useful ticket menu implementation could be a link to a external tool if parameters (e.g. ``FreeTextField``) have been set."
-msgstr ""
-
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:146
-msgid "The ticket menu directs to an URL that can be handled. If you want to handle that request via the OTRS framework, you have to write your own frontend module."
+msgid "The ticket menu directs to an URL that can be handled. If you want to handle that request via the OTRS framework, you have to write your own front end module."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-postmaster-modules.rst:2
@@ -6038,7 +6064,7 @@ msgid "A ticket should be unlocked after a move action"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:23
-msgid "This standard feature has been implemented with the ticket event module ``Kernel::System::Ticket::Event::ForceUnlock``. When this feature is not wanted, then it can be turned off by unsetting the system configuraton entry ``Ticket::EventModulePost###910-ForceUnlockOnMove``."
+msgid "This standard feature has been implemented with the ticket event module ``Kernel::System::Ticket::Event::ForceUnlock``. When this feature is not wanted, then it can be turned off by unsetting the system configuration entry ``Ticket::EventModulePost###910-ForceUnlockOnMove``."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:26
@@ -6336,11 +6362,11 @@ msgid "You should stick to the code of ``GetTNByString()`` as used in existing t
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:2
-msgid "Writing A New OTRS Frontend Component"
+msgid "Writing A New OTRS Front End Component"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:4
-msgid "In this example, we will try to write a new OTRS frontend component. Starting with OTRS 7, the framework supports single page application frontends written in Vue.js and based on a new JavaScript toolchain. First iteration contains the new external interface, for which we will try to write a custom component. You will need to have a running OTRS development environment as specified in the chapter of the same name."
+msgid "In this example, we will try to write a new OTRS front end component. Starting with OTRS 7, the framework supports single page application front ends written in Vue.js and based on a new JavaScript toolchain. First iteration contains the new external interface, for which we will try to write a custom component. You will need to have a running OTRS :doc:`../get-started/development-environment` as specified in the chapter of the same name."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:8
@@ -6348,7 +6374,7 @@ msgid "The Goal"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:10
-msgid "We want to write a small frontend component that displays the text *Hello World* when called up. This will be a route component, meaning it will be available in the external interface when called with a carefully crafted URL."
+msgid "We want to write a small front end component that displays the text *Hello World* when called up. This will be a route component, meaning it will be available in the external interface when called with a carefully crafted URL."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:14
@@ -6364,7 +6390,7 @@ msgid "On a running OTRS instance, call the following command to generate the te
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:24
-msgid "where ``--component-directory`` is the directory of your module, ``--component-subdirectory`` path under ``Frontend/`` folder that will house the component file. For now, use ``--no-docs`` switch to skip creation of the documentation component for the design system."
+msgid "In the command ``--component-directory`` is the directory of your module, ``--component-subdirectory`` path under ``Frontend/`` folder that will house the component file. For now, use ``--no-docs`` switch to skip creation of the documentation component for the design system."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:26
@@ -6388,11 +6414,11 @@ msgid "``Path`` is actually the slug under which the route component will be ava
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:77
-msgid "``Alias`` can be used to provide an alias for the same route. I.e. ``/hello-world-alt``. It will point to the same component."
+msgid "``Alias`` can be used to provide an alias for the same route (e. g. ``/hello-world-alt``). It will point to the same component."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:78
-msgid "``Component`` is the component identifier, first part of the filename, without the ``.vue`` extension. In case of component folders, it's the name of the root folder (see :ref:`component folders` for more information)."
+msgid "``Component`` is the component identifier, first part of the filename, without the ``.vue`` extension. In case of component folders, it's the name of the root folder. See :ref:`Component Folders` for more information."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:79
@@ -6400,7 +6426,7 @@ msgid "``IsPublic`` defines if the route will be accessible by unauthenticated u
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:80
-msgid "``Props`` defines if the route will be passed URI parameters as prop values (0/Empty - not passed, 1 - passed). See `here <#passing-parameters>`__ for more info)."
+msgid "``Props`` defines if the route will be passed URI parameters as prop values (0/Empty - not passed, 1 - passed). See :ref:`Passing Parameters to the Route Component` for more information."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:84
@@ -6480,7 +6506,7 @@ msgid "Component Folders"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:182
-msgid "In case of self-enclosed components, you might want to ship some additional files with it. Sometimes it's better to modularize the code base since it's easier to maintain. In case of frontend components you have a really simple way of doing this: component folders. Instead of a single ``.vue`` file for a component, enclose the file named ``index.vue`` in a folder named as your component. Something like this:"
+msgid "In case of self-enclosed components, you might want to ship some additional files with it. Sometimes it's better to modularize the code base since it's easier to maintain. In case of front end components you have a really simple way of doing this: component folders. Instead of a single ``.vue`` file for a component, enclose the file named ``index.vue`` in a folder named as your component. Something like this:"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:189
@@ -6524,11 +6550,11 @@ msgid "However, some of its dependencies have even more dependencies and we can 
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:262
-msgid "Quick check will inform us that both babel-runtime and moment are actually part of the OTRS framework dependencies:"
+msgid "Quick check will inform us that both ``babel-runtime`` and ``moment`` are actually part of the OTRS framework dependencies:"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:283
-msgid "This means that we don't have to ship those modules too, since they will be available out-of-box. While it's cumbersome to check all dependencies, it will be worthwhile because our package will be smaller. We will also prevent issues with overriding framework dependencies, since Frontend/Vendor wins always."
+msgid "This means that we don't have to ship those modules too, since they will be available out-of-box. While it's cumbersome to check all dependencies, it will be worthwhile because our package will be smaller. We will also prevent issues with overriding framework dependencies, since ``Frontend/Vendor`` wins always."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:285
@@ -6560,7 +6586,7 @@ msgid "We are left with approx. 100+ files which we need to include in our SOPM 
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-otrs-application.rst:2
-msgid "Writing A New OTRS Frontend Module"
+msgid "Writing A New OTRS Front End Module"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-otrs-application.rst:4
@@ -6584,11 +6610,11 @@ msgid "The creation of a module registration facilitates the display of the new 
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-otrs-application.rst:108
-msgid "Frontend Module"
+msgid "Front End Module"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-otrs-application.rst:110
-msgid "After creating the links and executing the system configuration, a new module with the name 'HelloWorld' is displayed. When calling it up, an error message is displayed as OTRS cannot find the matching frontend module yet. This is the next thing to be created. To do so, we create the following file:"
+msgid "After creating the links and executing the system configuration, a new module with the name 'HelloWorld' is displayed. When calling it up, an error message is displayed as OTRS cannot find the matching front end module yet. This is the next thing to be created. To do so, we create the following file:"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/writing-otrs-application.rst:166
@@ -6793,6 +6819,7 @@ msgid "Information on which actions have to be performed in case of an upgrade."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-building.rst:166
+#: ../../content/how-to-publish-otrs-extensions/package-building.rst:286
 msgid "Example if already installed package version is below 1.3.4 (e. g. 1.2.6), the defined action will be performed:"
 msgstr ""
 
@@ -6907,10 +6934,6 @@ msgstr ""
 msgid "Perl code to be executed when the package is upgraded (subject to ``version`` tag)."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-building.rst:286
-msgid "Example if already installed package version is below 1.3.4 (e. g. 1.2.6), defined action will be performed:"
-msgstr ""
-
 #: ../../content/how-to-publish-otrs-extensions/package-building.rst:294
 msgid "You also can choose ``<CodeUpgrade Type=\"post\">`` or ``<CodeUpgrade Type=\"pre\">`` to define the time of execution separately (``post`` is default). For more info see :ref:`Package Life Cycle`."
 msgstr ""
@@ -6920,7 +6943,7 @@ msgid "``<PackageMerge>``"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-building.rst:297
-msgid "This tag singals that a package has been merged into another package. In this case the original package needs to be removed from the file system and the packages database, but all data must be kept."
+msgid "This tag signals that a package has been merged into another package. In this case the original package needs to be removed from the file system and the packages database, but all data must be kept."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-building.rst:299
@@ -6977,7 +7000,7 @@ msgid "Package Life Cycle"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-building.rst:409
-msgid "The following image shows you how the life cycle of a package installation, upgrade and uninstallation works in the backend step by step."
+msgid "The following image shows you how the life cycle of a package installation, upgrade and uninstallation works in the back end step by step."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-management.rst:2
@@ -7080,11 +7103,11 @@ msgid "This section lists changes that you need to examine when porting your pac
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:10
-msgid "Frontend Messages"
+msgid "Front End Messages"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:12
-msgid "In an effort to improve consistency and enforce new UX guidelines, a new and common frontend messages API has been introduced in OTRS 8. Developers should strive to use only this way of informing users of application changes. A frontend component has been created for this feature, and it's included by default in every application."
+msgid "In an effort to improve consistency and enforce new UX guidelines, a new and common front end messages API has been introduced in OTRS 8. Developers should strive to use only this way of informing users of application changes. A front end component has been created for this feature, and it's included by default in every application."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:14
@@ -7104,7 +7127,7 @@ msgid "Renamed Message Events"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:46
-msgid "Frontend message component improvements meant that some event names had to be renamed, it will be expected from you to port existing packages that use them to conform to the new format. Please find a table below containing all affected events."
+msgid "Front end message component improvements meant that some event names had to be renamed, it will be expected from you to port existing packages that use them to conform to the new format. Please find a table below containing all affected events."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:49
@@ -7138,7 +7161,7 @@ msgid "Styling Improvements"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:60
-msgid "In OTRS 7, new frontend stack has been introduced. However, since only one major frontend application was shipped (for the external interface), there was no need to make sure that components living in the shared namespace have support for different styling. With OTRS 8, this was bound to change, and now OTRS supports app-specific styling in components."
+msgid "In OTRS 7, new front end stack has been introduced. However, since only one major front end application was shipped (for the external interface), there was no need to make sure that components living in the shared namespace have support for different styling. With OTRS 8, this was bound to change, and now OTRS supports app-specific styling in components."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:64
@@ -7154,7 +7177,7 @@ msgid "Usage of the mixin guarantees your block will only be loaded where approp
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:86
-msgid "Design system will load appropriate style depending on current choice. For example, there will be a dropdown menu shown above the component example, allowing the user to switch the styles. All you have to do is make sure your component lives in the shared namespace and implements the mixin above, as needed."
+msgid "Design system will load appropriate style depending on current choice. For example, there will be a drop-down menu shown above the component example, allowing the user to switch the styles. All you have to do is make sure your component lives in the shared namespace and implements the mixin above, as needed."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:88
@@ -7650,11 +7673,11 @@ msgid "``$Color__External__Gray--Light``"
 msgstr ""
 
 #: ../../content/index.rst:3
-msgid "|doc-name|"
+msgid "OTRS Developer Manual"
 msgstr ""
 
 #: ../../content/index.rst:5
-msgid "This work is copyrighted by |doc-vendor| (|doc-url|), Zimmersmühlenweg 11, 61440 Oberursel, Germany."
+msgid "This work is copyrighted by OTRS AG (https://otrs.com), Zimmersmühlenweg 11, 61440 Oberursel, Germany."
 msgstr ""
 
 #: ../../content/index.rst:7
