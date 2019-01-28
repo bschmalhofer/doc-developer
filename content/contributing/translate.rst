@@ -1,112 +1,25 @@
 Translating
 ===========
 
-The OTRS framework allows for different languages to be used in the front end. The translations are contributed and maintained mainly by OTRS users, so *your* help is needed.
-
-
-Updating Translations
----------------------
+The translations are contributed and maintained mainly by OTRS users, so *your* help is needed.
 
 All translations of the OTRS GUI, the public extension modules and the documentations are managed via
 `Transifex <https://www.transifex.com/otrs/OTRS/>`__.
 
 To contribute to translations:
 
-1. Sign up for a free translators account on `Transifex <https://www.transifex.com>`__.
-2. Join your language team and wait for the acceptance.
+1. Sign up for a free translator account on `Transifex <https://www.transifex.com>`__.
+2. Join your `language team <https://www.transifex.com/otrs/teams/>`__ and wait for the acceptance.
 3. Start updating your translation. No additional software or files required.
 
+.. note::
+
+   If your language is not listed in the dashboard, you can request a new language on *Transifex*. After it is approved, you can start translating.
+
+From OTRS 7 the documentations are available in *reStructuredText* format, that replaced the old *DocBook* format. Be careful not to break the structure while translating the documentation.
+
+.. seealso::
+
+   You can find some examples in the :doc:`../documentation` chapter.
+
 The OTRS developers will download the translations from time to time into the OTRS source code repositories, you don't have to submit them anywhere.
-
-
-Translating the Documentation
------------------------------
-
-From OTRS 7 the documentations are available in reStructuredText, that replaced the old DocBook XML format.
-
-
-Help For Translators
-~~~~~~~~~~~~~~~~~~~~
-
-As the documentation is in reStructuredText format, be careful not to break the structure while translating the documentation. Here are some examples.
-
-Emphases
-   Emphasized texts are between two asterisks. The text should be translated. This is usually used for screen names, titles, buttons and labels. Please check the user interface translations to find and use the same wording in the documentation.
-
-   Example original sentence:
-
-   .. code-block:: none
-
-      Use the *Ticket Zoom* screen to see the ticket details.
-
-   Example translation into Hungarian:
-
-   .. code-block:: none
-
-      Használja a *Jegynagyítás* képernyőt a jegy részleteinek megtekintéséhez.
-
-Strong
-   Strong texts are between two double asterisks. The text should be translated. This is usually used for important information.
-
-   Example original sentence:
-
-   .. code-block:: none
-
-      **Don't continue** the update if you get an error message.
-
-   Example translation into Hungarian:
-
-   .. code-block:: none
-
-      **Ne folytassa** a frissítést, ha hibaüzenetet kap.
-
-Literal texts
-   Literal texts are between two double back-tick characters. This is usually used for variable names, configuration names and file paths, and **must not** be translated, otherwise it will break the structure.
-
-   Example original sentence:
-
-   .. code-block:: none
-
-      Activate ``group`` in system configuration ``ExamplePermission###100``.
-
-   Example translation into Hungarian:
-
-   .. code-block:: none
-
-      Aktiválja a ``group`` értéket az ``ExamplePermission###100`` rendszerbeállításban.
-
-Internal links
-   Internal links point to other pages or headings of the pages. ``:doc:`page-name``` is used for referring to a page and ``:ref:`Heading Title``` is used for referring to a heading. There is a custom tag ``:sysconfig:`System Configuration Name``` for referring to a system configuration. The texts *page-name*, *Heading Title* and *System Configuration Name* **must not** be translated, otherwise it will break the structure.
-
-   Example original sentence:
-
-   .. code-block:: none
-
-      See page :doc:`queues` to add a queue, especially section :ref:`Queue Settings`.
-
-   Example translation into Hungarian:
-
-   .. code-block:: none
-
-      Nézze meg a :doc:`queues` oldalt, különösen a :ref:`Queue Settings` szakaszt.
-
-External links
-   External links consist of a visible text and an URL in form *\`visible text <https://example.com>__\`*. The *visible text* should be translated.
-
-   Example original sentence:
-
-   .. code-block:: none
-
-      See `OTRS website <https://otrs.com/>__` for more information.
-
-   Example translation into Hungarian:
-
-   .. code-block:: none
-
-      Nézze meg az `OTRS weboldalát <https://otrs.com/>__` a további információkért.
-
-
-Adding New Language
--------------------
-
-If you want to translate the OTRS framework into a new language, you can propose a new language translation on `the Transifex OTRS project page <https://www.transifex.com/otrs/OTRS/>`__. After it is approved, you can just start translating.

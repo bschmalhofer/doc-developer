@@ -14,6 +14,7 @@ Permission is granted to copy, distribute and/or modify this document under the 
    how-it-works
    how-to-extend-otrs
    how-to-publish-otrs-extensions
+   documentation
    contributing
    additional-resources
 
