@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 02:04+0000\n"
+"POT-Creation-Date: 2019-01-29 02:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,6 +53,7 @@ msgid "This chapter will show how you can contribute to the OTRS framework, so t
 msgstr ""
 
 #: ../../content/contributing.rst:6
+#: ../../content/documentation.rst:8
 #: ../../content/get-started.rst:8
 #: ../../content/how-it-works.rst:4
 #: ../../content/how-to-extend-otrs.rst:4
@@ -1043,115 +1044,45 @@ msgid "Translating"
 msgstr ""
 
 #: ../../content/contributing/translate.rst:4
-msgid "The OTRS framework allows for different languages to be used in the front end. The translations are contributed and maintained mainly by OTRS users, so *your* help is needed."
+msgid "The translations are contributed and maintained mainly by OTRS users, so *your* help is needed."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:8
-msgid "Updating Translations"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:10
+#: ../../content/contributing/translate.rst:6
+#: ../../content/documentation/translate-documentation.rst:4
 msgid "All translations of the OTRS GUI, the public extension modules and the documentations are managed via `Transifex <https://www.transifex.com/otrs/OTRS/>`__."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:13
+#: ../../content/contributing/translate.rst:9
 msgid "To contribute to translations:"
 msgstr ""
 
-#: ../../content/contributing/translate.rst:15
-msgid "Sign up for a free translators account on `Transifex <https://www.transifex.com>`__."
+#: ../../content/contributing/translate.rst:11
+msgid "Sign up for a free translator account on `Transifex <https://www.transifex.com>`__."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:16
-msgid "Join your language team and wait for the acceptance."
+#: ../../content/contributing/translate.rst:12
+msgid "Join your `language team <https://www.transifex.com/otrs/teams/>`__ and wait for the acceptance."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:17
+#: ../../content/contributing/translate.rst:13
 msgid "Start updating your translation. No additional software or files required."
 msgstr ""
 
+#: ../../content/contributing/translate.rst:17
+msgid "If your language is not listed in the dashboard, you can request a new language on *Transifex*. After it is approved, you can start translating."
+msgstr ""
+
 #: ../../content/contributing/translate.rst:19
-msgid "The OTRS developers will download the translations from time to time into the OTRS source code repositories, you don't have to submit them anywhere."
+#: ../../content/documentation/translate-documentation.rst:7
+msgid "From OTRS 7 the documentations are available in *reStructuredText* format, that replaced the old *DocBook* format. Be careful not to break the structure while translating the documentation."
 msgstr ""
 
 #: ../../content/contributing/translate.rst:23
-msgid "Translating the Documentation"
+msgid "You can find some examples in the :doc:`../documentation` chapter."
 msgstr ""
 
 #: ../../content/contributing/translate.rst:25
-msgid "From OTRS 7 the documentations are available in reStructuredText, that replaced the old DocBook XML format."
-msgstr ""
-
-#: ../../content/contributing/translate.rst:29
-msgid "Help For Translators"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:31
-msgid "As the documentation is in reStructuredText format, be careful not to break the structure while translating the documentation. Here are some examples."
-msgstr ""
-
-#: ../../content/contributing/translate.rst:46
-msgid "Emphases"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:34
-msgid "Emphasized texts are between two asterisks. The text should be translated. This is usually used for screen names, titles, buttons and labels. Please check the user interface translations to find and use the same wording in the documentation."
-msgstr ""
-
-#: ../../content/contributing/translate.rst:36
-#: ../../content/contributing/translate.rst:51
-#: ../../content/contributing/translate.rst:66
-#: ../../content/contributing/translate.rst:81
-#: ../../content/contributing/translate.rst:96
-msgid "Example original sentence:"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:42
-#: ../../content/contributing/translate.rst:57
-#: ../../content/contributing/translate.rst:72
-#: ../../content/contributing/translate.rst:87
-#: ../../content/contributing/translate.rst:102
-msgid "Example translation into Hungarian:"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:61
-msgid "Strong"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:49
-msgid "Strong texts are between two double asterisks. The text should be translated. This is usually used for important information."
-msgstr ""
-
-#: ../../content/contributing/translate.rst:76
-msgid "Literal texts"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:64
-msgid "Literal texts are between two double back-tick characters. This is usually used for variable names, configuration names and file paths, and **must not** be translated, otherwise it will break the structure."
-msgstr ""
-
-#: ../../content/contributing/translate.rst:91
-msgid "Internal links"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:79
-msgid "Internal links point to other pages or headings of the pages. ``:doc:`page-name``` is used for referring to a page and ``:ref:`Heading Title``` is used for referring to a heading. There is a custom tag ``:sysconfig:`System Configuration Name``` for referring to a system configuration. The texts *page-name*, *Heading Title* and *System Configuration Name* **must not** be translated, otherwise it will break the structure."
-msgstr ""
-
-#: ../../content/contributing/translate.rst:107
-msgid "External links"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:94
-msgid "External links consist of a visible text and an URL in form *\\`visible text <https://example.com>__\\`*. The *visible text* should be translated."
-msgstr ""
-
-#: ../../content/contributing/translate.rst:110
-msgid "Adding New Language"
-msgstr ""
-
-#: ../../content/contributing/translate.rst:112
-msgid "If you want to translate the OTRS framework into a new language, you can propose a new language translation on `the Transifex OTRS project page <https://www.transifex.com/otrs/OTRS/>`__. After it is approved, you can just start translating."
+msgid "The OTRS developers will download the translations from time to time into the OTRS source code repositories, you don't have to submit them anywhere."
 msgstr ""
 
 #: ../../content/contributing/ui-design.rst:2
@@ -1159,6 +1090,7 @@ msgid "User Interface Design"
 msgstr ""
 
 #: ../../content/contributing/ui-design.rst:6
+#: ../../content/documentation/style-guide.rst:95
 msgid "Capitalization"
 msgstr ""
 
@@ -1435,6 +1367,450 @@ msgstr ""
 
 #: ../../content/contributing/unit-tests.rst:362
 msgid "This method returns ``undef`` in case the test database is not configured. If it is configured, but the supplied XML cannot be read or executed, this method will ``die()`` to interrupt the test with an error."
+msgstr ""
+
+#: ../../content/documentation.rst:2
+msgid "Documentation"
+msgstr ""
+
+#: ../../content/documentation.rst:4
+msgid "From OTRS 7 the documentations are available in *reStructuredText* format, that replaced the old *DocBook* format. Various outputs are available on the `OTRS documentation page <https://doc.otrs.com/doc/index.html>`__, like HTML, EPUB and PDF."
+msgstr ""
+
+#: ../../content/documentation.rst:6
+msgid "The documentation is written in English and translated into many languages on Transifex."
+msgstr ""
+
+#: ../../content/documentation/documentation-infrastucture.rst:2
+msgid "Documentation Infrastructure"
+msgstr ""
+
+#: ../../content/documentation/documentation-infrastucture.rst:4
+msgid "OTRS uses `Sphinx <http://www.sphinx-doc.org/>`__ to generate the outputs. The HTML output is generated using the `Read the Docs <https://readthedocs.org/>`__ theme."
+msgstr ""
+
+#: ../../content/documentation/documentation-infrastucture.rst:8
+msgid "All outputs are customized on the build server. If you want to setup a developer environment in your local machine for testing and writing the documentation, the outputs can be different."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:2
+msgid "reStructuredText Primer"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:4
+msgid "The documentation format name is **reStructuredText** (one word, this is the correct spelling). This is an easy to read documentation format using plain text and small inline markers."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:6
+msgid "This short tutorial will guide you through to create or update documentations. To give a full featured tutorial about how to use the *reStructuredText* format is beyond the scope of this document, and many tutorials (e. g. `Sphinx reStructuredText primer <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__ and `reStructuredText user documentation <http://docutils.sourceforge.net/rst.html>`__) and `on-line editors <http://rst.ninjs.org>`__ are available on the internet."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:8
+msgid "The following examples shows the most commonly used documentation elements."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:12
+msgid "Headings"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:14
+msgid "To use heading in the documentation, you have to underline the titles with special characters. The underline must start from the first letter of the title and end at the last letter of the title. The hierarchy of the special characters are the following: =, -, ~, ^, ."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:16
+msgid "The following example shows the usage of the headings:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:47
+msgid "Paragraphs"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:49
+msgid "For writing paragraphs, you have to start sentences at the beginning of the line. To create a new paragraph, just leave a blank line between the paragraphs. Example:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:63
+msgid "Inline Markups"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:65
+msgid "The standard inline markup is quite simple:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:67
+msgid "One asterisk: \\*text\\* for *emphasis* (italics)."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:68
+msgid "Two asterisks: \\*\\*text\\*\\* for **strong emphasis** (boldface)."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:69
+msgid "Backquotes: \\`\\`text\\`\\` for ``literal texts`` (code samples)."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:71
+msgid "If asterisks or backquotes appear in running text and could be confused with inline markup delimiters, they have to be escaped with a backslash, like \\\\*."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:75
+msgid "Lists"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:77
+msgid "To create unordered lists, start a line with asterisk (\\*) or slash (-). To create ordered list, start a line with numbers or hash mark (#). If you need nested lists, leave a blank line between the list items and use indentation with 3 spaces. Example:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:91
+msgid "Nested list example:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:105
+msgid "Literal Blocks"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:107
+msgid "Literal blocks are texts that should be displayed as verbatim. To create literal blocks, do the following:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:109
+msgid "Type 2 colons (::) in a new line."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:110
+msgid "Leave a blank line."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:111
+msgid "Write the text with indentation of 3 spaces."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:113
+msgid "Use literal blocks for code snippets, terminal outputs, configuration files, etc. Example:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:123
+msgid "If the language of the code snippet is known, you can specify it for syntax highlighting:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:151
+msgid "Tables"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:153
+msgid "To create grid tables, you have to draw the table. Example:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:168
+msgid "Hyperlinks"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:170
+msgid "Hyperlinks can be used inline or referenced. For inline use, encapsulate the text of the link and the URL with back tick marks and two trailing underscore characters."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:176
+msgid "The link above will display as `OTRS website <https://otrs.com>`__."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:178
+msgid "To create referenced links, you have to separate the text and the links like:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:188
+msgid "Images"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:190
+msgid "To insert an image into the documentation:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:192
+msgid "Put the image in the *images* folder."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:193
+msgid "Create a reference to the image with:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:204
+msgid "Colored Boxes"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:206
+msgid "These boxes have special meanings and will be highlighted as default."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:208
+msgid "Warning box:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:218
+msgid "This is a warning box."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:220
+msgid "Note box:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:230
+msgid "This is a note box."
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:232
+msgid "See also box:"
+msgstr ""
+
+#: ../../content/documentation/restructuredtext-primer.rst:242
+msgid "This is a see also box."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:2
+msgid "Style Guide"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:4
+msgid "This part of the documentation is only for visual style and wording."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:8
+msgid "Writing Content"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:10
+msgid "There is an internet slang **TL;DR**, which means *too long, didn't read* (see more information on `Wikipedia <https://en.wikipedia.org/wiki/TL;DR>`__). Many people don't like reading long texts, so please keep the documentation as short as possible. Use step-by-step tutorials instead of writing wall of text."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:12
+msgid "For example this is a **wrong** example for writing content:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:23
+msgid "The same content in **suggested** *human understandable* format:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:35
+msgid "The latter is easier to translate, because 6 short sentences will be included in the language file. If a content is changed in one of the sentences, only the changed sentence need to be reviewed and translated again. The first wrong example puts only one huge string to the language file, and if some changes will be made in the source string, the translator needs to review and re-translate the whole string."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:39
+msgid "Screenshots"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:41
+msgid "Don't use the native resolution of your machine. Usually it is full HD or bigger, so creating a screenshot with this resolution will became unreadable in some output, because all the images have to be shrink to the width of A4 paper in case of PDF. OTRS uses responsive design, so 1025 pixels is the minimum, that OTRS assumes it is a large display. Please use this as width of your screenshots."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:45
+msgid "The resolution can be set in all web browser with a feature called *mobile mode* or *responsive design*. Check your browser user manual for the usage of the feature and set the width of the screen to 1025 pixels."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:47
+msgid "This is an example for a **wrong** screenshot, as it has resolution of full HD. Due to the automatic shrinking the texts on the screenshot are hard to read:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:52
+msgid "Agent Dashboard (1920 pixels width)"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:54
+msgid "The same screenshot with **suggested** resolution. The texts are much easier to read:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:59
+msgid "Agent Dashboard (1025 pixels width)"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:61
+msgid "It is also wrong, if the screenshot has good resolution in pixels, but with high DPI. For example this screenshot is **wrong**, because the texts on it is much bigger than the other texts in the documentation:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:66
+msgid "Video Invitation Dialog (756 pixels width but with high DPI)"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:70
+msgid "Create Screenshots with Firefox"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:72
+msgid "If only a part of the screenshot is required, then the screenshot needs to be cropped. The administration area of OTRS consist of a left sidebar and a main content column. To create screenshots with Firefox:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:74
+msgid "Right click on an element in the browser and select *Inspect element*."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:75
+msgid "Select the element in the DOM, if it was not selected."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:76
+msgid "Right click on the node and select *Screenshot Node*."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:81
+msgid "Example screenshot for the main content"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:86
+msgid "Example screenshot for the left sidebar"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:91
+msgid "Example screenshot for the main content column"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:97
+msgid "For titles always have to use sentence case capitalization, which means, that in titles always capitalize:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:99
+msgid "Nouns (man, bus, book)."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:100
+msgid "Adjectives (angry, lovely, small)."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:101
+msgid "Verbs (run, eat, sleep)."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:102
+msgid "Adverbs (slowly, quickly, quietly)."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:103
+msgid "Pronouns (he, she, it)."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:104
+msgid "Subordinating conjunctions (as, because, that)."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:106
+msgid "In titles do not capitalize:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:108
+msgid "Articles: a, an, the."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:109
+msgid "Coordinating conjunctions: and, but, or, for, nor, etc."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:110
+msgid "Prepositions (fewer than five letters): on, at, to, from, by, etc."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:112
+msgid "In normal sentences don't capitalize any words, only names and reference to titles have to be capitalized. This is a **wrong** example:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:118
+msgid "The **suggested** sentence with proper capitalization. Besides, *Ticket Zoom* is the name of the screen, so it should be emphasized:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:126
+msgid "Buttons and Screen Names"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:128
+msgid "In the content sentences all buttons and screens should be emphasized and should be written with capital letters or in sentence case. Don't use apostrophes or quotation marks for emphasizing."
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:130
+msgid "This sentence is **wrong**, because apostrophes are used for emphasizing:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:136
+msgid "The **suggested** way is to use asterisks for emphasizing:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:144
+msgid "Wording"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:146
+msgid "Don't use variable names in sentences. This sentence is **wrong**, because a variable name is meaningless for some people:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:152
+msgid "The same sentence without variable name, this is **suggested**:"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:160
+msgid "Variable Names"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:162
+msgid "Variable names should always marked as ``literal`` content. This is useful for translators, as they can exactly know, that the string mustn't be translated. If a string is not marked as literal content, it usually should be translated. For example:"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:2
+msgid "Translating the Documentation"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:9
+msgid "Here are some examples."
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:24
+msgid "Emphases"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:12
+msgid "Emphasized texts are between two asterisks. The text should be translated. This is usually used for screen names, titles, buttons and labels. Please check the user interface translations to find and use the same wording in the documentation."
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:14
+#: ../../content/documentation/translate-documentation.rst:29
+#: ../../content/documentation/translate-documentation.rst:44
+#: ../../content/documentation/translate-documentation.rst:59
+#: ../../content/documentation/translate-documentation.rst:74
+msgid "Example original sentence:"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:20
+#: ../../content/documentation/translate-documentation.rst:35
+#: ../../content/documentation/translate-documentation.rst:50
+#: ../../content/documentation/translate-documentation.rst:65
+#: ../../content/documentation/translate-documentation.rst:80
+msgid "Example translation into Hungarian:"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:39
+msgid "Strong"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:27
+msgid "Strong texts are between two double asterisks. The text should be translated. This is usually used for important information."
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:54
+msgid "Literal texts"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:42
+msgid "Literal texts are between two double back-tick characters. This is usually used for variable names, configuration names and file paths, and **must not** be translated, otherwise it will break the structure."
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:69
+msgid "Internal links"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:57
+msgid "Internal links point to other pages or headings of the pages. ``:doc:`page-name``` is used for referring to a page and ``:ref:`Heading Title``` is used for referring to a heading. There is a custom tag ``:sysconfig:`System Configuration Name``` for referring to a system configuration. The texts *page-name*, *Heading Title* and *System Configuration Name* **must not** be translated, otherwise it will break the structure."
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:83
+msgid "External links"
+msgstr ""
+
+#: ../../content/documentation/translate-documentation.rst:72
+msgid "External links consist of a visible text and an URL in form *\\`visible text <https://example.com>__\\`*. The *visible text* should be translated."
 msgstr ""
 
 #: ../../content/get-started.rst:2
