@@ -188,3 +188,28 @@ Since some SCSS literals had to be renamed, it will be expected from you to port
 +-----------+--------------+------------------------------+---------------------------------------------+
 | External  | *_colors*    | ``$gray-light``              | ``$Color__External__Gray--Light``           |
 +-----------+--------------+------------------------------+---------------------------------------------+
+
+
+Encode API Changed
+--------------------
+
+The legacy method ``Convert2CharsetInternal()`` was dropped. Please replace any usages of this with ``Convert()`` and a ``To => 'utf-8'`` parameter like this:
+
+.. code-block:: Perl
+
+    $EncodeObject->Convert2CharsetInternal(
+        Text  => $BodyStrg,
+        From  => $Self->GetCharset(),
+        Check => 1,
+    );
+
+Replace this by:
+
+.. code-block:: Perl
+
+    $EncodeObject->Convert(
+        Text  => $BodyStrg,
+        From  => $Self->GetCharset(),
+        To    => 'utf-8',
+        Check => 1,
+    );
