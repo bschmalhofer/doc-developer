@@ -69,16 +69,16 @@ Internal links
       Nézze meg a :doc:`queues` oldalt, különösen a :ref:`Queue Settings` szakaszt.
 
 External links
-   External links consist of a visible text and an URL in form *\`visible text <https://example.com>__\`*. The *visible text* should be translated.
+   External links consist of a visible text and an URL in form *\`visible text <https://example.com>\`__*. The *visible text* should be translated.
 
    Example original sentence:
 
    .. code-block:: none
 
-      See `OTRS website <https://otrs.com/>__` for more information.
+      See `OTRS website <https://otrs.com/>`__ for more information.
 
    Example translation into Hungarian:
 
    .. code-block:: none
 
-      Nézze meg az `OTRS weboldalát <https://otrs.com/>__` a további információkért.
+      Nézze meg az `OTRS weboldalát <https://otrs.com/>`__ a további információkért.
