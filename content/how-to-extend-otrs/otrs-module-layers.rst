@@ -37,6 +37,7 @@ OTRS has a large number of so-called *module layers* which make it very easy to 
    otrs-module-layers/dashboard
    otrs-module-layers/notify
    otrs-module-layers/ticket-menu
+   otrs-module-layers/rootapplication
 
 .. toctree::
    :maxdepth: 3
