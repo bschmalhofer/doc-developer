@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-12 02:05+0000\n"
+"POT-Creation-Date: 2019-02-13 02:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1810,7 +1810,7 @@ msgid "External links"
 msgstr ""
 
 #: ../../content/documentation/translate-documentation.rst:72
-msgid "External links consist of a visible text and an URL in form *\\`visible text <https://example.com>__\\`*. The *visible text* should be translated."
+msgid "External links consist of a visible text and an URL in form *\\`visible text <https://example.com>\\`__*. The *visible text* should be translated."
 msgstr ""
 
 #: ../../content/get-started.rst:2
