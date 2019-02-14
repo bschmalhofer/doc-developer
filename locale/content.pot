@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-13 02:04+0000\n"
+"POT-Creation-Date: 2019-02-14 02:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2200,7 +2200,7 @@ msgid "The CMD (command line) front end is like the web front end handle and the
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:151
-#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:41
+#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:42
 msgid "Generic Interface Modules"
 msgstr ""
 
@@ -3890,19 +3890,19 @@ msgstr ""
 msgid "Other Core Functions"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:50
+#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:51
 msgid "Daemon And Scheduler"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:57
+#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:58
 msgid "Dynamic Fields"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:68
+#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:69
 msgid "Email Handling"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:74
+#: ../../content/how-to-extend-otrs/otrs-module-layers.rst:75
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:2
 msgid "Process Management"
 msgstr ""
@@ -6058,6 +6058,34 @@ msgstr ""
 #: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:137
 #: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:138
 msgid "Useful preferences implementation could be a SOAP or RADIUS back end."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/rootapplication.rst:2
+msgid "Root Application Module Layer"
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/rootapplication.rst:4
+msgid "The root application module layer enables the developers to develop and load custom frontend components. Components will be lazy loaded and are omnipresent in the frontend application. They can use any API that is exposed to other components within the application, including its state."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/rootapplication.rst:6
+msgid "Developing a custom root application component is as easy as creating a new file."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/rootapplication.rst:10
+msgid "Root Application Component Code Example"
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/rootapplication.rst:12
+msgid "In this small example we'll write a little component, which outputs a custom footer on every page of the agent interface app."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/rootapplication.rst:14
+msgid "Just create a new file ``SampleFooter.vue`` in ``/Frontend/Apps/Agent/Components/RootApplicationModule/Modules`` folder."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/rootapplication.rst:38
+msgid "To activate our custom footer module, just rebuild the app that was modified. If a development server is used, it will need to be restarted to pick up the changes."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:2
