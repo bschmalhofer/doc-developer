@@ -66,15 +66,15 @@ The standard inline markup is quite simple:
 
 - One asterisk: \*text\* for *emphasis* (italics).
 - Two asterisks: \*\*text\*\* for **strong emphasis** (boldface).
-- Backquotes: \`\`text\`\` for ``literal texts`` (code samples).
+- Grave accents: \`\`text\`\` for ``literal texts`` (code samples).
 
-If asterisks or backquotes appear in running text and could be confused with inline markup delimiters, they have to be escaped with a backslash, like \\*.
+If asterisks or grave accents appear in running text which could be confused with inline markup delimiters, they have to be escaped with a backslash, like \\*.
 
 
 Lists
 -----
 
-To create unordered lists, start a line with asterisk (\*) or slash (-). To create ordered list, start a line with numbers or hash mark (#). If you need nested lists, leave a blank line between the list items and use indentation with 3 spaces. Example:
+To create unordered lists, start a line with asterisk (\*) or dash (-). To create ordered list, start a line with numbers or hash mark (#). If you need nested lists, leave a blank line between the list items and use indentation with 3 spaces. Example:
 
 .. code-block:: rst
 
@@ -167,15 +167,15 @@ To create grid tables, you have to draw the table. Example:
 Hyperlinks
 ----------
 
-Hyperlinks can be used inline or referenced. For inline use, encapsulate the text of the link and the URL with back tick marks and two trailing underscore characters.
+Hyperlinks can be used inline or referenced. For inline use, encapsulate the text of the link and the URL with grave accents and two trailing underscore characters.
 
 .. code-block:: rst
 
    Visit `OTRS website <https://otrs.com>`__ for more information.
 
-The link above will display as `OTRS website <https://otrs.com>`__.
+The link above will display as: `OTRS website <https://otrs.com>`__.
 
-To create referenced links, you have to separate the text and the links like:
+To create referenced links, you have to separate the text and the link. Example:
 
 .. code-block:: rst
 
@@ -189,7 +189,7 @@ Images
 
 To insert an image into the documentation:
 
-1. Put the image in the *images* folder.
+1. Put the image in the ``images`` folder.
 2. Create a reference to the image with:
 
    .. code-block:: rst
