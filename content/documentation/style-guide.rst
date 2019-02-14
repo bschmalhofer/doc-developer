@@ -69,7 +69,7 @@ It is also wrong, if the screenshot has good resolution in pixels, but with high
 Create Screenshots with Firefox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If only a part of the screenshot is required, then the screenshot needs to be cropped. The administration area of OTRS consist of a left sidebar and a main content column. To create screenshots with Firefox:
+If only a part of the screenshot is required, the screenshot needs to be cropped. The administrator interface of OTRS consist of a left sidebar and a main content column. To create screenshots with Firefox:
 
 1. Right click on an element in the browser and select *Inspect element*.
 2. Select the element in the DOM, if it was not selected.
@@ -91,8 +91,8 @@ If only a part of the screenshot is required, then the screenshot needs to be cr
    Example screenshot for the main content column
 
 
-Capitalization
---------------
+Capitalization in Documentation
+-------------------------------
 
 For titles always have to use sentence case capitalization, which means, that in titles always capitalize:
 
