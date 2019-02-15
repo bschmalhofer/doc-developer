@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-21 13:55+0000\n"
-"PO-Revision-Date: 2019-01-21 14:00+0000\n"
+"POT-Creation-Date: 2019-02-15 02:06+0000\n"
+"PO-Revision-Date: 2019-02-15 10:18+0000\n"
 "Last-Translator: Balázs Úr <ur.balazs@fsf.hu>\n"
 "Language-Team: Hungarian (http://www.transifex.com/otrs/OTRS/language/hu/)\n"
 "MIME-Version: 1.0\n"
@@ -69,8 +69,9 @@ msgid ""
 " other users will be able to benefit from your work."
 msgstr "Ez a fejezet azt fogja bemutatni, hogy hogyan működhet közre az OTRS keretrendszerben azért, hogy a többi felhasználó is képes legyen hasznot húzni a munkájából."
 
-#: ../../content/contributing.rst:6 ../../content/get-started.rst:8
-#: ../../content/how-it-works.rst:4 ../../content/how-to-extend-otrs.rst:4
+#: ../../content/contributing.rst:6 ../../content/documentation.rst:8
+#: ../../content/get-started.rst:8 ../../content/how-it-works.rst:4
+#: ../../content/how-to-extend-otrs.rst:4
 #: ../../content/how-to-publish-otrs-extensions.rst:4
 #: ../../content/index.rst:9
 msgid "Contents"
@@ -1425,151 +1426,62 @@ msgstr "Fordítás"
 
 #: ../../content/contributing/translate.rst:4
 msgid ""
-"The OTRS framework allows for different languages to be used in the front "
-"end. The translations are contributed and maintained mainly by OTRS users, "
-"so *your* help is needed."
-msgstr "Az OTRS keretrendszer különböző nyelvek használatát teszi lehetővé az előtétprogramon. A fordításokat többnyire az OTRS felhasználói készítik el és tartják karban, ezért az *Ön* segítsége is szükséges."
+"The translations are contributed and maintained mainly by OTRS users, so "
+"*your* help is needed."
+msgstr "A fordításokat többnyire az OTRS felhasználói készítik el és tartják karban, ezért az *Ön* segítsége is szükséges."
 
-#: ../../content/contributing/translate.rst:8
-msgid "Updating Translations"
-msgstr "Fordítások frissítése"
-
-#: ../../content/contributing/translate.rst:10
+#: ../../content/contributing/translate.rst:6
+#: ../../content/documentation/translate-documentation.rst:4
 msgid ""
 "All translations of the OTRS GUI, the public extension modules and the "
 "documentations are managed via `Transifex "
 "<https://www.transifex.com/otrs/OTRS/>`__."
 msgstr "Az OTRS grafikus felhasználói felületének és a nyilvános kiterjesztőmoduloknak az összes fordítását a `Transifex <https://www.transifex.com/otrs/OTRS/>`__ oldalán keresztül kezelik."
 
-#: ../../content/contributing/translate.rst:13
+#: ../../content/contributing/translate.rst:9
 msgid "To contribute to translations:"
 msgstr "A fordításban való közreműködéshez:"
 
-#: ../../content/contributing/translate.rst:15
+#: ../../content/contributing/translate.rst:11
 msgid ""
-"Sign up for a free translators account on `Transifex "
+"Sign up for a free translator account on `Transifex "
 "<https://www.transifex.com>`__."
 msgstr "Regisztráljon egy ingyenes fordítói fiókot a `Transifexen <https://www.transifex.com>`__."
 
-#: ../../content/contributing/translate.rst:16
-msgid "Join your language team and wait for the acceptance."
-msgstr "Csatlakozzon a nyelvi csapatához és várjon az elfogadásra."
+#: ../../content/contributing/translate.rst:12
+msgid ""
+"Join your `language team <https://www.transifex.com/otrs/teams/>`__ and wait"
+" for the acceptance."
+msgstr "Csatlakozzon a `nyelvi csapatához <https://www.transifex.com/otrs/teams/>`__, és várjon az elfogadásra."
 
-#: ../../content/contributing/translate.rst:17
+#: ../../content/contributing/translate.rst:13
 msgid ""
 "Start updating your translation. No additional software or files required."
 msgstr "Kezdje el frissíteni a fordítást. Nincs szükség további szoftverekre vagy fájlokra."
 
+#: ../../content/contributing/translate.rst:17
+msgid ""
+"If your language is not listed in the dashboard, you can request a new "
+"language on *Transifex*. After it is approved, you can start translating."
+msgstr "Ha a nyelve nincs felsorolva a vezérlőpulton, akkor kérelmezhet egy új nyelvet a *Transifexen*. Az elfogadása után el is kezdheti a fordítást."
+
 #: ../../content/contributing/translate.rst:19
+#: ../../content/documentation/translate-documentation.rst:7
+msgid ""
+"From OTRS 7 the documentations are available in *reStructuredText* format, "
+"that replaced the old *DocBook* format. Be careful not to break the "
+"structure while translating the documentation."
+msgstr "Az OTRS 7-től kezdve a dokumentációk *reStructuredText* formátumban érhetők el, amely a régi *DocBook* formátumot cseréli le. Legyen óvatos, nehogy elrontsa a szerkezetet a dokumentum fordítása során."
+
+#: ../../content/contributing/translate.rst:23
+msgid "You can find some examples in the :doc:`../documentation` chapter."
+msgstr "A :doc:`../documentation` fejezetben találhat néhány példát."
+
+#: ../../content/contributing/translate.rst:25
 msgid ""
 "The OTRS developers will download the translations from time to time into "
 "the OTRS source code repositories, you don't have to submit them anywhere."
 msgstr "Az OTRS fejlesztői időről időre le fogják tölteni a fordításokat az OTRS forráskód tárolóiba, így nem kell semmit sem elküldenie sehova."
-
-#: ../../content/contributing/translate.rst:23
-msgid "Translating the Documentation"
-msgstr "A dokumentáció fordítása"
-
-#: ../../content/contributing/translate.rst:25
-msgid ""
-"From OTRS 7 the documentations are available in reStructuredText, that "
-"replaced the old DocBook XML format."
-msgstr "Az OTRS 7-től kezdve a dokumentációk reStructuredText formátumban érhetők el, amely a régi DocBook XML formátumot cseréli le."
-
-#: ../../content/contributing/translate.rst:29
-msgid "Help For Translators"
-msgstr "Segítség a fordítóknak"
-
-#: ../../content/contributing/translate.rst:31
-msgid ""
-"As the documentation is in reStructuredText format, be careful not to break "
-"the structure while translating the documentation. Here are some examples."
-msgstr "Mivel a dokumentáció reStructuredText formátumban van, legyen óvatos, nehogy elrontsa a szerkezetet a dokumentum fordítása során. Itt van néhány példa."
-
-#: ../../content/contributing/translate.rst:46
-msgid "Emphases"
-msgstr "Kiemelés"
-
-#: ../../content/contributing/translate.rst:34
-msgid ""
-"Emphasized texts are between two asterisks. The text should be translated. "
-"This is usually used for screen names, titles, buttons and labels. Please "
-"check the user interface translations to find and use the same wording in "
-"the documentation."
-msgstr "A kiemelt szövegek két csillag közt találhatók. A szöveget le kell fordítani. Ezt általában képernyőneveknél, címeknél, gomboknál és címkéknél használják. Nézze meg a felhasználói felület fordításait, hogy megtalálja és ugyanazt a megfogalmazást használja a dokumentációban is."
-
-#: ../../content/contributing/translate.rst:36
-#: ../../content/contributing/translate.rst:51
-#: ../../content/contributing/translate.rst:66
-#: ../../content/contributing/translate.rst:81
-#: ../../content/contributing/translate.rst:96
-msgid "Example original sentence:"
-msgstr "Példa az eredeti szövegre:"
-
-#: ../../content/contributing/translate.rst:42
-#: ../../content/contributing/translate.rst:57
-#: ../../content/contributing/translate.rst:72
-#: ../../content/contributing/translate.rst:87
-#: ../../content/contributing/translate.rst:102
-msgid "Example translation into Hungarian:"
-msgstr "Példa a magyarra történő fordításra:"
-
-#: ../../content/contributing/translate.rst:61
-msgid "Strong"
-msgstr "Hangsúlyozás"
-
-#: ../../content/contributing/translate.rst:49
-msgid ""
-"Strong texts are between two double asterisks. The text should be "
-"translated. This is usually used for important information."
-msgstr "A hangsúlyos szövegek két dupla csillag között vannak. A szöveget le kell fordítani. Ezt általában fontos információknál használják."
-
-#: ../../content/contributing/translate.rst:76
-msgid "Literal texts"
-msgstr "Szó szerinti szövegek"
-
-#: ../../content/contributing/translate.rst:64
-msgid ""
-"Literal texts are between two double back-tick characters. This is usually "
-"used for variable names, configuration names and file paths, and **must "
-"not** be translated, otherwise it will break the structure."
-msgstr "A szó szerinti szövegek két dupla hangsúlyjel között vannak. Ezt általában változóneveknél, beállítások neveinél és fájlok útvonalainál használják. **Tilos** lefordítani, különben tönkre fogja tenni a szerkezetet."
-
-#: ../../content/contributing/translate.rst:91
-msgid "Internal links"
-msgstr "Belső hivatkozások"
-
-#: ../../content/contributing/translate.rst:79
-msgid ""
-"Internal links point to other pages or headings of the pages. ``:doc:`page-"
-"name``` is used for referring to a page and ``:ref:`Heading Title``` is used"
-" for referring to a heading. There is a custom tag ``:sysconfig:`System "
-"Configuration Name``` for referring to a system configuration. The texts "
-"*page-name*, *Heading Title* and *System Configuration Name* **must not** be"
-" translated, otherwise it will break the structure."
-msgstr "A belső hivatkozások más oldalakra vagy oldalak címsoraira mutatnak. A ``:doc:`page-name``` használható egy oldalra történő hivatkozáshoz és a ``:ref:`Heading Title``` használható egy címsorra való hivatkozáshoz. Létezik egy egyéni ``:sysconfig:`System Configuration Name``` címke egy rendszerbeállításra való hivatkozáshoz. A *page-name*, *Heading Title* és *System Configuration Name* szövegeket **tilos** lefordítani, különben tönkre fogják tenni a szerkezetet."
-
-#: ../../content/contributing/translate.rst:107
-msgid "External links"
-msgstr "Külső hivatkozások"
-
-#: ../../content/contributing/translate.rst:94
-msgid ""
-"External links consist of a visible text and an URL in form *\\`visible text"
-" <https://example.com>__\\`*. The *visible text* should be translated."
-msgstr "A külső hivatkozások egy látható szövegből és egy URL-ből állnak *\\`látható szöveg <https://example.com>__\\`* formában. A *látható szöveget* le kell fordítani."
-
-#: ../../content/contributing/translate.rst:110
-msgid "Adding New Language"
-msgstr "Új nyelv hozzáadása"
-
-#: ../../content/contributing/translate.rst:112
-msgid ""
-"If you want to translate the OTRS framework into a new language, you can "
-"propose a new language translation on `the Transifex OTRS project page "
-"<https://www.transifex.com/otrs/OTRS/>`__. After it is approved, you can "
-"just start translating."
-msgstr "Ha új nyelvre szeretné lefordítani az OTRS keretrendszert, akkor javasolhat egy új nyelvi fordítást a `Transifex OTRS projekt oldalán <https://www.transifex.com/otrs/OTRS/>`__. Miután azt elfogadták, azonnal elkezdheti a fordítást."
 
 #: ../../content/contributing/ui-design.rst:2
 msgid "User Interface Design"
@@ -1954,6 +1866,567 @@ msgid ""
 "If it is configured, but the supplied XML cannot be read or executed, this "
 "method will ``die()`` to interrupt the test with an error."
 msgstr "Ez a metódus ``undef`` értéket ad vissza abban az esetben, ha a teszt adatbázis nincs beállítva. Ha be van állítva, de a mellékelt XML nem olvasható vagy nem hajtható végre, akkor a metódus ``die()`` függvénye lesz meghívva a teszt hibával történő megszakításához."
+
+#: ../../content/documentation.rst:2
+msgid "Documentation"
+msgstr "Dokumentáció"
+
+#: ../../content/documentation.rst:4
+msgid ""
+"From OTRS 7 the documentations are available in *reStructuredText* format, "
+"that replaced the old *DocBook* format. Various outputs are available on the"
+" `OTRS documentation page <https://doc.otrs.com/doc/index.html>`__, like "
+"HTML, EPUB and PDF."
+msgstr "Az OTRS 7-től kezdve a dokumentációk *reStructuredText* formátumban érhetők el, amely a régi *DocBook* formátumot cseréli le. Különféle kimenetek érhetők el az `OTRS dokumentációs oldalán <https://doc.otrs.com/doc/index.html>`__, mint például HTML, EPUB és PDF."
+
+#: ../../content/documentation.rst:6
+msgid ""
+"The documentation is written in English and translated into many languages "
+"on Transifex."
+msgstr "A dokumentációt angol nyelven írták, és több nyelvre is le van fordítva a Transifexen."
+
+#: ../../content/documentation/documentation-infrastucture.rst:2
+msgid "Documentation Infrastructure"
+msgstr "Dokumentációs infrastruktúra"
+
+#: ../../content/documentation/documentation-infrastucture.rst:4
+msgid ""
+"OTRS uses `Sphinx <http://www.sphinx-doc.org/>`__ to generate the outputs. "
+"The HTML output is generated using the `Read the Docs "
+"<https://readthedocs.org/>`__ theme."
+msgstr "Az OTRS a `Sphinx <http://www.sphinx-doc.org/>`__ programot használja a kimenetek előállításához. A HTML kimenet a `Read the Docs <https://readthedocs.org/>`__ téma használatával kerül előállításra."
+
+#: ../../content/documentation/documentation-infrastucture.rst:8
+msgid ""
+"All outputs are customized on the build server. If you want to setup a "
+"developer environment in your local machine for testing and writing the "
+"documentation, the outputs can be different."
+msgstr "Az összes kimenet személyre van szabva az összeállító kiszolgálón. Ha a helyi gépén szeretne egy fejlesztői környezetet felállítani a teszteléshez és a dokumentáció írásához, akkor a kimenetek eltérőek lehetnek."
+
+#: ../../content/documentation/restructuredtext-primer.rst:2
+msgid "reStructuredText Primer"
+msgstr "reStructuredText alapozó"
+
+#: ../../content/documentation/restructuredtext-primer.rst:4
+msgid ""
+"The documentation format name is **reStructuredText** (one word, this is the"
+" correct spelling). This is an easy to read documentation format using plain"
+" text and small inline markers."
+msgstr "A dokumentációformátum neve **reStructuredText** (egybe írva, ez a helyes írásmód). Ez egy könnyen olvasható dokumentumformátum, amely egyszerű szöveget és kisebb sorközi jelölőket használ."
+
+#: ../../content/documentation/restructuredtext-primer.rst:6
+msgid ""
+"This short tutorial will guide you through to create or update "
+"documentations. To give a full featured tutorial about how to use the "
+"*reStructuredText* format is beyond the scope of this document, and many "
+"tutorials (e. g. `Sphinx reStructuredText primer <http://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/basics.html>`__ and "
+"`reStructuredText user documentation "
+"<http://docutils.sourceforge.net/rst.html>`__) and `on-line editors "
+"<http://rst.ninjs.org>`__ are available on the internet."
+msgstr "Ez a rövid ismertető végigvezeti Önt a dokumentációk létrehozásán és frissítésén. A *reStructuredText* formátum használatáról szóló teljes körű ismertető biztosítása túlmutat ezen dokumentáció hatókörén, de számos ismertető (például a `Sphinx reStructuredText alapozó <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__ és a `reStructuredText felhasználói dokumentáció <http://docutils.sourceforge.net/rst.html>`__) és `internetes szerkesztő <http://rst.ninjs.org>`__ érhető el az interneten."
+
+#: ../../content/documentation/restructuredtext-primer.rst:8
+msgid ""
+"The following examples shows the most commonly used documentation elements."
+msgstr "A következő példák a leggyakrabban használt dokumentációs elemeket mutatják be."
+
+#: ../../content/documentation/restructuredtext-primer.rst:12
+msgid "Headings"
+msgstr "Címsorok"
+
+#: ../../content/documentation/restructuredtext-primer.rst:14
+msgid ""
+"To use heading in the documentation, you have to underline the titles with "
+"special characters. The underline must start from the first letter of the "
+"title and end at the last letter of the title. The hierarchy of the special "
+"characters are the following: =, -, ~, ^, ."
+msgstr "Címsorok használatához a dokumentációban alá kell húznia a címeket különleges karakterekkel. Az aláhúzásnak a cím első karakterétől kell kezdődnie és a cím utolsó karakterénél kell végződnie. A különleges karakterek hierarchiája a következő: =, -, ~, ^, ."
+
+#: ../../content/documentation/restructuredtext-primer.rst:16
+msgid "The following example shows the usage of the headings:"
+msgstr "A következő példa a címsorok használatát mutatja be:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:47
+msgid "Paragraphs"
+msgstr "Bekezdések"
+
+#: ../../content/documentation/restructuredtext-primer.rst:49
+msgid ""
+"For writing paragraphs, you have to start sentences at the beginning of the "
+"line. To create a new paragraph, just leave a blank line between the "
+"paragraphs. Example:"
+msgstr "Bekezdések írásához a mondatokat a sor elején kell kezdenie. Új bekezdés létrehozásához egyszerűen hagyjon egy üres sort a bekezdések között. Példa:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:63
+msgid "Inline Markups"
+msgstr "Sorközi jelölők"
+
+#: ../../content/documentation/restructuredtext-primer.rst:65
+msgid "The standard inline markup is quite simple:"
+msgstr "A szabványos sorközi jelölők viszonylag egyszerűek:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:67
+msgid "One asterisk: \\*text\\* for *emphasis* (italics)."
+msgstr "Egy csillag: \\*szöveg\\* a *hangsúlyozáshoz* (döntött)."
+
+#: ../../content/documentation/restructuredtext-primer.rst:68
+msgid "Two asterisks: \\*\\*text\\*\\* for **strong emphasis** (boldface)."
+msgstr "Két csillag: \\*\\*szöveg\\*\\* az **erős hangsúlyozáshoz** (vastagított)."
+
+#: ../../content/documentation/restructuredtext-primer.rst:69
+msgid "Grave accents: \\`\\`text\\`\\` for ``literal texts`` (code samples)."
+msgstr "Hangsúlyjelek: \\`\\`szöveg\\`\\` a ``szó szerinti szövegekhez`` (kódpéldák)."
+
+#: ../../content/documentation/restructuredtext-primer.rst:71
+msgid ""
+"If asterisks or grave accents appear in running text which could be confused"
+" with inline markup delimiters, they have to be escaped with a backslash, "
+"like \\\\*."
+msgstr "Ha csillagok vagy hangsúlyjelek fordulnak elő a futó szövegben, amelyek összekeverhetők a sorközi jelölők határolóival, akkor el kell fedni azokat egy visszafelé álló perjellel, mint például \\\\*."
+
+#: ../../content/documentation/restructuredtext-primer.rst:75
+msgid "Lists"
+msgstr "Listák"
+
+#: ../../content/documentation/restructuredtext-primer.rst:77
+msgid ""
+"To create unordered lists, start a line with asterisk (\\*) or dash (-). To "
+"create ordered list, start a line with numbers or hash mark (#). If you need"
+" nested lists, leave a blank line between the list items and use indentation"
+" with 3 spaces. Example:"
+msgstr "Felsorolások létrehozásához kezdje a sort egy csillaggal (\\*) vagy kötőjellel (-). Számozott listák létrehozásához kezdje a sort számokkal vagy kettős kereszttel (#). Ha egymásba ágyazott listákra van szüksége, akkor hagyjon egy üres sort a listaelemek között, és használjon 3 szóköznyi behúzást. Példa:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:91
+msgid "Nested list example:"
+msgstr "Példa egymásba ágyazott listára:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:105
+msgid "Literal Blocks"
+msgstr "Szó szerinti blokkok"
+
+#: ../../content/documentation/restructuredtext-primer.rst:107
+msgid ""
+"Literal blocks are texts that should be displayed as verbatim. To create "
+"literal blocks, do the following:"
+msgstr "A szó szerinti blokkok olyan szövegek, amelyeket betűhelyesen kell megjeleníteni. Szó szerinti blokkok létrehozásához a következőt tegye:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:109
+msgid "Type 2 colons (::) in a new line."
+msgstr "Írjon be 2 kettőspontot (::) egy új sorba."
+
+#: ../../content/documentation/restructuredtext-primer.rst:110
+msgid "Leave a blank line."
+msgstr "Hagyjon egy üres sort."
+
+#: ../../content/documentation/restructuredtext-primer.rst:111
+msgid "Write the text with indentation of 3 spaces."
+msgstr "Írja be a szöveget 3 szóköznyi behúzással."
+
+#: ../../content/documentation/restructuredtext-primer.rst:113
+msgid ""
+"Use literal blocks for code snippets, terminal outputs, configuration files,"
+" etc. Example:"
+msgstr "Használjon szó szerinti blokkokat kódrészletekhez, terminálkimenetekhez, beállítófájlokhoz, stb. Példa:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:123
+msgid ""
+"If the language of the code snippet is known, you can specify it for syntax "
+"highlighting:"
+msgstr "Ha ismert a kódrészlet nyelve, akkor megadhatja azt a szintaxis kiemeléséhez:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:151
+msgid "Tables"
+msgstr "Táblázatok"
+
+#: ../../content/documentation/restructuredtext-primer.rst:153
+msgid "To create grid tables, you have to draw the table. Example:"
+msgstr "Rácsos táblázatok létrehozásához meg kell rajzolnia a táblázatot. Példa:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:168
+msgid "Hyperlinks"
+msgstr "Hiperhivatkozások"
+
+#: ../../content/documentation/restructuredtext-primer.rst:170
+msgid ""
+"Hyperlinks can be used inline or referenced. For inline use, encapsulate the"
+" text of the link and the URL with grave accents and two trailing underscore"
+" characters."
+msgstr "A hiperhivatkozások lehetnek sorköziek vagy hivatkozottak. Sorközi használathoz fogja közre a hivatkozás szövegét és az URL-t hangsúlyjelekkel, és zárja két aláhúzás karakterrel."
+
+#: ../../content/documentation/restructuredtext-primer.rst:176
+msgid "The link above will display as: `OTRS website <https://otrs.com>`__."
+msgstr "A fenti hivatkozás így lesz megjelenítve: `OTRS website <https://otrs.com>`__."
+
+#: ../../content/documentation/restructuredtext-primer.rst:178
+msgid ""
+"To create referenced links, you have to separate the text and the link. "
+"Example:"
+msgstr "Hivatkozott hivatkozások létrehozásához külön kell választani a szöveget és a hivatkozást. Példa:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:188
+msgid "Images"
+msgstr "Képek"
+
+#: ../../content/documentation/restructuredtext-primer.rst:190
+msgid "To insert an image into the documentation:"
+msgstr "A dokumentációba egy kép beszúráshoz:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:192
+msgid "Put the image in the ``images`` folder."
+msgstr "Tegye a képet az ``images`` mappába."
+
+#: ../../content/documentation/restructuredtext-primer.rst:193
+msgid "Create a reference to the image with:"
+msgstr "Hozzon létre egy hivatkozást a képre ezzel:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:204
+msgid "Colored Boxes"
+msgstr "Színes dobozok"
+
+#: ../../content/documentation/restructuredtext-primer.rst:206
+msgid "These boxes have special meanings and will be highlighted as default."
+msgstr "Ezeknek a dobozoknak különleges jelentésük van, és alapértelmezetten kiemelésre kerülnek."
+
+#: ../../content/documentation/restructuredtext-primer.rst:208
+msgid "Warning box:"
+msgstr "Figyelmeztetés doboz:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:218
+msgid "This is a warning box."
+msgstr "Ez egy figyelmeztetés doboz."
+
+#: ../../content/documentation/restructuredtext-primer.rst:220
+msgid "Note box:"
+msgstr "Megjegyzés doboz:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:230
+msgid "This is a note box."
+msgstr "Ez egy megjegyzés doboz."
+
+#: ../../content/documentation/restructuredtext-primer.rst:232
+msgid "See also box:"
+msgstr "Lásd még doboz:"
+
+#: ../../content/documentation/restructuredtext-primer.rst:242
+msgid "This is a see also box."
+msgstr "Ez egy lásd még doboz."
+
+#: ../../content/documentation/style-guide.rst:2
+msgid "Style Guide"
+msgstr "Stílus irányelvek"
+
+#: ../../content/documentation/style-guide.rst:4
+msgid "This part of the documentation is only for visual style and wording."
+msgstr "A dokumentáció ezen része csak a látható stílushoz és a fogalmazáshoz van."
+
+#: ../../content/documentation/style-guide.rst:8
+msgid "Writing Content"
+msgstr "Tartalom írása"
+
+#: ../../content/documentation/style-guide.rst:10
+msgid ""
+"There is an internet slang **TL;DR**, which means *too long, didn't read* "
+"(see more information on `Wikipedia "
+"<https://en.wikipedia.org/wiki/TL;DR>`__). Many people don't like reading "
+"long texts, so please keep the documentation as short as possible. Use step-"
+"by-step tutorials instead of writing wall of text."
+msgstr "Létezik egy **TL;DR** internetes szleng, amely azt jelenti, hogy *túl hosszú, nem olvastam el* (további információért nézze meg a `Wikipédiát <https://hu.wikipedia.org/wiki/TL;DR>`__). Sok ember nem szeret hosszú szövegeket olvasni, ezért arra kérjük, hogy tartsa a dokumentációt olyan röviden, amennyire csak lehetséges. Használjon lépésről lépésre bemutató ismertetőt a tömör szöveg írása helyett."
+
+#: ../../content/documentation/style-guide.rst:12
+msgid "For example this is a **wrong** example for writing content:"
+msgstr "Például ez egy **rossz** példa a tartalom írására:"
+
+#: ../../content/documentation/style-guide.rst:23
+msgid "The same content in **suggested** *human understandable* format:"
+msgstr "Ugyanez a tartalom az *ember által is olvasható* **ajánlott** formátumban:"
+
+#: ../../content/documentation/style-guide.rst:35
+msgid ""
+"The latter is easier to translate, because 6 short sentences will be "
+"included in the language file. If a content is changed in one of the "
+"sentences, only the changed sentence need to be reviewed and translated "
+"again. The first wrong example puts only one huge string to the language "
+"file, and if some changes will be made in the source string, the translator "
+"needs to review and re-translate the whole string."
+msgstr "Az utóbbit egyszerűbb lefordítani, mert 6 rövid mondat kerül felvételre a nyelvi fájlba. Ha a tartalom megváltozik a mondatok egyikében, akkor csak a megváltozott mondatot kell átnézni és újra lefordítani. Az első rossz példa csak egyetlen hatalmas karakterláncot tesz a nyelvi fájlba, és ha valamilyen változtatást végeznek a forrásszövegen, akkor a fordítónak a teljes szöveget át kell néznie és újrafordítania."
+
+#: ../../content/documentation/style-guide.rst:39
+msgid "Screenshots"
+msgstr "Képernyőképek"
+
+#: ../../content/documentation/style-guide.rst:41
+msgid ""
+"Don't use the native resolution of your machine. Usually it is full HD or "
+"bigger, so creating a screenshot with this resolution will became unreadable"
+" in some output, because all the images have to be shrink to the width of A4"
+" paper in case of PDF. OTRS uses responsive design, so 1025 pixels is the "
+"minimum, that OTRS assumes it is a large display. Please use this as width "
+"of your screenshots."
+msgstr "Ne használja a számítógépe natív felbontását. Általában az teljes HD vagy nagyobb, így az ezzel a felbontással készített képernyőkép olvashatatlanná válik egyes kimeneteken, mert egy PDF esetén az összes képet össze kell zsugorítani az A4-es papír szélességére. Az OTRS alkalmazkodó megjelenítést használ, így 1025 képpont a minimum, amelyet az OTRS nagy kijelzőnek feltételez. Használja ezt a képernyőképek szélességeként."
+
+#: ../../content/documentation/style-guide.rst:45
+msgid ""
+"The resolution can be set in all web browser with a feature called *mobile "
+"mode* or *responsive design*. Check your browser user manual for the usage "
+"of the feature and set the width of the screen to 1025 pixels."
+msgstr "A felbontást az összes webböngészőben be lehet állítani egy úgynevezett *mobil mód* vagy *alkalmazkodó megjelenés* funkcióval. Nézze meg a böngészője felhasználói kézikönyvét a funkció használatához, és állítsa a képernyő szélességét 1025 képpontra."
+
+#: ../../content/documentation/style-guide.rst:47
+msgid ""
+"This is an example for a **wrong** screenshot, as it has resolution of full "
+"HD. Due to the automatic shrinking the texts on the screenshot are hard to "
+"read:"
+msgstr "Ez egy példa egy **rossz** képernyőképre, mivel az teljes HD felbontású. Az automatikus zsugorítás miatt a szövegeket nehéz elolvasni a képernyőképen:"
+
+#: ../../content/documentation/style-guide.rst:52
+msgid "Agent Dashboard (1920 pixels width)"
+msgstr "Ügyintézői vezérlőpult (1920 képpont szélességben)"
+
+#: ../../content/documentation/style-guide.rst:54
+msgid ""
+"The same screenshot with **suggested** resolution. The texts are much easier"
+" to read:"
+msgstr "Ugyanaz a képernyőkép az **ajánlott** felbontásban. A szövegeket sokkal könnyebb elolvasni:"
+
+#: ../../content/documentation/style-guide.rst:59
+msgid "Agent Dashboard (1025 pixels width)"
+msgstr "Ügyintézői vezérlőpult (1025 képpont szélességben)"
+
+#: ../../content/documentation/style-guide.rst:61
+msgid ""
+"It is also wrong, if the screenshot has good resolution in pixels, but with "
+"high DPI. For example this screenshot is **wrong**, because the texts on it "
+"is much bigger than the other texts in the documentation:"
+msgstr "Az szintén rossz, ha a képernyőkép jó képpontfelbontással rendelkezik, de magas DPI értékkel. Például ez a képernyőkép **rossz**, mert a rajta lévő szöveg sokkal nagyobb a dokumentációban lévő szövegnél:"
+
+#: ../../content/documentation/style-guide.rst:66
+msgid "Video Invitation Dialog (756 pixels width but with high DPI)"
+msgstr "Videomeghívási párbeszédablak (756 képpont szélességben, de magas DPI értékkel)"
+
+#: ../../content/documentation/style-guide.rst:70
+msgid "Create Screenshots with Firefox"
+msgstr "Képernyőképek készítése Firefox használatával"
+
+#: ../../content/documentation/style-guide.rst:72
+msgid ""
+"If only a part of the screenshot is required, the screenshot needs to be "
+"cropped. The administrator interface of OTRS consist of a left sidebar and a"
+" main content column. To create screenshots with Firefox:"
+msgstr "Ha csak a képernyőkép egy része szükséges, akkor a képernyőképet meg kell vágni. Az OTRS adminisztrátori felülete egy bal oldalsávból és egy fő tartalmi oszlopból áll. A Firefox használatával történő képernyőkép készítéséhez:"
+
+#: ../../content/documentation/style-guide.rst:74
+msgid "Right click on an element in the browser and select *Inspect element*."
+msgstr "Kattintson a jobb egérgombbal egy elemre a böngészőben, és válassza az *Elem vizsgálata* lehetőséget."
+
+#: ../../content/documentation/style-guide.rst:75
+msgid "Select the element in the DOM, if it was not selected."
+msgstr "Válassza ki az elemet a DOM-ban, ha nem lett kiválasztva."
+
+#: ../../content/documentation/style-guide.rst:76
+msgid "Right click on the node and select *Screenshot Node*."
+msgstr "Kattintson a jobb egérgombbal a csomópontra, és válassza a *Képernyőkép a csomópontról* lehetőséget."
+
+#: ../../content/documentation/style-guide.rst:81
+msgid "Example screenshot for the main content"
+msgstr "Példa képernyőkép a fő tartalomról"
+
+#: ../../content/documentation/style-guide.rst:86
+msgid "Example screenshot for the left sidebar"
+msgstr "Példa képernyőkép a bal oldalsávról"
+
+#: ../../content/documentation/style-guide.rst:91
+msgid "Example screenshot for the main content column"
+msgstr "Példa képernyőkép a fő tartalom oszlopáról"
+
+#: ../../content/documentation/style-guide.rst:95
+msgid "Capitalization in Documentation"
+msgstr "Nagybetűs írás a dokumentációban"
+
+#: ../../content/documentation/style-guide.rst:97
+msgid ""
+"For titles always have to use sentence case capitalization, which means, "
+"that in titles always capitalize:"
+msgstr "A címeknél mindig minden szót nagybetűvel kezdjen, ami azt jelenti, hogy a címekben mindig nagybetűvel kezdődnek a következők:"
+
+#: ../../content/documentation/style-guide.rst:99
+msgid "Nouns (man, bus, book)."
+msgstr "Főnevek (ember, busz, könyv)."
+
+#: ../../content/documentation/style-guide.rst:100
+msgid "Adjectives (angry, lovely, small)."
+msgstr "Melléknevek (mérges, kedves, kicsi)."
+
+#: ../../content/documentation/style-guide.rst:101
+msgid "Verbs (run, eat, sleep)."
+msgstr "Igék (fut, eszik, alszik)."
+
+#: ../../content/documentation/style-guide.rst:102
+msgid "Adverbs (slowly, quickly, quietly)."
+msgstr "Határozószavak (lassan, gyorsan, csendben)."
+
+#: ../../content/documentation/style-guide.rst:103
+msgid "Pronouns (he, she, it)."
+msgstr "Névmások (ő, mi, az)."
+
+#: ../../content/documentation/style-guide.rst:104
+msgid "Subordinating conjunctions (as, because, that)."
+msgstr "Alárendelt kötőszavak (mivel, mert, amely)."
+
+#: ../../content/documentation/style-guide.rst:106
+msgid "In titles do not capitalize:"
+msgstr "A címekben ne kezdje nagybetűvel a következőket:"
+
+#: ../../content/documentation/style-guide.rst:108
+msgid "Articles: a, an, the."
+msgstr "Névelők: a, az, egy."
+
+#: ../../content/documentation/style-guide.rst:109
+msgid "Coordinating conjunctions: and, but, or, for, nor, etc."
+msgstr "Mellérendelt kötőszavak: és, de, vagy, stb."
+
+#: ../../content/documentation/style-guide.rst:110
+msgid "Prepositions (fewer than five letters): on, at, to, from, by, etc."
+msgstr "Elöljárószavak (öt betűnél rövidebbek): rá, oda, tőle, stb."
+
+#: ../../content/documentation/style-guide.rst:112
+msgid ""
+"In normal sentences don't capitalize any words, only names and reference to "
+"titles have to be capitalized. This is a **wrong** example:"
+msgstr "A normál mondatokban ne kezdjen nagybetűvel semmilyen szót, csak a neveket és a címekre hivatkozásokat kell nagybetűvel kezdeni. Ez egy **rossz** példa:"
+
+#: ../../content/documentation/style-guide.rst:118
+msgid ""
+"The **suggested** sentence with proper capitalization. Besides, *Ticket "
+"Zoom* is the name of the screen, so it should be emphasized:"
+msgstr "Az **ajánlott** mondat megfelelő nagybetűs írással. Kivéve a *Ticket Zoom* nevet, ami a képernyő neve, ezért ki kell hangsúlyozni:"
+
+#: ../../content/documentation/style-guide.rst:126
+msgid "Buttons and Screen Names"
+msgstr "Gombok és képernyőnevek"
+
+#: ../../content/documentation/style-guide.rst:128
+msgid ""
+"In the content sentences all buttons and screens should be emphasized and "
+"should be written with capital letters or in sentence case. Don't use "
+"apostrophes or quotation marks for emphasizing."
+msgstr "A tartalom mondataiban az összes gombot és képernyőt ki kell hangsúlyozni, és nagy kezdőbetűkkel vagy minden szót nagy kezdőbetűvel kell írni. Ne használjon aposztrófot vagy idézőjelet a hangsúlyozáshoz."
+
+#: ../../content/documentation/style-guide.rst:130
+msgid ""
+"This sentence is **wrong**, because apostrophes are used for emphasizing:"
+msgstr "Ez a mondat **rossz**, mert aposztrófokat használnak a hangsúlyozáshoz:"
+
+#: ../../content/documentation/style-guide.rst:136
+msgid "The **suggested** way is to use asterisks for emphasizing:"
+msgstr "Az **ajánlott** mód a csillagok használata a hangsúlyozáshoz:"
+
+#: ../../content/documentation/style-guide.rst:144
+msgid "Wording"
+msgstr "Fogalmazás"
+
+#: ../../content/documentation/style-guide.rst:146
+msgid ""
+"Don't use variable names in sentences. This sentence is **wrong**, because a"
+" variable name is meaningless for some people:"
+msgstr "Ne használjon változóneveket a mondatokban. Ez a mondat **rossz**, mert egy változónév néhány ember számára értelmetlen:"
+
+#: ../../content/documentation/style-guide.rst:152
+msgid "The same sentence without variable name, this is **suggested**:"
+msgstr "Ugyanaz a mondat változónév nélkül, ez az **ajánlott**:"
+
+#: ../../content/documentation/style-guide.rst:160
+msgid "Variable Names"
+msgstr "Változónevek"
+
+#: ../../content/documentation/style-guide.rst:162
+msgid ""
+"Variable names should always marked as ``literal`` content. This is useful "
+"for translators, as they can exactly know, that the string mustn't be "
+"translated. If a string is not marked as literal content, it usually should "
+"be translated. For example:"
+msgstr "A változóneveket mindig ``szó szerinti`` tartalomként kell megjelölni. Ez hasznos a fordítók számára, mivel így pontosan tudják, hogy a karakterláncot nem szabad lefordítani. Ha egy karakterlánc nem szó szerinti szövegként van megjelölve, akkor általában le kell fordítani. Például:"
+
+#: ../../content/documentation/translate-documentation.rst:2
+msgid "Translating the Documentation"
+msgstr "A dokumentáció fordítása"
+
+#: ../../content/documentation/translate-documentation.rst:9
+msgid "Here are some examples."
+msgstr "Itt van néhány példa."
+
+#: ../../content/documentation/translate-documentation.rst:24
+msgid "Emphases"
+msgstr "Hangsúlyozás"
+
+#: ../../content/documentation/translate-documentation.rst:12
+msgid ""
+"Emphasized texts are between two asterisks. The text should be translated. "
+"This is usually used for screen names, titles, buttons and labels. Please "
+"check the user interface translations to find and use the same wording in "
+"the documentation."
+msgstr "A hangsúlyos szövegek két csillag közt találhatók. A szöveget le kell fordítani. Ezt általában képernyőneveknél, címeknél, gomboknál és címkéknél használják. Nézze meg a felhasználói felület fordításait, hogy megtalálja és ugyanazt a megfogalmazást használja a dokumentációban is."
+
+#: ../../content/documentation/translate-documentation.rst:14
+#: ../../content/documentation/translate-documentation.rst:29
+#: ../../content/documentation/translate-documentation.rst:44
+#: ../../content/documentation/translate-documentation.rst:59
+#: ../../content/documentation/translate-documentation.rst:74
+msgid "Example original sentence:"
+msgstr "Példa az eredeti szövegre:"
+
+#: ../../content/documentation/translate-documentation.rst:20
+#: ../../content/documentation/translate-documentation.rst:35
+#: ../../content/documentation/translate-documentation.rst:50
+#: ../../content/documentation/translate-documentation.rst:65
+#: ../../content/documentation/translate-documentation.rst:80
+msgid "Example translation into Hungarian:"
+msgstr "Példa a magyarra történő fordításra:"
+
+#: ../../content/documentation/translate-documentation.rst:39
+msgid "Strong"
+msgstr "Hangsúlyozás"
+
+#: ../../content/documentation/translate-documentation.rst:27
+msgid ""
+"Strong texts are between two double asterisks. The text should be "
+"translated. This is usually used for important information."
+msgstr "A hangsúlyos szövegek két dupla csillag között vannak. A szöveget le kell fordítani. Ezt általában fontos információknál használják."
+
+#: ../../content/documentation/translate-documentation.rst:54
+msgid "Literal texts"
+msgstr "Szó szerinti szövegek"
+
+#: ../../content/documentation/translate-documentation.rst:42
+msgid ""
+"Literal texts are between two double back-tick characters. This is usually "
+"used for variable names, configuration names and file paths, and **must "
+"not** be translated, otherwise it will break the structure."
+msgstr "A szó szerinti szövegek két dupla hangsúlyjel között vannak. Ezt általában változóneveknél, beállítások neveinél és fájlok útvonalainál használják. **Tilos** lefordítani, különben tönkre fogja tenni a szerkezetet."
+
+#: ../../content/documentation/translate-documentation.rst:69
+msgid "Internal links"
+msgstr "Belső hivatkozások"
+
+#: ../../content/documentation/translate-documentation.rst:57
+msgid ""
+"Internal links point to other pages or headings of the pages. ``:doc:`page-"
+"name``` is used for referring to a page and ``:ref:`Heading Title``` is used"
+" for referring to a heading. There is a custom tag ``:sysconfig:`System "
+"Configuration Name``` for referring to a system configuration. The texts "
+"*page-name*, *Heading Title* and *System Configuration Name* **must not** be"
+" translated, otherwise it will break the structure."
+msgstr "A belső hivatkozások más oldalakra vagy oldalak címsoraira mutatnak. A ``:doc:`page-name``` használható egy oldalra történő hivatkozáshoz és a ``:ref:`Heading Title``` használható egy címsorra való hivatkozáshoz. Létezik egy egyéni ``:sysconfig:`System Configuration Name``` címke egy rendszerbeállításra való hivatkozáshoz. A *page-name*, *Heading Title* és *System Configuration Name* szövegeket **tilos** lefordítani, különben tönkre fogják tenni a szerkezetet."
+
+#: ../../content/documentation/translate-documentation.rst:83
+msgid "External links"
+msgstr "Külső hivatkozások"
+
+#: ../../content/documentation/translate-documentation.rst:72
+msgid ""
+"External links consist of a visible text and an URL in form *\\`visible text"
+" <https://example.com>\\`__*. The *visible text* should be translated."
+msgstr "A külső hivatkozások egy látható szövegből és egy URL-ből állnak *\\`látható szöveg <https://example.com>\\`__* formában. A *látható szöveget* le kell fordítani."
 
 #: ../../content/get-started.rst:2
 msgid "Getting Started"
