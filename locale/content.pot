@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-14 02:05+0000\n"
+"POT-Creation-Date: 2019-02-15 02:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1090,7 +1090,6 @@ msgid "User Interface Design"
 msgstr ""
 
 #: ../../content/contributing/ui-design.rst:6
-#: ../../content/documentation/style-guide.rst:95
 msgid "Capitalization"
 msgstr ""
 
@@ -1446,11 +1445,11 @@ msgid "Two asterisks: \\*\\*text\\*\\* for **strong emphasis** (boldface)."
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:69
-msgid "Backquotes: \\`\\`text\\`\\` for ``literal texts`` (code samples)."
+msgid "Grave accents: \\`\\`text\\`\\` for ``literal texts`` (code samples)."
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:71
-msgid "If asterisks or backquotes appear in running text and could be confused with inline markup delimiters, they have to be escaped with a backslash, like \\\\*."
+msgid "If asterisks or grave accents appear in running text which could be confused with inline markup delimiters, they have to be escaped with a backslash, like \\\\*."
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:75
@@ -1458,7 +1457,7 @@ msgid "Lists"
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:77
-msgid "To create unordered lists, start a line with asterisk (\\*) or slash (-). To create ordered list, start a line with numbers or hash mark (#). If you need nested lists, leave a blank line between the list items and use indentation with 3 spaces. Example:"
+msgid "To create unordered lists, start a line with asterisk (\\*) or dash (-). To create ordered list, start a line with numbers or hash mark (#). If you need nested lists, leave a blank line between the list items and use indentation with 3 spaces. Example:"
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:91
@@ -1506,15 +1505,15 @@ msgid "Hyperlinks"
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:170
-msgid "Hyperlinks can be used inline or referenced. For inline use, encapsulate the text of the link and the URL with back tick marks and two trailing underscore characters."
+msgid "Hyperlinks can be used inline or referenced. For inline use, encapsulate the text of the link and the URL with grave accents and two trailing underscore characters."
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:176
-msgid "The link above will display as `OTRS website <https://otrs.com>`__."
+msgid "The link above will display as: `OTRS website <https://otrs.com>`__."
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:178
-msgid "To create referenced links, you have to separate the text and the links like:"
+msgid "To create referenced links, you have to separate the text and the link. Example:"
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:188
@@ -1526,7 +1525,7 @@ msgid "To insert an image into the documentation:"
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:192
-msgid "Put the image in the *images* folder."
+msgid "Put the image in the ``images`` folder."
 msgstr ""
 
 #: ../../content/documentation/restructuredtext-primer.rst:193
@@ -1634,7 +1633,7 @@ msgid "Create Screenshots with Firefox"
 msgstr ""
 
 #: ../../content/documentation/style-guide.rst:72
-msgid "If only a part of the screenshot is required, then the screenshot needs to be cropped. The administration area of OTRS consist of a left sidebar and a main content column. To create screenshots with Firefox:"
+msgid "If only a part of the screenshot is required, the screenshot needs to be cropped. The administrator interface of OTRS consist of a left sidebar and a main content column. To create screenshots with Firefox:"
 msgstr ""
 
 #: ../../content/documentation/style-guide.rst:74
@@ -1659,6 +1658,10 @@ msgstr ""
 
 #: ../../content/documentation/style-guide.rst:91
 msgid "Example screenshot for the main content column"
+msgstr ""
+
+#: ../../content/documentation/style-guide.rst:95
+msgid "Capitalization in Documentation"
 msgstr ""
 
 #: ../../content/documentation/style-guide.rst:97
