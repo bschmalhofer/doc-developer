@@ -1,19 +1,20 @@
-Creating A New Dynamic Field
-============================
+Create New Dynamic Field
+========================
 
 To illustrate this process a new dynamic field *Password* will be created. This new dynamic field type will show a new password field to ticket or article objects. Since is very similar to a text dynamic field
-we will use the ``Base`` and ``BaseText`` drivers as a basis to build this new field.
+we will use the ``Base`` and ``BaseText`` drivers (for the legacy API) and ``Base/Text`` (for the new API) as a basis to build this new field.
 
 .. warning::
 
    This new password field implementation is just for educational purposes, it does not provide any level of security and is not recommended for production systems.
 
-To create this new dynamic field we will create 4 files:
+To create this new dynamic field, we will create 5 files:
 
 1. A configuration file (XML) to register the modules.
 2. An admin dialog module (Perl) to setup the field options.
 3. A template module for the admin dialog.
-4. A dynamic field driver (Perl).
+4. A dynamic field legacy driver (Perl).
+5. A dynamic field driver (Perl).
 
 File structure:
 
@@ -37,13 +38,17 @@ File structure:
    |   |   |   |   |AdminDynamicFieldPassword.tt
    ...
    |   |--/System/
+   |   |   |--/DynamicFieldLegacy/
+   |   |   |   |--/Driver/
+   |   |   |   |   |Password.pm
+   ...
    |   |   |--/DynamicField/
    |   |   |   |--/Driver/
    |   |   |   |   |Password.pm
    ...
 
 
-Dynamic Field Password files
+Dynamic Field Password Files
 ----------------------------
 
 Dynamic Field Configuration File Example
@@ -62,39 +67,51 @@ This is the normal header for a configuration file.
 
 .. code-block:: XML
 
-       <ConfigItem Name="DynamicFields::Driver###Password" Required="0" Valid="1">
-           <Description Translatable="1">DynamicField backend registration.</Description>
-           <Group>DynamicFieldPassword</Group>
-           <SubGroup>DynamicFields::Backend::Registration</SubGroup>
-           <Setting>
-               <Hash>
-                   <Item Key="DisplayName" Translatable="1">Password</Item>
-                   <Item Key="Module">Kernel::System::DynamicField::Driver::Password</Item>
-                   <Item Key="ConfigDialog">AdminDynamicFieldPassword</Item>
-               </Hash>
-           </Setting>
-       </ConfigItem>
+   <ConfigItem Name="DynamicFieldsLegacy::Driver###Password" Required="0" Valid="1">
+       <Description Translatable="1">DynamicField legacy backend registration.</Description>
+       <Group>DynamicFieldPassword</Group>
+       <SubGroup>DynamicFields::Backend::Registration</SubGroup>
+       <Setting>
+           <Hash>
+               <Item Key="DisplayName" Translatable="1">Password</Item>
+               <Item Key="Module">Kernel::System::DynamicFieldLegacy::Driver::Password</Item>
+               <Item Key="ConfigDialog">AdminDynamicFieldPassword</Item>
+           </Hash>
+       </Setting>
+   </ConfigItem>
 
-This setting registers the password dynamic field driver for the back end module so it can be included in the list of available dynamic fields types. It also specify its own admin dialog in the key ``ConfigDialog``.
-This key is used by the master dynamic field admin module to manage this new dynamic field type.
+   <ConfigItem Name="DynamicFields::Driver###Password" Required="0" Valid="1">
+       <Description Translatable="1">DynamicField backend registration.</Description>
+       <Group>DynamicFieldPassword</Group>
+       <SubGroup>DynamicFields::Backend::Registration</SubGroup>
+       <Setting>
+           <Hash>
+               <Item Key="DisplayName" Translatable="1">Password</Item>
+               <Item Key="Module">Kernel::System::DynamicField::Driver::Password</Item>
+               <Item Key="ConfigDialog">AdminDynamicFieldPassword</Item>
+           </Hash>
+       </Setting>
+   </ConfigItem>
+
+These settings registers the password dynamic field driver for the back end module (legacy and new API) so it can be included in the list of available dynamic fields types. It also specify its own admin dialog in the key ``ConfigDialog``. This key is used by the master dynamic field admin module to manage this new dynamic field type.
 
 .. code-block:: XML
 
-       <ConfigItem Name="Frontend::Module###AdminDynamicFieldPassword" Required="0" Valid="1">
-           <Description Translatable="1">Frontend module registration for the agent interface.</Description>
-           <Group>DynamicFieldPassword</Group>
-           <SubGroup>Frontend::Admin::ModuleRegistration</SubGroup>
-           <Setting>
-               <FrontendModuleReg>
-                   <Group>admin</Group>
-                   <Description>Admin</Description>
-                   <Title Translatable="1">Dynamic Fields Text Backend GUI</Title>
-                   <Loader>
-                       <JavaScript>Core.Agent.Admin.DynamicField.js</JavaScript>
-                   </Loader>
-               </FrontendModuleReg>
-           </Setting>
-       </ConfigItem>
+   <ConfigItem Name="Frontend::Module###AdminDynamicFieldPassword" Required="0" Valid="1">
+       <Description Translatable="1">Frontend module registration for the agent interface.</Description>
+       <Group>DynamicFieldPassword</Group>
+       <SubGroup>Frontend::Admin::ModuleRegistration</SubGroup>
+       <Setting>
+           <FrontendModuleReg>
+               <Group>admin</Group>
+               <Description>Admin</Description>
+               <Title Translatable="1">Dynamic Fields Text Backend GUI</Title>
+               <Loader>
+                   <JavaScript>Core.Agent.Admin.DynamicField.js</JavaScript>
+               </Loader>
+           </FrontendModuleReg>
+       </Setting>
+   </ConfigItem>
 
 This is a standard module registration for the password admin dialog in the admin interface.
 
@@ -864,18 +881,24 @@ The final part of the file contains the *Save* button and the *Cancel* link, as 
 Dynamic Field Driver Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The driver *is* the dynamic field. It contains several functions that are used wide in the OTRS framework. A driver can inherit some functions form base classes, for example ``TextArea`` driver inherits most of the functions from ``Base.pm`` and ``BaseText.pm`` and it only implements the functions that requires different logic or results. Checkbox field driver only inherits from ``Base.pm`` as all other functions are very different from any other base driver.
+The driver *represents* the dynamic field. It contains several functions that are used wide in the OTRS framework.
+
+A driver can inherit some functions from base classes, for example the ``TextArea`` driver inherits most of the functions from ``Base.pm`` and ``BaseText.pm`` (``Base/Text.pm`` in the new API) and it only implements the functions that requires different logic or results. The checkbox field driver only inherits from ``Base.pm``, as all other functions are very different from any other base driver.
 
 .. seealso::
 
-   Please refer to the Perl online documentation (POD) of the module ``/Kernel/System/DynmicField/Backend.pm`` to have the list of all attributes and possible return data for each function.
+   Please refer to the Perl online documentation (POD) of the module ``/Kernel/System/DynmicFieldLegacy/Backend.pm`` and ``/Kernel/System/DynmicFieldLegacy/Driver/Base.pm`` to have the list of all attributes and possible return data for each function.
 
-In this section the password dynamic field driver is shown and explained. This driver inherits some functions from ``Base.pm`` and ``BaseText.pm`` and only implements the functions that needs different results.
+In this section the password dynamic field driver is shown and explained. This driver inherits some functions from ``Base.pm`` and ``BaseText.pm`` (``Base/Text.pm`` in the new API) and only implements the functions that needs different results.
+
+
+Dynamic Field Driver Example (Legacy API)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: Perl
 
    # --
-   # Kernel/System/DynamicField/Driver/Password.pm - Driver for DynamicField Password backend
+   # Kernel/System/DynamicFieldLegacy/Driver/Password.pm - Driver for DynamicField Legacy Password backend
    # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -883,23 +906,22 @@ In this section the password dynamic field driver is shown and explained. This d
    # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
    # --
 
-   package Kernel::System::DynamicField::Driver::Password;
+   package Kernel::System::DynamicFieldLegacy::Driver::Password;
 
    use strict;
    use warnings;
 
-   use Kernel::System::VariableCheck qw(:all);
-   use Kernel::System::DynamicFieldValue;
+   use parent qw(Kernel::System::DynamicFieldLegacy::Driver::BaseText);
 
-   use base qw(Kernel::System::DynamicField::Driver::BaseText);
+   use Kernel::System::VariableCheck qw(:all);
 
    our @ObjectDependencies = (
        'Kernel::Config',
-       'Kernel::System::DynamicFieldValue',
+       'Kernel::System::DynamicFieldLegacy::Value',
        'Kernel::System::Main',
    );
 
-This is the common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword. Notice that ``BaseText`` is used as base class.
+This is the common header, that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword. Note that ``BaseText`` is used as the base class.
 
 .. code-block:: Perl
 
@@ -922,7 +944,7 @@ This is the common header that can be found in common OTRS modules. The class/pa
 
        # get the Dynamic Field Backend custom extensions
        my $DynamicFieldDriverExtensions
-           = $Kernel::OM->Get('Kernel::Config')->Get('DynamicFields::Extension::Driver::Password');
+           = $Kernel::OM->Get('Kernel::Config')->Get('DynamicFieldsLegacy::Extension::Driver::Password');
 
        EXTENSION:
        for my $ExtensionKey ( sort keys %{$DynamicFieldDriverExtensions} ) {
@@ -959,9 +981,9 @@ This is the common header that can be found in common OTRS modules. The class/pa
        return $Self;
    }
 
-The constructor ``new`` creates a new instance of the class. According to the coding guidelines objects of other classes that are needed in this module have to be created in ``new``.
+The constructor ``new`` creates a new instance of the class. According to the coding guidelines, objects of other classes, that are needed in this module, have to be created in subroutine ``new``.
 
-It is important to define the behaviors correctly as the field might or might not be used in certain screens, functions that depends on behaviors that are not active for this particular field might not be needed to be implemented.
+It is important to define the behaviors correctly, as the field might or might not be used in certain screens, functions that depends on behaviors, that are not active for this particular field, might not be needed to be implemented.
 
 .. note::
 
@@ -1055,7 +1077,7 @@ It is important to define the behaviors correctly as the field might or might no
        return $Data;
    }
 
-This function is the responsible to create the HTML representation of the field and its label, and is used in the edit screens like ``AgentTicketPhone``, ``AgentTicketNote``, etc.
+This function is responsible to create the HTML representation of the field and its label. It is used in the edit screens like ``AgentTicketPhone``, ``AgentTicketNote``, etc.
 
 .. code-block:: Perl
 
@@ -1118,7 +1140,7 @@ This function is the responsible to create the HTML representation of the field 
        return $Data;
    }
 
-``DisplayValueRender()`` function returns the field value as a plain text as well as its title (both can be translated). For this particular example we are checking if the password should be revealed or display a predefined mask by a configuration parameter in the dynamic field.
+The ``DisplayValueRender()`` function returns the field value as plain text, as well as its title (both can be translated). For this particular example we are checking if the password should be revealed or display a predefined mask by a configuration parameter in the dynamic field.
 
 .. code-block:: Perl
 
@@ -1163,13 +1185,15 @@ This function is the responsible to create the HTML representation of the field 
        return $Data;
    }
 
-This function is similar to ``DisplayValueRender()`` but is used in places where there is no ``LayoutObject``.
+This function is similar to ``DisplayValueRender()`` but it is used in locations, where no ``LayoutObject`` is available.
 
 
-Other Functions
-~~~~~~~~~~~~~~~
+Other Functions (Legacy API)
+****************************
 
-The following are other functions that are might needed if the new dynamic field does not inherit from other classes. To see the complete code of this functions please take a look directly into the files ``Kernel/System/DynamicField/Driver/Base.pm`` and ``Kernel/System/DynamicField/Driver/BaseText.pm``
+The following are other functions, that might be needed, if the new dynamic field does not inherit from other classes.
+
+To see the complete code of this functions, please take a look directly into the file ``Kernel/System/DynamicFieldLegacy/Driver/Base.pm``.
 
 .. code-block:: Perl
 
@@ -1281,3 +1305,110 @@ This function is used by ``otrs.FillDB.pl`` script to populate the database with
    sub ObjectMatch { ... }
 
 Used by the notification modules. This function returns 1 if the field is present in the ``$Param{ObjectAttributes}`` parameter and if it matches the given value.
+
+
+Dynamic Field Driver Example (New API)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: Perl
+
+   # --
+   # Kernel/System/DynamicField/Driver/Password.pm - Driver for DynamicField backend
+   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # --
+   # This software comes with ABSOLUTELY NO WARRANTY. For details, see
+   # the enclosed file COPYING for license information (GPL). If you
+   # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+   # --
+
+   package Kernel::System::DynamicField::Driver::Password;
+
+   use strict;
+   use warnings;
+
+   use Moose;
+
+   extends 'Kernel::System::DynamicField::Driver::Base::Text';
+
+   our @ObjectDependencies = ();
+
+This is the common header that can be found in the new OTRS modules since OTRS 7.
+
+The class/package name is declared via the ``package`` keyword. Note that the ``Base::Text`` is used as the base class.
+
+There's no need to declare the constructor ``BUILD``, unless you need to do something really specific to the driver, during the creation of a new class instance.
+
+.. note::
+
+   Drivers are created only by the ``DynamicFieldObject`` and not directly from any other module.
+
+.. code-block:: Perl
+
+   override 'FormFieldSchema' => sub {
+       return {
+           %{ super() },
+           Type => 'FormPassword',
+       };
+   };
+
+This function is responsible to return the schema of the field, that should be used in edit screens, like ``AgentTicketPhone``, ``AgentTicketNote``, etc.
+
+
+Other Functions (New API)
+*************************
+
+The following are other functions, that are might be needed to implement or override, according to the specification of the driver. Please refer to the file ``Kernel/System/DynamicField/Driver/Base.pm``.
+
+.. code-block:: Perl
+
+   sub ValueGet { ... }
+
+This function retrieves the value from the field, on a specific object. In this case, we are returning the first text value, since the field only stores one text value at a time.
+
+.. code-block:: Perl
+
+   sub ValueSet { ... }
+
+This function is used to store a dynamic field value. In this case, this field only stores one text type value. Other fields could store more than one value on either ``Text``, ``DateTime`` or ``Integer`` format.
+
+.. code-block:: Perl
+
+   sub ValueDelete { ... }
+
+This function is used to delete the values of a certain dynamic field. If no filter is passed, all the values will be deleted. To execute the deletion only for one object, we can pass the filter ``Filters => { ObjectID => '...' }``.
+
+.. code-block:: Perl
+
+   sub ValueValidate { ... }
+
+This function is used to check, if the value is consistent to its type and dynamic field instance.
+
+.. code-block:: Perl
+
+   sub ValueList { ... }
+
+This function is used to get the list of the values for the dynamic field instance.
+
+.. code-block:: Perl
+
+   sub SearchSQLGet { ... }
+
+This function is used by ``TicketSearch`` core module, to build the internal query that searches for a ticket, based on this field as a search parameter.
+
+.. code-block:: Perl
+
+   sub SearchSQLOrderFieldGet { ... }
+
+This function is also a helper for ``TicketSearch`` module. ``$Param{TableAlias}`` should be kept and ``_ValueDBColumn()`` changed in case the driver uses multiple columns, to store it's data.
+
+.. code-block:: Perl
+
+   sub SearchConditionGet { ... }
+
+This function is used by the ticket search and statistics module, to set the correct operator and value to the search on this field.
+
+.. code-block:: Perl
+
+   sub RandomValueSet { ... }
+
+This function is used by ``otrs.FillDB.pl`` script, to populate the database with some test and random data. The value inserted by this function is not really relevant. The only restriction is, that the value must be compatible with the field value type.

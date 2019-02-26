@@ -10,8 +10,7 @@ To create a new dynamic field type is necessary to:
 
 1. Create a dynamic field driver. This is the main module of the new field.
 2. Create or use an existing admin dialog to have a management interface and set its configuration options.
-3. Create a configuration file to register the new field in the back end (or new admin dialogs in the
-   framework if needed) and be able to create instances or it.
+3. Create a configuration file to register the new field in the back end (or new admin dialogs in the framework if needed) and be able to create instances or it.
 
 
 Create a New Dynamic Field Type (for other objects)
@@ -26,8 +25,7 @@ To create a new dynamic field type for other objects is necessary to:
 
 3. Create or use an existing admin dialog to have a management interface and set its configuration options.
 4. Implement dynamic fields in the front end modules to be able to use the dynamic fields.
-5. Create a configuration file to register the new field in the back end (or new admin dialogs in the
-   framework if needed) and be able to create instances or it.
+5. Create a configuration file to register the new field in the back end (or new admin dialogs in the framework if needed) and be able to create instances or it.
 
    And make the needed settings to show, hide or show the dynamic fields as mandatory in the new screens.
 
@@ -38,12 +36,11 @@ Create a New package to Use Dynamic Fields
 To create a package to use existing dynamic fields is necessary to:
 
 1. Implement dynamic fields in the front end modules to be able to use the dynamic fields.
-2. Create a configuration file to give the end user the possibility to show, hide or show the
-   dynamic fields as mandatory in the new screens.
+2. Create a configuration file to give the end user the possibility to show, hide or show the dynamic fields as mandatory in the new screens.
 
 
-Extend Back End and Drivers Functionalities
--------------------------------------------
+Extend Back End and Drivers Functionalities (Legacy API)
+--------------------------------------------------------
 
 It might be possible that the back end object does not have a needed function for custom developments, or could also be possible that it has the function needed, but the return format does not match the needs of the custom development, or that a new behavior is needed to execute the new or the old functions.
 
@@ -51,7 +48,7 @@ The easiest way to do this, is to extend the current field files. For this it is
 
 The only restrictions are that the functions should be named different than the ones on the back end and drivers, otherwise they will be overwritten with current objects.
 
-Put the new back end extension into the ``DynamicField`` directory (e.g. ``/$OTRS_HOME/Kernel/System/DynamicField/NewPackageBackend.pm`` and its drivers in ``/$OTRS_HOME/Kernel/System/DynamicField/Driver/NewPackage*.pm``).
+Put the new back end extension into the ``DynamicFieldLegacy`` directory (e.g. ``/$OTRS_HOME/Kernel/System/DynamicFieldLegacy/NewPackageBackend.pm`` and its drivers in ``/$OTRS_HOME/Kernel/System/DynamicFieldLegacy/Driver/NewPackage*.pm``).
 
 New behaviors only need a small setting in the extensions configuration file.
 
@@ -61,6 +58,47 @@ To create new back end functions is needed to:
 2. Create the dynamic fields driver extensions to implement only the new functions.
 3. Implement new dynamic fields functions in the front end modules to be able to use the new dynamic fields functions.
 4. Create a configuration file to register the new back end and drivers extensions and behaviors.
+
+
+Extend Back End and Drivers Functionalities (New API)
+-----------------------------------------------------
+
+It might be possible that the current drivers or the main module doesn't provide the needed functions or behavior for custom developments.
+
+The easiest way to extend the main module is to create a new role file that defines the new functions or overrides the standard ones. Either a completely new driver module can be created from scratch or an existent one can be extended, using a role file.
+
+Put the files into the ``DynamicField`` directory:
+
+1. Main module role in ``$OTRS_HOME/Kernel/System/DynamicField/Role/*.pm`` (create it if does not exists).
+2. New driver in ``$OTRS_HOME/Kernel/System/DynamicField/Driver/*.pm``.
+3. Driver role in ``$OTRS_HOME/Kernel/System/DynamicField/Driver/Role/*.pm``.
+
+Finally, to load the new roles, create a new ``Mojolicious`` plugin in ``$OTRS_HOME/Kernel/WebApp/Plugin/*.pm``, applying the roles to the modules, for example:
+
+.. code-block:: perl
+
+   package Kernel::WebApp::Plugin::4100DynamicFieldExtensions;
+   use strict;
+   use warnings;
+
+   use Moose::Util;
+
+   sub register {    ## no critic
+
+       Moose::Util::ensure_all_roles(
+           'Kernel::System::DynamicField',
+           'Kernel::System::DynamicField::Role::ExtendedFieldDelete',
+       );
+
+       Moose::Util::ensure_all_roles(
+           'Kernel::System::DynamicField::Driver::AnyAvailableDriver*',
+           'Kernel::System::DynamicField::Driver::Role::ExtendedValueDelete',
+       );
+
+       return 1;
+   }
+
+   1;
 
 
 Other Extensions

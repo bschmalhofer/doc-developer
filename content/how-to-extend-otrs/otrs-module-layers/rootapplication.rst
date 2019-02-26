@@ -1,7 +1,7 @@
 Root Application Module Layer
 =============================
 
-The root application module layer enables the developers to develop and load custom frontend components. Components will be lazy loaded and are omnipresent in the frontend application. They can use any API that is exposed to other components within the application, including its state.
+The root application module layer enables the developers to develop and load custom front end components. Components will be lazy loaded and are omnipresent in the front end application. They can use any API that is exposed to other components within the application, including its state.
 
 Developing a custom root application component is as easy as creating a new file.
 
@@ -13,7 +13,7 @@ In this small example we'll write a little component, which outputs a custom foo
 
 Just create a new file ``SampleFooter.vue`` in ``/Frontend/Apps/Agent/Components/RootApplicationModule/Modules`` folder.
 
-.. code-block:: Vue
+.. code-block:: HTML
 
    <template>
        <div class="CustomFooter">This is my custom footer.</div>
