@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 08:16+0000\n"
+"POT-Creation-Date: 2019-02-27 02:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4597,7 +4597,7 @@ msgid "It exists some base drivers like ``Base.pm``, ``BaseText.pm``, ``BaseSele
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:54
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:165
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:163
 msgid "The following is the drivers inheritance tree:"
 msgstr ""
 
@@ -4714,7 +4714,7 @@ msgid "There are two tables in the database to store the dynamic field informati
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:118
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:253
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:251
 msgid "``dynamic_field``"
 msgstr ""
 
@@ -4723,7 +4723,7 @@ msgid "Used by the core module ``DynamicFieldLegacy.pm``, it stores the dynamic 
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:122
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:260
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:258
 msgid "``dynamic_field_value``"
 msgstr ""
 
@@ -4776,126 +4776,122 @@ msgid "These modules are located in ``$OTRS_HOME/Kernel/System/DynamicField/Driv
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:159
-msgid "It exists some base drivers like ``Base/Text.pm``, ``Base/Select.pm`` and ``Base/DateTime.pm``, that"
-msgstr ""
-
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:161
 msgid "To provide often needed and common functions for certain driver types, there are global base drivers available (``Base/Text.pm``, ``Base/Select.pm`` and ``Base/DateTime.pm``) from which dynamic field driver modules may inherit. Those base drivers themselves inherits from the mandatory base module."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:163
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:161
 msgid "For example driver ``TextArea.pm`` uses ``Base/Text.pm`` that also uses ``Base.pm`` then ``TextArea`` only needs to implement the functions that are missing in ``Base.pm`` and ``Base/Text.pm`` or the ones that are special cases."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:189
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:187
 msgid "Roles (New API)"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:191
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:189
 msgid "The dynamic field roles provide a simple way to extend the driver functionality."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:193
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:191
 msgid "The ``HasValueType`` roles indicate, which kind of data the driver will store and in which database column has to be used."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:195
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:193
 msgid "The ``Behaviour`` roles extend the drivers with extra funcionality, for example ``SupportsACLs.pm`` indicates that the possible values of the drivers could be restricted by ACL permissions."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:197
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:195
 msgid "These modules are located in ``$OTRS_HOME/Kernel/System/DynamicField/Driver/Role/*.pm``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:199
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:197
 msgid "Here is a list of the current roles:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:222
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:220
 msgid "Object Type Delegation (New API)"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:224
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:222
 msgid "An object type delegation is responsible to perform specific functions on the object linked to a certain dynamic field. These functions are triggered by the driver as they are needed."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:226
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:224
 msgid "These modules are located in ``$OTRS_HOME/Kernel/System/DynamicField/ObjectType/*.pm``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:230
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:228
 msgid "Dynamic Fields Admin Modules (New API)"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:232
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:230
 msgid "The management of the dynamic fields is done in the administrator interface, which still uses the legacy API."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:236
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:234
 msgid "Dynamic Fields Core Modules (New API)"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:236
 msgid "These modules read and write the dynamic fields information from and to the database tables."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:241
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:239
 msgid "``DynamicField.pm``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:241
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:239
 msgid "This module is responsible to manage the dynamic field definitions. It provides the basic API for add, change, delete, list and get dynamic fields. It is located in ``$OTRS_HOME/Kernel/System/DynamicField.pm``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:245
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:243
 msgid "``DynamicField/Value.pm``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:244
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:242
 msgid "This module is responsible to read and write dynamic field values into the database. It is frequently used by the driver modules and is located in ``$OTRS_HOME/Kernel/System/DynamicField/Value.pm``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:248
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:246
 msgid "Dynamic Fields Database Tables (New API)"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:250
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:248
 msgid "There are three tables in the database to store the dynamic field information:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:253
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:251
 msgid "Used by the core module ``DynamicField.pm``, it stores the dynamic field definitions."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:256
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:254
 msgid "``dynamic_field_obj_id_name``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:256
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:254
 msgid "Used by the core module ``DynamicField.pm`` to save the relationship between objects (with ID and name) and an available object type."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:259
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:257
 msgid "Used by the core module ``DynamicField/Value.pm`` to save the dynamic field values for each dynamic field and each object type instance."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:263
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:261
 msgid "Dynamic Fields Configuration Files (New API)"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:265
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:263
 msgid "The master admin, as well as the dynamic field management module needs to know which drivers exists."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:267
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:265
 msgid "The easiest way to manage them is to use the system configuration, where the information of dynamic field drivers, their paths and meta information and object type modules can be stored and extended."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:269
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:267
 msgid "Front end modules need to read the system configuration to know which dynamic fields are active for each screen and which ones are also mandatory."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:271
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-framework.rst:269
 msgid "For example ``Ticket::Frontend::AgentTicketPhone###DynamicField`` stores the active, mandatory and inactive dynamic fields for the *New Phone Ticket* screen."
 msgstr ""
 
