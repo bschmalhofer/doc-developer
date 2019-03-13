@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-13 10:25+0000\n"
+"POT-Creation-Date: 2019-03-13 15:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3854,18 +3854,26 @@ msgid "The custom translation file is read out last and so its translation which
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:142
-msgid "The Translation Process Itself"
-msgstr ""
-
-#: ../../content/how-it-works/translations.rst:144
-msgid "OTRS uses Transifex to manage the translation process. Please see :doc:`../contributing/translate` section for details."
+msgid "The language files for the new interface are now part of the built application (static JSON). When you add a custom language file to the filesystem, you need to rebuild the application for the change to be considered. To trigger the rebuild, restart the server with the ``--deploy-assets`` option:"
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:148
+msgid "During the build process, the language files will be refreshed and will take any ``*_Custom.pm`` into account."
+msgstr ""
+
+#: ../../content/how-it-works/translations.rst:152
+msgid "The Translation Process Itself"
+msgstr ""
+
+#: ../../content/how-it-works/translations.rst:154
+msgid "OTRS uses Transifex to manage the translation process. Please see :doc:`../contributing/translate` section for details."
+msgstr ""
+
+#: ../../content/how-it-works/translations.rst:158
 msgid "Using The Translated Data From The Code"
 msgstr ""
 
-#: ../../content/how-it-works/translations.rst:150
+#: ../../content/how-it-works/translations.rst:160
 msgid "You can use the method ``$LanguageObject->Translate()`` to translate strings at runtime from Perl code, and the ``Translate()`` tag in :doc:`templates`."
 msgstr ""
 
