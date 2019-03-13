@@ -137,6 +137,16 @@ The custom translation file is read out last and so its translation which will b
 
    1;
 
+.. note::
+
+   The language files for the new interface are now part of the built application (static JSON). When you add a custom language file to the filesystem, you need to rebuild the application for the change to be considered. To trigger the rebuild, restart the server with the ``--deploy-assets`` option:
+
+   .. code-block:: bash
+
+      otrs> /opt/otrs/bin/otrs.WebServer.pl --deploy-assets
+
+   During the build process, the language files will be refreshed and will take any ``*_Custom.pm`` into account.
+
 
 The Translation Process Itself
 ------------------------------
