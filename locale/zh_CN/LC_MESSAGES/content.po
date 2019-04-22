@@ -5,14 +5,14 @@
 # Translators:
 # Chenry Lee <chenrylee@qq.com>, 2016
 # 汇民 王 <whuim@163.com>, 2017
-# 汇民 王 <whuim@qq.com>, 2018
+# 汇民 王 <whuim@qq.com>, 2018-2019
 # 陈德文 <sggggy@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-04 02:05+0000\n"
-"PO-Revision-Date: 2019-03-18 13:30+0000\n"
+"PO-Revision-Date: 2019-04-19 00:13+0000\n"
 "Last-Translator: 汇民 王 <whuim@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/otrs/OTRS/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -1975,7 +1975,7 @@ msgstr "两个星号：\\*\\*text\\*\\* 表示 **强调** （粗体）。"
 
 #: ../../content/documentation/restructuredtext-primer.rst:69
 msgid "Grave accents: \\`\\`text\\`\\` for ``literal texts`` (code samples)."
-msgstr "反引号：\\`\\`text \\`\\`表示 ``原封不动显示文本``（示例代码）。"
+msgstr "反引号：\\`\\`text\\`\\` 表示 ``常量文本``（示例代码）。"
 
 #: ../../content/documentation/restructuredtext-primer.rst:71
 msgid ""
@@ -2394,14 +2394,14 @@ msgstr "强文本位于两个双星号之间。应翻译该文本。这通常用
 
 #: ../../content/documentation/translate-documentation.rst:54
 msgid "Literal texts"
-msgstr "原封不动显示文本"
+msgstr "常量文本"
 
 #: ../../content/documentation/translate-documentation.rst:42
 msgid ""
 "Literal texts are between two double back-tick characters. This is usually "
 "used for variable names, configuration names and file paths, and **must "
 "not** be translated, otherwise it will break the structure."
-msgstr "原封不动显示文本介于两个双反引号之间。 这通常用于变量名、配置名和文件路径， **不能** 翻译，否则会破坏结构。"
+msgstr "常量文本介于两个双反引号之间。 这通常用于变量名、配置名和文件路径， **不能** 翻译，否则会破坏结构。"
 
 #: ../../content/documentation/translate-documentation.rst:69
 msgid "Internal links"
