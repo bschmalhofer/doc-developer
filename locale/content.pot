@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-20 04:14+0000\n"
+"POT-Creation-Date: 2019-04-24 03:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1135,7 +1135,7 @@ msgid "Descriptive texts and tooltip contents are written as complete sentences.
 msgstr ""
 
 #: ../../content/contributing/ui-design.rst:27
-#: ../../content/get-started/development-environment.rst:61
+#: ../../content/get-started/development-environment.rst:56
 msgid "Example:"
 msgstr ""
 
@@ -2312,70 +2312,54 @@ msgid "To facilitate the writing of OTRS expansion modules, the creation of a de
 msgstr ""
 
 #: ../../content/get-started/development-environment.rst:8
-msgid "Framework checkout"
+msgid "Obtain the Source Code"
 msgstr ""
 
 #: ../../content/get-started/development-environment.rst:10
-msgid "First of all a directory must be created in which the modules can be stored. Then switch to the new directory using the command line and check them out by using the following command:"
+msgid "First of all a directory must be created in which the modules can be stored. Then switch to the new directory using the command line and clone the Git repository by using the following command:"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:20
-msgid "Check out the ``module-tools`` module (from GitHub) too, for your development environment. It contains a number of useful tools:"
+#: ../../content/get-started/development-environment.rst:16
+msgid "For a specific branch like OTRS 6:"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:27
+#: ../../content/get-started/development-environment.rst:22
 msgid "Please configure the OTRS system according to the `installation instructions <https://doc.otrs.com/doc/manual/installation/stable/en/index.html>`__."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:31
+#: ../../content/get-started/development-environment.rst:26
 msgid "Useful Tools"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:33
-msgid "There are two modules that are highly recommended for OTRS development:"
+#: ../../content/get-started/development-environment.rst:28
+msgid "Clone the `module-tools <https://github.com/OTRS/module-tools>`__ module too, for your development environment. It contains a number of useful tools:"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:35
-msgid "`OTRSCodePolicy <https://github.com/OTRS/otrscodepolicy>`__"
-msgstr ""
-
-#: ../../content/get-started/development-environment.rst:36
-msgid "`Fred <https://github.com/OTRS/Fred>`__"
-msgstr ""
-
-#: ../../content/get-started/development-environment.rst:38
-msgid "*OTRSCodePolicy* is a code quality checker that enforces the use of common coding standards also for the OTRS development team. It is highly recommended to use it if you plan to make contributions. You can use it as a standalone test script or even register it as a git commit hook that runs every time that you create a commit. Please see `the module documentation <https://github.com/OTRS/otrscodepolicy/blob/master/doc/en/OTRSCodePolicy.xml>`__ for details."
-msgstr ""
-
-#: ../../content/get-started/development-environment.rst:40
-msgid "*Fred* is a little development helper module that you can actually install or link (as described below) into your development system. It features several helpful modules that you can activate, such as an SQL logger or an STDERR console. You can find some more details in its `module documentation <https://github.com/OTRS/Fred/blob/master/doc/en/Fred.xml>`__."
+#: ../../content/get-started/development-environment.rst:34
+msgid "`OTRSCodePolicy <https://github.com/OTRS/otrscodepolicy>`__ is a code quality checker that enforces the use of common coding standards also for the OTRS development team. It is highly recommended to use it if you plan to make contributions. You can use it as a standalone test script or even register it as a git commit hook that runs every time that you create a commit. Please see `the module documentation <https://github.com/OTRS/otrscodepolicy/blob/master/doc/en/OTRSCodePolicy.xml>`__ for details."
 msgstr ""
 
 #: ../../content/get-started/development-environment.rst:42
-msgid "By the way, these tools are also open source, and we will be happy about any improvements that you can contribute."
-msgstr ""
-
-#: ../../content/get-started/development-environment.rst:46
 msgid "Linking Expansion Modules"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:48
+#: ../../content/get-started/development-environment.rst:44
 msgid "A clear separation between OTRS and the modules is necessary for proper developing. Particularly when using a git clone, a clear separation is crucial. In order to facilitate the OTRS access the files, links must be created. This is done by a script in the directory module tools repository."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:50
+#: ../../content/get-started/development-environment.rst:46
 msgid "Example: linking the *Calendar* module:"
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:57
+#: ../../content/get-started/development-environment.rst:52
 msgid "Whenever new files are added, they must be linked as described above."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:59
+#: ../../content/get-started/development-environment.rst:54
 msgid "As soon as the linking is completed, the system configuration must be rebuilt to register the module in OTRS. Additional SQL or Perl code from the module must also be executed."
 msgstr ""
 
-#: ../../content/get-started/development-environment.rst:70
+#: ../../content/get-started/development-environment.rst:64
 msgid "To remove links from OTRS enter the following command:"
 msgstr ""
 
