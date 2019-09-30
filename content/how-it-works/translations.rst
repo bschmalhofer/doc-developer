@@ -50,6 +50,16 @@ In system configuration and database XML files you can mark strings for extracti
        </Option>
    </Setting>
 
+In YAML text, you can mark strings for translation by appending ``# Translatable`` to the end of the target string.
+
+.. code-block:: YAML
+
+   --
+   Title:
+      - Ticket Number # Translatable
+   Name:
+      - Alice
+
 
 Collecting Translatable Strings Into The Translation Database
 -------------------------------------------------------------
