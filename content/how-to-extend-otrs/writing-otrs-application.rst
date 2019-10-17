@@ -237,8 +237,6 @@ Next, we create the file for the core module ``/HelloWorld/Kernel/System/HelloWo
 
    =begin Internal:
 
-   =cut
-
    =head2 _FormatHelloWorldText()
 
    Format "Hello World" text to uppercase
@@ -246,6 +244,8 @@ Next, we create the file for the core module ``/HelloWorld/Kernel/System/HelloWo
        my $HelloWorld = $Self->_FormatHelloWorldText(
            String => 'Hello World',
        );
+
+   =cut
 
    sub _FormatHelloWorldText{
        my ( $Self, %Param ) = @_;
