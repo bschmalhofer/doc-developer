@@ -264,8 +264,6 @@ sub GetHelloWorldText {
 
 =begin Internal:
 
-=cut
-
 =head2 _FormatHelloWorldText()
 
 A „Helló, Világ” szöveg nagybetűsre formázásra
@@ -273,6 +271,8 @@ A „Helló, Világ” szöveg nagybetűsre formázásra
     my $HelloWorld = $Self->_FormatHelloWorldText(
         String => 'Helló, Világ',
     );
+
+=cut
 
 sub _FormatHelloWorldText{
     my ( $Self, %Param ) = @_;
