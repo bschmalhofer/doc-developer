@@ -191,7 +191,7 @@ Since some SCSS literals had to be renamed, it will be expected from you to port
 
 
 Encode API Changed
---------------------
+------------------
 
 The legacy method ``Convert2CharsetInternal()`` was dropped. Please replace any usages of this with ``Convert()`` and a ``To => 'utf-8'`` parameter like this:
 
@@ -212,4 +212,62 @@ Replace this by:
         From  => $Self->GetCharset(),
         To    => 'utf-8',
         Check => 1,
+    );
+
+
+LinkObject API Changed
+----------------------
+
+The method ``LinkAdd()`` has a slightly changed return value. Instead of a boolean return value it returns now the LinkID of the added link.
+You need to save the LinkID in order to delete a link later.
+
+.. code-block:: Perl
+
+    $True = $LinkObject->LinkAdd(
+        SourceObject => 'Ticket',
+        SourceKey    => '321',
+        TargetObject => 'FAQ',
+        TargetKey    => '5',
+        Type         => 'ParentChild',
+        State        => 'Valid',
+        UserID       => 1,
+    );
+
+Replace this by:
+
+.. code-block:: Perl
+
+    my $LinkID = $LinkObject->LinkAdd(
+        SourceObject => 'Ticket',
+        SourceKey    => '321',
+        TargetObject => 'FAQ',
+        TargetKey    => '5',
+        Type         => 'ParentChild',
+        State        => 'Valid',
+        UserID       => 1,
+    );
+
+
+The method ``LinkDelete()`` has a changed signature and return value. Instead of a boolean return value it returns now the LinkData as a hash.
+The parameter list now only requires the LinkID and the UserID.
+
+.. code-block:: Perl
+
+    $True = $LinkObject->LinkDelete(
+        Object1 => 'Ticket',
+        Key1    => '321',
+        Object2 => 'FAQ',
+        Key2    => '5',
+        Type    => 'Normal',
+        UserID  => 1,
+    );
+
+
+Replace this by:
+
+.. code-block:: Perl
+
+    my %LinkData = $LinkObject->LinkGet(
+        LinkID => 4,
+        UserID => 1,
     );
