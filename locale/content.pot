@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 01:11+0000\n"
+"POT-Creation-Date: 2019-10-29 05:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8428,7 +8428,21 @@ msgid "The legacy method ``Convert2CharsetInternal()`` was dropped. Please repla
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:206
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:236
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:266
 msgid "Replace this by:"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:219
+msgid "LinkObject API Changed"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:221
+msgid "The method ``LinkAdd()`` has a slightly changed return value. Instead of a boolean return value it returns now the LinkID of the added link. You need to save the LinkID in order to delete a link later."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:251
+msgid "The method ``LinkDelete()`` has a changed signature and return value. Instead of a boolean return value it returns now the LinkData as a hash. The parameter list now only requires the LinkID and the UserID."
 msgstr ""
 
 #: ../../content/index.rst:3
