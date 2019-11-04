@@ -267,7 +267,7 @@ Replace this by:
 
 .. code-block:: Perl
 
-    my %LinkData = $LinkObject->LinkGet(
+    my %LinkData = $LinkObject->LinkDelete(
         LinkID => 4,
         UserID => 1,
     );
