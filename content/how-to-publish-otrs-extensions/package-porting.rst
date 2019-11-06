@@ -11,33 +11,33 @@ Front End Messages
 
 In an effort to improve consistency and enforce new UX guidelines, a new and common front end messages API has been introduced in OTRS 8. Developers should strive to use only this way of informing users of application changes. A front end component has been created for this feature, and it's included by default in every application.
 
-The API has been re-used from a previous integration, albeit with some changes. By emitting an event on the global event bus it's still possible to trigger display of a message on the user screen. For example, in order to show a toast style message, you can just emit an event like so:
+The API has been reused from a previous integration, albeit with some changes. By emitting an event on the global event bus it is still possible to trigger display of a message on the user screen. For example, in order to show a toast style message, you can just emit an event like so:
 
 .. code-block:: js
 
-    this.$bus.$emit('showToastMessage', {
-        id: 'aSampleToastMessage'
-        heading: 'This is a %s heading',
-        headingPlaceholders: [ 'toast' ],
-        text: 'This is a %s message text.',
-        textPlaceholders: [ 'toast' ],
-        variant: 'warning',
-    });
+   this.$bus.$emit('showToastMessage', {
+       id: 'aSampleToastMessage'
+       heading: 'This is a %s heading',
+       headingPlaceholders: [ 'toast' ],
+       text: 'This is a %s message text.',
+       textPlaceholders: [ 'toast' ],
+       variant: 'warning',
+   });
 
-If your use-case is to prevent user from interacting with the app until they make a choice or acknowledge a message, you can trigger display of a blocking modal message. The interface is similar, please note the different name of the event:
+If your use case is to prevent user from interacting with the app until they make a choice or acknowledge a message, you can trigger display of a blocking modal message. The interface is similar, please note the different name of the event:
 
 .. code-block:: js
 
-    this.$bus.$emit('showModalMessage', {
-        id: 'aSampleModalMessage'
-        heading: 'This is a %s heading',
-        headingPlaceholders: [ 'modal' ],
-        text: 'This is a %s message text.',
-        textPlaceholders: [ 'modal' ],
-        buttonBehavior: 'yesNo',
-    });
+   this.$bus.$emit('showModalMessage', {
+       id: 'aSampleModalMessage'
+       heading: 'This is a %s heading',
+       headingPlaceholders: [ 'modal' ],
+       text: 'This is a %s message text.',
+       textPlaceholders: [ 'modal' ],
+       buttonBehavior: 'yesNo',
+   });
 
-Both message styles provide numerous configuration options, so make sure to consult the `component documentation in the design system <https://doc.otrs.com/doc/api/otrs/8.0/frontend/dist/designsystem/#/documentation/components/common/common-messages>`_ for complete API description.
+Both message styles provide numerous configuration options, so make sure to consult the `component documentation <https://doc.otrs.com/doc/api/otrs/8.0/frontend/dist/designsystem/#/documentation/components/common/common-messages>`__  in the design system for complete API description.
 
 
 Renamed Message Events
@@ -218,56 +218,52 @@ Replace this by:
 LinkObject API Changed
 ----------------------
 
-The method ``LinkAdd()`` has a slightly changed return value. Instead of a boolean return value it returns now the LinkID of the added link.
-You need to save the LinkID in order to delete a link later.
+The method ``LinkAdd()`` has a slightly changed return value. Instead of a boolean return value it returns now the ``LinkID`` of the added link. You need to save the ``LinkID`` in order to delete a link later.
 
 .. code-block:: Perl
 
-    $True = $LinkObject->LinkAdd(
-        SourceObject => 'Ticket',
-        SourceKey    => '321',
-        TargetObject => 'FAQ',
-        TargetKey    => '5',
-        Type         => 'ParentChild',
-        State        => 'Valid',
-        UserID       => 1,
-    );
+   $True = $LinkObject->LinkAdd(
+       SourceObject => 'Ticket',
+       SourceKey    => '321',
+       TargetObject => 'FAQ',
+       TargetKey    => '5',
+       Type         => 'ParentChild',
+       State        => 'Valid',
+       UserID       => 1,
+   );
 
 Replace this by:
 
 .. code-block:: Perl
 
-    my $LinkID = $LinkObject->LinkAdd(
-        SourceObject => 'Ticket',
-        SourceKey    => '321',
-        TargetObject => 'FAQ',
-        TargetKey    => '5',
-        Type         => 'ParentChild',
-        State        => 'Valid',
-        UserID       => 1,
-    );
+   my $LinkID = $LinkObject->LinkAdd(
+       SourceObject => 'Ticket',
+       SourceKey    => '321',
+       TargetObject => 'FAQ',
+       TargetKey    => '5',
+       Type         => 'ParentChild',
+       State        => 'Valid',
+       UserID       => 1,
+   );
 
-
-The method ``LinkDelete()`` has a changed signature and return value. Instead of a boolean return value it returns now the LinkData as a hash.
-The parameter list now only requires the LinkID and the UserID.
+The method ``LinkDelete()`` has a changed signature and return value. Instead of a boolean return value it returns now the ``LinkData`` as a hash. The parameter list now only requires the ``LinkID`` and the ``UserID``.
 
 .. code-block:: Perl
 
-    $True = $LinkObject->LinkDelete(
-        Object1 => 'Ticket',
-        Key1    => '321',
-        Object2 => 'FAQ',
-        Key2    => '5',
-        Type    => 'Normal',
-        UserID  => 1,
-    );
-
+   $True = $LinkObject->LinkDelete(
+       Object1 => 'Ticket',
+       Key1    => '321',
+       Object2 => 'FAQ',
+       Key2    => '5',
+       Type    => 'Normal',
+       UserID  => 1,
+   );
 
 Replace this by:
 
 .. code-block:: Perl
 
-    my %LinkData = $LinkObject->LinkDelete(
-        LinkID => 4,
-        UserID => 1,
-    );
+   my %LinkData = $LinkObject->LinkDelete(
+       LinkID => 4,
+       UserID => 1,
+   );
