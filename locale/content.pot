@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-29 05:11+0000\n"
+"POT-Creation-Date: 2019-11-06 11:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7858,15 +7858,15 @@ msgid "In an effort to improve consistency and enforce new UX guidelines, a new 
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:14
-msgid "The API has been re-used from a previous integration, albeit with some changes. By emitting an event on the global event bus it's still possible to trigger display of a message on the user screen. For example, in order to show a toast style message, you can just emit an event like so:"
+msgid "The API has been reused from a previous integration, albeit with some changes. By emitting an event on the global event bus it is still possible to trigger display of a message on the user screen. For example, in order to show a toast style message, you can just emit an event like so:"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:27
-msgid "If your use-case is to prevent user from interacting with the app until they make a choice or acknowledge a message, you can trigger display of a blocking modal message. The interface is similar, please note the different name of the event:"
+msgid "If your use case is to prevent user from interacting with the app until they make a choice or acknowledge a message, you can trigger display of a blocking modal message. The interface is similar, please note the different name of the event:"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:40
-msgid "Both message styles provide numerous configuration options, so make sure to consult the `component documentation in the design system <https://doc.otrs.com/doc/api/otrs/8.0/frontend/dist/designsystem/#/documentation/components/common/common-messages>`_ for complete API description."
+msgid "Both message styles provide numerous configuration options, so make sure to consult the `component documentation <https://doc.otrs.com/doc/api/otrs/8.0/frontend/dist/designsystem/#/documentation/components/common/common-messages>`__  in the design system for complete API description."
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:44
@@ -8428,8 +8428,10 @@ msgid "The legacy method ``Convert2CharsetInternal()`` was dropped. Please repla
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:206
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:236
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:266
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:235
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:262
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:303
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:366
 msgid "Replace this by:"
 msgstr ""
 
@@ -8438,11 +8440,47 @@ msgid "LinkObject API Changed"
 msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:221
-msgid "The method ``LinkAdd()`` has a slightly changed return value. Instead of a boolean return value it returns now the LinkID of the added link. You need to save the LinkID in order to delete a link later."
+msgid "The method ``LinkAdd()`` has a slightly changed return value. Instead of a boolean return value it returns now the ``LinkID`` of the added link. You need to save the ``LinkID`` in order to delete a link later."
 msgstr ""
 
-#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:251
-msgid "The method ``LinkDelete()`` has a changed signature and return value. Instead of a boolean return value it returns now the LinkData as a hash. The parameter list now only requires the LinkID and the UserID."
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:249
+msgid "The method ``LinkDelete()`` has a changed signature and return value. Instead of a boolean return value it returns now the ``LinkData`` as a hash. The parameter list now only requires the ``LinkID`` and the ``UserID``."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:273
+msgid "Event Handling Changes"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:275
+msgid "The event handling was changed from the previous ``Kernel::System::Event`` and ``Kernel::System::EventHandler`` modules to the `Moose <https://metacpan.org/pod/Moose>`__ role based ``Kernel::System::Event::Handler`` which handles all event types and modules in dedicated event queues."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:277
+msgid "Back end files emitting events (i.e. containing ``EventHandler()`` calls) have to be modified to use the new event handling role."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:279
+msgid "Remove code like this:"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:325
+msgid "In order to ensure the correct behavior it is imperative that all possible events for an object type are known via the system configuration (e.g. ``Events###Ticket`` for all ticket events). **This configuration is now required**. Exceptions for dynamically created events like those of dynamic fields have to be added to ``Kernel::System::Event::Handler::_EventListBuild``."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:327
+msgid "A configuration like this:"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:342
+msgid "Should be modified and amended as necessary, like this:"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:358
+msgid "As the generic interface provides event filters for every object type, it is now **mandatory** to provide a module for every object type which retrieves object data for the filter. These modules reside in ``Kernel/GenericInterface/Event/ObjectType``."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:360
+msgid "If an event list is required in your code and you have an occurrence of this:"
 msgstr ""
 
 #: ../../content/index.rst:3

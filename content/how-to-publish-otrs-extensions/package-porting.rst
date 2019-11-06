@@ -267,3 +267,104 @@ Replace this by:
        LinkID => 4,
        UserID => 1,
    );
+
+
+Event Handling Changes
+----------------------
+
+The event handling was changed from the previous ``Kernel::System::Event`` and ``Kernel::System::EventHandler`` modules to the `Moose <https://metacpan.org/pod/Moose>`__ role based ``Kernel::System::Event::Handler`` which handles all event types and modules in dedicated event queues.
+
+Back end files emitting events (i.e. containing ``EventHandler()`` calls) have to be modified to use the new event handling role.
+
+Remove code like this:
+
+.. code-block:: Perl
+
+   use Kernel::System::EventHandler;
+
+   @ISA = qw(
+       Kernel::System::EventHandler
+   );
+
+   sub new {
+       ...
+       $Self->EventHandlerInit(
+           Config => 'AppointmentCalendar::EventModulePost',
+       );
+       ...
+   }
+
+   sub DESTROY {
+       ...
+       $Self->EventHandlerTransaction();
+       ...
+   }
+
+Replace this by:
+
+.. code-block:: Perl
+
+   # Unless already used in module.
+   use Moose;
+
+   with 'Kernel::System::Role::EmitsEvents';
+
+   sub EventModuleType {
+       # Same module type definition as in previous EventHandlerInit.
+       return 'AppointmentCalendar::EventModulePost';
+   }
+
+   sub EmitsEventObjectTypes {
+       # All relevant object types (as per system configuration definition).
+       return ['Calendar'];
+   }
+
+   # Unless already used in module.
+   no Moose;
+
+In order to ensure the correct behavior it is imperative that all possible events for an object type are known via the system configuration (e.g. ``Events###Ticket`` for all ticket events). **This configuration is now required**. Exceptions for dynamically created events like those of dynamic fields have to be added to ``Kernel::System::Event::Handler::_EventListBuild``.
+
+A configuration like this:
+
+.. code-block:: XML
+
+   <Setting Name="Events###AnObjectType" Required="0" Valid="1">
+       <Description Translatable="1">List of all AnObjectType events to be displayed in the GUI.</Description>
+       <Navigation>Frontend::Admin</Navigation>
+       <Value>
+           <Array>
+               <Item>ObjectCreate</Item>
+               <Item>ObjectDelete</Item>
+           </Array>
+       </Value>
+   </Setting>
+
+Should be modified and amended as necessary, like this:
+
+.. code-block:: XML
+
+   <Setting Name="Events###AnObjectType" Required="1" Valid="1">
+       <Description Translatable="1">List of all AnObjectType events to be displayed in the GUI.</Description>
+       <Navigation>Frontend::Admin</Navigation>
+       <Value>
+           <Array>
+               <Item>ObjectCreate</Item>
+               <Item>ObjectDelete</Item>
+               <Item>ObjectUpdate</Item>
+           </Array>
+       </Value>
+   </Setting>
+
+As the generic interface provides event filters for every object type, it is now **mandatory** to provide a module for every object type which retrieves object data for the filter. These modules reside in ``Kernel/GenericInterface/Event/ObjectType``.
+
+If an event list is required in your code and you have an occurrence of this:
+
+.. code-block:: Perl
+
+   my %RegisteredEvents = $Kernel::OM->Get('Kernel::System::Event')->EventList( ... );
+
+Replace this by:
+
+.. code-block:: Perl
+
+   my %RegisteredEvents = $Kernel::OM->Get('Kernel::System::Event::Handler')->EventListGet( ... );
