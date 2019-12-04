@@ -7,13 +7,13 @@ Ticket event modules are running right after a ticket action takes place. Per co
 Ticket Event Module Code Example
 --------------------------------
 
-See ``Kernel/System/Ticket/Event/EventModulePostTemplate.pm`` in the package ``TemplateModule``.
+See files in ``Kernel/System/Ticket/Event`` folder of the source code.
 
 
 Ticket Event Module Configuration Example
 -----------------------------------------
 
-See ``Kernel/Config/Files/EventModulePostTemplate.xml`` in the package ``TemplateModule``.
+See settings in ``Kernel/Config/Files/XML/Ticket.xml`` started with the name ``Ticket::EventModulePost###``.
 
 
 Ticket Event Module Use Case Example

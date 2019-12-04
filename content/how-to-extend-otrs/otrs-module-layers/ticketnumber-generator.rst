@@ -13,13 +13,13 @@ The method ``GetTNByString()`` is called with the param ``String`` which contain
 Ticket Number Generator Code Example
 ------------------------------------
 
-See ``Kernel/System/Ticket/Number/UserRandom.pm`` in the package ``TemplateModule``.
+See files in ``Kernel/System/Ticket/Number`` folder of the source code.
 
 
 Ticket Number Generator Configuration Example
 ---------------------------------------------
 
-See ``Kernel/Config/Files/TicketNumberGenerator.xml`` in the package ``TemplateModule``.
+See settings in ``Kernel/Config/Files/XML/Ticket.xml`` started with the name ``Ticket::NumberGenerator``.
 
 
 Ticket Number Generator Use Case Example
