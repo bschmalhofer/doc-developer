@@ -18,14 +18,10 @@ To make using post output filters easier, there is also a mechanism to request H
 
 .. code-block:: XML
 
-   <ConfigItem
-   Name="Frontend::Template::GenerateBlockHooks###100-OTRSBusiness-ContactWithData"
-   Required="1" Valid="1">
-       <Description Translatable="1">Generate HTML comment hooks for
-   the specified blocks so that filters can use them.</Description>
-       <Group>OTRSBusiness</Group>
-       <SubGroup>Core</SubGroup>
-       <Setting>
+   <Setting Name="Frontend::Template::GenerateBlockHooks###100-OTRSBusiness-ContactWithData" Required="1" Valid="1">
+       <Description Translatable="1">Generate HTML comment hooks for the specified blocks so that filters can use them.</Description>
+       <Navigation>Frontend::Base::OutputFilter</Navigation>
+       <Value>
            <Hash>
                <Item Key="AgentTicketZoom">
                    <Array>
@@ -33,8 +29,8 @@ To make using post output filters easier, there is also a mechanism to request H
                    </Array>
                </Item>
            </Hash>
-       </Setting>
-   </ConfigItem>
+       </Value>
+   </Setting>
 
 This will cause the block ``CustomerTable`` in ``AgentTicketZoom.tt`` to be wrapped in HTML comments each time it is rendered:
 
@@ -62,13 +58,13 @@ This kind of output filter is a plugin for the method ``Kernel::Output::HTML::La
 Output Filter Code Example
 --------------------------
 
-See package ``TemplateModule``.
+See package `TemplateModule <https://github.com/OTRS/TemplateModule/tree/master/Kernel/Output/HTML>`__.
 
 
 Output Filter Configuration Example
 -----------------------------------
 
-See package ``TemplateModule``.
+See package `TemplateModule <https://github.com/OTRS/TemplateModule/tree/master/Kernel/Config/Files>`__.
 
 
 Output Filter Use Case Example
@@ -88,7 +84,7 @@ Prohibit active content
 
 .. note::
 
-   Every ``FilterElementPost`` output filter is constructed and run for every configured Template that is needed for the current request. Thus low performance of the output filter or a large number of filters can severely degrade performance.
+   Every ``FilterElementPost`` output filter is constructed and run for every configured template that is needed for the current request. Thus low performance of the output filter or a large number of filters can severely degrade performance.
 
 
 Best Practices
