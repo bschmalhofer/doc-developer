@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-04 13:22+0100\n"
+"POT-Creation-Date: 2019-12-07 20:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3854,7 +3854,7 @@ msgid "The custom translation file is read out last and so its translation which
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:142
-msgid "The language files for the new interface are now part of the built application (static JSON). When you add a custom language file to the filesystem, you need to rebuild the application for the change to be considered. To trigger the rebuild, restart the server with the ``--deploy-assets`` option:"
+msgid "The language files for the new interface are now part of the built application (static JSON). When you add a custom language file to the file system, you need to rebuild the application for the change to be considered. To trigger the rebuild, restart the server with the ``--deploy-assets`` option:"
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:148
