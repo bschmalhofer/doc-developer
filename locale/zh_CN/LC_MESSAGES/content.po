@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 02:05+0000\n"
-"PO-Revision-Date: 2019-04-19 00:13+0000\n"
-"Last-Translator: 汇民 王 <whuim@qq.com>\n"
+"POT-Creation-Date: 2019-12-07 20:26+0100\n"
+"PO-Revision-Date: 2019-12-07 19:28+0000\n"
+"Last-Translator: Balázs Úr\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/otrs/OTRS/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -5177,20 +5177,35 @@ msgid ""
 msgstr "自定义翻译文件最后读出并使用其翻译。 如果要在安装中添加自己的措辞，请为您的语言创建此文件。"
 
 #: ../../content/how-it-works/translations.rst:142
+msgid ""
+"The language files for the new interface are now part of the built "
+"application (static JSON). When you add a custom language file to the file "
+"system, you need to rebuild the application for the change to be considered."
+" To trigger the rebuild, restart the server with the ``--deploy-assets`` "
+"option:"
+msgstr ""
+
+#: ../../content/how-it-works/translations.rst:148
+msgid ""
+"During the build process, the language files will be refreshed and will take"
+" any ``*_Custom.pm`` into account."
+msgstr ""
+
+#: ../../content/how-it-works/translations.rst:152
 msgid "The Translation Process Itself"
 msgstr "翻译过程本身"
 
-#: ../../content/how-it-works/translations.rst:144
+#: ../../content/how-it-works/translations.rst:154
 msgid ""
 "OTRS uses Transifex to manage the translation process. Please see "
 ":doc:`../contributing/translate` section for details."
 msgstr "OTRS使用Transifex来管理翻译过程。 有关详细信息，请参阅 :doc:`../contributing/translate` 部分。"
 
-#: ../../content/how-it-works/translations.rst:148
+#: ../../content/how-it-works/translations.rst:158
 msgid "Using The Translated Data From The Code"
 msgstr "使用代码中的翻译数据"
 
-#: ../../content/how-it-works/translations.rst:150
+#: ../../content/how-it-works/translations.rst:160
 msgid ""
 "You can use the method ``$LanguageObject->Translate()`` to translate strings"
 " at runtime from Perl code, and the ``Translate()`` tag in :doc:`templates`."
@@ -7737,35 +7752,35 @@ msgid ""
 " module config XML like:"
 msgstr "为了更容易地使用渲染后输出过滤器，还有一种机制来为某些模板/块请求HTML注释钩子。 您可以在模块中添加配置XML，如："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:39
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:35
 msgid ""
 "This will cause the block ``CustomerTable`` in ``AgentTicketZoom.tt`` to be "
 "wrapped in HTML comments each time it is rendered:"
 msgstr "这将导致 ``AgentTicketZoom.tt`` 中的 ``CustomerTable`` 块在每次渲染时都封装在HTML注释中："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:47
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:43
 msgid ""
 "With this mechanism every package can request just the block hooks it needs,"
 " and they are consistently rendered. These HTML comments can then be used in"
 " your output filter for easy regular expression matching."
 msgstr "使用这种机制，每个包都可以请求它所需的块钩子，并且它们一致地被渲染。 然后，可以在输出过滤器中使用这些HTML注释，以便于正则表达式匹配。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:51
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:47
 msgid "``FilterContent``"
 msgstr "``FilterContent``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:53
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:49
 msgid ""
 "This kind of filter allows to process the complete HTML output for the "
 "request right before it is sent to the browser. This can be used for global "
 "transformations."
 msgstr "这种过滤器允许在将请求发送到浏览器之前处理请求的完整HTML输出。 这可以用于全局转换。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:57
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:53
 msgid "``FilterText``"
 msgstr "``FilterText``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:59
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:55
 msgid ""
 "This kind of output filter is a plugin for the method "
 "``Kernel::Output::HTML::Layout::Ascii2HTML()`` and is only active when the "
@@ -7775,36 +7790,43 @@ msgid ""
 "when OTRS is configured to not use the Rich Text feature in the front end."
 msgstr "这种输出过滤器是 ``Kernel::Output::HTML::Layout::Ascii2HTML()`` 方法的插件，仅当参数 ``LinkFeature`` 设置为1时才有效。这样 ``FilterText`` 输出过滤器目前仅用于显示纯文本信件的正文。 纯文本信件由传入的非HTML邮件生成，并且OTRS配置为不在前端使用富文本功能。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:63
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:59
 msgid "Output Filter Code Example"
 msgstr "输出过滤器代码示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:65
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:71
-msgid "See package ``TemplateModule``."
-msgstr "请参阅 ``TemplateModule`` 包。"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:61
+msgid ""
+"See package `TemplateModule "
+"<https://github.com/OTRS/TemplateModule/tree/master/Kernel/Output/HTML>`__."
+msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:69
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:65
 msgid "Output Filter Configuration Example"
 msgstr "输出过滤器配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:75
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:67
+msgid ""
+"See package `TemplateModule "
+"<https://github.com/OTRS/TemplateModule/tree/master/Kernel/Config/Files>`__."
+msgstr ""
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:71
 msgid "Output Filter Use Case Example"
 msgstr "输出过滤器用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:78
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:74
 msgid "Show additional ticket attributes in ``AgentTicketZoom``"
 msgstr "在 ``AgentTicketZoom`` 中显示其它工单属性"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:78
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:74
 msgid "This can be achieved with a ``FilterElementPost`` output filter."
 msgstr "这可以通过 ``FilterElementPost`` 输出过滤器来实现。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:81
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:77
 msgid "Show the service selection as a multi level menu"
 msgstr "将服务选择显示为多级菜单"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:81
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:77
 msgid ""
 "Use a ``FilterElementPost`` for this feature. The list of selectable "
 "services can be parsed from the processed template output. The multi level "
@@ -7813,11 +7835,11 @@ msgid ""
 "that."
 msgstr "对此功能使用 ``FilterElementPost``。 可以从处理的模板输出中解析可选服务的列表。 可以从服务列表构造多级选择并将其插入到模板内容中。 必须使用 ``FilterElementPost`` 输出过滤器。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:84
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:80
 msgid "Create links within plain text article bodies"
 msgstr "在纯文本信件正文中创建链接"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:84
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:80
 msgid ""
 "A biotech company uses gene names like IPI00217472 in plain text articles. A"
 " ``FilterText`` output filter can be used to create links to a sequence "
@@ -7825,30 +7847,30 @@ msgid ""
 "acc:IPI00217472]+-vn+2, for the gene names."
 msgstr "一家生物技术公司在纯文章文章中使用IPI00217472等基因名称。 可以使用 ``FilterText`` 输出过滤器来创建到序列数据库的链接，例如，用于基因名称的 http://srs.ebi.ac.uk/srsbin/cgi-bin/wgetz?-e+[IPI-acc:IPI00217472 ]+-vn+2。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:87
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:83
 msgid "Prohibit active content"
 msgstr "禁止有效内容"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:87
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:83
 msgid ""
 "There is firewall rule that disallows all active content. In order to avoid "
 "rejection by the firewall, the HTML tag ``<applet>`` can be filtered with a "
 "``FilterContent`` output filter."
 msgstr "防火墙规则禁止所有活动内容。 为了避免被防火墙拒绝，可以使用 ``FilterContent`` 输出过滤器过滤HTML的 ``<applet>`` 标签。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:91
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:87
 msgid ""
 "Every ``FilterElementPost`` output filter is constructed and run for every "
-"configured Template that is needed for the current request. Thus low "
+"configured template that is needed for the current request. Thus low "
 "performance of the output filter or a large number of filters can severely "
 "degrade performance."
-msgstr "为当前请求所需的每个配置模板构造并运行每个 ``FilterElementPost`` 输出过滤器。因此，低性能的输出过滤器或大量的过滤器会严重降低性能。"
+msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:95
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:91
 msgid "Best Practices"
 msgstr "最佳实践"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:97
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:93
 msgid ""
 "In order to increase flexibility the list of affected templates should be "
 "configured in system configuration."
@@ -8847,10 +8869,8 @@ msgid "Ticket Event Module Code Example"
 msgstr "工单事件模块代码示例"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:10
-msgid ""
-"See ``Kernel/System/Ticket/Event/EventModulePostTemplate.pm`` in the package"
-" ``TemplateModule``."
-msgstr "请参阅 ``TemplateModule`` 包中的 ``Kernel/System/Ticket/Event/EventModulePostTemplate.pm``。"
+msgid "See files in ``Kernel/System/Ticket/Event`` folder of the source code."
+msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:14
 msgid "Ticket Event Module Configuration Example"
@@ -8858,9 +8878,9 @@ msgstr "工单事件模块配置示例"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:16
 msgid ""
-"See ``Kernel/Config/Files/EventModulePostTemplate.xml`` in the package "
-"``TemplateModule``."
-msgstr "请参阅 ``TemplateModule`` 包中的 ``Kernel/Config/Files/EventModulePostTemplate.xml``。"
+"See settings in ``Kernel/Config/Files/XML/Ticket.xml`` started with the name"
+" ``Ticket::EventModulePost###``."
+msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:20
 msgid "Ticket Event Module Use Case Example"
@@ -9165,9 +9185,8 @@ msgstr "工单编号生成器代码示例"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:16
 msgid ""
-"See ``Kernel/System/Ticket/Number/UserRandom.pm`` in the package "
-"``TemplateModule``."
-msgstr "请参阅 ``TemplateModule`` 包中的 ``Kernel/System/Ticket/Number/UserRandom.pm``。"
+"See files in ``Kernel/System/Ticket/Number`` folder of the source code."
+msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:20
 msgid "Ticket Number Generator Configuration Example"
@@ -9175,9 +9194,9 @@ msgstr "工单编号生成器配置示例"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:22
 msgid ""
-"See ``Kernel/Config/Files/TicketNumberGenerator.xml`` in the package "
-"``TemplateModule``."
-msgstr "请参阅 ``TemplateModule`` 包中的 ``Kernel/Config/Files/TicketNumberGenerator.xml``。"
+"See settings in ``Kernel/Config/Files/XML/Ticket.xml`` started with the name"
+" ``Ticket::NumberGenerator``."
+msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:26
 msgid "Ticket Number Generator Use Case Example"

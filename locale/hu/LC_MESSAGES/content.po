@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, OTRS AG
+# Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
 # This file is distributed under the same license as the OTRS Developer Manual package.
 # 
 # Translators:
 # Balázs Úr <balazs.ur@otrs.com>, 2014-2019
-# Balázs Úr <ur.balazs@fsf.hu>, 2014-2018
-# Balázs Úr <ur.balazs@fsf.hu>, 2017
+# Balázs Úr, 2014-2018
+# Balázs Úr, 2017
 # Daniel Vinnai <win.dani@hotmail.com>, 2017
 # Martin Gruner <martin.gruner@otrs.com>, 2015,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-15 02:06+0000\n"
-"PO-Revision-Date: 2019-02-15 10:18+0000\n"
-"Last-Translator: Balázs Úr <ur.balazs@fsf.hu>\n"
+"POT-Creation-Date: 2019-12-07 20:26+0100\n"
+"PO-Revision-Date: 2019-12-07 19:30+0000\n"
+"Last-Translator: Balázs Úr\n"
 "Language-Team: Hungarian (http://www.transifex.com/otrs/OTRS/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -5178,20 +5178,35 @@ msgid ""
 msgstr "Az egyéni fordítási fájl kerül beolvasásra legutoljára, és így annak fordítása, amely használva lesz. Ha saját megfogalmazást szeretne hozzáadni a telepítéshez, akkor hozza létre ezt a fájlt a nyelvéhez."
 
 #: ../../content/how-it-works/translations.rst:142
+msgid ""
+"The language files for the new interface are now part of the built "
+"application (static JSON). When you add a custom language file to the file "
+"system, you need to rebuild the application for the change to be considered."
+" To trigger the rebuild, restart the server with the ``--deploy-assets`` "
+"option:"
+msgstr "Az új felület nyelvi fájljai mostantól az összeállított alkalmazás (statikus JSON) része. Ha egyéni nyelvi fájlt ad hozzá a fájlrendszerhez, akkor újra össze kell állítania az alkalmazást a változtatások figyelembe vételéhez. Az ismételt összeállítás aktiválásához indítsa újra a kiszolgálót a ``--deploy-assets`` kapcsolóval:"
+
+#: ../../content/how-it-works/translations.rst:148
+msgid ""
+"During the build process, the language files will be refreshed and will take"
+" any ``*_Custom.pm`` into account."
+msgstr "Az összeállítási folyamat során a nyelvi fájlok frissítve lesznek, és az összes ``*_Custom.pm`` fájl is életbe fog lépni."
+
+#: ../../content/how-it-works/translations.rst:152
 msgid "The Translation Process Itself"
 msgstr "Maga a fordítási folyamat"
 
-#: ../../content/how-it-works/translations.rst:144
+#: ../../content/how-it-works/translations.rst:154
 msgid ""
 "OTRS uses Transifex to manage the translation process. Please see "
 ":doc:`../contributing/translate` section for details."
 msgstr "Az OTRS a Transifex szolgáltatását használja a fordítási folyamat kezeléséhez. A részletekért nézze meg a :doc:`../contributing/translate` szakaszt."
 
-#: ../../content/how-it-works/translations.rst:148
+#: ../../content/how-it-works/translations.rst:158
 msgid "Using The Translated Data From The Code"
 msgstr "A lefordított adatok használata a kódból"
 
-#: ../../content/how-it-works/translations.rst:150
+#: ../../content/how-it-works/translations.rst:160
 msgid ""
 "You can use the method ``$LanguageObject->Translate()`` to translate strings"
 " at runtime from Perl code, and the ``Translate()`` tag in :doc:`templates`."
@@ -7738,35 +7753,35 @@ msgid ""
 " module config XML like:"
 msgstr "Az utó-kimenetszűrők használatának megkönnyítéséhez létezik egy mechanizmus is a HTML megjegyzéshorgok lekéréséhez bizonyos sablonoknál vagy blokkoknál. Hozzáadhatja a modulbeállító XML-be a következőhöz hasonlóan:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:39
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:35
 msgid ""
 "This will cause the block ``CustomerTable`` in ``AgentTicketZoom.tt`` to be "
 "wrapped in HTML comments each time it is rendered:"
 msgstr "Ez azt fogja okozni, hogy az ``AgentTicketZoom.tt`` fájlban lévő ``CustomerTable`` blokk át lesz alakítva a HTML megjegyzésekben minden alkalommal, amikor megjelenítésre kerül:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:47
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:43
 msgid ""
 "With this mechanism every package can request just the block hooks it needs,"
 " and they are consistently rendered. These HTML comments can then be used in"
 " your output filter for easy regular expression matching."
 msgstr "Ezzel a mechanizmussal minden csomag csak azokat a blokkhorgokat kérheti, amelyekre szüksége van, és következetesen kerülnek megjelenítésre. Ezek a HTML megjegyzések használhatók ezután a kimenetszűrőben az egyszerű reguláris kifejezés illesztéshez."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:51
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:47
 msgid "``FilterContent``"
 msgstr "``FilterContent``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:53
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:49
 msgid ""
 "This kind of filter allows to process the complete HTML output for the "
 "request right before it is sent to the browser. This can be used for global "
 "transformations."
 msgstr "Ez a fajta szűrő lehetővé teszi a teljes HTML kimenet feldolgozását a kérésnél közvetlenül azelőtt, hogy kiküldésre kerül a böngészőnek. Ez globális átalakításokhoz használható."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:57
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:53
 msgid "``FilterText``"
 msgstr "``FilterText``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:59
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:55
 msgid ""
 "This kind of output filter is a plugin for the method "
 "``Kernel::Output::HTML::Layout::Ascii2HTML()`` and is only active when the "
@@ -7776,36 +7791,43 @@ msgid ""
 "when OTRS is configured to not use the Rich Text feature in the front end."
 msgstr "Ez a fajta kimenetszűrő egy bővítmény a ``Kernel::Output::HTML::Layout::Ascii2HTML()`` metódushoz, és csak akkor aktív, amikor a ``LinkFeature`` paraméter 1-re van állítva. Így a ``FilterText`` kimenetszűrők jelenleg csak az egyszerű szöveges bejegyzések törzsének megjelenítésénél aktívak. Az egyszerű szöveges bejegyzéseket a bejövő nem HTML levelek állítják elő, illetve amikor az OTRS úgy van beállítva, hogy ne használja a Rich Text szolgáltatást az előtétprogramon."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:63
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:59
 msgid "Output Filter Code Example"
 msgstr "Kimenetszűrő kódpélda"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:65
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:71
-msgid "See package ``TemplateModule``."
-msgstr "Lásd a ``TemplateModule`` csomagot."
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:61
+msgid ""
+"See package `TemplateModule "
+"<https://github.com/OTRS/TemplateModule/tree/master/Kernel/Output/HTML>`__."
+msgstr "Nézze meg a `TemplateModule <https://github.com/OTRS/TemplateModule/tree/master/Kernel/Output/HTML>`__ csomagot."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:69
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:65
 msgid "Output Filter Configuration Example"
 msgstr "Kimenetszűrő beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:75
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:67
+msgid ""
+"See package `TemplateModule "
+"<https://github.com/OTRS/TemplateModule/tree/master/Kernel/Config/Files>`__."
+msgstr "Nézze meg a `TemplateModule <https://github.com/OTRS/TemplateModule/tree/master/Kernel/Config/Files>`__ csomagot."
+
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:71
 msgid "Output Filter Use Case Example"
 msgstr "Kimenetszűrő használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:78
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:74
 msgid "Show additional ticket attributes in ``AgentTicketZoom``"
 msgstr "További jegyattribútumok megjelenítése az ``AgentTicketZoom`` képernyőn."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:78
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:74
 msgid "This can be achieved with a ``FilterElementPost`` output filter."
 msgstr "Ez egy ``FilterElementPost`` kimenetszűrővel valósítható meg."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:81
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:77
 msgid "Show the service selection as a multi level menu"
 msgstr "A szolgáltatásválasztás megjelenítése többszintű menüként"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:81
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:77
 msgid ""
 "Use a ``FilterElementPost`` for this feature. The list of selectable "
 "services can be parsed from the processed template output. The multi level "
@@ -7814,11 +7836,11 @@ msgid ""
 "that."
 msgstr "Használjon egy ``FilterElementPost`` szűrőt ehhez a szolgáltatáshoz. A választható szolgáltatások listája a feldolgozott sablonkimenetből dolgozható fel. A többszintű választás a szolgáltatáslistából építhető fel, és szúrható be a sablontartalomba. Egy ``FilterElementPost`` kimenetszűrőt kell használni ehhez."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:84
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:80
 msgid "Create links within plain text article bodies"
 msgstr "Hivatkozások létrehozása az egyszerű szöveges bejegyzés törzseiben"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:84
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:80
 msgid ""
 "A biotech company uses gene names like IPI00217472 in plain text articles. A"
 " ``FilterText`` output filter can be used to create links to a sequence "
@@ -7826,30 +7848,30 @@ msgid ""
 "acc:IPI00217472]+-vn+2, for the gene names."
 msgstr "Egy biotechnológiai vállalat IPI00217472 formátumú génneveket használ az egyszerű szöveges bejegyzésekben. Egy ``FilterText`` kimenetszűrő használható a szekvencia-adatbázisra mutató hivatkozások létrehozásához a génneveknél, például http://srs.ebi.ac.uk/srsbin/cgi-bin/wgetz?-e+[IPI-acc:IPI00217472]+-vn+2 formában."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:87
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:83
 msgid "Prohibit active content"
 msgstr "Az aktív tartalom megtiltása"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:87
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:83
 msgid ""
 "There is firewall rule that disallows all active content. In order to avoid "
 "rejection by the firewall, the HTML tag ``<applet>`` can be filtered with a "
 "``FilterContent`` output filter."
 msgstr "Van egy olyan tűzfalszabály, amely megtiltja az összes aktív tartalmat. Azért, hogy elkerüljük a tűzfal visszautasítását, az ``<applet>`` HTML-címke kiszűrhető egy ``FilterContent`` kimenetszűrővel."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:91
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:87
 msgid ""
 "Every ``FilterElementPost`` output filter is constructed and run for every "
-"configured Template that is needed for the current request. Thus low "
+"configured template that is needed for the current request. Thus low "
 "performance of the output filter or a large number of filters can severely "
 "degrade performance."
 msgstr "Minden ``FilterElementPost`` kimenetszűrő felépítésre és futtatásra kerül minden olyan beállított sablonnál, amely szükséges az aktuális kéréshez. Így a kimenetszűrő alacsony teljesítménye vagy a szűrők nagy száma komolyan csökkentheti a teljesítményt."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:95
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:91
 msgid "Best Practices"
 msgstr "Bevált gyakorlatok"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:97
+#: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:93
 msgid ""
 "In order to increase flexibility the list of affected templates should be "
 "configured in system configuration."
@@ -8848,10 +8870,8 @@ msgid "Ticket Event Module Code Example"
 msgstr "Jegyesemény modul kódpélda"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:10
-msgid ""
-"See ``Kernel/System/Ticket/Event/EventModulePostTemplate.pm`` in the package"
-" ``TemplateModule``."
-msgstr "Nézze meg a ``Kernel/System/Ticket/Event/EventModulePostTemplate.pm`` fájlt a ``TemplateModule`` csomagban."
+msgid "See files in ``Kernel/System/Ticket/Event`` folder of the source code."
+msgstr "Nézze meg a forráskód ``Kernel/System/Ticket/Event`` mappájában lévő fájlokat."
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:14
 msgid "Ticket Event Module Configuration Example"
@@ -8859,9 +8879,9 @@ msgstr "Jegyesemény modul beállítási példa"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:16
 msgid ""
-"See ``Kernel/Config/Files/EventModulePostTemplate.xml`` in the package "
-"``TemplateModule``."
-msgstr "Nézze meg a ``Kernel/Config/Files/EventModulePostTemplate.xml`` fájlt a ``TemplateModule`` csomagban."
+"See settings in ``Kernel/Config/Files/XML/Ticket.xml`` started with the name"
+" ``Ticket::EventModulePost###``."
+msgstr "Nézze meg a ``Kernel/Config/Files/XML/Ticket.xml`` fájlban azokat a beállításokat, amelyek neve ``Ticket::EventModulePost###`` előtaggal kezdődik."
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:20
 msgid "Ticket Event Module Use Case Example"
@@ -9166,9 +9186,8 @@ msgstr "Jegyszám előállító kódpélda"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:16
 msgid ""
-"See ``Kernel/System/Ticket/Number/UserRandom.pm`` in the package "
-"``TemplateModule``."
-msgstr "Nézze meg a ``Kernel/System/Ticket/Number/UserRandom.pm`` fájlt a ``TemplateModule`` csomagban."
+"See files in ``Kernel/System/Ticket/Number`` folder of the source code."
+msgstr "Nézze meg a forráskód ``Kernel/System/Ticket/Number`` mappájában lévő fájlokat."
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:20
 msgid "Ticket Number Generator Configuration Example"
@@ -9176,9 +9195,9 @@ msgstr "Jegyszám előállító beállítási példa"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:22
 msgid ""
-"See ``Kernel/Config/Files/TicketNumberGenerator.xml`` in the package "
-"``TemplateModule``."
-msgstr "Nézze meg a ``Kernel/Config/Files/TicketNumberGenerator.xml`` fájlt a ``TemplateModule`` csomagban."
+"See settings in ``Kernel/Config/Files/XML/Ticket.xml`` started with the name"
+" ``Ticket::NumberGenerator``."
+msgstr "Nézze meg a ``Kernel/Config/Files/XML/Ticket.xml`` fájlban azokat a beállításokat, amelyek neve ``Ticket::NumberGenerator`` előtaggal kezdődik."
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:26
 msgid "Ticket Number Generator Use Case Example"
