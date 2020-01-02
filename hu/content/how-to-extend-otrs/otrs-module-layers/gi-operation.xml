@@ -42,7 +42,7 @@ szubrutin elmagyarázásra kerül.
                 <programlisting><![CDATA[
 # --
 # Kernel/GenericInterface/Operation/Test/Test.pm - GenericInterface test operation backend
-# Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+# Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -196,7 +196,7 @@ az <link linkend="unit-tests">egységteszt fejezetre</link>.
             <para>
                 <programlisting linenumbering="numbered"><![CDATA[
 # --
-# Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+# Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
