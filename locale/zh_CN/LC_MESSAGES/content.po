@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: OTRS\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-07 20:26+0100\n"
-"PO-Revision-Date: 2019-12-07 19:28+0000\n"
-"Last-Translator: Balázs Úr\n"
+"PO-Revision-Date: 2019-12-31 10:11+0000\n"
+"Last-Translator: 汇民 王 <whuim@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/otrs/OTRS/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -5183,13 +5183,13 @@ msgid ""
 "system, you need to rebuild the application for the change to be considered."
 " To trigger the rebuild, restart the server with the ``--deploy-assets`` "
 "option:"
-msgstr ""
+msgstr "新接口的语言文件现在是构建应用程序（静态JSON）的一部分。将自定义语言文件添加到文件系统时，需要重新生成应用程序以使更改生效。要触发重建，请使用 ``--deploy-assets`` 选项重新启动服务器："
 
 #: ../../content/how-it-works/translations.rst:148
 msgid ""
 "During the build process, the language files will be refreshed and will take"
 " any ``*_Custom.pm`` into account."
-msgstr ""
+msgstr "在构建过程中，语言文件将被刷新，任何 ``*_Custom.pm`` 都会被处理。"
 
 #: ../../content/how-it-works/translations.rst:152
 msgid "The Translation Process Itself"
@@ -7798,7 +7798,7 @@ msgstr "输出过滤器代码示例"
 msgid ""
 "See package `TemplateModule "
 "<https://github.com/OTRS/TemplateModule/tree/master/Kernel/Output/HTML>`__."
-msgstr ""
+msgstr "请参阅软件包 `TemplateModule <https://github.com/OTRS/TemplateModule/tree/master/Kernel/Output/HTML>`__。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:65
 msgid "Output Filter Configuration Example"
@@ -7808,7 +7808,7 @@ msgstr "输出过滤器配置示例"
 msgid ""
 "See package `TemplateModule "
 "<https://github.com/OTRS/TemplateModule/tree/master/Kernel/Config/Files>`__."
-msgstr ""
+msgstr "请参阅软件包 `TemplateModule <https://github.com/OTRS/TemplateModule/tree/master/Kernel/Config/Files>`__。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:71
 msgid "Output Filter Use Case Example"
@@ -7864,7 +7864,7 @@ msgid ""
 "configured template that is needed for the current request. Thus low "
 "performance of the output filter or a large number of filters can severely "
 "degrade performance."
-msgstr ""
+msgstr "为当前请求所需的每个配置模板构造并运行每个 ``FilterElementPost`` 输出过滤器。因此，低性能的输出过滤器或大量的过滤器会严重降低性能。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:91
 msgid "Best Practices"
@@ -8870,7 +8870,7 @@ msgstr "工单事件模块代码示例"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:10
 msgid "See files in ``Kernel/System/Ticket/Event`` folder of the source code."
-msgstr ""
+msgstr "请参见源代码的 ``Kernel/System/Ticket/Event`` 目录中的文件。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:14
 msgid "Ticket Event Module Configuration Example"
@@ -8880,7 +8880,7 @@ msgstr "工单事件模块配置示例"
 msgid ""
 "See settings in ``Kernel/Config/Files/XML/Ticket.xml`` started with the name"
 " ``Ticket::EventModulePost###``."
-msgstr ""
+msgstr "请参见 ``Kernel/Config/Files/XML/Ticket.xml`` 中以名称 ``Ticket::EventModulePost###`` 开头的设置。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketevent.rst:20
 msgid "Ticket Event Module Use Case Example"
@@ -9186,7 +9186,7 @@ msgstr "工单编号生成器代码示例"
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:16
 msgid ""
 "See files in ``Kernel/System/Ticket/Number`` folder of the source code."
-msgstr ""
+msgstr "请参见源代码的 ``Kernel/System/Ticket/Number`` 目录中的文件。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:20
 msgid "Ticket Number Generator Configuration Example"
@@ -9196,7 +9196,7 @@ msgstr "工单编号生成器配置示例"
 msgid ""
 "See settings in ``Kernel/Config/Files/XML/Ticket.xml`` started with the name"
 " ``Ticket::NumberGenerator``."
-msgstr ""
+msgstr "请参见 ``Kernel/Config/Files/XML/Ticket.xml`` 中以名称 ``Ticket::NumberGenerator`` 开头的设置。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/ticketnumber-generator.rst:26
 msgid "Ticket Number Generator Use Case Example"
