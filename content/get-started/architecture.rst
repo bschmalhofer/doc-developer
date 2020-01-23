@@ -110,7 +110,7 @@ are:
 -  ``Kernel::System::Group`` to manage groups.
 -  ``Kernel::System::Email`` for sending emails.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 Front End Handle
@@ -138,7 +138,7 @@ Front end modules are located under ``$OTRS_HOME/Kernel/Modules/*.pm``. There ar
 - ``UserObject`` to get the user functions from the current user.
 - ``GroupObject`` to get the group functions.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 CMD Front End
@@ -160,7 +160,7 @@ Generic interface modules are located under ``$OTRS_HOME/Kernel/GenericInterface
 -  ``Kernel::GenericInterface::Invoker`` to execute requester actions.
 -  ``Kernel::GenericInterface::Debugger`` to track web service communication, using log entries.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 Generic Interface Invoker Modules
@@ -170,7 +170,7 @@ Generic interface invoker modules are located under ``$OTRS_HOME/Kernel/GenericI
 
 Generic interface invoker modules are used as a back end to create requests for remote systems to execute actions.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 Generic Interface Mapping Modules
@@ -178,7 +178,7 @@ Generic Interface Mapping Modules
 
 Generic interface mapping modules are located under ``$OTRS_HOME/Kernel/GenericInterface/Mapping/*``. These modules are used to transform data (keys and values) from one format to another.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 Generic Interface Operation Modules
@@ -188,7 +188,7 @@ Generic interface operation modules are located under ``$OTRS_HOME/Kernel/Generi
 
 Generic interface operation modules are used as a back end to perform actions requested by a remote system.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 Generic Interface Transport Modules
@@ -198,7 +198,7 @@ Generic interface network transport modules are located under ``$OTRS_HOME/Kerne
 
 Generic interface transport modules are used send data to, and receive data from a remote system.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 Scheduler Task Handler Modules
@@ -206,7 +206,7 @@ Scheduler Task Handler Modules
 
 Scheduler task handler modules are located under ``$OTRS_HOME/Kernel/Scheduler/TaskHandler/*``. These modules are used to perform asynchronous tasks. For example, the ``GenericInterface`` task handler perform generic interface requests to remote systems outside the Apache process. This helps the system to be more responsive, preventing possible performance issues.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 Database
