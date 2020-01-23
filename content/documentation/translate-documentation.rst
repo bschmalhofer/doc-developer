@@ -1,8 +1,7 @@
 Translating the Documentation
 =============================
 
-All translations of the OTRS GUI, the public extension modules and the documentations are managed via
-`Transifex <https://www.transifex.com/otrs/OTRS/>`__.
+All translations of the OTRS GUI, the public extension modules and the documentations are managed using `Weblate <https://translate.otrs.com/>`__.
 
 From OTRS 7 the documentations are available in *reStructuredText* format, that replaced the old *DocBook* format. Be careful not to break the structure while translating the documentation.
 

@@ -313,7 +313,7 @@ One common use case is the filling of a table with dynamic data:
        </tbody>
    </table>
 
-The surrounding table with the header is always generated. If no data was found, the block ``NoDataFoundMsg`` is called once, resulting in a table with one data row with the message *No data found.*
+The surrounding table with the header is always generated. If no data was found, the block ``NoDataFoundMsg`` is called once, resulting in a table with one data row with the message *No data found*.
 
 If data was found, for each row there is one function call made for the block ``OverViewResultRow`` (each time passing in the data for this particular row), resulting in a table with as many data rows as results were found.
 
@@ -354,7 +354,7 @@ Let's look at how the blocks are called from the application module:
 
 Note how the blocks have both their name and an optional set of data passed in as separate parameters to the block function call. Data inserting commands inside a block always need the data provided to the block function call of this block, not the general template rendering call.
 
-For more information, see: https://doc.otrs.com/doc/
+For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__.
 
 
 ``[% WRAPPER JSOnDocumentComplete %]...[% END %]``

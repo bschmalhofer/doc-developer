@@ -1169,7 +1169,7 @@ This function is similar to ``DisplayValueRender()`` but is used in places where
 Other Functions
 ~~~~~~~~~~~~~~~
 
-The following are other functions that are might needed if the new dynamic field does not inherit from other classes. To see the complete code of this functions please take a look directly into the files ``Kernel/System/DynamicField/Driver/Base.pm`` and ``Kernel/System/DynamicField/Driver/BaseText.pm``
+The following are other functions that are might needed if the new dynamic field does not inherit from other classes. To see the complete code of this functions please take a look directly into the files ``Kernel/System/DynamicField/Driver/Base.pm`` and ``Kernel/System/DynamicField/Driver/BaseText.pm``.
 
 .. code-block:: Perl
 

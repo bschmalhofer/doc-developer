@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+# Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
 # This file is distributed under the same license as the OTRS Developer Manual package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-07 20:26+0100\n"
+"POT-Creation-Date: 2020-01-23 19:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1049,39 +1049,39 @@ msgstr ""
 
 #: ../../content/contributing/translate.rst:6
 #: ../../content/documentation/translate-documentation.rst:4
-msgid "All translations of the OTRS GUI, the public extension modules and the documentations are managed via `Transifex <https://www.transifex.com/otrs/OTRS/>`__."
+msgid "All translations of the OTRS GUI, the public extension modules and the documentations are managed using `Weblate <https://translate.otrs.com/>`__."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:9
+#: ../../content/contributing/translate.rst:8
 msgid "To contribute to translations:"
 msgstr ""
 
+#: ../../content/contributing/translate.rst:10
+msgid "Sign up for a free translator account on `Weblate <https://translate.otrs.com/>`__."
+msgstr ""
+
 #: ../../content/contributing/translate.rst:11
-msgid "Sign up for a free translator account on `Transifex <https://www.transifex.com>`__."
+msgid "Select a translation component and your language for translation."
 msgstr ""
 
 #: ../../content/contributing/translate.rst:12
-msgid "Join your `language team <https://www.transifex.com/otrs/teams/>`__ and wait for the acceptance."
-msgstr ""
-
-#: ../../content/contributing/translate.rst:13
 msgid "Start updating your translation. No additional software or files required."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:17
-msgid "If your language is not listed in the dashboard, you can request a new language on *Transifex*. After it is approved, you can start translating."
+#: ../../content/contributing/translate.rst:16
+msgid "If your language is not listed in the dashboard, you can request a language. After it is approved, you can start translating."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:19
-#: ../../content/documentation/translate-documentation.rst:7
+#: ../../content/contributing/translate.rst:18
+#: ../../content/documentation/translate-documentation.rst:6
 msgid "From OTRS 7 the documentations are available in *reStructuredText* format, that replaced the old *DocBook* format. Be careful not to break the structure while translating the documentation."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:23
+#: ../../content/contributing/translate.rst:22
 msgid "You can find some examples in the :doc:`../documentation` chapter."
 msgstr ""
 
-#: ../../content/contributing/translate.rst:25
+#: ../../content/contributing/translate.rst:24
 msgid "The OTRS developers will download the translations from time to time into the OTRS source code repositories, you don't have to submit them anywhere."
 msgstr ""
 
@@ -1377,7 +1377,7 @@ msgid "From OTRS 7 the documentations are available in *reStructuredText* format
 msgstr ""
 
 #: ../../content/documentation.rst:6
-msgid "The documentation is written in English and translated into many languages on Transifex."
+msgid "The documentation is written in English and translated into many languages."
 msgstr ""
 
 #: ../../content/documentation/documentation-infrastucture.rst:2
@@ -1756,63 +1756,63 @@ msgstr ""
 msgid "Translating the Documentation"
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:9
+#: ../../content/documentation/translate-documentation.rst:8
 msgid "Here are some examples."
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:24
+#: ../../content/documentation/translate-documentation.rst:23
 msgid "Emphases"
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:12
+#: ../../content/documentation/translate-documentation.rst:11
 msgid "Emphasized texts are between two asterisks. The text should be translated. This is usually used for screen names, titles, buttons and labels. Please check the user interface translations to find and use the same wording in the documentation."
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:14
-#: ../../content/documentation/translate-documentation.rst:29
-#: ../../content/documentation/translate-documentation.rst:44
-#: ../../content/documentation/translate-documentation.rst:59
-#: ../../content/documentation/translate-documentation.rst:74
+#: ../../content/documentation/translate-documentation.rst:13
+#: ../../content/documentation/translate-documentation.rst:28
+#: ../../content/documentation/translate-documentation.rst:43
+#: ../../content/documentation/translate-documentation.rst:58
+#: ../../content/documentation/translate-documentation.rst:73
 msgid "Example original sentence:"
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:20
-#: ../../content/documentation/translate-documentation.rst:35
-#: ../../content/documentation/translate-documentation.rst:50
-#: ../../content/documentation/translate-documentation.rst:65
-#: ../../content/documentation/translate-documentation.rst:80
+#: ../../content/documentation/translate-documentation.rst:19
+#: ../../content/documentation/translate-documentation.rst:34
+#: ../../content/documentation/translate-documentation.rst:49
+#: ../../content/documentation/translate-documentation.rst:64
+#: ../../content/documentation/translate-documentation.rst:79
 msgid "Example translation into Hungarian:"
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:39
+#: ../../content/documentation/translate-documentation.rst:38
 msgid "Strong"
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:27
+#: ../../content/documentation/translate-documentation.rst:26
 msgid "Strong texts are between two double asterisks. The text should be translated. This is usually used for important information."
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:54
+#: ../../content/documentation/translate-documentation.rst:53
 msgid "Literal texts"
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:42
+#: ../../content/documentation/translate-documentation.rst:41
 msgid "Literal texts are between two double back-tick characters. This is usually used for variable names, configuration names and file paths, and **must not** be translated, otherwise it will break the structure."
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:69
+#: ../../content/documentation/translate-documentation.rst:68
 msgid "Internal links"
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:57
+#: ../../content/documentation/translate-documentation.rst:56
 msgid "Internal links point to other pages or headings of the pages. ``:doc:`page-name``` is used for referring to a page and ``:ref:`Heading Title``` is used for referring to a heading. There is a custom tag ``:sysconfig:`System Configuration Name``` for referring to a system configuration. The texts *page-name*, *Heading Title* and *System Configuration Name* **must not** be translated, otherwise it will break the structure."
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:83
+#: ../../content/documentation/translate-documentation.rst:82
 msgid "External links"
 msgstr ""
 
-#: ../../content/documentation/translate-documentation.rst:72
+#: ../../content/documentation/translate-documentation.rst:71
 msgid "External links consist of a visible text and an URL in form *\\`visible text <https://example.com>\\`__*. The *visible text* should be translated."
 msgstr ""
 
@@ -2142,7 +2142,7 @@ msgstr ""
 #: ../../content/get-started/architecture.rst:201
 #: ../../content/get-started/architecture.rst:209
 #: ../../content/how-it-works/templates.rst:357
-msgid "For more information, see: https://doc.otrs.com/doc/"
+msgid "For more information see the `Documentation Portal <https://doc.otrs.com/doc/>`__."
 msgstr ""
 
 #: ../../content/get-started/architecture.rst:117
@@ -3702,7 +3702,7 @@ msgid "One common use case is the filling of a table with dynamic data:"
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:316
-msgid "The surrounding table with the header is always generated. If no data was found, the block ``NoDataFoundMsg`` is called once, resulting in a table with one data row with the message *No data found.*"
+msgid "The surrounding table with the header is always generated. If no data was found, the block ``NoDataFoundMsg`` is called once, resulting in a table with one data row with the message *No data found*."
 msgstr ""
 
 #: ../../content/how-it-works/templates.rst:318
@@ -3822,7 +3822,7 @@ msgid "The console command ``otrs.Console.pl Dev::Tools::TranslationsUpdate`` is
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:59
-msgid "For the OTRS framework and all extension modules that also use Transifex for managing the translations, .pot and .po files are written. These files are used to push the translatable strings to Transifex and pull the translations from there."
+msgid "For the OTRS framework and all extension modules, ``.pot`` and ``.po`` files are written. These files are used by translators to localize the software."
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:61
@@ -3866,7 +3866,7 @@ msgid "The Translation Process Itself"
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:154
-msgid "OTRS uses Transifex to manage the translation process. Please see :doc:`../contributing/translate` section for details."
+msgid "OTRS uses `Weblate <https://translate.otrs.com/>`__ to manage the translation process. Please see :doc:`../contributing/translate` section for details."
 msgstr ""
 
 #: ../../content/how-it-works/translations.rst:158
@@ -4916,7 +4916,7 @@ msgid "Other Functions"
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1172
-msgid "The following are other functions that are might needed if the new dynamic field does not inherit from other classes. To see the complete code of this functions please take a look directly into the files ``Kernel/System/DynamicField/Driver/Base.pm`` and ``Kernel/System/DynamicField/Driver/BaseText.pm``"
+msgid "The following are other functions that are might needed if the new dynamic field does not inherit from other classes. To see the complete code of this functions please take a look directly into the files ``Kernel/System/DynamicField/Driver/Base.pm`` and ``Kernel/System/DynamicField/Driver/BaseText.pm``."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1178
