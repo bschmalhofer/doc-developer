@@ -2269,7 +2269,7 @@ msgstr "两个星号：\\*\\*text\\*\\* 表示 **强调** （粗体）。"
 
 #: ../../content/documentation/restructuredtext-primer.rst:69
 msgid "Grave accents: \\`\\`text\\`\\` for ``literal texts`` (code samples)."
-msgstr "反引号：\\`\\`text\\`\\` 表示 ``常量文本``（示例代码）。"
+msgstr "反引号：\\`\\`text\\`\\` 表示 ``常量文本`` （示例代码）。"
 
 #: ../../content/documentation/restructuredtext-primer.rst:71
 msgid ""
