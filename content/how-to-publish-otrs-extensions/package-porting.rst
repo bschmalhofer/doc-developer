@@ -368,3 +368,59 @@ Replace this by:
 .. code-block:: Perl
 
    my %RegisteredEvents = $Kernel::OM->Get('Kernel::System::Event::Handler')->EventListGet( ... );
+
+``MojoUserAgent`` Added, ``WebUserAgent`` Deprecated
+----------------------------------------------------
+
+The legacy ``Kernel::System::WebUserAgent`` was deprecated and ``Kernel::System::MojoUserAgent`` provided as a modern alternative.
+
+Now it is possible to use the full `Mojo::UserAgent <https://metacpan.org/pod/Mojo::UserAgent>`__ API on instances of the new HTTP user agent.
+
+.. note::
+
+    The legacy ``WebUserAgent`` will be removed in a future version of OTRS. Please update all code that used it to the new object.
+
+You can replace old code like:
+
+.. code-block:: Perl
+
+    $Kernel::OM->ObjectParamAdd(
+        'Kernel::System::WebUserAgent' => {
+            Timeout => $RequestTimeout,
+            Proxy   => $RequestProxy,
+        },
+    );
+
+    my %Response = $Kernel::OM->Get('Kernel::System::WebUserAgent')->Request(
+        Type => 'POST',
+        URL  => $Self->{CloudServiceURL},
+        Data => {
+            Action       => 'PublicCloudService',
+            RequestData  => $RequestData,
+            UniqueIDAuth => $UniqueIDAuth,
+            OTRSIDAuth   => $OTRSIDAuth,
+        },
+    );
+
+    if ( $Response{Status} eq '200 OK' && $Response{Content} ) { ... }
+
+Replace this by:
+
+.. code-block:: Perl
+
+    my $MojoUserAgent = Kernel::System::MojoUserAgent->new(
+        Timeout => $RequestTimeout,
+        Proxy   => $RequestProxy,
+    );
+
+    my $Response = $MojoUserAgent->post(
+        $Self->{CloudServiceURL},
+        form => {
+            Action       => 'PublicCloudService',
+            RequestData  => $RequestData,
+            UniqueIDAuth => $UniqueIDAuth,
+            OTRSIDAuth   => $OTRSIDAuth,
+        },
+    )->res();
+
+    if ( $Response->code() == 200 && $Response->body() ) { ... }
