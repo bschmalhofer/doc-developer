@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-23 19:50+0100\n"
+"POT-Creation-Date: 2020-02-01 01:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8435,6 +8435,7 @@ msgstr ""
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:262
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:303
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:366
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:407
 msgid "Replace this by:"
 msgstr ""
 
@@ -8484,6 +8485,26 @@ msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-porting.rst:360
 msgid "If an event list is required in your code and you have an occurrence of this:"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:373
+msgid "``MojoUserAgent`` Added, ``WebUserAgent`` Deprecated"
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:375
+msgid "The legacy ``Kernel::System::WebUserAgent`` was deprecated and ``Kernel::System::MojoUserAgent`` provided as a modern alternative."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:377
+msgid "Now it is possible to use the full `Mojo::UserAgent <https://metacpan.org/pod/Mojo::UserAgent>`__ API on instances of the new HTTP user agent."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:381
+msgid "The legacy ``WebUserAgent`` will be removed in a future version of OTRS. Please update all code that used it to the new object."
+msgstr ""
+
+#: ../../content/how-to-publish-otrs-extensions/package-porting.rst:383
+msgid "You can replace old code like:"
 msgstr ""
 
 #: ../../content/index.rst:3
