@@ -1,13 +1,12 @@
 Mapping
 =======
 
-The mapping is used to convert data from OTRS to the external systems, and vice versa. This data can be represented as key => value pairs. Mapping modules can be developed to transform not just values but also
-the keys.
+The mapping is used to convert data from OTRS to the external systems, and vice versa. This data can be represented as key => value pairs. Mapping modules can be developed to transform not just values but also the keys.
 
 For example:
 
 +-----------------+-----------------+
-| From            | To              |
+| Mapping from    | Mapping to      |
 +=================+=================+
 | Prio => Warning | PriorityID => 3 |
 +-----------------+-----------------+
@@ -54,8 +53,7 @@ In this section a sample mapping module is shown and each subroutine is explaine
 .. code-block:: Perl
 
    # --
-   # Kernel/GenericInterface/Mapping/Test.pm - GenericInterface test data mapping backend
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you

@@ -74,7 +74,7 @@ Attach the following header to every source file. Source files are saved in UTF-
 .. code-block:: Perl
 
    # --
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -87,7 +87,7 @@ Executable files (``*.pl``) have a special header.
 
    #!/usr/bin/perl
    # --
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This program is free software: you can redistribute it and/or modify
    # it under the terms of the GNU General Public License as published by

@@ -12,10 +12,7 @@ The ticket menu modules are located under ``Kernel/Output/HTML/TicketMenu*.pm``.
 .. code-block:: Perl
 
    # --
-   # Kernel/Output/HTML/TicketMenuCustom.pm
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
-   # --
-   # Id: TicketMenuCustom.pm,v 1.17 2010/04/12 21:34:06 martin Exp $
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -122,8 +119,7 @@ There is the need to activate your custom ticket menu module. This can be done u
 .. code-block:: XML
 
    <ConfigItem Name="Ticket::Frontend::MenuModule###110-Custom" Required="0" Valid="1">
-       <Description Lang="en">Module to show custom link in menu.</Description>
-       <Description Lang="de">Mit diesem Modul wird der Custom-Link in der Linkleiste der Ticketansicht angezeigt.</Description>
+       <Description Translatable="1">Module to show custom link in menu.</Description>
        <Group>Ticket</Group>
        <SubGroup>Frontend::Agent::Ticket::MenuModule</SubGroup>
        <Setting>

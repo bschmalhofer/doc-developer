@@ -45,7 +45,7 @@ The following code implements a dummy process management module that can be used
 .. code-block:: Perl
 
    # --
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -298,7 +298,7 @@ The following code implements a simple input process management module configura
 .. code-block:: Perl
 
    # --
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -391,7 +391,7 @@ The following code implements a basic HTML template for the test process managem
 .. code-block:: Perl
 
    # --
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you

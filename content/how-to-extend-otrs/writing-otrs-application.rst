@@ -112,7 +112,6 @@ After creating the links and executing the system configuration, a new module wi
 .. code-block:: Perl
 
    # --
-   # Kernel/Modules/AgentHelloWorld.pm - frontend module
    # Copyright (C) (year) (name of author) (email of author)
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -170,7 +169,6 @@ Next, we create the file for the core module ``/HelloWorld/Kernel/System/HelloWo
 .. code-block:: Perl
 
    # --
-   # Kernel/System/HelloWorld.pm - core module
    # Copyright (C) (year) (name of author) (email of author)
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -269,7 +267,6 @@ The last thing missing before the new module can run is the relevant HTML templa
 .. code-block:: HTML
 
    # --
-   # Kernel/Output/HTML/Templates/Standard/AgentHelloWorld.tt - overview
    # Copyright (C) (year) (name of author) (email of author)
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see

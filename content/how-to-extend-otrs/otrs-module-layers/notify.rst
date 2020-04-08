@@ -18,8 +18,7 @@ The notification modules are located under ``Kernel/Output/HTML/TicketNotificati
 .. code-block:: Perl
 
    # --
-   # Kernel/Output/HTML/NotificationCustom.pm
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -97,8 +96,7 @@ There is the need to activate your custom notification module. This can be done 
 .. code-block:: XML
 
    <ConfigItem Name="Frontend::NotifyModule###3-Custom" Required="0" Valid="0">
-       <Description Lang="en">Module to show custom message in the agent interface.</Description>
-       <Description Lang="de">Mit diesem Modul können eigene Meldungenen innerhalb des Agent-Interfaces angezeigt werden.</Description>
+       <Description Translatable="1">Module to show custom message in the agent interface.</Description>
        <Group>Framework</Group>
        <SubGroup>Frontend::Agent::ModuleNotify</SubGroup>
        <Setting>

@@ -26,8 +26,7 @@ In this section a sample stats module is shown and each subroutine is explained.
 .. code-block:: Perl
 
    # --
-   # Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - all advice functions
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -401,8 +400,7 @@ Now, that all subroutines are explained, this is the complete sample stats modul
 .. code-block:: Perl
 
    # --
-   # Kernel/System/Stats/Dynamic/DynamicStatsTemplate.pm - all advice functions
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -611,7 +609,7 @@ Stats Configuration Example
    <?xml version="1.0" encoding="utf-8" ?>
    <otrs_config version="1.0" init="Config">
        <ConfigItem Name="Stats::DynamicObjectRegistration###DynamicStatsTemplate" Required="0" Valid="1">
-           <Description Lang="en">Here you can decide if the common stats module may generate stats about the number of default tickets a requester created.</Description>
+           <Description Translatable="1">Here you can decide if the common stats module may generate stats about the number of default tickets a requester created.</Description>
            <Group>Framework</Group>
            <SubGroup>Core::Stats</SubGroup>
            <Setting>
@@ -765,8 +763,7 @@ The ``Run`` method actually generates the table data for the stats. It gets the 
 .. code-block:: Perl
 
    # --
-   # Kernel/System/Stats/Static/StaticStatsTemplate.pm
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
