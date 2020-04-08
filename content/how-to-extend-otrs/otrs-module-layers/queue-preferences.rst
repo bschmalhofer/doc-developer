@@ -12,10 +12,7 @@ The interface class is called ``Kernel::System::Queue``. The example queue prefe
 .. code-block:: Perl
 
    # --
-   # Kernel/System/Queue/PreferencesCustom.pm - some user functions
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
-   # --
-   # Id: PreferencesCustom.pm,v 1.5 2009/02/16 11:47:34 tr Exp $
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -121,8 +118,7 @@ There is the need to activate your custom queue preferences module. This can be 
 .. code-block:: XML
 
    <ConfigItem Name="Queue::PreferencesModule" Required="1" Valid="1">
-       <Description Lang="en">Default queue preferences module.</Description>
-       <Description Lang="de">Standard Queue Preferences Module.</Description>
+       <Description Translatable="1">Default queue preferences module.</Description>
        <Group>Ticket</Group>
        <SubGroup>Frontend::Queue::Preferences</SubGroup>
        <Setting>

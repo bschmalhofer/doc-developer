@@ -13,10 +13,7 @@ The interface class is called ``Kernel::System::Service``. The example service p
 .. code-block:: Perl
 
    # --
-   # Kernel/System/Service/PreferencesCustom - some user functions
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
-   # --
-   # Id: PreferencesCustom.pm,v 1.2 2009/02/16 11:47:34 tr Exp $
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -122,8 +119,7 @@ There is the need to activate your custom service preferences module. This can b
 .. code-block:: XML
 
    <ConfigItem Name="Service::PreferencesModule" Required="1" Valid="1">
-       <Description Lang="en">Default service preferences module.</Description>
-       <Description Lang="de">Standard Service Preferences Module.</Description>
+       <Description Translatable="1">Default service preferences module.</Description>
        <Group>Ticket</Group>
        <SubGroup>Frontend::Service::Preferences</SubGroup>
        <Setting>

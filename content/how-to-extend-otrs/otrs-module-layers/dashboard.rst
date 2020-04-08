@@ -11,8 +11,7 @@ Dashboard module to display statistics in the form of a line graph.
 .. code-block:: Perl
 
    # --
-   # Kernel/Output/HTML/DashboardTicketStatsGeneric.pm - message of the day
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -163,8 +162,7 @@ To use this module add the following to the ``Kernel/Config.pm`` and restart you
 .. code-block:: XML
 
    <ConfigItem Name="DashboardBackend###0250-TicketStats" Required="0" Valid="1">
-       <Description Lang="en">Parameters for the dashboard backend. "Group" are used to restricted access to the plugin (e. g. Group: admin;group1;group2;). "Default" means if the plugin is enabled per default or if the user needs to enable it manually. "CacheTTL" means the cache time in minutes for the plugin.</Description>
-       <Description Lang="de">Parameter für das Dashboard Backend. "Group" ist verwendet um den Zugriff auf das Plugin einzuschränken (z. B. Group: admin;group1;group2;). ""Default" bedeutet ob das Plugin per default aktiviert ist oder ob dies der Anwender manuell machen muss. "CacheTTL" ist die Cache-Zeit in Minuten nach der das Plugin erneut aufgerufen wird.</Description>
+       <Description Translatable="1">Parameters for the dashboard backend. "Group" are used to restricted access to the plugin (e. g. Group: admin;group1;group2;). "Default" means if the plugin is enabled per default or if the user needs to enable it manually. "CacheTTL" means the cache time in minutes for the plugin.</Description>
        <Group>Ticket</Group>
        <SubGroup>Frontend::Agent::Dashboard</SubGroup>
        <Setting>

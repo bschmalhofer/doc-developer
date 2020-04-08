@@ -13,10 +13,7 @@ The interface class is called ``Kernel::System::Auth``. The example agent authen
 .. code-block:: Perl
 
    # --
-   # Kernel/System/Auth/Sync/CustomAuthSync.pm - provides the CustomAuthSync
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
-   # --
-   # Id: CustomAuthSync.pm,v 1.9 2010/03/25 14:42:45 martin Exp $
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you

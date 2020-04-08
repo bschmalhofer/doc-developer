@@ -23,8 +23,7 @@ In this section a sample operation module is shown and each subroutine is explai
 .. code-block:: Perl
 
    # --
-   # Kernel/GenericInterface/Operation/Test/Test.pm - GenericInterface test operation backend
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -150,7 +149,7 @@ The following is just the starting point for a unit test:
 .. code-block:: Perl
 
    # --
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you

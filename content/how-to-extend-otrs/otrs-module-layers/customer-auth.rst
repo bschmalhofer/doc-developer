@@ -12,11 +12,7 @@ The interface class is called ``Kernel::System::CustomerAuth``. The example cust
 .. code-block:: Perl
 
    # --
-   # Kernel/System/CustomerAuth/CustomAuth.pm - provides the custom Authentication
-   # based on Martin Edenhofer's Kernel::System::Auth::DB
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
-   # --
-   # Id: CustomAuth.pm,v 1.11 2009/09/22 15:16:05 mb Exp $
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -167,8 +163,7 @@ There is the need to activate your custom customer authenticate module. This can
 .. code-block:: XML
 
    <ConfigItem Name="AuthModule" Required="1" Valid="1">
-       <Description Lang="en">Module to authenticate customers.</Description>
-       <Description Lang="de">Modul zum Authentifizieren der Customer.</Description>
+       <Description Translatable="1">Module to authenticate customers.</Description>
        <Group>Framework</Group>
        <SubGroup>Frontend::CustomerAuthAuth</SubGroup>
        <Setting>

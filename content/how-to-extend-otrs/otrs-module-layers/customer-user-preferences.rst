@@ -12,10 +12,7 @@ The interface class is called ``Kernel::System::CustomerUser``. The example cust
 .. code-block:: Perl
 
    # --
-   # Kernel/System/CustomerUser/Preferences/Custom.pm - some customer user functions
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
-   # --
-   # Id: Custom.pm,v 1.20 2009/10/07 20:41:50 martin Exp $
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -142,8 +139,7 @@ There is the need to activate your custom customer-user preferences module. This
 .. code-block:: XML
 
    <ConfigItem Name="CustomerPreferences" Required="1" Valid="1">
-       <Description Lang="en">Parameters for the customer preference table.</Description>
-       <Description Lang="de">Parameter für die Tabelle mit den Einstellungen für die Customer.</Description>
+       <Description Translatable="1">Parameters for the customer preference table.</Description>
        <Group>Framework</Group>
        <SubGroup>Frontend::Customer::Preferences</SubGroup>
        <Setting>

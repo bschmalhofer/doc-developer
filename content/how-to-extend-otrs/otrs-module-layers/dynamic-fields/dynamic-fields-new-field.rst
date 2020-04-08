@@ -115,8 +115,7 @@ In this section an admin dialog for password dynamic field is shown and explaine
 .. code-block:: Perl
 
    # --
-   # Kernel/Modules/AdminDynamicFieldPassword.pm - provides a dynamic fields password config view for admins
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -678,8 +677,7 @@ In this section an admin dialog template for the password dynamic field is shown
 .. code-block:: Perl
 
    # --
-   # AdminDynamicFieldPassword.tt - provides HTML form for AdminDynamicFieldPassword
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -875,8 +873,7 @@ In this section the password dynamic field driver is shown and explained. This d
 .. code-block:: Perl
 
    # --
-   # Kernel/System/DynamicField/Driver/Password.pm - Driver for DynamicField Password backend
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you

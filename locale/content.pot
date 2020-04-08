@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS Developer Manual 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-23 19:17+0100\n"
+"POT-Creation-Date: 2020-04-08 11:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3934,19 +3934,19 @@ msgstr ""
 msgid "The interface class is called ``Kernel::System::Auth``. The example agent authentication may be called ``Kernel::System::Auth::CustomAuth``. You can find an example below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:161
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:157
 msgid "Agent Authentication Module Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:163
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:159
 msgid "There is the need to activate your custom agent authenticate module. This can be done using the Perl configuration below. It is not recommended to use the XML configuration because you can lock you out via the system configuration."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:171
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:167
 msgid "Agent Authentication Module Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:173
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:169
 msgid "A useful example of an authentication implementation could be a SOAP back end."
 msgstr ""
 
@@ -3966,19 +3966,19 @@ msgstr ""
 msgid "The interface class is called ``Kernel::System::Auth``. The example agent authentication may be called ``Kernel::System::Auth::Sync::CustomAuthSync``. You can find an example below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:68
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:65
 msgid "Authentication Synchronization Module Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:70
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:67
 msgid "You should activate your custom synchronization module. This can be done using the Perl configuration below. It is not recommended to use the XML configuration because this would allow you to lock yourself out via system configuration."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:78
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:75
 msgid "Authentication Synchronization Module Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:80
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:77
 msgid "Useful synchronization implementation could be a SOAP or RADIUS back end."
 msgstr ""
 
@@ -3998,19 +3998,19 @@ msgstr ""
 msgid "The interface class is called ``Kernel::System::CustomerAuth``. The example customer authentication may be called ``Kernel::System::CustomerAuth::CustomAuth``. You can find an example below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:163
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:159
 msgid "Customer Authentication Module Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:165
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:161
 msgid "There is the need to activate your custom customer authenticate module. This can be done using the XML configuration below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:181
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:176
 msgid "Customer Authentication Module Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:183
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:178
 msgid "Useful authentication implementation could be a SOAP back end."
 msgstr ""
 
@@ -4030,19 +4030,19 @@ msgstr ""
 msgid "The interface class is called ``Kernel::System::CustomerUser``. The example customer-user preferences may be called ``Kernel::System::CustomerUser::Preferences::Custom``. You can find an example below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:138
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:135
 msgid "Customer User Preferences Module Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:137
 msgid "There is the need to activate your custom customer-user preferences module. This can be done using the XML configuration below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:162
 msgid "Customer User Preferences Module Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:168
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:164
 msgid "Useful preferences implementation could be a SOAP or LDAP back end."
 msgstr ""
 
@@ -4096,11 +4096,11 @@ msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.rst:72
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.rst:61
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:138
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:262
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:136
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:74
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:43
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:137
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:260
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:72
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:42
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:67
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:321
 msgid "This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword."
@@ -4240,11 +4240,11 @@ msgstr ""
 msgid "Dashboard Widget"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:161
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:160
 msgid "To use this module add the following to the ``Kernel/Config.pm`` and restart your web server (if you use ``mod_perl``)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:187
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:185
 msgid "An excessive number of days or individual lines may lead to performance degradation."
 msgstr ""
 
@@ -4332,31 +4332,31 @@ msgstr ""
 msgid "In this section the ``Foo`` extension for back end is shown and explained. The extension only defines the function ``Foo()``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:211
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:210
 msgid "The function ``Foo()`` is only used for test purposes. First it checks the dynamic field configuration, then it checks if the dynamic field driver (type) exists and was already loaded. To prevent the function call on a driver where is not defined it first check if the driver can execute the function, then executes the function in the driver passing all parameters."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:215
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:214
 msgid "It is also possible to skip the step that tests if the driver can execute the function. To do that it is necessary to implement a mechanism in the front end module to require a special behavior on the dynamic field, and only after call the function in the back end object."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:219
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:218
 msgid "Dynamic Field Driver Extension Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:221
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:220
 msgid "Driver extensions will be loaded transparently into the driver itself as a base class. All defined object and properties from the driver will be accessible in the extension."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:225
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:224
 msgid "All new functions implemented in the driver extension should be defined in a back end extension, as every function is called from the back end object."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:227
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:226
 msgid "In this section the ``Foo`` extension for text field driver is shown and explained. The extension only implements the function ``Foo()``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:271
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:269
 msgid "The function ``Foo()`` has no special logic. It is only for testing and it always returns 1."
 msgstr ""
 
@@ -4789,213 +4789,213 @@ msgstr ""
 msgid "In this section an admin dialog for password dynamic field is shown and explained."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:167
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:962
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:959
 msgid "The constructor ``new`` creates a new instance of the class. According to the coding guidelines objects of other classes that are needed in this module have to be created in ``new``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:208
 msgid "``Run`` is the default function to be called by the web request. We try to make this function as simple as possible and let the helper functions to do the hard work."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:240
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:239
 msgid "``_Add`` function is also pretty simple, it just get some parameters from the web request and call the ``_ShowScreen()`` function. Normally this function is not needed to be modified."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:358
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:357
 msgid "The ``_AddAction`` function gets the configuration parameters from a new dynamic field, and it validates that the dynamic field name only contains letters and numbers. This function could validate any other parameter."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:360
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:359
 msgid "``Name``, ``Label``, ``FieldOrder``, ``Validity`` are common parameters for all dynamic fields and they are required. Each dynamic field has its specific configuration that must contain at least the ``DefaultValue`` parameter. In this case it also have ``ShowValue`` and ``ValueMask`` parameters for password field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:363
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:362
 msgid "If the field has the ability to store a fixed list of values they should be stored in the ``PossibleValues`` parameter inside the specific configuration hash."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:365
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:364
 msgid "As in other admin modules, if a parameter is not valid this function returns to the add screen highlighting the erroneous form fields."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:367
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:366
 msgid "If all the parameters are correct it creates a new dynamic field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:430
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:429
 msgid "The ``_Change`` function is very similar to the ``_Add`` function but since this function is used to edit an existing field it needs to validated the ``FieldID`` parameter and gather the current dynamic field data."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:575
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:574
 msgid "``_ChangeAction()`` is very similar to ``_AddAction()``, but adapted for the update of an existing field instead of creating a new one."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:668
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:667
 msgid "The ``_ShowScreen`` function is used to set and define the HTML elements and blocks from a template to generate the admin dialog HTML code."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:672
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:671
 msgid "Dynamic Field Template for Admin Dialog Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:674
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:673
 msgid "The template is the place where the HTML code of the dialog is stored."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:676
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:675
 msgid "In this section an admin dialog template for the password dynamic field is shown and explained."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:689
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:687
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:401
 msgid "This is common header that can be found in common OTRS modules."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:712
 msgid "This part of the code has the main box and also the actions side bar. No modifications are needed in this section."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:727
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:725
 msgid "In this section of the code is defined the right part of the dialog. Notice that the value of the ``Action`` hidden input must match with the name of the admin dialog."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:795
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:793
 msgid "This first widget contains the common form attributes for the dynamic fields. For consistency with other dynamic fields is recommended to leave this part of the code unchanged."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:835
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:833
 msgid "The second widget has the dynamic field specific form attributes. This is the place where new attributes can be set and it could use JavaScript and AJAX technologies to make it more easy or friendly for the end user."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:861
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:859
 msgid "The final part of the file contains the *Save* button and the *Cancel* link, as well as other needed JavaScript code."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:865
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:863
 msgid "Dynamic Field Driver Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:867
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:865
 msgid "The driver *is* the dynamic field. It contains several functions that are used wide in the OTRS framework. A driver can inherit some functions form base classes, for example ``TextArea`` driver inherits most of the functions from ``Base.pm`` and ``BaseText.pm`` and it only implements the functions that requires different logic or results. Checkbox field driver only inherits from ``Base.pm`` as all other functions are very different from any other base driver."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:871
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:869
 msgid "Please refer to the Perl online documentation (POD) of the module ``/Kernel/System/DynmicField/Backend.pm`` to have the list of all attributes and possible return data for each function."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:873
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:871
 msgid "In this section the password dynamic field driver is shown and explained. This driver inherits some functions from ``Base.pm`` and ``BaseText.pm`` and only implements the functions that needs different results."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:902
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:899
 msgid "This is the common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword. Notice that ``BaseText`` is used as base class."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:964
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:961
 msgid "It is important to define the behaviors correctly as the field might or might not be used in certain screens, functions that depends on behaviors that are not active for this particular field might not be needed to be implemented."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:968
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:965
 msgid "Drivers are created only by the ``BackendObject`` and not directly from any other module."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1058
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1055
 msgid "This function is the responsible to create the HTML representation of the field and its label, and is used in the edit screens like ``AgentTicketPhone``, ``AgentTicketNote``, etc."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1121
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1118
 msgid "``DisplayValueRender()`` function returns the field value as a plain text as well as its title (both can be translated). For this particular example we are checking if the password should be revealed or display a predefined mask by a configuration parameter in the dynamic field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1163
 msgid "This function is similar to ``DisplayValueRender()`` but is used in places where there is no ``LayoutObject``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1170
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1167
 msgid "Other Functions"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1172
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1169
 msgid "The following are other functions that are might needed if the new dynamic field does not inherit from other classes. To see the complete code of this functions please take a look directly into the files ``Kernel/System/DynamicField/Driver/Base.pm`` and ``Kernel/System/DynamicField/Driver/BaseText.pm``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1178
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1175
 msgid "This function retrieves the value from the field on a specified object. In this case we are returning the first text value, since the field only stores one text value at time."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1184
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1181
 msgid "This function is used to store a dynamic field value. In this case this field only stores one text type value. Other fields could store more than one value on either ``ValueText``, ``ValueDateTime`` or ``ValueInt`` format."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1191
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1188
 msgid "This function is used to delete one field value attached to a particular object ID. For example if the instance of an object is to be deleted, then there is no reason to have the field value stored in the database for that particular object instance."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1197
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1194
 msgid "This function is used to delete all values from a certain dynamic field. This function is very useful when a dynamic field is going to be deleted."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1203
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1200
 msgid "This function is used to check if the value is consistent to its type."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1206
 msgid "This function is used by ``TicketSearch`` core module to build the internal query to search for a ticket based on this field as a search parameter."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1215
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1212
 msgid "This function is also a helper for ``TicketSearch`` module. ``$Param{TableAlias}`` should be kept and ``value_text`` could be replaced with ``value_date`` or ``value_int`` depending on the field."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1221
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1218
 msgid "This function is used in the edit screens of OTRS and its purpose is to get the value of the field, either from a template like generic agent profile or from a web request. This function gets the web request in the ``$Param{ParamObject}``, that is a copy of the ``ParamObject`` of the front end module or screen."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1223
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1220
 msgid "There are two return formats for this function. The normal that is just the raw value or a structure that is the pair field name => field value. For example a date dynamic field returns normally the date as string, and if it should return a structure it returns a pair for each part of the date in the hash."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1225
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1222
 msgid "If the result should be a structure then, normally this is used to store its values in a template, like a generic agent profile. For example a date field uses several HTML components to build the field, like the used checkbox and selects for year, month, day etc."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1232
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1229
 msgid "This function should provide at least a method to validate if the field is empty, and return an error if the field is empty and mandatory, but it can also do more validations for other kind of fields, like if the option selected is valid, or if a date should be only in the past etc. It can provide a custom error message also."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1235
 msgid "This function is used by ticket search dialog and it is similar to ``EditFieldRander()``, but normally on a search screen small changes has to be done for all fields. For this example we use a HTML text input instead of a password input. In other fields like drop-down field is displayed as a multiple select in order to let the user search for more than one value at a time."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1244
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1241
 msgid "Very similar to ``EditFieldValueGet()``, but uses a different name prefix, adapted for the search dialog screen."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1250
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1247
 msgid "This function is used also by the ticket search dialog to set the correct operator and value to do the search on this field. It also returns how the value should be displayed in the used search attributes in the results page."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1256
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1253
 msgid "This function is used by the stats modules. It includes the field definition in the stats format. For fields with fixed values it also includes all this possible values and if they can be translated, take a look to the ``BaseSelect`` driver code for an example how to implement those."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1262
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1259
 msgid "This function is very similar to the ``SearchFieldParameterBuild()``. The difference is that the latter gets the value from the search profile and this one gets the value directly from its parameters."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1265
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1262
 msgid "This function is used by statistics module."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1271
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1268
 msgid "This function is used to know how the dynamic field values stored on a profile should be retrieved, as a scalar or as an array, and it also defines the correct name of the field in the profile."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1277
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1274
 msgid "This function is used by ``otrs.FillDB.pl`` script to populate the database with some test and random data. The value inserted by this function is not really relevant. The only restriction is that the value must be compatible with the field value type."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1283
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1280
 msgid "Used by the notification modules. This function returns 1 if the field is present in the ``$Param{ObjectAttributes}`` parameter and if it matches the given value."
 msgstr ""
 
@@ -5032,11 +5032,11 @@ msgid "Next we will show how to develop a new invoker. Each invoker has to imple
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:12
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:43
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:42
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:12
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:21
 #: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:12
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:635
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:633
 msgid "``new``"
 msgstr ""
 
@@ -5060,54 +5060,54 @@ msgstr ""
 msgid "In this section a sample invoker module is shown and each subroutine is explained."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:47
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:46
 msgid "This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword. Invokers can not be instantiated by the object manager."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:71
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:122
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:70
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:83
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:70
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:69
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:82
 msgid "The constructor ``new`` creates a new instance of the class. According to the coding guidelines only objects of other classes not handled by the object manager that are needed in this module have to be created in ``new``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:103
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:102
 msgid "The ``PrepareRequest`` function is used to handle and collect all needed data to be sent into the request. Here we can receive data from the request handler, use it, extend it, generate new data, and after that, we can transfer the results to the mapping layer."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:105
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:104
 msgid "For this example we are expecting to receive a ticket number. If there isn't then we use the debugger method ``Error()`` that creates an entry in the debug log and also returns a structure with the parameter ``Success`` as 0 and an error message as the passed ``Summary``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:107
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:106
 msgid "Also this example appends the word *Test* to the parameter ``Action`` and if ``GetSystemTime`` is requested, it will fill the ``SystemTime`` parameter with the current system time. This part of the code is to prepare the data to be sent. On a real invoker some calls to core modules (``Kernel/System/*.pm``) should be made here."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:109
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:108
 msgid "If during any part of the ``PrepareRequest`` function the request need to be stop without generating and error an entry in the debug log the following code can be used:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:118
 msgid "Using this, the requester will understand that the request should not continue (it will not be sent to mapping layer and will also not be sent to the network transport). The requester will not send an error on the debug log, it will only silently stop."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:169
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:168
 msgid "The ``HandleResponse`` function is used to receive and process the data from the previous request, that was made to the remote system. This data already passed by mapping layer, to transform it from remote system format to OTRS format (if needed)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:172
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:171
 msgid "For this particular example it checks the ticket number again and check if the action ends with the word *Test* (as was done in the ``PrepareRequest`` function)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:176
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:175
 msgid "This invoker is only used for tests, a real invoker will check if the response was on the format described by the remote system and can perform some actions like: call another invoker, perform a call to a core module, update the database, send an error, etc."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:180
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:179
 msgid "Invoker Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:182
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:181
 msgid "There is the need to register this invoker module to be accessible in the OTRS GUI. This can be done using the XML configuration below."
 msgstr ""
 
@@ -5119,148 +5119,148 @@ msgstr ""
 msgid "The mapping is used to convert data from OTRS to the external systems, and vice versa. This data can be represented as key => value pairs. Mapping modules can be developed to transform not just values but also the keys."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:7
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:6
 msgid "For example:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:10
-msgid "From"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:9
+msgid "Mapping from"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:10
-msgid "To"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:9
+msgid "Mapping to"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:12
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:11
 msgid "Prio => Warning"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:12
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:11
 msgid "PriorityID => 3"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:15
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:14
 msgid "The mapping layer is not absolutely necessary, a web service can skip it completely depending on the web service configuration and how invokers and operation are implemented. But if some data transformations are needed, is highly recommended to use an existing mapping module or create a new one."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:17
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:16
 msgid "Mapping modules can be called more than one time during a normal communication, take a look to the following examples."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:24
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
 msgid "OTRS as provider example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:20
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:19
 msgid "The remote system sends the request with the data in the remote system format."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:21
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:20
 msgid "The data is mapped from the remote system format to the OTRS format."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:22
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:21
 msgid "OTRS performs the operation and return the response in OTRS format."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:28
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:22
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:27
 msgid "The data is mapped from the OTRS format to the remote system format."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:24
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
 msgid "The response with the data in the remote system format is sent to the remote system."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:32
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:31
 msgid "OTRS as requester example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:27
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:26
 msgid "OTRS prepares the request to the remote system using the data in the OTRS format."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:29
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:28
 msgid "The request is sent to the remote system which performs the action and sends the response back to OTRS with the data in remote system format."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:30
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:29
 msgid "The data is mapped form remote system format (again) to the OTRS format."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:31
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:30
 msgid "OTRS processes the response."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:35
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:34
 msgid "Mapping Back End"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:37
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:36
 msgid "Generic interface provides a mapping module called *Simple*. With this module most of the data transformations including key and value mapping can be done, and also it defines rules for to handling the default mappings for both keys and values."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:39
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:38
 msgid "So it is highly probable that you don't need to develop a custom mapping module. Please check *Simple* mapping module (``Kernel/GenericInterface/Mapping/Simple.pm``) and its on-line documentation before continue."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:41
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:40
 msgid "If *Simple* mapping module does not match your needs then we will show how to develop a new mapping back end. Each mapping back end has to implement these subroutines:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:44
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:43
 msgid "``Map``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:46
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:45
 msgid "We should implement each one of this methods in order to be able to map the data in the communication, handled either by the requester or provider. All mapping back ends are handled by the mapping module (``Kernel/GenericInterface/Mapping.pm``)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:50
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:49
 msgid "Mapping Code Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:52
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:51
 msgid "In this section a sample mapping module is shown and each subroutine is explained."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:76
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:74
 msgid "We also include ``VariableCheck`` module to perform certain validation over some variables. Mappings can not be instantiated by the object manager."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:189
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:187
 msgid "The ``Map`` function is the main part of each mapping module. It receives the mapping configuration (rules) and the data in the original format (either OTRS or remote system format) and converts it to a new format, even if the structure of the data can be changed during the mapping process."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:191
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:189
 msgid "In this particular example there are three rules to map the values. This rules are set in the mapping configuration key ``TestOption`` and they are ``ToUpper``, ``ToLower`` and ``Empty``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:193
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:191
 msgid "``ToUpper``: converts each data value to upper case."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:194
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:192
 msgid "``ToLower``: converts each data value to lower case."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:195
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:193
 msgid "``Empty``: converts each data value into an empty string."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:197
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:195
 msgid "In this example no data key transformations were implemented."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:234
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:232
 msgid "This are the helper functions that actually performs the string conversions."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:236
 msgid "Mapping Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:240
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:238
 msgid "There is the need to register this mapping module to be accessible in the OTRS GUI. This can be done using the XML configuration below."
 msgstr ""
 
@@ -5281,7 +5281,7 @@ msgid "Next we will show how to develop a new operation, each operation has to i
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:13
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:637
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:635
 msgid "``Run``"
 msgstr ""
 
@@ -5297,87 +5297,87 @@ msgstr ""
 msgid "In this section a sample operation module is shown and each subroutine is explained."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:45
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:44
 msgid "We also include ``VariableCheck`` module to perform certain validation over some variables. Operations can not be instantiated by the object manager."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:113
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:112
 msgid "The ``Run`` function is the main part of each operation. It receives all internal mapped data from remote system needed by the provider to execute the action, it performs the action and returns the result to the provider to be external mapped and deliver back to the remote system."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:114
 msgid "This particular example returns the same data as came from the remote system, unless ``TestError`` parameter is passed. In this case it returns an error."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:118
 msgid "Operation Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:121
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:120
 msgid "There is the need to register this operation module to be accessible in the OTRS GUI. This can be done using the XML configuration below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:139
 msgid "Unit Test Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:141
 msgid "Unit test for generic interface operations does not differs from other unit tests but it is needed to consider testing locally, but also simulating a remote connection. It is a good practice to test both separately since results could be slightly different."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:145
 msgid "To learn more about unit tests, please take a look to the :doc:`../../contributing/unit-tests` chapter."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:148
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:147
 msgid "The following is just the starting point for a unit test:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:428
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:427
 msgid "WSDL Extension Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:430
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:429
 msgid "WSDL files contain the definitions of the web services and its operations for SOAP messages, in case we will extend ``development/webservices/GenericTickeConnectorSOAP.wsdl`` in some places:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:432
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:431
 msgid "Port Type:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:444
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:443
 msgid "Binding:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:463
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:462
 msgid "Type:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:489
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:488
 msgid "Message:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:504
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:503
 msgid "WADL Extension Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:506
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:505
 msgid "WADL files contain the definitions of the web services and its operations for REST interface, add a new resource to ``development/webservices/GenericTickeConnectorREST.wadl``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:530
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:529
 msgid "Web Service SOAP Extension Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:532
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:531
 msgid "Web services can be imported into OTRS by a YAML with a predefined structure in this case we will extend ``development/webservices/GenericTickeConnectorSOAP.yml`` for a SOAP web service."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:547
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:546
 msgid "Web Service REST Extension Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:549
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:548
 msgid "Web services can be imported into OTRS by a YAML with a predefined structure in this case we will extend ``development/webservices/GenericTickeConnectorREST.yml`` for a REST web service."
 msgstr ""
 
@@ -5449,47 +5449,47 @@ msgstr ""
 msgid "For this example a custom package is used to return the data without doing a real network request to a remote system, instead this custom module acts as a loop-back interface."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:63
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:62
 msgid "This is common header that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword. Transports can not be instantiated by the object manager."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:125
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:124
 msgid "The ``ProviderProcessRequest`` function gets the request from the remote system (in this case the same OTRS) and extracts the data and the operation to perform from the request. For this example the operation is always ``test_operation``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:127
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:126
 msgid "The way this function parses the request to get the data and the operation name, depends completely on the protocol to be implemented and the external modules that are used for."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:177
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:176
 msgid "This function sends the response back to the remote system for the requested operation."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:179
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:178
 msgid "For this particular example we return a standard HTTP response success (200) or not (500), along with the required data on each case."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:210
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:209
 msgid "This is the only function that is used by OTRS as requester. It sends the request to the remote system and waits for its response."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:212
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:211
 msgid "For this example we use a custom protocol handler to avoid send the request to the real network. This custom protocol is specified below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:243
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:242
 msgid "This is the code for the custom protocol that we use. This approach is only useful for training or for testing environments where the remote systems are not available."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:245
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:244
 msgid "For a new module development we do not recommend to use this approach, a real protocol needs to be implemented."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:249
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:248
 msgid "Network Transport Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:251
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:250
 msgid "There is the need to register this network transport module to be accessible in the OTRS GUI. This can be done using the XML configuration below."
 msgstr ""
 
@@ -5513,23 +5513,23 @@ msgstr ""
 msgid "In this small example, we'll write a little file logging back end which works similar to ``Kernel::System::Log::File``, but prepends a string to each logging entry."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:116
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:115
 msgid "Log Module Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:117
 msgid "To activate our custom logging module, the administrator can either set the existing configuration item ``LogModule`` manually to ``Kernel::System::Log::CustomFile``. To realize this automatically, you can provide an XML configuration file which overrides the default setting."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:133
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:132
 msgid "Log Module Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:134
 msgid "Useful logging back ends could be logging to a web service or to encrypted files."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:139
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:138
 msgid "``Kernel::System::Log`` has other methods than ``Log()`` which cannot be reimplemented, for example code for working with shared memory segments and log data caching."
 msgstr ""
 
@@ -5569,20 +5569,20 @@ msgstr ""
 msgid "The notification modules are located under ``Kernel/Output/HTML/TicketNotification*.pm``. Following, there is an example of a notify module. Save it under ``Kernel/Output/HTML/TicketNotificationCustom.pm``. You just need 2 functions: ``new()`` and ``Run()``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:93
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:92
 msgid "Notification Module Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:95
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:94
 msgid "There is the need to activate your custom notification module. This can be done using the XML configuration below. There may be additional parameters in the config hash for your notification module."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:113
 msgid "Notification Module Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:117
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:138
 msgid "Useful ticket menu implementation could be a link to an external tool if parameters (e.g. ``FreeTextField``) have been set."
 msgstr ""
 
@@ -5842,7 +5842,7 @@ msgid "Holds the information to display the drop-down field."
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:177
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:712
 msgid "``Data``"
 msgstr ""
 
@@ -5851,8 +5851,8 @@ msgid "Simple hash that defines the options for the drop-down. The keys are used
 msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:180
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:147
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:711
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:709
 msgid "``Name``"
 msgstr ""
 
@@ -6057,20 +6057,20 @@ msgstr ""
 msgid "The interface class is called ``Kernel::System::Queue``. The example queue preferences may be called ``Kernel::System::Queue::PreferencesCustom``. You can find an example below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:117
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:114
 msgid "Queue Preferences Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:116
 msgid "There is the need to activate your custom queue preferences module. This can be done using the XML configuration below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:131
 msgid "Queue Preferences Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:137
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:138
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:133
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:134
 msgid "Useful preferences implementation could be a SOAP or RADIUS back end."
 msgstr ""
 
@@ -6090,15 +6090,15 @@ msgstr ""
 msgid "The interface class is called ``Kernel::System::Service``. The example service preferences may be called ``Kernel::System::Service::PreferencesCustom``. You can find an example below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:115
 msgid "Service Preferences Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:117
 msgid "There is the need to activate your custom service preferences module. This can be done using the XML configuration below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:136
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:132
 msgid "Service Preferences Use Case Example"
 msgstr ""
 
@@ -6118,19 +6118,19 @@ msgstr ""
 msgid "The interface class is called ``Kernel::System::SLA``. The example SLA preferences may be called ``Kernel::System::SLA::PreferencesCustom``. You can find an example below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:114
 msgid "SLA Preferences Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:117
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:116
 msgid "There is the need to activate your custom SLA preferences module. This can be done using the XML configuration below."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:132
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:131
 msgid "SLA Preferences Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:134
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:133
 msgid "Useful preferences implementation could be to store additional values on SLAs."
 msgstr ""
 
@@ -6178,174 +6178,174 @@ msgstr ""
 msgid "In this section a sample stats module is shown and each subroutine is explained."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:46
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:45
 msgid "This is a common boilerplate that can be found in common OTRS modules. The class/package name is declared via the ``package`` keyword. Then the needed modules are used via the ``use`` keyword."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:73
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:72
 msgid "The ``new`` is the constructor for this statistic module. It creates a new instance of the class. According to the coding guidelines objects of other classes that are needed in this module have to be created in ``new``. In lines 27 to 29 the object of the stats module is created. Lines 31 to 37 check if objects that are needed in this code - either for creating other objects or in this module - are passed. After that the other objects are created."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:83
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:82
 msgid "``GetObjectName`` returns a name for the statistics module. This is the label that is shown in the drop down in the configuration as well as in the list of existing statistics (column *object*)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:141
 msgid "In this sample stats module, we want to provide three attributes the user can chose from: a list of queues, a list of states and a time drop down. To get the values shown in the drop down, some operations are needed. In this case ``StateList`` and ``GetAllQueues`` are called."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:144
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:143
 msgid "Then the list of attributes is created. Each attribute is defined via a hash reference. You can use these keys:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:147
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:708
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:706
 msgid "The label in the web interface."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:150
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:149
 msgid "``UseAsXvalue``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:150
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:149
 msgid "This attribute can be used on the x-axis."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:153
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:152
 msgid "``UseAsValueSeries``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:153
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:152
 msgid "This attribute can be used on the y-axis."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:156
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:155
 msgid "``UseAsRestriction``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:156
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:155
 msgid "This attribute can be used for restrictions."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:159
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:158
 msgid "``Element``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:159
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:711
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:158
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:709
 msgid "The HTML field name."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:162
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:161
 msgid "``Block``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:162
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:161
 msgid "The block name in the template file (e.g. ``<OTRS_HOME>/Kernel/Output/HTML/Standard/AgentStatsEditXaxis.tt``)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:165
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:164
 msgid "``Values``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:165
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:164
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:712
 msgid "The values shown in the attribute."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:167
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:166
 msgid "Hint: If you install this sample and you configure a statistic with some queues - lets say 'queue A' and 'queue B' - then these queues are the only ones that are shown to the user when he starts the statistic. Sometimes a dynamic drop down or multiselect field is needed. In this case, you can set ``SelectedValues`` in the definition of the attribute:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:198
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:197
 msgid "``GetStatElement`` gets called for each cell in the result table. So it should be a numeric value. In this sample it does a simple ticket search. The hash ``%Param`` contains information about the *current* x-value and the y-value as well as any restrictions. So, for a cell that should count the created tickets for queue *Misc* with state *open* the passed parameter hash looks something like this:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:208
 msgid "If the *per cell* calculation should be avoided, ``GetStatTable`` is an alternative. ``GetStatTable`` returns a list of rows, hence an array of array references. This leads to the same result as using ``GetStatElement``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:237
 msgid "``GetStatTable`` gets all information about the stats query that is needed. The passed parameters contain information about the attributes (``Restrictions``, attributes that are used for x/y-axis) and the table structure. The table structure is a hash reference where the keys are the values of the y-axis and their values are hash references with the parameters used for ``GetStatElement`` subroutines."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:311
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:310
 msgid "Sometimes the headers of the table have to be changed. In that case, a subroutine called ``GetHeaderLine`` has to be implemented. That subroutine has to return an array reference with the column headers as elements. It gets information about the x-values passed."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:359
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:358
 msgid "Configured statistics can be exported into XML format. But as queues with the same queue names can have different IDs on different OTRS instances it would be quite painful to export the IDs (the statistics would calculate the wrong numbers then). So an export wrapper should be written to use the names instead of ids. This should be done for each *dimension* of the stats module (x-axis, y-axis and restrictions)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:361
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:360
 msgid "``ImportWrapper`` works the other way around - it converts the name to the ID in the instance the configuration is imported to."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:363
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:362
 msgid "This is a sample export:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:399
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:398
 msgid "Now, that all subroutines are explained, this is the complete sample stats module."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:607
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:605
 msgid "Stats Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:627
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:625
 msgid "If you have a lot of cells in the result table and the ``GetStatElement`` is quite complex, the request can take a long time."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:631
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:629
 msgid "Static Stats"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:633
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:631
 msgid "The subsequent paragraphs describe the static stats. Static stats are very easy to create as these modules have to implement only three subroutines."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:636
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:634
 msgid "``Param``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:641
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:639
 msgid "Static Stats Code Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:643
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:641
 msgid "The following paragraphs describe the subroutines needed in a static stats."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:671
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:669
 msgid "The ``new`` creates a new instance of the static stats class. First it creates a new object and then it checks for the needed objects."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:703
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:701
 msgid "The ``Param`` method provides the list of all parameters/attributes that can be selected to create a static stat. It gets some parameters passed: The values for the stats attributes provided in a request, the format of the stats and the name of the object (name of the module)."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:705
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:703
 msgid "The parameters/attributes have to be hash references with these key-value pairs:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:708
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:706
 msgid "``Frontend``"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:716
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
 msgid "Other parameter for the ``BuildSelection`` method of the ``LayoutObject`` can be used, as it is done with ``Size`` and ``Multiple`` in this sample module."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:763
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:761
 msgid "The ``Run`` method actually generates the table data for the stats. It gets the attributes for this stats passed. In this sample in ``%Param`` a key ``TypeIDs`` and a key ``QueueIDs`` exist (see attributes in ``Param`` method) and their values are array references. The returned data consists of three parts: Two array references and an array. In the first array reference the title for the statistic is stored, the second array reference contains the headlines for the columns in the table. And then the data for the table body follow."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:964
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:961
 msgid "Static Stats Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:966
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:963
 msgid "There is no configuration needed. Right after installation, the module is available to create a statistic for this module."
 msgstr ""
 
@@ -6365,19 +6365,19 @@ msgstr ""
 msgid "The ticket menu modules are located under ``Kernel/Output/HTML/TicketMenu*.pm``. Following, there is an example of a ticket menu module. Save it under ``Kernel/Output/HTML/TicketMenuCustom.pm``. You just need 2 functions: ``new()`` and ``Run()``."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:115
 msgid "Ticket Menu Module Configuration Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:117
 msgid "There is the need to activate your custom ticket menu module. This can be done using the XML configuration below. There may be additional parameters in the config hash for your ticket menu module."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:136
 msgid "Ticket Menu Module Use Case Example"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:142
 msgid "The ticket menu directs to an URL that can be handled. If you want to handle that request via the OTRS framework, you have to write your own front end module."
 msgstr ""
 
@@ -7007,39 +7007,39 @@ msgstr ""
 msgid "After creating the links and executing the system configuration, a new module with the name 'HelloWorld' is displayed. When calling it up, an error message is displayed as OTRS cannot find the matching front end module yet. This is the next thing to be created. To do so, we create the following file:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:166
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:165
 msgid "Core Module"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:168
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:167
 msgid "Next, we create the file for the core module ``/HelloWorld/Kernel/System/HelloWorld.pm`` with the following content:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:265
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:263
 msgid "Template File"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:267
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:265
 msgid "The last thing missing before the new module can run is the relevant HTML template. Thus, we create the following file:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:284
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:281
 msgid "The module is working now and displays the text *Hello World* when called."
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:288
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:285
 msgid "Language File"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:290
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:287
 msgid "If the text *Hello World!* is to be translated into for instance German, you can create a translation file for this language in ``HelloWorld/Kernel/Language/de_AgentHelloWorld.pm``. Example:"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:310
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:307
 msgid "Summary"
 msgstr ""
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:312
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:309
 msgid "The example given above shows that it is not too difficult to write a new module for OTRS. It is important, though, to make sure that the module and file name are unique and thus do not interfere with the framework or other expansion modules. When a module is finished, an OPM package must be generated from it (see chapter :doc:`../how-to-publish-otrs-extensions/package-building`)."
 msgstr ""
 

@@ -106,8 +106,7 @@ In this section the ``Foo`` extension for back end is shown and explained. The e
 .. code-block:: Perl
 
    # --
-   # Kernel/System/DynamicField/FooExtensionBackend.pm - Extension for DynamicField backend
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
@@ -229,8 +228,7 @@ In this section the ``Foo`` extension for text field driver is shown and explain
 .. code-block:: Perl
 
    # --
-   # Kernel/System/DynamicField/Driver/FooExtensionText.pm - Extension for DynamicField Text Driver
-   # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
+   # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
    # --
    # This software comes with ABSOLUTELY NO WARRANTY. For details, see
    # the enclosed file COPYING for license information (GPL). If you
