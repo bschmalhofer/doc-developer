@@ -19,7 +19,9 @@ For a specific branch like OTRS 6:
 
    shell> git clone git@github.com:OTRS/otrs.git -b rel-6_0
 
-Please configure the OTRS system according to the `installation instructions <https://doc.otrs.com/doc/manual/installation/stable/en/index.html>`__.
+Please configure the OTRS system according to the `installation instructions`_.
+
+.. _`installation instructions`: https://doc.otrs.com/doc/manual/installation/8.0/en/index.html
 
 
 Useful Tools

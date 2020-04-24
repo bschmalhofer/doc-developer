@@ -191,7 +191,7 @@ Provide ``--verbose`` argument in order to see messages about successful tests t
 Unit Test API
 -------------
 
-OTRS provides API for unit testing that was used in the previous example. Here we'll list the most important functions, please also see the online API reference of ```Kernel::System::UnitTest`` <https://otrs.github.io/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest.pm.html>`__.
+OTRS provides API for unit testing that was used in the previous example. Here we'll list the most important functions, please also see the online API reference of ```Kernel::System::UnitTest`` <https://otrs.github.io/doc/api/otrs/8.0/Perl/Kernel/System/UnitTest.pm.html>`__.
 
 ``True()``
    This function tests whether given scalar value is a true value in Perl.
@@ -257,7 +257,7 @@ OTRS provides API for unit testing that was used in the previous example. Here w
           'Test Name'
       );
 
-Besides this, unit test helper object also provides some helpful methods for common test conditions. For full reference, please see the online API reference of ```Kernel::System::UnitTest::Helper`` <https://doc.otrs.com/doc/api/otrs/7.0/Perl/Kernel/System/UnitTest/Helper.pm.html>`__.
+Besides this, unit test helper object also provides some helpful methods for common test conditions. For full reference, please see the online API reference of ```Kernel::System::UnitTest::Helper`` <https://doc.otrs.com/doc/api/otrs/8.0/Perl/Kernel/System/UnitTest/Helper.pm.html>`__.
 
 ``GetRandomID()``
    This function creates a random ID that can be used in tests as a unique identifier. It is guaranteed that within a test this function will never return a duplicate.
