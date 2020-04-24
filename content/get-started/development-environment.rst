@@ -24,7 +24,9 @@ Check out the ``module-tools`` module (from GitHub) too, for your development en
    shell> git clone git@github.com:OTRS/module-tools.git
                
 
-Please configure the OTRS system according to the `installation instructions <https://doc.otrs.com/doc/manual/installation/stable/en/index.html>`__.
+Please configure the OTRS system according to the `installation instructions`_.
+
+.. _`installation instructions`: https://doc.otrs.com/doc/manual/installation/7.0/en/index.html
 
 
 Useful Tools
