@@ -5,7 +5,7 @@
     <title>Development Environment</title>
     <para>
         To facilitate the writing of OTRS expansion modules, the creation of a development environment is necessary.
-        The source code of OTRS and additional public modules can be found on <ulink url="http://otrs.github.io">github</ulink>.
+        The source code of OTRS and additional public modules can be found on <ulink url="https://github.com/OTRS/">GitHub</ulink>.
     </para>
 
     <section id="environment-cvs-checkout">
@@ -32,7 +32,7 @@ shell> git clone git@github.com:OTRS/module-tools.git
         </para>
         <para>
             Please configure the OTRS system according to the
-            <ulink url="http://otrs.github.io/doc/manual/admin/stable/en/html/installation.html">installation instructions</ulink>
+            <ulink url="https://doc.otrs.com/doc/manual/admin/6.0/en/html/installation.html">installation instructions</ulink>
             in the admin manual.
         </para>
     </section>

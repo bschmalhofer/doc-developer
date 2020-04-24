@@ -22,8 +22,8 @@
             <listitem>
                 <para>
                     The OTRS developer API documentation is available for
-                    <ulink url="https://otrs.github.io/doc/api/otrs/stable/Perl/index.html">Perl</ulink> and
-                    <ulink url="https://otrs.github.io/doc/api/otrs/stable/JavaScript/index.html">JavaScript</ulink>.
+                    <ulink url="https://doc.otrs.com/doc/api/otrs/6.0/Perl/index.html">Perl</ulink> and
+                    <ulink url="https://doc.otrs.com/doc/api/otrs/6.0/JavaScript/index.html">JavaScript</ulink>.
                 </para>
             </listitem>
         </varlistentry>
@@ -32,7 +32,7 @@
             <listitem>
                 <para>
                     The OTRS developer mailing list is available at
-                    <ulink url="http://lists.otrs.org/">http://lists.otrs.org/</ulink>.
+                    <ulink url="https://lists.otrs.org/">https://lists.otrs.org/</ulink>.
                 </para>
             </listitem>
         </varlistentry>
