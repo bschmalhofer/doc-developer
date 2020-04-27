@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-23 19:17+0100\n"
-"PO-Revision-Date: 2020-01-31 09:39+0000\n"
+"POT-Creation-Date: 2020-04-24 13:01+0200\n"
+"PO-Revision-Date: 2020-04-27 09:31+0000\n"
 "Last-Translator: Balázs Úr <balazs.ur@otrs.com>\n"
 "Language-Team: Hungarian <https://translate.app.otrs.com/projects/otrs-7/"
 "developer-manual/hu/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 3.11.3\n"
 
 #: ../../content/additional-resources.rst:2
 msgid "Additional Resources"
@@ -45,28 +45,27 @@ msgstr ""
 "kapcsolatos információkat is megtalálja az OTRS csoporttól, az OTRS "
 "készítőjétől."
 
-#: ../../content/additional-resources.rst:8
+#: ../../content/additional-resources.rst:11
 msgid "Online API Library"
 msgstr "Internetes API könyvtár"
 
 #: ../../content/additional-resources.rst:8
 msgid ""
-"The OTRS developer API documentation is available for `Perl <https://otrs."
-"github.io/doc/api/otrs/stable/Perl/index.html>`__ and `JavaScript <https://"
-"otrs.github.io/doc/api/otrs/stable/JavaScript/index.html>`__."
+"The OTRS developer API documentation is available for `Perl`_ and "
+"`JavaScript`_."
 msgstr ""
-"Az OTRS fejlesztői API dokumentáció elérhető a `Perl <https://otrs.github.io/"
-"doc/api/otrs/stable/Perl/index.html>`__ és a `JavaScript <https://otrs."
-"github.io/doc/api/otrs/stable/JavaScript/index.html>`__ programnyelvekhez."
+"Az OTRS fejlesztői API dokumentáció elérhető a `Perl`_ és a `JavaScript`_ "
+"programnyelvekhez."
 
-#: ../../content/additional-resources.rst:10
+#: ../../content/additional-resources.rst:13
 msgid "Developer Mailing List"
 msgstr "Fejlesztői levelezőlista"
 
-#: ../../content/additional-resources.rst:11
-msgid "The OTRS developer mailing list is available at http://lists.otrs.org/."
+#: ../../content/additional-resources.rst:14
+msgid ""
+"The OTRS developer mailing list is available at https://lists.otrs.org/."
 msgstr ""
-"Az OTRS fejlesztői levelezőlista a http://lists.otrs.org/ címen érhető el."
+"Az OTRS fejlesztői levelezőlista a https://lists.otrs.org/ címen érhető el."
 
 #: ../../content/contributing.rst:2
 msgid "Contributing to OTRS"
@@ -1888,8 +1887,8 @@ msgid ""
 "Sign up for a free translator account on `Weblate <https://translate.otrs."
 "com/>`__."
 msgstr ""
-"Regisztráljon egy ingyenes fordítói fiókot a `Weblate-en "
-"<https://translate.otrs.com/>`__."
+"Regisztráljon egy ingyenes fordítói fiókot a `Weblate-en <https://translate."
+"otrs.com/>`__."
 
 #: ../../content/contributing/translate.rst:11
 msgid "Select a translation component and your language for translation."
@@ -2007,7 +2006,7 @@ msgstr ""
 "A leíró szövegek és a buboréksúgó tartalmak teljes mondatként vannak írva."
 
 #: ../../content/contributing/ui-design.rst:27
-#: ../../content/get-started/development-environment.rst:61
+#: ../../content/get-started/development-environment.rst:63
 msgid "Example:"
 msgstr "Példa:"
 
@@ -3806,29 +3805,27 @@ msgstr ""
 
 #: ../../content/get-started/development-environment.rst:27
 msgid ""
-"Please configure the OTRS system according to the `installation instructions "
-"<https://doc.otrs.com/doc/manual/installation/stable/en/index.html>`__."
-msgstr ""
-"Állítsa be az OTRS rendszert a `telepítési utasítások <https://doc.otrs.com/"
-"doc/manual/installation/stable/hu/index.html>`__ szerint."
+"Please configure the OTRS system according to the `installation "
+"instructions`_."
+msgstr "Állítsa be az OTRS rendszert a `telepítési utasítások`_ szerint."
 
-#: ../../content/get-started/development-environment.rst:31
+#: ../../content/get-started/development-environment.rst:33
 msgid "Useful Tools"
 msgstr "Hasznos eszközök"
 
-#: ../../content/get-started/development-environment.rst:33
+#: ../../content/get-started/development-environment.rst:35
 msgid "There are two modules that are highly recommended for OTRS development:"
 msgstr "Létezik két modul, amely erősen ajánlott az OTRS fejlesztésnél:"
 
-#: ../../content/get-started/development-environment.rst:35
+#: ../../content/get-started/development-environment.rst:37
 msgid "`OTRSCodePolicy <https://github.com/OTRS/otrscodepolicy>`__"
 msgstr "`OTRSCodePolicy <https://github.com/OTRS/otrscodepolicy>`__"
 
-#: ../../content/get-started/development-environment.rst:36
+#: ../../content/get-started/development-environment.rst:38
 msgid "`Fred <https://github.com/OTRS/Fred>`__"
 msgstr "`Fred <https://github.com/OTRS/Fred>`__"
 
-#: ../../content/get-started/development-environment.rst:38
+#: ../../content/get-started/development-environment.rst:40
 msgid ""
 "*OTRSCodePolicy* is a code quality checker that enforces the use of common "
 "coding standards also for the OTRS development team. It is highly "
@@ -3847,7 +3844,7 @@ msgstr ""
 "<https://github.com/OTRS/otrscodepolicy/blob/master/doc/en/OTRSCodePolicy."
 "xml>`__."
 
-#: ../../content/get-started/development-environment.rst:40
+#: ../../content/get-started/development-environment.rst:42
 msgid ""
 "*Fred* is a little development helper module that you can actually install "
 "or link (as described below) into your development system. It features "
@@ -3862,7 +3859,7 @@ msgstr ""
 "részletet találhat a `modul dokumentációjában <https://github.com/OTRS/Fred/"
 "blob/master/doc/en/Fred.xml>`__."
 
-#: ../../content/get-started/development-environment.rst:42
+#: ../../content/get-started/development-environment.rst:44
 msgid ""
 "By the way, these tools are also open source, and we will be happy about any "
 "improvements that you can contribute."
@@ -3870,11 +3867,11 @@ msgstr ""
 "Mellesleg ezek az eszközök szintén nyílt forrásúak, és nagyon örülnénk "
 "bármilyen továbbfejlesztésnek, amellyel hozzájárul."
 
-#: ../../content/get-started/development-environment.rst:46
+#: ../../content/get-started/development-environment.rst:48
 msgid "Linking Expansion Modules"
 msgstr "Bővítőmodulok hozzákapcsolása"
 
-#: ../../content/get-started/development-environment.rst:48
+#: ../../content/get-started/development-environment.rst:50
 msgid ""
 "A clear separation between OTRS and the modules is necessary for proper "
 "developing. Particularly when using a git clone, a clear separation is "
@@ -3887,17 +3884,17 @@ msgstr ""
 "történő hozzáférést, linkeket kell létrehozni. Ez megtehető a könyvtármodul "
 "eszközök tárolójában lévő parancsfájllal."
 
-#: ../../content/get-started/development-environment.rst:50
+#: ../../content/get-started/development-environment.rst:52
 msgid "Example: linking the *Calendar* module:"
 msgstr "Példa: a *Naptár* modul hozzákapcsolása:"
 
-#: ../../content/get-started/development-environment.rst:57
+#: ../../content/get-started/development-environment.rst:59
 msgid "Whenever new files are added, they must be linked as described above."
 msgstr ""
 "Amikor új fájlok kerülnek hozzáadásara, akkor azokat a fent bemutatott módon "
 "kell hozzákapcsolni."
 
-#: ../../content/get-started/development-environment.rst:59
+#: ../../content/get-started/development-environment.rst:61
 msgid ""
 "As soon as the linking is completed, the system configuration must be "
 "rebuilt to register the module in OTRS. Additional SQL or Perl code from the "
@@ -3907,7 +3904,7 @@ msgstr ""
 "rendszerbeállításokat a modul regisztrálásához az OTRS-be. A további SQL "
 "vagy Perl-kódot is végre kell hajtani a modulból."
 
-#: ../../content/get-started/development-environment.rst:70
+#: ../../content/get-started/development-environment.rst:72
 msgid "To remove links from OTRS enter the following command:"
 msgstr ""
 "A kapcsolatoknak az OTRS-ből történő eltávolításához adja ki a következő "
@@ -6634,8 +6631,8 @@ msgid ""
 "For the OTRS framework and all extension modules, ``.pot`` and ``.po`` files "
 "are written. These files are used by translators to localize the software."
 msgstr ""
-"Az OTRS keretrendszerhez és az összes kiterjesztőmodulhoz ``.pot`` és ``.po``"
-" fájlok kerülnek kiírásra. Ezeket a fájlokat használják a fordítók a "
+"Az OTRS keretrendszerhez és az összes kiterjesztőmodulhoz ``.pot`` és ``."
+"po`` fájlok kerülnek kiírásra. Ezeket a fájlokat használják a fordítók a "
 "szoftver honosításához."
 
 #: ../../content/how-it-works/translations.rst:61
@@ -6723,8 +6720,8 @@ msgid ""
 "details."
 msgstr ""
 "Az OTRS a `Weblate <https://translate.otrs.com/>`__ fordítószoftvert "
-"használja a fordítási folyamat kezeléséhez. A részletekért nézze meg a "
-":doc:`../contributing/translate` szakaszt."
+"használja a fordítási folyamat kezeléséhez. A részletekért nézze meg a :doc:"
+"`../contributing/translate` szakaszt."
 
 #: ../../content/how-it-works/translations.rst:158
 msgid "Using The Translated Data From The Code"
@@ -6830,11 +6827,11 @@ msgstr ""
 "hitelesítés hívható ``Kernel::System::Auth::CustomAuth`` néven. Lent "
 "találhat egy példát."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:161
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:157
 msgid "Agent Authentication Module Configuration Example"
 msgstr "Ügyintézői hitelesítő modul beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:163
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:159
 msgid ""
 "There is the need to activate your custom agent authenticate module. This "
 "can be done using the Perl configuration below. It is not recommended to use "
@@ -6846,11 +6843,11 @@ msgstr ""
 "beállítás használata, mert kizárhatja magát a rendszerbeállításokon "
 "keresztül."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:171
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:167
 msgid "Agent Authentication Module Use Case Example"
 msgstr "Ügyintézői hitelesítő modul használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:173
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:169
 msgid ""
 "A useful example of an authentication implementation could be a SOAP back "
 "end."
@@ -6896,11 +6893,11 @@ msgstr ""
 "hitelesítés hívható ``Kernel::System::Auth::Sync::CustomAuthSync`` néven. "
 "Lent találhat egy példát."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:68
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:65
 msgid "Authentication Synchronization Module Configuration Example"
 msgstr "Hitelesítés szinkronizációs modul beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:70
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:67
 msgid ""
 "You should activate your custom synchronization module. This can be done "
 "using the Perl configuration below. It is not recommended to use the XML "
@@ -6912,11 +6909,11 @@ msgstr ""
 "használata, mert az lehetővé teheti, hogy kizárja magát a "
 "rendszerbeállításokon keresztül."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:78
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:75
 msgid "Authentication Synchronization Module Use Case Example"
 msgstr "Hitelesítés szinkronizációs modul használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:80
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:77
 msgid ""
 "Useful synchronization implementation could be a SOAP or RADIUS back end."
 msgstr ""
@@ -6963,11 +6960,11 @@ msgstr ""
 "hitelesítés hívható ``Kernel::System::CustomerAuth::CustomAuth`` néven. Lent "
 "találhat egy példát."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:163
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:159
 msgid "Customer Authentication Module Configuration Example"
 msgstr "Ügyfél hitelesítő modul beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:165
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:161
 msgid ""
 "There is the need to activate your custom customer authenticate module. This "
 "can be done using the XML configuration below."
@@ -6975,11 +6972,11 @@ msgstr ""
 "Szükség van az egyéni ügyfél hitelesítő modul bekapcsolására. Ezt a lenti "
 "XML beállítás használatával lehet megtenni."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:181
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:176
 msgid "Customer Authentication Module Use Case Example"
 msgstr "Ügyfél hitelesítő modul használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:183
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:178
 msgid "Useful authentication implementation could be a SOAP back end."
 msgstr "Hasznos hitelesítés megvalósítás lehet egy SOAP háttérprogram."
 
@@ -7022,11 +7019,11 @@ msgstr ""
 "felhasználó beállítások hívhatók ``Kernel::System::CustomerUser::"
 "Preferences::Custom`` néven. Lent találhat egy példát."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:138
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:135
 msgid "Customer User Preferences Module Configuration Example"
 msgstr "Ügyfél-felhasználó beállítások modul beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:137
 msgid ""
 "There is the need to activate your custom customer-user preferences module. "
 "This can be done using the XML configuration below."
@@ -7034,11 +7031,11 @@ msgstr ""
 "Szükség van az egyéni ügyfél-felhasználó beállítások modul bekapcsolására. "
 "Ezt a lenti XML beállítás használatával lehet megtenni."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:162
 msgid "Customer User Preferences Module Use Case Example"
 msgstr "Ügyfél-felhasználó beállítások modul használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:168
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:164
 msgid "Useful preferences implementation could be a SOAP or LDAP back end."
 msgstr ""
 "Hasznos beállítások megvalósítás lehet egy SOAP vagy egy LDAP háttérprogram."
@@ -7148,11 +7145,11 @@ msgstr ""
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.rst:72
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.rst:61
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:138
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:262
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:136
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:74
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:43
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:137
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:260
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:72
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:42
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:67
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:321
 msgid ""
@@ -7428,7 +7425,7 @@ msgstr ""
 msgid "Dashboard Widget"
 msgstr "Vezérlőpult felületi elem"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:161
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:160
 msgid ""
 "To use this module add the following to the ``Kernel/Config.pm`` and restart "
 "your web server (if you use ``mod_perl``)."
@@ -7437,7 +7434,7 @@ msgstr ""
 "fájlhoz, és indítsa újra a webkiszolgálóját (ha a ``mod_perl`` modult "
 "használja)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:187
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:185
 msgid ""
 "An excessive number of days or individual lines may lead to performance "
 "degradation."
@@ -7585,7 +7582,7 @@ msgstr ""
 "megjelenítve és elmagyarázva. A kiterjesztés csak a ``Foo()`` függvényt "
 "határozza meg."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:211
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:210
 msgid ""
 "The function ``Foo()`` is only used for test purposes. First it checks the "
 "dynamic field configuration, then it checks if the dynamic field driver "
@@ -7601,7 +7598,7 @@ msgstr ""
 "illesztőprogram képes-e végrehajtani a függvényt, majd végrehajtja a "
 "függvényt az illesztőprogramban az összes paramétert átadva."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:215
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:214
 msgid ""
 "It is also possible to skip the step that tests if the driver can execute "
 "the function. To do that it is necessary to implement a mechanism in the "
@@ -7614,11 +7611,11 @@ msgstr ""
 "különleges viselkedés megköveteléséhez a dinamikus mezőnél, és csak azután "
 "hívja meg a függvényt a háttérprogram objektumban."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:219
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:218
 msgid "Dynamic Field Driver Extension Example"
 msgstr "Dinamikus mező illesztőprogram kiterjesztés példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:221
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:220
 msgid ""
 "Driver extensions will be loaded transparently into the driver itself as a "
 "base class. All defined object and properties from the driver will be "
@@ -7628,7 +7625,7 @@ msgstr ""
 "illesztőprogramba egy alaposztályként. Az illesztőprogramból az összes "
 "meghatározott objektum és tulajdonság elérhető lesz a kiterjesztésben."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:225
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:224
 msgid ""
 "All new functions implemented in the driver extension should be defined in a "
 "back end extension, as every function is called from the back end object."
@@ -7637,7 +7634,7 @@ msgstr ""
 "kell határozni egy háttérprogram kiterjesztésben, mivel minden függvény a "
 "háttérprogram objektumból kerül meghívásra."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:227
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:226
 msgid ""
 "In this section the ``Foo`` extension for text field driver is shown and "
 "explained. The extension only implements the function ``Foo()``."
@@ -7646,7 +7643,7 @@ msgstr ""
 "kiterjesztés van megjelenítve és elmagyarázva. A kiterjesztés csak a "
 "``Foo()`` függvényt valósítja meg."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:271
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:269
 msgid ""
 "The function ``Foo()`` has no special logic. It is only for testing and it "
 "always returns 1."
@@ -7827,8 +7824,8 @@ msgid ""
 "$OTRS_HOME/Kernel/System/DynamicField/NewPackageBackend.pm`` and its drivers "
 "in ``/$OTRS_HOME/Kernel/System/DynamicField/Driver/NewPackage*.pm``)."
 msgstr ""
-"Tegye az új háttérprogram kiterjesztést a ``DynamicField`` könyvtárba ("
-"például ``/$OTRS_HOME/Kernel/System/DynamicField/NewPackageBackend.pm`` és "
+"Tegye az új háttérprogram kiterjesztést a ``DynamicField`` könyvtárba "
+"(például ``/$OTRS_HOME/Kernel/System/DynamicField/NewPackageBackend.pm`` és "
 "az illesztőprogramjait a ``/$OTRS_HOME/Kernel/System/DynamicField/Driver/"
 "NewPackage*.pm`` fájlokba)."
 
@@ -8498,8 +8495,8 @@ msgstr ""
 "Ebben a szakaszban a jelszó dinamikus mezőhöz egy adminisztrátori "
 "párbeszédablak van megjelenítve és elmagyarázva."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:167
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:962
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:959
 msgid ""
 "The constructor ``new`` creates a new instance of the class. According to "
 "the coding guidelines objects of other classes that are needed in this "
@@ -8509,7 +8506,7 @@ msgstr ""
 "irányelvek szerint más osztályoknak azon objektumait kell a ``new`` "
 "konstruktorban létrehozni, amelyek ebben a modulban szükségesek."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:208
 msgid ""
 "``Run`` is the default function to be called by the web request. We try to "
 "make this function as simple as possible and let the helper functions to do "
@@ -8519,7 +8516,7 @@ msgstr ""
 "ezt a függvényt annyira egyszerűvé tenni, amennyire csak lehetséges, és "
 "lehetővé tenni a segítő függvényeknek a kemény munka elvégzését."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:240
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:239
 msgid ""
 "``_Add`` function is also pretty simple, it just get some parameters from "
 "the web request and call the ``_ShowScreen()`` function. Normally this "
@@ -8529,7 +8526,7 @@ msgstr ""
 "webkérésből, és meghívja a ``_ShowScreen()`` függvényt. Normális esetben ezt "
 "a függvényt nem szükséges módosítani."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:358
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:357
 msgid ""
 "The ``_AddAction`` function gets the configuration parameters from a new "
 "dynamic field, and it validates that the dynamic field name only contains "
@@ -8540,7 +8537,7 @@ msgstr ""
 "számokat tartalmaz-e. Ez a függvény képes ellenőrizni bármilyen egyéb "
 "paramétert is."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:360
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:359
 msgid ""
 "``Name``, ``Label``, ``FieldOrder``, ``Validity`` are common parameters for "
 "all dynamic fields and they are required. Each dynamic field has its "
@@ -8554,7 +8551,7 @@ msgstr ""
 "``DefaultValue`` paramétert. Ebben az esetben a ``ShowValue`` és a "
 "``ValueMask`` paraméterekkel is rendelkezik a jelszómezőnél."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:363
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:362
 msgid ""
 "If the field has the ability to store a fixed list of values they should be "
 "stored in the ``PossibleValues`` parameter inside the specific configuration "
@@ -8564,7 +8561,7 @@ msgstr ""
 "képességével, akkor azokat a ``PossibleValues`` paraméterben kell tárolni a "
 "különleges beállítási kivonaton belül."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:365
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:364
 msgid ""
 "As in other admin modules, if a parameter is not valid this function returns "
 "to the add screen highlighting the erroneous form fields."
@@ -8572,11 +8569,11 @@ msgstr ""
 "Mint más adminisztrátori modulokban, ha egy paraméter nem érvényes, akkor ez "
 "a függvény visszatér a hozzáadás képernyőre, kiemelve a hibás űrlapmezőket."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:367
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:366
 msgid "If all the parameters are correct it creates a new dynamic field."
 msgstr "Ha az összes paraméter helyes, akkor létrehoz egy új dinamikus mezőt."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:430
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:429
 msgid ""
 "The ``_Change`` function is very similar to the ``_Add`` function but since "
 "this function is used to edit an existing field it needs to validated the "
@@ -8587,7 +8584,7 @@ msgstr ""
 "``FieldID`` paramétert, és be kell gyűjtenie a jelenlegi dinamikus mező "
 "adatait."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:575
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:574
 msgid ""
 "``_ChangeAction()`` is very similar to ``_AddAction()``, but adapted for the "
 "update of an existing field instead of creating a new one."
@@ -8595,7 +8592,7 @@ msgstr ""
 "A ``_ChangeAction()`` nagyon hasonló az ``_AddAction()`` függvényhez, de át "
 "van írva egy meglévő mező frissítéséhez egy új létrehozása helyett."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:668
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:667
 msgid ""
 "The ``_ShowScreen`` function is used to set and define the HTML elements and "
 "blocks from a template to generate the admin dialog HTML code."
@@ -8604,15 +8601,15 @@ msgstr ""
 "blokkok beállítására és meghatározására az adminisztrátori párbeszédablak "
 "HTML kódjának előállításához."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:672
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:671
 msgid "Dynamic Field Template for Admin Dialog Example"
 msgstr "Dinamikus mező sablon az adminisztrátori párbeszédablak példához"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:674
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:673
 msgid "The template is the place where the HTML code of the dialog is stored."
 msgstr "A sablon az a hely, ahol a párbeszédablak HTML kódja el van tárolva."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:676
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:675
 msgid ""
 "In this section an admin dialog template for the password dynamic field is "
 "shown and explained."
@@ -8620,12 +8617,12 @@ msgstr ""
 "Ebben a szakaszban a jelszó dinamikus mezőhöz egy adminisztrátori "
 "párbeszédablak sablon van megjelenítve és elmagyarázva."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:689
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:687
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:401
 msgid "This is common header that can be found in common OTRS modules."
 msgstr "Ez egy gyakori fejléc, amely megtalálható a szokásos OTRS modulokban."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:712
 msgid ""
 "This part of the code has the main box and also the actions side bar. No "
 "modifications are needed in this section."
@@ -8633,7 +8630,7 @@ msgstr ""
 "A kód ezen része rendelkezik a fő dobozzal és a műveletek oldalsávval is. "
 "Nincs szükség módosításokra ebben a szakaszban."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:727
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:725
 msgid ""
 "In this section of the code is defined the right part of the dialog. Notice "
 "that the value of the ``Action`` hidden input must match with the name of "
@@ -8643,7 +8640,7 @@ msgstr ""
 "Figyelje meg, hogy a rejtett ``Action`` beviteli mező értékének egyeznie "
 "kell az adminisztrátori párbeszédablak nevével."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:795
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:793
 msgid ""
 "This first widget contains the common form attributes for the dynamic "
 "fields. For consistency with other dynamic fields is recommended to leave "
@@ -8653,7 +8650,7 @@ msgstr ""
 "dinamikus mezőkhöz. A többi dinamikus mezővel való következetességért "
 "javasolt a kód ezen részének változatlanul hagyása."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:835
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:833
 msgid ""
 "The second widget has the dynamic field specific form attributes. This is "
 "the place where new attributes can be set and it could use JavaScript and "
@@ -8664,7 +8661,7 @@ msgstr ""
 "használhatnak JavaScript és AJAX technológiákat, hogy egyszerűbbé és "
 "barátságosabbá tegyék a végfelhasználó számára."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:861
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:859
 msgid ""
 "The final part of the file contains the *Save* button and the *Cancel* link, "
 "as well as other needed JavaScript code."
@@ -8672,11 +8669,11 @@ msgstr ""
 "A fájl utolsó része tartalmazza a *Mentés* gombot és a *Mégse* hivatkozást, "
 "valamint az egyéb szükséges JavaScript kódot."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:865
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:863
 msgid "Dynamic Field Driver Example"
 msgstr "Dinamikus mező illesztőprogram példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:867
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:865
 msgid ""
 "The driver *is* the dynamic field. It contains several functions that are "
 "used wide in the OTRS framework. A driver can inherit some functions form "
@@ -8695,7 +8692,7 @@ msgstr ""
 "jelölőnégyzet mező illesztőprogram csak a ``Base.pm`` fájlból örököl, mivel "
 "az összes többi függvény nagyon eltérő bármely más alap illesztőprogramtól."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:871
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:869
 msgid ""
 "Please refer to the Perl online documentation (POD) of the module ``/Kernel/"
 "System/DynmicField/Backend.pm`` to have the list of all attributes and "
@@ -8705,7 +8702,7 @@ msgstr ""
 "Dokumentációját (POD) az összes attribútum listája és a lehetséges "
 "visszatérési adatok megismeréséhez az egyes függvényeknél."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:873
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:871
 msgid ""
 "In this section the password dynamic field driver is shown and explained. "
 "This driver inherits some functions from ``Base.pm`` and ``BaseText.pm`` and "
@@ -8716,7 +8713,7 @@ msgstr ""
 "a ``BaseText.pm`` fájlokból, és csak azokat a függvényeket valósítja meg, "
 "amelyek eltérő eredményeket igényelnek."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:902
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:899
 msgid ""
 "This is the common header that can be found in common OTRS modules. The "
 "class/package name is declared via the ``package`` keyword. Notice that "
@@ -8726,7 +8723,7 @@ msgstr ""
 "osztály/csomag neve a ``package`` kulcsszón keresztül van deklarálva. "
 "Figyelje meg, hogy a ``BaseText`` osztályt használják alaposztályként."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:964
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:961
 msgid ""
 "It is important to define the behaviors correctly as the field might or "
 "might not be used in certain screens, functions that depends on behaviors "
@@ -8738,7 +8735,7 @@ msgstr ""
 "függvényeket esetleg nem szükséges megvalósítani, amelyek olyan "
 "viselkedésektől függenek, amelyek nem aktívak ennél a bizonyos mezőnél."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:968
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:965
 msgid ""
 "Drivers are created only by the ``BackendObject`` and not directly from any "
 "other module."
@@ -8746,7 +8743,7 @@ msgstr ""
 "Az illesztőprogramokat kizárólag a ``BackendObject`` hozza létre, és nem "
 "közvetlenül bármely egyéb modulból."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1058
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1055
 msgid ""
 "This function is the responsible to create the HTML representation of the "
 "field and its label, and is used in the edit screens like "
@@ -8756,7 +8753,7 @@ msgstr ""
 "létrehozásáért, és olyan szerkesztő képernyőkön használják, mint például az "
 "``AgentTicketPhone``, ``AgentTicketNote``, stb."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1121
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1118
 msgid ""
 "``DisplayValueRender()`` function returns the field value as a plain text as "
 "well as its title (both can be translated). For this particular example we "
@@ -8769,7 +8766,7 @@ msgstr ""
 "beállítási paraméter által előre meghatározott maszkot kell-e megjeleníteni "
 "a dinamikus mezőben."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1163
 msgid ""
 "This function is similar to ``DisplayValueRender()`` but is used in places "
 "where there is no ``LayoutObject``."
@@ -8777,11 +8774,11 @@ msgstr ""
 "Ez a függvény hasonló a ``DisplayValueRender()`` függvényhez, de olyan "
 "helyeken használják, ahol nincs ``LayoutObject``."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1170
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1167
 msgid "Other Functions"
 msgstr "Egyéb függvények"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1172
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1169
 msgid ""
 "The following are other functions that are might needed if the new dynamic "
 "field does not inherit from other classes. To see the complete code of this "
@@ -8795,7 +8792,7 @@ msgstr ""
 "DynamicField/Driver/Base.pm`` és a ``Kernel/System/DynamicField/Driver/"
 "BaseText.pm`` fájlokba."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1178
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1175
 msgid ""
 "This function retrieves the value from the field on a specified object. In "
 "this case we are returning the first text value, since the field only stores "
@@ -8805,7 +8802,7 @@ msgstr ""
 "esetben az első szövegértéket adjuk vissza, mivel a mező egyszerre csak egy "
 "szövegértéket tárol."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1184
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1181
 msgid ""
 "This function is used to store a dynamic field value. In this case this "
 "field only stores one text type value. Other fields could store more than "
@@ -8816,7 +8813,7 @@ msgstr ""
 "egynél több értéket is a ``ValueText``, a ``ValueDateTime`` vagy a "
 "``ValueInt`` formátumnál."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1191
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1188
 msgid ""
 "This function is used to delete one field value attached to a particular "
 "object ID. For example if the instance of an object is to be deleted, then "
@@ -8828,7 +8825,7 @@ msgstr ""
 "törlésére készülnek, akkor nincs oka a mezőérték tárolásának az adatbázisban "
 "annál a bizonyos objektumpéldánynál."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1197
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1194
 msgid ""
 "This function is used to delete all values from a certain dynamic field. "
 "This function is very useful when a dynamic field is going to be deleted."
@@ -8837,13 +8834,13 @@ msgstr ""
 "mezőből. Ez a függvény nagyon hasznos, amikor egy dinamikus mező törlésre "
 "fog kerülni."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1203
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1200
 msgid "This function is used to check if the value is consistent to its type."
 msgstr ""
 "Ezt a függvényt annak ellenőrzéséhez használják, hogy az érték megegyezik-e "
 "a típusának."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1206
 msgid ""
 "This function is used by ``TicketSearch`` core module to build the internal "
 "query to search for a ticket based on this field as a search parameter."
@@ -8852,7 +8849,7 @@ msgstr ""
 "szükséges belső lekérdezés felépítéséhez, ezt a mezőt alapul véve keresési "
 "paraméterként."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1215
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1212
 msgid ""
 "This function is also a helper for ``TicketSearch`` module. ``"
 "$Param{TableAlias}`` should be kept and ``value_text`` could be replaced "
@@ -8863,7 +8860,7 @@ msgstr ""
 "lecserélhető a ``value_date`` vagy a ``value_int`` paraméterrel a mezőtől "
 "függően."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1221
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1218
 msgid ""
 "This function is used in the edit screens of OTRS and its purpose is to get "
 "the value of the field, either from a template like generic agent profile or "
@@ -8877,7 +8874,7 @@ msgstr ""
 "$Param{ParamObject}`` paraméterben, amely az előtétprogram-modul vagy a "
 "képernyő ``ParamObject`` objektumának egy másolata."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1223
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1220
 msgid ""
 "There are two return formats for this function. The normal that is just the "
 "raw value or a structure that is the pair field name => field value. For "
@@ -8891,7 +8888,7 @@ msgstr ""
 "szövegként adja vissza, és ha egy szerkezetet kell visszaadnia, akkor a "
 "kivonatban egy párost ad vissza a dátum minden egyes részéhez."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1225
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1222
 msgid ""
 "If the result should be a structure then, normally this is used to store its "
 "values in a template, like a generic agent profile. For example a date field "
@@ -8904,7 +8901,7 @@ msgstr ""
 "használ a mező felépítéséhez, mint például a használt jelölőnégyzetet és "
 "kiválasztókat az évhez, hónaphoz, naphoz, stb."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1232
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1229
 msgid ""
 "This function should provide at least a method to validate if the field is "
 "empty, and return an error if the field is empty and mandatory, but it can "
@@ -8918,7 +8915,7 @@ msgstr ""
 "mint például ha a kiválasztott lehetőség érvényes, vagy ha egy dátumnak csak "
 "a múltban kell lennie, stb. Egy egyéni hibaüzenetet is biztosíthat."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1235
 msgid ""
 "This function is used by ticket search dialog and it is similar to "
 "``EditFieldRander()``, but normally on a search screen small changes has to "
@@ -8935,7 +8932,7 @@ msgstr ""
 "többválasztósként jelenik meg azért, hogy egyszerre több érték keresését "
 "tegye lehetővé a felhasználónak."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1244
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1241
 msgid ""
 "Very similar to ``EditFieldValueGet()``, but uses a different name prefix, "
 "adapted for the search dialog screen."
@@ -8943,7 +8940,7 @@ msgstr ""
 "Nagyon hasonló az ``EditFieldValueGet()`` függvényhez, de eltérő név "
 "előtagot használ a keresési párbeszédablak képernyőhöz átírva."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1250
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1247
 msgid ""
 "This function is used also by the ticket search dialog to set the correct "
 "operator and value to do the search on this field. It also returns how the "
@@ -8954,7 +8951,7 @@ msgstr ""
 "visszaadja, hogy az értéket hogyan kell megjeleníteni a használt keresési "
 "attribútumokban a találatok oldalon."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1256
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1253
 msgid ""
 "This function is used by the stats modules. It includes the field definition "
 "in the stats format. For fields with fixed values it also includes all this "
@@ -8967,7 +8964,7 @@ msgstr ""
 "lefordíthatók, akkor nézze meg a ``BaseSelect`` illesztőprogram kódját "
 "példaként arra, hogy azokat hogyan kell megvalósítani."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1262
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1259
 msgid ""
 "This function is very similar to the ``SearchFieldParameterBuild()``. The "
 "difference is that the latter gets the value from the search profile and "
@@ -8977,11 +8974,11 @@ msgstr ""
 "A különbség az, hogy az utóbbi a keresési profilból kapja meg az értéket, és "
 "ez pedig közvetlenül a paramétereiből kapja meg az értéket."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1265
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1262
 msgid "This function is used by statistics module."
 msgstr "Ezt a függvényt a statisztikák modul használja."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1271
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1268
 msgid ""
 "This function is used to know how the dynamic field values stored on a "
 "profile should be retrieved, as a scalar or as an array, and it also defines "
@@ -8992,7 +8989,7 @@ msgstr ""
 "skalár vagy tömb formában, és meghatározza a mező helyes nevét is a "
 "profilban."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1277
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1274
 msgid ""
 "This function is used by ``otrs.FillDB.pl`` script to populate the database "
 "with some test and random data. The value inserted by this function is not "
@@ -9004,7 +9001,7 @@ msgstr ""
 "beszúrt érték nem igazán fontos. Az egyetlen megkötés az, hogy az értéknek "
 "kompatibilisnek kell lennie a mezőérték típusával."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1283
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1280
 msgid ""
 "Used by the notification modules. This function returns 1 if the field is "
 "present in the ``$Param{ObjectAttributes}`` parameter and if it matches the "
@@ -9079,11 +9076,11 @@ msgstr ""
 "Minden egyes meghívónak meg kell valósítania ezeket a szubrutinokat:"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:12
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:43
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:42
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:12
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:21
 #: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:12
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:635
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:633
 msgid "``new``"
 msgstr "``new``"
 
@@ -9117,7 +9114,7 @@ msgstr ""
 "Ebben a szakaszban egy minta meghívómodul lesz megjelenítve, és minden "
 "szubrutin elmagyarázásra kerül."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:47
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:46
 msgid ""
 "This is common header that can be found in common OTRS modules. The class/"
 "package name is declared via the ``package`` keyword. Invokers can not be "
@@ -9127,10 +9124,10 @@ msgstr ""
 "osztály/csomag neve a ``package`` kulcsszón keresztül van deklarálva. A "
 "meghívók nem példányosíthatók az objektumkezelővel."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:71
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:122
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:70
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:83
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:70
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:69
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:82
 msgid ""
 "The constructor ``new`` creates a new instance of the class. According to "
 "the coding guidelines only objects of other classes not handled by the "
@@ -9141,7 +9138,7 @@ msgstr ""
 "azon objektumait kell a ``new`` konstruktorban létrehozni, amelyek ebben a "
 "modulban szükségesek."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:103
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:102
 msgid ""
 "The ``PrepareRequest`` function is used to handle and collect all needed "
 "data to be sent into the request. Here we can receive data from the request "
@@ -9153,7 +9150,7 @@ msgstr ""
 "kéréskezelőtől, használhatjuk azokat, kiterjeszthetjük azokat, új adatokat "
 "állíthatunk elő, és ezután átvihetjük az eredményeket a leképező réteghez."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:105
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:104
 msgid ""
 "For this example we are expecting to receive a ticket number. If there isn't "
 "then we use the debugger method ``Error()`` that creates an entry in the "
@@ -9165,7 +9162,7 @@ msgstr ""
 "a hibakeresési naplóban, és visszaad egy szerkezetet is a ``Success`` "
 "paraméterrel 0-ként, és egy hibaüzenetet az átadott ``Summary`` értékként."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:107
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:106
 msgid ""
 "Also this example appends the word *Test* to the parameter ``Action`` and if "
 "``GetSystemTime`` is requested, it will fill the ``SystemTime`` parameter "
@@ -9179,7 +9176,7 @@ msgstr ""
 "előkészítse az elküldendő adatokat. Egy valódi meghívónál itt kell elvégezni "
 "néhány hívást az alapmodulokhoz (``Kernel/System/*.pm``)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:109
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:108
 msgid ""
 "If during any part of the ``PrepareRequest`` function the request need to be "
 "stop without generating and error an entry in the debug log the following "
@@ -9189,7 +9186,7 @@ msgstr ""
 "állítani a hibakeresési naplóba való bejegyzés előállítása és hibajelzése "
 "nélkül, akkor a következő kód használható:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:118
 msgid ""
 "Using this, the requester will understand that the request should not "
 "continue (it will not be sent to mapping layer and will also not be sent to "
@@ -9201,7 +9198,7 @@ msgstr ""
 "a hálózati átvitelhez sem). A kérelmező nem fog hibát küldeni a hibakeresési "
 "naplóba, hanem csak csendben le fog állni."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:169
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:168
 msgid ""
 "The ``HandleResponse`` function is used to receive and process the data from "
 "the previous request, that was made to the remote system. This data already "
@@ -9213,7 +9210,7 @@ msgstr ""
 "Ezeket az adatokat már átadta a leképező réteg, hogy átalakítsa azokat a "
 "távoli rendszer formátumáról az OTRS formátumára (ha szükséges)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:172
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:171
 msgid ""
 "For this particular example it checks the ticket number again and check if "
 "the action ends with the word *Test* (as was done in the ``PrepareRequest`` "
@@ -9223,7 +9220,7 @@ msgstr ""
 "hogy a művelet a *Test* szóval végződik-e (amint az a ``PrepareRequest`` "
 "függvényben történt)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:176
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:175
 msgid ""
 "This invoker is only used for tests, a real invoker will check if the "
 "response was on the format described by the remote system and can perform "
@@ -9236,11 +9233,11 @@ msgstr ""
 "egy hívás végrehajtása egy alapmodulhoz, az adatbázis frissítése, hiba "
 "küldése, stb."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:180
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:179
 msgid "Invoker Configuration Example"
 msgstr "Meghívó beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:182
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:181
 msgid ""
 "There is the need to register this invoker module to be accessible in the "
 "OTRS GUI. This can be done using the XML configuration below."
@@ -9264,27 +9261,27 @@ msgstr ""
 "ábrázolva. Leképező modulok fejleszthetők ki nem csak az értékek, hanem a "
 "kulcsok átalakításához is."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:7
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:6
 msgid "For example:"
 msgstr "Például:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:10
-msgid "From"
-msgstr "Erről"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:9
+msgid "Mapping from"
+msgstr "Leképezés erről"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:10
-msgid "To"
-msgstr "Erre"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:9
+msgid "Mapping to"
+msgstr "Leképezés erre"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:12
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:11
 msgid "Prio => Warning"
 msgstr "Prio => Warning"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:12
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:11
 msgid "PriorityID => 3"
 msgstr "PriorityID => 3"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:15
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:14
 msgid ""
 "The mapping layer is not absolutely necessary, a web service can skip it "
 "completely depending on the web service configuration and how invokers and "
@@ -9297,7 +9294,7 @@ msgstr ""
 "szükséges, akkor erősen ajánlott egy meglévő leképezőmodul használata, vagy "
 "egy új létrehozása."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:17
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:16
 msgid ""
 "Mapping modules can be called more than one time during a normal "
 "communication, take a look to the following examples."
@@ -9305,11 +9302,11 @@ msgstr ""
 "A leképező modulok egynél több alkalommal is meghívhatók egy normál "
 "kommunikáció közben. Vessen egy pillantást a következő példákra."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:24
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
 msgid "OTRS as provider example"
 msgstr "OTRS mint szolgáltató példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:20
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:19
 msgid ""
 "The remote system sends the request with the data in the remote system "
 "format."
@@ -9317,26 +9314,26 @@ msgstr ""
 "A távoli rendszer elküldi a kérést az adatokkal a távoli rendszer "
 "formátumában."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:21
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:20
 msgid "The data is mapped from the remote system format to the OTRS format."
 msgstr ""
 "Az adatok leképezésre kerülnek a távoli rendszer formátumáról az OTRS "
 "formátumára."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:22
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:21
 msgid "OTRS performs the operation and return the response in OTRS format."
 msgstr ""
 "Az OTRS végrehajtja a műveletet, és visszaadja a választ az OTRS "
 "formátumában."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:28
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:22
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:27
 msgid "The data is mapped from the OTRS format to the remote system format."
 msgstr ""
 "Az adatok leképezésre kerülnek az OTRS formátumáról a távoli rendszer "
 "formátumára."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:24
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
 msgid ""
 "The response with the data in the remote system format is sent to the remote "
 "system."
@@ -9344,11 +9341,11 @@ msgstr ""
 "A válasz a távoli rendszer formátumában lévő adatokkal elküldésre kerül a "
 "távoli rendszernek."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:32
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:31
 msgid "OTRS as requester example"
 msgstr "OTRS mint kérelmező példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:27
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:26
 msgid ""
 "OTRS prepares the request to the remote system using the data in the OTRS "
 "format."
@@ -9356,7 +9353,7 @@ msgstr ""
 "Az OTRS előkészíti a kérést a távoli rendszerhez az OTRS formátumában "
 "használt adatokkal."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:29
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:28
 msgid ""
 "The request is sent to the remote system which performs the action and sends "
 "the response back to OTRS with the data in remote system format."
@@ -9365,22 +9362,22 @@ msgstr ""
 "műveletet, és visszaküldi a választ az OTRS-nek a távoli rendszer "
 "formátumában lévő adatokkal."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:30
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:29
 msgid ""
 "The data is mapped form remote system format (again) to the OTRS format."
 msgstr ""
 "Az adatok (ismét) leképezésre kerülnek a távoli rendszer formátumáról az "
 "OTRS formátumára."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:31
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:30
 msgid "OTRS processes the response."
 msgstr "Az OTRS feldolgozza a választ."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:35
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:34
 msgid "Mapping Back End"
 msgstr "Leképező háttérprogram"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:37
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:36
 msgid ""
 "Generic interface provides a mapping module called *Simple*. With this "
 "module most of the data transformations including key and value mapping can "
@@ -9392,7 +9389,7 @@ msgstr ""
 "elvégezhető, és szabályokat is meghatároz az alapértelmezett leképezések "
 "kezeléséhez mind a kulcsoknál, mind az értékeknél."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:39
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:38
 msgid ""
 "So it is highly probable that you don't need to develop a custom mapping "
 "module. Please check *Simple* mapping module (``Kernel/GenericInterface/"
@@ -9403,7 +9400,7 @@ msgstr ""
 "(``Kernel/GenericInterface/Mapping/Simple.pm``) és annak internetes "
 "dokumentációját."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:41
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:40
 msgid ""
 "If *Simple* mapping module does not match your needs then we will show how "
 "to develop a new mapping back end. Each mapping back end has to implement "
@@ -9414,11 +9411,11 @@ msgstr ""
 "Minden egyes leképező háttérprogramnak meg kell valósítania ezeket a "
 "szubrutinokat:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:44
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:43
 msgid "``Map``"
 msgstr "``Map``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:46
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:45
 msgid ""
 "We should implement each one of this methods in order to be able to map the "
 "data in the communication, handled either by the requester or provider. All "
@@ -9430,11 +9427,11 @@ msgstr ""
 "szolgáltató kezel. Az összes leképező háttérprogramot a leképezőmodul kezeli "
 "(``Kernel/GenericInterface/Mapping.pm``)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:50
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:49
 msgid "Mapping Code Example"
 msgstr "Leképezés kódpélda"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:52
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:51
 msgid ""
 "In this section a sample mapping module is shown and each subroutine is "
 "explained."
@@ -9442,7 +9439,7 @@ msgstr ""
 "Ebben a szakaszban egy minta leképezőmodul lesz megjelenítve, és minden "
 "szubrutin elmagyarázásra kerül."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:76
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:74
 msgid ""
 "We also include ``VariableCheck`` module to perform certain validation over "
 "some variables. Mappings can not be instantiated by the object manager."
@@ -9451,7 +9448,7 @@ msgstr ""
 "végrehajtásához néhány változón. A leképezések nem példányosíthatók az "
 "objektumkezelővel."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:189
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:187
 msgid ""
 "The ``Map`` function is the main part of each mapping module. It receives "
 "the mapping configuration (rules) and the data in the original format "
@@ -9464,7 +9461,7 @@ msgstr ""
 "új formátumra még akkor is, ha az adatok szerkezete megváltozhat a "
 "leképezési folyamat során."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:191
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:189
 msgid ""
 "In this particular example there are three rules to map the values. This "
 "rules are set in the mapping configuration key ``TestOption`` and they are "
@@ -9474,34 +9471,34 @@ msgstr ""
 "szabályok a leképezési beállítások ``TestOption`` kulcsában vannak "
 "beállítva, és a következők: ``ToUpper``, ``ToLower`` és ``Empty``."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:193
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:191
 msgid "``ToUpper``: converts each data value to upper case."
 msgstr "``ToUpper``: nagybetűsre alakít át minden egyes adatértéket."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:194
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:192
 msgid "``ToLower``: converts each data value to lower case."
 msgstr "``ToLower``: kisbetűsre alakít át minden egyes adatértéket."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:195
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:193
 msgid "``Empty``: converts each data value into an empty string."
 msgstr "``Empty``: egy üres szövegre alakít át minden egyes adatértéket."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:197
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:195
 msgid "In this example no data key transformations were implemented."
 msgstr "Ebben a példában nem lettek adatkulcs átalakítások megvalósítva."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:234
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:232
 msgid ""
 "This are the helper functions that actually performs the string conversions."
 msgstr ""
 "Ezek azok a segédfüggvények, amelyek ténylegesen végrehajtják a "
 "szövegátalakításokat."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:236
 msgid "Mapping Configuration Example"
 msgstr "Leképezés beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:240
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:238
 msgid ""
 "There is the need to register this mapping module to be accessible in the "
 "OTRS GUI. This can be done using the XML configuration below."
@@ -9540,7 +9537,7 @@ msgstr ""
 "Minden egyes műveletnek meg kell valósítania ezeket a szubrutinokat:"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:13
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:637
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:635
 msgid "``Run``"
 msgstr "``Run``"
 
@@ -9565,7 +9562,7 @@ msgstr ""
 "Ebben a szakaszban egy minta műveletmodul lesz megjelenítve, és minden "
 "szubrutin elmagyarázásra kerül."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:45
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:44
 msgid ""
 "We also include ``VariableCheck`` module to perform certain validation over "
 "some variables. Operations can not be instantiated by the object manager."
@@ -9574,7 +9571,7 @@ msgstr ""
 "végrehajtásához néhány változón. A műveletek nem példányosíthatók az "
 "objektumkezelővel."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:113
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:112
 msgid ""
 "The ``Run`` function is the main part of each operation. It receives all "
 "internal mapped data from remote system needed by the provider to execute "
@@ -9587,7 +9584,7 @@ msgstr ""
 "eredményt a szolgáltatónak a külső leképezéshez, valamint visszaszállítja a "
 "távoli rendszerhez."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:114
 msgid ""
 "This particular example returns the same data as came from the remote "
 "system, unless ``TestError`` parameter is passed. In this case it returns an "
@@ -9597,11 +9594,11 @@ msgstr ""
 "rendszertől jönnek, hacsak a ``TestError`` paraméter át nincs adva. Ebben az "
 "esetben egy hibát ad vissza."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:118
 msgid "Operation Configuration Example"
 msgstr "Művelet beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:121
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:120
 msgid ""
 "There is the need to register this operation module to be accessible in the "
 "OTRS GUI. This can be done using the XML configuration below."
@@ -9610,11 +9607,11 @@ msgstr ""
 "grafikus felhasználói felületén. Ezt a lenti XML beállítás használatával "
 "lehet megtenni."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:139
 msgid "Unit Test Example"
 msgstr "Egységteszt példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:141
 msgid ""
 "Unit test for generic interface operations does not differs from other unit "
 "tests but it is needed to consider testing locally, but also simulating a "
@@ -9626,7 +9623,7 @@ msgstr ""
 "távoli kapcsolatot is szimulálni kell. Egy jó bevált gyakorlat mindkettőt "
 "különválasztva tesztelni, mivel az eredmények némileg különbözők lehetnek."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:145
 msgid ""
 "To learn more about unit tests, please take a look to the :doc:`../../"
 "contributing/unit-tests` chapter."
@@ -9634,15 +9631,15 @@ msgstr ""
 "Ha többet szeretne megtudni az egységtesztekről, akkor vessen egy pillantást "
 "az :doc:`../../contributing/unit-tests` fejezetre."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:148
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:147
 msgid "The following is just the starting point for a unit test:"
 msgstr "A következő csak a kezdési pont egy egységteszthez:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:428
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:427
 msgid "WSDL Extension Example"
 msgstr "WSDL-kiterjesztés példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:430
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:429
 msgid ""
 "WSDL files contain the definitions of the web services and its operations "
 "for SOAP messages, in case we will extend ``development/webservices/"
@@ -9652,27 +9649,27 @@ msgstr ""
 "műveleteinek meghatározásait abban az esetben, a kibővítjük a ``development/"
 "webservices/GenericTickeConnectorSOAP.wsdl`` fájlt néhány helyen:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:432
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:431
 msgid "Port Type:"
 msgstr "Port típusa:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:444
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:443
 msgid "Binding:"
 msgstr "Kötés:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:463
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:462
 msgid "Type:"
 msgstr "Típus:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:489
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:488
 msgid "Message:"
 msgstr "Üzenet:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:504
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:503
 msgid "WADL Extension Example"
 msgstr "WADL-kiterjesztés példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:506
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:505
 msgid ""
 "WADL files contain the definitions of the web services and its operations "
 "for REST interface, add a new resource to ``development/webservices/"
@@ -9682,11 +9679,11 @@ msgstr ""
 "műveleteinek meghatározásait. Adjon hozzá egy új erőforrást a ``development/"
 "webservices/GenericTickeConnectorREST.wadl`` fájlhoz."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:530
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:529
 msgid "Web Service SOAP Extension Example"
 msgstr "Webszolgáltatás SOAP-kiterjesztés példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:532
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:531
 msgid ""
 "Web services can be imported into OTRS by a YAML with a predefined structure "
 "in this case we will extend ``development/webservices/"
@@ -9697,11 +9694,11 @@ msgstr ""
 "webservices/GenericTickeConnectorSOAP.yml`` fájlt bővítjük ki egy SOAP "
 "webszolgáltatáshoz."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:547
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:546
 msgid "Web Service REST Extension Example"
 msgstr "Webszolgáltatás REST-kiterjesztés példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:549
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:548
 msgid ""
 "Web services can be imported into OTRS by a YAML with a predefined structure "
 "in this case we will extend ``development/webservices/"
@@ -9858,7 +9855,7 @@ msgstr ""
 "anélkül hogy valódi hálózati kérést intéznének egy távoli rendszerhez, "
 "ehelyett ez az egyéni modul működik visszacsatolási felületként."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:63
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:62
 msgid ""
 "This is common header that can be found in common OTRS modules. The class/"
 "package name is declared via the ``package`` keyword. Transports can not be "
@@ -9868,7 +9865,7 @@ msgstr ""
 "osztály/csomag neve a ``package`` kulcsszón keresztül van deklarálva. Az "
 "átvitelek nem példányosíthatók az objektumkezelővel."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:125
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:124
 msgid ""
 "The ``ProviderProcessRequest`` function gets the request from the remote "
 "system (in this case the same OTRS) and extracts the data and the operation "
@@ -9880,7 +9877,7 @@ msgstr ""
 "a műveletet a kérésből a végrehajtáshoz. Ennél a példánál a művelet mindig a "
 "``test_operation``."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:127
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:126
 msgid ""
 "The way this function parses the request to get the data and the operation "
 "name, depends completely on the protocol to be implemented and the external "
@@ -9890,14 +9887,14 @@ msgstr ""
 "művelet nevének lekéréséhez, az teljes egészében a megvalósítandó "
 "protokolltól és azon külső moduloktól függ, amelyekhez használják azokat."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:177
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:176
 msgid ""
 "This function sends the response back to the remote system for the requested "
 "operation."
 msgstr ""
 "Ez a függvény visszaküldi a választ a távoli rendszernek a kért művelethez."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:179
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:178
 msgid ""
 "For this particular example we return a standard HTTP response success (200) "
 "or not (500), along with the required data on each case."
@@ -9905,7 +9902,7 @@ msgstr ""
 "Ennél a bizonyos példánál minden esetben egy szabványos sikeres HTTP-választ "
 "adunk vissza (200) vagy nem (500) a szükséges adatok mellett."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:210
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:209
 msgid ""
 "This is the only function that is used by OTRS as requester. It sends the "
 "request to the remote system and waits for its response."
@@ -9913,7 +9910,7 @@ msgstr ""
 "Ez az egyetlen olyan függvény, amelyet az OTRS mint kérelmező használ. "
 "Elküldi a kérést a távoli rendszernek, és várakozik annak válaszára."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:212
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:211
 msgid ""
 "For this example we use a custom protocol handler to avoid send the request "
 "to the real network. This custom protocol is specified below."
@@ -9922,7 +9919,7 @@ msgstr ""
 "történő kérésküldés elkerüléséhez. Ez az egyéni protokoll az alábbiakban van "
 "megadva."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:243
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:242
 msgid ""
 "This is the code for the custom protocol that we use. This approach is only "
 "useful for training or for testing environments where the remote systems are "
@@ -9932,7 +9929,7 @@ msgstr ""
 "megközelítés csak gyakorlásnál vagy olyan tesztelési környezeteknél hasznos, "
 "ahol a távoli rendszerek nem érhetők el."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:245
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:244
 msgid ""
 "For a new module development we do not recommend to use this approach, a "
 "real protocol needs to be implemented."
@@ -9940,11 +9937,11 @@ msgstr ""
 "Egy új modul kifejlesztéséhez nem ajánljuk ezen megközelítés használatát, "
 "egy valódi protokollt kell megvalósítani."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:249
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:248
 msgid "Network Transport Configuration Example"
 msgstr "Hálózati átvitel beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:251
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:250
 msgid ""
 "There is the need to register this network transport module to be accessible "
 "in the OTRS GUI. This can be done using the XML configuration below."
@@ -9987,11 +9984,11 @@ msgstr ""
 "amely hasonlóan működik mint a ``Kernel::System::Log::File``, de egy "
 "szöveget fűz minden naplóbejegyzés elé."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:116
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:115
 msgid "Log Module Configuration Example"
 msgstr "Naplózás modul beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:117
 msgid ""
 "To activate our custom logging module, the administrator can either set the "
 "existing configuration item ``LogModule`` manually to ``Kernel::System::Log::"
@@ -10003,11 +10000,11 @@ msgstr ""
 "CustomFile`` osztályhoz. Ennek automatikus megvalósításához megadhat egy XML "
 "beállítófájlt, amely felülbírálja az alapértelmezett beállítást."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:133
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:132
 msgid "Log Module Use Case Example"
 msgstr "Naplózás modul használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:134
 msgid ""
 "Useful logging back ends could be logging to a web service or to encrypted "
 "files."
@@ -10015,7 +10012,7 @@ msgstr ""
 "Hasznos naplózó háttérprogram lehet egy webszolgáltatásba vagy egy "
 "titkosított fájlba történő naplózás."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:139
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:138
 msgid ""
 "``Kernel::System::Log`` has other methods than ``Log()`` which cannot be "
 "reimplemented, for example code for working with shared memory segments and "
@@ -10076,11 +10073,11 @@ msgstr ""
 "``Kernel/Output/HTML/TicketNotificationCustom.pm`` fájlba. Mindössze két "
 "függvényre van szüksége: ``new()`` és ``Run()``."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:93
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:92
 msgid "Notification Module Configuration Example"
 msgstr "Értesítési modul beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:95
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:94
 msgid ""
 "There is the need to activate your custom notification module. This can be "
 "done using the XML configuration below. There may be additional parameters "
@@ -10090,12 +10087,12 @@ msgstr ""
 "beállítás használatával lehet megtenni. Lehetnek további paraméterek is a "
 "beállítás kivonatában az értesítési moduljánál."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:113
 msgid "Notification Module Use Case Example"
 msgstr "Értesítési modul használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:117
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:138
 msgid ""
 "Useful ticket menu implementation could be a link to an external tool if "
 "parameters (e.g. ``FreeTextField``) have been set."
@@ -10266,7 +10263,8 @@ msgstr "Kimenetszűrő használati eset példa"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:74
 msgid "Show additional ticket attributes in ``AgentTicketZoom``"
-msgstr "További jegyattribútumok megjelenítése az ``AgentTicketZoom`` képernyőn"
+msgstr ""
+"További jegyattribútumok megjelenítése az ``AgentTicketZoom`` képernyőn"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/outputfilter.rst:74
 msgid "This can be achieved with a ``FilterElementPost`` output filter."
@@ -10581,7 +10579,7 @@ msgid "Holds the information to display the drop-down field."
 msgstr "Információkat tárol a legördülő lista megjelenítéséhez."
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:177
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:712
 msgid "``Data``"
 msgstr "``Data``"
 
@@ -10595,8 +10593,8 @@ msgstr ""
 "amelyeket a felhasználó a képernyőn lát."
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:180
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:147
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:711
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:709
 msgid "``Name``"
 msgstr "``Name``"
 
@@ -10927,11 +10925,11 @@ msgstr ""
 "beállítások hívhatók ``Kernel::System::Queue::PreferencesCustom`` néven. "
 "Lent találhat egy példát."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:117
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:114
 msgid "Queue Preferences Configuration Example"
 msgstr "Várólista beállítások beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:116
 msgid ""
 "There is the need to activate your custom queue preferences module. This can "
 "be done using the XML configuration below."
@@ -10939,12 +10937,12 @@ msgstr ""
 "Szükség van az egyéni várólista beállítások modul bekapcsolására. Ezt a "
 "lenti XML beállítás használatával lehet megtenni."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:131
 msgid "Queue Preferences Use Case Example"
 msgstr "Várólista beállítások használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:137
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:138
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:133
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:134
 msgid "Useful preferences implementation could be a SOAP or RADIUS back end."
 msgstr ""
 "Hasznos beállítások megvalósítás lehet egy SOAP vagy egy RADIUS "
@@ -10990,11 +10988,11 @@ msgstr ""
 "beállítások hívhatók ``Kernel::System::Service::PreferencesCustom`` néven. "
 "Lent találhat egy példát."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:115
 msgid "Service Preferences Configuration Example"
 msgstr "Szolgáltatás beállítások beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:117
 msgid ""
 "There is the need to activate your custom service preferences module. This "
 "can be done using the XML configuration below."
@@ -11002,7 +11000,7 @@ msgstr ""
 "Szükség van az egyéni szolgáltatás beállítások modul bekapcsolására. Ezt a "
 "lenti XML beállítás használatával lehet megtenni."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:136
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:132
 msgid "Service Preferences Use Case Example"
 msgstr "Szolgáltatás beállítások használati eset példa"
 
@@ -11045,11 +11043,11 @@ msgstr ""
 "hívhatók ``Kernel::System::SLA::PreferencesCustom`` néven. Lent találhat egy "
 "példát."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:114
 msgid "SLA Preferences Configuration Example"
 msgstr "SLA beállítások beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:117
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:116
 msgid ""
 "There is the need to activate your custom SLA preferences module. This can "
 "be done using the XML configuration below."
@@ -11057,11 +11055,11 @@ msgstr ""
 "Szükség van az egyéni SLA beállítások modul bekapcsolására. Ezt a lenti XML "
 "beállítás használatával lehet megtenni."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:132
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:131
 msgid "SLA Preferences Use Case Example"
 msgstr "SLA beállítások használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:134
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:133
 msgid ""
 "Useful preferences implementation could be to store additional values on "
 "SLAs."
@@ -11135,7 +11133,7 @@ msgstr ""
 "Ebben a szakaszban egy minta statisztikamodul lesz megjelenítve, és minden "
 "szubrutin elmagyarázásra kerül."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:46
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:45
 msgid ""
 "This is a common boilerplate that can be found in common OTRS modules. The "
 "class/package name is declared via the ``package`` keyword. Then the needed "
@@ -11146,7 +11144,7 @@ msgstr ""
 "Ezután a szükséges modulok használatának megadása következik a ``use`` "
 "kulcsszóval."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:73
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:72
 msgid ""
 "The ``new`` is the constructor for this statistic module. It creates a new "
 "instance of the class. According to the coding guidelines objects of other "
@@ -11164,7 +11162,7 @@ msgstr ""
 "vagy más objektumok létrehozásánál, vagy ebben a modulban - át vannak-e "
 "adva. Ezután a többi objektum kerül létrehozásra."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:83
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:82
 msgid ""
 "``GetObjectName`` returns a name for the statistics module. This is the "
 "label that is shown in the drop down in the configuration as well as in the "
@@ -11174,7 +11172,7 @@ msgstr ""
 "címke, amely a lenyíló menüben jelenik meg a beállításokban, valamint a "
 "meglévő statisztikák listájában (az *objektum* oszlopban)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:141
 msgid ""
 "In this sample stats module, we want to provide three attributes the user "
 "can chose from: a list of queues, a list of states and a time drop down. To "
@@ -11187,7 +11185,7 @@ msgstr ""
 "értékek lekéréséhez szükséges néhány művelet. Ebben az esetben a "
 "``StateList`` és a ``GetAllQueues`` kerül meghívásra."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:144
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:143
 msgid ""
 "Then the list of attributes is created. Each attribute is defined via a hash "
 "reference. You can use these keys:"
@@ -11196,49 +11194,49 @@ msgstr ""
 "egy kivonathivatkozáson keresztül van meghatározva. Ezeket a kulcsokat "
 "használhatja:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:147
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:708
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:706
 msgid "The label in the web interface."
 msgstr "A címke a webes felületen."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:150
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:149
 msgid "``UseAsXvalue``"
 msgstr "``UseAsXvalue``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:150
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:149
 msgid "This attribute can be used on the x-axis."
 msgstr "Ez az attribútum használható az X-tengelyen."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:153
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:152
 msgid "``UseAsValueSeries``"
 msgstr "``UseAsValueSeries``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:153
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:152
 msgid "This attribute can be used on the y-axis."
 msgstr "Ez az attribútum használható az Y-tengelyen."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:156
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:155
 msgid "``UseAsRestriction``"
 msgstr "``UseAsRestriction``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:156
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:155
 msgid "This attribute can be used for restrictions."
 msgstr "Ez az attribútum használható a korlátozásokhoz."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:159
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:158
 msgid "``Element``"
 msgstr "``Element``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:159
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:711
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:158
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:709
 msgid "The HTML field name."
 msgstr "A HTML mező neve."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:162
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:161
 msgid "``Block``"
 msgstr "``Block``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:162
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:161
 msgid ""
 "The block name in the template file (e.g. ``<OTRS_HOME>/Kernel/Output/HTML/"
 "Standard/AgentStatsEditXaxis.tt``)."
@@ -11246,16 +11244,16 @@ msgstr ""
 "A blokknév a sablonfájlban (például ``<OTRS_HOME>/Kernel/Output/HTML/"
 "Standard/AgentStatsEditXaxis.tt``)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:165
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:164
 msgid "``Values``"
 msgstr "``Values``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:165
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:164
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:712
 msgid "The values shown in the attribute."
 msgstr "Az attribútumban megjelenített értékek."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:167
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:166
 msgid ""
 "Hint: If you install this sample and you configure a statistic with some "
 "queues - lets say 'queue A' and 'queue B' - then these queues are the only "
@@ -11270,7 +11268,7 @@ msgstr ""
 "mező szükséges. Ebben az esetben beállíthatja a ``SelectedValues`` kulcsot "
 "az attribútum meghatározásában:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:198
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:197
 msgid ""
 "``GetStatElement`` gets called for each cell in the result table. So it "
 "should be a numeric value. In this sample it does a simple ticket search. "
@@ -11287,7 +11285,7 @@ msgstr ""
 "*nyitott* állapotban lévő létrehozott jegyeket a *Misc* várólistánál, az "
 "átadott paraméter kivonat valahogy így néz ki:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:208
 msgid ""
 "If the *per cell* calculation should be avoided, ``GetStatTable`` is an "
 "alternative. ``GetStatTable`` returns a list of rows, hence an array of "
@@ -11298,7 +11296,7 @@ msgstr ""
 "ezentúl egy tömbhivatkozások tömbje. Ez ugyanahhoz az eredményhez vezet mint "
 "a ``GetStatElement`` használata."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:237
 msgid ""
 "``GetStatTable`` gets all information about the stats query that is needed. "
 "The passed parameters contain information about the attributes "
@@ -11315,7 +11313,7 @@ msgstr ""
 "kulcsok az Y-tengely értékei, és azok értékei kivonathivatkozások a "
 "``GetStatElement`` szubrutinokhoz használt paraméterekkel."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:311
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:310
 msgid ""
 "Sometimes the headers of the table have to be changed. In that case, a "
 "subroutine called ``GetHeaderLine`` has to be implemented. That subroutine "
@@ -11327,7 +11325,7 @@ msgstr ""
 "egy tömbhivatkozást kell visszaadnia az oszlopfejlécekkel mint elemekkel. Ez "
 "információkat kap az átadott X-értékekkel kapcsolatban."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:359
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:358
 msgid ""
 "Configured statistics can be exported into XML format. But as queues with "
 "the same queue names can have different IDs on different OTRS instances it "
@@ -11344,7 +11342,7 @@ msgstr ""
 "neveket használjon. Ezt a statisztikák modul minden egyes *dimenziójánál* el "
 "kell végezni (X-tengely, Y-tengely és korlátozások)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:361
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:360
 msgid ""
 "``ImportWrapper`` works the other way around - it converts the name to the "
 "ID in the instance the configuration is imported to."
@@ -11352,11 +11350,11 @@ msgstr ""
 "Az ``ImportWrapper`` fordítva működik - átalakítja a nevet az azonosítóra "
 "abban a példányban, ahova a beállítások importálásra kerülnek."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:363
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:362
 msgid "This is a sample export:"
 msgstr "Ez egy minta exportálás:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:399
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:398
 msgid ""
 "Now, that all subroutines are explained, this is the complete sample stats "
 "module."
@@ -11364,11 +11362,11 @@ msgstr ""
 "Most, hogy az összes szubrutin elmagyarázásra került, itt a teljes minta "
 "statisztikák modul."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:607
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:605
 msgid "Stats Configuration Example"
 msgstr "Statisztikák beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:627
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:625
 msgid ""
 "If you have a lot of cells in the result table and the ``GetStatElement`` is "
 "quite complex, the request can take a long time."
@@ -11376,11 +11374,11 @@ msgstr ""
 "Ha nagyon sok cellája van az eredménytáblázatban és a ``GetStatElement`` "
 "meglehetősen összetett, akkor a kérés eltarthat egy ideig."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:631
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:629
 msgid "Static Stats"
 msgstr "Statikus statisztikák"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:633
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:631
 msgid ""
 "The subsequent paragraphs describe the static stats. Static stats are very "
 "easy to create as these modules have to implement only three subroutines."
@@ -11389,22 +11387,22 @@ msgstr ""
 "statisztikákat nagyon könnyű létrehozni, mivel ezeknek a moduloknak csak "
 "három szubrutint kell megvalósítaniuk."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:636
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:634
 msgid "``Param``"
 msgstr "``Param``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:641
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:639
 msgid "Static Stats Code Example"
 msgstr "Statikus statisztikák kódpélda"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:643
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:641
 msgid ""
 "The following paragraphs describe the subroutines needed in a static stats."
 msgstr ""
 "A következő bekezdések a statikus statisztikákban szükséges szubrutinokat "
 "mutatják be."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:671
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:669
 msgid ""
 "The ``new`` creates a new instance of the static stats class. First it "
 "creates a new object and then it checks for the needed objects."
@@ -11413,7 +11411,7 @@ msgstr ""
 "Először létrehoz egy új objektumot, és azután ellenőrzi a szükséges "
 "objektumokat."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:703
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:701
 msgid ""
 "The ``Param`` method provides the list of all parameters/attributes that can "
 "be selected to create a static stat. It gets some parameters passed: The "
@@ -11426,7 +11424,7 @@ msgstr ""
 "statisztikák attribútumaihoz, a statisztikák formátumát és az objektum nevét "
 "(a modul nevét)."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:705
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:703
 msgid ""
 "The parameters/attributes have to be hash references with these key-value "
 "pairs:"
@@ -11434,11 +11432,11 @@ msgstr ""
 "A paramétereknek és az attribútumoknak kivonathivatkozásoknak kell lenniük "
 "ezekkel a kulcs-érték párokkal:"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:708
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:706
 msgid "``Frontend``"
 msgstr "``Frontend``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:716
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
 msgid ""
 "Other parameter for the ``BuildSelection`` method of the ``LayoutObject`` "
 "can be used, as it is done with ``Size`` and ``Multiple`` in this sample "
@@ -11448,7 +11446,7 @@ msgstr ""
 "metódusánál, ahogy az a ``Size`` és ``Multiple`` paraméterekkel történik "
 "ebben a minta modulban."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:763
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:761
 msgid ""
 "The ``Run`` method actually generates the table data for the stats. It gets "
 "the attributes for this stats passed. In this sample in ``%Param`` a key "
@@ -11469,11 +11467,11 @@ msgstr ""
 "tartalmazza a táblázatban lévő oszlopok címsorait. És ezután a táblázattörzs "
 "adatai következnek."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:964
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:961
 msgid "Static Stats Configuration Example"
 msgstr "Statikus statisztikák beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:966
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:963
 msgid ""
 "There is no configuration needed. Right after installation, the module is "
 "available to create a statistic for this module."
@@ -11515,11 +11513,11 @@ msgstr ""
 "a ``Kernel/Output/HTML/TicketMenuCustom.pm`` helyre. Mindössze két "
 "függvényre van szüksége: ``new()`` és ``Run()``."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:115
 msgid "Ticket Menu Module Configuration Example"
 msgstr "Jegymenü modul beállítási példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:117
 msgid ""
 "There is the need to activate your custom ticket menu module. This can be "
 "done using the XML configuration below. There may be additional parameters "
@@ -11529,11 +11527,11 @@ msgstr ""
 "beállítás használatával lehet megtenni. Lehetnek további paraméterek is a "
 "beállítás kivonatában a jegymenü moduljánál."
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:136
 msgid "Ticket Menu Module Use Case Example"
 msgstr "Jegymenü modul használati eset példa"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:142
 msgid ""
 "The ticket menu directs to an URL that can be handled. If you want to handle "
 "that request via the OTRS framework, you have to write your own front end "
@@ -12578,11 +12576,11 @@ msgstr ""
 "modult. Ez a következő dolog, amit létre kell hozni. Ehhez hozzuk létre az "
 "alábbi fájlt:"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:166
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:165
 msgid "Core Module"
 msgstr "Alapmodul"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:168
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:167
 msgid ""
 "Next, we create the file for the core module ``/HelloWorld/Kernel/System/"
 "HelloWorld.pm`` with the following content:"
@@ -12590,11 +12588,11 @@ msgstr ""
 "Ezután hozzunk létre egy fájlt a ``/HelloWorld/Kernel/System/HelloWorld.pm`` "
 "alapmodulhoz az alábbi tartalommal:"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:265
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:263
 msgid "Template File"
 msgstr "Sablonfájl"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:267
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:265
 msgid ""
 "The last thing missing before the new module can run is the relevant HTML "
 "template. Thus, we create the following file:"
@@ -12602,18 +12600,18 @@ msgstr ""
 "Az utolsó hiányzó dolog, mielőtt az új modul futtatható lenne, a hozzá "
 "tartozó HTML sablon. Ezért hozzuk létre az alábbi fájlt:"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:284
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:281
 msgid ""
 "The module is working now and displays the text *Hello World* when called."
 msgstr ""
 "A modul most már működik, és a meghívásakor megjeleníti a *Hello World* "
 "szöveget."
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:288
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:285
 msgid "Language File"
 msgstr "Nyelvi fájl"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:290
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:287
 msgid ""
 "If the text *Hello World!* is to be translated into for instance German, you "
 "can create a translation file for this language in ``HelloWorld/Kernel/"
@@ -12623,11 +12621,11 @@ msgstr ""
 "létrehozhat egy fordítási fájlt ehhez a nyelvhez a ``HelloWorld/Kernel/"
 "Language/hu_AgentHelloWorld.pm`` helyre. Példa:"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:310
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:307
 msgid "Summary"
 msgstr "Összefoglaló"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:312
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:309
 msgid ""
 "The example given above shows that it is not too difficult to write a new "
 "module for OTRS. It is important, though, to make sure that the module and "
@@ -13294,7 +13292,7 @@ msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-management.rst:58
 msgid "List"
-msgstr "Felsorolás"
+msgstr "Lista"
 
 #: ../../content/how-to-publish-otrs-extensions/package-management.rst:60
 msgid "List all OPM packages."
@@ -13614,6 +13612,21 @@ msgstr ""
 "alapján. Nincs Nem Változtatható szakasz, nincs Címlapszöveg, nincs "
 "Hátlapszöveg. A jelen licenc egy példányát a `GNU weboldalán <https://www."
 "gnu.org/licenses/fdl-1.3.txt>`__ találja."
+
+#~ msgid ""
+#~ "The OTRS developer API documentation is available for `Perl <https://otrs."
+#~ "github.io/doc/api/otrs/stable/Perl/index.html>`__ and `JavaScript "
+#~ "<https://otrs.github.io/doc/api/otrs/stable/JavaScript/index.html>`__."
+#~ msgstr ""
+#~ "Az OTRS fejlesztői API dokumentáció elérhető a `Perl <https://otrs.github."
+#~ "io/doc/api/otrs/stable/Perl/index.html>`__ és a `JavaScript <https://otrs."
+#~ "github.io/doc/api/otrs/stable/JavaScript/index.html>`__ programnyelvekhez."
+
+#~ msgid "From"
+#~ msgstr "Erről"
+
+#~ msgid "To"
+#~ msgstr "Erre"
 
 #~ msgid ""
 #~ "Join your `language team <https://www.transifex.com/otrs/teams/>`__ and "

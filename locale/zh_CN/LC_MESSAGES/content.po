@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-23 19:17+0100\n"
-"PO-Revision-Date: 2020-01-31 03:51+0000\n"
+"POT-Creation-Date: 2020-04-24 13:01+0200\n"
+"PO-Revision-Date: 2020-04-12 09:01+0000\n"
 "Last-Translator: Huimin Wang <whuim@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.app.otrs.com/projects/"
 "otrs-7/developer-manual/zh_Hans/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 3.11.3\n"
 
 #: ../../content/additional-resources.rst:2
 msgid "Additional Resources"
@@ -42,26 +42,26 @@ msgstr ""
 ">`__。 在这里，您还可以找到来自OTRS创始人--OTRS集团关于专业服务和OTRS管理员培"
 "训研讨会的信息。"
 
-#: ../../content/additional-resources.rst:8
+#: ../../content/additional-resources.rst:11
 msgid "Online API Library"
 msgstr "在线API库"
 
 #: ../../content/additional-resources.rst:8
 msgid ""
-"The OTRS developer API documentation is available for `Perl <https://otrs."
-"github.io/doc/api/otrs/stable/Perl/index.html>`__ and `JavaScript <https://"
-"otrs.github.io/doc/api/otrs/stable/JavaScript/index.html>`__."
+"The OTRS developer API documentation is available for `Perl`_ and "
+"`JavaScript`_."
 msgstr ""
-"OTRS开发人员API文档包括 `Perl <https://otrs.github.io/doc/api/otrs/stable/"
-"Perl/index.html>`__ 和 `JavaScript <https://otrs.github.io/doc/api/otrs/"
-"stable/JavaScript/index.html>`__。"
 
-#: ../../content/additional-resources.rst:10
+#: ../../content/additional-resources.rst:13
 msgid "Developer Mailing List"
 msgstr "开发者邮件列表"
 
-#: ../../content/additional-resources.rst:11
-msgid "The OTRS developer mailing list is available at http://lists.otrs.org/."
+#: ../../content/additional-resources.rst:14
+#, fuzzy
+#| msgid ""
+#| "The OTRS developer mailing list is available at http://lists.otrs.org/."
+msgid ""
+"The OTRS developer mailing list is available at https://lists.otrs.org/."
 msgstr "可在http://lists.otrs.org/上找到OTRS开发者邮件列表。"
 
 #: ../../content/contributing.rst:2
@@ -1632,35 +1632,26 @@ msgstr "翻译主要由OTRS用户提供和维护，因此需要 *您的* 帮助�
 
 #: ../../content/contributing/translate.rst:6
 #: ../../content/documentation/translate-documentation.rst:4
-#, fuzzy
-#| msgid ""
-#| "All translations of the OTRS GUI, the public extension modules and the "
-#| "documentations are managed via `Transifex <https://www.transifex.com/otrs/"
-#| "OTRS/>`__."
 msgid ""
 "All translations of the OTRS GUI, the public extension modules and the "
 "documentations are managed using `Weblate <https://translate.otrs.com/>`__."
 msgstr ""
-"OTRS 图形界面、公共扩展模块和文档的所有翻译都通过 `Transifex <https://www."
-"transifex.com/otrs/OTRS/>`__ 进行管理。"
+"OTRS 图形界面、公共扩展模块和文档的所有翻译都通过 `Weblate <https://"
+"translate.otrs.com/>`__ 进行管理。"
 
 #: ../../content/contributing/translate.rst:8
 msgid "To contribute to translations:"
 msgstr "为翻译做出贡献："
 
 #: ../../content/contributing/translate.rst:10
-#, fuzzy
-#| msgid ""
-#| "Sign up for a free translator account on `Transifex <https://www."
-#| "transifex.com>`__."
 msgid ""
 "Sign up for a free translator account on `Weblate <https://translate.otrs."
 "com/>`__."
-msgstr "在 `Transifex <https://www.transifex.com>`__ 注册一个免费的翻译帐户。"
+msgstr "在 `Weblate <https://translate.otrs.com/>`__ 注册一个免费的翻译帐户。"
 
 #: ../../content/contributing/translate.rst:11
 msgid "Select a translation component and your language for translation."
-msgstr ""
+msgstr "选择翻译组件和要翻译的语言。"
 
 #: ../../content/contributing/translate.rst:12
 msgid ""
@@ -1668,16 +1659,11 @@ msgid ""
 msgstr "开始更新您的翻译。 无需其它软件或文件。"
 
 #: ../../content/contributing/translate.rst:16
-#, fuzzy
-#| msgid ""
-#| "If your language is not listed in the dashboard, you can request a new "
-#| "language on *Transifex*. After it is approved, you can start translating."
 msgid ""
 "If your language is not listed in the dashboard, you can request a language. "
 "After it is approved, you can start translating."
 msgstr ""
-"如果您的语言未在仪表板中列出，您可以在 *Transifex* 上申请新语言。 批准后，您"
-"可以开始翻译。"
+"如果仪表板中未列出您的语言，则可以请求一门语言。经批准后，您就可以开始翻译。"
 
 #: ../../content/contributing/translate.rst:18
 #: ../../content/documentation/translate-documentation.rst:6
@@ -1766,7 +1752,7 @@ msgid ""
 msgstr "描述性文本和提示内容被写为完整句子。"
 
 #: ../../content/contributing/ui-design.rst:27
-#: ../../content/get-started/development-environment.rst:61
+#: ../../content/get-started/development-environment.rst:63
 msgid "Example:"
 msgstr "例如："
 
@@ -2155,13 +2141,9 @@ msgstr ""
 "输出格式，如HTML、EPUB和PDF。"
 
 #: ../../content/documentation.rst:6
-#, fuzzy
-#| msgid ""
-#| "The documentation is written in English and translated into many "
-#| "languages on Transifex."
 msgid ""
 "The documentation is written in English and translated into many languages."
-msgstr "文档是用英语编写的，并在Transifex上翻译成多种语言。"
+msgstr "文档是用英语编写的，并翻译成多种语言。"
 
 #: ../../content/documentation/documentation-infrastucture.rst:2
 msgid "Documentation Infrastructure"
@@ -3110,12 +3092,10 @@ msgstr "``Kernel::System::Email`` 用于发送电子邮件。"
 #: ../../content/get-started/architecture.rst:201
 #: ../../content/get-started/architecture.rst:209
 #: ../../content/how-it-works/templates.rst:357
-#, fuzzy
-#| msgid "For more information, see: https://doc.otrs.com/doc/"
 msgid ""
 "For more information see the `Documentation Portal <https://doc.otrs.com/doc/"
 ">`__."
-msgstr "有关更多信息，请访问：https://doc.otrs.com/doc/"
+msgstr "有关更多信息，请访问 `文档门户网站 <https://doc.otrs.com/doc/>`__。"
 
 #: ../../content/get-started/architecture.rst:117
 msgid "Front End Handle"
@@ -3229,7 +3209,7 @@ msgid ""
 "``Kernel::GenericInterface::Provider`` to use OTRS as a server for web "
 "service."
 msgstr ""
-"``Kernel::GenericInterface::Provider``  用于将OTRS作为Web服务的服务器端。"
+"``Kernel::GenericInterface::Provider`` 用于将OTRS作为Web服务的服务器端。"
 
 #: ../../content/get-started/architecture.rst:159
 msgid "``Kernel::GenericInterface::Operation`` to execute provider actions."
@@ -3400,30 +3380,35 @@ msgstr ""
 "有用的工具："
 
 #: ../../content/get-started/development-environment.rst:27
+#, fuzzy
+#| msgid ""
+#| "Please configure the OTRS system according to the `installation "
+#| "instructions <https://doc.otrs.com/doc/manual/installation/stable/en/"
+#| "index.html>`__."
 msgid ""
-"Please configure the OTRS system according to the `installation instructions "
-"<https://doc.otrs.com/doc/manual/installation/stable/en/index.html>`__."
+"Please configure the OTRS system according to the `installation "
+"instructions`_."
 msgstr ""
 "请根据 `安装说明 <https://doc.otrs.com/doc/manual/installation/stable/en/"
 "index.html>`__ 配置OTRS系统。"
 
-#: ../../content/get-started/development-environment.rst:31
+#: ../../content/get-started/development-environment.rst:33
 msgid "Useful Tools"
 msgstr "有用的工具"
 
-#: ../../content/get-started/development-environment.rst:33
+#: ../../content/get-started/development-environment.rst:35
 msgid "There are two modules that are highly recommended for OTRS development:"
 msgstr "强烈建议OTRS开发使用这两个模块："
 
-#: ../../content/get-started/development-environment.rst:35
+#: ../../content/get-started/development-environment.rst:37
 msgid "`OTRSCodePolicy <https://github.com/OTRS/otrscodepolicy>`__"
 msgstr "`OTRS代码策略 <https://github.com/OTRS/otrscodepolicy>`__"
 
-#: ../../content/get-started/development-environment.rst:36
+#: ../../content/get-started/development-environment.rst:38
 msgid "`Fred <https://github.com/OTRS/Fred>`__"
 msgstr "`Fred <https://github.com/OTRS/Fred>`__"
 
-#: ../../content/get-started/development-environment.rst:38
+#: ../../content/get-started/development-environment.rst:40
 msgid ""
 "*OTRSCodePolicy* is a code quality checker that enforces the use of common "
 "coding standards also for the OTRS development team. It is highly "
@@ -3439,7 +3424,7 @@ msgstr ""
 "块文档 <https://github.com/OTRS/otrscodepolicy/blob/master/doc/en/"
 "OTRSCodePolicy.xml>`__。"
 
-#: ../../content/get-started/development-environment.rst:40
+#: ../../content/get-started/development-environment.rst:42
 msgid ""
 "*Fred* is a little development helper module that you can actually install "
 "or link (as described below) into your development system. It features "
@@ -3452,17 +3437,17 @@ msgstr ""
 "其 `模块文档 <https://github.com/OTRS/Fred/blob/master/doc/en/Fred.xml>`__ 中"
 "找到更多详细信息。"
 
-#: ../../content/get-started/development-environment.rst:42
+#: ../../content/get-started/development-environment.rst:44
 msgid ""
 "By the way, these tools are also open source, and we will be happy about any "
 "improvements that you can contribute."
 msgstr "顺便说一句，这些工具也是开源的，我们将为您可以贡献的任何改进感到高兴。"
 
-#: ../../content/get-started/development-environment.rst:46
+#: ../../content/get-started/development-environment.rst:48
 msgid "Linking Expansion Modules"
 msgstr "链接扩展模块"
 
-#: ../../content/get-started/development-environment.rst:48
+#: ../../content/get-started/development-environment.rst:50
 msgid ""
 "A clear separation between OTRS and the modules is necessary for proper "
 "developing. Particularly when using a git clone, a clear separation is "
@@ -3473,15 +3458,15 @@ msgstr ""
 "分离是至关重要的。 为了便于OTRS访问文件，必须创建链接。 这是通过模块工具存储"
 "库目录中的脚本完成的。"
 
-#: ../../content/get-started/development-environment.rst:50
+#: ../../content/get-started/development-environment.rst:52
 msgid "Example: linking the *Calendar* module:"
 msgstr "示例：链接 *Calendar日历* 模块："
 
-#: ../../content/get-started/development-environment.rst:57
+#: ../../content/get-started/development-environment.rst:59
 msgid "Whenever new files are added, they must be linked as described above."
 msgstr "每当添加新文件时，必须如上所述链接它们。"
 
-#: ../../content/get-started/development-environment.rst:59
+#: ../../content/get-started/development-environment.rst:61
 msgid ""
 "As soon as the linking is completed, the system configuration must be "
 "rebuilt to register the module in OTRS. Additional SQL or Perl code from the "
@@ -3490,7 +3475,7 @@ msgstr ""
 "链接完成后，必须重建系统配置以在OTRS中注册模块。 还必须执行模块中的其它SQL或"
 "Perl代码。"
 
-#: ../../content/get-started/development-environment.rst:70
+#: ../../content/get-started/development-environment.rst:72
 msgid "To remove links from OTRS enter the following command:"
 msgstr "要从OTRS中删除链接，请输入以下命令："
 
@@ -5634,18 +5619,13 @@ msgid "One common use case is the filling of a table with dynamic data:"
 msgstr "一个常见的用例是使用动态数据填充表："
 
 #: ../../content/how-it-works/templates.rst:316
-#, fuzzy
-#| msgid ""
-#| "The surrounding table with the header is always generated. If no data was "
-#| "found, the block ``NoDataFoundMsg`` is called once, resulting in a table "
-#| "with one data row with the message *No data found.*"
 msgid ""
 "The surrounding table with the header is always generated. If no data was "
 "found, the block ``NoDataFoundMsg`` is called once, resulting in a table "
 "with one data row with the message *No data found*."
 msgstr ""
 "始终生成带有标题的完整表。 如果没有找到数据，则会调用块 ``NoDataFoundMsg`` 一"
-"次，从而产生一个包含一个数据行的表，显示消息 *没有找到数据。*"
+"次，从而产生一个包含一个数据行的表，显示消息 *没有找到数据*。"
 
 #: ../../content/how-it-works/templates.rst:318
 msgid ""
@@ -5875,18 +5855,12 @@ msgstr ""
 "提取所有可翻译的字符串。 这些将被收集并写入翻译文件。"
 
 #: ../../content/how-it-works/translations.rst:59
-#, fuzzy
-#| msgid ""
-#| "For the OTRS framework and all extension modules that also use Transifex "
-#| "for managing the translations, .pot and .po files are written. These "
-#| "files are used to push the translatable strings to Transifex and pull the "
-#| "translations from there."
 msgid ""
 "For the OTRS framework and all extension modules, ``.pot`` and ``.po`` files "
 "are written. These files are used by translators to localize the software."
 msgstr ""
-"对于OTRS框架和所有也使用Transifex管理翻译的扩展模块，都会编写.pot和.po文件。 "
-"这些文件用于将可翻译的字符串推送到Transifex并从那里提取翻译。"
+"对于OTRS框架和所有扩展模块，都会编写 ``.pot`` 和 ``.po`` 文件。 这些文件由翻"
+"译人员用于本地化软件。"
 
 #: ../../content/how-it-works/translations.rst:61
 msgid ""
@@ -5955,17 +5929,13 @@ msgid "The Translation Process Itself"
 msgstr "翻译过程本身"
 
 #: ../../content/how-it-works/translations.rst:154
-#, fuzzy
-#| msgid ""
-#| "OTRS uses Transifex to manage the translation process. Please see :doc:"
-#| "`../contributing/translate` section for details."
 msgid ""
 "OTRS uses `Weblate <https://translate.otrs.com/>`__ to manage the "
 "translation process. Please see :doc:`../contributing/translate` section for "
 "details."
 msgstr ""
-"OTRS使用Transifex来管理翻译过程。 有关详细信息，请参阅 :doc:`../contributing/"
-"translate` 部分。"
+"OTRS使用 `Weblate <https://translate.otrs.com/>`__ 来管理翻译过程。 有关详细"
+"信息，请参阅 :doc:`../contributing/translate` 部分。"
 
 #: ../../content/how-it-works/translations.rst:158
 msgid "Using The Translated Data From The Code"
@@ -6062,11 +6032,11 @@ msgstr ""
 "接口类称为 ``Kernel::System::Auth``。 示例服务人员身份验证可以叫做 ``Kernel::"
 "System::Auth::CustomAuth``。 你可以在下面找到一个例子。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:161
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:157
 msgid "Agent Authentication Module Configuration Example"
 msgstr "服务人员身份验证模块配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:163
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:159
 msgid ""
 "There is the need to activate your custom agent authenticate module. This "
 "can be done using the Perl configuration below. It is not recommended to use "
@@ -6076,11 +6046,11 @@ msgstr ""
 "需要激活自定义服务人员身份验证模块。 这可以使用下面的Perl配置来完成。 建议不"
 "要使用XML配置，因为您可能通过系统配置将您关在外面。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:171
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:167
 msgid "Agent Authentication Module Use Case Example"
 msgstr "服务人员身份验证模块用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:173
+#: ../../content/how-to-extend-otrs/otrs-module-layers/agent-auth.rst:169
 msgid ""
 "A useful example of an authentication implementation could be a SOAP back "
 "end."
@@ -6120,11 +6090,11 @@ msgstr ""
 "接口类称为 ``Kernel::System::Auth``。 示例服务人员身份验证可以叫做 ``Kernel::"
 "System::Auth::Sync::CustomAuthSync``。 你可以在下面找到一个例子。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:68
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:65
 msgid "Authentication Synchronization Module Configuration Example"
 msgstr "身份验证同步模块配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:70
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:67
 msgid ""
 "You should activate your custom synchronization module. This can be done "
 "using the Perl configuration below. It is not recommended to use the XML "
@@ -6134,11 +6104,11 @@ msgstr ""
 "您应该激活自定义同步模块。 这可以使用下面的Perl配置来完成。 建议不要使用XML配"
 "置，因为您可能通过系统配置将您关在外面。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:78
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:75
 msgid "Authentication Synchronization Module Use Case Example"
 msgstr "身份验证同步模块用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:80
+#: ../../content/how-to-extend-otrs/otrs-module-layers/auth-sync.rst:77
 msgid ""
 "Useful synchronization implementation could be a SOAP or RADIUS back end."
 msgstr "同步实现的有用示例可以是一个SOAP或RADIUS后端。"
@@ -6178,21 +6148,21 @@ msgstr ""
 "接口类称为 ``Kernel::System::CustomerAuth``。 示例客户认证可以叫做 ``Kernel::"
 "System::CustomerAuth::CustomAuth``。 你可以在下面找到一个例子。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:163
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:159
 msgid "Customer Authentication Module Configuration Example"
 msgstr "客户身份验证模块配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:165
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:161
 msgid ""
 "There is the need to activate your custom customer authenticate module. This "
 "can be done using the XML configuration below."
 msgstr "需要激活自定义客户身份验证模块。 这可以使用下面的XML配置来完成。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:181
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:176
 msgid "Customer Authentication Module Use Case Example"
 msgstr "客户身份验证模块用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:183
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-auth.rst:178
 msgid "Useful authentication implementation could be a SOAP back end."
 msgstr "有用的身份验证实现可以是一个SOAP后端。"
 
@@ -6232,21 +6202,21 @@ msgstr ""
 "``Kernel::System::CustomerUser::Preferences::Custom``。 你可以在下面找到一个"
 "例子。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:138
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:135
 msgid "Customer User Preferences Module Configuration Example"
 msgstr "客户用户首选项模块配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:137
 msgid ""
 "There is the need to activate your custom customer-user preferences module. "
 "This can be done using the XML configuration below."
 msgstr "需要激活自定义客户用户首选项模块。 这可以使用下面的XML配置来完成。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:162
 msgid "Customer User Preferences Module Use Case Example"
 msgstr "客户用户首选项模块用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:168
+#: ../../content/how-to-extend-otrs/otrs-module-layers/customer-user-preferences.rst:164
 msgid "Useful preferences implementation could be a SOAP or LDAP back end."
 msgstr "有用的首选项实现可以是一个SOAP或LDAP 后端。"
 
@@ -6342,11 +6312,11 @@ msgstr "以下代码实现了一个守护进程模块，该模块每2秒显示�
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/daemon-modules.rst:72
 #: ../../content/how-to-extend-otrs/otrs-module-layers/daemon/scheduler-task-worker-modules.rst:61
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:138
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:262
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:136
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:74
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:43
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:137
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:260
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:72
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:42
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:67
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:321
 msgid ""
@@ -6586,7 +6556,7 @@ msgstr "仪表板模块以折线图的形式显示统计信息。"
 msgid "Dashboard Widget"
 msgstr "仪表板小部件"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:161
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:160
 msgid ""
 "To use this module add the following to the ``Kernel/Config.pm`` and restart "
 "your web server (if you use ``mod_perl``)."
@@ -6594,7 +6564,7 @@ msgstr ""
 "要使用此模块，请将以下内容添加到 ``Kernel/Config.pm`` 并重新启动Web服务器（如"
 "果使用 ``mod_perl``）。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:187
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dashboard.rst:185
 msgid ""
 "An excessive number of days or individual lines may lead to performance "
 "degradation."
@@ -6718,7 +6688,7 @@ msgid ""
 msgstr ""
 "在本节中，将显示和解释后端的 ``Foo`` 扩展。 该扩展只定义函数 ``Foo()``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:211
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:210
 msgid ""
 "The function ``Foo()`` is only used for test purposes. First it checks the "
 "dynamic field configuration, then it checks if the dynamic field driver "
@@ -6730,7 +6700,7 @@ msgstr ""
 "程序（类型）是否存在且是否已加载。 为了防止对未定义的驱动程序的函数调用，首先"
 "检查驱动程序是否可以执行该函数，然后在驱动程序中执行传递所有参数的函数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:215
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:214
 msgid ""
 "It is also possible to skip the step that tests if the driver can execute "
 "the function. To do that it is necessary to implement a mechanism in the "
@@ -6741,11 +6711,11 @@ msgstr ""
 "一种机制，以要求在动态字段上有一个特殊的行为，并且仅在调用后端对象中的函数之"
 "后。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:219
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:218
 msgid "Dynamic Field Driver Extension Example"
 msgstr "动态字段驱动程序扩展示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:221
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:220
 msgid ""
 "Driver extensions will be loaded transparently into the driver itself as a "
 "base class. All defined object and properties from the driver will be "
@@ -6754,7 +6724,7 @@ msgstr ""
 "驱动程序扩展将作为基类透明地加载到驱动程序本身中。驱动程序中定义的所有对象和"
 "属性都可以在扩展中访问。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:225
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:224
 msgid ""
 "All new functions implemented in the driver extension should be defined in a "
 "back end extension, as every function is called from the back end object."
@@ -6762,7 +6732,7 @@ msgstr ""
 "驱动程序扩展中实现的所有新函数都应该在后端扩展中定义，因为每个函数都是从后端"
 "对象调用的。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:227
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:226
 msgid ""
 "In this section the ``Foo`` extension for text field driver is shown and "
 "explained. The extension only implements the function ``Foo()``."
@@ -6770,7 +6740,7 @@ msgstr ""
 "在本节中，将显示并解释文本字段驱动程序的 ``Foo`` 扩展。扩展仅实现 ``foo()`` "
 "函数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:271
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-extend.rst:269
 msgid ""
 "The function ``Foo()`` has no special logic. It is only for testing and it "
 "always returns 1."
@@ -7486,8 +7456,8 @@ msgid ""
 "explained."
 msgstr "在本节中，将显示和解释password动态字段的管理对话框。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:167
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:962
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:959
 msgid ""
 "The constructor ``new`` creates a new instance of the class. According to "
 "the coding guidelines objects of other classes that are needed in this "
@@ -7496,7 +7466,7 @@ msgstr ""
 "构造函数 ``new`` 创建了一个新的类实例。 根据编码指南，必须在 ``new`` 中创建此"
 "模块中所需的其它类的对象。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:208
 msgid ""
 "``Run`` is the default function to be called by the web request. We try to "
 "make this function as simple as possible and let the helper functions to do "
@@ -7505,7 +7475,7 @@ msgstr ""
 "``Run`` 是Web请求调用的默认函数。 我们尝试使这个函数尽可能简单，并让helper函"
 "数完成艰苦的工作。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:240
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:239
 msgid ""
 "``_Add`` function is also pretty simple, it just get some parameters from "
 "the web request and call the ``_ShowScreen()`` function. Normally this "
@@ -7514,7 +7484,7 @@ msgstr ""
 "``_Add`` 函数也很简单，它只是从Web请求获取一些参数并调用 ``_ShowScreen()`` 函"
 "数。 通常，不需要修改此函数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:358
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:357
 msgid ""
 "The ``_AddAction`` function gets the configuration parameters from a new "
 "dynamic field, and it validates that the dynamic field name only contains "
@@ -7523,7 +7493,7 @@ msgstr ""
 "`_AddAction`` 函数从新的动态字段中获取配置参数，并验证动态字段名称只包含字母"
 "和数字。 此函数可以验证任何其它参数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:360
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:359
 msgid ""
 "``Name``, ``Label``, ``FieldOrder``, ``Validity`` are common parameters for "
 "all dynamic fields and they are required. Each dynamic field has its "
@@ -7535,7 +7505,7 @@ msgstr ""
 "它们是必需的。 每个动态字段都有其特定的配置，必须至少包含 ``DefaultValue`` 参"
 "数。 在这种情况下，它还有密码字段的 ``ShowValue`` 和 ``ValueMask`` 参数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:363
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:362
 msgid ""
 "If the field has the ability to store a fixed list of values they should be "
 "stored in the ``PossibleValues`` parameter inside the specific configuration "
@@ -7544,7 +7514,7 @@ msgstr ""
 "如果该字段能够存储固定的值列表，则应将它们存储在特定配置哈希内的 "
 "``PossibleValues`` 参数中。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:365
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:364
 msgid ""
 "As in other admin modules, if a parameter is not valid this function returns "
 "to the add screen highlighting the erroneous form fields."
@@ -7552,11 +7522,11 @@ msgstr ""
 "与其它管理模块一样，如果参数无效，则此函数将返回添加屏幕，突出显示错误的表单"
 "字段。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:367
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:366
 msgid "If all the parameters are correct it creates a new dynamic field."
 msgstr "如果所有参数都正确，则会创建一个新的动态字段。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:430
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:429
 msgid ""
 "The ``_Change`` function is very similar to the ``_Add`` function but since "
 "this function is used to edit an existing field it needs to validated the "
@@ -7565,7 +7535,7 @@ msgstr ""
 "``_Change`` 函数与 ``_Add`` 函数非常相似，但由于此函数用于编辑现有字段，因此"
 "需要验证 ``FieldID`` 参数并收集当前动态字段数据。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:575
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:574
 msgid ""
 "``_ChangeAction()`` is very similar to ``_AddAction()``, but adapted for the "
 "update of an existing field instead of creating a new one."
@@ -7573,7 +7543,7 @@ msgstr ""
 "``_ChangeAction()`` 与 ``_AddAction()`` 非常相似，但适用于更新现有字段而不是"
 "创建新字段。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:668
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:667
 msgid ""
 "The ``_ShowScreen`` function is used to set and define the HTML elements and "
 "blocks from a template to generate the admin dialog HTML code."
@@ -7581,32 +7551,32 @@ msgstr ""
 "``_ShowScreen`` 函数用于设置和定义模板中的HTML元素和块，以生成管理对话框HTML"
 "代码。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:672
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:671
 msgid "Dynamic Field Template for Admin Dialog Example"
 msgstr "用于管理对话框的动态字段模块示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:674
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:673
 msgid "The template is the place where the HTML code of the dialog is stored."
 msgstr "模板是存储对话框的HTML代码的位置。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:676
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:675
 msgid ""
 "In this section an admin dialog template for the password dynamic field is "
 "shown and explained."
 msgstr "在本节中，将显示和解释password动态字段的管理对话框模板。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:689
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:687
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:401
 msgid "This is common header that can be found in common OTRS modules."
 msgstr "这是可在常见OTRS模块中找到的通用标头。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:712
 msgid ""
 "This part of the code has the main box and also the actions side bar. No "
 "modifications are needed in this section."
 msgstr "这部分代码有主框和动作侧栏。 本部分不需要修改。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:727
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:725
 msgid ""
 "In this section of the code is defined the right part of the dialog. Notice "
 "that the value of the ``Action`` hidden input must match with the name of "
@@ -7615,7 +7585,7 @@ msgstr ""
 "在这部分代码中定义了对话框的右侧部分。 请注意，``Action`` 隐藏输入的值必须与"
 "管理对话框的名称匹配。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:795
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:793
 msgid ""
 "This first widget contains the common form attributes for the dynamic "
 "fields. For consistency with other dynamic fields is recommended to leave "
@@ -7624,7 +7594,7 @@ msgstr ""
 "第一个小部件包含动态字段的通用表单属性。为了与其它动态字段保持一致，建议保持"
 "代码的这部分不变。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:835
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:833
 msgid ""
 "The second widget has the dynamic field specific form attributes. This is "
 "the place where new attributes can be set and it could use JavaScript and "
@@ -7633,7 +7603,7 @@ msgstr ""
 "第二个小部件具有特定于动态字段的表单属性。这是可以设置新属性的地方，它可以使"
 "用Javascript和AJAX技术使最终用户更容易或更友好。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:861
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:859
 msgid ""
 "The final part of the file contains the *Save* button and the *Cancel* link, "
 "as well as other needed JavaScript code."
@@ -7641,11 +7611,11 @@ msgstr ""
 "文件的最后一部分包含 *保存* 按钮和 *取消* 链接，以及其它需要的JavaScript代"
 "码。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:865
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:863
 msgid "Dynamic Field Driver Example"
 msgstr "动态字段驱动程序示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:867
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:865
 msgid ""
 "The driver *is* the dynamic field. It contains several functions that are "
 "used wide in the OTRS framework. A driver can inherit some functions form "
@@ -7660,7 +7630,7 @@ msgstr ""
 "pm`` 继承大多数函数，它只实现需要不同逻辑的函数或结果。 复选框字段驱动程序仅"
 "继承自 ``Base.pm``，因为所有其它函数与任何其它基本驱动程序非常不同。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:871
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:869
 msgid ""
 "Please refer to the Perl online documentation (POD) of the module ``/Kernel/"
 "System/DynmicField/Backend.pm`` to have the list of all attributes and "
@@ -7669,7 +7639,7 @@ msgstr ""
 "请参阅模块 ``/Kernel/System/DynmicField/Backend.pm`` 的Perl在线文档（POD），"
 "以获得每个函数的所有属性和可能的返回数据的列表。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:873
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:871
 msgid ""
 "In this section the password dynamic field driver is shown and explained. "
 "This driver inherits some functions from ``Base.pm`` and ``BaseText.pm`` and "
@@ -7678,7 +7648,7 @@ msgstr ""
 "在本节中，将显示和解释password动态字段驱动程序。 这个驱动程序继承了 ``Base."
 "pm`` 和 ``BaseText.pm`` 中的一些函数，只实现了需要不同结果的函数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:902
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:899
 msgid ""
 "This is the common header that can be found in common OTRS modules. The "
 "class/package name is declared via the ``package`` keyword. Notice that "
@@ -7687,7 +7657,7 @@ msgstr ""
 "这是可在常见OTRS模块中找到的通用标头。 类/包名称通过 ``package`` 关键字声"
 "明。 请注意，``BaseText`` 用作基类。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:964
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:961
 msgid ""
 "It is important to define the behaviors correctly as the field might or "
 "might not be used in certain screens, functions that depends on behaviors "
@@ -7697,13 +7667,13 @@ msgstr ""
 "正确定义行为非常重要，因为在某些屏幕中可能会或可能不会使用该字段，可能不需要"
 "实现依赖于对该特定字段不活动的行为的函数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:968
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:965
 msgid ""
 "Drivers are created only by the ``BackendObject`` and not directly from any "
 "other module."
 msgstr "驱动程序仅由 ``BackendObject`` 创建，而不是直接从任何其它模块创建。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1058
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1055
 msgid ""
 "This function is the responsible to create the HTML representation of the "
 "field and its label, and is used in the edit screens like "
@@ -7712,7 +7682,7 @@ msgstr ""
 "此函数负责创建字段及其标签的HTML呈现，并在编辑屏幕（如 ``AgentTicketPhone``、"
 "``AgentTicketNote`` 等）中使用。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1121
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1118
 msgid ""
 "``DisplayValueRender()`` function returns the field value as a plain text as "
 "well as its title (both can be translated). For this particular example we "
@@ -7723,25 +7693,18 @@ msgstr ""
 "译）。 对于此特定示例，我们检查是否应显示密码或通过动态字段中的配置参数显示预"
 "定义的掩码。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1166
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1163
 msgid ""
 "This function is similar to ``DisplayValueRender()`` but is used in places "
 "where there is no ``LayoutObject``."
 msgstr ""
 "此函数类似于 ``DisplayValueRender()`` 但是用于没有 ``LayoutObject`` 的地方。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1170
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1167
 msgid "Other Functions"
 msgstr "其它函数"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1172
-#, fuzzy
-#| msgid ""
-#| "The following are other functions that are might needed if the new "
-#| "dynamic field does not inherit from other classes. To see the complete "
-#| "code of this functions please take a look directly into the files "
-#| "``Kernel/System/DynamicField/Driver/Base.pm`` and ``Kernel/System/"
-#| "DynamicField/Driver/BaseText.pm``"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1169
 msgid ""
 "The following are other functions that are might needed if the new dynamic "
 "field does not inherit from other classes. To see the complete code of this "
@@ -7751,9 +7714,9 @@ msgid ""
 msgstr ""
 "如果新动态字段不从其它类继承，则以下是可能需要的其它函数。 要查看此函数的完整"
 "代码，请直接查看文件 ``Kernel/System/DynamicField/Driver/Base.pm`` 和 "
-"``Kernel/System/DynamicField/Driver/BaseText.pm``"
+"``Kernel/System/DynamicField/Driver/BaseText.pm``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1178
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1175
 msgid ""
 "This function retrieves the value from the field on a specified object. In "
 "this case we are returning the first text value, since the field only stores "
@@ -7762,7 +7725,7 @@ msgstr ""
 "此函数从指定对象上的字段中检索值。 在这种情况下，我们返回第一个文本值，因为该"
 "字段仅存储一个文本值。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1184
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1181
 msgid ""
 "This function is used to store a dynamic field value. In this case this "
 "field only stores one text type value. Other fields could store more than "
@@ -7771,7 +7734,7 @@ msgstr ""
 "此函数用于存储动态字段值。 在这种情况下，该字段仅存储一个文本类型值。 其它字"
 "段可以用 ``ValueText``、``ValueDateTime`` 或 ``ValueInt`` 格式存储多个值。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1191
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1188
 msgid ""
 "This function is used to delete one field value attached to a particular "
 "object ID. For example if the instance of an object is to be deleted, then "
@@ -7781,18 +7744,18 @@ msgstr ""
 "此函数用于删除附加到特定对象ID的一个字段值。 例如，如果要删除对象的实例，则没"
 "有理由将该字段值存储在该特定对象实例的数据库中。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1197
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1194
 msgid ""
 "This function is used to delete all values from a certain dynamic field. "
 "This function is very useful when a dynamic field is going to be deleted."
 msgstr ""
 "此函数用于删除某个动态字段中的所有值。 要删除动态字段时，此功能非常有用。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1203
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1200
 msgid "This function is used to check if the value is consistent to its type."
 msgstr "此函数用于检查值是否与其类型一致。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1206
 msgid ""
 "This function is used by ``TicketSearch`` core module to build the internal "
 "query to search for a ticket based on this field as a search parameter."
@@ -7800,7 +7763,7 @@ msgstr ""
 "``TicketSearch`` 核心模块使用此函数构建内部查询，以基于此字段作为搜索参数搜索"
 "工单。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1215
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1212
 msgid ""
 "This function is also a helper for ``TicketSearch`` module. ``"
 "$Param{TableAlias}`` should be kept and ``value_text`` could be replaced "
@@ -7810,7 +7773,7 @@ msgstr ""
 "留，``value_text`` 可以用 ``value_date`` 或 ``value_int`` 替换，具体取决于字"
 "段。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1221
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1218
 msgid ""
 "This function is used in the edit screens of OTRS and its purpose is to get "
 "the value of the field, either from a template like generic agent profile or "
@@ -7822,7 +7785,7 @@ msgstr ""
 "值。 此函数在 ``$Param{ParamObject}`` 中获取Web请求，它是前端模块或屏幕的 "
 "``ParamObject`` 的副本。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1223
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1220
 msgid ""
 "There are two return formats for this function. The normal that is just the "
 "raw value or a structure that is the pair field name => field value. For "
@@ -7834,7 +7797,7 @@ msgstr ""
 "期动态字段通常将日期作为字符串返回，如果它应返回结构，则它会为散列中的日期的"
 "每个部分返回一对。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1225
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1222
 msgid ""
 "If the result should be a structure then, normally this is used to store its "
 "values in a template, like a generic agent profile. For example a date field "
@@ -7844,7 +7807,7 @@ msgstr ""
 "如果结果应该是结构，那么通常这用于将其值存储在模板中，如自动任务配置文件。 例"
 "如，日期字段使用多个HTML组件来构建字段，如使用的复选框，并选择年、月、日等。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1232
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1229
 msgid ""
 "This function should provide at least a method to validate if the field is "
 "empty, and return an error if the field is empty and mandatory, but it can "
@@ -7856,7 +7819,7 @@ msgstr ""
 "误，但它也可以对其它类型的字段执行更多验证，例如，如果选择的选项有效，或者日"
 "期是否应仅在过去等。它也可以提供自定义错误消息。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1235
 msgid ""
 "This function is used by ticket search dialog and it is similar to "
 "``EditFieldRander()``, but normally on a search screen small changes has to "
@@ -7869,7 +7832,7 @@ msgstr ""
 "上，必须对所有字段进行小的更改。 对于此示例，我们使用HTML文本输入而不是密码输"
 "入。 在其它字段中，下拉字段显示为多选，以便让用户一次搜索多个值。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1244
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1241
 msgid ""
 "Very similar to ``EditFieldValueGet()``, but uses a different name prefix, "
 "adapted for the search dialog screen."
@@ -7877,7 +7840,7 @@ msgstr ""
 "非常类似于 ``EditFieldValueGet()``，但使用了不同的名称前缀，适用于搜索对话框"
 "屏幕。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1250
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1247
 msgid ""
 "This function is used also by the ticket search dialog to set the correct "
 "operator and value to do the search on this field. It also returns how the "
@@ -7886,7 +7849,7 @@ msgstr ""
 "工单搜索对话框也使用此函数来设置正确的运算符和值，以便在此字段上进行搜索。 它"
 "还返回值应在结果页面中使用的搜索属性中显示的方式。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1256
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1253
 msgid ""
 "This function is used by the stats modules. It includes the field definition "
 "in the stats format. For fields with fixed values it also includes all this "
@@ -7897,7 +7860,7 @@ msgstr ""
 "还包括所有这些可能的值，如果它们可以被转换，请查看 ``BaseSelect`` 驱动程序代"
 "码，以获取如何实现它们的示例。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1262
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1259
 msgid ""
 "This function is very similar to the ``SearchFieldParameterBuild()``. The "
 "difference is that the latter gets the value from the search profile and "
@@ -7906,11 +7869,11 @@ msgstr ""
 "这个函数非常类似于 ``SearchFieldParameterBuild()``。 不同之处在于后者从搜索配"
 "置文件中获取值，并且此值直接从其参数中获取值。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1265
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1262
 msgid "This function is used by statistics module."
 msgstr "此函数用于统计模块。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1271
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1268
 msgid ""
 "This function is used to know how the dynamic field values stored on a "
 "profile should be retrieved, as a scalar or as an array, and it also defines "
@@ -7919,7 +7882,7 @@ msgstr ""
 "此函数用于了解如何检索存储在配置文件中的动态字段值，如标量或数组，还可以定义"
 "配置文件中字段的正确名称。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1277
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1274
 msgid ""
 "This function is used by ``otrs.FillDB.pl`` script to populate the database "
 "with some test and random data. The value inserted by this function is not "
@@ -7929,7 +7892,7 @@ msgstr ""
 "``otrs.FillDB.pl`` 脚本使用此函数用一些测试和随机数据填充数据库。 此函数插入"
 "的值并不真实相关。 唯一的限制是该值必须与字段值类型兼容。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1283
+#: ../../content/how-to-extend-otrs/otrs-module-layers/dynamic-fields/dynamic-fields-new-field.rst:1280
 msgid ""
 "Used by the notification modules. This function returns 1 if the field is "
 "present in the ``$Param{ObjectAttributes}`` parameter and if it matches the "
@@ -7994,11 +7957,11 @@ msgstr ""
 "接下来我们将展示如何开发一个新的调用程序。 每个调用程序都必须实现这些子程序："
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:12
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:43
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:42
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:12
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:21
 #: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:12
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:635
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:633
 msgid "``new``"
 msgstr "``new``"
 
@@ -8029,7 +7992,7 @@ msgid ""
 "explained."
 msgstr "在本节中，将显示一个调用程序模块的样本，并解释每个子程序。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:47
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:46
 msgid ""
 "This is common header that can be found in common OTRS modules. The class/"
 "package name is declared via the ``package`` keyword. Invokers can not be "
@@ -8038,10 +8001,10 @@ msgstr ""
 "这是可在常见OTRS模块中找到的通用标头。类/包名称通过 ``package`` 关键字声明。 "
 "调用程序无法由对象管理器实例化。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:71
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:122
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:70
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:83
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:70
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:69
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:82
 msgid ""
 "The constructor ``new`` creates a new instance of the class. According to "
 "the coding guidelines only objects of other classes not handled by the "
@@ -8050,7 +8013,7 @@ msgstr ""
 "构造函数 ``new`` 创建了一个新的类实例。 根据编码指南，只有对象管理器没有处理"
 "的其它类的对象才需要在在 ``new`` 中创建。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:103
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:102
 msgid ""
 "The ``PrepareRequest`` function is used to handle and collect all needed "
 "data to be sent into the request. Here we can receive data from the request "
@@ -8061,7 +8024,7 @@ msgstr ""
 "里，我们可以从请求处理程序接收数据，使用它、扩展它、生成新数据并随后将结果传"
 "输到映射层。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:105
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:104
 msgid ""
 "For this example we are expecting to receive a ticket number. If there isn't "
 "then we use the debugger method ``Error()`` that creates an entry in the "
@@ -8072,7 +8035,7 @@ msgstr ""
 "``Error()`` 在调试日志中创建一个条目，并返回一个参数 ``Success`` 为0的结构和"
 "一个错误消息作为传递 ``Summary``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:107
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:106
 msgid ""
 "Also this example appends the word *Test* to the parameter ``Action`` and if "
 "``GetSystemTime`` is requested, it will fill the ``SystemTime`` parameter "
@@ -8084,7 +8047,7 @@ msgstr ""
 "将使用当前系统时间填充 ``SystemTime`` 参数。 这部分代码是准备要发送的数据。 "
 "在一个真正的调用程序上，应该在这里调用核心模块(``Kernel/System/*.pm``)。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:109
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:108
 msgid ""
 "If during any part of the ``PrepareRequest`` function the request need to be "
 "stop without generating and error an entry in the debug log the following "
@@ -8093,7 +8056,7 @@ msgstr ""
 "如果在 ``PrepareRequest`` 函数的任何部分期间需要停止请求而不生成并在调试日志"
 "中输入错误，则可以使用以下代码："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:118
 msgid ""
 "Using this, the requester will understand that the request should not "
 "continue (it will not be sent to mapping layer and will also not be sent to "
@@ -8103,7 +8066,7 @@ msgstr ""
 "使用此方法，请求者将理解请求不应继续（它不会被发送到映射层，也不会被发送到网"
 "络传输）。 请求者不会在调试日志上发送错误，它只会静默停止。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:169
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:168
 msgid ""
 "The ``HandleResponse`` function is used to receive and process the data from "
 "the previous request, that was made to the remote system. This data already "
@@ -8113,7 +8076,7 @@ msgstr ""
 "``HandleResponse`` 函数用于接收和处理来自先前请求的数据，该数据是对远程系统进"
 "行的。 此数据已由映射层传递，以将其从远程系统格式转换为OTRS格式（如果需要）。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:172
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:171
 msgid ""
 "For this particular example it checks the ticket number again and check if "
 "the action ends with the word *Test* (as was done in the ``PrepareRequest`` "
@@ -8122,7 +8085,7 @@ msgstr ""
 "对于这个特定的例子，它再次检查工单编号并检查操作是否以单词 *Test* 结束（如在 "
 "``PrepareRequest`` 函数中所做的那样）。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:176
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:175
 msgid ""
 "This invoker is only used for tests, a real invoker will check if the "
 "response was on the format described by the remote system and can perform "
@@ -8133,11 +8096,11 @@ msgstr ""
 "并且可以执行以下操作：调用另一个调用者、执行对核心模块的调用、更新数据库、发"
 "送一个错误等。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:180
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:179
 msgid "Invoker Configuration Example"
 msgstr "调用程序配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:182
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-invoker.rst:181
 msgid ""
 "There is the need to register this invoker module to be accessible in the "
 "OTRS GUI. This can be done using the XML configuration below."
@@ -8157,27 +8120,27 @@ msgstr ""
 "映射用于将数据从OTRS转换为外部系统，反之亦然。 该数据可以表示为key => value"
 "对。 可以开发映射模块，不仅可以转换值，还可以转换键。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:7
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:6
 msgid "For example:"
 msgstr "例如："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:10
-msgid "From"
-msgstr "From（发件人）"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:9
+msgid "Mapping from"
+msgstr "映射自"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:10
-msgid "To"
-msgstr "To（收件人）"
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:9
+msgid "Mapping to"
+msgstr "映射至"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:12
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:11
 msgid "Prio => Warning"
 msgstr "Prio => Warning（优先级设为警告）"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:12
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:11
 msgid "PriorityID => 3"
 msgstr "PriorityID => 3（优先级ID设置为3）"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:15
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:14
 msgid ""
 "The mapping layer is not absolutely necessary, a web service can skip it "
 "completely depending on the web service configuration and how invokers and "
@@ -8188,72 +8151,72 @@ msgstr ""
 "现调用程序和操作。 但是，如果需要进行某些数据转换，强烈建议使用现有的映射模块"
 "或创建新的映射模块。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:17
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:16
 msgid ""
 "Mapping modules can be called more than one time during a normal "
 "communication, take a look to the following examples."
 msgstr "在正常通信期间，可以多次调用映射模块，请看下面的示例。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:24
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
 msgid "OTRS as provider example"
 msgstr "OTRS作为提供程序示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:20
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:19
 msgid ""
 "The remote system sends the request with the data in the remote system "
 "format."
 msgstr "远程系统使用远程系统格式的数据发送请求。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:21
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:20
 msgid "The data is mapped from the remote system format to the OTRS format."
 msgstr "数据从远程系统格式映射到OTRS格式。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:22
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:21
 msgid "OTRS performs the operation and return the response in OTRS format."
 msgstr "OTRS执行操作并以OTRS格式返回响应。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:28
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:22
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:27
 msgid "The data is mapped from the OTRS format to the remote system format."
 msgstr "数据从OTRS格式映射到远程系统格式。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:24
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:23
 msgid ""
 "The response with the data in the remote system format is sent to the remote "
 "system."
 msgstr "将远程系统格式的数据响应发送到远程系统。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:32
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:31
 msgid "OTRS as requester example"
 msgstr "OTRS作为请求程序的例子"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:27
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:26
 msgid ""
 "OTRS prepares the request to the remote system using the data in the OTRS "
 "format."
 msgstr "OTRS使用OTRS格式的数据准备对远程系统的请求。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:29
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:28
 msgid ""
 "The request is sent to the remote system which performs the action and sends "
 "the response back to OTRS with the data in remote system format."
 msgstr ""
 "请求被发送到执行操作的远程系统，并使用远程系统格式的数据将响应发送回OTRS。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:30
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:29
 msgid ""
 "The data is mapped form remote system format (again) to the OTRS format."
 msgstr "数据以远程系统格式（再次）映射到OTRS格式。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:31
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:30
 msgid "OTRS processes the response."
 msgstr "OTRS处理响应内容。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:35
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:34
 msgid "Mapping Back End"
 msgstr "映射后端"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:37
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:36
 msgid ""
 "Generic interface provides a mapping module called *Simple*. With this "
 "module most of the data transformations including key and value mapping can "
@@ -8263,7 +8226,7 @@ msgstr ""
 "通用接口提供了一个名为 *Simple* 的映射模块。 使用此模块，可以完成大多数数据转"
 "换，包括键和值映射，还定义了处理键和值的默认映射的规则。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:39
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:38
 msgid ""
 "So it is highly probable that you don't need to develop a custom mapping "
 "module. Please check *Simple* mapping module (``Kernel/GenericInterface/"
@@ -8272,7 +8235,7 @@ msgstr ""
 "因此，您很可能不需要开发自定义映射模块。 在继续之前，请检查 *Simple* 映射模块"
 "（``Kernel/GenericInterface/Mapping/Simple.pm``）及其在线文档。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:41
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:40
 msgid ""
 "If *Simple* mapping module does not match your needs then we will show how "
 "to develop a new mapping back end. Each mapping back end has to implement "
@@ -8281,11 +8244,11 @@ msgstr ""
 "如果 *Simple* 映射模块不符合您的需求，那么我们将展示如何开发新的映射后端。 每"
 "个映射后端都必须实现这些子程序："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:44
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:43
 msgid "``Map``"
 msgstr "``Map``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:46
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:45
 msgid ""
 "We should implement each one of this methods in order to be able to map the "
 "data in the communication, handled either by the requester or provider. All "
@@ -8295,17 +8258,17 @@ msgstr ""
 "我们应该实现这些方法中的每一个，以便能够映射通信中的数据，由请求者或提供者处"
 "理。 所有映射后端都由映射模块处理（``Kernel/GenericInterface/Mapping.pm``）。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:50
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:49
 msgid "Mapping Code Example"
 msgstr "映射码示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:52
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:51
 msgid ""
 "In this section a sample mapping module is shown and each subroutine is "
 "explained."
 msgstr "在本节中，将显示一个映射模块的样本，并解释每个子程序。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:76
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:74
 msgid ""
 "We also include ``VariableCheck`` module to perform certain validation over "
 "some variables. Mappings can not be instantiated by the object manager."
@@ -8313,7 +8276,7 @@ msgstr ""
 "我们还包括 ``VariableCheck`` 模块，用于对某些变量执行某些验证。 对象管理器无"
 "法实例化映射。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:189
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:187
 msgid ""
 "The ``Map`` function is the main part of each mapping module. It receives "
 "the mapping configuration (rules) and the data in the original format "
@@ -8323,7 +8286,7 @@ msgstr ""
 "``Map`` 函数是每个映射模块的主要部分。 它接收映射配置（规则）和原始格式的数据"
 "（OTRS或远程系统格式）并将其转换为新格式，在映射过程中甚至可以更改数据结构。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:191
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:189
 msgid ""
 "In this particular example there are three rules to map the values. This "
 "rules are set in the mapping configuration key ``TestOption`` and they are "
@@ -8332,32 +8295,32 @@ msgstr ""
 "在此特定示例中，有三个规则来映射值。 此规则在映射配置键 ``TestOption`` 中设"
 "置，它们是 ``ToUpper``、 ``ToLower`` 和 ``Empty``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:193
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:191
 msgid "``ToUpper``: converts each data value to upper case."
 msgstr "``ToUpper``：将每个数据值转换为大写。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:194
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:192
 msgid "``ToLower``: converts each data value to lower case."
 msgstr "``ToLower``：将每个数据值转换为小写。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:195
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:193
 msgid "``Empty``: converts each data value into an empty string."
 msgstr "``Empty``：将每个数据值转换为空字符串。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:197
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:195
 msgid "In this example no data key transformations were implemented."
 msgstr "在此示例中，未实现任何数据键转换。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:234
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:232
 msgid ""
 "This are the helper functions that actually performs the string conversions."
 msgstr "这是实际执行字符串转换的辅助函数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:236
 msgid "Mapping Configuration Example"
 msgstr "映射配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:240
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-mapping.rst:238
 msgid ""
 "There is the need to register this mapping module to be accessible in the "
 "OTRS GUI. This can be done using the XML configuration below."
@@ -8390,7 +8353,7 @@ msgid ""
 msgstr "接下来我们将展示如何开发一个新操作，每个操作都必须实现这些子程序："
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:13
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:637
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:635
 msgid "``Run``"
 msgstr "``Run``"
 
@@ -8412,7 +8375,7 @@ msgid ""
 "explained."
 msgstr "在本节中，展示了一个示例操作模块，并解释了每个子程序。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:45
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:44
 msgid ""
 "We also include ``VariableCheck`` module to perform certain validation over "
 "some variables. Operations can not be instantiated by the object manager."
@@ -8420,7 +8383,7 @@ msgstr ""
 "我们还使用 ``VariableCheck`` 模块来对某些变量执行某些验证。 对象管理器无法实"
 "例化操作。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:113
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:112
 msgid ""
 "The ``Run`` function is the main part of each operation. It receives all "
 "internal mapped data from remote system needed by the provider to execute "
@@ -8431,7 +8394,7 @@ msgstr ""
 "所有内部映射数据，它执行动作并将结果返回给提供程序以进行外部映射并将其传送回"
 "远程系统。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:114
 msgid ""
 "This particular example returns the same data as came from the remote "
 "system, unless ``TestError`` parameter is passed. In this case it returns an "
@@ -8440,22 +8403,22 @@ msgstr ""
 "此特定示例返回与远程系统相同的数据，除非传递了 ``TestError`` 参数。 在这种情"
 "况下，它会返回错误。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:118
 msgid "Operation Configuration Example"
 msgstr "操作配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:121
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:120
 msgid ""
 "There is the need to register this operation module to be accessible in the "
 "OTRS GUI. This can be done using the XML configuration below."
 msgstr ""
 "需要将此操作模块注册以便在OTRS GUI中访问。 这可以使用下面的XML配置来完成。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:139
 msgid "Unit Test Example"
 msgstr "单元测试示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:141
 msgid ""
 "Unit test for generic interface operations does not differs from other unit "
 "tests but it is needed to consider testing locally, but also simulating a "
@@ -8465,7 +8428,7 @@ msgstr ""
 "通用接口操作的单元测试与其它单元测试没有区别，但需要考虑本地测试，还需要模拟"
 "一个远程连接。 由于结果可能略有不同，因此分别测试两者是一个好习惯。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:145
 msgid ""
 "To learn more about unit tests, please take a look to the :doc:`../../"
 "contributing/unit-tests` chapter."
@@ -8473,15 +8436,15 @@ msgstr ""
 "要学习有关单元测试的更多信息，请查看 :doc:`../../contributing/unit-tests` 一"
 "章。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:148
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:147
 msgid "The following is just the starting point for a unit test:"
 msgstr "以下只是单元测试的起点："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:428
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:427
 msgid "WSDL Extension Example"
 msgstr "WSDL扩展示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:430
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:429
 msgid ""
 "WSDL files contain the definitions of the web services and its operations "
 "for SOAP messages, in case we will extend ``development/webservices/"
@@ -8490,27 +8453,27 @@ msgstr ""
 "WSDL文件包含Web服务的定义及其SOAP消息的操作，本例中我们将在部分地方扩展 "
 "``development/webservices/GenericTickeConnectorSOAP.wsdl``："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:432
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:431
 msgid "Port Type:"
 msgstr "端口类型："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:444
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:443
 msgid "Binding:"
 msgstr "绑定："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:463
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:462
 msgid "Type:"
 msgstr "类型："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:489
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:488
 msgid "Message:"
 msgstr "消息："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:504
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:503
 msgid "WADL Extension Example"
 msgstr "WADL扩展示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:506
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:505
 msgid ""
 "WADL files contain the definitions of the web services and its operations "
 "for REST interface, add a new resource to ``development/webservices/"
@@ -8519,11 +8482,11 @@ msgstr ""
 "WADL文件包含Web服务的定义及其REST接口的操作，向 ``development/webservices/"
 "GenericTickeConnectorREST.wadl`` 添加新资源。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:530
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:529
 msgid "Web Service SOAP Extension Example"
 msgstr "Web服务SOAP扩展示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:532
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:531
 msgid ""
 "Web services can be imported into OTRS by a YAML with a predefined structure "
 "in this case we will extend ``development/webservices/"
@@ -8532,11 +8495,11 @@ msgstr ""
 "Web服务可以通过具有预定义结构的YAML导入到OTRS中，在本例中我们将为SOAP Web服务"
 "扩展 ``development/webservices/GenericTickeConnectorSOAP.yml``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:547
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:546
 msgid "Web Service REST Extension Example"
 msgstr "Web服务REST扩展示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:549
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-operation.rst:548
 msgid ""
 "Web services can be imported into OTRS by a YAML with a predefined structure "
 "in this case we will extend ``development/webservices/"
@@ -8670,7 +8633,7 @@ msgstr ""
 "对于此示例，自定义包用于返回数据而不向远程系统发出真实的网络请求，而是将此自"
 "定义模块用作环回接口。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:63
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:62
 msgid ""
 "This is common header that can be found in common OTRS modules. The class/"
 "package name is declared via the ``package`` keyword. Transports can not be "
@@ -8679,7 +8642,7 @@ msgstr ""
 "这是可在常见OTRS模块中找到的通用标头。类/包名称通过 ``package`` 关键字声明。 "
 "传输无法由对象管理器实例化。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:125
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:124
 msgid ""
 "The ``ProviderProcessRequest`` function gets the request from the remote "
 "system (in this case the same OTRS) and extracts the data and the operation "
@@ -8689,7 +8652,7 @@ msgstr ""
 "``ProviderProcessRequest`` 函数从远程系统获取请求（在本例中与OTRS相同），并从"
 "请求中提取数据和要执行的操作。 对于这个例子，操作总是 ``test_operation``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:127
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:126
 msgid ""
 "The way this function parses the request to get the data and the operation "
 "name, depends completely on the protocol to be implemented and the external "
@@ -8698,13 +8661,13 @@ msgstr ""
 "此函数解析请求以获取数据和操作名称的方式，完全取决于要实现的协议和用于的外部"
 "模块。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:177
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:176
 msgid ""
 "This function sends the response back to the remote system for the requested "
 "operation."
 msgstr "此函数将响应发送回远程系统以进行请求的操作。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:179
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:178
 msgid ""
 "For this particular example we return a standard HTTP response success (200) "
 "or not (500), along with the required data on each case."
@@ -8712,14 +8675,14 @@ msgstr ""
 "对于此特定示例，我们返回标准HTTP响应成功（200）或不成功（500），以及每种情况"
 "下所需的数据。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:210
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:209
 msgid ""
 "This is the only function that is used by OTRS as requester. It sends the "
 "request to the remote system and waits for its response."
 msgstr ""
 "这是OTRS作为请求者使用的唯一函数。 它将请求发送到远程系统并等待其响应。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:212
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:211
 msgid ""
 "For this example we use a custom protocol handler to avoid send the request "
 "to the real network. This custom protocol is specified below."
@@ -8727,7 +8690,7 @@ msgstr ""
 "对于此示例，我们使用自定义协议处理程序来避免将请求发送到真实网络。 此自定义协"
 "议如下所示。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:243
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:242
 msgid ""
 "This is the code for the custom protocol that we use. This approach is only "
 "useful for training or for testing environments where the remote systems are "
@@ -8736,17 +8699,17 @@ msgstr ""
 "这是我们使用的自定义协议的代码。 此方法仅适用于培训或测试远程系统不可用的环"
 "境。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:245
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:244
 msgid ""
 "For a new module development we do not recommend to use this approach, a "
 "real protocol needs to be implemented."
 msgstr "对于新模块开发，我们不建议使用此方法，需要实现真正的协议。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:249
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:248
 msgid "Network Transport Configuration Example"
 msgstr "网络传输配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:251
+#: ../../content/how-to-extend-otrs/otrs-module-layers/gi-transport.rst:250
 msgid ""
 "There is the need to register this network transport module to be accessible "
 "in the OTRS GUI. This can be done using the XML configuration below."
@@ -8785,11 +8748,11 @@ msgstr ""
 "在这个小例子中，我们将编写一个小的文件日志后端，其工作方式类似于 ``Kernel::"
 "System::Log::File``，但是为每个日志条目添加一个字符串。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:116
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:115
 msgid "Log Module Configuration Example"
 msgstr "日志模块配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:117
 msgid ""
 "To activate our custom logging module, the administrator can either set the "
 "existing configuration item ``LogModule`` manually to ``Kernel::System::Log::"
@@ -8800,17 +8763,17 @@ msgstr ""
 "``Kernel::System::Log::CustomFile``。 要自动实现此功能，您可以提供覆盖默认设"
 "置的XML配置文件。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:133
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:132
 msgid "Log Module Use Case Example"
 msgstr "日志模块用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:134
 msgid ""
 "Useful logging back ends could be logging to a web service or to encrypted "
 "files."
 msgstr "有用的日志后端可以记录到Web服务或加密文件。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:139
+#: ../../content/how-to-extend-otrs/otrs-module-layers/log.rst:138
 msgid ""
 "``Kernel::System::Log`` has other methods than ``Log()`` which cannot be "
 "reimplemented, for example code for working with shared memory segments and "
@@ -8867,11 +8830,11 @@ msgstr ""
 "块的示例。 将它保存为 ``Kernel/Output/HTML/TicketNotificationCustom.pm``。 你"
 "只需要2个函数：``new()`` 和 ``Run()``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:93
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:92
 msgid "Notification Module Configuration Example"
 msgstr "通知模块配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:95
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:94
 msgid ""
 "There is the need to activate your custom notification module. This can be "
 "done using the XML configuration below. There may be additional parameters "
@@ -8880,12 +8843,12 @@ msgstr ""
 "需要激活自定义通知模块。 这可以使用下面的XML配置来完成。 通知模块的配置哈希中"
 "可能还有其它参数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:113
 msgid "Notification Module Use Case Example"
 msgstr "通知模块用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:117
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/notify.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:138
 msgid ""
 "Useful ticket menu implementation could be a link to an external tool if "
 "parameters (e.g. ``FreeTextField``) have been set."
@@ -9277,7 +9240,7 @@ msgid ""
 "field widget. If it is not defined, a default description is used."
 msgstr ""
 "所有配置字段都需要一个定义字段类型的类型，并且它们还可以具有内部描述以用作字"
-"段小部件的标题。 如果未定义，则使用默认描述。 "
+"段小部件的标题。 如果未定义，则使用默认描述。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:166
 msgid ""
@@ -9311,7 +9274,7 @@ msgid "Holds the information to display the drop-down field."
 msgstr "保存信息以显示下拉选择框字段。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:177
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:712
 msgid "``Data``"
 msgstr "``Data``"
 
@@ -9323,8 +9286,8 @@ msgstr ""
 "简单哈希定义下拉选择框的选项。 键在内部使用，值是用户在屏幕中看到的选项。"
 
 #: ../../content/how-to-extend-otrs/otrs-module-layers/process-management-modules.rst:180
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:147
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:711
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:709
 msgid "``Name``"
 msgstr "``Name``"
 
@@ -9615,22 +9578,22 @@ msgstr ""
 "接口类称为 ``Kernel::System::Queue``。示例队列首选项可以叫做 ``Kernel::"
 "System::Queue::PreferencesCustom``。您可以在下面找到一个示例。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:117
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:114
 msgid "Queue Preferences Configuration Example"
 msgstr "队列首选项配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:119
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:116
 msgid ""
 "There is the need to activate your custom queue preferences module. This can "
 "be done using the XML configuration below."
 msgstr "需要激活自定义的队列首选项模块。这可以使用下面的XML配置来完成。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:135
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:131
 msgid "Queue Preferences Use Case Example"
 msgstr "队列首选项用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:137
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:138
+#: ../../content/how-to-extend-otrs/otrs-module-layers/queue-preferences.rst:133
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:134
 msgid "Useful preferences implementation could be a SOAP or RADIUS back end."
 msgstr "有用的首选项实现可以是SOAP或RADIUS后端。"
 
@@ -9669,17 +9632,17 @@ msgstr ""
 "接口类称为 ``Kernel::System::Service``。示例服务首选项可以叫做 ``Kernel::"
 "System::Service::PreferencesCustom``。您可以在下面找到一个示例。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:115
 msgid "Service Preferences Configuration Example"
 msgstr "服务首选项配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:117
 msgid ""
 "There is the need to activate your custom service preferences module. This "
 "can be done using the XML configuration below."
 msgstr "需要激活自定义的服务首选项模块。这可以使用下面的XML配置来完成。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:136
+#: ../../content/how-to-extend-otrs/otrs-module-layers/service-preferences.rst:132
 msgid "Service Preferences Use Case Example"
 msgstr "服务首选项用例示例"
 
@@ -9717,21 +9680,21 @@ msgstr ""
 "接口类称为 ``Kernel::System::SLA``。示例SLA首选项可以叫做 ``Kernel::System::"
 "SLA::PreferencesCustom``。您可以在下面找到一个示例。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:115
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:114
 msgid "SLA Preferences Configuration Example"
 msgstr "SLA首选项配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:117
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:116
 msgid ""
 "There is the need to activate your custom SLA preferences module. This can "
 "be done using the XML configuration below."
 msgstr "需要激活自定义的SLA首选项模块。这可以使用下面的XML配置来完成。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:132
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:131
 msgid "SLA Preferences Use Case Example"
 msgstr "SLA首选项用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:134
+#: ../../content/how-to-extend-otrs/otrs-module-layers/sla-preferences.rst:133
 msgid ""
 "Useful preferences implementation could be to store additional values on "
 "SLAs."
@@ -9796,7 +9759,7 @@ msgid ""
 "explained."
 msgstr "在本节中，将显示一个统计模块的样本，并解释每个子程序。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:46
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:45
 msgid ""
 "This is a common boilerplate that can be found in common OTRS modules. The "
 "class/package name is declared via the ``package`` keyword. Then the needed "
@@ -9805,7 +9768,7 @@ msgstr ""
 "这是一个常见的样板文件，可以在常见的OTRS模块中找到。类/包名称通过 "
 "``package`` 关键字声明。然后通过关键字 ``use`` 使用所需的模块。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:73
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:72
 msgid ""
 "The ``new`` is the constructor for this statistic module. It creates a new "
 "instance of the class. According to the coding guidelines objects of other "
@@ -9820,7 +9783,7 @@ msgstr ""
 "块的对象。 第31到37行检查是否传递了此代码中所需的对象 - 用于创建其它对象或在"
 "此模块中。 之后，创建其它对象。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:83
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:82
 msgid ""
 "``GetObjectName`` returns a name for the statistics module. This is the "
 "label that is shown in the drop down in the configuration as well as in the "
@@ -9829,7 +9792,7 @@ msgstr ""
 "``GetObjectName`` 返回统计模块的名称。 这是在配置的下拉列表中以及现有统计信息"
 "列表（ *对象* 列）中显示的标签。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:142
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:141
 msgid ""
 "In this sample stats module, we want to provide three attributes the user "
 "can chose from: a list of queues, a list of states and a time drop down. To "
@@ -9840,55 +9803,55 @@ msgstr ""
 "时间下拉列表。 要获得下拉列表中显示的值，需要执行一些操作。 在本例中是调用 "
 "``StateList`` 和 ``GetAllQueues``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:144
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:143
 msgid ""
 "Then the list of attributes is created. Each attribute is defined via a hash "
 "reference. You can use these keys:"
 msgstr "然后创建属性列表。 每个属性都通过哈希引用定义。 您可以使用以下键："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:147
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:708
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:706
 msgid "The label in the web interface."
 msgstr "Web界面中的标签。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:150
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:149
 msgid "``UseAsXvalue``"
 msgstr "``UseAsXvalue``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:150
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:149
 msgid "This attribute can be used on the x-axis."
 msgstr "该属性可以在X轴上使用。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:153
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:152
 msgid "``UseAsValueSeries``"
 msgstr "``UseAsValueSeries``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:153
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:152
 msgid "This attribute can be used on the y-axis."
 msgstr "该属性可以在Y轴上使用。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:156
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:155
 msgid "``UseAsRestriction``"
 msgstr "``UseAsRestriction``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:156
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:155
 msgid "This attribute can be used for restrictions."
 msgstr "此属性可用于限制。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:159
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:158
 msgid "``Element``"
 msgstr "``Element``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:159
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:711
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:158
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:709
 msgid "The HTML field name."
 msgstr "HTML字段名。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:162
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:161
 msgid "``Block``"
 msgstr "``Block``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:162
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:161
 msgid ""
 "The block name in the template file (e.g. ``<OTRS_HOME>/Kernel/Output/HTML/"
 "Standard/AgentStatsEditXaxis.tt``)."
@@ -9896,16 +9859,16 @@ msgstr ""
 "模板文件中的块名称（例如： ``<OTRS_HOME>/Kernel/Output/HTML/Standard/"
 "AgentStatsEditXaxis.tt``）。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:165
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:164
 msgid "``Values``"
 msgstr "``Values``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:165
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:164
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:712
 msgid "The values shown in the attribute."
 msgstr "属性中显示的值。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:167
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:166
 msgid ""
 "Hint: If you install this sample and you configure a statistic with some "
 "queues - lets say 'queue A' and 'queue B' - then these queues are the only "
@@ -9917,7 +9880,7 @@ msgstr ""
 "- 那么这些队列是用户在启动统计信息时显示的唯一队列。 有时需要动态下拉或多选字"
 "段。 在这种情况下，您可以在属性的定义中设置 ``SelectedValues``："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:198
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:197
 msgid ""
 "``GetStatElement`` gets called for each cell in the result table. So it "
 "should be a numeric value. In this sample it does a simple ticket search. "
@@ -9931,7 +9894,7 @@ msgstr ""
 "限制的信息。 因此，对于一个计算使用状态为 *处理中* 、已创建的 *Misc* 队列的工"
 "单的单元格，传递的参数哈希看起来像这样："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:209
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:208
 msgid ""
 "If the *per cell* calculation should be avoided, ``GetStatTable`` is an "
 "alternative. ``GetStatTable`` returns a list of rows, hence an array of "
@@ -9941,7 +9904,7 @@ msgstr ""
 "``GetStatTable`` 返回一个行列表，因此返回一个数组引用数组。 这导致与使用 "
 "``GetStatElement`` 相同的结果。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:238
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:237
 msgid ""
 "``GetStatTable`` gets all information about the stats query that is needed. "
 "The passed parameters contain information about the attributes "
@@ -9955,7 +9918,7 @@ msgstr ""
 "用，其中键是y轴的值，它们的值是哈希引用，其参数用于 ``GetStatElement`` 子程"
 "序。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:311
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:310
 msgid ""
 "Sometimes the headers of the table have to be changed. In that case, a "
 "subroutine called ``GetHeaderLine`` has to be implemented. That subroutine "
@@ -9966,7 +9929,7 @@ msgstr ""
 "的子程序。 该子程序必须返回一个数组引用，并将列标题作为元素。 它获取有关传递"
 "的x值的信息。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:359
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:358
 msgid ""
 "Configured statistics can be exported into XML format. But as queues with "
 "the same queue names can have different IDs on different OTRS instances it "
@@ -9980,28 +9943,28 @@ msgstr ""
 "此，应编写导出封装器以使用名称而不是ID。 应该对统计模块的每个 *维度* （x轴、y"
 "轴和限制）进行此操作。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:361
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:360
 msgid ""
 "``ImportWrapper`` works the other way around - it converts the name to the "
 "ID in the instance the configuration is imported to."
 msgstr ""
 "``ImportWrapper`` 以相反的方式工作 - 它将名称转换为导入配置的实例中的ID。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:363
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:362
 msgid "This is a sample export:"
 msgstr "这是一个示例导出："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:399
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:398
 msgid ""
 "Now, that all subroutines are explained, this is the complete sample stats "
 "module."
 msgstr "现在，解释了所有子程序，这是完整的样本统计模块。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:607
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:605
 msgid "Stats Configuration Example"
 msgstr "统计配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:627
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:625
 msgid ""
 "If you have a lot of cells in the result table and the ``GetStatElement`` is "
 "quite complex, the request can take a long time."
@@ -10009,11 +9972,11 @@ msgstr ""
 "如果结果表中有很多单元格并且 ``GetStatElement`` 非常复杂，那么请求可能需要很"
 "长时间。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:631
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:629
 msgid "Static Stats"
 msgstr "静态统计"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:633
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:631
 msgid ""
 "The subsequent paragraphs describe the static stats. Static stats are very "
 "easy to create as these modules have to implement only three subroutines."
@@ -10021,27 +9984,27 @@ msgstr ""
 "后续段落描述了静态统计数据。 静态统计信息很容易创建，因为这些模块只需要实现三"
 "个子程序。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:636
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:634
 msgid "``Param``"
 msgstr "``Param``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:641
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:639
 msgid "Static Stats Code Example"
 msgstr "静态统计代码示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:643
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:641
 msgid ""
 "The following paragraphs describe the subroutines needed in a static stats."
 msgstr "以下段落描述了静态统计信息中所需的子程序。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:671
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:669
 msgid ""
 "The ``new`` creates a new instance of the static stats class. First it "
 "creates a new object and then it checks for the needed objects."
 msgstr ""
 "``new`` 创建静态统计类的新实例。 首先，它创建一个新对象，然后检查所需的对象。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:703
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:701
 msgid ""
 "The ``Param`` method provides the list of all parameters/attributes that can "
 "be selected to create a static stat. It gets some parameters passed: The "
@@ -10051,17 +10014,17 @@ msgstr ""
 "``Param`` 方法提供了可以选择创建静态统计的所有参数/属性的列表。 它传递了一些"
 "参数：请求中提供的统计属性的值，统计的格式和对象的名称（模块的名称）。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:705
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:703
 msgid ""
 "The parameters/attributes have to be hash references with these key-value "
 "pairs:"
 msgstr "参数/属性必须是具有这些键值对的哈希引用："
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:708
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:706
 msgid "``Frontend``"
 msgstr "``Frontend``"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:716
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:714
 msgid ""
 "Other parameter for the ``BuildSelection`` method of the ``LayoutObject`` "
 "can be used, as it is done with ``Size`` and ``Multiple`` in this sample "
@@ -10070,7 +10033,7 @@ msgstr ""
 "可以使用 ``LayoutObject`` 的 ``BuildSelection`` 方法的其他参数，比如在此示例"
 "模块中使用了 ``Size`` 和 ``Multiple``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:763
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:761
 msgid ""
 "The ``Run`` method actually generates the table data for the stats. It gets "
 "the attributes for this stats passed. In this sample in ``%Param`` a key "
@@ -10087,11 +10050,11 @@ msgstr ""
 "组引用和一个数组。 在第一个数组引用中存储统计信息的标题，第二个数组引用包含表"
 "中列的标题。 然后表体的数据如下。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:964
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:961
 msgid "Static Stats Configuration Example"
 msgstr "静态统计配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:966
+#: ../../content/how-to-extend-otrs/otrs-module-layers/stats.rst:963
 msgid ""
 "There is no configuration needed. Right after installation, the module is "
 "available to create a statistic for this module."
@@ -10128,11 +10091,11 @@ msgstr ""
 "单模块的示例。 将它保存在 ``Kernel/Output/HTML/TicketMenuCustom.pm`` 下。 你"
 "只需要2个函数：``new()`` 和 ``Run()``。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:118
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:115
 msgid "Ticket Menu Module Configuration Example"
 msgstr "工单菜单模块配置示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:120
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:117
 msgid ""
 "There is the need to activate your custom ticket menu module. This can be "
 "done using the XML configuration below. There may be additional parameters "
@@ -10141,11 +10104,11 @@ msgstr ""
 "需要激活自定义的工单菜单模块。 这可以使用下面的XML配置来完成。 您的工单菜单模"
 "块的配置哈希中可能还有其他参数。"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:140
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:136
 msgid "Ticket Menu Module Use Case Example"
 msgstr "工单菜单模块用例示例"
 
-#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:146
+#: ../../content/how-to-extend-otrs/otrs-module-layers/ticket-menu.rst:142
 msgid ""
 "The ticket menu directs to an URL that can be handled. If you want to handle "
 "that request via the OTRS framework, you have to write your own front end "
@@ -10838,11 +10801,11 @@ msgid ""
 msgstr ""
 "请注意，虽然仅在引用组件时才会加载样式，但之后这些样式将全局可用，因为CSS对于"
 "同一页面本质上是全局的。 可以选择将样式范围仅限于组件，可以通过样式标记上的 "
-"``scoped`` 属性来实现，但在设计类名时巧妙使用BEM方法可能不需要这样做。（BEM："
-"前端命名方法论,BEM的意思就是块（block）、元素（element）、修饰符（modifier）,"
-"是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的CSS类对其他开"
-"发者来说更加透明而且更有意义。BEM命名约定更加严格，而且包含更多的信息，它们用"
-"于一个团队开发一个耗时的大项目。)"
+"``scoped`` 属性来实现，但在设计类名时巧妙使用BEM方法可能不需要这样做。【译"
+"注：BEM--前端命名方法论,BEM的意思就是块（block）、元素（element）、修饰符"
+"（modifier）,是由Yandex团队提出的一种前端命名方法论。这种巧妙的命名方法让你的"
+"CSS类对其他开发者来说更加透明而且更有意义。BEM命名约定更加严格，而且包含更多"
+"的信息，它们用于一个团队开发一个耗时的大项目。】"
 
 #: ../../content/how-to-extend-otrs/writing-new-otrs-frontend-component.rst:160
 msgid "Passing Parameters to the Route Component"
@@ -11105,11 +11068,11 @@ msgstr ""
 "条错误消息，因为OTRS尚未找到匹配的前端模块。 这是接下来要创建的东西。 为此，"
 "我们创建以下文件："
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:166
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:165
 msgid "Core Module"
 msgstr "核心模块"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:168
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:167
 msgid ""
 "Next, we create the file for the core module ``/HelloWorld/Kernel/System/"
 "HelloWorld.pm`` with the following content:"
@@ -11117,27 +11080,27 @@ msgstr ""
 "接下来，我们使用以下内容为核心模块 ``/HelloWorld/Kernel/System/HelloWorld."
 "pm`` 创建文件："
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:265
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:263
 msgid "Template File"
 msgstr "模板文件"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:267
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:265
 msgid ""
 "The last thing missing before the new module can run is the relevant HTML "
 "template. Thus, we create the following file:"
 msgstr ""
 "新模块可以运行之前缺少的最后一件事是相关的HTML模板。 因此，我们创建以下文件："
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:284
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:281
 msgid ""
 "The module is working now and displays the text *Hello World* when called."
 msgstr "该模块现在正在工作，并在调用时显示文本 *Hello World*。"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:288
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:285
 msgid "Language File"
 msgstr "语言文件"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:290
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:287
 msgid ""
 "If the text *Hello World!* is to be translated into for instance German, you "
 "can create a translation file for this language in ``HelloWorld/Kernel/"
@@ -11146,11 +11109,11 @@ msgstr ""
 "如果要将文本 *Hello World！* 翻译成其它语言如德语，您可以在 ``HelloWorld/"
 "Kernel/Language/de_AgentHelloWorld.pm`` 中为该语言创建翻译文件。 例如："
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:310
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:307
 msgid "Summary"
 msgstr "摘要"
 
-#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:312
+#: ../../content/how-to-extend-otrs/writing-otrs-application.rst:309
 msgid ""
 "The example given above shows that it is not too difficult to write a new "
 "module for OTRS. It is important, though, to make sure that the module and "
@@ -11609,7 +11572,7 @@ msgstr ""
 
 #: ../../content/how-to-publish-otrs-extensions/package-building.rst:333
 msgid "or"
-msgstr "或"
+msgstr "or（或）"
 
 #: ../../content/how-to-publish-otrs-extensions/package-building.rst:341
 msgid ""
@@ -12046,6 +12009,21 @@ msgstr ""
 "根据GNU自由文档许可证1.3版或自由软件基金会发布的任何更新版本的条款，允许复"
 "制、分发和/或修改本文档; 没有不变的部分，没有封面文本，也没有封底文本。 许可"
 "证的副本可以在 `GNU网站 <https://www.gnu.org/licenses/fdl-1.3.txt>`__ 找到。"
+
+#~ msgid ""
+#~ "The OTRS developer API documentation is available for `Perl <https://otrs."
+#~ "github.io/doc/api/otrs/stable/Perl/index.html>`__ and `JavaScript "
+#~ "<https://otrs.github.io/doc/api/otrs/stable/JavaScript/index.html>`__."
+#~ msgstr ""
+#~ "OTRS开发人员API文档包括 `Perl <https://otrs.github.io/doc/api/otrs/stable/"
+#~ "Perl/index.html>`__ 和 `JavaScript <https://otrs.github.io/doc/api/otrs/"
+#~ "stable/JavaScript/index.html>`__。"
+
+#~ msgid "From"
+#~ msgstr "From（发件人）"
+
+#~ msgid "To"
+#~ msgstr "To（收件人）"
 
 #~ msgid ""
 #~ "Join your `language team <https://www.transifex.com/otrs/teams/>`__ and "
