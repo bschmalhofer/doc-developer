@@ -3,7 +3,7 @@
 Variables:
   doc_name: OTRS Developer Manual
   doc_description: This is the description of the documentation.
-  doc_version: 8.0
+  doc_version: 9.0
   doc_yearstamp: current_yearstamp
   doc_vendor: OTRS AG
   doc_url: https://otrs.com
@@ -14,8 +14,8 @@ Variables:
 ProjectName: OTRS Developer Manual
 Copyright: 2001-2020 OTRS AG, https://otrs.com/
 Author: OTRS AG
-Version: 8.0
-Release: 8.0
+Version: 9.0
+Release: 9.0
 
 # sphinx extension module names to be used
 Extensions:
@@ -29,7 +29,7 @@ DisplayGitHubEditButton: 1
 Stable: 0
 
 # publish documentation to target repository
-Publish: 1
+Publish: 0
 
 # PDF output directory path and filename
 PDFOutputPath: doc-developer/{{Version}}/{{Language}}/
